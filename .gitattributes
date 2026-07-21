@@ -1,0 +1,10 @@
+# 统一全仓库文本文件为 LF，避免跨机器换行符导致整文件 diff
+* text=auto eol=lf
+
+# 二进制资源不做换行处理
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.ico binary
+*.webp binary

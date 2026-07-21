@@ -1,0 +1,254 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>员工持股平台的搭建与合规 | 彤鼎集团知识文库</title>
+<meta name="description" content="员工持股平台是集中管理员工股权的载体，境内主流形态为有限合伙：GP掌控制权、员工任LP享财产权益，合伙人上限50人。境外架构下涉及外汇局37号文登记；税务上非上市公司符合条件的激励可按财税101号文递延至转让时按20%计税，不符合条件的行权环节适用3%-45%累进税率。本文解析平台结构、200人边界、上市前后税务差异与治理常见坑。">
+<link rel="canonical" href="https://tdgroup.hk/articles/employee-shareholding-platform.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="彤鼎集团知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="员工持股平台的搭建与合规 | 彤鼎集团知识文库">
+<meta property="og:description" content="员工持股平台是集中管理员工股权的载体，境内主流形态为有限合伙：GP掌控制权、员工任LP享财产权益，合伙人上限50人。境外架构下涉及外汇局37号文登记；税务上非上市公司符合条件的激励可按财税101号文递延至转让时按20%计税，不符合条件的行权环节适用3%-45%累进税率。本文解析平台结构、200人边界、上市前后税务差异与治理常见坑。">
+<meta property="og:url" content="https://tdgroup.hk/articles/employee-shareholding-platform.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="员工持股平台的搭建与合规 | 彤鼎集团知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:4px;font-size:17px;}
+.logo .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10.5px;letter-spacing:3px;margin-top:2px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "员工持股平台的搭建与合规", "inLanguage": "zh-CN", "abstract": "An employee shareholding platform is a vehicle that pools employee equity, most commonly structured as a limited partnership: the founder or an entity under the founder's control acts as general partner with voting and disposal power, while employees hold economic interests as limited partners. Key parameters include the 50-partner ceiling of a limited partnership and the 200-shareholder threshold relevant to public-offering rules. Under offshore structures, PRC-resident employees holding offshore equity implicate SAFE Circular 37 registration. Tax treatment diverges sharply before and after listing: qualifying awards of unlisted companies may defer tax under Caishui [2016] No. 101 to disposal at a 20% rate, while non-qualifying exercise is taxed as salary income at progressive rates up to 45%.", "author": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司"}, "publisher": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司", "url": "https://tdgroup.hk", "logo": {"@type": "ImageObject", "url": "https://tdgroup.hk/img/td-crest-gold.png"}}, "mainEntityOfPage": "https://tdgroup.hk/articles/employee-shareholding-platform.html", "datePublished": "2026-07-20", "dateModified": "2026-07-20", "image": "https://tdgroup.hk/img/og-card.jpg"}</script></head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="../index.html"><img class="mark-img" src="../img/td-crest-gold.png" alt="彤鼎集团 TD Group"><span class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></span></a>
+<div class="menu"><a href="../index.html">首页 Home</a><a href="../about.html">关于 About</a><a href="../club.html">俱乐部 Club</a><a href="../library.html">文库 Library</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">财富传承 WEALTH</div><h1>员工持股平台的搭建与合规</h1>
+<div class="sub">有限合伙结构、37号文登记与上市前后的税务处理差异</div><div class="en">An employee shareholding platform is a vehicle that pools employee equity, most commonly structured as a limited partnership: the founder or an entity under the founder's control acts as general partner with voting and disposal power, while employees hold economic interests as limited partners. Key parameters include the 50-partner ceiling of a limited partnership and the 200-shareholder threshold relevant to public-offering rules. Under offshore structures, PRC-resident employees holding offshore equity implicate SAFE Circular 37 registration. Tax treatment diverges sharply before and after listing: qualifying awards of unlisted companies may defer tax under Caishui [2016] No. 101 to disposal at a 20% rate, while non-qualifying exercise is taxed as salary income at progressive rates up to 45%.</div>
+</div></div>
+<article><div class="answer">员工持股平台是指为集中管理员工股权激励而设立的持股载体，境内实践以有限合伙企业为主流形态：创始人或其控制的主体担任普通合伙人（GP），执掌表决权与处置权；员工作为有限合伙人（LP）享有财产性权益。选择有限合伙的三个理由：控制权集中于GP、合伙人数上限为50人、所得税上"先分后税"不在平台层面重复征税。合规上有两条主线必须同步处理：境外架构下，境内居民员工经平台持有境外主体权益，涉及外汇局37号文（2014年）项下登记；税务上，非上市公司符合条件的股权激励可按财税〔2016〕101号文递延纳税，递延至股权转让时按财产转让所得适用20%税率，不符合条件的行权环节则按工资薪金所得适用3%-45%的累进税率。上市前后的税务处理差异显著，GP安排与退出机制决定平台的长期可用性。</div>
+<h2>一、员工持股平台是什么：从口头承诺到规范载体</h2>
+<p><strong>结论先行：员工持股平台解决的不是"给不给"的问题，而是"怎么给"的问题——把分散的激励承诺装进一个可治理、可核查、可审计的载体。</strong></p>
+<p>员工持股平台是指企业为实施股权激励、集中管理员工所持权益而专门设立的持股载体，员工不直接登记为公司股东，而是通过平台间接持有。它取代的是两种旧做法：口头承诺的"干股"，以及由创始人或高管代持的隐名安排——前者无法律保障，后者在上市核查中必须彻底清理还原，股权代持是各市场上市审核共同的否定性事项。</p>
+<p>平台的功能有三重：其一，表决权集中——员工的表决权经平台归集后统一行使，公司股东名册上只出现平台一个主体，股权结构清晰稳定；其二，人员变动隔离——员工入职、离职只在平台内部调整份额，不触动公司层面的股权变更登记；其三，合规集中处理——税务申报、外汇登记、锁定期管理都以平台为单位统一执行。<strong>本质上，持股平台是把"人的流动性"与"股权的稳定性"分离开来的工程装置。</strong></p>
+<h2>二、为什么是有限合伙：GP与LP的权利分离</h2>
+<p><strong>结论先行：有限合伙成为主流形态，是因为它在法律结构上天然实现了"钱归员工、权归创始人"的分离。</strong></p>
+<p>依照合伙企业法，有限合伙企业由普通合伙人（GP）与有限合伙人（LP）组成：GP执行合伙事务、对合伙债务承担无限连带责任；LP不执行合伙事务，以出资额为限承担责任；合伙人合计不超过50人。这一结构映射到股权激励上恰好各就各位——创始人方担任GP，掌握平台所持股份的表决与处置权；员工担任LP，享有分红与增值收益，但不介入决策。</p>
+<p>实操中的通行做法，是由创始人全资控制的有限责任公司出任GP，而非创始人个人直接出任——用一层有限公司隔离GP的无限连带责任。有限合伙的另一优势是协议自治：份额授予、成熟安排、离职回购、除名与继承等事项，都可以在合伙协议中自由约定，弹性远大于公司章程框架。税务上，合伙企业本身不缴纳所得税，实行"先分后税"，由合伙人各自纳税，平台层面不产生重复征税。<strong>因此，有限合伙不是唯一选择，但它是控制、弹性与税务三项诉求的最大公约数。</strong></p>
+<h2>三、层级与人数：200人边界与穿透核查</h2>
+<p><strong>结论先行：平台可以多设，但不能无限装人——单个合伙企业50人的上限与股东累计200人的公开发行边界，是两条必须提前规划的硬约束。</strong></p>
+<p>第一条约束来自合伙企业法：单个有限合伙的合伙人不超过50人。激励范围较大的企业通常并行设立多个平台，按批次、层级或业务线分装。第二条约束来自证券法框架：向特定对象发行证券累计超过200人即构成公开发行——股东人数的计算在审核实践中普遍采取穿透口径，持股平台不是规避人数限制的通道。</p>
+<p>穿透核查同时覆盖出资来源与权属真实性：每一名LP的出资是否真实、是否存在平台内的二次代持、份额权属是否清晰，都是上市核查的常规项目。境内A股审核对持股平台另有闭环运行等专门要求，境外上市的披露口径亦须逐层穿透至自然人，具体以适用市场的规则为准。规划上的务实建议是：按未来3-5年的授予计划预留平台容量与期权池空间，避免上市前夕临时增设平台引发新的核查问题。<strong>关键在于，平台数量与人数安排是一道提前量的算术题，等到申报期再算就晚了。</strong></p>
+<h2>四、境外架构：37号文登记这道必经的门</h2>
+<p><strong>结论先行：只要员工是境内居民、持有的是境外主体权益，37号文登记就是绕不开的动作——漏办的代价不在当下，而在退出与资金调回环节集中爆发。</strong></p>
+<p>37号文（汇发〔2014〕37号）确立的规则是：境内居民以境内外合法资产或权益向特殊目的公司出资并持有权益的，应当办理境外投资外汇登记。红筹与VIE架构下的员工持股安排正落在这一射程之内——员工经境外持股平台或直接持有开曼上市主体的股份、期权，均涉及登记义务；针对非上市特殊目的公司的股权激励，规则允许相关员工在行权之前办理登记，具体口径以外汇管理部门现行规定与经办银行的执行要求为准。</p>
+<p>未办理登记的后果是链条式的：员工行权与退出资金的跨境调回缺乏合规通道，结汇受阻；公司层面则影响上市申报中关于外汇合规的陈述与法律意见的干净程度。实操上，登记材料涉及激励名单、授予文件、平台文件与架构说明，准备与办理周期应当纳入上市时间表统筹，而不是行权时再补。<strong>本质上，37号文登记是境外架构员工激励的"户口"——没有户口的权益，变现时寸步难行。</strong></p>
+<h2>五、上市前的税务处理：递延条件决定税负量级</h2>
+<p><strong>结论先行：上市前激励的税务命运，在方案设计与行权时点就已经决定——符合递延条件与不符合递延条件，税负差距可以数倍计。</strong></p>
+<p>境内税制下的基本分野如下。适用财税〔2016〕101号文递延纳税政策的：非上市公司授予的股票（权）期权、限制性股票与股权奖励，符合规定条件并完成备案的，员工在取得与行权环节暂不纳税，递延至实际转让股权时，按"财产转让所得"适用20%税率一次性计税。不适用递延的：行权或解禁环节即按"工资薪金所得"并入综合所得，适用3%-45%的超额累进税率——对高收入的核心团队而言，两条路径的实际税负差距十分可观。</p>
+<p>101号文的适用条件涉及激励对象范围、持有期限、行业限制等多项要求，须逐条比对激励文件设计，具体条件以文件文本为准；员工通过持股平台间接持股能否适用递延，实践中各地执行口径存在差异，方案落地前应与主管税务机关沟通确认。境外架构下的期权激励另涉及行权所得的境内申报义务，同样应在方案层面预先安排。<strong>因此，激励方案定稿之前的税务测算，是整个持股计划中回报率最高的一步。</strong></p>
+<h2>六、上市后的税务处理：间接持股与直接持股的差异</h2>
+<p><strong>结论先行：上市之后的核心差异是——个人直接减持与经由合伙平台减持，适用的税目与税率可能完全不同，这笔账必须在上市前算清。</strong></p>
+<p>个人直接持有上市公司股份的，转让限售股按"财产转让所得"适用20%税率。经由有限合伙平台转让股票的，实践中多数地区对个人合伙人按"经营所得"适用5%-35%的超额累进税率征收，部分地区曾出现不同的执行口径——同一笔减持收益，因持股路径不同而落入不同税目，是上市后团队最常遭遇的"意外"。分红环节同理：平台取得的股息红利分回个人合伙人时的税务处理，需要逐层分析，不能想当然按直接持股的规则套用。上述口径均以主管税务机关的现行执行标准为准。</p>
+<p>这意味着上市前存在一个"最后的架构优化窗口"：综合退出税负、锁定期安排、外汇调回路径与治理稳定性，评估各批次激励对象采用平台持股还是直接持股、平台设在境内还是境外。上市之后再做调整，涉及股份转让的税务成本与信息披露义务，空间与代价都不可同日而语。华尔街彤鼎俱乐部的财富传承专题交流中，这一窗口期的规划是被反复讨论的高频议题。<strong>关键在于，退出路径的税负要在进入时就测算完毕，而不是减持那天才发现。</strong></p>
+<h2>七、治理常见坑：出问题的往往不是税，是规则没写清</h2>
+<p><strong>结论先行：持股平台的多数纠纷不来自税务，而来自合伙协议对退出、回购与调整机制的沉默——文件写得越细，未来的争议越少。</strong></p>
+<p>常见的坑有五类。其一，GP安排失当：创始人以个人身份直接出任GP承担无限连带责任，或GP的控制权未与创始人有效绑定，控制链条存在缺口。其二，退出机制缺失：员工离职、被辞退、身故等情形下份额如何回购、按出资额还是评估值定价、由谁受让，协议未作约定，纠纷即由此而生。其三，代持残留：激励名单之外的隐名安排未及时清理，上市核查时集中暴露，处理时点被动。其四，锁定期与变现预期错位：平台整体锁定与员工个体的变现需求冲突，上市后矛盾集中爆发。其五，授予节奏失控：一次性授满份额，后续引进人才无激励空间，被迫稀释或增设平台。</p>
+<p>彤鼎集团在顶层架构设计中，将员工持股平台作为股权架构的组成部分统筹处理——平台形态、设立地、GP结构、37号文登记与税务路径一并落定；华尔街彤鼎俱乐部亦围绕股权激励与财富传承主题组织闭门交流，帮助企业主在授予之前想清退出。<strong>本质上，持股平台是一份写给未来的合同：今天多写一条规则，明天少打一场官司。</strong></p></article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="trust-structures-listing.html" style="color:#6b5426;font-weight:700;">家族信托与上市公司股权</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="family-office.html" style="color:#6b5426;font-weight:700;">家族办公室设立与运作</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="owner-cash.html" style="color:#6b5426;font-weight:700;">老板从公司拿钱的合规方式</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="singapore-family-office.html" style="color:#6b5426;font-weight:700;">新加坡家族办公室</a></li></ul></div><div class="brandbox">
+<h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席廖启捷领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由彤鼎集团团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信：esonleo　·　全网社媒请搜索「彤鼎」或「ESON廖生」</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
