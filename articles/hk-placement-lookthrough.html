@@ -1,0 +1,255 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>港股IPO配售穿透核查：交易所要看清谁在接货 | 彤鼎集团知识文库</title>
+<meta name="description" content="港股IPO配售穿透式核查，是交易所与保荐人在配售环节对每一名配售对象的身份、关联关系与认购资金来源逐层还原，直至识别最终实益拥有人，以确认满足最低公众持股量（主板一般不低于25%）、且未被关联人士或代持稀释的一整套审查程序。本文拆解公众持股量起点、关联人士还原、最终实益穿透链条、资金来源核查，以及虚假配售与围标两条红线。">
+<link rel="canonical" href="https://tdgroup.hk/articles/hk-placement-lookthrough.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="彤鼎集团知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="港股IPO配售穿透核查：交易所要看清谁在接货 | 彤鼎集团知识文库">
+<meta property="og:description" content="港股IPO配售穿透式核查，是交易所与保荐人在配售环节对每一名配售对象的身份、关联关系与认购资金来源逐层还原，直至识别最终实益拥有人，以确认满足最低公众持股量（主板一般不低于25%）、且未被关联人士或代持稀释的一整套审查程序。本文拆解公众持股量起点、关联人士还原、最终实益穿透链条、资金来源核查，以及虚假配售与围标两条红线。">
+<meta property="og:url" content="https://tdgroup.hk/articles/hk-placement-lookthrough.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="港股IPO配售穿透核查：交易所要看清谁在接货 | 彤鼎集团知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:4px;font-size:17px;}
+.logo .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10.5px;letter-spacing:3px;margin-top:2px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "港股IPO配售穿透核查：交易所要看清谁在接货", "inLanguage": "zh-CN", "abstract": "A placement look-through review in a Hong Kong IPO is the process by which the exchange and the sponsor unpick every placee in the placing tranche — identity, connected-party relationships and the source of subscription funds — until the ultimate beneficial owner of each block is identified, so as to confirm that the offering meets the minimum public float (generally not less than 25% of issued shares on the Main Board) and has not been diluted by connected persons or nominee arrangements. This article sets out the public-float starting point, the unwinding of connected-party links, the chain from nominee subscriber to ultimate beneficial owner, the scrutiny of funding sources, and the two red lines the review exists to stop: sham placings and placing collusion.", "author": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司"}, "publisher": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司", "url": "https://tdgroup.hk", "logo": {"@type": "ImageObject", "url": "https://tdgroup.hk/img/td-crest-gold.png"}}, "mainEntityOfPage": "https://tdgroup.hk/articles/hk-placement-lookthrough.html", "datePublished": "2026-07-24", "dateModified": "2026-07-24", "image": "https://tdgroup.hk/img/og-card.jpg"}</script></head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="../index.html"><img class="mark-img" src="../img/td-crest-gold.png" alt="彤鼎集团 TD Group"><span class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></span></a>
+<div class="menu"><a href="../index.html">首页 Home</a><a href="../about.html">关于 About</a><a href="../club.html">俱乐部 Club</a><a href="../library.html">文库 Library</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">港股配售 PLACEMENT SCRUTINY</div><h1>港股IPO配售穿透核查：交易所要看清谁在接货</h1>
+<div class="sub">公众持股量红线、关联配售限制与最终实益拥有人的穿透逻辑</div><div class="en">A placement look-through review in a Hong Kong IPO is the process by which the exchange and the sponsor unpick every placee in the placing tranche — identity, connected-party relationships and the source of subscription funds — until the ultimate beneficial owner of each block is identified, so as to confirm that the offering meets the minimum public float (generally not less than 25% of issued shares on the Main Board) and has not been diluted by connected persons or nominee arrangements. This article sets out the public-float starting point, the unwinding of connected-party links, the chain from nominee subscriber to ultimate beneficial owner, the scrutiny of funding sources, and the two red lines the review exists to stop: sham placings and placing collusion.</div>
+</div></div>
+<article><div class="answer">港股IPO的配售穿透式核查，是指交易所与保荐人在新股发行的配售环节，对每一名配售对象的身份、关联关系与认购资金来源逐层还原，直至识别出股份的最终实益拥有人，以确认发行满足最低公众持股量、且未被关联人士或代持安排稀释的一整套审查程序。它的制度起点是两条硬性规则：其一，香港主板要求上市时公众持股量一般不低于25%，仅在预期市值很高时交易所才可酌情批准更低比例；其二，发行人的关联人士原则上不得参与配售来充当公众股东。核查要回答的核心问题只有一个——名单上这些看似独立的认购人，是不是真正独立、资金是不是真正来自本人。因此，配售能不能过关，不取决于名单排得多漂亮，而取决于穿透之后是否仍然干净。</div>
+<h2>一、配售穿透式核查，到底在核查什么</h2>
+<p><strong>结论先说：穿透核查审查的不是认购价格，也不是配售比例本身，而是每一份认购背后的真实身份与真实出资。</strong></p>
+<p>港股新股发行通常分为面向公众的公开发售，与面向机构及专业投资者的配售（国际配售）两部分。配售部分由发行人与整体协调人主导分配，灵活度高，也正因如此成为监管关注的重点。所谓穿透式核查，就是把配售名单上每一个认购主体逐层拆开：如果认购人是一家公司或一只基金，要看它的股东、管理人、实际控制人；如果是通过资产管理计划或信托认购，要看谁是委托人、谁是最终受益人；如果出现层层嵌套，则要一直追到最末端的自然人或独立机构为止。</p>
+<p>穿透的目的，是把三件事查清楚：这名认购人与发行人及其关联方是否存在关联关系，认购资金是否真正来自认购人自身，以及在最终实益层面这笔股份是否仍然计入公众持股。三个问题任何一个答不清楚，这份配售就存在被剔除出公众持股、甚至影响整体发行成立的可能。<strong>本质上，穿透核查是把配售环节从"分给谁"的商业问题，还原成"谁在真正持有"的合规问题。</strong></p>
+<h2>二、为什么公众持股量是穿透核查的起点</h2>
+<p><strong>结论先说：所有穿透动作的原点，是上市时必须满足的最低公众持股量，这是一条不能靠名单技巧绕过的硬规则。</strong></p>
+<p>香港主板要求，发行人上市时由公众人士持有的股份一般不低于已发行股本的25%。这里的"公众"是一个受严格定义的概念——发行人的关联人士，以及虽在名义上独立、实则受关联人士资助或按其指示行事的人，都不计入公众。只有当独立第三方真实持有的股份达到门槛，发行才被认为具备了必要的市场流通基础。对于预期市值很高的超大型发行人，交易所可行使酌情权批准低于25%的比例，但这属于个案审批，且下限本身也有约束，绝非发行人可自行选择。</p>
+<p>正因为门槛卡在"公众"二字上，配售名单里到底有多少是真正的公众，就成了必须核实的事实。如果一部分配售股份表面配给了独立投资者，穿透之后却发现其资金或指令来自发行人一方，那么这部分就要从公众持股中扣除，扣除后一旦跌破门槛，发行的合规基础即被动摇。<strong>关键在于，公众持股量考核的是实质而非名义，穿透核查正是把名义拉回实质的工具。</strong></p>
+<h2>三、关联人士：穿透要还原的首层关系</h2>
+<p><strong>结论先说：穿透的首刀，切的是关联关系——认购人与发行人之间有没有不该有的联系。</strong></p>
+<p>关联人士在上市规则中有明确外延，通常涵盖发行人的董事、最高行政人员、控股股东及其各自的紧密联系人，以及这些主体控制的公司。原则上，关联人士不得在配售中认购股份来充当公众股东；个别情形下现有股东参与认购需要事先申请并获得豁免，且相关股份的公众属性仍要单独判断。核查要防的，是关联关系被刻意隐藏——例如以控股股东亲属的名义、以高管配偶控制的公司名义、或以与发行人有长期资金往来的"朋友圈"名义参与配售，从而在账面上制造出并不存在的独立性。</p>
+<p>还原关联关系，靠的不是认购人的一纸声明，而是交叉验证：股东名册、董事及高管的关联方清单、认购主体的工商与受益人信息、历史交易与资金往来记录，彼此比对，找出名义独立、实质关联的节点。华尔街彤鼎俱乐部在与企业主的闭门交流中反复提示：配售名单的干净程度，往往比认购价格更早决定发行能否顺利推进。<strong>因此，关联关系不是靠回避就能消失的问题，只有主动、完整地披露与还原，才能把它从风险变成可控项。</strong></p>
+<h2>四、从名义认购人到最终实益拥有人：穿透的链条</h2>
+<p><strong>结论先说：穿透之所以叫穿透，是因为它要求追到链条最末端的最终实益拥有人，而不是停在最表层的名义持有人。</strong></p>
+<p>最终实益拥有人，是指最终享有股份经济利益、或对持股主体拥有最终控制权的自然人或独立机构。现实中的配售结构常常是多层的：一只基金背后可能站着若干出资人，一个资产管理计划背后可能是若干委托人，一家离岸公司背后可能还有一层控股安排。穿透核查要沿着这条链条一节一节往下走，直到能够确认每一份股份最终由谁享有、由谁支配为止。</p>
+<p>这条链条上最容易出问题的，是代持与嵌套。代持是指名义持有人并非真正的权利人，而是替他人持有股份；嵌套则是通过多层主体把真实持有人藏在结构深处。两者都会让配售名单在表面上显得分散而独立，穿透之后却可能收敛到少数几个真实主体，甚至收敛回发行人一方。核查一旦还原出这种收敛，相关股份的公众属性即被否定。<strong>本质上，穿透追问的不是"名字写的是谁"，而是"利益归了谁、决定权在谁手里"。</strong></p>
+<h2>五、资金来源核查：钱从哪来，比名字更能说明问题</h2>
+<p><strong>结论先说：身份可以安排，名单可以设计，但资金流向很难伪装，因此资金来源核查是穿透中最有力的一环。</strong></p>
+<p>配售资金来源核查，要求认购人说明并证明认购款项的真实出处，核心是排除三种情形：认购资金直接或间接来自发行人及其关联方，认购人以发行人一方提供的融资或担保来完成认购，以及认购人代他人出资而由他人享有实际利益。这些情形一旦成立，意味着所谓的"独立认购"只是资金在体系内绕了一圈，最终风险与收益并未真正转移给外部投资者，公众持股的实质因此不成立。</p>
+<p>核查的手段是把资金链与身份链并置比对：认购款的银行流水、出资主体与认购主体是否一致、大额款项在认购前的划转路径、是否存在与发行人关联方的过桥安排。当名单显示的独立性与资金显示的关联性发生矛盾时，监管与保荐人采信的是资金。港交所近年持续收紧对配售资金的穿透式核查，把资金来源作为判断配售真实性的关键证据，正是基于这一逻辑（具体要求以港交所正式规则文本为准）。<strong>关键在于，能说清资金从哪来，独立性才立得住；说不清，再独立的名单也站不住脚。</strong></p>
+<h2>六、虚假配售与围标：核查真正要拦截的红线</h2>
+<p><strong>结论先说：穿透核查的终极目标，是拦下两类违规安排——虚假配售与配售围标，它们都属于监管明令禁止、发行人绝不应触碰的行为。</strong></p>
+<p>虚假配售，是指以表面独立的第三方名义认购，实则由发行人一方出资或控制，用来虚增公众持股、制造发行成功的假象。配售围标，则是指发行人一方通过关联或受控主体协同认购，操纵配售的分布与定价。这两种做法违反公众持股与配售独立性的基本要求，一经查实，轻则相关股份被剔除、发行被要求整改，重则触发对发行人及中介机构的问责，并在其后续的资本运作中长期留痕。此处将其列出，是作为合规科普中的反面警示，提醒企业这些是被明确禁止的违规操作，而非可选的技术手段。</p>
+<p>穿透核查之所以要一路查到资金与最终受益，正是为了让这两类安排无处藏身。对企业而言，与其在名单上做文章，不如从一开始就确保配售对象真实独立、资金来源清白。华尔街彤鼎俱乐部亦会围绕发行结构、配售纪律与合规披露等主题，为有资本化规划的企业主提供系统的资本认知与资源对接。<strong>本质上，配售是发行人向市场展示"有多少真实资金愿意进来"的窗口，任何注水都是在透支这个窗口的可信度。</strong></p>
+<h2>七、企业与保荐团队应如何提前准备</h2>
+<p><strong>结论先说：配售穿透核查不是发行日前的临门冲刺，而是从筹备之初就要嵌入的合规纪律。</strong></p>
+<p>准备工作可以概括为三条。其一，尽早建立配售对象的独立性判断标准与尽职调查清单，对每一名拟引入的投资者，事先核实其与发行人及关联方的关系、其认购主体结构与最终实益拥有人，把不符合独立性要求的对象在名单形成阶段就排除，而不是等到核查时被动剔除。其二，管好资金来源的证据链，要求认购人以自有资金认购并留存可追溯的出资凭证，杜绝任何来自发行人一方的过桥、垫资或融资安排。其三，把配售安排纳入整体信息披露，对现有股东参与认购、关联方豁免、公众持股比例的计算口径等事项，在招股文件中如实、充分地说明。</p>
+<p>这三条的共同点，是把"能不能通过核查"提前变成"经得起穿透"。配售名单一旦形成再回头补救，往往牵一发而动全身——剔除一名认购人可能连带影响公众持股比例、发行规模与定价安排，成本远高于事前把关。因此，对配售独立性的把控，应当与架构设计、财务规范、备案准备放在同一个筹备时间表里统筹推进。华尔街彤鼎俱乐部在与企业家的交流中经常强调一个判断：发行的可信度，是从最初一份配售意向就开始积累的。<strong>关键在于，穿透核查考验的从来不是应对技巧，而是发行本身有多真实。</strong></p>
+</article>
+<div class="art-foot"><div class="brandbox">
+<h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席廖启捷领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由彤鼎集团团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信：esonleo　·　全网社媒请搜索「彤鼎」或「ESON廖生」</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
