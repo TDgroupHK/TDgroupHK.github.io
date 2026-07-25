@@ -1,0 +1,261 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>二代接班准备度自测（3分钟） | 华尔街彤鼎传承俱乐部</title>
+<meta name="description" content="八道题、三分钟，按能力、圈子、信任、规划四个维度诊断接班准备度，找出你最短的那块板，并给出对应的补强顺序。测试在浏览器本地完成，不收集任何数据。">
+<link rel="canonical" href="https://tdgroup.hk/legacy-checkup.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="二代接班准备度自测（3分钟） | 华尔街彤鼎传承俱乐部">
+<meta property="og:description" content="按能力、圈子、信任、规划四个维度诊断接班准备度，找出最短的那块板。">
+<meta property="og:url" content="https://tdgroup.hk/legacy-checkup.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="二代接班准备度自测（3分钟） | 华尔街彤鼎传承俱乐部">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+::selection{background:var(--gold);color:#0a0908;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(14px);}
+.nav-in{max-width:860px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;}
+.logo{color:#fff;font-weight:700;letter-spacing:4px;font-size:16px;}
+.logo small{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10px;letter-spacing:2px;margin-left:10px;}
+.menu{display:flex;gap:20px;font-size:13.5px;color:#c6bda6;}
+.menu a:hover{color:var(--gold-hi);}
+header{padding:130px 0 40px;background:radial-gradient(ellipse at 15% 20%,rgba(201,169,98,.12) 0,transparent 45%),var(--night);}
+.eyebrow{display:flex;align-items:center;gap:14px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:5px;font-size:12.5px;margin-bottom:22px;}
+.eyebrow::before{content:"";width:44px;height:1px;background:var(--gold);}
+h1{font-size:38px;line-height:1.4;color:#fff;font-weight:600;letter-spacing:3px;}
+h1 em{color:var(--gold-hi);font-style:normal;}
+.sub{margin-top:16px;color:#a89b7d;font-size:15px;max-width:660px;}
+.quiz{padding:30px 0 90px;}
+.q{border:1px solid var(--line);background:var(--ink);padding:26px 28px;margin-bottom:18px;}
+.q h3{color:#fff;font-size:17px;margin-bottom:8px;letter-spacing:.5px;}
+.q h3 i{font-style:italic;font-family:Georgia,serif;color:var(--gold);margin-right:10px;font-size:15px;}
+.dim{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:11.5px;letter-spacing:2px;margin-bottom:14px;}
+.opts{display:flex;flex-direction:column;gap:9px;}
+.opts label{border:1px solid var(--line);padding:11px 18px;font-size:14px;cursor:pointer;transition:all .25s;color:#c9bfa4;user-select:none;}
+.opts label:hover{border-color:var(--gold);color:var(--gold-hi);}
+.opts input{display:none;}
+.opts label:has(input:checked){background:var(--gold);border-color:var(--gold);color:#0d0b07;font-weight:700;}
+.btn{display:inline-block;padding:16px 46px;font-size:15px;letter-spacing:3px;font-weight:700;background:var(--gold);color:#0d0b07;border:0;cursor:pointer;transition:all .3s;font-family:inherit;}
+.btn:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{background:transparent;border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);}
+#result{display:none;margin-top:34px;}
+.verdict{border:1px solid var(--gold);background:linear-gradient(160deg,rgba(201,169,98,.12),rgba(201,169,98,.03));padding:32px 30px;}
+.verdict .grade{font-family:Georgia,serif;font-style:italic;color:var(--gold-hi);font-size:40px;line-height:1;}
+.verdict h2{color:#fff;font-size:24px;margin:14px 0 6px;letter-spacing:1px;font-weight:600;}
+.verdict p{font-size:15px;}
+.bars{margin-top:26px;border-top:1px solid var(--line);padding-top:20px;}
+.bar{margin-bottom:16px;}
+.bar .lb{display:flex;justify-content:space-between;font-size:14px;color:#cfc4a8;margin-bottom:6px;}
+.bar .lb b{color:#fff;font-weight:600;}
+.bar .tk{height:9px;background:rgba(201,169,98,.14);position:relative;}
+.bar .fl{height:9px;background:var(--gold);}
+.bar .fl.weak{background:#b4603f;}
+.bar small{display:block;color:var(--mute);font-size:12.5px;margin-top:6px;}
+.points{margin-top:22px;border-top:1px solid var(--line);padding-top:8px;}
+.points li{list-style:none;padding:12px 0 12px 26px;position:relative;border-bottom:1px dashed rgba(201,169,98,.15);font-size:14.5px;}
+.points li::before{content:"—";position:absolute;left:0;color:var(--gold);}
+.cta{margin-top:26px;border:1px solid var(--line);background:var(--ink);padding:28px 30px;}
+.cta b{color:#fff;font-size:17px;display:block;margin-bottom:10px;}
+.cta p{font-size:14.5px;}
+.cta .ways{margin-top:14px;display:flex;gap:12px;flex-wrap:wrap;}
+.cta .ways span{border:1px solid var(--gold);color:var(--gold-hi);padding:9px 18px;font-size:13.5px;letter-spacing:1px;}
+.acts{margin-top:20px;display:flex;gap:14px;flex-wrap:wrap;}
+.legal{margin-top:26px;color:var(--mute);font-size:12px;line-height:1.9;border-top:1px solid var(--line);padding-top:18px;}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mute);font-size:12.5px;}
+@media(max-width:640px){h1{font-size:27px;}header{padding-top:110px;}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+</head><body>
+<nav><div class="nav-in">
+<a class="logo" href="/">彤鼎集团<small>TD GROUP</small></a>
+<div class="menu"><a href="/">首页</a><a href="/legacy.html">传承俱乐部</a><a href="/club.html">俱乐部</a><a href="/library.html">知识文库</a></div>
+</div></nav>
+
+<header><div class="wrap">
+<div class="eyebrow">LEGACY READINESS SELF-CHECK</div>
+<h1>二代接班<em>准备度自测</em></h1>
+<p class="sub">八道题、约三分钟。按<strong>能力、圈子、信任、规划</strong>四个维度打分——家族企业交接失败，问题几乎都出在这四件事上。测完你会知道自己最短的是哪块板，以及该按什么顺序补。测试在浏览器本地完成，不收集任何数据。</p>
+</div></header>
+
+<div class="quiz"><div class="wrap">
+
+<div class="q"><h3><i>01</i>你能独立看懂自家公司的财务报表和股权结构吗</h3><div class="dim">CAPABILITY · 能力</div><div class="opts">
+<label><input type="radio" name="q1" value="3"><span>能，并且能看出其中的风险敞口和优化空间</span></label>
+<label><input type="radio" name="q1" value="2"><span>报表大致能看，股权架构和税务安排说不清</span></label>
+<label><input type="radio" name="q1" value="1"><span>基本靠财务和顾问解释</span></label>
+<label><input type="radio" name="q1" value="0"><span>没有系统看过</span></label>
+</div></div>
+
+<div class="q"><h3><i>02</i>关于资本市场（融资、估值、上市、并购），你的认知程度</h3><div class="dim">CAPABILITY · 能力</div><div class="opts">
+<label><input type="radio" name="q2" value="3"><span>参与过融资或上市项目，了解流程与条款</span></label>
+<label><input type="radio" name="q2" value="2"><span>系统学过，但没有实操经历</span></label>
+<label><input type="radio" name="q2" value="1"><span>零散了解一些概念</span></label>
+<label><input type="radio" name="q2" value="0"><span>基本不了解</span></label>
+</div></div>
+
+<div class="q"><h3><i>03</i>你有多少可以独立调动的外部关系（不通过父辈）</h3><div class="dim">CIRCLE · 圈子</div><div class="opts">
+<label><input type="radio" name="q3" value="3"><span>有一批自己建立的同辈与专业人脉，能互相带资源</span></label>
+<label><input type="radio" name="q3" value="2"><span>有一些，但多集中在同学或同行朋友</span></label>
+<label><input type="radio" name="q3" value="1"><span>主要还是父辈介绍的关系</span></label>
+<label><input type="radio" name="q3" value="0"><span>几乎没有</span></label>
+</div></div>
+
+<div class="q"><h3><i>04</i>遇到重大决策拿不准时，你能找谁商量</h3><div class="dim">CIRCLE · 圈子</div><div class="opts">
+<label><input type="radio" name="q4" value="3"><span>有处境相同、能说真话的同辈，也有懂资本的专业伙伴</span></label>
+<label><input type="radio" name="q4" value="2"><span>有专业顾问，但缺同辈可以交底</span></label>
+<label><input type="radio" name="q4" value="1"><span>主要问父辈或家里人</span></label>
+<label><input type="radio" name="q4" value="0"><span>基本自己扛</span></label>
+</div></div>
+
+<div class="q"><h3><i>05</i>你有没有一件能对外讲、且经过外部检验的战绩</h3><div class="dim">TRUST · 信任</div><div class="opts">
+<label><input type="radio" name="q5" value="3"><span>有，独立主导过并被市场或机构认可</span></label>
+<label><input type="radio" name="q5" value="2"><span>有参与过重要项目，但不是主导</span></label>
+<label><input type="radio" name="q5" value="1"><span>做过内部项目，外部说不上</span></label>
+<label><input type="radio" name="q5" value="0"><span>还没有</span></label>
+</div></div>
+
+<div class="q"><h3><i>06</i>公司核心团队和银行、合作方，认你还是认父辈</h3><div class="dim">TRUST · 信任</div><div class="opts">
+<label><input type="radio" name="q6" value="3"><span>关键事项已经可以直接找我拍板</span></label>
+<label><input type="radio" name="q6" value="2"><span>日常认我，重大事项仍要父辈出面</span></label>
+<label><input type="radio" name="q6" value="1"><span>基本还是认父辈，我在旁边</span></label>
+<label><input type="radio" name="q6" value="0"><span>还没进入核心决策</span></label>
+</div></div>
+
+<div class="q"><h3><i>07</i>家族有没有写下来的接班安排（时间表、角色、里程碑）</h3><div class="dim">PLANNING · 规划</div><div class="opts">
+<label><input type="radio" name="q7" value="3"><span>有书面路线图，家族成员已达成一致</span></label>
+<label><input type="radio" name="q7" value="2"><span>谈过大方向，没有落成文件</span></label>
+<label><input type="radio" name="q7" value="1"><span>只是默认由我来，细节没谈</span></label>
+<label><input type="radio" name="q7" value="0"><span>完全没谈过</span></label>
+</div></div>
+
+<div class="q"><h3><i>08</i>股权、信托、税务的传承安排进展如何</h3><div class="dim">PLANNING · 规划</div><div class="opts">
+<label><input type="radio" name="q8" value="3"><span>已完成或正在专业机构主持下推进</span></label>
+<label><input type="radio" name="q8" value="2"><span>做过咨询，方案还没落地</span></label>
+<label><input type="radio" name="q8" value="1"><span>知道要做，还没开始</span></label>
+<label><input type="radio" name="q8" value="0"><span>没考虑过</span></label>
+</div></div>
+
+<button class="btn" onclick="calc()">生成诊断结果</button>
+
+<div id="result">
+<div class="verdict">
+<span class="grade" id="grade"></span>
+<h2 id="stage"></h2>
+<p id="summary"></p>
+<div class="bars" id="bars"></div>
+<ul class="points" id="points"></ul>
+</div>
+<div class="cta"><b>下一步：把这份诊断，换一次一对一面谈</b>
+<p>把自测结果发给我们，我们会按你的家族企业实态，给出一份接班准备的补强顺序建议（先补哪块板、用什么方式、大致周期）。传承俱乐部为审核制入营、全球限 99 席，面谈同时也是入营流程的第一步，全程保密。</p>
+<div class="ways"><span>邮箱 liaoqijie@tdgroup.hk</span><span>微信 esonleo</span><span>电话 +852 6906 9553</span></div>
+<div class="acts">
+<button class="btn btn-ghost" onclick="copyResult()" id="cpb">一键复制诊断结果</button>
+<a class="btn" href="legacy.html">了解传承俱乐部</a>
+</div>
+</div>
+<div class="legal">本自测为管理与资本认知类知识工具，按公开的家族企业治理与接班实践经验设计，结果仅供自我参照，不构成任何法律、税务或投资建议。彤鼎集团（香港）有限公司为企业管理咨询机构，证券承销、审计鉴证、基金管理等持牌业务均由合作之持牌机构承做；涉及投资事项仅面向符合条件的合格投资者，并已充分揭示风险，不构成任何收益承诺。</div>
+</div>
+
+</div></div>
+
+<footer><div class="wrap">© 彤鼎集团（香港）有限公司 TD Group (Hong Kong) Limited · 香港 · 深圳 · 上海 · 新加坡 · <a href="/" style="color:var(--gold)">tdgroup.hk</a></div></footer>
+
+<script>
+var lastText = "";
+var DIMS = [
+  {key:'能力', en:'CAPABILITY', qs:['q1','q2'],
+   weak:'先补能力：看不懂资产，就谈不上驾驭资产。优先补两件事——把自家的财务报表、股权架构和税务安排完整读懂一遍；再系统补资本市场认知（融资、估值、上市、并购的流程与条款）。',
+   ok:'能力这块底子在，可以把重心放到实战与外部检验上。'},
+  {key:'圈子', en:'CIRCLE', qs:['q3','q4'],
+   weak:'先补圈子：父辈的圈层无法继承，只能自己重建。方向是找同辈而非长辈、用共同项目而非饭局建立关系、进入有筛选机制的场合——没有门槛的社交，聚集的是同样没有筹码的人。',
+   ok:'已经有自己的关系网，接下来是把它从社交升级为可互换资源的联盟。'},
+  {key:'信任', en:'TRUST', qs:['q5','q6'],
+   weak:'先补战绩：话语权不是继承的，是打出来的。需要一件有真实风险敞口、经过外部检验、且能一句话讲清的事——资本市场里最硬的一种检验，是完整参与一次融资或上市，每一关都有外部机构在打分。',
+   ok:'内外部信任已经在建立，注意把战绩沉淀成可对外讲述的履历。'},
+  {key:'规划', en:'PLANNING', qs:['q7','q8'],
+   weak:'先补规划：没有路线图的交接本身就是风险。把「什么时候交、交什么、怎么交」写成书面路线图；股权与信托安排要赶在公司估值抬升之前完成，那是税基和复杂度都最低的窗口。',
+   ok:'规划已经起步，重点是把方案落成文件并按里程碑推进。'}
+];
+
+function pick(n){var el=document.querySelector('input[name="'+n+'"]:checked');return el?parseInt(el.value,10):null;}
+
+function calc(){
+  var vals={}, missing=false;
+  for(var i=1;i<=8;i++){var v=pick('q'+i); if(v===null){missing=true;} vals['q'+i]=v;}
+  if(missing){alert('还有题目没选完');return;}
+
+  // weak 阈值取 <=4:单题选 2 分意味着「有一些但说不清/没落地」,两题合计 4 分仍是缺口
+  var scores=DIMS.map(function(d){
+    var s=d.qs.reduce(function(a,k){return a+vals[k];},0);
+    return {key:d.key,en:d.en,score:s,pct:Math.round(s/6*100),weak:s<=4,d:d};
+  });
+  var total=scores.reduce(function(a,x){return a+x.score;},0);   // 0-24
+  var weaks=scores.filter(function(s){return s.weak;});
+
+  var grade,stage,summary;
+  if(total>=20){grade='A';stage='已具备掌舵条件';summary='你已经不是「准备接班」，而是可以开始主导资本动作了。该考虑的是把家业往上抬一层——融资、并购或上市，用一次真实的资本运作把位置坐实。';}
+  else if(total>=14){grade='B';stage='已进入核心';summary='整体已经进入家族事业核心。这个阶段补齐缺口通常只需要一到两年，关键是按顺序补，而不是四件事一起使劲。';}
+  else if(total>=8){grade='C';stage='起步阶段，缺系统训练';summary='目前更接近「在公司里」而不是「在掌舵」。这个阶段最忌讳直接接管——先用两到三年做系统训练，把能力和战绩补上，交接才不会出事。';}
+  else{grade='D';stage='尚未开始准备';summary='接班还处在没有实质准备的状态。这不是坏事，前提是尽早开始——家族企业交接的失败，绝大多数源于「以为还有时间」。';}
+  // 短板结论由实际得分推导,不写死在评级文案里,避免「B级说有短板但四项都过关」这类自相矛盾
+  summary += weaks.length
+    ? '　目前最短的一块是「' + weaks.sort(function(a,b){return a.score-b.score;})[0].key + '」，从它开始补。'
+    : '　四个维度都没有明显短板，重点应从补课转向争取一次外部检验。';
+
+  document.getElementById('grade').textContent=grade+' 级';
+  document.getElementById('stage').textContent=stage;
+  document.getElementById('summary').textContent=summary;
+
+  var bars=document.getElementById('bars'); bars.innerHTML='';
+  scores.forEach(function(s){
+    var w=document.createElement('div'); w.className='bar';
+    w.innerHTML='<div class="lb"><b>'+s.key+' <span style="color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:11.5px;letter-spacing:2px;">'+s.en+'</span></b><span>'+s.score+' / 6</span></div>'+
+      '<div class="tk"><div class="fl'+(s.weak?' weak':'')+'" style="width:'+s.pct+'%"></div></div>';
+    bars.appendChild(w);
+  });
+
+  // 补强顺序:按得分从低到高,分数相同按 能力→圈子→信任→规划 的固有依赖顺序
+  var order=scores.slice().sort(function(a,b){return a.score-b.score;});
+  var firstWeak=order.filter(function(s){return s.weak;})[0];
+  var pts=order.map(function(s){
+    // 只有真短板才标「最该先补」;四项都过关时不误导
+    var tag=(firstWeak && s===firstWeak)?'【最该先补】':'';
+    return tag+s.key+'（'+s.score+'/6）：'+(s.weak?s.d.weak:s.d.ok);
+  });
+  var ul=document.getElementById('points'); ul.innerHTML='';
+  pts.forEach(function(p){var li=document.createElement('li');li.textContent=p;ul.appendChild(li);});
+
+  lastText='【二代接班准备度自测结果】\n评级：'+grade+' 级 — '+stage+'\n总分：'+total+'/24\n'+
+    scores.map(function(s){return s.key+' '+s.score+'/6';}).join('　')+'\n'+summary+'\n'+
+    pts.map(function(p){return '· '+p;}).join('\n')+'\n（来自 tdgroup.hk/legacy-checkup.html）';
+
+  document.getElementById('result').style.display='block';
+  document.getElementById('result').scrollIntoView({behavior:'smooth'});
+  if(typeof gtag==='function'){gtag('event','legacy_checkup_done',{grade:grade,total:total});}
+}
+
+function copyResult(){
+  navigator.clipboard.writeText(lastText).then(function(){
+    document.getElementById('cpb').textContent='已复制，微信/邮件里直接粘贴';
+  });
+}
+</script>
+</body></html>
