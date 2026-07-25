@@ -99,9 +99,19 @@
   var input = wrap.querySelector('input');
   var send = wrap.querySelector('.tda-in button');
 
-  /* ---------------- 埋点（复用站内已装的 GA4 / 百度统计） ---------------- */
+  /* ---------------- 埋点（复用站内已装的 GA4 / 百度统计） ----------------
+     GA4 事件名统一加 assistant_ 前缀，便于在报表里与页面事件区分。
+     问题原文放在 event_label 参数；该参数需在 GA4「自定义定义」中注册为
+     事件范围的自定义维度后，才能在报表与 Data API 中按内容下钻。 */
   function track(action, label) {
-    try { if (window.gtag) window.gtag('event', action, { event_category: 'assistant', event_label: label }); } catch (e) {}
+    try {
+      if (window.gtag) {
+        window.gtag('event', 'assistant_' + action, {
+          event_category: 'assistant',
+          event_label: label
+        });
+      }
+    } catch (e) {}
     try { if (window._hmt) window._hmt.push(['_trackEvent', 'assistant', action, label]); } catch (e) {}
   }
 
