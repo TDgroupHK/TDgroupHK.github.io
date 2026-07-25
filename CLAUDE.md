@@ -47,8 +47,11 @@
 2. 在 `library.html` 对应分类的 `<ul>` 中新增：`<li class="has"><a href="articles/文件名.html">文章标题 →</a></li>`（放在该分类列表首位）。
 3. 在 `sitemap.xml` 新增对应 `<url><loc>` 条目。
 4. 如属重点文章，可同步在 `index.html` 精选区替换或新增一张 `.acard`（配 `img/` 中已有图片）。
-5. `git add -A && git commit -m "发布：文章标题" && git push`。
-6. 推送后向用户报告文章的完整网址。
+5. **重建站内助手知识库（必做，勿跳过）**：在仓库根目录执行 `python tools/rebuild_kb.py`。
+   该脚本会：重建 `js/assistant-kb.json`（新文章由此进入 AI 客服检索范围）、补齐文章 schema 缺失的 `description`、给漏装的页面补上 `assistant.js` 与统计代码。幂等，可反复运行。
+   脚本若提示「仍有 N 篇文章缺 description」，说明该文章 `<meta name="description">` 为空，需先补上再重跑，否则检索命中率下降。
+6. `git add -A && git commit -m "发布：文章标题" && git push`。
+7. 推送后向用户报告文章的完整网址。
 
 ## 六、修改边界
 

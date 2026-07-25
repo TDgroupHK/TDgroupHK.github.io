@@ -124,21 +124,47 @@
     x.send();
   }
 
-  /* ---------------- 中文匹配：字符二元组重合度 ---------------- */
+  /* ---------------- 中文匹配：字符二元组重合度 ----------------
+     三道闸门，避免虚词凑分导致答非所问：
+     1) 剔除「怎么/什么/需要」等无主题信息的虚词
+     2) 领域词准入：问题里没有任何业务词，直接拒答，不硬凑
+     3) 覆盖率阈值：命中条目必须解释掉问题的大部分内容 */
+  var STOP = ['怎么', '什么', '如何', '可以', '我们', '请问', '帮我', '今天', '一下', '一个',
+    '哪些', '有没', '能不', '是不', '需要', '应该', '多少', '为什么', '的话', '了吗'];
+  var DOMAIN = ['上市', '挂牌', '纳斯达克', '纽交所', '美股', '港股', 'a股', '新加坡', '香港',
+    '18a', '18c', 'vie', '红筹', '37号文', 'odi', '备案', '证监会', '门槛', '标准', '费用', '成本',
+    '多少钱', '估值', '融资', 'pre-ipo', 'preipo', 'spac', '借壳', '并购', '分拆', '私有化', '退市',
+    '市值', '招股', '路演', '承销', '审计', 'pcaob', '财务', '税', '架构', '开曼', 'bvi',
+    '家族办公室', '信托', '传承', '接班', '股权', '期权', 'esop', '激励', '持股', '俱乐部',
+    '彤鼎', '廖启捷', '会员', '投资', '时间', '周期', '多久', '流程', 'ipo', '中概股', '做空',
+    '增发', '回购', '独立董事', '披露', '合规', '对赌', '尽调', 'bp', '商业计划', 'cfo', '律师',
+    'fa', 'rwa', '代币', '海南', '北交所', '专精特新', '20-f', '6-k', 'ads', '存托'];
+
   function norm(s) {
     return (s || '').toLowerCase().replace(/[\s，。、？！；：""''（）()【】《》~·\-—_.,?!;:"']/g, '');
   }
   function grams(s) {
     s = norm(s);
     var g = {}, i;
-    for (i = 0; i < s.length; i++) { g[s[i]] = (g[s[i]] || 0) + 0.4; }
     for (i = 0; i < s.length - 1; i++) { var k = s.substr(i, 2); g[k] = (g[k] || 0) + 1; }
+    for (i = 0; i < s.length; i++) { g[s[i]] = (g[s[i]] || 0) + 0.35; }
     return g;
   }
-  function score(qg, text, w) {
+  function qgrams(q) {
+    var g = grams(q), i, n;
+    for (i = 0; i < STOP.length; i++) { n = norm(STOP[i]); if (g[n]) delete g[n]; }
+    return g;
+  }
+  function total(g) { var t = 0, k; for (k in g) t += g[k]; return t; }
+  function ov(qg, text) {
     var tg = grams(text), s = 0, k;
     for (k in qg) { if (tg[k]) s += Math.min(qg[k], tg[k]); }
-    return s * w;
+    return s;
+  }
+  function hasDomain(q) {
+    var n = norm(q), i;
+    for (i = 0; i < DOMAIN.length; i++) { if (n.indexOf(norm(DOMAIN[i])) > -1) return true; }
+    return false;
   }
 
   // 意图关键词 → 直答，优先于检索
@@ -156,17 +182,22 @@
   }
 
   function search(q) {
-    var qg = grams(q), out = [], i;
+    var qg = qgrams(q), qt = total(qg) || 1, i, a, b;
+    var qas = [], arts = [];
     for (i = 0; i < KB.qas.length; i++) {
-      out.push({ kind: 'qa', s: score(qg, KB.qas[i].q, 3) + score(qg, KB.qas[i].a, 0.7), d: KB.qas[i] });
+      a = ov(qg, KB.qas[i].q); b = ov(qg, KB.qas[i].a);
+      qas.push({ d: KB.qas[i], s: a * 3 + b * 0.7, cov: Math.min(1, (a + b * 0.5) / qt) });
     }
-    var arts = [];
     for (i = 0; i < KB.arts.length; i++) {
-      arts.push({ s: score(qg, KB.arts[i].t, 3) + score(qg, KB.arts[i].d, 0.8), d: KB.arts[i] });
+      a = ov(qg, KB.arts[i].t); b = ov(qg, KB.arts[i].d);
+      arts.push({ d: KB.arts[i], s: a * 3 + b * 0.8, cov: Math.min(1, (a + b * 0.5) / qt) });
     }
-    out.sort(function (a, b) { return b.s - a.s; });
-    arts.sort(function (a, b) { return b.s - a.s; });
-    return { best: out[0], arts: arts.slice(0, 3).filter(function (a) { return a.s > 2.2; }) };
+    qas.sort(function (x, y) { return y.s - x.s; });
+    arts.sort(function (x, y) { return y.s - x.s; });
+    return {
+      best: qas[0],
+      arts: arts.filter(function (x) { return x.s > 3.5 && x.cov > 0.3; }).slice(0, 3)
+    };
   }
 
   /* ---------------- 渲染 ---------------- */
@@ -224,8 +255,17 @@
       return;
     }
 
+    // 领域词准入：问题里没有任何业务词就不硬凑答案
+    if (!hasDomain(q)) {
+      track('offtopic', q.slice(0, 40));
+      addBot('这个问题不在本站内容范围内。我只回答境外上市与跨境资本运作相关的问题，' +
+        '例如上市路径、纳斯达克门槛、费用与周期、VIE架构、37号文与ODI备案、市值管理等。' +
+        ctaHTML('其他事宜可直接联系团队。'));
+      return;
+    }
+
     var r = search(q);
-    if (r.best && r.best.s > 3.2) {
+    if (r.best && r.best.s > 6 && r.best.cov > 0.45) {
       track('hit', q.slice(0, 40));
       addBot('<b>' + esc(r.best.d.q) + '</b><br>' + esc(r.best.d.a) + relHTML(r.arts) +
         ctaHTML('需要针对你企业的具体判断？'));
