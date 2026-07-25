@@ -51,7 +51,10 @@
    该脚本会：重建 `js/assistant-kb.json`（新文章由此进入 AI 客服检索范围）、补齐文章 schema 缺失的 `description`、给漏装的页面补上 `assistant.js` 与统计代码。幂等，可反复运行。
    脚本若提示「仍有 N 篇文章缺 description」，说明该文章 `<meta name="description">` 为空，需先补上再重跑，否则检索命中率下降。
 6. `git add -A && git commit -m "发布：文章标题" && git push`。
-7. 推送后向用户报告文章的完整网址。
+7. **提交 IndexNow（必做，勿跳过）**：`python tools/push_indexnow.py articles/<slug>.html`。
+   IndexNow 直通 Bing 索引，而 ChatGPT 与 Copilot 的联网结果走 Bing，因此这一步同时服务 SEO 与 GEO。无需登录、无每日配额；只提交本次新增或修改的页面，不要每次全量推。
+   若脚本报「未找到 IndexNow key 文件」，说明仓库根目录的 `<32位十六进制>.txt` 丢失，需先恢复（该文件必须能被公开访问）。
+8. 推送后向用户报告文章的完整网址。
 
 ## 六、修改边界
 
