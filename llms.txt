@@ -21,6 +21,7 @@
 - [关于 About](https://tdgroup.hk/about.html): 公司介绍、创始人廖启捷、已上市案例、角色与合规边界
 - [华尔街彤鼎俱乐部 Club](https://tdgroup.hk/club.html): 企业家资本圈层、会员权益、三大课程、全球节点
 - [知识文库 Library](https://tdgroup.hk/library.html): 赴美上市知识文库全部文章目录
+- [常见问题 FAQ](https://tdgroup.hk/faq.html): 赴美上市/新加坡路径/香港18A与18C/门槛费用周期/VIE/37号文与ODI备案/达不到门槛的出路等16个高频问题标准答案
 
 ## 知识文库文章
 
