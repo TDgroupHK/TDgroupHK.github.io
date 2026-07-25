@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>港股上市可行性自测（2分钟） | 彤鼎集团</title>
+<meta name="description" content="七道题、两分钟，对照港交所主板三套财务测试、GEM、18A、18C的现行门槛，初步判断你的企业适合哪条上市路径，以及递表前需要补强的事项。测试在浏览器本地完成，不收集任何数据。">
+<link rel="canonical" href="https://tdgroup.hk/hk-ipo-checkup.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="港股上市可行性自测（2分钟） | 彤鼎集团">
+<meta property="og:description" content="七道题对照港交所现行上市门槛，初判你的企业适合哪条路径。">
+<meta property="og:url" content="https://tdgroup.hk/hk-ipo-checkup.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+::selection{background:var(--gold);color:#0a0908;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(14px);}
+.nav-in{max-width:860px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;}
+.logo{color:#fff;font-weight:700;letter-spacing:4px;font-size:16px;}
+.logo small{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10px;letter-spacing:2px;margin-left:10px;}
+.menu{display:flex;gap:22px;font-size:13.5px;color:#c6bda6;}
+.menu a:hover{color:var(--gold-hi);}
+header{padding:130px 0 40px;background:radial-gradient(ellipse at 15% 20%,rgba(201,169,98,.12) 0,transparent 45%),var(--night);}
+.eyebrow{display:flex;align-items:center;gap:14px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:5px;font-size:12.5px;margin-bottom:22px;}
+.eyebrow::before{content:"";width:44px;height:1px;background:var(--gold);}
+h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:38px;line-height:1.4;color:#fff;font-weight:900;letter-spacing:1px;}
+h1 em{color:var(--gold-hi);font-style:normal;}
+.sub{margin-top:16px;color:#a89b7d;font-size:15px;max-width:640px;}
+.quiz{padding:30px 0 90px;}
+.q{border:1px solid var(--line);background:var(--ink);padding:26px 28px;margin-bottom:18px;}
+.q h3{color:#fff;font-size:17px;margin-bottom:16px;letter-spacing:.5px;}
+.q h3 i{font-style:italic;font-family:Georgia,serif;color:var(--gold);margin-right:10px;font-size:15px;}
+.opts{display:flex;flex-wrap:wrap;gap:10px;}
+.opts label{border:1px solid var(--line);padding:10px 18px;font-size:14px;cursor:pointer;transition:all .25s;color:#c9bfa4;user-select:none;}
+.opts label:hover{border-color:var(--gold);color:var(--gold-hi);}
+.opts input{display:none;}
+.opts input:checked+span{color:#0d0b07;}
+.opts label:has(input:checked){background:var(--gold);border-color:var(--gold);color:#0d0b07;font-weight:700;}
+.note{color:var(--mute);font-size:12.5px;margin-top:10px;}
+.btn{display:inline-block;padding:16px 46px;font-size:15px;letter-spacing:3px;font-weight:700;background:var(--gold);color:#0d0b07;border:0;cursor:pointer;transition:all .3s;font-family:inherit;}
+.btn:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn[disabled]{opacity:.45;cursor:not-allowed;transform:none;}
+#result{display:none;margin-top:34px;}
+.verdict{border:1px solid var(--gold);background:linear-gradient(160deg,rgba(201,169,98,.12),rgba(201,169,98,.03));padding:32px 30px;}
+.verdict .grade{font-family:Georgia,serif;font-style:italic;color:var(--gold-hi);font-size:40px;line-height:1;}
+.verdict h2{color:#fff;font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;margin:14px 0 6px;}
+.verdict p{font-size:15px;}
+.points{margin-top:20px;border-top:1px solid var(--line);padding-top:8px;}
+.points li{list-style:none;padding:12px 0 12px 26px;position:relative;border-bottom:1px dashed rgba(201,169,98,.15);font-size:14.5px;}
+.points li::before{content:"—";position:absolute;left:0;color:var(--gold);}
+.cta{margin-top:26px;border:1px solid var(--line);background:var(--ink);padding:28px 30px;}
+.cta b{color:#fff;font-size:17px;display:block;margin-bottom:10px;}
+.cta p{font-size:14.5px;}
+.cta .ways{margin-top:14px;display:flex;gap:14px;flex-wrap:wrap;}
+.cta .ways span{border:1px solid var(--gold);color:var(--gold-hi);padding:9px 18px;font-size:14px;letter-spacing:1px;}
+.copybtn{margin-top:18px;background:transparent;border:1px solid var(--gold);color:var(--gold);padding:10px 24px;font-size:13.5px;letter-spacing:2px;cursor:pointer;transition:all .25s;font-family:inherit;}
+.copybtn:hover{background:rgba(201,169,98,.12);}
+.legal{margin-top:26px;color:var(--mute);font-size:12px;line-height:1.9;border-top:1px solid var(--line);padding-top:18px;}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mute);font-size:12.5px;}
+@media(max-width:640px){h1{font-size:28px;}header{padding-top:110px;}}
+</style></head><body>
+<nav><div class="nav-in">
+<a class="logo" href="/">彤鼎集团<small>TD GROUP</small></a>
+<div class="menu"><a href="/">首页</a><a href="/library.html">知识文库</a><a href="/about.html">关于</a></div>
+</div></nav>
+
+<header><div class="wrap">
+<div class="eyebrow">HK IPO SELF-CHECK</div>
+<h1>港股上市可行性<em>自测</em></h1>
+<p class="sub">七道题、约两分钟。按香港交易所现行上市规则的门槛（主板三套财务测试、GEM、18A、18C）做初步对照，判断你的企业离递表还有多远、适合哪条路径。测试在浏览器本地完成，不收集任何数据。</p>
+</div></header>
+
+<div class="quiz"><div class="wrap">
+<div class="q"><h3><i>01</i>最近一个财年的净利润（港币口径）</h3><div class="opts" data-q="profit">
+<label><input type="radio" name="profit" value="hi"><span>3,500 万以上</span></label>
+<label><input type="radio" name="profit" value="mid"><span>1,000 万 – 3,500 万</span></label>
+<label><input type="radio" name="profit" value="lo"><span>1,000 万以下</span></label>
+<label><input type="radio" name="profit" value="loss"><span>亏损或微利</span></label>
+</div><div class="note">主板盈利测试要求最近一年不低于 3,500 万港元，且前两年合计不低于 4,500 万。</div></div>
+
+<div class="q"><h3><i>02</i>最近一个财年的收入</h3><div class="opts" data-q="rev">
+<label><input type="radio" name="rev" value="hi"><span>5 亿以上</span></label>
+<label><input type="radio" name="rev" value="mid"><span>1 亿 – 5 亿</span></label>
+<label><input type="radio" name="rev" value="lo"><span>1 亿以下</span></label>
+</div></div>
+
+<div class="q"><h3><i>03</i>对上市时市值的合理预期</h3><div class="opts" data-q="cap">
+<label><input type="radio" name="cap" value="c40"><span>40 亿以上</span></label>
+<label><input type="radio" name="cap" value="c20"><span>20 – 40 亿</span></label>
+<label><input type="radio" name="cap" value="c5"><span>5 – 20 亿</span></label>
+<label><input type="radio" name="cap" value="c15"><span>1.5 – 5 亿</span></label>
+<label><input type="radio" name="cap" value="c0"><span>不足 1.5 亿 / 说不准</span></label>
+</div></div>
+
+<div class="q"><h3><i>04</i>目前的股权架构</h3><div class="opts" data-q="arch">
+<label><input type="radio" name="arch" value="cn"><span>纯境内公司</span></label>
+<label><input type="radio" name="arch" value="redchip"><span>已搭红筹架构</span></label>
+<label><input type="radio" name="arch" value="vie"><span>行业受限，可能要 VIE</span></label>
+<label><input type="radio" name="arch" value="offshore"><span>业务主体已在境外</span></label>
+</div></div>
+
+<div class="q"><h3><i>05</i>以下情况是否存在（可多选，如实勾选）</h3><div class="opts" data-q="issues">
+<label><input type="checkbox" name="issues" value="社保公积金历史欠缴"><span>社保公积金历史欠缴</span></label>
+<label><input type="checkbox" name="issues" value="与股东关联方存在大额购销"><span>大额关联交易</span></label>
+<label><input type="checkbox" name="issues" value="投资人对赌/回购条款未清理"><span>对赌条款未清理</span></label>
+<label><input type="checkbox" name="issues" value="股权代持未还原"><span>股权代持未还原</span></label>
+<label><input type="checkbox" name="issues" value="" checked hidden><span style="display:none"></span></label>
+</div><div class="note">这四项是问询高频问题，全部可以在递表前解决。</div></div>
+
+<div class="q"><h3><i>06</i>所处行业</h3><div class="opts" data-q="ind">
+<label><input type="radio" name="ind" value="general"><span>消费 / 制造 / 服务等一般行业</span></label>
+<label><input type="radio" name="ind" value="tech"><span>硬科技 / 特专科技</span></label>
+<label><input type="radio" name="ind" value="bio"><span>生物科技 / 医药</span></label>
+<label><input type="radio" name="ind" value="fin"><span>金融 / 地产</span></label>
+</div></div>
+
+<div class="q"><h3><i>07</i>期望的上市时间</h3><div class="opts" data-q="when">
+<label><input type="radio" name="when" value="w1"><span>12 个月内</span></label>
+<label><input type="radio" name="when" value="w2"><span>1 – 2 年</span></label>
+<label><input type="radio" name="when" value="w3"><span>2 – 3 年</span></label>
+<label><input type="radio" name="when" value="w0"><span>还在了解阶段</span></label>
+</div></div>
+
+<button class="btn" id="go" onclick="calc()">生成自测结果</button>
+
+<div id="result">
+<div class="verdict"><span class="grade" id="grade"></span>
+<h2 id="path"></h2><p id="summary"></p>
+<ul class="points" id="points"></ul></div>
+<div class="cta"><b>下一步：拿这份结果，换一次免费初评</b>
+<p>把自测结果发给我们，彤鼎的顾问会按你的行业和数据，给出一页纸的路径初评（适用测试、时间表、需先解决的事项）。不推销、不承诺结果，只给判断依据。</p>
+<div class="ways"><span>邮箱 liaoqijie@tdgroup.hk</span><span>微信 esonleo（备注：上市自测）</span></div>
+<button class="copybtn" onclick="copyResult()" id="cpb">一键复制自测结果</button></div>
+<div class="legal">彤鼎集团（香港）有限公司为企业管理咨询机构，持牌业务由持牌合作机构承做。本页测试仅基于公开上市规则做初步对照，结果不构成任何投资建议或收益承诺；涉及 Pre-IPO 及投资机会的服务仅面向符合条件的合格投资者，并将充分揭示风险。规则门槛以香港交易所最新刊发版本为准。</div>
+</div>
+</div></div>
+
+<footer><div class="wrap">© 彤鼎集团（香港）有限公司 TD Group (Hong Kong) Limited · 香港 · 深圳 · 上海 · 新加坡 · <a href="/" style="color:var(--gold)">tdgroup.hk</a></div></footer>
+
+<script>
+var lastText = "";
+function pick(n){var el=document.querySelector('input[name="'+n+'"]:checked');return el?el.value:null;}
+function calc(){
+  var profit=pick('profit'),rev=pick('rev'),cap=pick('cap'),arch=pick('arch'),ind=pick('ind'),when=pick('when');
+  if(!profit||!rev||!cap||!arch||!ind||!when){alert('还有题目没选完');return;}
+  var issues=[].slice.call(document.querySelectorAll('input[name="issues"]:checked')).map(function(x){return x.value;}).filter(Boolean);
+  var path='',summary='',pts=[],score=0;
+  var capHi=(cap==='c40'),cap20=(cap==='c40'||cap==='c20'),cap5=(cap==='c40'||cap==='c20'||cap==='c5'),cap15=(cap!=='c0');
+  if(profit==='hi'&&cap5){path='主板 · 盈利测试';summary='最近一年净利润已达 3,500 万港元档，若前两年合计不低于 4,500 万、市值不低于 5 亿，这是最常走、审核逻辑最成熟的一条路。';score=3;}
+  else if(rev==='hi'&&capHi){path='主板 · 市值/收益测试';summary='收入 5 亿以上、市值预期 40 亿以上，可以不看利润走市值/收益测试；关键在市值支撑和收入质量。';score=3;}
+  else if(rev==='hi'&&cap20){path='主板 · 市值/收益/现金流测试';summary='收入 5 亿以上、市值 20 亿档，若最近三年经营现金流合计不低于 1 亿港元，可走第三套测试。';score=2;}
+  else if(ind==='bio'&&cap5){path='主板 · 18A 生物科技章节';summary='未盈利生物科技公司可走 18A，市值门槛 15 亿港元，核心资产需通过概念验证并有资深投资者背书。';score=2;}
+  else if(ind==='tech'&&capHi){path='主板 · 18C 特专科技章节';summary='特专科技公司：已商业化（收入 2.5 亿以上）市值门槛 40 亿；未商业化 80 亿。适合有硬科技属性和机构股东的企业。';score=2;}
+  else if(profit!=='loss'&&cap15){path='GEM 创业板路径';summary='GEM 不设利润门槛：两年经营现金流合计不低于 3,000 万港元、市值不低于 1.5 亿即可，适合规模尚小但现金流真实的企业，后续可转主板。';score=1;}
+  else{path='先规划，再冲线';summary='以当前数据硬闯任何一条测试线都吃力。更务实的打法是用 1-2 年把利润或现金流做到门槛之上，同时把架构和规范性问题先解决掉——这段准备期做得好，后面递表反而最快。';score=0;}
+  if(arch==='cn')pts.push('架构：纯境内公司赴港多数要先搭红筹（重组须在申报期前完成，创始人换股前先办外汇登记），这一步建议最先启动。');
+  if(arch==='vie')pts.push('架构：VIE 属于受限行业安排，联交所按「披露+必要性」审核，需提前论证行业准入依据。');
+  if(arch==='redchip')pts.push('架构：红筹已搭是显著加分项，重点核查历史换股的外汇登记和税务处理是否完整。');
+  for(var i=0;i<issues.length;i++)pts.push('规范性：'+issues[i]+' —— 问询高频事项，递表前必须有解决或补缴方案。');
+  if(issues.length===0)pts.push('规范性：四项高频问题均不存在，尽调阶段会顺利很多。');
+  if(when==='w1'&&score<3)pts.push('时间：12 个月内挂牌对当前条件偏紧，常见节奏是筹备 6-12 个月＋递表后 6-9 个月。');
+  else pts.push('时间：常见全程 12-18 个月；筹备期功课越足，递表后越快。');
+  var grade=score>=3?'A':(score>=1?'B':'C');
+  document.getElementById('grade').textContent=grade+' 级';
+  document.getElementById('path').textContent=path;
+  document.getElementById('summary').textContent=summary;
+  var ul=document.getElementById('points');ul.innerHTML='';
+  for(var j=0;j<pts.length;j++){var li=document.createElement('li');li.textContent=pts[j];ul.appendChild(li);}
+  lastText='【港股上市可行性自测结果】\n评级：'+grade+'\n建议路径：'+path+'\n'+summary+'\n'+pts.map(function(p){return '· '+p;}).join('\n')+'\n（来自 tdgroup.hk/hk-ipo-checkup.html）';
+  document.getElementById('result').style.display='block';
+  document.getElementById('result').scrollIntoView({behavior:'smooth'});
+}
+function copyResult(){
+  navigator.clipboard.writeText(lastText).then(function(){
+    document.getElementById('cpb').textContent='已复制，微信/邮件里直接粘贴';
+  });
+}
+</script>
+</body></html>
