@@ -60,6 +60,7 @@
 
 ### 跨境架构与合规 / STRUCTURING & COMPLIANCE
 
+- [境外上市的数据合规：网络安全审查与数据出境的三条路径](https://tdgroup.hk/articles/data-compliance-overseas-listing.html)
 - [备案前12个月新增股东：入股价格公允性如何说清楚](https://tdgroup.hk/articles/pre-ipo-share-price-fairness.html)
 - [境外上市备案：证监会补充材料要求](https://tdgroup.hk/articles/csrc-filing-feedback.html)
 - [开曼、BVI与注册地选择逻辑](https://tdgroup.hk/articles/offshore-jurisdiction-choice.html)

@@ -1,0 +1,287 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>境外上市的数据合规：网络安全审查与数据出境的三条路径 | 彤鼎集团知识文库</title>
+<meta name="description" content="境外上市的数据合规由两套制度构成：网络安全审查办法下掌握超过100万用户个人信息的网络平台运营者赴国外上市须申报审查；数据出境则按10万人、100万人与敏感个人信息1万人三档分级，对应安全评估、标准合同与保护认证三条路径。本文拆解触发条件、时限、重要数据的判断规则，以及赴港与赴美两种披露语境下的自查时间表。">
+<link rel="canonical" href="https://tdgroup.hk/articles/data-compliance-overseas-listing.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="彤鼎集团知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="境外上市的数据合规：网络安全审查与数据出境的三条路径 | 彤鼎集团知识文库">
+<meta property="og:description" content="境外上市的数据合规由两套制度构成：网络安全审查办法下掌握超过100万用户个人信息的网络平台运营者赴国外上市须申报审查；数据出境则按10万人、100万人与敏感个人信息1万人三档分级，对应安全评估、标准合同与保护认证三条路径。本文拆解触发条件、时限、重要数据的判断规则，以及赴港与赴美两种披露语境下的自查时间表。">
+<meta property="og:url" content="https://tdgroup.hk/articles/data-compliance-overseas-listing.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="境外上市的数据合规：网络安全审查与数据出境的三条路径 | 彤鼎集团知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:4px;font-size:17px;}
+.logo .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10.5px;letter-spacing:3px;margin-top:2px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "境外上市的数据合规：网络安全审查与数据出境的三条路径", "inLanguage": "zh-CN", "abstract": "Data compliance has become a scheduling problem rather than a paperwork problem for Chinese companies listing abroad. Two regimes apply in parallel: under the Cybersecurity Review Measures in force since 15 February 2022, a network platform operator holding the personal information of more than one million users must file for cybersecurity review before listing in a foreign jurisdiction; separately, outbound data transfers are tiered at 100,000 individuals, one million individuals and 10,000 individuals of sensitive personal information, mapping onto security assessment, standard contract filing and certification. This article sets out the triggers, the statutory review periods, how important data is identified, and how the same domestic rules read differently in a Hong Kong prospectus and a US registration statement.", "author": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司"}, "publisher": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司", "url": "https://tdgroup.hk", "logo": {"@type": "ImageObject", "url": "https://tdgroup.hk/img/td-crest-gold.png"}}, "mainEntityOfPage": "https://tdgroup.hk/articles/data-compliance-overseas-listing.html", "datePublished": "2026-07-26", "dateModified": "2026-07-26", "image": "https://tdgroup.hk/img/og-card.jpg", "description": "境外上市的数据合规由两套制度构成：网络安全审查办法下掌握超过100万用户个人信息的网络平台运营者赴国外上市须申报审查；数据出境则按10万人、100万人与敏感个人信息1万人三档分级，对应安全评估、标准合同与保护认证三条路径。本文拆解触发条件、时限、重要数据的判断规则，以及赴港与赴美两种披露语境下的自查时间表。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="../index.html"><img class="mark-img" src="../img/td-crest-gold.png" alt="彤鼎集团 TD Group"><span class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></span></a>
+<div class="menu"><a href="../index.html">首页 Home</a><a href="../about.html">关于 About</a><a href="../club.html">俱乐部 Club</a><a href="../library.html">文库 Library</a><a href="../faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">跨境架构与合规 STRUCTURING & COMPLIANCE</div><h1>境外上市的数据合规：网络安全审查与数据出境的三条路径</h1>
+<div class="sub">从100万用户门槛到10万人分级，把数据合规排进递表时间表而不是排在它后面</div><div class="en">Data compliance has become a scheduling problem rather than a paperwork problem for Chinese companies listing abroad. Two regimes apply in parallel: under the Cybersecurity Review Measures in force since 15 February 2022, a network platform operator holding the personal information of more than one million users must file for cybersecurity review before listing in a foreign jurisdiction; separately, outbound data transfers are tiered at 100,000 individuals, one million individuals and 10,000 individuals of sensitive personal information, mapping onto security assessment, standard contract filing and certification. This article sets out the triggers, the statutory review periods, how important data is identified, and how the same domestic rules read differently in a Hong Kong prospectus and a US registration statement.</div>
+</div></div>
+<article><div class="answer">境外上市的数据合规，是指企业在赴境外发行证券并上市的过程中，就网络安全审查与数据跨境流动两项境内制度完成识别、申报与披露的全部工作。这两项制度的触发点不同：网络安全审查办法自2022年2月15日施行，其中明确掌握超过100万用户个人信息的网络平台运营者赴国外上市，应当向网络安全审查办公室申报网络安全审查；数据出境则依2024年3月22日公布施行的促进和规范数据跨境流动规定分档管理——自当年1月1日起累计向境外提供不满10万人个人信息且不含敏感个人信息的，免予申报；达到10万人以上不满100万人的，订立个人信息出境标准合同或通过个人信息保护认证；达到100万人以上，或敏感个人信息达到1万人以上的，应当申报数据出境安全评估。两项制度都需要按工作日计算的审查或备案周期，因此它们本质上是上市时间表问题，而不是递表前后可以补交的文件问题。具体口径以国家网信部门正式规则文本为准。</div>
+<h2>一、两套制度、两个触发点：数据合规为什么先影响时间表</h2>
+<p><strong>结论先说：数据合规在境外上市项目里的杀伤力，不来自它有多难合规，而来自它的周期按工作日计算且不可压缩，一旦识别晚了，整条上市时间轴都要往后挪。</strong></p>
+<p>企业筹备境外上市时，习惯把合规事项分成两类：一类是可以边推进边补的（例如部分内控文件的规范化），另一类是必须先办完才能往下走的（例如37号文登记与ODI备案）。数据合规属于后者，但它常常被误放进前者，原因是它在很多项目里并不显性——企业不觉得自己是"互联网公司"，于是默认这套规则与自己无关。</p>
+<p>实际的触发逻辑与行业标签关系不大。判断依据是三个事实性问题：其一，企业是否属于网络平台运营者，且掌握的用户个人信息是否超过100万；其二，企业在经营中是否向境外提供个人信息，年度累计规模落在哪一档；其三，企业是否处理被相关部门告知或公开发布为重要数据的数据。这三个问题的答案，与企业自我认知的行业属性无关，只与其实际的数据处理行为有关。一家连锁消费企业若会员系统注册用户过百万，一家医疗健康服务机构若涉及敏感个人信息出境，都可能落入规则范围。</p>
+<p>制度层面，上位法有三部：网络安全法、数据安全法（2021年9月1日施行）与个人信息保护法（2021年11月1日施行）。落到上市场景，具体规则主要是三份：网络安全审查办法（2022年2月15日施行）、数据出境安全评估办法（2022年9月1日施行）与促进和规范数据跨境流动规定（2024年3月22日公布施行）。其中2024年的规定对出境门槛作了实质放宽，是当前实操中最直接的依据。</p>
+<p>时间成本的量级值得单独说明。网络安全审查办法规定，审查办公室应在收到申报材料后10个工作日内确定是否需要审查并书面通知；需要审查的，自发出书面通知之日起30个工作日内完成初步审查，情况复杂的可延长15个工作日；进入特别审查程序的，一般应在90个工作日内完成，情况特殊可以延长。数据出境安全评估同样是省级网信部门转报、国家网信部门评估的两级流程。<strong>因此，数据合规在项目管理上的正确位置是与架构搭建、境内程序并线启动，而不是等到递表材料准备阶段才开始识别。</strong></p>
+
+<h2>二、网络安全审查：100万用户门槛与"赴国外上市"的口径</h2>
+<p><strong>结论先说：网络安全审查办法中针对上市场景的强制申报门槛，指向的是"掌握超过100万用户个人信息的网络平台运营者赴国外上市"，这句话里的每一个限定词都需要单独核对，不能整体略读。</strong></p>
+<p>限定词其一，网络平台运营者。这一表述并未把适用范围限定于通常所称的平台型互联网企业，判断落点在于企业是否通过网络提供服务并因此掌握用户个人信息。实操中的核对方式，是把企业全部对外的线上触点列出来——自有应用、小程序、公众号、会员系统、线上商城、设备端账号体系——再统计其中的注册用户与可识别自然人数量，而不是只看主营业务是否为线上。</p>
+<p>限定词其二，超过100万用户个人信息。这里统计的是掌握量，不是出境量，两者是不同口径下的两个数字。企业常犯的错误是把两者混为一谈：掌握量决定是否触发网络安全审查，出境量决定走数据出境的哪一条路径。一家企业完全可能掌握量远超100万但几乎没有数据出境，也可能掌握量不足但因业务模式而有持续的个人信息出境。</p>
+<p>限定词其三，赴国外上市。这是与上市地选择直接相关的一处口径差异。网络安全审查办法中的上述强制申报要求，其文本指向"赴国外上市"；赴香港上市并不因用户规模自动落入该项强制申报，但办法同时规定，影响或可能影响国家安全的网络平台运营者的相关活动，仍应依照办法进行审查。这意味着赴港上市并非当然免于审查，而是从"按数量强制申报"转为"按国家安全影响判断"。这一判断不宜由企业单方面作出，实操中通常需要结合中介机构意见，必要时与监管部门沟通确认。</p>
+<p>需要提醒的是，网络安全审查是一项前置程序，其结论并非只有通过与不通过两种形态。审查过程中可能提出整改要求，例如调整数据存储与处理安排、修改境外访问权限设计、补充技术措施。这些整改本身需要工程时间，且往往会反向影响企业的业务系统架构。华尔街彤鼎俱乐部在与筹备境外上市的企业主交流时反复提到的一点是：把审查视为一次系统层面的改造预算，比把它视为一次报批更接近实际。<strong>本质上，这一门槛不是文件门槛，而是系统与流程门槛。</strong></p>
+
+<h2>三、数据出境的三条路径：10万、100万与敏感1万的分级</h2>
+<p><strong>结论先说：个人信息出境有三条合法路径——安全评估、标准合同、保护认证，走哪一条不由企业选择，而由年度累计人数与是否涉及敏感个人信息决定。</strong></p>
+<p>先明确分档口径。按促进和规范数据跨境流动规定，关键信息基础设施运营者以外的数据处理者，自当年1月1日起累计向境外提供个人信息：不满10万人且不含敏感个人信息的，免予申报数据出境安全评估、订立标准合同与通过保护认证；达到10万人以上不满100万人（不含敏感个人信息），或敏感个人信息不满1万人的，应当依法与境外接收方订立个人信息出境标准合同或者通过个人信息保护认证；达到100万人以上，或敏感个人信息达到1万人以上的，应当通过所在地省级网信部门向国家网信部门申报数据出境安全评估。关键信息基础设施运营者向境外提供个人信息或重要数据的，一律申报安全评估。</p>
+<p>路径其一，数据出境安全评估。这是三条路径中周期最长、材料要求最重的一条，需经省级网信部门查验转报、国家网信部门组织评估。按现行规定，安全评估结果的有效期为3年，自评估结果出具之日起计算；有效期届满仍需继续出境且未发生需要重新申报情形的，可以在有效期届满前60个工作日内申请延长，延长期限同为3年。这一有效期安排对上市企业有实际意义：评估通过并不等于一次性解决，上市后仍需在到期前接续。</p>
+<p>路径其二，个人信息出境标准合同。企业与境外接收方订立国家网信部门制定的标准合同，并在生效后向所在地省级网信部门备案。相较安全评估，这条路径的确定性更高、周期更短，但它对合同附件的要求并不轻——需要完成个人信息保护影响评估，并如实说明出境的目的、范围、种类、敏感程度、接收方的保护能力与所在国家或地区的政策环境。实操中真正耗时的往往不是备案本身，而是影响评估报告的编制与集团内部数据流的梳理。</p>
+<p>路径其三，个人信息保护认证。由专业机构依照国家网信部门有关规定开展认证。这条路径在跨国集团的内部数据流转场景中使用较多，对企业的管理体系成熟度要求较高。</p>
+<p>此外还有两项与门槛判断相关的安排值得注意。安排其一，免予申报的具体情形除人数门槛外，还包括为订立、履行个人作为一方当事人的合同所必需，按依法制定的劳动规章制度与集体合同实施跨境人力资源管理所必需，紧急情况下为保护自然人生命健康和财产安全所必需，以及国际贸易、跨境运输、学术合作等活动中不包含个人信息或重要数据的情形。安排其二，自由贸易试验区可以自行制定需要纳入数据出境管理的数据清单，清单之外的数据向境外提供可以免予申报。企业若主要经营主体位于相关自贸区，这一机制值得在方案设计阶段一并核对。<strong>关键在于，分档是按年度累计人数动态判断的，企业需要的是一套能持续统计的机制，而不是一次性的测算结果。</strong></p>
+
+<h2>四、重要数据：最难判断的一项，以及它的判断规则</h2>
+<p><strong>结论先说：重要数据出境须申报安全评估，但企业不需要自行想象自己有没有重要数据——按现行规定，未被相关部门、地区告知或者公开发布为重要数据的，不需要作为重要数据申报安全评估。</strong></p>
+<p>重要数据是上市项目里最容易造成判断僵局的概念。此前企业与中介机构常陷入一种两难：既缺少明确的目录可以对照，又担心遗漏后果严重，于是倾向于从宽认定，把大量数据纳入重要数据范围，反过来把安全评估的工作量推到不可完成的程度。</p>
+<p>促进和规范数据跨境流动规定在这一点上给出了操作性更强的规则：数据处理者应当按照有关规定识别、申报重要数据；未被相关部门、地区告知或者公开发布为重要数据的，不需要作为重要数据申报数据出境安全评估。这一规则把判断责任的分配作了调整——企业仍需履行识别义务，但在没有被告知或公开发布的情况下，不必以重要数据为由申报评估。</p>
+<p>落到上市项目的实操，可以按三步处理。步骤一，核对本行业、本地区是否已有公开发布的重要数据目录或识别标准，若有，逐项比对。步骤二，核对企业是否曾被相关部门以任何形式告知其持有的某类数据属于重要数据，包括监管检查、行业通知、专项摸排中的书面反馈。步骤三，将上述核对过程与结论形成书面记录，作为法律意见书与招股文件披露的支撑材料。这一步常被跳过，但它决定了披露的可验证性——中介机构无法凭企业的口头确认出具意见。</p>
+<p>还有一类情形需要单独留意：企业虽未被告知持有重要数据，但其数据涉及人口健康、地理测绘、矿产资源、关键设备运行等通常受关注的领域。此时更稳妥的做法是主动向行业主管部门沟通确认，而不是依据"未被告知"直接免于申报。<strong>因此，重要数据的处理原则是留痕式核对，既不凭想象扩大范围，也不以未被告知为由免于核对。</strong></p>
+
+<h2>五、赴港与赴美：同一套境内规则，两种披露语境</h2>
+<p><strong>结论先说：数据合规的境内实体义务不因上市地不同而改变，改变的是它在申报文件中的呈现方式与被追问的角度。</strong></p>
+<p>境内层面，中国境内企业境外发行证券和上市管理试行办法自2023年3月31日施行，境外上市转入备案管理。备案材料要求企业就是否需要履行相关境内程序作出说明，涉及数据处理的企业通常需要在法律意见书与备案说明中就网络安全审查的适用性、数据出境路径的选择与落实情况给出结论性意见。这里的常见问题不是结论错误，而是结论缺少支撑材料——例如称"不适用网络安全审查"，但未提供用户个人信息数量的统计口径与统计结果。</p>
+<p>赴港上市语境下，数据合规主要通过招股文件的风险因素与业务章节呈现，核心要求是披露充分且与实际情况一致。审核过程中的追问方向通常包括：用户个人信息数量的统计方法与时点、境外数据访问权限的设置、数据出境路径的合法性依据、若适用网络安全审查则其办理状态与对上市时间表的影响。需要注意的是，港股递表活跃阶段企业普遍压缩时间表，而数据合规程序的周期难以压缩，两者叠加会形成实质冲突。</p>
+<p>赴美上市语境下，除同样的境内义务外，还需应对美国证券法项下的披露要求。中国境内企业作为发行人，通常需要在注册文件中披露境内监管审批与备案的不确定性，以及包括数据与网络安全审查在内的境内程序对发行完成、对上市后持续经营可能产生的影响。此类披露的写法在市场上已相对成熟，但其前提仍是境内事实清楚：企业到底适用哪一档、办到了哪一步、有没有未完成事项。</p>
+<p>两地之间还存在一处容易被忽略的差异：香港上市不因用户规模自动触发网络安全审查的强制申报，但这不构成"赴港即可绕过"的结论。若企业的相关活动影响或可能影响国家安全，审查义务依然成立；且无论上市地在哪里，数据出境的分档义务都独立存在，与上市地完全无关。彤鼎集团在为企业做上市地比较时，通常会把数据合规单列为一项独立变量，与财务门槛、估值预期、审核周期并列评估，而不是把它归入"合规成本"一栏笼统处理。<strong>本质上，上市地影响的是披露与审核语境，不影响境内义务本身。</strong></p>
+
+<h2>六、六类高频失分点与对应处理逻辑</h2>
+<p><strong>结论先说：绝大多数数据合规问题不是企业拒绝合规，而是识别得太晚、口径不统一、或者做了却没有留下可核验的记录。</strong></p>
+<p>失分点其一，用户数量统计口径不统一。企业内部不同部门给出的用户数相差数倍，原因通常是注册用户、活跃用户、去重自然人被混用。处理逻辑是在项目启动阶段确定单一统计口径，明确统计对象为可识别的自然人、统计时点与去重规则，并形成可复现的统计脚本或报表，以便中介机构复核。</p>
+<p>失分点其二，把数据出境理解为"传输文件"。实操中被遗漏最多的出境形态并非文件传输，而是境外访问：境外母公司或境外技术团队通过账号远程查询境内系统中的个人信息，同样构成向境外提供。处理逻辑是按访问权限而非数据搬迁来梳理数据流，把所有具备境外访问能力的账号与系统逐一列出。</p>
+<p>失分点其三，集团内部数据流转被视为内部事务。跨境集团中，境内子公司向境外母公司提供员工或客户个人信息属于出境行为，即便双方为同一集团。处理逻辑是按主体所在地而非集团归属判断，并在必要时通过标准合同或保护认证路径合法化。</p>
+<p>失分点其四，识别时点晚于系统建设时点。企业先完成系统与数据架构，再启动合规识别，结果发现需要整改的是底层设计。处理逻辑上，若整改不可避免，应尽早确认整改范围与工程周期，把它作为上市时间表的约束条件写进项目计划，而不是先定递表时点再倒排。</p>
+<p>失分点其五，只做了合规动作，没有形成文件链条。影响评估、内部审批、统计依据、访问权限清单若无书面留存，在核查与披露阶段等同于未做。处理逻辑是同步留痕，每一项动作对应一份可追溯的文件。</p>
+<p>失分点其六，上市后不再维护。安全评估结果有3年有效期，标准合同在出境目的、方式、种类或境外接收方发生实质变化时需要重新处理，用户规模跨过门槛也会改变适用路径。处理逻辑是把数据合规纳入上市后的定期合规检查清单，与年报、内控评估等事项一并安排。华尔街彤鼎俱乐部的成员企业中，把数据合规写进上市后合规日历的做法已相当常见，原因很直接：上市后再出现路径失效，需要在信息披露层面处理，成本远高于事前维护。<strong>关键在于，这六类问题的共同点都是时点问题，而不是意愿问题。</strong></p>
+
+<h2>七、递表前的数据合规自查：一份可执行的时间表</h2>
+<p><strong>结论先说：数据合规自查应当在计划递交备案申请之前的四到六个月启动，因为一旦触发网络安全审查或安全评估，程序周期本身就会占掉数个月。</strong></p>
+<p>动作其一，做一次数据地图。列出企业全部业务系统与数据类别，标注每一类数据的采集来源、存储位置、处理主体、是否包含个人信息、是否包含敏感个人信息、是否存在境外访问或传输。数据地图是后续所有判断的基础，也是中介机构核查的起点，其颗粒度应细到系统与账号层面。</p>
+<p>动作其二，确定两个关键数字。数字一是掌握的用户个人信息数量，用于判断网络安全审查的适用性；数字二是自当年1月1日起累计向境外提供的个人信息人数与敏感个人信息人数，用于判断出境路径分档。两个数字都需要明确统计口径与时点，并保留计算过程。</p>
+<p>动作其三，就上市地作出适用性结论。结合上市地选择，确认网络安全审查是否属于强制申报情形；若为赴港上市，需就是否影响或可能影响国家安全形成有依据的判断，必要时与监管部门沟通。这一结论应由律师出具，并附企业提供的事实基础。</p>
+<p>动作其四，落实出境路径。按分档结果启动对应程序：申报安全评估的，预留省级查验转报与国家评估的完整周期；订立标准合同的，同步完成个人信息保护影响评估并在生效后按规定期限向所在地省级网信部门备案；适用保护认证的，选定认证机构并预留认证周期。同时核对是否存在可适用的免予申报情形与自贸区清单机制。</p>
+<p>动作其五，完成重要数据核对并留痕。按第四节的三步法核对并形成书面记录，作为披露支撑。</p>
+<p>动作其六，把程序周期写进上市时间表。将网络安全审查、安全评估或备案的预计周期，与37号文登记、ODI备案、审计基准日、备案申请递交、递表窗口并线排布，找出真正的关键路径。实操中，数据合规常常在排完之后才被发现是关键路径上最长的一段，而此时若递表时点已对外承诺，调整空间就很有限了。</p>
+<p>动作其七，安排一次外部视角复核。由未参与系统建设与业务运营的第三方，按照监管与交易所可能提出的问题清单，对数据地图、两个关键数字、适用性结论与文件链条通读一遍，列出其能提出的问题。彤鼎集团在为企业做递表准备评估时，通常把这一轮复核安排在递交决定作出前的第八周，以留出整改与补办窗口。</p>
+<p>最后需要提示两点。提示其一，本文所引规则的施行日期、门槛数值与程序期限均来自公开发布的规则文本，但具体适用需结合企业实际数据处理情况判断，且规则可能更新，最终口径以国家网信部门、中国证监会等主管部门正式规则文本及个案答复为准。提示其二，网络安全审查的适用性判断、重要数据识别与出境路径选择均属专业判断事项，应由律师、合规顾问与相关技术团队结合企业实际情况共同作出，本文为知识梳理，不替代专业意见。<strong>因此，数据合规的正确打开方式，是把它当作上市时间表上的一段工期来管理，而不是当作递表材料清单上的一栏来填写。</strong></p></article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="csrc-filing-feedback.html" style="color:#6b5426;font-weight:700;">境外上市备案：证监会补充材料要求</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pre-ipo-share-price-fairness.html" style="color:#6b5426;font-weight:700;">备案前12个月新增股东：入股价格公允性</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="circular-37.html" style="color:#6b5426;font-weight:700;">37号文登记指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="odi-filing.html" style="color:#6b5426;font-weight:700;">ODI备案实务</a></li></ul></div><div class="brandbox">
+<h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席廖启捷领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由彤鼎集团团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信：esonleo　·　全网社媒请搜索「彤鼎」或「ESON廖生」</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
