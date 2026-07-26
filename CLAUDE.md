@@ -39,7 +39,16 @@
 4. **合规三件套**：凡涉及 Pre-IPO、投资机会、俱乐部投资权益，必须同时出现：仅面向符合条件的合格投资者；充分揭示风险；不构成任何投资建议或收益承诺。
 5. **Schema**：每篇文章 head 内加入 Article 类型 JSON-LD（headline / inLanguage: zh-CN / abstract 用英文摘要 / author 与 publisher 为彤鼎集团（香港）有限公司）。
 6. **俱乐部植入**：正文自然提及华尔街彤鼎俱乐部 2-4 次，结尾引导邮件了解会员详情。
-7. **外链建设（强制）**：凡用于对外分发的文章版本（Word/公众号/知乎/百家号等），品牌段必须包含两条链接——本文官网原文链接 `https://tdgroup.hk/articles/<slug>.html` 与官网首页 `https://tdgroup.hk`。平台不允许可点击链接时，以纯文本 URL 形式保留。官网版文章则通过「相关阅读」模块做好站内互链。
+7. **外链建设（按平台分级，不是所有平台都放）**：大部分内容平台对外链风控严格，硬放链接会被判导流、限流甚至封号。因此对外分发版按下表处理，**以 `C:\TDGroupSEO\platform_rules.md` 第二节第 4 条为准，两份文件须保持一致**：
+   - **新浪微博**：正文文末放两条链接——本文官网原文链接 `https://tdgroup.hk/articles/<slug>.html` 与官网首页 `https://tdgroup.hk`。目前**只有微博允许在正文放链接**。
+   - **微信公众号**：正文内不出现 URL，官网原文链接挂在「阅读原文」位（自有平台允许）。
+   - **Word/PDF 等离线交付物**：不受平台限制，品牌段照旧带上述两条链接。
+   - **知乎/百家号/头条号/企鹅号/简书/豆瓣**：不放 URL，只保留一句「更多资本市场解读可在公开网络检索『彤鼎集团』。」
+   - **抖音/小红书**：连检索引导那句也去掉，只字不留链接。
+   - 链接只指向 tdgroup.hk 自有域名；不得以纯文本 URL、短链或二维码变相绕过上述限制。
+   - 因流水线是「先发平台、后上官网」，带链接的平台（微博）须排在官网 `git push` 且线上可访问之后再发，避免链接短暂 404。
+
+   官网版文章则通过「相关阅读」模块做好站内互链。
 
 ## 五、发布流程（每次新文章的完整动作）
 
@@ -50,11 +59,16 @@
 5. **重建站内助手知识库（必做，勿跳过）**：在仓库根目录执行 `python tools/rebuild_kb.py`。
    该脚本会：重建 `js/assistant-kb.json`（新文章由此进入 AI 客服检索范围）、补齐文章 schema 缺失的 `description`、给漏装的页面补上 `assistant.js` 与统计代码。幂等，可反复运行。
    脚本若提示「仍有 N 篇文章缺 description」，说明该文章 `<meta name="description">` 为空，需先补上再重跑，否则检索命中率下降。
-6. `git add -A && git commit -m "发布：文章标题" && git push`。
-7. **提交 IndexNow（必做，勿跳过）**：`python tools/push_indexnow.py articles/<slug>.html`。
+6. **重建 llms.txt（必做，勿跳过）**：在仓库根目录执行 `python tools/gen_llms.py`。
+   `llms.txt` 是给 AI 助手与检索引擎看的站点清单（GEO 侧的 sitemap），此前不在流程里，导致新文章长期只进 sitemap 不进 llms.txt。
+   该脚本以 `library.html` 为唯一真源重建「知识文库文章」一段，开头说明、「主要页面」与结尾声明为人工维护、脚本不动。幂等，可反复运行。
+   校验用 `python tools/gen_llms.py --check`（有差异退出码 1）。脚本若提示某篇文章「在 articles/ 里但没挂进 library.html」，
+   说明第 2 步漏了，补挂后重跑——这类文章同时缺席 library / sitemap / llms.txt，对搜索与 AI 两侧都不可见。
+7. `git add -A && git commit -m "发布：文章标题" && git push`。
+8. **提交 IndexNow（必做，勿跳过）**：`python tools/push_indexnow.py articles/<slug>.html`。
    IndexNow 直通 Bing 索引，而 ChatGPT 与 Copilot 的联网结果走 Bing，因此这一步同时服务 SEO 与 GEO。无需登录、无每日配额；只提交本次新增或修改的页面，不要每次全量推。
    若脚本报「未找到 IndexNow key 文件」，说明仓库根目录的 `<32位十六进制>.txt` 丢失，需先恢复（该文件必须能被公开访问）。
-8. 推送后向用户报告文章的完整网址。
+9. 推送后向用户报告文章的完整网址。
 
 ## 六、修改边界
 

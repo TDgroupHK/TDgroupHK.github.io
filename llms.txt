@@ -27,6 +27,16 @@
 
 ### 上市路径与门槛 / LISTING PATHS
 
+- [港交所退回机制新规：上市申请被退回，全部中介机构名单将公开](https://tdgroup.hk/articles/hkex-return-mechanism-2026.html)
+- [港交所上市机制改革：同股不同权门槛下调与保密递表全面放开](https://tdgroup.hk/articles/hkex-listing-reform-2026.html)
+- [公众持股与股东人数：纳斯达克硬指标](https://tdgroup.hk/articles/public-float-holders.html)
+- [东南亚布局与新加坡路径协同](https://tdgroup.hk/articles/sea-expansion-listing.html)
+- [2026下半年跨境资本市场五个变量](https://tdgroup.hk/articles/capital-market-2026-h2.html)
+- [A股公司赴港上市：A+H路径](https://tdgroup.hk/articles/a-to-h-listing.html)
+- [纳斯达克与纽交所怎么选](https://tdgroup.hk/articles/nasdaq-vs-nyse.html)
+- [新加坡交易所上市：门槛与流程](https://tdgroup.hk/articles/sgx-mainboard.html)
+- [香港18A生物科技上市路径](https://tdgroup.hk/articles/hk-18a-biotech.html)
+- [中概股在美股市场的格局](https://tdgroup.hk/articles/nasdaq-china-stocks.html)
 - [新加坡路径赴美上市详解](https://tdgroup.hk/articles/singapore-path.html)
 - [纳斯达克三层市场与上市标准](https://tdgroup.hk/articles/nasdaq-listing-standards.html)
 - [新加坡路径与香港路径深度对比](https://tdgroup.hk/articles/singapore-vs-hongkong.html)
@@ -44,6 +54,9 @@
 
 ### 跨境架构与合规 / STRUCTURING & COMPLIANCE
 
+- [境外上市备案：证监会补充材料要求](https://tdgroup.hk/articles/csrc-filing-feedback.html)
+- [开曼、BVI与注册地选择逻辑](https://tdgroup.hk/articles/offshore-jurisdiction-choice.html)
+- [跨境转让定价与税务合规](https://tdgroup.hk/articles/transfer-pricing.html)
 - [ODI境外投资备案实操](https://tdgroup.hk/articles/odi-filing.html)
 - [37号文登记指南](https://tdgroup.hk/articles/circular-37.html)
 - [BVI开曼新加坡公司区别](https://tdgroup.hk/articles/bvi-cayman-singapore.html)
@@ -57,6 +70,16 @@
 
 ### 上市执行 / EXECUTION
 
+- [港股每手买卖单位改革：八种标准股数与每手价值区间](https://tdgroup.hk/articles/hk-board-lot-reform-2026.html)
+- [港股递表失效与二次递表：六个月窗口的审核逻辑](https://tdgroup.hk/articles/hk-refiling-lapsed.html)
+- [港股IPO配售穿透核查：交易所在核查什么](https://tdgroup.hk/articles/hk-placement-lookthrough.html)
+- [香港无纸证券市场USM：2026年11月落地](https://tdgroup.hk/articles/hk-usm-paperless-2026.html)
+- [审计委员会与内控体系](https://tdgroup.hk/articles/audit-committee.html)
+- [港股基石投资者机制](https://tdgroup.hk/articles/cornerstone-investors.html)
+- [港股IPO定价与簿记建档](https://tdgroup.hk/articles/hk-ipo-pricing.html)
+- [IPO中止后的重启路径](https://tdgroup.hk/articles/ipo-restart.html)
+- [SEC问询函应对实务](https://tdgroup.hk/articles/sec-comment-letters.html)
+- [绿鞋机制与超额配售](https://tdgroup.hk/articles/greenshoe.html)
 - [赴美上市费用全解](https://tdgroup.hk/articles/ipo-cost.html)
 - [上市前财务规范化整改](https://tdgroup.hk/articles/pre-ipo-financial-cleanup.html)
 - [PCAOB审计与审计底稿检查](https://tdgroup.hk/articles/pcaob-audit.html)
@@ -76,6 +99,7 @@
 
 ### 融资与条款 / FINANCING & TERMS
 
+- [估值倒挂下的融资策略](https://tdgroup.hk/articles/valuation-gap-financing.html)
 - [Pre-IPO融资谈判要点](https://tdgroup.hk/articles/pre-ipo-financing.html)
 - [企业估值三种方法](https://tdgroup.hk/articles/valuation-methods.html)
 - [对赌协议五条保命线](https://tdgroup.hk/articles/vam-five-lines.html)
@@ -91,12 +115,15 @@
 
 ### 挂牌之后 / POST-LISTING
 
+- [外国私人发行人身份认定：两步测试与丧失后的合规升级](https://tdgroup.hk/articles/fpi-status-test.html)
+- [上市后的锁定期与解禁减持](https://tdgroup.hk/articles/lockup-expiry.html)
+- [上市公司IR体系搭建](https://tdgroup.hk/articles/ir-fundamentals.html)
 - [上市第一年十个坑](https://tdgroup.hk/articles/first-year-listed.html)
 - [做空攻击防御](https://tdgroup.hk/articles/short-attack-defense.html)
 - [市值管理的合规边界](https://tdgroup.hk/articles/market-cap-compliance.html)
 - [市值管理全攻略](https://tdgroup.hk/articles/market-cap-playbook.html)
 - [纳斯达克退市风险](https://tdgroup.hk/articles/nasdaq-delisting-risk.html)
-- [集体诉讼与D&amp;O保险](https://tdgroup.hk/articles/class-action-do.html)
+- [集体诉讼与D&O保险](https://tdgroup.hk/articles/class-action-do.html)
 - [上市公司股票回购](https://tdgroup.hk/articles/buyback.html)
 - [独立董事招聘与职责](https://tdgroup.hk/articles/independent-directors.html)
 - [年报20-F撰写指南](https://tdgroup.hk/articles/annual-report-20f.html)
@@ -117,6 +144,9 @@
 
 ### 资本运作 / CAPITAL OPERATIONS
 
+- [Earn-out对赌支付结构设计](https://tdgroup.hk/articles/earnout-design.html)
+- [并购估值与对价设计](https://tdgroup.hk/articles/ma-valuation-design.html)
+- [中东资本：机会与对接方式](https://tdgroup.hk/articles/middle-east-capital.html)
 - [港股借壳新模式](https://tdgroup.hk/articles/hk-reverse-merger.html)
 - [私有化退市全流程](https://tdgroup.hk/articles/take-private.html)
 - [上市公司跨境并购指南](https://tdgroup.hk/articles/cross-border-ma.html)
@@ -129,6 +159,8 @@
 
 ### 财富与传承 / WEALTH & LEGACY
 
+- [家族信托与上市公司股权](https://tdgroup.hk/articles/trust-structures-listing.html)
+- [员工持股平台搭建与合规](https://tdgroup.hk/articles/employee-shareholding-platform.html)
 - [家族办公室设立与运作](https://tdgroup.hk/articles/family-office.html)
 - [老板从公司拿钱的合规方式](https://tdgroup.hk/articles/owner-cash.html)
 - [新加坡家族办公室](https://tdgroup.hk/articles/singapore-family-office.html)
