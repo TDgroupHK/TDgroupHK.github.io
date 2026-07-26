@@ -51,6 +51,12 @@
 - [中概股回归A股路径](https://tdgroup.hk/articles/return-to-a-share.html)
 - [北交所与专精特新上市路径](https://tdgroup.hk/articles/beijing-exchange-path.html)
 - [双重上市与二次上市详解](https://tdgroup.hk/articles/dual-listing.html)
+- [纳斯达克新规：2500万美元门槛落地](https://tdgroup.hk/articles/nasdaq-2026-new-rules.html)
+- [募资不足2500万美元：四条资本化出路](https://tdgroup.hk/articles/beyond-25m-threshold.html)
+- [SPAC为何成中概股赴美主流通道](https://tdgroup.hk/articles/spac-mainstream-2026.html)
+- [美股还是港股：2026路径决策框架](https://tdgroup.hk/articles/us-vs-hk-decision-2026.html)
+- [港股IPO爆发：中资企业为何转向香港](https://tdgroup.hk/articles/hk-ipo-surge-2026.html)
+- [香港18C特专科技上市：门槛与打法](https://tdgroup.hk/articles/hk-18c-specialist-tech.html)
 
 ### 跨境架构与合规 / STRUCTURING & COMPLIANCE
 
@@ -67,6 +73,7 @@
 - [股权代持与还原](https://tdgroup.hk/articles/nominee-shareholding.html)
 - [海南自贸港企业上市与税收优惠](https://tdgroup.hk/articles/hainan-ftp.html)
 - [BVI与开曼SPV设立运用](https://tdgroup.hk/articles/bvi-cayman-spv.html)
+- [实质经营地审查：如何认定中国公司](https://tdgroup.hk/articles/substance-test-2026.html)
 
 ### 上市执行 / EXECUTION
 
