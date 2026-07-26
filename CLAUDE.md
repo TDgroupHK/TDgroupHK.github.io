@@ -52,6 +52,11 @@
 
 ## 五、发布流程（每次新文章的完整动作）
 
+> **快捷通道**：若稿件是外部工具（或人）按 `python tools/new_article.py --sample` 的 Markdown 格式写好的，
+> 直接 `python tools/new_article.py 稿件.md` 一步完成下面第 1-6 步（含合规检查），然后只需执行第 7、8 步。
+> 该脚本会在检出禁用表述、排名义「第一」、股票代码、Pre-IPO 缺合规三件套时**中止且不写入任何文件**。
+> 用 `--dry-run` 可只校验不写盘。**此类文章仅上官网，不进平台分发队列。**
+
 1. 在 `articles/` 创建新文章 html。
 2. 在 `library.html` 对应分类的 `<ul>` 中新增：`<li class="has"><a href="articles/文件名.html">文章标题 →</a></li>`（放在该分类列表首位）。
 3. 在 `sitemap.xml` 新增对应 `<url><loc>` 条目。
