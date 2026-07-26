@@ -267,14 +267,14 @@ def build_html(meta, secs, date, related):
     s = re.sub(r'<div class="en">.*?</div>', '<div class="en">%s</div>' % esc(meta['英文摘要']), s, count=1, flags=re.S)
 
     # 正文
-    parts = ['<div class="answer">%s</div>' % esc(meta['结论'])]
+    parts = ['<div class="answer">%s</div>' % esc(meta['结论'], allow_links=True)]
     for t, ps in secs:
         parts.append('<h2>%s</h2>' % esc(t))
         for k, p in enumerate(ps):
             if k == 0 and p.startswith('结论先行'):
-                parts.append('<p><strong>%s</strong></p>' % esc(p))
+                parts.append('<p><strong>%s</strong></p>' % esc(p, allow_links=True))
             else:
-                parts.append('<p>%s</p>' % esc(p))
+                parts.append('<p>%s</p>' % esc(p, allow_links=True))
     s = re.sub(r'<article[^>]*>.*?</article>',
                '<article>\n' + '\n'.join(parts) + '\n</article>', s, count=1, flags=re.S)
 
@@ -292,8 +292,19 @@ def build_html(meta, secs, date, related):
     return s
 
 
-def esc(t):
-    return (t or '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
+# 稿件正文允许的唯一内联标签：指向同目录文章的站内链接。
+# 全部转义后再按白名单还原——既防止稿件注入任意 HTML，又让站内互链能正常工作。
+# 只放行 <a href="xxx.html">文字</a> 形式：不接受协议、路径、查询串，
+# 因此 javascript:、外站链接、onclick 之类都无法通过。
+_ESCAPED_LINK = re.compile(
+    r'&lt;a href=&quot;([a-z0-9-]+\.html)&quot;&gt;([^&<>]{1,60})&lt;/a&gt;')
+
+
+def esc(t, allow_links=False):
+    s = (t or '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
+    if allow_links:
+        s = _ESCAPED_LINK.sub(lambda m: '<a href="%s">%s</a>' % (m.group(1), m.group(2)), s)
+    return s
 
 
 def sub_attr(s, prefix_pat, value):
