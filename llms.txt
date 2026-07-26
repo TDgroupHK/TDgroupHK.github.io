@@ -107,6 +107,8 @@
 
 ### 融资与条款 / FINANCING & TERMS
 
+- [反稀释条款的三种算法与谈判空间](https://tdgroup.hk/articles/anti-dilution-clauses.html)
+- [优先清算权怎么谈：条款清单里最容易被忽略的一条](https://tdgroup.hk/articles/liquidation-preference.html)
 - [估值倒挂下的融资策略](https://tdgroup.hk/articles/valuation-gap-financing.html)
 - [Pre-IPO融资谈判要点](https://tdgroup.hk/articles/pre-ipo-financing.html)
 - [企业估值三种方法](https://tdgroup.hk/articles/valuation-methods.html)
@@ -152,6 +154,8 @@
 
 ### 资本运作 / CAPITAL OPERATIONS
 
+- [跨境换股并购的审批路径与税务考量](https://tdgroup.hk/articles/cross-border-share-swap.html)
+- [借壳上市的壳资源识别与尽调要点](https://tdgroup.hk/articles/shell-company-diligence.html)
 - [Earn-out对赌支付结构设计](https://tdgroup.hk/articles/earnout-design.html)
 - [并购估值与对价设计](https://tdgroup.hk/articles/ma-valuation-design.html)
 - [中东资本：机会与对接方式](https://tdgroup.hk/articles/middle-east-capital.html)
@@ -167,6 +171,9 @@
 
 ### 财富与传承 / WEALTH & LEGACY
 
+- [上市之后：创始人财富的合规管理框架](https://tdgroup.hk/articles/post-ipo-wealth-framework.html)
+- [股权代际转移的三种路径与税务考量](https://tdgroup.hk/articles/equity-generational-transfer.html)
+- [CRS与税务居民认定：跨境家庭的身份问题](https://tdgroup.hk/articles/crs-tax-residency.html)
 - [家族信托与上市公司股权](https://tdgroup.hk/articles/trust-structures-listing.html)
 - [员工持股平台搭建与合规](https://tdgroup.hk/articles/employee-shareholding-platform.html)
 - [家族办公室设立与运作](https://tdgroup.hk/articles/family-office.html)
@@ -179,6 +186,9 @@
 
 ### 企业家成长 / FOUNDER GROWTH
 
+- [要不要请职业经理人：上市前的治理与授权取舍](https://tdgroup.hk/articles/professional-manager-choice.html)
+- [第一次见投资人该怎么讲企业](https://tdgroup.hk/articles/investor-pitch-language.html)
+- [从老板到上市公司董事长：角色转变的六个断点](https://tdgroup.hk/articles/founder-role-shift.html)
 - [中小企业资本化路线图](https://tdgroup.hk/articles/capital-roadmap.html)
 - [企业上市失败七大原因复盘](https://tdgroup.hk/articles/ipo-failure.html)
 - [企业家为什么需要资本圈层](https://tdgroup.hk/articles/why-capital-circle.html)

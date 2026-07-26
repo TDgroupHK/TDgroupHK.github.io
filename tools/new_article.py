@@ -187,6 +187,11 @@ def lint(meta, secs):
     for t, ps in secs:
         text += ' ' + t + ' ' + ' '.join(ps)
 
+    # 合规规则针对读者看到的文字，不针对标签属性。
+    # 若不剥离，站内链接如 pre-ipo-financial-cleanup.html 会被误判为正文提及 Pre-IPO，
+    # 进而要求合规三件套——这是误报，会拦下本身没有问题的稿件。
+    text = re.sub(r'<[^>]+>', ' ', text)
+
     problems = []
     for w in FORBIDDEN:
         if w in text:
