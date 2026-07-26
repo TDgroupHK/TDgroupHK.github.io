@@ -142,7 +142,8 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mute);font-si
 <div class="cta"><b>下一步：拿这份结果，换一次免费初评</b>
 <p>把自测结果发给我们，彤鼎的顾问会按你的行业和数据，给出一页纸的路径初评（适用测试、时间表、需先解决的事项）。不推销、不承诺结果，只给判断依据。</p>
 <div class="ways"><span>邮箱 liaoqijie@tdgroup.hk</span><span>微信 esonleo（备注：上市自测）</span></div>
-<button class="copybtn" onclick="copyResult()" id="cpb">一键复制自测结果</button></div>
+<button class="btn" onclick="mailResult()" id="mailb" style="margin-top:18px;">一键发送给顾问，换一页纸初评</button>
+<button class="copybtn" onclick="copyResult()" id="cpb">或复制结果，自行微信发送</button></div>
 <div class="legal">彤鼎集团（香港）有限公司为企业管理咨询机构，持牌业务由持牌合作机构承做。本页测试仅基于公开上市规则做初步对照，结果不构成任何投资建议或收益承诺；涉及 Pre-IPO 及投资机会的服务仅面向符合条件的合格投资者，并将充分揭示风险。规则门槛以香港交易所最新刊发版本为准。</div>
 </div>
 </div></div>
@@ -150,7 +151,7 @@ footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mute);font-si
 <footer><div class="wrap">© 彤鼎集团（香港）有限公司 TD Group (Hong Kong) Limited · 香港 · 深圳 · 上海 · 新加坡 · <a href="/" style="color:var(--gold)">tdgroup.hk</a></div></footer>
 
 <script>
-var lastText = "";
+var lastText = "", lastGrade = "", lastPath = "", lastPts = [];
 function pick(n){var el=document.querySelector('input[name="'+n+'"]:checked');return el?el.value:null;}
 function calc(){
   var profit=pick('profit'),rev=pick('rev'),cap=pick('cap'),arch=pick('arch'),ind=pick('ind'),when=pick('when');
@@ -179,13 +180,36 @@ function calc(){
   var ul=document.getElementById('points');ul.innerHTML='';
   for(var j=0;j<pts.length;j++){var li=document.createElement('li');li.textContent=pts[j];ul.appendChild(li);}
   lastText='【港股上市可行性自测结果】\n评级：'+grade+'\n建议路径：'+path+'\n'+summary+'\n'+pts.map(function(p){return '· '+p;}).join('\n')+'\n（来自 tdgroup.hk/hk-ipo-checkup.html）';
+  lastGrade=grade; lastPath=path; lastPts=pts;
   document.getElementById('result').style.display='block';
   document.getElementById('result').scrollIntoView({behavior:'smooth'});
+  track('checkup_complete',{grade:grade,path:path});
+}
+// 埋点：自测完成率与线索转化率是判断这页值不值得继续投流量的唯一依据。
+// GA4 与百度统计都是全站已装的，这里只做事件上报，不引入任何新依赖。
+function track(name,params){
+  try{ if(typeof gtag==='function') gtag('event',name,params||{}); }catch(e){}
+  try{ if(window._hmt) _hmt.push(['_trackEvent','自测',name,(params&&params.grade)||'']); }catch(e){}
 }
 function copyResult(){
   navigator.clipboard.writeText(lastText).then(function(){
     document.getElementById('cpb').textContent='已复制，微信/邮件里直接粘贴';
+    track('checkup_copy',{});
   });
+}
+// 一键把结果装进邮件正文发到企业邮箱：把「复制了但没发」这一步的流失堵掉，
+// 顾问收到的同时就拿到了行业/规模/时间表，等于自带线索资质。
+function mailResult(){
+  var subject='港股上市自测结果 · 申请一页纸初评';
+  // 正文只带评级/路径/要点，不带长段落 summary——部分 Outlook 桌面版 mailto 上限 2083 字符，
+  // 超了会被静默截断，宁可短一点也要保证发得出去。
+  var brief='【港股上市可行性自测】\n评级：'+lastGrade+'\n建议路径：'+lastPath+'\n'
+          + (lastPts.length? lastPts.map(function(p){return '· '+p;}).join('\n')+'\n':'')
+          + '（来自 tdgroup.hk/hk-ipo-checkup.html）';
+  var body=brief+'\n\n————\n请补充以下信息，便于顾问出具初评：\n公司/行业：\n联系人与称呼：\n方便的联系方式：\n最想先解决的问题：\n';
+  location.href='mailto:liaoqijie@tdgroup.hk?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  document.getElementById('mailb').textContent='已打开邮件，补完信息发送即可';
+  track('checkup_lead_mail',{});
 }
 </script>
 </body></html>
