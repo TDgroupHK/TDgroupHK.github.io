@@ -160,7 +160,6 @@
 - [Earn-out对赌支付结构设计](https://tdgroup.hk/articles/earnout-design.html)
 - [并购估值与对价设计](https://tdgroup.hk/articles/ma-valuation-design.html)
 - [中东资本：机会与对接方式](https://tdgroup.hk/articles/middle-east-capital.html)
-- [港股借壳新模式](https://tdgroup.hk/articles/hk-reverse-merger.html)
 - [私有化退市全流程](https://tdgroup.hk/articles/take-private.html)
 - [上市公司跨境并购指南](https://tdgroup.hk/articles/cross-border-ma.html)
 - [反收购防御机制](https://tdgroup.hk/articles/anti-takeover.html)
