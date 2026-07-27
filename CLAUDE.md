@@ -52,6 +52,20 @@
 
    官网版文章则通过「相关阅读」模块做好站内互链。
 
+## 四·补、发布前合规闸（2026-07-27 新增，**必跑**）
+
+写完文章、推送之前，必须跑一次机器闸：
+
+```bash
+python C:\TDGroupSEO\compliance_gate.py articles\<slug>.html --scope site
+```
+
+- **退出码 1 = 拦下，不许 push**。修掉 block 项，或写入 `C:\TDGroupSEO\pending_state.md` 转人工。
+- `--scope site` 已豁免官网自有站允许的导流/联系方式/俱乐部招募；**荐股、收益承诺、市场操纵、绝对化用语官网同样禁**。
+- 词表在 `C:\TDGroupSEO\compliance_words.json`，与 `platform_rules.md` 第八节同步维护。
+- 加这个闸的原因：本文件第三节第 5 条早就禁了"坐庄、拉盘"，但**没有任何东西执行它**，
+  导致"操盘/做市值/撬动市值增量"在站上长期存在，2026-07-27 审计才发现。**光写规则不管用。**
+
 ## 五、发布流程（每次新文章的完整动作）
 
 > **快捷通道**：若稿件是外部工具（或人）按 `python tools/new_article.py --sample` 的 Markdown 格式写好的，
