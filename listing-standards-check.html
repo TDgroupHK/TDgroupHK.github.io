@@ -1,0 +1,522 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>上市门槛速查：填五个数字，看清够得着哪条线 | 彤鼎集团</title>
+<meta name="description" content="纳斯达克资本市场层三套标准、2026年5月新规2500万美元流通市值线、香港主板盈利测试与18A/18C、新交所主板三套测试，一页对齐。输入净利润、股东权益、市值等五个数字，自动匹配你目前达到哪些上市标准。计算在浏览器本地完成，数据不上传。">
+<link rel="canonical" href="https://tdgroup.hk/listing-standards-check.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<meta property="og:site_name" content="彤鼎集团 TD Group"><meta property="og:locale" content="zh_CN"><meta property="og:type" content="website">
+<meta property="og:title" content="上市门槛速查：填五个数字，看清够得着哪条线 | 彤鼎集团">
+<meta property="og:description" content="纳斯达克资本市场层三套标准、2026年5月新规2500万美元流通市值线、香港主板盈利测试与18A/18C、新交所主板三套测试，一页对齐。输入净利润、股东权益、市值等五个数字，自动匹配你目前达到哪些上市标准。计算在浏览器本地完成，数据不上传。">
+<meta property="og:url" content="https://tdgroup.hk/listing-standards-check.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:4px;font-size:17px;}
+.logo .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10.5px;letter-spacing:3px;margin-top:2px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:linear-gradient(180deg,rgba(8,7,6,.80) 0%,rgba(8,7,6,.34) 44%,rgba(8,7,6,.66) 100%),url('img/hero-skyline.jpg') center/cover no-repeat;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:6px;font-size:13px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-size:58px;line-height:1.3;color:#fff;font-weight:600;letter-spacing:8px;}
+.hero h1 span{display:block;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .lede{margin-top:30px;color:#d6c9a8;font-size:16px;letter-spacing:1.5px;line-height:1.95;max-width:600px;font-weight:300;}
+.hero .loc{margin-top:26px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:5px;font-size:13.5px;}
+.hero-cta{margin-top:42px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:64px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;letter-spacing:.5px;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-size:31px;color:#fff;letter-spacing:3px;font-weight:600;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+.sec-intro{color:#b3a88b;max-width:760px;font-size:15.5px;margin:-30px 0 44px;line-height:1.95;}
+
+/* ---------- track record ---------- */
+.marquee{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:22px;}
+.mq{border:1px solid var(--line);background:rgba(18,16,13,.4);overflow:hidden;transition:border-color .35s,transform .35s;display:flex;flex-direction:column;}
+.mq:hover{border-color:var(--gold);transform:translateY(-6px);}
+.mq .ph{height:116px;background-size:cover;background-position:center;position:relative;}
+.mq .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,9,8,.05) 50%,rgba(18,16,13,.9));}
+.mq .body{padding:20px 22px 24px;}
+.mq .tk{font-family:Georgia,serif;color:var(--gold);letter-spacing:2.5px;font-size:12.5px;}
+.mq .big{font-family:Georgia,serif;color:#fff;font-size:30px;line-height:1.05;margin:10px 0 8px;font-weight:400;letter-spacing:.5px;}
+.mq .cn{color:#eaddbe;font-size:15px;font-weight:700;letter-spacing:.5px;}
+.mq .desc{color:var(--mute);font-size:12.5px;margin-top:10px;line-height:1.7;}
+
+.tombs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.tomb{background:rgba(18,16,13,.5);border:1px solid var(--line);padding:23px 22px;transition:background .3s,border-color .3s;}
+.tomb:hover{background:#16110a;border-color:var(--gold-dim);}
+.tomb .row{display:flex;align-items:baseline;justify-content:space-between;gap:8px;}
+.tomb .tk{font-family:Georgia,serif;color:var(--gold-hi);font-size:22px;letter-spacing:2px;line-height:1;}
+.tomb .tk.zh{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19px;letter-spacing:1px;}
+.tomb .ex{font-family:Georgia,serif;font-style:italic;font-size:10px;letter-spacing:1.5px;color:var(--mute);border:1px solid var(--line);padding:2px 8px;white-space:nowrap;}
+.tomb .cn{color:#e3d8bd;font-size:14.5px;font-weight:700;margin-top:15px;letter-spacing:.5px;}
+.tomb .sec{color:var(--mute);font-size:12px;margin-top:6px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+
+.refin{margin-top:24px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:26px 30px;display:flex;gap:30px;align-items:center;flex-wrap:wrap;}
+.refin .rt{flex:1;min-width:260px;}
+.refin .rt b{color:#fff;font-size:17px;letter-spacing:.5px;display:block;margin-bottom:8px;}
+.refin .rt p{color:#a99d80;font-size:13.5px;line-height:1.8;}
+.refin .rn{display:flex;gap:26px;flex-wrap:wrap;}
+.refin .rn span{font-family:Georgia,serif;color:var(--gold-hi);font-size:26px;}
+.refin .rn span small{display:block;font-family:"PingFang SC",sans-serif;color:var(--mute);font-size:11.5px;font-style:normal;margin-top:3px;letter-spacing:.5px;}
+.compliance{margin-top:34px;border-top:1px solid rgba(201,169,98,.14);padding-top:22px;color:#7d745c;font-size:12px;line-height:1.95;}
+.pipeline{margin-top:14px;border:1px solid var(--line);background:rgba(201,169,98,.045);padding:22px 28px;color:#b3a88b;font-size:14px;line-height:1.85;}
+.pipeline a{color:var(--gold);white-space:nowrap;border-bottom:1px solid transparent;transition:border-color .3s;}
+.pipeline a:hover{border-bottom-color:var(--gold);}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--night);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--ink);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.acard{border:1px solid var(--line);background:rgba(18,16,13,.5);transition:transform .35s,border-color .35s,background .35s;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-4px);background:#16110a;}
+.acbody{padding:26px 24px 24px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:10.5px;letter-spacing:2.5px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:16.5px;font-weight:700;line-height:1.55;letter-spacing:.3px;}
+.acard p{color:var(--mute);font-size:13px;margin-top:9px;flex:1;line-height:1.8;}
+.acard .more{color:var(--gold);font-size:11.5px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-crest{height:94px;width:auto;display:block;margin:0 auto 36px;opacity:.95;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr 1fr;}.tl{grid-template-columns:1fr 1fr;}.marquee{grid-template-columns:1fr 1fr;}.tombs{grid-template-columns:1fr 1fr;}.hero h1{font-size:36px;letter-spacing:4px;}.menu{gap:16px;font-size:13px;}.sec-no{font-size:44px;}}
+@media(max-width:640px){.grid8,.alist,.tl,.marquee,.tombs{grid-template-columns:1fr;}.hero h1{font-size:30px;letter-spacing:2px;}.wrap{padding:0 20px;}section{padding:66px 0;}.sec-head{margin-bottom:36px;gap:14px;}.refin{flex-direction:column;align-items:flex-start;gap:16px;}.btn{padding:14px 26px;font-size:13.5px;}.logo .mark-img{height:46px;}}
+
+/* ---------- 门槛速查计算器 ---------- */
+.calc{border:1px solid var(--line);background:rgba(18,16,13,.55);padding:30px 30px 26px;}
+.calc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px 22px;}
+.calc-grid label{display:flex;flex-direction:column;gap:6px;}
+.calc-grid .lb{color:#cfc4a6;font-size:13.5px;letter-spacing:.5px;}
+.calc-grid input,.rates input{background:#0f0e0c;border:1px solid rgba(201,169,98,.28);color:#f2ead6;
+  padding:11px 13px;font-size:16px;font-family:inherit;outline:none;width:100%;border-radius:2px;}
+.calc-grid input:focus,.rates input:focus{border-color:var(--gold);}
+.calc-grid i{color:#7d745c;font-size:11.5px;font-style:normal;letter-spacing:.4px;}
+.rates{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:24px;padding-top:20px;
+  border-top:1px solid rgba(201,169,98,.14);}
+.rates .rt-lb{color:#7d745c;font-size:12px;letter-spacing:2px;}
+.rates label{display:flex;align-items:center;gap:7px;color:#9a8f74;font-size:13px;}
+.rates input{width:78px;padding:6px 8px;font-size:14px;}
+.calc-act{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+.calc-act .btn{cursor:pointer;border:none;font-family:inherit;}
+.result{margin-top:34px;}
+.rcard{border:1px solid var(--line);background:rgba(18,16,13,.55);margin-bottom:16px;}
+.rcard-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;padding:18px 24px;
+  border-bottom:1px solid rgba(201,169,98,.14);}
+.rcard-h b{color:#fff;font-size:17px;font-weight:600;letter-spacing:1px;}
+.rcard-h em{color:#7d745c;font-style:normal;font-size:12px;letter-spacing:2px;}
+.rcard-b{padding:8px 24px 20px;}
+.rrow{display:flex;flex-wrap:wrap;align-items:baseline;gap:12px;padding:11px 0;
+  border-bottom:1px dashed rgba(201,169,98,.12);}
+.rrow:last-child{border-bottom:0;}
+.rrow .nm{color:#cfc4a6;font-size:14.5px;min-width:120px;}
+.rrow .dt{color:#7d745c;font-size:12.5px;flex:1;min-width:200px;line-height:1.7;}
+.pill{font-size:12px;padding:2px 10px;border-radius:11px;letter-spacing:.5px;white-space:nowrap;}
+.p-y{background:rgba(122,168,131,.16);color:#8fc09b;}
+.p-n{background:rgba(190,110,100,.15);color:#d99b92;}
+.p-u{background:rgba(201,169,98,.13);color:#c9a962;}
+.rsum{margin-top:6px;padding:14px 24px;border-top:1px solid rgba(201,169,98,.14);
+  color:#b3a88b;font-size:13.5px;line-height:1.85;}
+.rnote{color:#7d745c;font-size:12.5px;line-height:1.9;margin-top:10px;}
+/* ---------- 对照表 ---------- */
+.tblh{font-family:"PingFang SC","Microsoft YaHei",sans-serif;font-size:19px;color:#1a1712;
+  font-weight:600;letter-spacing:1px;margin:44px 0 8px;}
+.tbln{color:#5c5343;font-size:14px;line-height:1.9;margin:0 0 14px;}
+.tbln a{color:#8a6f36;text-decoration:none;border-bottom:1px solid rgba(138,111,54,.35);}
+.tbw{overflow-x:auto;border:1px solid rgba(26,23,18,.14);}
+table.std{border-collapse:collapse;width:100%;min-width:560px;font-size:14px;background:#fff;}
+table.std th{background:#f3efe6;color:#6b6151;font-size:11.5px;letter-spacing:1px;font-weight:600;
+  text-align:left;padding:11px 14px;white-space:nowrap;}
+table.std td{padding:12px 14px;border-top:1px solid rgba(26,23,18,.1);color:#3a352b;
+  line-height:1.8;vertical-align:top;}
+table.std td.k{font-weight:600;color:#1a1712;white-space:nowrap;}
+table.std td b{color:#8a6f36;}
+table.std td a{color:#8a6f36;text-decoration:none;border-bottom:1px solid rgba(138,111,54,.35);}
+.alertbox{border-left:3px solid #8a6f36;background:#f7f3e9;padding:18px 22px;margin:26px 0;}
+.alertbox b{display:block;color:#1a1712;font-size:15.5px;margin-bottom:7px;}
+.alertbox p{color:#4a4335;font-size:14px;line-height:1.9;margin:0;}
+.alertbox a{color:#8a6f36;text-decoration:none;border-bottom:1px solid rgba(138,111,54,.35);}
+@media(max-width:900px){.calc-grid{grid-template-columns:repeat(2,1fr);}}
+@media(max-width:620px){.calc-grid{grid-template-columns:1fr;}.calc{padding:22px 18px;}}
+
+</style><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="js/assistant.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"上市门槛速查","url":"https://tdgroup.hk/listing-standards-check.html","applicationCategory":"BusinessApplication","operatingSystem":"Web","inLanguage":"zh-CN","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"},"description":"纳斯达克资本市场层三套标准、2026年5月新规2500万美元流通市值线、香港主板盈利测试与18A/18C、新交所主板三套测试，一页对齐。输入净利润、股东权益、市值等五个数字，自动匹配你目前达到哪些上市标准。计算在浏览器本地完成，数据不上传。","featureList":["纳斯达克资本市场层三套上市标准匹配","纳斯达克2026年新规公众流通市值门槛校验","香港主板盈利测试与18A、18C通道门槛对照","新加坡交易所主板三套测试匹配","汇率可调，计算在浏览器本地完成"],"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://tdgroup.hk/"},{"@type":"ListItem","position":2,"name":"上市门槛速查","item":"https://tdgroup.hk/listing-standards-check.html"}]}</script></head>
+<body><nav><div class="nav-in">
+<a class="logo" href="index.html"><img class="mark-img" src="img/td-crest-gold.png" alt="彤鼎集团 TD Group"><span class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></span></a>
+<div class="menu"><a href="index.html">首页 Home</a><a href="about.html">关于 About</a><a href="club.html">俱乐部 Club</a><a href="legacy.html">传承 Legacy</a><a href="library.html">文库 Library</a><a href="faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+<div class="hero" style="min-height:56vh;"><div class="hero-frame"></div><div class="wrap">
+<div class="eyebrow">上市门槛速查 LISTING STANDARDS CHECK</div>
+<h1>填五个数字，<em>看清你够得着哪条线</em></h1>
+<div class="en">Enter five figures and see, standard by standard, which listing routes your company currently meets — across Nasdaq, HKEX and SGX.</div>
+<p style="color:#b3a88b;margin-top:22px;max-width:780px;font-size:16.5px;">纳斯达克、港交所、新交所的公开硬指标，一页对齐。数据不上传、不保存，全部在你自己的浏览器里计算。</p>
+</div></div>
+
+<section class="sec-ink"><div class="wrap">
+<div class="sec-head rv"><div class="sec-no">01</div><div><h2 class="sec">输入你的数字</h2><div class="sec-en">YOUR NUMBERS</div></div></div>
+<p class="sec-intro">单位统一为<strong style="color:#c9a962">人民币万元</strong>。不确定的项可以留空，留空的标准会标注为「数据不足」而不是「不达标」。</p>
+
+<div class="calc">
+  <div class="calc-grid">
+    <label><span class="lb">最近一个财年净利润</span><input type="number" id="i-net" placeholder="例：600" inputmode="decimal"><i>万元人民币</i></label>
+    <label><span class="lb">前两年累计净利润</span><input type="number" id="i-net2" placeholder="例：900" inputmode="decimal"><i>万元人民币 · 港股用</i></label>
+    <label><span class="lb">股东权益（净资产）</span><input type="number" id="i-eq" placeholder="例：4000" inputmode="decimal"><i>万元人民币</i></label>
+    <label><span class="lb">最近一个财年营业收入</span><input type="number" id="i-rev" placeholder="例：12000" inputmode="decimal"><i>万元人民币</i></label>
+    <label><span class="lb">预计上市后总市值</span><input type="number" id="i-mcap" placeholder="例：60000" inputmode="decimal"><i>万元人民币</i></label>
+    <label><span class="lb">预计公众流通市值</span><input type="number" id="i-float" placeholder="例：18000" inputmode="decimal"><i>万元人民币 · 关键项</i></label>
+  </div>
+
+  <div class="rates">
+    <span class="rt-lb">汇率（可改）</span>
+    <label>1 美元 =<input type="number" id="r-usd" value="7.2" step="0.01" inputmode="decimal">元</label>
+    <label>1 港元 =<input type="number" id="r-hkd" value="0.92" step="0.01" inputmode="decimal">元</label>
+    <label>1 新元 =<input type="number" id="r-sgd" value="5.4" step="0.01" inputmode="decimal">元</label>
+  </div>
+
+  <div class="calc-act">
+    <button type="button" class="btn btn-solid" id="btn-calc">开始匹配 CHECK</button>
+    <button type="button" class="btn btn-ghost" id="btn-demo">填入示例数字</button>
+    <button type="button" class="btn btn-ghost" id="btn-clear">清空</button>
+  </div>
+</div>
+
+<div id="result" class="result" hidden></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="sec-head rv"><div class="sec-no">02</div><div><h2 class="sec" style="color:#1a1712">完整门槛对照</h2><div class="sec-en">FULL COMPARISON</div></div></div>
+<p class="sec-intro" style="color:#5c5343">下列数字均为各交易所公开规则中的硬指标。每一行都链到本站对应的完整解读文章。<strong>规则会调整，实际申报请以交易所现行规则文本为准。</strong></p>
+
+<h3 class="tblh">纳斯达克 · 资本市场层（NCM）</h3>
+<p class="tbln">三套标准满足其一即可，另有共同条件须同时满足。这是中小企业最常用的层级。</p>
+<div class="tbw"><table class="std">
+<thead><tr><th>标准</th><th>核心指标</th><th>公众持股市值</th></tr></thead>
+<tbody>
+<tr><td class="k">净利润标准</td><td>最近一个财年（或近三年中的两年）持续经营净利润 <b>≥ 75 万美元</b></td><td>≥ 500 万美元</td></tr>
+<tr><td class="k">股东权益标准</td><td>股东权益 <b>≥ 500 万美元</b></td><td>≥ 1500 万美元</td></tr>
+<tr><td class="k">市值标准</td><td>上市证券市值 <b>≥ 5000 万美元</b></td><td>≥ 1500 万美元</td></tr>
+</tbody></table></div>
+<p class="tbln">共同条件：每股价格 ≥ 4 美元 · 公众股东 ≥ 300 名 · 做市商 ≥ 3 家。<a href="articles/nasdaq-listing-standards.html">纳斯达克三层市场与上市标准 →</a></p>
+
+<div class="alertbox">
+  <b>2026 年 5 月 14 日起的新规，可能比上面三套标准更卡人</b>
+  <p>针对主要在中国境内经营的企业首次上市，新规要求交易完成后<strong>公众流通市值不得低于 2500 万美元</strong>。这意味着：即使净利润、股东权益或市值达标，如果公开募集规模不够，依然过不了。<a href="articles/nasdaq-2026-new-rules.html">纳斯达克 2026 新规完整解读 →</a></p>
+</div>
+
+<h3 class="tblh">纳斯达克 · 全球市场层（NGM）</h3>
+<p class="tbln">比资本市场层更高一档，适合规模更大的企业。</p>
+<div class="tbw"><table class="std">
+<thead><tr><th>标准</th><th>核心指标</th></tr></thead>
+<tbody>
+<tr><td class="k">市值标准</td><td>总市值 <b>≥ 7500 万美元</b></td></tr>
+<tr><td class="k">股东权益标准</td><td>股东权益 <b>≥ 3000 万美元</b></td></tr>
+<tr><td class="k">利润标准</td><td>最近一个财年税前利润 <b>≥ 100 万美元</b></td></tr>
+</tbody></table></div>
+
+<h3 class="tblh">香港交易所主板</h3>
+<div class="tbw"><table class="std">
+<thead><tr><th>通道</th><th>核心指标</th><th>说明</th></tr></thead>
+<tbody>
+<tr><td class="k">盈利测试</td><td>最近一年股东应占盈利 <b>≥ 3500 万港元</b>；前两年累计 <b>≥ 4500 万港元</b></td><td>三年累计约 8000 万港元</td></tr>
+<tr><td class="k">18A 生物科技</td><td>上市时预期市值 <b>≥ 15 亿港元</b></td><td>另需核心产品通过概念阶段、资深投资者提前入股、125% 营运资金覆盖。<a href="articles/hk-18a-biotech.html">详解 →</a></td></tr>
+<tr><td class="k">18C 已商业化</td><td>上市时预期市值 <b>≥ 60 亿港元</b>（2024 年 9 月起窗口期下调至 40 亿）</td><td>以最近一经审计年度经营收益 ≥ 2.5 亿港元区分；研发开支占总营运开支 ≥ 15%</td></tr>
+<tr><td class="k">18C 未商业化</td><td>上市时预期市值 <b>≥ 100 亿港元</b>（下调至 80 亿）</td><td>研发占比：年收益 1.5–2.5 亿港元 ≥ 30%；低于 1.5 亿港元 ≥ 50%。<a href="articles/hk-18c-specialist-tech.html">详解 →</a></td></tr>
+</tbody></table></div>
+
+<h3 class="tblh">新加坡交易所主板</h3>
+<p class="tbln">三套测试满足其一即可。</p>
+<div class="tbw"><table class="std">
+<thead><tr><th>测试</th><th>核心指标</th></tr></thead>
+<tbody>
+<tr><td class="k">测试一</td><td>最近一个财年合并税前利润 <b>≥ 3000 万新元</b>，并具备至少三年经营记录</td></tr>
+<tr><td class="k">测试二</td><td>最近一个财年盈利、具备至少三年经营记录，且上市时市值 <b>≥ 1.5 亿新元</b></td></tr>
+<tr><td class="k">测试三</td><td>最近一个财年录得营业收入，且上市时市值 <b>≥ 3 亿新元</b></td></tr>
+</tbody></table></div>
+<p class="tbln"><a href="articles/sgx-mainboard.html">新交所主板上市标准详解 →</a></p>
+</div></section>
+
+<section class="sec-ink"><div class="wrap">
+<div class="sec-head rv"><div class="sec-no">03</div><div><h2 class="sec">数字达标，不等于能上</h2><div class="sec-en">NUMBERS ARE NOT ENOUGH</div></div></div>
+<p class="sec-intro">这张表只算财务硬指标。实务中项目卡住，多数不是卡在这些数字上。</p>
+<div class="grid8" style="grid-template-columns:repeat(3,1fr);">
+<div class="biz rv"><i>01</i><b>架构与备案</b><span>STRUCTURE &amp; FILING</span><p>37 号文外汇登记、ODI 境外投资备案、中国证监会境外上市备案——这三条线任何一条没走通，财务再漂亮也递不上去。<a href="articles/circular-37.html">37 号文 →</a> <a href="articles/odi-filing.html">ODI →</a></p></div>
+<div class="biz rv"><i>02</i><b>历史遗留</b><span>LEGACY ISSUES</span><p>出资瑕疵、股权代持、关联方资金占用、同业竞争——这些在尽调阶段一定被穿透，且往往需要 6–12 个月才能清干净。<a href="articles/nominee-shareholding.html">代持还原 →</a></p></div>
+<div class="biz rv"><i>03</i><b>公众股东人数</b><span>PUBLIC HOLDERS</span><p>纳斯达克要求 300 名圆整股股东，这是不可豁免的硬指标，且需要真实的持股分散过程，通常要在递表前 6–12 个月开始安排。<a href="articles/public-float-holders.html">详解 →</a></p></div>
+</div>
+
+<div class="facts">
+<div class="fact"><b>12–18</b><span>个月 · 新加坡路径全流程</span></div>
+<div class="fact"><b>300</b><span>名 · 纳斯达克公众股东下限</span></div>
+<div class="fact"><b>4</b><span>美元 · 最低发行价</span></div>
+<div class="fact"><b>2500</b><span>万美元 · 2026 新规流通市值线</span></div>
+</div>
+
+<div class="compliance">
+本页为公开规则的速查参考，不构成任何法律、税务或投资建议。各交易所规则会不定期调整，实际申报请以交易所现行规则文本为准。<br>
+计算全部在您的浏览器本地完成，输入的数字不会上传、不会保存、不会传输至任何服务器。<br>
+彤鼎为企业管理咨询机构，证券承销、审计鉴证等持牌业务由合作之持牌机构承做。
+</div>
+
+<div class="hero-cta" style="margin-top:40px;">
+<a class="btn btn-solid" href="mailto:liaoqijie@tdgroup.hk?subject=%E4%B8%8A%E5%B8%82%E9%97%A8%E6%A7%9B%E5%92%A8%E8%AF%A2">就我的情况聊一聊 TALK TO US</a>
+<a class="btn btn-ghost" href="pre-ipo-program.html">看上市预备期陪跑 →</a>
+<a class="btn btn-ghost" href="faq.html">常见问题 43 问 →</a>
+</div>
+</div></section>
+
+<footer><div class="wrap"><img class="f-crest" src="img/td-crest-gold.png" alt="彤鼎集团 TD Group"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信：esonleo　·　全网社媒请搜索「彤鼎」或「ESON廖生」</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+});
+</script>
+
+<script>
+(function(){
+  // 门槛数值单位：各币种「万」。全部取自本站已发布文章，改动请同步文章。
+  var RULES=[
+    {id:'ncm',name:'纳斯达克 · 资本市场层',en:'NASDAQ CAPITAL MARKET',ccy:'usd',
+     opts:[
+      {n:'净利润标准',c:[['net',75,'净利润'],['flt',500,'公众持股市值']]},
+      {n:'股东权益标准',c:[['eq',500,'股东权益'],['flt',1500,'公众持股市值']]},
+      {n:'市值标准',c:[['mcap',5000,'上市证券市值'],['flt',1500,'公众持股市值']]}],
+     gate:['flt',2500,'公众流通市值（2026-5-14 新规）'],
+     note:'共同条件：每股价格 ≥ 4 美元 · 公众股东 ≥ 300 名 · 做市商 ≥ 3 家。新规针对主要在中国境内经营的企业，未达 2500 万美元流通市值的，即使上面某套标准达标也无法通过首次上市审核。'},
+    {id:'ngm',name:'纳斯达克 · 全球市场层',en:'NASDAQ GLOBAL MARKET',ccy:'usd',
+     opts:[
+      {n:'市值标准',c:[['mcap',7500,'总市值']]},
+      {n:'股东权益标准',c:[['eq',3000,'股东权益']]},
+      {n:'利润标准',c:[['net',100,'税前利润']]}],
+     note:'另有收入标准，规模要求以交易所现行规则为准，本页不计算。'},
+    {id:'hk',name:'香港交易所主板',en:'HKEX MAIN BOARD',ccy:'hkd',
+     opts:[
+      {n:'盈利测试',c:[['net',3500,'最近一年股东应占盈利'],['net2',4500,'前两年累计盈利']]},
+      {n:'18A 生物科技',c:[['mcap',150000,'上市时预期市值']],x:'另需核心产品通过概念阶段、资深投资者提前入股、125% 营运资金覆盖'},
+      {n:'18C 特专科技',c:[],dyn:true}],
+     note:'18C 以最近一经审计年度经营收益是否达 2.5 亿港元区分已商业化/未商业化；市值门槛经历过阶段性调整，另有研发开支占比要求，实际申报以联交所现行规则文本为准。'},
+    {id:'sgx',name:'新加坡交易所主板',en:'SGX MAIN BOARD',ccy:'sgd',
+     opts:[
+      {n:'测试一',c:[['net',3000,'合并税前利润']],x:'并具备至少三年经营记录'},
+      {n:'测试二',c:[['net',0.0001,'最近一财年盈利'],['mcap',15000,'上市时市值']],x:'并具备至少三年经营记录'},
+      {n:'测试三',c:[['rev',0.0001,'最近一财年有营业收入'],['mcap',30000,'上市时市值']]}]}
+  ];
+
+  function $(id){return document.getElementById(id);}
+  function num(id){var v=($(id).value||'').trim();if(v==='')return null;var n=parseFloat(v);return isNaN(n)?null:n;}
+  function fmt(n){
+    if(n>=10000){var y=n/10000;return (Math.round(y*100)/100)+' 亿元';}
+    return (Math.round(n*10)/10)+' 万元';
+  }
+
+  function evaluate(){
+    var V={net:num('i-net'),net2:num('i-net2'),eq:num('i-eq'),
+           rev:num('i-rev'),mcap:num('i-mcap'),flt:num('i-float')};
+    var RATE={usd:parseFloat($('r-usd').value)||7.2,
+              hkd:parseFloat($('r-hkd').value)||0.92,
+              sgd:parseFloat($('r-sgd').value)||5.4};
+    var CN={usd:'美元',hkd:'港元',sgd:'新元'};
+    var out=[];
+
+    RULES.forEach(function(R){
+      var rate=RATE[R.ccy],cn=CN[R.ccy],rows=[],anyPass=false,anyUnknown=false;
+      var opts=R.opts.slice();
+
+      // 18C 需按营业收入先分类，再决定市值门槛
+      if(R.id==='hk'){
+        var idx=-1;opts.forEach(function(o,k){if(o.dyn)idx=k;});
+        if(idx>-1){
+          var revLine=25000*rate; // 2.5 亿港元
+          if(V.rev===null){
+            opts[idx]={n:'18C 特专科技',c:[],unknown:'需要填写营业收入才能判断属于已商业化还是未商业化'};
+          }else if(V.rev>=revLine){
+            opts[idx]={n:'18C 已商业化',c:[['mcap',400000,'上市时预期市值']],
+              x:'初始门槛 60 亿港元，2024 年 9 月起窗口期下调至 40 亿港元（此处按 40 亿计）；另需研发开支占总营运开支 ≥ 15%'};
+          }else{
+            opts[idx]={n:'18C 未商业化',c:[['mcap',800000,'上市时预期市值']],
+              x:'初始门槛 100 亿港元，下调后 80 亿港元（此处按 80 亿计）；研发占比：年收益 1.5–2.5 亿港元 ≥ 30%，低于 1.5 亿港元 ≥ 50%'};
+          }
+        }
+      }
+
+      opts.forEach(function(o){
+        if(o.unknown){
+          rows.push({n:o.n,s:'u',d:o.unknown});anyUnknown=true;return;
+        }
+        var miss=[],gaps=[],ok=true;
+        o.c.forEach(function(c){
+          var key=c[0],need=c[1]*rate,label=c[2],have=V[key];
+          if(have===null){miss.push(label);ok=false;return;}
+          if(have<need){ok=false;gaps.push(label+'差 '+fmt(need-have));}
+        });
+        if(miss.length){
+          rows.push({n:o.n,s:'u',d:'数据不足：请填写 '+miss.join('、')});anyUnknown=true;
+        }else if(ok){
+          rows.push({n:o.n,s:'y',d:'已达标'+(o.x?'（'+o.x+'）':'')});anyPass=true;
+        }else{
+          rows.push({n:o.n,s:'n',d:gaps.join('；')+(o.x?'。'+o.x:'')});
+        }
+      });
+
+      // 硬闸门（纳斯达克 2026 新规）
+      var gate=null;
+      if(R.gate){
+        var gv=V[R.gate[0]],gneed=R.gate[1]*rate;
+        if(gv===null) gate={s:'u',t:R.gate[2]+'：数据不足'};
+        else if(gv>=gneed) gate={s:'y',t:R.gate[2]+'：已达 '+R.gate[1]+' 万'+cn+'线'};
+        else gate={s:'n',t:R.gate[2]+'：差 '+fmt(gneed-gv)+'（需 '+R.gate[1]+' 万'+cn+'）'};
+      }
+
+      var sum;
+      if(gate&&gate.s==='n'){
+        sum='<b style="color:#d99b92">这一条会卡住整个申报</b>——'+gate.t+'。即使上面某套标准达标，未达这条线也无法通过首次上市审核。';
+      }else if(anyPass){
+        sum='<b style="color:#8fc09b">财务硬指标上有可走的通道</b>。但达标只是入场资格，架构、备案与历史遗留问题同样决定成败，见下方第 03 节。';
+      }else if(anyUnknown){
+        sum='部分标准因数据不足未能判断，补齐上面留空的项后可得到完整结果。';
+      }else{
+        sum='当前数字尚未达到本板块任一标准。差距不一定是终点——见 <a href="articles/beyond-25m-threshold.html" style="color:#c9a962">达不到门槛的四条资本化出路</a>。';
+      }
+
+      out.push({R:R,rows:rows,gate:gate,sum:sum,cn:cn,rate:rate});
+    });
+    return out;
+  }
+
+  function render(){
+    var data=evaluate(),box=$('result'),h='';
+    data.forEach(function(d){
+      h+='<div class="rcard"><div class="rcard-h"><b>'+d.R.name+'</b><em>'+d.R.en+'</em>'
+        +'<span style="color:#7d745c;font-size:12px;margin-left:auto">按 1 '+d.cn+' = '+d.rate+' 元折算</span></div><div class="rcard-b">';
+      d.rows.forEach(function(r){
+        var cls=r.s==='y'?'p-y':(r.s==='n'?'p-n':'p-u');
+        var tx=r.s==='y'?'达标':(r.s==='n'?'未达标':'数据不足');
+        h+='<div class="rrow"><span class="nm">'+r.n+'</span><span class="pill '+cls+'">'+tx+'</span><span class="dt">'+r.d+'</span></div>';
+      });
+      if(d.gate){
+        var gc=d.gate.s==='y'?'p-y':(d.gate.s==='n'?'p-n':'p-u');
+        var gt=d.gate.s==='y'?'达标':(d.gate.s==='n'?'未达标':'数据不足');
+        h+='<div class="rrow" style="border-top:1px solid rgba(201,169,98,.2);margin-top:6px;padding-top:14px">'
+          +'<span class="nm" style="color:#c9a962">硬闸门</span><span class="pill '+gc+'">'+gt+'</span>'
+          +'<span class="dt">'+d.gate.t+'</span></div>';
+      }
+      h+='</div><div class="rsum">'+d.sum+(d.R.note?'<div class="rnote">'+d.R.note+'</div>':'')+'</div></div>';
+    });
+    box.innerHTML=h;
+    box.hidden=false;
+    try{if(window.gtag)window.gtag('event','standards_check',{event_category:'tool'});}catch(e){}
+    try{if(window._hmt)window._hmt.push(['_trackEvent','tool','standards_check']);}catch(e){}
+    box.scrollIntoView({behavior:'smooth',block:'start'});
+  }
+
+  document.addEventListener('DOMContentLoaded',function(){
+    $('btn-calc').addEventListener('click',render);
+    $('btn-demo').addEventListener('click',function(){
+      $('i-net').value=600;$('i-net2').value=900;$('i-eq').value=4000;
+      $('i-rev').value=12000;$('i-mcap').value=60000;$('i-float').value=18000;
+      render();
+    });
+    $('btn-clear').addEventListener('click',function(){
+      ['i-net','i-net2','i-eq','i-rev','i-mcap','i-float'].forEach(function(k){$(k).value='';});
+      $('result').hidden=true;
+    });
+    ['i-net','i-net2','i-eq','i-rev','i-mcap','i-float'].forEach(function(k){
+      $(k).addEventListener('keydown',function(e){if(e.key==='Enter')render();});
+    });
+  });
+})();
+</script>
+
+</body></html>
