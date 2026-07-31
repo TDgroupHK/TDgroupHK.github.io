@@ -117,6 +117,7 @@ python C:\TDGroupSEO\compliance_gate.py articles\<slug>.html --scope site
 - 对 `index.html` 的结构性改动（新增/删除板块）需先向用户确认。
 - **改过 `faq.html` 的可见问答后，必须执行 `python tools/rebuild_faq_schema.py`**。FAQPage schema 以可见 `<details>` 问答为唯一真源反向生成；只改可见文字而不同步 schema，会造成结构化数据与页面内容不符（属违规），且问题标题仍能对上、肉眼看不出来。校验用 `--check`（有差异退出码 1）。
 - **从模板页复制生成新页面时，必须剥掉继承来的 JSON-LD 再写自己的**。2026-07-29 用 `pre-ipo-program.html` 做模板生成门槛速查页时，连带继承了描述「上市预备期陪跑」的 `Service` 与三条页面上根本不存在的 `FAQPage` 问答——schema 必须描述当前页面。
+- **不得为了「显得新」而只改 `dateModified`**。schema 说本周更新、正文一个字没动，是搜索引擎明确打击的 content refresh spam，被识别出来比不更新更糟。内容时效复核走 `python tools/freshness_audit.py` 取队列、`python tools/bump_modified.py` 记账——后者以正文内容哈希为准 fail-closed，正文没变会拒绝改日期（核过确实无需改，用 `--reviewed-only`）。**不要绕过它手改 schema 日期。**这一班已并入 `weekly-review` 定时任务，不要新建同类任务。
 - **站内助手 `js/assistant.js` 必须保持检索式，禁止改为调用生成式 API**。两个原因：① 本站为纯静态托管，任何 LLM 的 API key 都只能写在前端，等于公开泄露；② 彤鼎为金融咨询机构，生成式回答会即兴编造上市门槛、费用、收益等数字，构成合规风险。助手只能返回 `js/assistant-kb.json` 中来自本站已审核内容的原文。若确需生成式能力，必须先架设服务端代理（密钥留在服务端）并经用户确认，不得在前端直连。
 
 ## 七、语言与语气
