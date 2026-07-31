@@ -1,0 +1,497 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>上市时间表倒推：想什么时候敲钟，就得什么时候开始 | 彤鼎集团</title>
+<meta name="description" content="填入目标敲钟月份，按真实纳斯达克上市项目排期（28 项任务、11 个月）倒推每项工作的起止时间，并计算签约前的前置工程：财务规范化整改 12–24 个月、股东基础建设 12–18 个月、股权代持还原至少 12 个月。自动标出已经来不及启动的环节。含秘密递交、公开递交、FINRA 申报、纳斯达克挂牌申请等关键节点。">
+<link rel="canonical" href="https://tdgroup.hk/ipo-timeline-planner.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<meta property="og:site_name" content="彤鼎集团 TD Group"><meta property="og:locale" content="zh_CN"><meta property="og:type" content="website">
+<meta property="og:title" content="上市时间表倒推：想什么时候敲钟，就得什么时候开始 | 彤鼎集团">
+<meta property="og:description" content="填入目标敲钟月份，按真实纳斯达克上市项目排期（28 项任务、11 个月）倒推每项工作的起止时间，并计算签约前的前置工程：财务规范化整改 12–24 个月、股东基础建设 12–18 个月、股权代持还原至少 12 个月。自动标出已经来不及启动的环节。含秘密递交、公开递交、FINRA 申报、纳斯达克挂牌申请等关键节点。">
+<meta property="og:url" content="https://tdgroup.hk/ipo-timeline-planner.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:4px;font-size:17px;}
+.logo .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10.5px;letter-spacing:3px;margin-top:2px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:100vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:linear-gradient(180deg,rgba(8,7,6,.80) 0%,rgba(8,7,6,.34) 44%,rgba(8,7,6,.66) 100%),url('img/hero-skyline.jpg') center/cover no-repeat;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:6px;font-size:13px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-size:58px;line-height:1.3;color:#fff;font-weight:600;letter-spacing:8px;}
+.hero h1 span{display:block;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .lede{margin-top:30px;color:#d6c9a8;font-size:16px;letter-spacing:1.5px;line-height:1.95;max-width:600px;font-weight:300;}
+.hero .loc{margin-top:26px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:5px;font-size:13.5px;}
+.hero-cta{margin-top:42px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:64px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;letter-spacing:.5px;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-size:31px;color:#fff;letter-spacing:3px;font-weight:600;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+.sec-intro{color:#b3a88b;max-width:760px;font-size:15.5px;margin:-30px 0 44px;line-height:1.95;}
+
+/* ---------- track record ---------- */
+.marquee{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:22px;}
+.mq{border:1px solid var(--line);background:rgba(18,16,13,.4);overflow:hidden;transition:border-color .35s,transform .35s;display:flex;flex-direction:column;}
+.mq:hover{border-color:var(--gold);transform:translateY(-6px);}
+.mq .ph{height:116px;background-size:cover;background-position:center;position:relative;}
+.mq .ph::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,9,8,.05) 50%,rgba(18,16,13,.9));}
+.mq .body{padding:20px 22px 24px;}
+.mq .tk{font-family:Georgia,serif;color:var(--gold);letter-spacing:2.5px;font-size:12.5px;}
+.mq .big{font-family:Georgia,serif;color:#fff;font-size:30px;line-height:1.05;margin:10px 0 8px;font-weight:400;letter-spacing:.5px;}
+.mq .cn{color:#eaddbe;font-size:15px;font-weight:700;letter-spacing:.5px;}
+.mq .desc{color:var(--mute);font-size:12.5px;margin-top:10px;line-height:1.7;}
+
+.tombs{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;}
+.tomb{background:rgba(18,16,13,.5);border:1px solid var(--line);padding:23px 22px;transition:background .3s,border-color .3s;}
+.tomb:hover{background:#16110a;border-color:var(--gold-dim);}
+.tomb .row{display:flex;align-items:baseline;justify-content:space-between;gap:8px;}
+.tomb .tk{font-family:Georgia,serif;color:var(--gold-hi);font-size:22px;letter-spacing:2px;line-height:1;}
+.tomb .tk.zh{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19px;letter-spacing:1px;}
+.tomb .ex{font-family:Georgia,serif;font-style:italic;font-size:10px;letter-spacing:1.5px;color:var(--mute);border:1px solid var(--line);padding:2px 8px;white-space:nowrap;}
+.tomb .cn{color:#e3d8bd;font-size:14.5px;font-weight:700;margin-top:15px;letter-spacing:.5px;}
+.tomb .sec{color:var(--mute);font-size:12px;margin-top:6px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+
+.refin{margin-top:24px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:26px 30px;display:flex;gap:30px;align-items:center;flex-wrap:wrap;}
+.refin .rt{flex:1;min-width:260px;}
+.refin .rt b{color:#fff;font-size:17px;letter-spacing:.5px;display:block;margin-bottom:8px;}
+.refin .rt p{color:#a99d80;font-size:13.5px;line-height:1.8;}
+.refin .rn{display:flex;gap:26px;flex-wrap:wrap;}
+.refin .rn span{font-family:Georgia,serif;color:var(--gold-hi);font-size:26px;}
+.refin .rn span small{display:block;font-family:"PingFang SC",sans-serif;color:var(--mute);font-size:11.5px;font-style:normal;margin-top:3px;letter-spacing:.5px;}
+.compliance{margin-top:34px;border-top:1px solid rgba(201,169,98,.14);padding-top:22px;color:#7d745c;font-size:12px;line-height:1.95;}
+.pipeline{margin-top:14px;border:1px solid var(--line);background:rgba(201,169,98,.045);padding:22px 28px;color:#b3a88b;font-size:14px;line-height:1.85;}
+.pipeline a{color:var(--gold);white-space:nowrap;border-bottom:1px solid transparent;transition:border-color .3s;}
+.pipeline a:hover{border-bottom-color:var(--gold);}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--night);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--ink);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;}
+.acard{border:1px solid var(--line);background:rgba(18,16,13,.5);transition:transform .35s,border-color .35s,background .35s;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-4px);background:#16110a;}
+.acbody{padding:26px 24px 24px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:10.5px;letter-spacing:2.5px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:16.5px;font-weight:700;line-height:1.55;letter-spacing:.3px;}
+.acard p{color:var(--mute);font-size:13px;margin-top:9px;flex:1;line-height:1.8;}
+.acard .more{color:var(--gold);font-size:11.5px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-crest{height:94px;width:auto;display:block;margin:0 auto 36px;opacity:.95;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr 1fr;}.tl{grid-template-columns:1fr 1fr;}.marquee{grid-template-columns:1fr 1fr;}.tombs{grid-template-columns:1fr 1fr;}.hero h1{font-size:36px;letter-spacing:4px;}.menu{gap:16px;font-size:13px;}.sec-no{font-size:44px;}}
+@media(max-width:640px){.grid8,.alist,.tl,.marquee,.tombs{grid-template-columns:1fr;}.hero h1{font-size:30px;letter-spacing:2px;}.wrap{padding:0 20px;}section{padding:66px 0;}.sec-head{margin-bottom:36px;gap:14px;}.refin{flex-direction:column;align-items:flex-start;gap:16px;}.btn{padding:14px 26px;font-size:13.5px;}.logo .mark-img{height:46px;}}
+
+/* ---------- 时间表倒推 ---------- */
+.calc{border:1px solid var(--line);background:rgba(18,16,13,.55);padding:30px 30px 26px;}
+.calc-grid{display:grid;gap:18px 22px;}
+.calc-grid label{display:flex;flex-direction:column;gap:6px;}
+.calc-grid .lb{color:#cfc4a6;font-size:13.5px;letter-spacing:.5px;}
+.calc-grid input,.calc-grid select{background:#0f0e0c;border:1px solid rgba(201,169,98,.28);
+  color:#f2ead6;padding:11px 13px;font-size:16px;font-family:inherit;outline:none;width:100%;border-radius:2px;}
+.calc-grid input:focus,.calc-grid select:focus{border-color:var(--gold);}
+.calc-grid i{color:#7d745c;font-size:11.5px;font-style:normal;letter-spacing:.4px;}
+.opts{margin-top:24px;padding-top:20px;border-top:1px solid rgba(201,169,98,.14);}
+.opt-row{display:flex;flex-wrap:wrap;gap:18px;}
+.olb{color:#7d745c;font-size:12px;letter-spacing:2px;min-width:70px;line-height:1.6;}
+.chks{display:grid;grid-template-columns:repeat(2,1fr);gap:10px 20px;flex:1;min-width:260px;}
+.rad{display:flex;align-items:flex-start;gap:8px;cursor:pointer;}
+.rad input{margin-top:4px;accent-color:#c9a962;flex:0 0 auto;}
+.rad span{color:#cfc4a6;font-size:13.5px;line-height:1.6;}
+.rad em{display:block;color:#7d745c;font-size:11.5px;font-style:normal;}
+.calc-act{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px;}
+.calc-act .btn{cursor:pointer;border:none;font-family:inherit;}
+.result{margin-top:34px;}
+.verdict{border:1px solid rgba(201,169,98,.25);background:rgba(18,16,13,.6);padding:22px 26px;margin-bottom:22px;}
+.verdict .h{font-size:19px;color:#e8dcc0;font-weight:600;margin-bottom:8px;}
+.verdict p{color:#b3a88b;font-size:14.5px;line-height:1.95;margin:0;}
+.verdict.bad{border-color:rgba(224,168,155,.4);}
+.verdict.bad .h{color:#e0a89b;}
+.verdict.ok .h{color:#9ec7a8;}
+.phase{color:#7d745c;font-size:12px;letter-spacing:3px;margin:26px 0 10px;}
+.ttbl{width:100%;border-collapse:collapse;font-size:14px;background:rgba(18,16,13,.55);
+  border:1px solid var(--line);}
+.ttbl th{background:rgba(201,169,98,.07);color:#7d745c;font-size:11.5px;letter-spacing:1px;
+  font-weight:600;text-align:left;padding:10px 14px;white-space:nowrap;}
+.ttbl td{padding:9px 14px;border-top:1px solid rgba(201,169,98,.1);color:#cfc4a6;line-height:1.65;}
+.ttbl td.d{white-space:nowrap;font-variant-numeric:tabular-nums;color:#9a8f74;}
+.ttbl tr.late td{background:rgba(190,110,100,.09);}
+.ttbl tr.late td.d{color:#e0a89b;}
+.ttbl tr.key td{color:#e8dcc0;font-weight:600;}
+.ttbl .mk{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;margin-left:8px;
+  background:rgba(201,169,98,.15);color:#c9a962;white-space:nowrap;}
+.ttbl .lt{display:inline-block;font-size:11px;padding:1px 8px;border-radius:10px;margin-left:8px;
+  background:rgba(190,110,100,.18);color:#e0a89b;white-space:nowrap;}
+.rnote2{color:#7d745c;font-size:12.5px;line-height:1.9;margin-top:14px;}
+.rnote2 b{color:#c9a962;}
+/* 浅色区表格 */
+.nw{white-space:nowrap;}
+.tbln{color:#5c5343;font-size:14px;line-height:1.9;margin:0 0 14px;}
+.tbln a{color:#8a6f36;text-decoration:none;border-bottom:1px solid rgba(138,111,54,.35);}
+.tbw{overflow-x:auto;border:1px solid rgba(26,23,18,.14);}
+table.std{border-collapse:collapse;width:100%;min-width:620px;font-size:14px;background:#fff;}
+table.std th{background:#f3efe6;color:#6b6151;font-size:11.5px;letter-spacing:1px;font-weight:600;
+  text-align:left;padding:11px 14px;white-space:nowrap;}
+table.std td{padding:12px 14px;border-top:1px solid rgba(26,23,18,.1);color:#3a352b;
+  line-height:1.8;vertical-align:top;}
+table.std td.k{font-weight:600;color:#1a1712;white-space:nowrap;}
+table.std td a{color:#8a6f36;text-decoration:none;border-bottom:1px solid rgba(138,111,54,.35);}
+.alertbox{border-left:3px solid #8a6f36;background:#f7f3e9;padding:18px 22px;margin:26px 0;}
+.alertbox b{display:block;color:#1a1712;font-size:15.5px;margin-bottom:7px;}
+.alertbox p{color:#4a4335;font-size:14px;line-height:1.9;margin:0;}
+@media(max-width:820px){.chks{grid-template-columns:1fr;}}
+@media(max-width:620px){.calc-grid{grid-template-columns:1fr!important;}.calc{padding:22px 18px;}}
+
+</style><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="js/assistant.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"上市时间表倒推","url":"https://tdgroup.hk/ipo-timeline-planner.html","applicationCategory":"BusinessApplication","operatingSystem":"Web","inLanguage":"zh-CN","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"},"description":"填入目标敲钟月份，按真实纳斯达克上市项目排期（28 项任务、11 个月）倒推每项工作的起止时间，并计算签约前的前置工程：财务规范化整改 12–24 个月、股东基础建设 12–18 个月、股权代持还原至少 12 个月。自动标出已经来不及启动的环节。含秘密递交、公开递交、FINRA 申报、纳斯达克挂牌申请等关键节点。","featureList":["按目标敲钟月份倒推 28 项任务起止时间","计算签约前的前置工程周期（财务规范化、股东基础、代持还原等）","自动标出已经来不及启动的环节","支持 11 / 15 / 18 个月三种流程口径","计算在浏览器本地完成"],"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk"}}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://tdgroup.hk/"},{"@type":"ListItem","position":2,"name":"上市时间表倒推","item":"https://tdgroup.hk/ipo-timeline-planner.html"}]}</script></head>
+<body><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="img/td-crest-gold.png" alt="彤鼎集团 TD Group"><span class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></span></a>
+<div class="menu"><a href="/">首页 Home</a><a href="about.html">关于 About</a><a href="club.html">俱乐部 Club</a><a href="legacy.html">传承 Legacy</a><a href="library.html">文库 Library</a><a href="faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+<div class="hero" style="min-height:56vh;"><div class="hero-frame"></div><div class="wrap">
+<div class="eyebrow">上市时间表倒推 REVERSE TIMELINE PLANNER</div>
+<h1>想什么时候敲钟，<em>就得什么时候开始</em></h1>
+<div class="en">Enter your target listing month. The planner lays out all 28 workstreams of a real Nasdaq listing schedule, plus the preparation work that must happen before the engagement even starts — and flags what you are already late for.</div>
+<p style="color:#b3a88b;margin-top:22px;max-width:800px;font-size:16.5px;">下面这张表基于一份真实的纳斯达克上市项目排期（<strong style="color:#c9a962">28 项任务、11 个月</strong>）。但真正决定成败的，是签约之前那段没人给你排进表里的<strong style="color:#c9a962">前置工程</strong>。</p>
+</div></div>
+
+<section class="sec-ink"><div class="wrap">
+<div class="sec-head rv"><div class="sec-no">01</div><div><h2 class="sec">倒推</h2><div class="sec-en">PLAN BACKWARDS</div></div></div>
+<p class="sec-intro">填目标敲钟月份，倒推每项工作的起止。默认按实际排期的 11 个月计算；若各环节留有余量，按 15 或 18 个月更稳妥。</p>
+
+<div class="calc">
+  <div class="calc-grid" style="grid-template-columns:repeat(2,1fr);">
+    <label><span class="lb">目标敲钟时间</span><input type="month" id="t-target"><i>年 / 月</i></label>
+    <label><span class="lb">正式流程口径</span>
+      <select id="t-pace">
+        <option value="11" selected>11 个月（实际排期，多项并行）</option>
+        <option value="15">15 个月（留有余量）</option>
+        <option value="18">18 个月（稳妥）</option>
+      </select><i>从与辅导机构签约算起</i></label>
+  </div>
+
+  <div class="opts">
+    <div class="opt-row" style="align-items:flex-start;">
+      <span class="olb">签约前<br>还需处理</span>
+      <div class="chks">
+        <label class="rad"><input type="checkbox" id="k-fin"><span>财务需要规范化整改<em>两套账、个人卡收款、公私账户混用 · 12–24 个月</em></span></label>
+        <label class="rad"><input type="checkbox" id="k-nominee"><span>存在股权代持未还原<em>至少提前 12 个月</em></span></label>
+        <label class="rad"><input type="checkbox" id="k-holders" checked><span>股东基础需要建设<em>纳斯达克要求 300 名圆整股股东 · 12–18 个月</em></span></label>
+        <label class="rad"><input type="checkbox" id="k-fund"><span>存在关联方资金占用<em>需清理至零 · 6–12 个月</em></span></label>
+        <label class="rad"><input type="checkbox" id="k-compete"><span>存在同业竞争需要处理<em>6–12 个月</em></span></label>
+      </div>
+    </div>
+  </div>
+
+  <div class="calc-act">
+    <button type="button" class="btn btn-solid" id="t-go">生成时间表 GENERATE</button>
+    <button type="button" class="btn btn-ghost" id="t-p12">试试 12 个月后敲钟</button>
+    <button type="button" class="btn btn-ghost" id="t-p36">试试 36 个月后敲钟</button>
+  </div>
+</div>
+
+<div id="t-out" class="result" hidden></div>
+</div></section>
+
+<section><div class="wrap">
+<div class="sec-head rv"><div class="sec-no">02</div><div><h2 class="sec" style="color:#1a1712">这张表为什么和「12 至 18 个月」不一样</h2><div class="sec-en">WHY 11, NOT 18</div></div></div>
+<p class="sec-intro" style="color:#5c5343">两个数字都对，量的不是同一段。</p>
+
+<div class="tbw"><table class="std">
+<thead><tr><th>口径</th><th>长度</th><th>从哪算到哪</th></tr></thead>
+<tbody>
+<tr><td class="k">实际项目排期</td><td class="nw">11 个月</td><td>从<strong>与辅导机构签约</strong>算到敲钟。多项工作同步实施，是压缩后的执行排期</td></tr>
+<tr><td class="k">常说的 12–18 个月</td><td class="nw">12–18 个月</td><td>架构搭建与合规登记 3–6 个月、PCAOB 审计与申报约 6 个月、SEC 审核与发行 4–6 个月，按较少并行估算。<a href="articles/singapore-path.html">新加坡路径详解 →</a></td></tr>
+<tr><td class="k">加上前置工程</td><td class="nw">最长可达 3 年以上</td><td>财务规范化整改 12–24 个月、股东基础建设 12–18 个月、股权代持还原至少 12 个月。<strong>这段不在任何项目排期表里，但它决定你能不能签那份合同</strong></td></tr>
+</tbody></table></div>
+
+<div class="alertbox">
+  <b>最贵的误解：以为 11 个月是从「决定上市」开始算</b>
+  <p>不是。11 个月是从<strong>企业已经具备签约条件</strong>那一刻开始算的。财务两套账没并、代持没还原、股东人数不够，这些都不在这 11 个月里——它们发生在之前，而且<strong>无法用加钱加人来压缩</strong>。上面勾选「签约前还需处理」的项，就是在算这一段。</p>
+</div>
+</div></section>
+
+<section class="sec-ink"><div class="wrap">
+<div class="sec-head rv"><div class="sec-no">03</div><div><h2 class="sec">三条最容易被低估的约束</h2><div class="sec-en">THREE UNDERESTIMATED CONSTRAINTS</div></div></div>
+
+<div class="grid8" style="grid-template-columns:repeat(3,1fr);">
+<div class="biz rv"><i>01</i><b>审计是最长的单一工作流</b><span>AUDIT IS THE LONG POLE</span><p>首次 PCAOB 标准审计通常需要 4–6 个月。若同时存在财务规范化整改需求，叠加后总周期通常在 <strong>12 个月以上</strong>。规范运行不满一个完整会计年度就启动审计，审计师会因期初余额无法验证而扩大程序，成本与周期同步上升。<a href="articles/pcaob-audit.html">详解 →</a></p></div>
+<div class="biz rv"><i>02</i><b>备案往返不计入审核期</b><span>FILING ROUND-TRIPS</span><p>证监会 20 个工作日的审核期，<strong>不包含</strong>企业准备补充材料的 30 个工作日。两轮往返可以把一个多月拉长到三到五个月，而境外交易所的审计报告有效期不会因此顺延。<a href="articles/csrc-filing-feedback.html">详解 →</a></p></div>
+<div class="biz rv"><i>03</i><b>股东基础补不出来</b><span>SHAREHOLDER BASE</span><p>纳斯达克要求 300 名圆整股股东，需要真实的持股分散过程，周期通常 12–18 个月。这是需要提前建设的资产，<strong>不是临门一脚可以补的材料</strong>。<a href="articles/public-float-holders.html">详解 →</a></p></div>
+</div>
+
+<div class="compliance">
+本页时间表基于一份真实的纳斯达克上市项目排期与本站公开周期数据整理，不涉及任何具体企业信息。原排期备注：为加快上市进度，会根据公司实际情况及时调整，多项工作同步实施，方案仅供参考。<br>
+本页仅供筹划参考，不构成任何法律、税务或投资建议，也不构成对上市时间的承诺。实际周期取决于企业具体情况、中介机构效率、监管审核进度与市场窗口。<br>
+计算全部在您的浏览器本地完成，输入的数据不会上传、不会保存。彤鼎为企业管理咨询机构，证券承销、审计鉴证等持牌业务由合作之持牌机构承做。
+</div>
+
+<div class="hero-cta" style="margin-top:40px;">
+<a class="btn btn-solid" href="mailto:liaoqijie@tdgroup.hk?subject=%E4%B8%8A%E5%B8%82%E6%97%B6%E9%97%B4%E8%A1%A8%E5%92%A8%E8%AF%A2">就我的时间表聊一聊 TALK TO US</a>
+<a class="btn btn-ghost" href="listing-standards-check.html">上市门槛速查 →</a>
+<a class="btn btn-ghost" href="ipo-cost-estimator.html">费用测算 →</a>
+<a class="btn btn-ghost" href="regulatory-inquiry-library.html">监管问询模式库 →</a>
+</div>
+</div></section>
+
+<footer><div class="wrap"><img class="f-crest" src="img/td-crest-gold.png" alt="彤鼎集团 TD Group"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信：esonleo　·　全网社媒请搜索「彤鼎」或「ESON廖生」</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+});
+</script>
+
+<script>
+(function(){
+  // 排期取自一份真实的纳斯达克上市项目进度表：28 项任务、11 个月（M1 签约 → M11 敲钟）。
+  // [任务名, 起始相对月, 结束相对月, 关键节点标记]
+  var TASKS=[
+    ['与纳斯达克辅导机构签约',1,1,'起点'],
+    ['对未来公司股东做初步尽调',1,1,''],
+    ['上市整体策划',1,2,''],
+    ['IPO 中介筛选',1,2,''],
+    ['美国财务报表和法务合规',1,4,''],
+    ['公司商业计划书的撰写',1,4,''],
+    ['首次申报招股说明书合规证明',1,4,''],
+    ['海外架构搭建',1,4,''],
+    ['新加坡律师尽职调查',2,3,''],
+    ['财务顾问准备财务报表',2,4,''],
+    ['审计师完成年度/审计报告',2,5,'最长单一工作流'],
+    ['美国律师尽调，起草招股说明书',3,5,''],
+    ['海外承销商尽调',4,6,''],
+    ['开曼律师起草法律意见书',5,6,''],
+    ['董事会的设立',6,8,''],
+    ['SEC 招股书的申报及问题回复',6,8,'开始时秘密递交 · 完成时公开递交'],
+    ['FINRA 申报及问题回复',7,9,''],
+    ['Nasdaq 挂牌申请，及问题回复',8,9,''],
+    ['IR 团队进场',9,9,''],
+    ['开立股票账户',9,10,''],
+    ['设立共管账户',9,10,''],
+    ['股票认购协议',9,11,''],
+    ['股票登记和交割',10,11,''],
+    ['签约新闻发布平台',10,10,''],
+    ['IPO 完成融资交割',10,10,''],
+    ['新闻稿的发布',10,10,''],
+    ['挂牌前后的宣传',11,11,''],
+    ['敲钟',11,11,'终点']
+  ];
+  var BASE=11; // 原排期总月数
+
+  // 签约前的前置工程：[勾选框id, 名称, 最短月, 最长月, 说明]
+  var PRE=[
+    ['k-fin','财务规范化整改',12,24,'两套账、个人卡收款、公私账户混用等历史问题。规范运行不满一个完整会计年度就启动审计通常欲速不达'],
+    ['k-holders','股东基础建设',12,18,'纳斯达克要求 300 名圆整股股东，需要真实的持股分散过程'],
+    ['k-nominee','股权代持还原',12,12,'需还原协议、对价支付记录、工商变更登记、各方无纠纷确认四件套齐全'],
+    ['k-fund','关联方资金占用清理',6,12,'需清理至零并留存凭证，补齐审议与披露程序'],
+    ['k-compete','同业竞争处理',6,12,'转让、注销或纳入体内，并出具可执行的避免同业竞争承诺']
+  ];
+
+  function $(i){return document.getElementById(i);}
+  function ym(d){return d.getFullYear()+'年'+(d.getMonth()+1)+'月';}
+  function addM(d,n){var x=new Date(d.getTime());x.setMonth(x.getMonth()+n);return x;}
+  function monthsBetween(a,b){return (b.getFullYear()-a.getFullYear())*12+(b.getMonth()-a.getMonth());}
+
+  function run(){
+    var v=$('t-target').value;
+    if(!v){alert('请先选择目标敲钟时间');return;}
+    var parts=v.split('-');
+    var target=new Date(parseInt(parts[0],10),parseInt(parts[1],10)-1,1);
+    var pace=parseInt($('t-pace').value,10);
+    var now=new Date(); now=new Date(now.getFullYear(),now.getMonth(),1);
+    // M1 到 M11 之间是 10 个间隔而非 11 个；按 (pace-1)/(BASE-1) 缩放，
+    // 否则选 18 个月时实际只排出 17 个月的跨度。
+    var scale=(pace-1)/(BASE-1);
+
+    // 正式流程：M1 = 敲钟月 - (pace-1)
+    var kickoff=addM(target,-(pace-1));
+    var rows=[],lateFormal=0;
+    TASKS.forEach(function(t){
+      var s=addM(target,-Math.round((BASE-t[1])*scale));
+      var e=addM(target,-Math.round((BASE-t[2])*scale));
+      var late=monthsBetween(now,s)<0;
+      if(late) lateFormal++;
+      rows.push({n:t[0],s:s,e:e,mk:t[3],late:late});
+    });
+
+    // 前置工程：终点 = 签约月，起点 = 签约月 - 周期
+    var pre=[],latePre=0,earliest=kickoff;
+    PRE.forEach(function(p){
+      if(!$(p[0]).checked) return;
+      var startLo=addM(kickoff,-p[3]);  // 按上限算，最早
+      var startHi=addM(kickoff,-p[2]);  // 按下限算，最晚
+      var late=monthsBetween(now,startHi)<0;
+      if(late) latePre++;
+      if(startLo<earliest) earliest=startLo;
+      pre.push({n:p[1],lo:startLo,hi:startHi,note:p[4],late:late,lo_m:p[3],hi_m:p[2]});
+    });
+
+    var totalNeed=monthsBetween(now,target);
+    var h='';
+
+    // 总判断
+    var cls='',hd='',txt='';
+    if(latePre>0||lateFormal>0){
+      cls='bad'; hd='按这个目标时间，已经有 '+(latePre+lateFormal)+' 项来不及启动';
+      txt='下表中标红的行，其最晚启动时间已经早于本月。这类工作的周期无法靠加钱加人压缩——'
+        +'继续按原目标推进，多数情况下的结果是挂牌时间被动后延。'
+        +'现实的做法是：要么把目标敲钟时间往后推，要么先启动最长的那条工作流，其余按依赖顺序跟上。';
+    }else if(pre.length&&monthsBetween(now,pre[0].hi)<3){
+      cls=''; hd='时间勉强够，但没有余量';
+      txt='前置工程的最晚启动时间就在近三个月内。任何一项延误都会直接推迟敲钟时间，建议立即启动最长的那条。';
+    }else{
+      cls='ok'; hd='时间充裕';
+      txt='距离目标敲钟还有 '+totalNeed+' 个月，各项工作均有启动余量。建议按下表顺序推进，'
+        +'并优先启动周期最长、最不可控的几项：审计、财务规范化、外汇登记。';
+    }
+    h+='<div class="verdict '+cls+'"><div class="h">'+hd+'</div><p>'+txt+'</p></div>';
+
+    // 前置工程表
+    if(pre.length){
+      h+='<div class="phase">第一段 · 签约前的前置工程（不在项目排期表里）</div>';
+      h+='<table class="ttbl"><thead><tr><th>工作</th><th>最晚启动</th><th>周期</th><th>说明</th></tr></thead><tbody>';
+      pre.forEach(function(p){
+        h+='<tr class="'+(p.late?'late':'')+'"><td>'+p.n+(p.late?'<span class="lt">已超期</span>':'')
+          +'</td><td class="d">'+ym(p.hi)+'</td><td class="d">'+p.hi_m+'–'+p.lo_m+' 个月</td>'
+          +'<td style="color:#7d745c;font-size:12.5px">'+p.note+'</td></tr>';
+      });
+      h+='</tbody></table>';
+    }
+
+    // 正式流程表
+    h+='<div class="phase">第二段 · 正式流程 '+pace+' 个月（'+ym(kickoff)+' 起）</div>';
+    h+='<table class="ttbl"><thead><tr><th>任务</th><th>开始</th><th>完成</th></tr></thead><tbody>';
+    rows.forEach(function(r){
+      var k=(r.mk==='起点'||r.mk==='终点')?'key':'';
+      h+='<tr class="'+(r.late?'late ':'')+k+'"><td>'+r.n
+        +(r.mk&&r.mk!=='起点'&&r.mk!=='终点'?'<span class="mk">'+r.mk+'</span>':'')
+        +(r.late?'<span class="lt">已超期</span>':'')
+        +'</td><td class="d">'+ym(r.s)+'</td><td class="d">'+ym(r.e)+'</td></tr>';
+    });
+    h+='</tbody></table>';
+
+    var tips=[];
+    tips.push('从<b>现在</b>到目标敲钟共 <b>'+totalNeed+' 个月</b>；'
+      +(pre.length?'含前置工程在内，完整周期需要 <b>'+monthsBetween(earliest,target)+' 个月</b>。':'未勾选前置工程，仅计算正式流程。'));
+    tips.push('正式流程按 '+pace+' 个月计。原排期备注：为加快上市进度会根据公司实际情况调整，<b>多项工作同步实施</b>——这份表是压缩后的执行排期，不是宽松估算。');
+    tips.push('前置工程按各自周期的<b>下限</b>算最晚启动时间。按下限排等于没有余量，实际建议留 3 个月缓冲。');
+    h+='<div class="rnote2">'+tips.map(function(t){return '· '+t;}).join('<br>')+'</div>';
+
+    $('t-out').innerHTML=h;
+    $('t-out').hidden=false;
+    try{if(window.gtag)window.gtag('event','timeline_plan',{event_category:'tool'});}catch(e){}
+    try{if(window._hmt)window._hmt.push(['_trackEvent','tool','timeline_plan']);}catch(e){}
+    $('t-out').scrollIntoView({behavior:'smooth',block:'start'});
+  }
+
+  function setTargetMonthsAhead(n){
+    var d=new Date(); d.setMonth(d.getMonth()+n);
+    $('t-target').value=d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2);
+    run();
+  }
+
+  document.addEventListener('DOMContentLoaded',function(){
+    // 默认填 18 个月后，避免打开就是空表
+    var d=new Date(); d.setMonth(d.getMonth()+18);
+    $('t-target').value=d.getFullYear()+'-'+('0'+(d.getMonth()+1)).slice(-2);
+    $('t-go').addEventListener('click',run);
+    $('t-p12').addEventListener('click',function(){setTargetMonthsAhead(12);});
+    $('t-p36').addEventListener('click',function(){setTargetMonthsAhead(36);});
+  });
+})();
+</script>
+
+</body></html>

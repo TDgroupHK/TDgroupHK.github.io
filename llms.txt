@@ -26,6 +26,7 @@
 - [上市门槛速查 Listing Standards Check](https://tdgroup.hk/listing-standards-check.html): 输入净利润、股东权益、市值等五个数字，自动匹配纳斯达克资本市场层三套标准、2026年5月新规2500万美元流通市值线、香港主板盈利测试与18A/18C、新交所主板三套测试；含完整门槛对照表
 - [监管问询模式库 Regulatory Inquiry Patterns](https://tdgroup.hk/regulatory-inquiry-library.html): 按问询主题横向整理 SEC 问询函、港交所退回原因、中国证监会备案补充材料要求的十五个高频主题，每条含典型问法、监管关注点、什么回复会被追问、申报前如何准备；可按监管方筛选
 - [赴美上市费用测算 IPO Cost Estimator](https://tdgroup.hk/ipo-cost-estimator.html): 输入计划融资额与审计所选择，测算分项费用与总成本；把沉没成本（无论成败都要付）与成功才付的承销佣金分开算，给出净到手资金与挂牌后年度持续成本
+- [上市时间表倒推 Reverse Timeline Planner](https://tdgroup.hk/ipo-timeline-planner.html): 填目标敲钟月份，按真实纳斯达克项目排期（28 项任务、11 个月）倒推每项工作起止，并计算签约前的前置工程（财务规范化 12–24 个月、股东基础建设 12–18 个月、代持还原至少 12 个月），自动标出已来不及启动的环节
 
 ## 知识文库文章
 
