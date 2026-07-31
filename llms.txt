@@ -24,6 +24,7 @@
 - [华尔街彤鼎俱乐部 Club](https://tdgroup.hk/club.html): 企业家资本圈层、会员权益、三大课程、全球节点
 - [知识文库 Library](https://tdgroup.hk/library.html): 赴美上市知识文库全部文章目录
 - [常见问题 FAQ](https://tdgroup.hk/faq.html): 赴美上市/新加坡路径/香港18A与18C/门槛费用周期/VIE/37号文与ODI备案/达不到门槛的出路等16个高频问题标准答案
+- [境外上市术语表 Glossary](https://tdgroup.hk/glossary.html): 境外上市与跨境资本运作 104 个核心术语的定义式解释，每条定义直接取自本站对应文章的结论段（术语表与文章同源，站内不存在两套说法），并链到完整解读；覆盖 VIE 架构、红筹架构、37号文登记、ODI 备案、PCAOB 审计、SEC 问询函、同业竞争、出资瑕疵、关联方资金占用、对赌协议、优先清算权、反稀释条款、家族办公室、家族信托、员工持股平台等；支持实时搜索与分类筛选
 - [上市门槛速查 Listing Standards Check](https://tdgroup.hk/listing-standards-check.html): 输入净利润、股东权益、市值等五个数字，自动匹配纳斯达克资本市场层三套标准、2026年5月新规2500万美元流通市值线、香港主板盈利测试与18A/18C、新交所主板三套测试；含完整门槛对照表
 - [监管问询模式库 Regulatory Inquiry Patterns](https://tdgroup.hk/regulatory-inquiry-library.html): 按问询主题横向整理 SEC 问询函、港交所退回原因、中国证监会备案补充材料要求的十五个高频主题，每条含典型问法、监管关注点、什么回复会被追问、申报前如何准备；可按监管方筛选
 - [赴美上市费用测算 IPO Cost Estimator](https://tdgroup.hk/ipo-cost-estimator.html): 输入计划融资额与审计所选择，测算分项费用与总成本；把沉没成本（无论成败都要付）与成功才付的承销佣金分开算，给出净到手资金与挂牌后年度持续成本
@@ -31,7 +32,16 @@
 
 ## 知识文库文章
 
-### 上市路径与门槛 / LISTING PATHS
+### 工具与速查 / TOOLS & QUICK REFERENCE
+
+境外上市术语表104 个核心术语，定义取自本站文章，可搜索
+上市门槛速查填五个数字，自动匹配纳斯达克/港交所/新交所标准
+赴美上市费用测算分项费用与净到手资金，沉没成本单独算
+上市时间表倒推填目标敲钟月份，倒推 28 项任务起止
+监管问询模式库SEC / 港交所 / 证监会十五个高频问询主题
+常见问题43 个高频问题的标准答案
+
+上市路径与门槛LISTING PATHS
 
 - [港交所退回机制新规：上市申请被退回，全部中介机构名单将公开](https://tdgroup.hk/articles/hkex-return-mechanism-2026.html)
 - [港交所上市机制改革：同股不同权门槛下调与保密递表全面放开](https://tdgroup.hk/articles/hkex-listing-reform-2026.html)
