@@ -25,6 +25,7 @@
 - [常见问题 FAQ](https://tdgroup.hk/faq.html): 赴美上市/新加坡路径/香港18A与18C/门槛费用周期/VIE/37号文与ODI备案/达不到门槛的出路等16个高频问题标准答案
 - [上市门槛速查 Listing Standards Check](https://tdgroup.hk/listing-standards-check.html): 输入净利润、股东权益、市值等五个数字，自动匹配纳斯达克资本市场层三套标准、2026年5月新规2500万美元流通市值线、香港主板盈利测试与18A/18C、新交所主板三套测试；含完整门槛对照表
 - [监管问询模式库 Regulatory Inquiry Patterns](https://tdgroup.hk/regulatory-inquiry-library.html): 按问询主题横向整理 SEC 问询函、港交所退回原因、中国证监会备案补充材料要求的十五个高频主题，每条含典型问法、监管关注点、什么回复会被追问、申报前如何准备；可按监管方筛选
+- [赴美上市费用测算 IPO Cost Estimator](https://tdgroup.hk/ipo-cost-estimator.html): 输入计划融资额与审计所选择，测算分项费用与总成本；把沉没成本（无论成败都要付）与成功才付的承销佣金分开算，给出净到手资金与挂牌后年度持续成本
 
 ## 知识文库文章
 
