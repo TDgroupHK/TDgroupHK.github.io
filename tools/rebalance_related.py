@@ -214,7 +214,11 @@ def main():
         io.open(p, 'w', encoding='utf-8').write(s)
         changed += 1
     say('')
-    say('已重写 %d 篇的相关阅读。建议接着执行：python tools/push_indexnow.py --all' % changed)
+    # 不要建议 --all：2026-07-31 在 Bing Webmaster 看到一周内已提交 700 条、爬取 0 条，
+    # 站上一共才 166 页。反复全量重推没有任何用处，还可能被当成垃圾信号。
+    # CLAUDE.md 第五节第 8 步也写明「只提交本次新增或修改的页面」。
+    say('已重写 %d 篇的相关阅读。接着只推这次动过的页面：'
+        'python tools/push_indexnow.py <改动的文件…>' % changed)
     return 0
 
 
