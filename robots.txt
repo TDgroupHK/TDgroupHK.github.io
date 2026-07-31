@@ -17,6 +17,14 @@ Allow: /
 User-agent: Claude-Web
 Allow: /
 
+# Claude-User：用户在对话里让 Claude 打开某页时用的抓取器
+User-agent: Claude-User
+Allow: /
+
+# Claude-SearchBot：为 Claude 的联网检索建索引，GEO 侧最关键的一个
+User-agent: Claude-SearchBot
+Allow: /
+
 User-agent: anthropic-ai
 Allow: /
 
@@ -45,6 +53,10 @@ User-agent: Bytespider
 Allow: /
 
 User-agent: cohere-ai
+Allow: /
+
+# Common Crawl：本身不是某家模型的爬虫，但多数开源与商用模型的训练语料都取自它
+User-agent: CCBot
 Allow: /
 
 User-agent: YouBot
