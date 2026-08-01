@@ -149,6 +149,7 @@
 
 ### 挂牌之后 / POST-LISTING
 
+- [长期破净公司的估值提升计划：谁必须做、写什么、怎么披露](https://tdgroup.hk/articles/valuation-enhancement-plan.html)
 - [美股没有「市值管理」这个概念：中概股公司的对应工具箱](https://tdgroup.hk/articles/us-market-cap-toolkit.html)
 - [外国私人发行人身份认定：两步测试与丧失后的合规升级](https://tdgroup.hk/articles/fpi-status-test.html)
 - [上市后的锁定期与解禁减持](https://tdgroup.hk/articles/lockup-expiry.html)
