@@ -149,6 +149,7 @@
 
 ### 挂牌之后 / POST-LISTING
 
+- [上市公司实控人的股票质押：什么时候是融资工具，什么时候是暴雷前兆](https://tdgroup.hk/articles/share-pledge-risk.html)
 - [主要指数成份股的市值管理制度：四项必载事项与那条最难写的条款](https://tdgroup.hk/articles/market-cap-management-system.html)
 - [长期破净公司的估值提升计划：谁必须做、写什么、怎么披露](https://tdgroup.hk/articles/valuation-enhancement-plan.html)
 - [美股没有「市值管理」这个概念：中概股公司的对应工具箱](https://tdgroup.hk/articles/us-market-cap-toolkit.html)
