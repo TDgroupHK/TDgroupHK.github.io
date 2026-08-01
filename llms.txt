@@ -130,6 +130,7 @@
 
 ### 融资与条款 / FINANCING & TERMS
 
+- [对赌回购触发之后：别急着找钱，先算账](https://tdgroup.hk/articles/vam-triggered.html)
 - [反稀释条款的三种算法与谈判空间](https://tdgroup.hk/articles/anti-dilution-clauses.html)
 - [优先清算权怎么谈：条款清单里最容易被忽略的一条](https://tdgroup.hk/articles/liquidation-preference.html)
 - [估值倒挂下的融资策略](https://tdgroup.hk/articles/valuation-gap-financing.html)
