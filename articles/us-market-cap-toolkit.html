@@ -1,0 +1,273 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>美股没有「市值管理」这个概念：中概股公司的对应工具箱 | 彤鼎集团知识文库</title>
+<meta name="description" content="美国证券法体系中不存在「市值管理」这一概念，与之对应的是信息披露、股份回购、内部人交易安排与投资者关系四类工具，各自受Regulation FD、Rule 10b-18、Rule 10b5-1与反欺诈条款约束。本文说明这四类工具的具体条件，以及照搬A股做法在美股会踩到哪些线。">
+<link rel="canonical" href="https://tdgroup.hk/articles/us-market-cap-toolkit.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="彤鼎集团知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="美股没有「市值管理」这个概念：中概股公司的对应工具箱 | 彤鼎集团知识文库">
+<meta property="og:description" content="美国证券法体系中不存在「市值管理」这一概念，与之对应的是信息披露、股份回购、内部人交易安排与投资者关系四类工具，各自受Regulation FD、Rule 10b-18、Rule 10b5-1与反欺诈条款约束。本文说明这四类工具的具体条件，以及照搬A股做法在美股会踩到哪些线。">
+<meta property="og:url" content="https://tdgroup.hk/articles/us-market-cap-toolkit.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="美股没有「市值管理」这个概念：中概股公司的对应工具箱 | 彤鼎集团知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:4px;font-size:17px;}
+.logo .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10.5px;letter-spacing:3px;margin-top:2px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"美股没有「市值管理」这个概念：中概股公司的对应工具箱","inLanguage":"zh-CN","abstract":"There is no concept of \"market value management\" in US securities law. What Chinese issuers call by that name maps onto four distinct tools, each governed by its own rule: disclosure under Regulation FD, buybacks under the Rule 10b-18 safe harbor, insider sales under Rule 10b5-1 plans, and investor relations. This article sets out the conditions attached to each, and where the A-share playbook breaks in a US listing.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/us-market-cap-toolkit.html"},"datePublished":"2026-08-01","dateModified":"2026-08-01","description":"美国证券法体系中不存在「市值管理」这一概念，与之对应的是信息披露、股份回购、内部人交易安排与投资者关系四类工具，各自受Regulation FD、Rule 10b-18、Rule 10b5-1与反欺诈条款约束。本文说明这四类工具的具体条件，以及照搬A股做法在美股会踩到哪些线。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="彤鼎集团 TD Group"><span class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></span></a>
+<div class="menu"><a href="/">首页 Home</a><a href="../about.html">关于 About</a><a href="../club.html">俱乐部 Club</a><a href="../library.html">文库 Library</a><a href="../faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">挂牌之后 AFTER LISTING</div><h1>美股没有「市值管理」这个概念：中概股公司的对应工具箱</h1>
+<div class="sub">在美国的法条里找不到这个词，能做什么由四条具体规则划定</div><div class="en">There is no concept of &quot;market value management&quot; in US securities law. What Chinese issuers call by that name maps onto four distinct tools, each governed by its own rule: disclosure under Regulation FD, buybacks under the Rule 10b-18 safe harbor, insider sales under Rule 10b5-1 plans, and investor relations. This article sets out the conditions attached to each, and where the A-share playbook breaks in a US listing.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
+<article>
+<div class="answer">美股不存在「市值管理」这一概念，美国证券法里没有对应的词，也没有对应的成文规则。中文语境中的市值管理，在美国被拆成四类各有归属的工具：信息披露受Regulation FD约束、股份回购落在Rule 10b-18安全港内、内部人卖出通过Rule 10b5-1计划、投资者关系与研究覆盖属于市场沟通。它们的共同边界只有一条——全部作用于信息与基本面，没有一项作用于交易与价格；任何直接干预价格的安排，都会落到交易法第9(a)(2)条与Rule 10b-5的反操纵、反欺诈条款下。对中概股而言，其中有一条例外值得特别注意：外国私人发行人被明确豁免于Regulation FD，但这不等于可以选择性披露。</div>
+<h2>一、为什么美国的法条里找不到这个词</h2>
+<p><strong>结论先行：不是翻译问题，是分类方式不同——美国法只区分「信息与基本面」和「交易与价格」，没有把两者合起来的统称。</strong></p>
+<p>中文语境里的「市值管理」是一个复合概念，它同时装着业绩沟通、投资者关系、回购、并购，有时还被人偷偷装进对价格的直接干预。这个词之所以在美国找不到对应物，是因为美国证券法从一开始就不按「目的」分类，而按「手段」分类：一项动作是作用于信息，还是作用于交易，决定了它归哪条规则管。</p>
+<p>因此把「市值管理」直译过去，会得到一个在法律上没有落点的词。真正需要问的不是「美股怎么做市值管理」，而是「我想做的这件具体的事，归哪条规则管、有什么条件」。本质上，这是从一个模糊的中文概念，切换到四条边界清晰的美国规则。</p>
+<p>需要先说明的底层约束：交易法第9(a)(2)条规范操纵市场，Rule 10b-5规范证券交易中的欺诈。这两条覆盖一切，不因为动作叫什么名字而改变认定。以「市值管理」为名做出的价格干预，认定与处罚不因这个名义而减轻。</p>
+<h2>二、工具一：信息披露——中概股在这里有一个容易被误解的豁免</h2>
+<p><strong>结论先行：Regulation FD明确豁免外国私人发行人，但豁免的是这一条规则，不是选择性披露本身的风险。</strong></p>
+<p>Regulation FD（公平披露规则）要求发行人在向特定对象披露重大非公开信息时，同时或及时向公众披露。它的立法目的是消除分析师与机构投资者相对散户的信息优势。而这条规则**明确将外国私人发行人排除在适用范围之外**——多数中概股属于外国私人发行人身份，因此不受Regulation FD的强制约束。</p>
+<p>这个豁免常被误读为「可以对机构单独说」。实际情况是：Regulation FD不适用，但Rule 10b-5的反欺诈条款照常适用；SEC也明确表达过期望外国私人发行人按照Regulation FD背后的基本原则行事。实践中相当比例的外国私人发行人选择自愿遵守，作为一种最佳实践。</p>
+<p>关键在于风险的来源变了而不是消失了。在一对一路演里透露了尚未公开的经营数据，如果接收方据此交易，追责路径不是Regulation FD，而是内幕交易与反欺诈——后者的后果更重。因此，豁免带来的不是自由度，而是一个需要自己建立纪律的空白区。发行人身份的认定标准与丧失后果，另见本站《外国私人发行人身份认定：两步测试与丧失后的合规升级》。</p>
+<h2>三、工具二：股份回购与Rule 10b-18安全港</h2>
+<p><strong>结论先行：回购是唯一直接作用于股价、同时被明文允许的工具，代价是必须完整待在安全港的四个条件里。</strong></p>
+<p>Rule 10b-18为发行人回购自身普通股提供了一个安全港：只要回购同时满足方式、时间、价格、数量四项条件，就不会因该回购而被依据第9(a)(2)条或Rule 10b-5认定为操纵。</p>
+<p>四项条件各有具体要求。方式条件要求发行人每个交易日只能通过一家券商进行报价或买入。时间条件限制了开盘与收盘前后的特定时段。价格条件要求买入价不得高于当时的最高独立报价与最近一笔独立成交价中的较高者。数量条件把单日回购量限制在此前四个日历周日均成交量的25%以内，另有每周一次的大宗交易例外。</p>
+<p>最容易被低估的是这一条：**四项条件中只要有一项当日未满足，该发行人当日的全部回购都会失去安全港保护**，而不是仅仅超出的那部分失去保护。这意味着回购执行是一件需要逐日核对的操作事务，不是下达一个额度就完成的决策。</p>
+<p>还需要理解安全港的性质：它不是豁免，而是举证上的优势。落在安全港内，监管不因回购本身推定操纵；落在安全港外，回购并不自动违法，但发行人失去了这层保护，需要自己证明动机与手段的正当性。因此，本质上这是一个「要不要把自己置于需要自证的位置」的选择。</p>
+<h2>四、工具三：内部人卖出与Rule 10b5-1计划</h2>
+<p><strong>结论先行：这是董事、高管与大股东在持续掌握内幕信息的状态下，唯一能合规卖出的通道。</strong></p>
+<p>Rule 10b5-1允许内部人事先设立一份交易计划，约定未来卖出的数量、价格与时间，此后按计划自动执行。它的作用是把内部人交易从「逐笔自证当时不知情」变成「制度性地证明决策发生在知情之前」。</p>
+<p>SEC于2022年12月对该规则作出重大修订，2023年2月27日生效，核心是加入了冷静期。对董事与高管，冷静期是以下两者中较晚的一个：计划设立或修改后90天，或计划设立或修改所在财季的财务业绩提交后两个交易日，且总长不超过120天。对其他人，冷静期为设立或修改后30天。</p>
+<p>修订同时增加了三项约束：董事与高管须作出善意认证，声明设立计划时不掌握重大非公开信息且并非为规避内幕交易规则；原则上不得同时持有多份重叠的计划；单笔交易计划在任意12个月内限用一次。</p>
+<p>对中概股实控人而言，这套规则改变的是节奏而不是权利。计划必须提前设立并等待冷静期走完，临时决定卖出、当月执行的做法不再可行。内幕交易的整体红线另见本站《内幕交易合规红线》。</p>
+<h2>五、工具四：投资者关系与研究覆盖</h2>
+<p><strong>结论先行：这两件事解决的是「没人看」，不是「看好」——把它们理解成能影响结论，方向就错了。</strong></p>
+<p>中小市值中概股最常见的困境不是被看空，而是零覆盖：没有分析师跟踪，意味着机构投资者缺少进入所需的第一份材料。投资者关系体系与研究覆盖拓展，处理的正是这个问题。</p>
+<p>合规的路径是主动向分析师提供公开、对称的信息服务：定期财报电话会、管理层可及性、及时准确的披露。不合规的路径只有一条但很明确——付费换取指定的评级或目标价。这在美国属于对研究独立性的破坏，涉及的不只是发行人，也涉及出具报告的机构。</p>
+<p>因此，投资者关系的工作量集中在准备与纪律上：材料是否经得起核对、口径是否与已披露文件一致、不同场合说的是不是同一套数字。这些是可以逐项检查的过程指标，公司自己能判断做没做到。IR体系的搭建路径另见本站《上市公司IR体系从零搭建》。</p>
+<h2>六、照搬A股的做法会踩到什么</h2>
+<p><strong>结论先行：两地的合规动作不能互换——A股要求做的，美股没有对应要求；A股禁止的，美股同样禁止且执法更重。</strong></p>
+<p>中国证监会2024年11月发布的《上市公司监管指引第10号——市值管理》，要求主要指数成份股公司制定市值管理制度、长期破净公司披露估值提升计划。这是A股上市公司的强制动作，在美股没有对应要求。中概股照搬一套过去，既不构成合规加分，也不会被交易所认可，只是增加了一份需要与实际披露保持一致的文件。</p>
+<p>更需要警惕的是另一个方向。在内地，「找机构维护股价」这类安排本身已属违法；到了美股，同样的行为落在第9(a)(2)条与Rule 10b-5下，由SEC提起民事追究，情节严重的由司法部提起刑事诉讼。执法逻辑的重心是意图与欺骗性手段：是否人为制造了虚假的价格信号或交易表象。因此，本质上不存在「在A股不行、去美股可以」的空间，只存在后果更重的问题。</p>
+<p>两地口径的完整对照，另见本站《市值管理的合规边界》。</p>
+<h2>七、给已上市中概股的四个检查问题</h2>
+<p><strong>结论先行：不需要一份计划，需要先回答四个能查证的问题。</strong></p>
+<p>第一，公司是否确认了自己的外国私人发行人身份，以及这一身份对披露义务的实际影响是否已在内部沟通口径中体现。身份认定不是一次性的，需要按测试标准定期复核。</p>
+<p>第二，若已启动或计划启动回购，是否有人在逐日核对Rule 10b-18的四项条件，以及执行券商是否清楚每日单一券商的要求。</p>
+<p>第三，董事与高管的卖出安排，是否全部通过Rule 10b5-1计划进行，冷静期与善意认证是否已纳入公司的内部流程。</p>
+<p>第四，一对一沟通中使用的数字与口径，是否与最近一期已披露文件完全一致。外国私人发行人在这一点上没有Regulation FD托底，纪律只能靠自己建立。</p>
+<p>这四个问题的共同点是都有明确答案，不需要判断也不需要预测。彤鼎在挂牌后阶段提供的是投资者关系、信息披露与资本运作层面的企业管理咨询，不接触交易、不参与任何形式的市场操纵，也不对股价作任何承诺。华尔街彤鼎俱乐部的成员企业中已有相当比例完成境外挂牌，挂牌后的合规实务是圈层内讨论最集中的议题之一。如需了解俱乐部会员详情，可发送邮件至 liaoqijie@tdgroup.hk。</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="fpi-status-test.html" style="color:#6b5426;font-weight:700;">外国私人发行人身份认定：两步测试与丧失后的合规升级</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="lockup-expiry.html" style="color:#6b5426;font-weight:700;">上市后的锁定期与解禁减持</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ir-fundamentals.html" style="color:#6b5426;font-weight:700;">上市公司IR体系搭建</a></li></ul></div><div class="brandbox">
+<h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由彤鼎集团团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信：esonleo　·　全网社媒请搜索「彤鼎」或「ESON廖生」</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
