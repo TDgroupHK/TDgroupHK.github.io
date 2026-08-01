@@ -21,6 +21,24 @@
     '俱乐部是什么？'
   ];
 
+  /* 文章页行内引导块的提问组。悬浮按钮曝光很低（2026-08-01 周报：一周仅 2 次 open，
+     且都不在文章页），而文章页才是自然搜索的主要落地面。这里按文章标题选一组更贴题的问题，
+     命中不了就用兜底组。改词请连同 assistant-kb.json 一起看，问不出答案的词不要放进来。 */
+  /* ⚠ 下面每一条都在 assistant-kb.json 上实测过能答出来（2026-08-01）。
+     改词前务必重测：问不出答案的问题会返回「没有直接对应的条目」，
+     等于我们主动把访客推到一次落空的体验上，比不加这个块更糟。
+     首版有 6 条命中不了（如「SPAC和传统IPO差在哪」「架构没搭好会怎么卡住上市」），已全部换掉。 */
+  var INLINE_SETS = [
+    { k: /新加坡|SGX|东南亚/, q: ['新加坡路径到底省掉了哪一步？', '新加坡公司需要真实经营吗？', '新加坡路径要多长时间？'] },
+    { k: /18A|18C|香港|港股|联交所/, q: ['香港18C的市值门槛是多少？', '18A和18C该走哪一条？', '美股还是港股？'] },
+    { k: /37号文|ODI|外汇|备案/, q: ['37号文没登记会影响境外上市吗？', 'ODI备案是什么？', '漏了登记还能补吗？'] },
+    { k: /VIE|红筹|BVI|开曼|架构/, q: ['VIE架构现在还能用吗？', '红筹架构怎么搭？', 'VIE架构要拆吗？'] },
+    { k: /融资|估值|对赌|条款|尽调|股权/, q: ['融资一般卡在哪几个环节？', '尽职调查查什么？', '条款里最该守住哪几条？'] },
+    { k: /SPAC|借壳/, q: ['SPAC合并要多长时间？', '达不到纳斯达克门槛怎么办？', '赴美上市有哪几条路径？'] },
+    { k: /纳斯达克|美股|赴美/, q: ['纳斯达克门槛是多少？', '赴美上市要花多少钱？', '达不到门槛怎么办？'] }
+  ];
+  var INLINE_FALLBACK = ['赴美上市有哪几条路径？', '要花多少钱、多长时间？', '达不到纳斯达克门槛怎么办？'];
+
   /* ---------------- 样式 ---------------- */
   var css = '' +
     '.tda-btn{position:fixed;right:22px;bottom:22px;z-index:99998;width:56px;height:56px;border-radius:50%;' +
@@ -67,7 +85,17 @@
     '.tda-in button{background:#0a0908;color:#c9a962;border:0;border-radius:3px;padding:0 15px;font-size:13px;cursor:pointer;font-family:inherit;white-space:nowrap}' +
     '.tda-in button:hover{background:#1a1815}' +
     '.tda-dis{font-size:10.5px;color:#9a9488;line-height:1.55;margin-top:8px;letter-spacing:.1px}' +
-    '@media(max-width:520px){.tda-wrap{right:12px;left:12px;width:auto;bottom:80px;height:calc(100vh - 108px)}.tda-btn{right:14px;bottom:14px}}';
+    '@media(max-width:520px){.tda-wrap{right:12px;left:12px;width:auto;bottom:80px;height:calc(100vh - 108px)}.tda-btn{right:14px;bottom:14px}}' +
+    /* 文章页行内引导块 */
+    '.tda-inline{margin:38px 0 6px;padding:22px 24px;border:1px solid rgba(201,169,98,.28);border-radius:4px;' +
+    'background:linear-gradient(180deg,rgba(201,169,98,.055),rgba(201,169,98,.015))}' +
+    '.tda-inline .tda-il-t{font-size:14.5px;letter-spacing:.5px;color:#c9a962;font-weight:700;margin-bottom:6px}' +
+    '.tda-inline .tda-il-s{font-size:13px;line-height:1.7;color:#8f8468;margin-bottom:14px}' +
+    '.tda-inline .tda-il-q{display:flex;flex-wrap:wrap;gap:9px}' +
+    '.tda-inline .tda-chip{cursor:pointer;font-size:13px;line-height:1.5;padding:8px 14px;border-radius:999px;' +
+    'border:1px solid rgba(201,169,98,.4);background:rgba(255,255,255,.03);color:#d8cfb4;transition:.16s}' +
+    '.tda-inline .tda-chip:hover{background:rgba(201,169,98,.16);border-color:rgba(201,169,98,.75);color:#f0e7cf}' +
+    '@media(max-width:520px){.tda-inline{padding:18px 16px;margin:30px 0 4px}.tda-inline .tda-il-q{gap:7px}}';
 
   var st = document.createElement('style');
   st.textContent = css;
@@ -325,6 +353,57 @@
   }
   function close() { wrap.classList.remove('on'); btn.setAttribute('aria-expanded', 'false'); }
 
+  /* ------- 文章页行内引导块 -------
+     只在 /articles/ 下注入，插在正文末尾、品牌段之前——读者读完正文的位置，
+     比右下角悬浮按钮更容易被看见。事件名单独用 inline_*，这样能和悬浮按钮的
+     open/ask 分开比，下周就能看出这个块有没有用；没用的话删掉即可，不影响别处。 */
+  function mountInline() {
+    if (!/\/articles\//.test(location.pathname)) return;
+    var art = document.querySelector('article');
+    var foot = document.querySelector('.art-foot');
+    if (!art && !foot) return;
+
+    var h1 = document.querySelector('h1');
+    var title = (h1 && h1.textContent) || document.title || '';
+    var qs = INLINE_FALLBACK;
+    for (var i = 0; i < INLINE_SETS.length; i++) {
+      if (INLINE_SETS[i].k.test(title)) { qs = INLINE_SETS[i].q; break; }
+    }
+
+    var box = document.createElement('div');
+    box.className = 'tda-inline';
+    var html = '<div class="tda-il-t">读完还有没解决的问题？</div>' +
+      '<div class="tda-il-s">点一个问题，站内助手会用本站已发布内容直接作答。</div>' +
+      '<div class="tda-il-q">';
+    for (var j = 0; j < qs.length; j++) {
+      html += '<button type="button" class="tda-chip">' + qs[j] + '</button>';
+    }
+    box.innerHTML = html + '</div>';
+
+    /* 必须插进 <article> 里面，不能插在它和 .art-foot 之间：
+       这两个元素是 body 的直接子元素、各自靠自身 CSS 居中成 840px 的正文栏，
+       插在中间的块会拿到 body 的整宽（实测 1265px、left:0），横贯整屏。
+       放进 article 内部就自动继承正文栏宽度。 */
+    if (art) art.appendChild(box);
+    else foot.parentNode.insertBefore(box, foot);
+
+    box.addEventListener('click', function (e) {
+      var t = e.target;
+      if (!t.classList || !t.classList.contains('tda-chip')) return;
+      var q = t.textContent;
+      track('inline_ask', q);
+      /* 不走 open()：那条路会先异步插一段欢迎语，和紧接着的提问抢顺序，
+         面板里会出现「问题在前、招呼在后」。这里直接开面板再提问。 */
+      if (!wrap.classList.contains('on')) {
+        wrap.classList.add('on');
+        btn.setAttribute('aria-expanded', 'true');
+        track('open', location.pathname);
+      }
+      ask(q);
+    });
+    track('inline_shown', location.pathname);
+  }
+
   btn.addEventListener('click', function () { wrap.classList.contains('on') ? close() : open(); });
   wrap.querySelector('.tda-x').addEventListener('click', close);
   send.addEventListener('click', function () { ask(input.value); });
@@ -354,4 +433,10 @@
       setTimeout(function () { t.textContent = '复制微信号'; }, 2600);
     }
   });
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', mountInline);
+  } else {
+    mountInline();
+  }
 })();
