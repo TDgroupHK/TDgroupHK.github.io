@@ -97,6 +97,9 @@
 
 ### 上市执行 / EXECUTION
 
+- [独立性：把一家公司拎出来上市，难的不是拎，是证明它能自己活](https://tdgroup.hk/articles/issuer-independence-five.html)
+- [实际控制人认定：股权表上写得清清楚楚，答案却不是老板自己填的](https://tdgroup.hk/articles/actual-controller-determination.html)
+- [关联交易清不干净，报告期就得从头再数一遍](https://tdgroup.hk/articles/related-party-transactions-cleanup.html)
 - [纳斯达克IPO的29项工作：13个月里，谁在什么时候做什么](https://tdgroup.hk/articles/nasdaq-ipo-workstreams.html)
 - [社保公积金历史欠缴：上市尽调里最不体面的一道坎](https://tdgroup.hk/articles/social-insurance-arrears.html)
 - [关联方资金占用：上市前必须清到零的一笔账](https://tdgroup.hk/articles/related-party-funds.html)
@@ -132,6 +135,16 @@
 
 ### 融资与条款 / FINANCING & TERMS
 
+- [陈述与保证：签字那天多写的那一句，两年后变成一张要你自己掏的账单](https://tdgroup.hk/articles/reps-warranties-indemnity.html)
+- [股权结构表：你以为自己还剩多少，和尽调底稿上写的从来不是一个数](https://tdgroup.hk/articles/cap-table-fully-diluted.html)
+- [资金用途条款：钱到账了，一笔付款走错方向，后续款项就停了](https://tdgroup.hk/articles/use-of-proceeds-control.html)
+- [优先购买权与共同出售权：老股转让签了协议，钱也未必到账](https://tdgroup.hk/articles/rofr-co-sale.html)
+- [优先增资权：新一轮的钱进不来，卡在老股东那封通知上](https://tdgroup.hk/articles/pre-emptive-rights.html)
+- [创始人股份成熟：已经在你名下的股权，融资那天要重新挣一遍](https://tdgroup.hk/articles/founder-vesting.html)
+- [投资人的信息权，能把一份晚交的月报变成违约](https://tdgroup.hk/articles/investor-information-rights.html)
+- [领售权：公司被卖掉那天，创始人只能签字](https://tdgroup.hk/articles/drag-along-rights.html)
+- [可转换票据，签的时候最省事，到期那天最难办](https://tdgroup.hk/articles/convertible-note-financing.html)
+- [一票否决权，能把一家公司卡到动不了](https://tdgroup.hk/articles/investor-veto-rights.html)
 - [融资死在交割前，通常经历六个阶段](https://tdgroup.hk/articles/term-sheet-to-closing.html)
 - [创始人卖老股，卖多少会被拦](https://tdgroup.hk/articles/founder-secondary-sale.html)
 - [空窗期拖过十八个月，下一轮就谈不动了](https://tdgroup.hk/articles/financing-round-gap.html)
@@ -207,6 +220,7 @@
 
 ### 财富与传承 / WEALTH & LEGACY
 
+- [接班人评估：怎么判断二代到底接不接得住](https://tdgroup.hk/articles/successor-readiness-test.html)
 - [无人接班：子女都不愿意接手，企业还剩下哪三条出路](https://tdgroup.hk/articles/no-successor-exit-paths.html)
 - [单一家办还是联合家办：一道关于成本、控制权和边界的选择题](https://tdgroup.hk/articles/sfo-vs-mfo.html)
 - [保险金信托：为什么在信托之外，还要再加一层保单](https://tdgroup.hk/articles/insurance-trust.html)
