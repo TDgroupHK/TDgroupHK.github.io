@@ -50,6 +50,7 @@ RANK_FIRST = re.compile(r'(?:全球|国内|业内|行业|市场|中国)\s*第一
 TICKER = re.compile(r'\((?:NASDAQ|NYSE|SEHK|HKEX)[:：]\s*[A-Z0-9.]{1,6}\)|股票代码')
 
 CAT_LABELS = {
+    '初创与早期融资': '初创融资 EARLY STAGE',
     '上市路径与门槛': '上市路径 LISTING PATH',
     '跨境架构与合规': '架构合规 STRUCTURING',
     '上市执行': '上市执行 EXECUTION',

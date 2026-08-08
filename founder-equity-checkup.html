@@ -1,0 +1,263 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>创始人股权健康度自测（3分钟） | 彤鼎集团</title>
+<meta name="description" content="七道题、三分钟，从分配方式、成熟机制、代持、期权池、婚姻安排、知识产权归属、出资实缴七个维度，查出未来融资与上市申报时会被卡住的股权隐患，并给出整改优先顺序。测试在浏览器本地完成，不收集任何数据。">
+<link rel="canonical" href="https://tdgroup.hk/founder-equity-checkup.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="创始人股权健康度自测（3分钟） | 彤鼎集团">
+<meta property="og:description" content="七道题，查出未来融资与上市申报时会被卡住的股权隐患，并给出整改优先顺序。">
+<meta property="og:url" content="https://tdgroup.hk/founder-equity-checkup.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f8468;--warn:#c98a62;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+::selection{background:var(--gold);color:#0a0908;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(14px);}
+.nav-in{max-width:860px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;}
+.logo{color:#fff;font-weight:700;letter-spacing:4px;font-size:16px;}
+.logo small{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10px;letter-spacing:2px;margin-left:10px;}
+.menu{display:flex;gap:22px;font-size:13.5px;color:#c6bda6;}
+.menu a:hover{color:var(--gold-hi);}
+header{padding:130px 0 40px;background:radial-gradient(ellipse at 15% 20%,rgba(201,169,98,.12) 0,transparent 45%),var(--night);}
+.eyebrow{display:flex;align-items:center;gap:14px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:5px;font-size:12.5px;margin-bottom:22px;}
+.eyebrow::before{content:"";width:44px;height:1px;background:var(--gold);}
+h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:38px;line-height:1.4;color:#fff;font-weight:900;letter-spacing:1px;}
+h1 em{color:var(--gold-hi);font-style:normal;}
+.sub{margin-top:16px;color:#a89b7d;font-size:15px;max-width:660px;}
+.quiz{padding:30px 0 90px;}
+.q{border:1px solid var(--line);background:var(--ink);padding:26px 28px;margin-bottom:18px;}
+.q h3{color:#fff;font-size:17px;margin-bottom:16px;letter-spacing:.5px;}
+.q h3 i{font-style:italic;font-family:Georgia,serif;color:var(--gold);margin-right:10px;font-size:15px;}
+.opts{display:flex;flex-wrap:wrap;gap:10px;}
+.opts label{border:1px solid var(--line);padding:10px 18px;font-size:14px;cursor:pointer;transition:all .25s;color:#c9bfa4;user-select:none;}
+.opts label:hover{border-color:var(--gold);color:var(--gold-hi);}
+.opts input{display:none;}
+.opts label:has(input:checked){background:var(--gold);border-color:var(--gold);color:#0d0b07;font-weight:700;}
+.note{color:var(--mute);font-size:12.5px;margin-top:10px;}
+.btn{display:inline-block;padding:16px 46px;font-size:15px;letter-spacing:3px;font-weight:700;background:var(--gold);color:#0d0b07;border:0;cursor:pointer;transition:all .3s;font-family:inherit;}
+.btn:hover{background:var(--gold-hi);transform:translateY(-2px);}
+#result{display:none;margin-top:34px;}
+.verdict{border:1px solid var(--gold);background:linear-gradient(160deg,rgba(201,169,98,.12),rgba(201,169,98,.03));padding:32px 30px;}
+.verdict .grade{font-family:Georgia,serif;font-style:italic;color:var(--gold-hi);font-size:40px;line-height:1;}
+.verdict h2{color:#fff;font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;margin:14px 0 6px;}
+.verdict p{font-size:15px;}
+.points{margin-top:20px;border-top:1px solid var(--line);padding-top:8px;}
+.points li{list-style:none;padding:12px 0 12px 74px;position:relative;border-bottom:1px dashed rgba(201,169,98,.15);font-size:14.5px;}
+.points li .tag{position:absolute;left:0;top:12px;font-size:11px;letter-spacing:1px;border:1px solid var(--line);padding:2px 8px;color:var(--gold);white-space:nowrap;}
+.points li.hard .tag{color:#e8b28d;border-color:rgba(201,138,98,.5);}
+.points li.ok .tag{color:#9aa87a;border-color:rgba(154,168,122,.4);}
+.cta{margin-top:26px;border:1px solid var(--line);background:var(--ink);padding:28px 30px;}
+.cta b{color:#fff;font-size:17px;display:block;margin-bottom:10px;}
+.cta p{font-size:14.5px;}
+.cta .ways{margin-top:14px;display:flex;gap:14px;flex-wrap:wrap;}
+.cta .ways span{border:1px solid var(--gold);color:var(--gold-hi);padding:9px 18px;font-size:14px;letter-spacing:1px;}
+.copybtn{margin-top:18px;background:transparent;border:1px solid var(--gold);color:var(--gold);padding:10px 24px;font-size:13.5px;letter-spacing:2px;cursor:pointer;transition:all .25s;font-family:inherit;}
+.copybtn:hover{background:rgba(201,169,98,.12);}
+.legal{margin-top:26px;color:var(--mute);font-size:12px;line-height:1.9;border-top:1px solid var(--line);padding-top:18px;}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mute);font-size:12.5px;}
+@media(max-width:640px){h1{font-size:28px;}header{padding-top:110px;}.points li{padding-left:0;padding-top:34px;}.points li .tag{top:6px;}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="js/assistant.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"创始人股权健康度自测","url":"https://tdgroup.hk/founder-equity-checkup.html","applicationCategory":"BusinessApplication","operatingSystem":"Web","inLanguage":"zh-CN","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"},"description":"七道题自测：从分配方式、成熟机制、代持、期权池、婚姻安排、知识产权归属、出资实缴七个维度，识别未来融资与上市申报时会被卡住的股权隐患，并给出整改优先顺序。","featureList":["股权分配方式风险判断","成熟与回购机制检查","代持与出资瑕疵识别","期权池预留检查","整改优先顺序建议"],"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://tdgroup.hk/"},{"@type":"ListItem","position":2,"name":"创始人股权健康度自测","item":"https://tdgroup.hk/founder-equity-checkup.html"}]}</script></head><body>
+<nav><div class="nav-in">
+<a class="logo" href="/">彤鼎集团<small>TD GROUP</small></a>
+<div class="menu"><a href="/">首页 Home</a><a href="startup-program.html">初创服务</a><a href="club.html">俱乐部 Club</a><a href="library.html">文库 Library</a><a href="faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+
+<header><div class="wrap">
+<div class="eyebrow">FOUNDER EQUITY HEALTH CHECK</div>
+<h1>创始人股权健康度<em>自测</em></h1>
+<p class="sub">七道题、约三分钟。股权的问题有个共同特点：出问题当天没有任何感觉，代价在融资交割或上市申报时一次性到账。这份自测按尽调与申报的实际口径逐项对照，告诉你哪些是硬伤、哪些可以缓、先改哪一个。测试在浏览器本地完成，不收集任何数据。</p>
+</div></header>
+
+<div class="quiz"><div class="wrap">
+<div class="q"><h3><i>01</i>创始团队的股权分配方式</h3><div class="opts" data-q="split">
+<label><input type="radio" name="split" value="none"><span>还没正式分定，只有口头共识</span></label>
+<label><input type="radio" name="split" value="flat"><span>接近平均分（如两人各半、三人各三分之一）</span></label>
+<label><input type="radio" name="split" value="money"><span>按初始出资金额分</span></label>
+<label><input type="radio" name="split" value="role"><span>按角色与长期贡献分，有明确主导方</span></label>
+<label><input type="radio" name="split" value="solo"><span>单一创始人持股</span></label>
+</div><div class="note">平均分的风险不在公平，在僵局：重大事项无人拥有决定权，投资人会视为治理缺陷。</div></div>
+
+<div class="q"><h3><i>02</i>是否有股份成熟与离职回购机制</h3><div class="opts" data-q="vest">
+<label><input type="radio" name="vest" value="no"><span>没有，股份一次性登记到位</span></label>
+<label><input type="radio" name="vest" value="oral"><span>口头约定过，没写进文件</span></label>
+<label><input type="radio" name="vest" value="yes"><span>有书面成熟安排与回购价格机制</span></label>
+</div><div class="note">成熟机制常见为四年成熟、首年为悬崖期；缺失时合伙人中途离开，股份带不走的依据不足。</div></div>
+
+<div class="q"><h3><i>03</i>是否存在代持</h3><div class="opts" data-q="nominee">
+<label><input type="radio" name="nominee" value="yes"><span>有，且尚未还原</span></label>
+<label><input type="radio" name="nominee" value="doc"><span>有，但有完整的代持协议与出资凭证</span></label>
+<label><input type="radio" name="nominee" value="no"><span>没有，登记与实际一致</span></label>
+</div><div class="note">代持是境内外申报的共同关注点，还原需要时间与税务处理，越晚成本越高。</div></div>
+
+<div class="q"><h3><i>04</i>员工期权池的状态</h3><div class="opts" data-q="pool">
+<label><input type="radio" name="pool" value="none"><span>没有预留，也没考虑过</span></label>
+<label><input type="radio" name="pool" value="plan"><span>口头预留了比例，尚未落到文件</span></label>
+<label><input type="radio" name="pool" value="entity"><span>已设持股平台并落定比例</span></label>
+<label><input type="radio" name="pool" value="granted"><span>已设平台且已实际授予</span></label>
+</div><div class="note">期权池常见预留 10%–20%；在投前还是投后设立，直接决定创始人被稀释的幅度。</div></div>
+
+<div class="q"><h3><i>05</i>已婚创始人的配偶安排</h3><div class="opts" data-q="spouse">
+<label><input type="radio" name="spouse" value="none"><span>没有任何书面安排</span></label>
+<label><input type="radio" name="spouse" value="doc"><span>配偶已签署确认或放弃相关权利的文件</span></label>
+<label><input type="radio" name="spouse" value="na"><span>创始人均未婚 / 不适用</span></label>
+</div><div class="note">婚姻状况变化可能导致股权分割，投资人与申报审核都会核查这一项。</div></div>
+
+<div class="q"><h3><i>06</i>核心知识产权的归属</h3><div class="opts" data-q="ip">
+<label><input type="radio" name="ip" value="person"><span>仍在创始人或员工个人名下</span></label>
+<label><input type="radio" name="ip" value="mixed"><span>部分在公司、部分在个人名下</span></label>
+<label><input type="radio" name="ip" value="corp"><span>全部已登记在公司名下</span></label>
+<label><input type="radio" name="ip" value="na"><span>业务不涉及专利、软著或商标</span></label>
+</div><div class="note">知识产权与主营业务分离，是尽调中被要求整改的高频事项。</div></div>
+
+<div class="q"><h3><i>07</i>股东出资的实缴情况</h3><div class="opts" data-q="paid">
+<label><input type="radio" name="paid" value="none"><span>认缴未实缴，账上没有对应资金记录</span></label>
+<label><input type="radio" name="paid" value="part"><span>部分实缴，凭证不完整</span></label>
+<label><input type="radio" name="paid" value="full"><span>已实缴，银行凭证与验资资料齐全</span></label>
+</div><div class="note">出资瑕疵与抽逃出资在申报期会被逐笔追溯，补正需要时间。</div></div>
+
+<button class="btn" id="go" onclick="calc()">生成体检结果</button>
+
+<div id="result">
+<div class="verdict"><span class="grade" id="grade"></span>
+<h2 id="path"></h2><p id="summary"></p>
+<ul class="points" id="points"></ul></div>
+<div class="cta"><b>下一步：拿这份结果，换一次免费初评</b>
+<p>把结果发给我们，彤鼎的顾问会按你的实际情况回一页纸的初评：哪一项必须现在改、哪一项可以放到下一轮之前、每项大致需要多久。不推销、不承诺结果，只给判断依据。</p>
+<div class="ways"><span>邮箱 liaoqijie@tdgroup.hk</span><span>微信 esonleo（备注：股权自测）</span></div>
+<button class="btn" onclick="mailResult()" id="mailb" style="margin-top:18px;">一键发送给顾问，换一页纸初评</button>
+<button class="copybtn" onclick="copyResult()" id="cpb">或复制结果，自行微信发送</button>
+<p style="margin-top:16px;font-size:14px;">要一份逐项打分的完整报告：<a href="startup-program.html#services" style="color:var(--gold);font-weight:700;">股权架构体检 6,800 元，5 个工作日交付 →</a></p>
+<p style="margin-top:8px;font-size:14px;">先看看融资那一侧的准备度：<a href="startup-financing-checkup.html" style="color:var(--gold);font-weight:700;">初创融资准备度自测 →</a></p></div>
+<div class="legal">彤鼎集团（香港）有限公司为企业管理咨询机构，持牌业务由持牌合作机构承做。本页测试仅基于一般行业实践与公开监管口径做初步对照，结果不构成任何法律、税务或投资建议，也不构成任何结果承诺。具体安排应结合公司实际情况，并由持牌专业机构出具正式文件。</div>
+</div>
+</div></div>
+
+<footer><div class="wrap">© 彤鼎集团（香港）有限公司 TD Group (Hong Kong) Limited · 香港 · 深圳 · 上海 · 新加坡 · <a href="/" style="color:var(--gold)">tdgroup.hk</a></div></footer>
+
+<script>
+var lastText="",lastGrade="",lastPath="",lastPts=[];
+function pick(n){var el=document.querySelector('input[name="'+n+'"]:checked');return el?el.value:null;}
+// 每一项返回 [等级, 文案]：hard=硬伤，warn=需整改，ok=健康。
+// 等级同时决定排序——硬伤排最前，创始人打开结果第一眼看到的就是最该处理的那一条。
+function calc(){
+  var split=pick('split'),vest=pick('vest'),nominee=pick('nominee'),pool=pick('pool'),
+      spouse=pick('spouse'),ip=pick('ip'),paid=pick('paid');
+  if(!split||!vest||!nominee||!pool||!spouse||!ip||!paid){alert('还有题目没选完');return;}
+  var items=[];
+  function add(level,label,text){items.push({level:level,label:label,text:text});}
+
+  if(split==='none')add('hard','分配方式','创始团队股权尚未正式分定。口头共识在融资交割时无法作为确权依据，且分歧几乎总是在公司开始值钱之后爆发。这一项应排在所有工作之前完成。');
+  else if(split==='flat')add('hard','分配方式','接近平均分且缺少明确主导方，重大事项容易形成僵局。投资人普遍将其视为治理结构缺陷，通常会在条款中要求调整或加设决策安排。');
+  else if(split==='money')add('warn','分配方式','按初始出资分配，未反映长期投入差异。随着时间推移，实际贡献与持股比例的偏离会成为团队矛盾来源，建议配合成熟机制与动态调整安排。');
+  else if(split==='role')add('ok','分配方式','按角色与长期贡献分配且有明确主导方，是投资人认可度较高的结构。');
+  else add('ok','分配方式','单一创始人持股，结构清晰、决策效率高；重点转向期权池预留与核心成员激励。');
+
+  if(vest==='no')add('hard','成熟机制','股份一次性登记到位、无成熟与回购安排。合伙人中途离开时，公司缺少收回未成熟股权的依据——这是早期公司最常见、也最难事后补救的一项，因为补签需要对方同意。');
+  else if(vest==='oral')add('warn','成熟机制','有口头约定但未落到书面文件。口头安排在争议发生时举证困难，建议尽快补签，趁各方仍在合作状态、签署意愿最高的时候。');
+  else add('ok','成熟机制','已有书面成熟安排与回购价格机制，投资人对此项的关注度高于持股比例本身。');
+
+  if(nominee==='yes')add('hard','代持','存在未还原的代持。境内外申报都要求股权登记与实际持有一致，还原涉及工商变更与税务处理，通常需要一到三个月，且公司估值越高、税负越重。');
+  else if(nominee==='doc')add('warn','代持','有代持但文件与出资凭证完整，属于可控状态。仍建议在下一轮融资之前完成还原，避免在尽调时被要求限期处理。');
+  else add('ok','代持','登记与实际持有一致，无代持问题。');
+
+  if(pool==='none')add('warn','期权池','尚未预留期权池。后续引入核心成员时只能从现有股东手里稀释，谈判成本高。常见做法是在本轮融资前预留 10%–20%，并明确设在投前还是投后。');
+  else if(pool==='plan')add('warn','期权池','比例只是口头预留，未落到持股平台与文件。融资谈判时投资人通常要求期权池设在投前，即由创始人单方稀释——提前落定可以把这一条变成可谈判事项。');
+  else add('ok','期权池','持股平台与比例已落定，激励安排具备执行基础。');
+
+  if(spouse==='none')add('warn','婚姻安排','已婚创始人未做书面安排。婚姻状况变化可能触发股权分割，从而影响控制权稳定性，投资人与申报审核都会核查该项。');
+  else if(spouse==='doc')add('ok','婚姻安排','配偶确认文件已签署，控制权稳定性方面无遗留问题。');
+  else add('ok','婚姻安排','不适用。');
+
+  if(ip==='person')add('hard','知识产权','核心知识产权仍在个人名下，与经营主体分离。这会直接动摇公司资产完整性的认定，是尽调阶段被要求限期整改的高频事项。');
+  else if(ip==='mixed')add('warn','知识产权','权属分散在公司与个人之间。建议一次性梳理清单并完成转让登记，避免在尽调时逐件解释来源。');
+  else if(ip==='corp')add('ok','知识产权','已全部登记在公司名下，资产完整性方面无遗留问题。');
+  else add('ok','知识产权','不适用。');
+
+  if(paid==='none')add('warn','出资实缴','认缴未实缴且无对应资金记录。申报期会被逐笔追溯，补正需要时间；建议按公司章程约定的期限有计划地完成实缴并保留完整银行凭证。');
+  else if(paid==='part')add('warn','出资实缴','部分实缴但凭证不完整。凭证补齐的难度随时间上升，建议尽早梳理银行流水与验资资料。');
+  else add('ok','出资实缴','出资已实缴且凭证齐全。');
+
+  var hard=items.filter(function(x){return x.level==='hard';}).length;
+  var warn=items.filter(function(x){return x.level==='warn';}).length;
+  var grade,path,summary;
+  if(hard>=2){grade='D';path='存在多项硬伤，融资前必须先处理';
+    summary='当前有 '+hard+' 项属于硬伤级别。这类问题的共同点是：在尽调阶段一定会被发现，而且补救需要其他股东配合或涉及税务处理，越往后越被动。建议先完成整改，再启动融资接触。';}
+  else if(hard===1){grade='C';path='有一项硬伤，建议优先解决';
+    summary='整体结构可用，但有一项硬伤会在尽调时被直接提出。这一项通常需要一到三个月处理，且拖到融资谈判中再解决，等于把主动权交给对方。';}
+  else if(warn>=3){grade='B';path='没有硬伤，但需整改项偏多';
+    summary='没有会卡住交易的硬伤，但有 '+warn+' 项需要整改。这些在本轮融资中未必被追究，会在下一轮或申报期集中暴露。趁现在股东少、估值低，处理成本最低。';}
+  else if(warn>=1){grade='A';path='结构基本健康，收尾即可';
+    summary='股权结构整体健康，只有少量项目需要补强。建议在启动融资之前一次性收尾，让尽调阶段没有可追问的空白。';}
+  else{grade='A';path='结构健康，未发现明显隐患';
+    summary='七个维度均未发现明显隐患，属于可以直接进入融资流程的状态。后续重点转向条款谈判与材料准备。';}
+
+  var order={hard:0,warn:1,ok:2};
+  items.sort(function(a,b){return order[a.level]-order[b.level];});
+
+  document.getElementById('grade').textContent=grade+' 级';
+  document.getElementById('path').textContent=path;
+  document.getElementById('summary').textContent=summary;
+  var ul=document.getElementById('points');ul.innerHTML='';
+  var plain=[];
+  for(var i=0;i<items.length;i++){
+    var it=items[i];
+    var li=document.createElement('li');
+    li.className=(it.level==='hard'?'hard':(it.level==='ok'?'ok':''));
+    var tag=document.createElement('span');
+    tag.className='tag';
+    tag.textContent=(it.level==='hard'?'硬伤':(it.level==='ok'?'健康':'需整改'))+' · '+it.label;
+    li.appendChild(tag);
+    li.appendChild(document.createTextNode(it.text));
+    ul.appendChild(li);
+    plain.push('['+(it.level==='hard'?'硬伤':(it.level==='ok'?'健康':'需整改'))+'·'+it.label+'] '+it.text);
+  }
+  lastText='【创始人股权健康度自测结果】\n评级：'+grade+'\n判断：'+path+'\n'+summary+'\n'+plain.map(function(p){return '· '+p;}).join('\n')+'\n（来自 tdgroup.hk/founder-equity-checkup.html）';
+  lastGrade=grade;lastPath=path;lastPts=plain;
+  document.getElementById('result').style.display='block';
+  document.getElementById('result').scrollIntoView({behavior:'smooth'});
+  track('equity_checkup_complete',{grade:grade,hard:hard});
+}
+// 埋点：完成率与线索转化率是判断这页值不值得继续投流量的唯一依据。
+// GA4 与百度统计都是全站已装的，这里只做事件上报，不引入任何新依赖。
+function track(name,params){
+  try{if(typeof gtag==='function')gtag('event',name,params||{});}catch(e){}
+  try{if(window._hmt)_hmt.push(['_trackEvent','股权自测',name,(params&&params.grade)||'']);}catch(e){}
+}
+function copyResult(){
+  navigator.clipboard.writeText(lastText).then(function(){
+    document.getElementById('cpb').textContent='已复制，微信/邮件里直接粘贴';
+    track('equity_checkup_copy',{});
+  });
+}
+// 一键把结果装进邮件正文：把「复制了但没发」这一步的流失堵掉。
+// 只带硬伤与需整改两类，健康项不占篇幅——部分 Outlook 桌面版 mailto 上限 2083 字符，
+// 超了会被静默截断，宁可短一点也要保证发得出去。
+function mailResult(){
+  var subject='创始人股权健康度自测结果 · 申请一页纸初评';
+  var key=lastPts.filter(function(p){return p.indexOf('[健康')<0;});
+  var brief='【创始人股权健康度自测】\n评级：'+lastGrade+'\n判断：'+lastPath+'\n'
+          +(key.length?key.map(function(p){return '· '+p;}).join('\n')+'\n':'（未发现硬伤与需整改项）\n')
+          +'（来自 tdgroup.hk/founder-equity-checkup.html）';
+  var body=brief+'\n\n————\n请补充以下信息，便于顾问出具初评：\n公司/行业：\n创始团队人数：\n是否已启动融资：\n联系人与称呼：\n方便的联系方式：\n最想先解决的问题：\n';
+  location.href='mailto:liaoqijie@tdgroup.hk?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  document.getElementById('mailb').textContent='已打开邮件，补完信息发送即可';
+  track('equity_checkup_lead_mail',{});
+}
+</script>
+</body></html>
