@@ -1,0 +1,267 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的 | 彤鼎集团知识文库</title>
+<meta name="description" content="早期公司没有利润与稳定现金流，天使轮估值究竟按什么定？本文拆解三种实务定价锚（可比交易、投资人目标持股比例倒推、里程碑折现），讲清投前与投后估值的换算差异、期权池放在投前还是投后对创始人稀释的具体影响，说明估值定太高如何在下一轮触发完全棘轮或加权平均反稀释条款，并给出天使轮 10%-20%、A 轮 15%-25% 的常见出让区间与连续三轮融资后创始人团队持股的推演算例。">
+<link rel="canonical" href="https://tdgroup.hk/articles/angel-round-valuation.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="彤鼎集团知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的 | 彤鼎集团知识文库">
+<meta property="og:description" content="早期公司没有利润与稳定现金流，天使轮估值究竟按什么定？本文拆解三种实务定价锚（可比交易、投资人目标持股比例倒推、里程碑折现），讲清投前与投后估值的换算差异、期权池放在投前还是投后对创始人稀释的具体影响，说明估值定太高如何在下一轮触发完全棘轮或加权平均反稀释条款，并给出天使轮 10%-20%、A 轮 15%-25% 的常见出让区间与连续三轮融资后创始人团队持股的推演算例。">
+<meta property="og:url" content="https://tdgroup.hk/articles/angel-round-valuation.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的 | 彤鼎集团知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:4px;font-size:17px;}
+.logo .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10.5px;letter-spacing:3px;margin-top:2px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的","inLanguage":"zh-CN","abstract":"Early-stage companies have neither profits nor stable cash flows, so an angel-round valuation is negotiated rather than calculated. This article sets out the three pricing anchors used in practice, the pre-money versus post-money distinction and the option pool shuffle, how an inflated price triggers anti-dilution provisions in a later down round, and how much equity a founder can give away in the first round while keeping control after two or three rounds. All figures are illustrative ranges from primary-market practice and do not constitute investment advice.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/angel-round-valuation.html"},"datePublished":"2026-08-08","dateModified":"2026-08-08","description":"早期公司没有利润与稳定现金流，天使轮估值究竟按什么定？本文拆解三种实务定价锚（可比交易、投资人目标持股比例倒推、里程碑折现），讲清投前与投后估值的换算差异、期权池放在投前还是投后对创始人稀释的具体影响，说明估值定太高如何在下一轮触发完全棘轮或加权平均反稀释条款，并给出天使轮 10%-20%、A 轮 15%-25% 的常见出让区间与连续三轮融资后创始人团队持股的推演算例。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="彤鼎集团 TD Group"><span class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></span></a>
+<div class="menu"><a href="/">首页 Home</a><a href="../about.html">关于 About</a><a href="../club.html">俱乐部 Club</a><a href="../library.html">文库 Library</a><a href="../faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">初创融资 EARLY STAGE</div><h1>天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的</h1>
+<div class="sub">定价锚、投前投后换算、期权池归属与反稀释触发——写给初创创始人的早期估值实务</div><div class="en">Early-stage companies have neither profits nor stable cash flows, so an angel-round valuation is negotiated rather than calculated. This article sets out the three pricing anchors used in practice, the pre-money versus post-money distinction and the option pool shuffle, how an inflated price triggers anti-dilution provisions in a later down round, and how much equity a founder can give away in the first round while keeping control after two or three rounds. All figures are illustrative ranges from primary-market practice and do not constitute investment advice.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
+<article>
+<div class="answer">天使轮估值是指公司在尚无稳定利润与现金流的阶段，由创始人与投资人就本轮交易协商达成的成交价格，而非对企业内在价值的会计计量。早期定价不走市盈率或现金流折现的路径，实务中主要依赖三个锚：同赛道同轮次的可比交易价格、投资人目标持股比例倒推、下一轮里程碑折现。其中倒推法使用最普遍——机构天使通常要求本轮取得 15%-20% 的股权，融资额除以该比例即得投后估值；例如融资 1000 万元、让出 20%，则投后估值 5000 万元、投前 4000 万元。创始人真正要盯住的不是估值数字本身，而是三件事：投前与投后的口径差、期权池计入投前还是投后、下一轮价格上不去时反稀释条款如何反噬。本质上，首轮估值定的不是身价，而是此后两到三轮的稀释路径与控制权余量。</div>
+<h2>一、早期估值不是算出来的：三种真正在用的定价锚</h2>
+<p><strong>结论先行：早期公司没有可比利润与现金流，估值只能靠锚，实务中真正在用的是可比交易、目标持股倒推与里程碑折现三种。</strong></p>
+<p>可比交易法是指参照最近 6-12 个月内同赛道、同轮次已完成融资的估值区间给本轮定价。经验区间大致是：模式创新类项目天使轮投前估值多在 2000 万至 8000 万元，有技术门槛的硬科技项目常见 5000 万至 1.5 亿元，仅有原型与团队的更早期项目普遍在 1000 万至 3000 万元。局限在于早期条款不公开、可查数字多为投后口径。因此这个方法只能给出区间，给不出点位。</p>
+<p>投资人目标持股比例倒推法是指从投资人本轮希望取得的比例出发、用融资额反算估值，实务中使用最普遍。机构天使的常见诉求是 15%-20%，领投方可能要到 20%-25%；低于 10% 投入产出不成比例，高于 25% 则会让下一轮机构担心创始人激励不足。算例：融资 500 万元、投资人要 15%，投后约 3333 万元、投前约 2833 万元；融资 2000 万元、要 20%，投后 1 亿元、投前 8000 万元。关键在于，估值在这套算法里是融资额与比例的因变量，不是自变量。</p>
+<p>里程碑折现法是指先估算下一轮可实现的估值，再按达成概率与年化折现率折回当期，常用折现率 40%-60%、达成概率 50%-70%。算例：预计 18 个月后 A 轮投前估值 2 亿元，概率取 60%、年化折现率取 50%，折现因子约 1.84，折回当期约 6500 万元。谈判中投资人用倒推法出价、创始人用可比交易与里程碑还价。因此创始人进场前必须先备好自己的推演链条。</p>
+<h2>二、投前与投后：创始人最常算错的一步</h2>
+<p><strong>结论先行：投前估值加本轮融资额等于投后估值，创始人被稀释的比例只由投后估值决定，口径说错一次，代价就是几个百分点的股权。</strong></p>
+<p>投前估值（pre-money）是指本轮资金进入公司之前投资人对既有价值的认定，投后估值（post-money）是指投前估值加上本轮全部融资额。只有两个公式：投后等于投前加融资额；投资人本轮持股等于融资额除以投后估值。因此所有关于稀释的争论，最终都落回投后这个分母。</p>
+<p>算例最能说明问题：投前 4000 万元、融资 1000 万元，则投后 5000 万元，投资人持股 20%，创始人从 100% 降到 80%。若创始人口头说「估值四千万」而对方理解为投后，实际投前只有 3000 万元，投资人拿走 25%，创始人只剩 75%——同一句话，差 5 个百分点。</p>
+<p>口径差异还有语境层面的坑。中文口头说估值默认偏向投前，英文条款清单更常直接写 post-money，SAFE 与可转换债券近年普遍采用投后封顶估值（post-money valuation cap），转股时按封顶价锁定投资人比例，中间新增的摊薄全部由创始人承担。同一轮有多个投资人分批进入时，还须写明「同轮同价、同一投后基数」，否则拆成先后交割会让创始人剩余比例低于 80%。因此条款清单上必须逐字确认写的是 pre 还是 post。</p>
+<h2>三、期权池放在投前还是投后：被低估的隐性稀释</h2>
+<p><strong>结论先行：期权池计入投前，等于创始人独自承担；计入投后，则由创始人与新投资人按比例共担，同一笔池子两种处理相差 2-3 个百分点。</strong></p>
+<p>期权池是指公司为未来招聘预留、尚未授予具体员工的股权额度，天使轮常见 8%-15%，到 A 轮之前普遍补到 10%-20%。设不设不是争议点——早期公司靠期权弥补现金薪酬的不足；争议在于这部分稀释由谁承担。</p>
+<p>期权池洗牌（option pool shuffle）是指投资人在条款清单中要求期权池计入投前估值，即从创始人既有股权里切出来。算例：投前 4000 万元、融资 1000 万元、投后 5000 万元、投资人 20%。若约定在投前设立占投后股本 10% 的期权池，创始人最终持股为 100% 减去 20% 再减去 10%，等于 70%，而投资人仍是完整的 20%。</p>
+<p>同一笔池子放在投后则不同：先按投前 4000 万元完成融资，创始人 80%、投资人 20%；再设立 10% 期权池，双方同比例摊薄，创始人为 80% 乘以 90% 等于 72%，投资人为 18%。两者相差 2 个百分点；池子提到 15% 时，投前口径创始人剩 65%、投后口径剩 68%，差距扩大到 3 个百分点。</p>
+<p>更现实的谈判空间是把池子压到与真实招聘计划匹配：列出未来 12-18 个月要发的关键岗位与各自期权额度，倒推实际需要的规模，通常落在 8%-12%，其余留到下一轮再补。因此期权池谈的不是谁强硬，是谁把用途算得清楚。</p>
+<h2>四、估值定太高的代价：下一轮上不去，反稀释条款就开始工作</h2>
+<p><strong>结论先行：估值定高的代价不发生在本轮而在下一轮，一旦下轮每股价格低于本轮，反稀释条款自动启动，被额外摊薄的只有创始人与员工。</strong></p>
+<p>下轮估值下调（down round）是指后续融资的每股价格低于前一轮。反稀释条款是指前轮投资人在公司以更低价格发行股份时，有权调低其转换价格从而取得更多股份的保护性安排，常见两类：完全棘轮（full ratchet）与加权平均（weighted average，又分广基与窄基）。</p>
+<p>算例：天使轮投后估值 5000 万元、总股本 5000 万股、每股 1 元，投资人投入 1000 万元持有 1000 万股即 20%，创始人持 4000 万股即 80%。若 A 轮以每股 0.5 元发行 2000 万股，完全棘轮下天使投资人的转换价重设为 0.5 元，其 1000 万元对应 2000 万股，凭空多出 1000 万股，创始人被摊薄至约 66.7%；广基加权平均下转换价从 1 元调整至约 0.86 元，仅增发约 167 万股，创始人约剩 77.4%。两种条款之间，创始人的差额超过 10 个百分点。</p>
+<p>由此有三条实操结论：其一，尽量争取广基加权平均，避开完全棘轮；其二，争取加入后续融资参与条款（pay-to-play），即前轮投资人须按比例跟投才享有反稀释保护；其三也是根本的一条，不要把本轮价格顶到经营数据撑不住的位置，经验区间是天使到 A 轮估值增幅约 2-4 倍、A 到 B 轮约 2-3 倍。关键在于，估值定高只是把稀释延后并放大，不是消除稀释。</p>
+<h2>五、首轮该出让多少：从天使轮到 B 轮的股权推演</h2>
+<p><strong>结论先行：天使轮出让 10%-20%、A 轮 15%-25% 是常见区间，按此推演三轮后创始人团队约剩 45%-55%，每轮多让 5 个百分点则会掉到 40% 以下。</strong></p>
+<p>这个带宽有其道理：低于下限，投资人持股不足以支撑其投入的时间与后续跟投意愿；高于上限，下一轮机构会担心创始人激励被稀释过度而降低出价。因此它不是惯例，是双方利益的均衡点。</p>
+<p>克制路径算例：创始人团队起始 100%，天使轮出让 15% 剩 85%，设立 10% 期权池剩 76.5%，A 轮出让 20% 剩 61.2%，期权池补充 5% 剩 58.1%，B 轮出让 15% 剩 49.4%。三轮融资加两次扩池之后，创始人团队约剩 49%。</p>
+<p>激进路径算例：同样起始 100%，天使轮因估值谈低而被迫出让 25% 剩 75%，期权池 15% 剩 63.8%，A 轮出让 25% 剩 47.8%，B 轮出让 20% 剩 38.3%。同样三轮，只剩约 38%，比前一条路径少 11 个百分点，且在 A 轮结束时就已跌破半数。</p>
+<p>控制权不等于持股比例。可用工具有三类：同股不同权架构，香港与部分境外市场设有专门章节与准入条件、境内科创板亦有相应安排，但均须在融资早期就把主体与股权结构设计好，后期改造成本极高；董事会席位安排，天使轮后常见结构是创始人 2 席、投资人 1 席、独立董事 1 席，董事会多数比股权多数更直接决定日常经营；一致行动协议与投票权委托，把早期小股东的表决权归集。华尔街彤鼎俱乐部与早期创始人交流时反复提示的是，这些安排必须在持股跌破 50% 之前完成。因此控制权是提前设计出来的，不是事后争取来的。</p>
+<h2>六、回到主线：融多少钱、干成什么事，比估值数字重要</h2>
+<p><strong>结论先行：估值不是越高越好，先确定这一轮要干成什么事、需要多少钱、能买多长跑道，估值是这三件事推导出来的结果。</strong></p>
+<p>融资额应当由跑道倒推。合理跑道是 18-24 个月，因为下一轮从启动到资金到账通常需 6-9 个月，还要再留 6 个月缓冲。算例：月度净支出 60 万元，18 个月需 1080 万元，加 20% 缓冲约 1300 万元；若愿意出让 18%-20%，对应投后估值 6500 万至 7200 万元。这才是本轮估值的合理落点，而不是先想一个体面数字再去凑融资额。</p>
+<p>资金用途也要在见投资人之前拆清楚，早期项目的常见分配是研发与产品 40%-50%、市场与获客 20%-30%、团队扩充 15%-25%、合规与中介 5%-10%。最后一项常被漏算：股权架构搭建、境外主体设立、财务规范化，在天使轮阶段往往是几十万元量级，不预留就会在 A 轮尽调时拖延交割。</p>
+<p>判断估值是否合适可用三个自查口径：本轮资金能否把公司推到下一轮的门槛指标，例如年度经常性收入从 300 万元做到 1500 万元；稀释后创始人团队是否仍在 50% 以上，若已低于此线，治理安排是否到位；本轮价格是否给下一轮留出 2-3 倍的上涨空间。三条都能答上，估值就基本合理。</p>
+<p>早期融资的复杂性不在估值本身，而在估值、期权池、反稀释、清算优先权、董事会席位彼此咬合——单看一条都能接受，合在一起就可能在两轮后改变公司的归属。彤鼎集团（香港）有限公司为企业管理咨询机构，在提供架构设计与融资策划服务时，通常建议创始人把整套条款放在同一张纸上做联动测算，而非逐条谈判；涉及证券发行、承销等持牌业务，由持牌合作机构承做。本质上，首轮估值谈的是往后三年的股权结构，把它当成一次报价来谈，代价往往在两轮之后才显现。</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cofounder-equity-split.html" style="color:#6b5426;font-weight:700;">合伙人股权怎么分：初创公司创始团队的股权分配方法与三条不可逆红线</a></li></ul></div><div class="brandbox">
+<h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由彤鼎集团团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信：esonleo　·　全网社媒请搜索「彤鼎」或「ESON廖生」</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
