@@ -159,14 +159,28 @@ def main():
             say('[基线] %s —— 首次入账，记录内容哈希，未改日期。' % slug)
             continue
 
+        if a.reviewed_only:
+            # --reviewed-only 是**断言**：「这一班我核过了，没得改」。
+            # 所以它一律不动 dateModified，哪怕哈希对不上。
+            # 2026-08-08 修：原来这个分支挂在 h == prev 下面，于是台账基线一旦陈旧
+            # （187 篇的 last_reviewed 全是 null，基线早于它们 07-20 那次真实修改），
+            # 哈希必然对不上 → 走到下面的「有实质改动」分支 → **把 dateModified 刷成今天**。
+            # 实测一次就误刷了 5 篇：正文一个字没动，schema 却说 8 月 8 日更新，
+            # 正是本文件开头「fail-closed，不许假刷新」要防的 content refresh spam。
+            # 病根是「哈希变了」被当成「这一班改的」——两回事：陈旧基线下，
+            # 哈希差异记录的是**上一次真实修改**，那次的日期早就写在 dateModified 里了。
+            led.setdefault(slug, {}).update(
+                {'body_hash': h, 'last_reviewed': today,
+                 'last_substantive': led.get(slug, {}).get('last_substantive'),
+                 'title': title_of(s)})
+            tail = '' if h == prev else '（台账哈希已顺带对齐，dateModified 不动）'
+            say('[已复核] %s —— 正文无需改动，dateModified 保持 %s。%s' % (slug, mod, tail))
+            continue
+
         if h == prev:
-            if a.reviewed_only:
-                led[slug]['last_reviewed'] = today
-                say('[已复核] %s —— 正文无变化，dateModified 保持 %s。' % (slug, mod))
-            else:
-                say('[拒绝] %s —— 正文与上次完全一致，不允许只改日期。' % slug)
-                say('        要么真去改内容，要么加 --reviewed-only 明示「核过，无需改」。')
-                rc = 1
+            say('[拒绝] %s —— 正文与上次完全一致，不允许只改日期。' % slug)
+            say('        要么真去改内容，要么加 --reviewed-only 明示「核过，无需改」。')
+            rc = 1
             continue
 
         s2, k = set_modified(s, today)
