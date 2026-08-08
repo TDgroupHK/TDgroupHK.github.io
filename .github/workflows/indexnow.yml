@@ -1,0 +1,68 @@
+# IndexNow 自动提交：官网发布流程第 8 步的自动化。
+# 沙箱/本地环境访问不了外网时，这条流水线在 GitHub 侧完成提交。
+# 触发方式：
+#   1) push 到 main 且有 HTML 变更 → 自动提交本次新增/修改的页面
+#   2) 手动 workflow_dispatch → 可指定页面列表；留空则提交 sitemap 近 7 天页面
+# 提交前先逐页 curl 确认线上 200，避免把 404 喂给 IndexNow。
+name: IndexNow
+on:
+  push:
+    branches: [main]
+    paths: ['**.html']
+  workflow_dispatch:
+    inputs:
+      pages:
+        description: '页面路径，空格分隔（如 startup-program.html articles/foo.html）。留空=提交 sitemap 近 7 天页面'
+        required: false
+        default: ''
+permissions:
+  contents: read
+concurrency:
+  group: indexnow
+  cancel-in-progress: false
+jobs:
+  submit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: 解析要提交的页面
+        id: pages
+        env:
+          INPUT_PAGES: ${{ inputs.pages }}
+        run: |
+          PAGES="$INPUT_PAGES"
+          if [ -z "$PAGES" ] && [ "${{ github.event_name }}" = "push" ]; then
+            BEFORE="${{ github.event.before }}"
+            if git cat-file -e "$BEFORE" 2>/dev/null; then
+              PAGES=$(git diff --name-only --diff-filter=AM "$BEFORE" "${{ github.sha }}" -- '*.html' ':!404.html' | tr '\n' ' ')
+            fi
+          fi
+          echo "pages=$PAGES" >> "$GITHUB_OUTPUT"
+          echo "本次页面：${PAGES:-（sitemap 近 7 天模式）}"
+      - name: 验证页面已上线
+        if: steps.pages.outputs.pages != ''
+        run: |
+          sleep 30
+          FAIL=0
+          for p in ${{ steps.pages.outputs.pages }}; do
+            CODE=000
+            for i in 1 2 3 4 5; do
+              CODE=$(curl -s -o /dev/null -w '%{http_code}' --max-time 20 "https://tdgroup.hk/$p")
+              [ "$CODE" = "200" ] && break
+              sleep 20
+            done
+            echo "https://tdgroup.hk/$p => $CODE"
+            [ "$CODE" = "200" ] || FAIL=1
+          done
+          if [ "$FAIL" != "0" ]; then echo "有页面未返回 200，中止提交"; exit 1; fi
+      - name: 提交 IndexNow
+        run: |
+          if [ -n "${{ steps.pages.outputs.pages }}" ]; then
+            python3 tools/push_indexnow.py ${{ steps.pages.outputs.pages }}
+          elif [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            python3 tools/push_indexnow.py
+          else
+            echo "push 事件无 HTML 变更，跳过"
+          fi

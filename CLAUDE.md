@@ -108,6 +108,7 @@ python C:\TDGroupSEO\compliance_gate.py articles\<slug>.html --scope site
 8. **提交 IndexNow（必做，勿跳过）**：`python tools/push_indexnow.py articles/<slug>.html`。
    IndexNow 直通 Bing 索引，而 ChatGPT 与 Copilot 的联网结果走 Bing，因此这一步同时服务 SEO 与 GEO。无需登录、无每日配额；只提交本次新增或修改的页面，不要每次全量推。
    若脚本报「未找到 IndexNow key 文件」，说明仓库根目录的 `<32位十六进制>.txt` 丢失，需先恢复（该文件必须能被公开访问）。
+   **自动化（2026-08-08 起）**：`.github/workflows/indexnow.yml` 会在 push 到 main 且含 HTML 变更时自动提交本次新增/修改页面（提交前逐页 curl 验 200）；本地或沙箱环境访问不了外网时无需手跑本步，也可在 GitHub Actions 页手动 dispatch 并指定页面列表。
 9. 推送后向用户报告文章的完整网址。
 
 ## 六、修改边界
