@@ -148,6 +148,10 @@
 
 ### 融资与条款 / FINANCING & TERMS
 
+- [投资人最后没投：写在邮件里的那句理由，和真正的理由不是一件事](https://tdgroup.hk/articles/why-investors-pass.html)
+- [没有利润也没有收入的公司，估值那个数字是谈出来的，不是算出来的](https://tdgroup.hk/articles/pre-revenue-valuation.html)
+- [现金紧就发股权？那五个点换来的，和你以为的不是一回事](https://tdgroup.hk/articles/equity-instead-of-cash.html)
+- [一致行动协议：把散掉的表决权绑回来的那张纸，什么时候会自己松开](https://tdgroup.hk/articles/concert-party-agreement.html)
 - [条款清单不具约束力？真正管住你的那几条，从签字当天就开始生效](https://tdgroup.hk/articles/term-sheet-binding-clauses.html)
 - [特别股东权利清理：申报前签的那份终止协议，为什么四个月后又被翻了出来](https://tdgroup.hk/articles/special-rights-termination.html)
 - [陈述与保证：签字那天多写的那一句，两年后变成一张要你自己掏的账单](https://tdgroup.hk/articles/reps-warranties-indemnity.html)
@@ -256,6 +260,7 @@
 
 ### 企业家成长 / FOUNDER GROWTH
 
+- [账上不缺钱的公司，为什么还要上市：不上市这些年，你付的是哪几笔账](https://tdgroup.hk/articles/listing-opportunity-cost.html)
 - [要不要请职业经理人：上市前的治理与授权取舍](https://tdgroup.hk/articles/professional-manager-choice.html)
 - [第一次见投资人该怎么讲企业](https://tdgroup.hk/articles/investor-pitch-language.html)
 - [从老板到上市公司董事长：角色转变的六个断点](https://tdgroup.hk/articles/founder-role-shift.html)
