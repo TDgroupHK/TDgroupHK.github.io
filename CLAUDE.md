@@ -176,6 +176,40 @@ python C:\TDGroupSEO\compliance_gate.py articles\<slug>.html --scope site
 
 **所以：先探边界，再给方案。方案里要写明哪一步由谁做。**
 
+### 工作台目录（2026-08-11 用户指定）
+
+本机统一工作目录：**`D:\彤鼎工作台`**。四个仓库并列放在它下面：
+
+```
+D:\彤鼎工作台\
+├── AGENTS.md              ← 任何 AI 一进门就读到的总入口（由 td-internal/tools/init_workspace.py 生成）
+├── CLAUDE.md / .cursorrules / ...  ← 同上，各厂商入口，内容一致
+├── TDgroupHK.github.io\   ← 官网 + 本规则总纲
+├── TDgroup\               ← 短视频线内容供给
+├── td-internal\           ← 内部资料库（私有）
+└── TDgroupHK\             ← 历史仓库
+```
+
+**用户对任何 AI 只说一句「去接管 `D:\彤鼎工作台`」就该能全盘接手**，不需要再发任何指令。
+这要求工作台根目录的入口文件始终存在且最新——由 `td-internal/tools/init_workspace.py` 生成，
+`--check` 校验。**新增或修改规则后必须重跑它**，否则新来的 AI 读到的是旧版。
+
+### 两道 CI 闸（2026-08-11 建立，不可删）
+
+规则光写在文档里没用，必须有东西执行。本仓库 `.github/workflows/` 下：
+
+1. **`compliance-gate.yml`** —— 每次改 HTML 自动跑合规闸，不过就标红。
+   兑现第四·补「推送前必跑合规闸」那条规则。此前该规则**没有任何东西执行**，
+   2026-07-27 审计才发现「操盘/做市值」在站上挂了很久。
+   ⚠️ 该闸依赖 `tools/compliance_gate.py` 与 `compliance_words.json`——目前只在
+   本机 `C:\TDGroupSEO\`，**必须提交进本仓库 `tools/` 闸才真正生效**（缺失时闸只告警不拦截）。
+   `platform_rules.md` 牵涉引流话术，留在私有仓库 `td-internal`，不要放进这个公开仓库。
+2. **`publish-monitor.yml`** —— 每天北京时间 23:00 检查当天发了几篇，缺班开 issue。
+   取代原先那条 Claude 云端定时任务，理由是不依赖任何 AI 账号。
+
+私有仓库 `td-internal` 另有两条：`backup-freshness.yml`（归档新鲜度）与
+`daily-handover.yml`（每天自动刷新交接文档）。
+
 ### 云端会话碰不到私有仓库 `td-internal`
 
 这是已知的结构性限制：云端会话的授权仓库集只含两个公开仓库。**要动 `td-internal`，走本机 Claude**，或在开会话时就把该仓库加进来源。
