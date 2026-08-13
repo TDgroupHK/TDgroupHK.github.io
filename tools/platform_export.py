@@ -43,7 +43,43 @@ SITE = 'https://tdgroup.hk'
 # 平台外链口径（CLAUDE.md 四.7）。改这里之前先改那份文件，两边必须一致。
 SEARCH_HINT = '更多资本市场解读可在公开网络检索「彤鼎集团」。'
 
-CHROME = '/opt/pw-browsers/chromium-1194/chrome-linux/chrome'
+def find_chrome():
+    """找一个能用的 Chrome/Edge/Chromium 来渲染配图。
+
+    别写死路径：这个脚本主要在本机（Windows）跑，写死容器里的路径会让配图
+    **静默跳过**——四份文稿照常生成，只是一张图都没有，而这正是本次要解决的问题。
+    顺序：环境变量 → Windows 常见位置 → macOS → Linux/容器。
+    """
+    env = os.environ.get('TD_CHROME')
+    if env and os.path.exists(env):
+        return env
+    cands = []
+    if sys.platform.startswith('win'):
+        for base in (os.environ.get('PROGRAMFILES', r'C:\Program Files'),
+                     os.environ.get('PROGRAMFILES(X86)', r'C:\Program Files (x86)'),
+                     os.environ.get('LOCALAPPDATA', '')):
+            if not base:
+                continue
+            cands += [os.path.join(base, r'Google\Chrome\Application\chrome.exe'),
+                      os.path.join(base, r'Microsoft\Edge\Application\msedge.exe')]
+    elif sys.platform == 'darwin':
+        cands += ['/Applications/Google Chrome.app/Contents/MacOS/Google Chrome',
+                  '/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge',
+                  '/Applications/Chromium.app/Contents/MacOS/Chromium']
+    else:
+        cands += ['/usr/bin/google-chrome', '/usr/bin/chromium',
+                  '/usr/bin/chromium-browser', '/usr/bin/microsoft-edge']
+        import glob as _g
+        cands += sorted(_g.glob('/opt/pw-browsers/chromium*/chrome-linux/chrome'),
+                        reverse=True)
+    for c in cands:
+        if c and os.path.exists(c):
+            return c
+    return shutil.which('chrome') or shutil.which('google-chrome') or \
+        shutil.which('chromium') or shutil.which('msedge') or ''
+
+
+CHROME = find_chrome()
 
 # 配图字体：本机（Windows/Mac）优先用系统中文字体，容器里退到文泉驿。
 FONT = '"Songti SC","Noto Serif SC","Source Han Serif SC","SimSun",' \
@@ -510,10 +546,17 @@ def main(argv):
     if not slugs:
         print(__doc__)
         return 2
-    if with_img and not os.path.exists(CHROME) and not list_only:
-        print('提示：找不到 Chromium（%s），本次不生成配图。'
-              '在本机跑请把 CHROME 指向本地 Chrome。' % CHROME)
+    if with_img and not list_only and not (CHROME and os.path.exists(CHROME)):
+        # 只警告不中止：四份文稿照样出，但要说清楚少了什么，
+        # 否则「一张图都没有」会被当成正常结果带过去。
+        print('⚠ 没找到 Chrome/Edge/Chromium，本次**不生成配图**，只出四份文稿。')
+        print('  装了 Chrome 仍报这个，就指定路径后重跑：')
+        print('    Windows:  set TD_CHROME=C:\\Program Files\\Google\\Chrome'
+              '\\Application\\chrome.exe')
+        print('    Mac/Linux: export TD_CHROME=/path/to/chrome')
         with_img = False
+    elif with_img and not list_only:
+        print('配图渲染器：%s' % CHROME)
     for s in slugs:
         export(s, with_img=with_img, list_only=list_only)
     return 0
