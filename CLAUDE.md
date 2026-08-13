@@ -182,17 +182,41 @@ python C:\TDGroupSEO\compliance_gate.py articles\<slug>.html --scope site
 
 ```
 D:\彤鼎工作台\
-├── AGENTS.md              ← 任何 AI 一进门就读到的总入口（由 td-internal/tools/init_workspace.py 生成）
-├── CLAUDE.md / .cursorrules / ...  ← 同上，各厂商入口，内容一致
-├── TDgroupHK.github.io\   ← 官网 + 本规则总纲
+├── CLAUDE.md              ← ⛔ 日常口径真源（约 9 万字，人工维护，**不是生成物**）
+├── AGENTS.md              ← 别家 AI 的总入口（由 td-internal/tools/init_workspace.py 生成）
+├── GEMINI.md / QWEN.md / CONVENTIONS.md / .cursorrules / .clinerules / .windsurfrules
+│                          ← 同上，各厂商入口，内容与 AGENTS.md 一致
+├── 官网仓库\               ← 官网 + 本规则总纲（仓库名是 TDgroupHK.github.io）
 ├── TDgroup\               ← 短视频线内容供给
 ├── td-internal\           ← 内部资料库（私有）
 └── TDgroupHK\             ← 历史仓库
 ```
 
+⛔⛔ **`CLAUDE.md` 不在生成列表里，谁也不许拿它当入口文件覆盖。**
+工作台根目录那份 `CLAUDE.md` 是**日常口径真源**（放权、发布纪律、报价、跟进线、定时班次），
+每个会话与全部定时班次开场自动加载，而**工作台根目录不是 git 仓库，覆盖了没有任何地方找得回来**。
+2026-08-13 差一步就出事：`init_workspace.py` 的生成清单里原本含 `CLAUDE.md`，
+写它的是云端会话——没有磁盘访问权，只看得见「入口文件还不存在」，就当根目录是空的。
+现已加闸：**只覆盖带本脚本生成标记的文件**，别人的东西一个字不碰。
+
+⚠ **官网那个仓库在本机叫 `官网仓库`，不叫 `TDgroupHK.github.io`**——每天发文的流水线脚本
+把这个路径写死了（18 处引用，其中 7 个是活的发文脚本）。目录名是随便叫的、发文线是活的，
+所以改便宜的那头。⛔ **别按仓库名再克隆一份**：08-13 就这么冒出过两份，各自 pull、
+停在不同提交上，而交接文档的自动快照读的是新那份、报出来的状态是旧的——**这种重复不报错，
+两份看上去都很正常**。`restore.py` 已加等价名表：已经存在哪个就用哪个，绝不克隆出第二份。
+
+⚠ **`TDgroup` 是稀疏检出**：`git ls-files` 报 30 个而工作区只有 17 个，这是正常的、不是缺文件。
+排除掉的是 `publish/归档-成品视频备用-勿用/` 里 5 个共 37 MB 的废弃视频（普通 clone 会因此
+反复 `early EOF` 拉不下来）。别去重新克隆，会再撞一次那堵墙。
+
 **用户对任何 AI 只说一句「去接管 `D:\彤鼎工作台`」就该能全盘接手**，不需要再发任何指令。
 这要求工作台根目录的入口文件始终存在且最新——由 `td-internal/tools/init_workspace.py` 生成，
 `--check` 校验。**新增或修改规则后必须重跑它**，否则新来的 AI 读到的是旧版。
+
+⚠ **但 Claude 读的是 `CLAUDE.md`，不读 `AGENTS.md`**——所以那套接管资料
+（`td-internal/交接文档.md`、`restore.py`、对话存档）必须在工作台 `CLAUDE.md` 里点名，
+否则对 Claude 完全隐形，而且零告警：文件都在、体检全绿，只是没有人会读到。
+08-13 已在那份文件文首补了「⭐ 接管入口」一节。
 
 ### 两道 CI 闸（2026-08-11 建立，不可删）
 
