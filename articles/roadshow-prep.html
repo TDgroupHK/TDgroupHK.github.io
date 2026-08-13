@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"路演完整准备指南","inLanguage":"zh-CN","abstract":"Preparing for the IPO roadshow: the equity story, management rehearsal, Q&A discipline and Regulation FD boundaries.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/roadshow-prep.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"从Pitch Deck到现场应对的全流程实操手册。路演完整准备指南完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,64 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>路演完整准备指南</h1>
 <div class="sub">从Pitch Deck到现场应对的全流程实操手册</div><div class="en">Preparing for the IPO roadshow: the equity story, management rehearsal, Q&amp;A discipline and Regulation FD boundaries.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">路演（Roadshow）是IPO流程中CEO和CFO向机构投资人面对面推介公司的过程，通常持续10至15个工作日，覆盖纽约、波士顿、旧金山等美国主要金融中心，以及香港、新加坡等亚洲金融中心。路演的核心成果是机构投资人的认购意向，这直接决定了发行价区间的最终确定。路演成功的3个关键：路演PPT（Roadshow Deck）逻辑清晰且能在20分钟内讲完、CEO能流畅应对投资人的20个最常见追问、CFO能用财务数字有力支撑CEO的业务故事。路演不是随机的，而是可以通过充分准备大幅提升成功率的高度可控过程。</div>
-<h2>一、路演的3种形式</h2>
-<h3>形式1：一对一会议（One-on-One）</h3>
-<p>最重要的路演形式。CEO和CFO与一家机构投资人的基金经理和分析师面对面交流，时间通常45至60分钟。前15至20分钟CEO讲故事，后25至40分钟投资人提问。一对一会议的质量最高，也是大型基金决定认购的主要依据。</p>
-<h3>形式2：早餐会/午餐会/晚餐会（Group Meeting）</h3>
-<p>同时邀请多家机构（通常5至15家）参加的集体会议。CEO做20分钟演讲，之后回答问题。效率高但深度不及一对一。</p>
-<h3>形式3：在线路演（Virtual Roadshow）</h3>
-<p>新冠疫情后逐渐普及。通过Zoom等视频会议平台进行，优点是可以接触更多投资人（特别是地理位置分散的小型基金），缺点是互动质量不及面对面。目前大多数路演采用线上线下结合的方式。</p>
-<h2>二、路演Deck的结构设计</h2>
-<p>路演Deck通常20至30页，严格控制在20分钟讲完的信息量。以下是标准结构。</p>
-<h3>第1至2页：公司一句话定位和核心亮点</h3>
-<p>用一句话清晰定义公司是什么（What），在哪个市场（Where），解决什么问题（Why）。紧接着列出3至5个让投资人眼前一亮的核心亮点，比如：行业第一、年增长率X%、毛利率达到X%、已服务X万客户。</p>
-<p>这两页是投资人决定接下来45分钟是否认真听的关键——必须在30秒内让投资人产生兴趣。</p>
-<h3>第3至5页：市场规模与行业背景</h3>
-<p>用可信的数据说明公司所在市场有多大（TAM/SAM）、市场增速如何、行业的结构性机会在哪里。必须引用可信的第三方研究数据，不能自己编造市场规模数字。</p>
-<h3>第6至10页：产品与商业模式</h3>
-<p>清晰说明公司的产品或服务是什么、如何产生收入、单位经济模型（Unit Economics）如何。特别是毛利率的驱动因素、获客成本（CAC）与客户终身价值（LTV）的关系，这些是机构投资人判断商业模式可持续性的核心依据。</p>
-<h3>第11至14页：增长战略</h3>
-<p>公司计划如何把当前规模扩大到未来的目标规模。包括：市场渗透率提升路径、地理扩张计划、产品线扩展、客户群扩张等。战略必须具体可信，不能只是一堆愿景口号。</p>
-<h3>第15至19页：财务数据与预测</h3>
-<p>历史两至三年的关键财务指标：收入、毛利、EBITDA或净利润、现金流；未来3年的业绩预测（基于合理假设）；关键运营指标（用户数、订单量、GMV等）的历史趋势。</p>
-<p>财务数据必须与F-1完全一致。任何在Deck中展示而F-1中没有对应披露的数据，都可能引发合规问题。</p>
-<h3>第20至22页：竞争格局与护城河</h3>
-<p>在竞争矩阵图中清晰展示公司相对于主要竞争对手的优势；量化护城河（专利数量、转换成本、网络效应等）；说明公司为何能在长期维持竞争优势。</p>
-<h3>第23至25页：管理团队</h3>
-<p>核心管理层的简要背景（每人2至3行），重点突出与公司业务最相关的经历。投资人会判断：这个团队有没有执行力、有没有行业积累、有没有经历过周期考验。</p>
-<h3>第26至28页：本次发行信息</h3>
-<p>发行价格区间、发行股数、募集资金规模、主要用途、挂牌时间表。这一部分通常在路演最后简短带过，因为所有这些信息已经在F-1中完整披露。</p>
-<h2>三、路演中最常被问到的20个问题</h2>
-<p>路演中投资人的提问虽然千变万化，但90%的问题都可以归为以下20类，提前准备好答案是路演成功的关键。</p>
-<h3>关于业务模型的5个问题</h3>
-<p>你的竞争优势是什么，为什么竞争对手难以复制？你的核心客户群是谁，为什么他们选择你而不是竞争对手？你的定价逻辑是什么，未来定价有提升空间吗？你的最大单一风险是什么？如果再给你5年，你想把公司变成什么样？</p>
-<h3>关于财务数据的5个问题</h3>
-<p>你的毛利率为什么是这个水平，未来趋势如何？你的获客成本是多少，LTV/CAC比率如何？你的现金流状况如何，还需要多久可以实现正现金流？这次融资之后你的资金可以支撑多长时间？你的收入来源有多分散，最大客户占比多少？</p>
-<h3>关于中国特有风险的5个问题</h3>
-<p>中美关系持续紧张对你们的业务有什么影响？你们的数据安全合规情况如何？你们的VIE架构（如适用）存在哪些风险？如果中国监管层收紧对你们行业的管控，公司如何应对？你们在境外上市募集的资金如何回流境内使用？</p>
-<h3>关于管理层和治理的5个问题</h3>
-<p>创始人持股多少，有什么控制权保护机制？独立董事有哪些背景，他们是否真正独立？公司有没有经历过重大的员工离职或管理层变动？公司有没有历史法律诉讼或监管处罚？你们的内控体系有没有经过独立评估？</p>
-<h2>四、路演的时间管理与体力管理</h2>
-<p>路演是一场马拉松，不是短跑。以下几点时间和体力管理建议来自彤鼎团队辅导项目中的真实经验。</p>
-<h3>提前做好时差准备</h3>
-<p>从中国飞往纽约或波士顿有12至14小时的时差。建议在出发前2至3天就开始调整作息，路演第一天才能以最佳状态出现在机构投资人面前。</p>
-<h3>路演前一天做全流程演练</h3>
-<p>在路演正式开始前，与承销商做一次完整的模拟路演（Mock Roadshow），承销商扮演挑剔的投资人，对所有准备材料和口头回答进行压力测试。这是发现并修正准备不足的最后机会。</p>
-<h3>控制每天的能量消耗</h3>
-<p>路演期间每天安排6至8场会议，加上各种工作餐，全天基本没有真正休息的时间。建议：每场会议之间的交通时间用来快速回顾下一家投资人的背景；午餐工作餐尽量选轻食，避免影响下午的状态；每天晚上最多工作到11点，保证7至8小时睡眠。</p>
-<h3>建立快速汇报机制</h3>
-<p>每天路演结束后，向承销商汇报当天各场会议的投资人反应，及时调整Deck或口头叙事中需要强化或修改的部分。</p>
-<h2>五、路演中需要特别注意的合规事项</h2>
-<p>路演中的所有口头陈述，与F-1中的书面披露必须保持一致。如果在路演中披露了F-1中没有记录的重大信息，需要立即向SEC提交更新的招股说明书。</p>
-<p>路演中不得做出超越F-1范围的财务预测或业绩承诺。投资人提出预测类问题时，标准回应是引用已公开披露的历史数据和战略方向，不对未来财务结果作具体预测。</p>
-<h3>结语：路演是可以练出来的</h3>
-<p>很多创始人在第一次路演前都极度紧张。但路演的本质是讲故事加回答问题——这是所有商业领袖都应该具备的基本能力。区别只在于：这个故事的受众是全球最挑剔的机构投资人，背景音乐是数亿甚至数十亿美元的资本流向决策。</p>
-<p>充分的准备可以把紧张转化为自信。彤鼎团队辅导的多个挂牌项目中，模拟路演阶段的练习周期通常需要2至4周，确保管理层在真实路演时面对任何问题都能从容应对。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>路演（Roadshow）是IPO流程中CEO和CFO向机构投资人面对面推介公司的过程，通常持续10至15个工作日，覆盖纽约、波士顿、旧金山等美国主要金融中心，以及香港、新加坡等亚洲金融中心。路演的核心成果是机构投资人的认购意向，这直接决定了发行价区间的最终确定。</p><p>路演成功的3个关键：路演PPT（Roadshow Deck）逻辑清晰且能在20分钟内讲完、CEO能流畅应对投资人的20个最常见追问、CFO能用财务数字有力支撑CEO的业务故事。路演不是随机的，而是可以通过充分准备大幅提升成功率的高度可控过程。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">路演的3种形式</a></li><li><a href="#sec-02">路演Deck的结构设计</a></li><li><a href="#sec-03">路演中最常被问到的20个问题</a></li><li><a href="#sec-04">路演的时间管理与体力管理</a></li><li><a href="#sec-05">路演中需要特别注意的合规事项</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、路演的3种形式</h2><p><h3>形式1：一对一会议（One-on-One）</h3></p><p>最重要的路演形式。CEO和CFO与一家机构投资人的基金经理和分析师面对面交流，时间通常45至60分钟。前15至20分钟CEO讲故事，后25至40分钟投资人提问。一对一会议的质量最高，也是大型基金决定认购的主要依据。</p><p><h3>形式2：早餐会/午餐会/晚餐会（Group Meeting）</h3></p><p>同时邀请多家机构（通常5至15家）参加的集体会议。CEO做20分钟演讲，之后回答问题。效率高但深度不及一对一。</p><p><h3>形式3：在线路演（Virtual Roadshow）</h3></p><p>新冠疫情后逐渐普及。通过Zoom等视频会议平台进行，优点是可以接触更多投资人（特别是地理位置分散的小型基金），缺点是互动质量不及面对面。目前大多数路演采用线上线下结合的方式。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、路演Deck的结构设计</h2><p>路演Deck通常20至30页，严格控制在20分钟讲完的信息量。以下是标准结构。</p><p><h3>第1至2页：公司一句话定位和核心亮点</h3></p><p>用一句话清晰定义公司是什么（What），在哪个市场（Where），解决什么问题（Why）。紧接着列出3至5个让投资人眼前一亮的核心亮点，比如：行业第一、年增长率X%、毛利率达到X%、已服务X万客户。</p><p>这两页是投资人决定接下来45分钟是否认真听的关键——必须在30秒内让投资人产生兴趣。</p><p><h3>第3至5页：市场规模与行业背景</h3></p><p>用可信的数据说明公司所在市场有多大（TAM/SAM）、市场增速如何、行业的结构性机会在哪里。必须引用可信的第三方研究数据，不能自己编造市场规模数字。</p><p><h3>第6至10页：产品与商业模式</h3></p><p>清晰说明公司的产品或服务是什么、如何产生收入、单位经济模型（Unit Economics）如何。特别是毛利率的驱动因素、获客成本（CAC）与客户终身价值（LTV）的关系，这些是机构投资人判断商业模式可持续性的核心依据。</p><p><h3>第11至14页：增长战略</h3></p><p>公司计划如何把当前规模扩大到未来的目标规模。包括：市场渗透率提升路径、地理扩张计划、产品线扩展、客户群扩张等。战略必须具体可信，不能只是一堆愿景口号。</p><p><h3>第15至19页：财务数据与预测</h3></p><p>历史两至三年的关键财务指标：收入、毛利、EBITDA或净利润、现金流；未来3年的业绩预测（基于合理假设）；关键运营指标（用户数、订单量、GMV等）的历史趋势。</p><p>财务数据必须与F-1完全一致。任何在Deck中展示而F-1中没有对应披露的数据，都可能引发合规问题。</p><p><h3>第20至22页：竞争格局与护城河</h3></p><p>在竞争矩阵图中清晰展示公司相对于主要竞争对手的优势；量化护城河（专利数量、转换成本、网络效应等）；说明公司为何能在长期维持竞争优势。</p><p><h3>第23至25页：管理团队</h3></p><p>核心管理层的简要背景（每人2至3行），重点突出与公司业务最相关的经历。投资人会判断：这个团队有没有执行力、有没有行业积累、有没有经历过周期考验。</p><p><h3>第26至28页：本次发行信息</h3></p><p>发行价格区间、发行股数、募集资金规模、主要用途、挂牌时间表。这一部分通常在路演最后简短带过，因为所有这些信息已经在F-1中完整披露。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、路演中最常被问到的20个问题</h2><p>路演中投资人的提问虽然千变万化，但90%的问题都可以归为以下20类，提前准备好答案是路演成功的关键。</p><p><h3>关于业务模型的5个问题</h3></p><p>你的竞争优势是什么，为什么竞争对手难以复制？你的核心客户群是谁，为什么他们选择你而不是竞争对手？你的定价逻辑是什么，未来定价有提升空间吗？你的最大单一风险是什么？如果再给你5年，你想把公司变成什么样？</p><p><h3>关于财务数据的5个问题</h3></p><p>你的毛利率为什么是这个水平，未来趋势如何？你的获客成本是多少，LTV/CAC比率如何？你的现金流状况如何，还需要多久可以实现正现金流？这次融资之后你的资金可以支撑多长时间？你的收入来源有多分散，最大客户占比多少？</p><p><h3>关于中国特有风险的5个问题</h3></p><p>中美关系持续紧张对你们的业务有什么影响？你们的数据安全合规情况如何？你们的VIE架构（如适用）存在哪些风险？如果中国监管层收紧对你们行业的管控，公司如何应对？你们在境外上市募集的资金如何回流境内使用？</p><p><h3>关于管理层和治理的5个问题</h3></p><p>创始人持股多少，有什么控制权保护机制？独立董事有哪些背景，他们是否真正独立？公司有没有经历过重大的员工离职或管理层变动？公司有没有历史法律诉讼或监管处罚？你们的内控体系有没有经过独立评估？</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、路演的时间管理与体力管理</h2><p>路演是一场马拉松，不是短跑。以下几点时间和体力管理建议来自彤鼎团队辅导项目中的真实经验。</p><p><h3>提前做好时差准备</h3></p><p>从中国飞往纽约或波士顿有12至14小时的时差。建议在出发前2至3天就开始调整作息，路演第一天才能以最佳状态出现在机构投资人面前。</p><p><h3>路演前一天做全流程演练</h3></p><p>在路演正式开始前，与承销商做一次完整的模拟路演（Mock Roadshow），承销商扮演挑剔的投资人，对所有准备材料和口头回答进行压力测试。这是发现并修正准备不足的最后机会。</p><p><h3>控制每天的能量消耗</h3></p><p>路演期间每天安排6至8场会议，加上各种工作餐，全天基本没有真正休息的时间。建议：每场会议之间的交通时间用来快速回顾下一家投资人的背景；午餐工作餐尽量选轻食，避免影响下午的状态；每天晚上最多工作到11点，保证7至8小时睡眠。</p><p><h3>建立快速汇报机制</h3></p><p>每天路演结束后，向承销商汇报当天各场会议的投资人反应，及时调整Deck或口头叙事中需要强化或修改的部分。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、路演中需要特别注意的合规事项</h2><p>路演中的所有口头陈述，与F-1中的书面披露必须保持一致。如果在路演中披露了F-1中没有记录的重大信息，需要立即向SEC提交更新的招股说明书。</p><p>路演中不得做出超越F-1范围的财务预测或业绩承诺。投资人提出预测类问题时，标准回应是引用已公开披露的历史数据和战略方向，不对未来财务结果作具体预测。</p><p><h3>结语：路演是可以练出来的</h3></p><p>很多创始人在第一次路演前都极度紧张。但路演的本质是讲故事加回答问题——这是所有商业领袖都应该具备的基本能力。区别只在于：这个故事的受众是全球最挑剔的机构投资人，背景音乐是数亿甚至数十亿美元的资本流向决策。</p><p>充分的准备可以把紧张转化为自信。彤鼎团队辅导的多个挂牌项目中，模拟路演阶段的练习周期通常需要2至4周，确保管理层在真实路演时面对任何问题都能从容应对。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="f1-prospectus.html" style="color:#6b5426;font-weight:700;">F-1招股书撰写要点</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-ipo-pricing.html" style="color:#6b5426;font-weight:700;">纳斯达克IPO定价机制</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ads-explained.html" style="color:#6b5426;font-weight:700;">ADS美国存托股份详解</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="greenshoe.html" style="color:#6b5426;font-weight:700;">绿鞋机制与超额配售</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="us-gaap-differences.html" style="color:#6b5426;font-weight:700;">US-GAAP与中国会计准则差异</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

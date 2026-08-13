@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"CRS与税务居民认定：跨境家庭的身份问题","inLanguage":"zh-CN","abstract":"CRS is the Common Reporting Standard for automatic exchange of financial account information. Participating jurisdictions require financial institutions to identify non-resident accounts and exchange data annually. This article explains how tax residency is determined, what information is exchanged, and why residency planning should precede asset structuring.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/crs-tax-residency.html"},"datePublished":"2026-07-26","dateModified":"2026-07-26","description":"CRS是金融账户涉税信息自动交换标准，参与地金融机构需识别非居民账户并按年交换信息。对跨境家庭而言，税务居民身份决定信息交换到哪一方、以及全球所得的申报义务归属。本文说明税务居民的常见判定维度、CRS交换的信息范围、以及身份规划为何应先于资产架构安排。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,39 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">财富传承 WEALTH &amp; LEGACY</div><h1>CRS与税务居民认定：跨境家庭的身份问题</h1>
 <div class="sub">账户信息交换机制下，身份规划为何要先于资产安排</div><div class="en">CRS is the Common Reporting Standard for automatic exchange of financial account information. Participating jurisdictions require financial institutions to identify non-resident accounts and exchange data annually. This article explains how tax residency is determined, what information is exchanged, and why residency planning should precede asset structuring.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-26">2026年7月26日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">CRS，即金融账户涉税信息自动交换标准，是指参与地的金融机构按统一规则识别非居民持有的金融账户，收集账户持有人身份、账户余额与年度收益等信息，并通过税务机关按年与其税务居民所在地交换。对跨境家庭的直接影响是：税务居民身份决定了信息交换的方向，也决定了全球所得申报义务归属于哪一方。因此身份问题在逻辑上先于资产架构问题——身份未确定就搭架构，很可能得到一个与实际申报义务不匹配的结构。本文所述为一般性机制说明，具体判定与申报须由持牌税务专业人士按个案处理，不构成税务建议。</div>
-<h2>一、CRS交换的是什么信息</h2>
-<p><strong>结论先行：交换的是账户层面的身份与金额信息，不是交易明细。</strong></p>
-<p>按CRS的一般框架，金融机构需收集并报送的信息通常包括：账户持有人姓名与地址、税务居民地、纳税人识别号、账户号码、开户机构、账户年末余额或价值、以及利息、股息、出售金融资产所得等年度收益。</p>
-<p>交换的对象是账户持有人的税务居民所在地税务机关。这意味着一个人在境外持有的银行账户、证券账户、部分保险合同与投资实体权益，都可能进入其税务居民地税务机关的视野。</p>
-<p>需要理解的是，CRS本身是信息交换机制，不直接产生税负。税负来自各地自身的税法。因此，本质上CRS改变的是信息不对称，而不是纳税义务。</p>
-<h2>二、税务居民身份的常见判定维度</h2>
-<p><strong>结论先行：判定通常看住所、居住时间与经济利益中心，各地标准不同且可能重叠。</strong></p>
-<p>多数地区采用住所地与居住时间相结合的标准，例如以一个纳税年度内累计居住天数是否达到某一门槛为主要判据，同时考虑永久性住所、家庭所在地与主要经济利益所在地。</p>
-<p>关键的复杂性在于身份可能重叠。一个人完全可能同时被两地认定为税务居民，此时通常需要依据两地之间的税收协定中的加比规则确定归属，判定顺序一般涉及永久性住所、重要利益中心、习惯性居所与国籍。</p>
-<p>因此，关键在于身份不是自行选择的结果，而是事实认定的结果。仅取得某地居留权或护照，并不自动改变税务居民身份，也不必然改变申报义务。</p>
-<h2>三、常见的三个误解</h2>
-<p><strong>结论先行：三类误解都源于把居留身份与税务身份混为一谈。</strong></p>
-<p>第一个误解是&quot;拿了身份就不用申报&quot;。居留权与税务居民身份是两套判定，是否申报取决于税法上的居民认定与所得来源，而非证件类型。</p>
-<p>第二个误解是&quot;公司在境外就与个人无关&quot;。若境外实体被认定为消极非金融实体，其控制人信息通常仍需被识别并报送，因此实体层并不构成信息屏障。</p>
-<p>第三个误解是&quot;不申报就查不到&quot;。在信息按年交换的机制下，账户信息与申报记录的差异是可以被比对的。因此，本质上合规申报的成本，通常远低于事后被追溯的成本。</p>
-<h2>四、为什么身份规划要先于资产架构</h2>
-<p><strong>结论先行：架构的税务效果取决于相关人的税务居民身份，身份不定则架构无从优化。</strong></p>
-<p>同一个境外持股架构，在控制人被认定为不同地区税务居民时，分红、股权转让与信托分配的税务处理可能完全不同。若先搭架构再处理身份，往往需要在身份确定后重新调整，而调整本身可能触发新的转让所得。</p>
-<p>对计划上市的企业而言，这一顺序尤其重要。上市前的股权架构一旦定型，挂牌后再变更会受锁定期、信息披露与关联交易规则约束，成本显著上升。相关时点考量见 <a href="trust-structures-listing.html">信托架构与上市安排</a>。</p>
-<p>因此，关键在于把家庭成员的身份现状与预期变化，作为架构设计的输入条件，而不是事后再匹配。</p>
-<h2>五、家族办公室与身份规划的关系</h2>
-<p><strong>结论先行：家族办公室的选址应与家族成员的实际身份分布匹配，而非只看税率。</strong></p>
-<p>新加坡与香港都有针对家族办公室的监管与税务安排，差异主要体现在实质经营要求、资产门槛与申请周期。选址若与家族成员的居住地、资产所在地脱节，会带来持续的实质性运营压力。</p>
-<p>需要评估的是长期可维持性：实质经营要求通常涉及本地雇员、办公场所与最低支出，这些是持续成本。因此，本质上选址是在选一个未来十年都能真实运行的地点。</p>
-<p>相关比较见 <a href="singapore-family-office.html">新加坡家族办公室</a> 与 <a href="family-office.html">家族办公室设立与运作</a>。华尔街彤鼎俱乐部的成员讨论中，身份与架构的先后顺序是被反复提及的一个共性问题。</p>
-<h2>六、可执行的准备顺序</h2>
-<p><strong>结论先行：先确认事实、再定身份、然后搭架构、最后安排资产。</strong></p>
-<p>第一步是梳理事实：家庭成员各自的居住天数、永久性住所、主要收入来源地与现有账户分布。这一步是纯事实工作，但多数家庭并没有完整清单。</p>
-<p>第二步是就身份判定取得专业意见，明确当前被哪一地或哪几地认定为税务居民，以及是否存在重叠。第三步才是设计持股与传承架构，并同步考虑上市计划的时间表。</p>
-<p>第四步是资产层面的具体安排与申报合规。彤鼎为企业管理咨询机构，负责整体路径规划与统筹，税务申报与法律意见由持牌合作机构承做。关键在于顺序不能颠倒——顺序错了，后面每一步都可能白做。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>CRS，即金融账户涉税信息自动交换标准，是指参与地的金融机构按统一规则识别非居民持有的金融账户，收集账户持有人身份、账户余额与年度收益等信息，并通过税务机关按年与其税务居民所在地交换。对跨境家庭的直接影响是：税务居民身份决定了信息交换的方向，也决定了全球所得申报义务归属于哪一方。</p><p>因此身份问题在逻辑上先于资产架构问题——身份未确定就搭架构，很可能得到一个与实际申报义务不匹配的结构。本文所述为一般性机制说明，具体判定与申报须由持牌税务专业人士按个案处理，不构成税务建议。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">CRS交换的是什么信息</a></li><li><a href="#sec-02">税务居民身份的常见判定维度</a></li><li><a href="#sec-03">常见的三个误解</a></li><li><a href="#sec-04">为什么身份规划要先于资产架构</a></li><li><a href="#sec-05">家族办公室与身份规划的关系</a></li><li><a href="#sec-06">可执行的准备顺序</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、CRS交换的是什么信息</h2><div class="ts-lead"><span class="tag">结论先行</span><p>交换的是账户层面的身份与金额信息，不是交易明细。</p></div><p>按CRS的一般框架，金融机构需收集并报送的信息通常包括：账户持有人姓名与地址、税务居民地、纳税人识别号、账户号码、开户机构、账户年末余额或价值、以及利息、股息、出售金融资产所得等年度收益。</p><p>交换的对象是账户持有人的税务居民所在地税务机关。这意味着一个人在境外持有的银行账户、证券账户、部分保险合同与投资实体权益，都可能进入其税务居民地税务机关的视野。</p><p>需要理解的是，CRS本身是信息交换机制，不直接产生税负。税负来自各地自身的税法。因此，本质上CRS改变的是信息不对称，而不是纳税义务。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、税务居民身份的常见判定维度</h2><div class="ts-lead"><span class="tag">结论先行</span><p>判定通常看住所、居住时间与经济利益中心，各地标准不同且可能重叠。</p></div><p>多数地区采用住所地与居住时间相结合的标准，例如以一个纳税年度内累计居住天数是否达到某一门槛为主要判据，同时考虑永久性住所、家庭所在地与主要经济利益所在地。</p><p>关键的复杂性在于身份可能重叠。一个人完全可能同时被两地认定为税务居民，此时通常需要依据两地之间的税收协定中的加比规则确定归属，判定顺序一般涉及永久性住所、重要利益中心、习惯性居所与国籍。</p><p>因此，关键在于身份不是自行选择的结果，而是事实认定的结果。仅取得某地居留权或护照，并不自动改变税务居民身份，也不必然改变申报义务。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、常见的三个误解</h2><div class="ts-lead"><span class="tag">结论先行</span><p>三类误解都源于把居留身份与税务身份混为一谈。</p></div><p>第一个误解是&quot;拿了身份就不用申报&quot;。居留权与税务居民身份是两套判定，是否申报取决于税法上的居民认定与所得来源，而非证件类型。</p><p>第二个误解是&quot;公司在境外就与个人无关&quot;。若境外实体被认定为消极非金融实体，其控制人信息通常仍需被识别并报送，因此实体层并不构成信息屏障。</p><p>第三个误解是&quot;不申报就查不到&quot;。在信息按年交换的机制下，账户信息与申报记录的差异是可以被比对的。因此，本质上合规申报的成本，通常远低于事后被追溯的成本。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、为什么身份规划要先于资产架构</h2><div class="ts-lead"><span class="tag">结论先行</span><p>架构的税务效果取决于相关人的税务居民身份，身份不定则架构无从优化。</p></div><p>同一个境外持股架构，在控制人被认定为不同地区税务居民时，分红、股权转让与信托分配的税务处理可能完全不同。若先搭架构再处理身份，往往需要在身份确定后重新调整，而调整本身可能触发新的转让所得。</p><p>对计划上市的企业而言，这一顺序尤其重要。上市前的股权架构一旦定型，挂牌后再变更会受锁定期、信息披露与关联交易规则约束，成本显著上升。相关时点考量见 <a href="trust-structures-listing.html">信托架构与上市安排</a>。</p><p>因此，关键在于把家庭成员的身份现状与预期变化，作为架构设计的输入条件，而不是事后再匹配。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、家族办公室与身份规划的关系</h2><div class="ts-lead"><span class="tag">结论先行</span><p>家族办公室的选址应与家族成员的实际身份分布匹配，而非只看税率。</p></div><p>新加坡与香港都有针对家族办公室的监管与税务安排，差异主要体现在实质经营要求、资产门槛与申请周期。选址若与家族成员的居住地、资产所在地脱节，会带来持续的实质性运营压力。</p><p>需要评估的是长期可维持性：实质经营要求通常涉及本地雇员、办公场所与最低支出，这些是持续成本。因此，本质上选址是在选一个未来十年都能真实运行的地点。</p><p>相关比较见 <a href="singapore-family-office.html">新加坡家族办公室</a> 与 <a href="family-office.html">家族办公室设立与运作</a>。华尔街彤鼎俱乐部的成员讨论中，身份与架构的先后顺序是被反复提及的一个共性问题。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、可执行的准备顺序</h2><div class="ts-lead"><span class="tag">结论先行</span><p>先确认事实、再定身份、然后搭架构、最后安排资产。</p></div><p>第一步是梳理事实：家庭成员各自的居住天数、永久性住所、主要收入来源地与现有账户分布。这一步是纯事实工作，但多数家庭并没有完整清单。</p><p>第二步是就身份判定取得专业意见，明确当前被哪一地或哪几地认定为税务居民，以及是否存在重叠。第三步才是设计持股与传承架构，并同步考虑上市计划的时间表。</p><p>第四步是资产层面的具体安排与申报合规。彤鼎为企业管理咨询机构，负责整体路径规划与统筹，税务申报与法律意见由持牌合作机构承做。关键在于顺序不能颠倒——顺序错了，后面每一步都可能白做。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="post-ipo-wealth-framework.html" style="color:#6b5426;font-weight:700;">上市之后：创始人财富的合规管理框架</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="trust-structures-listing.html" style="color:#6b5426;font-weight:700;">家族信托与上市公司股权</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="singapore-family-office.html" style="color:#6b5426;font-weight:700;">新加坡家族办公室</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="equity-generational-transfer.html" style="color:#6b5426;font-weight:700;">股权代际转移的三种路径与税务考量</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="sfo-vs-mfo.html" style="color:#6b5426;font-weight:700;">单一家办还是联合家办：一道关于成本、控制权和边界的选择题</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

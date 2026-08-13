@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"纳斯达克与纽交所怎么选","inLanguage":"zh-CN","abstract":"Nasdaq and the NYSE differ less in prestige than in structure. Nasdaq runs three tiers - Capital Market, Global Market and Global Select - and its Capital Market net-income standard asks for just US$750,000, making it the practical entry point for mid-sized companies. The NYSE sets higher aggregate thresholds; its earnings test requires US$10 million of pre-tax income over three years, subject to the current rulebook. The two venues also differ in sector clustering, fee levels and trading mechanics: a multiple-market-maker dealer model versus designated market makers. This article lays out how a mid-sized company should actually choose, including the impact of Nasdaq rules effective 14 May 2026.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/nasdaq-vs-nyse.html","datePublished":"2026-07-20","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"纳斯达克与纽交所是美国两大全国性证券交易所。纳斯达克分资本市场、全球市场、全球精选市场三层，资本市场层净利润标准仅要求75万美元；纽交所门槛整体更高，盈利测试要求近三年累计税前利润不低于1000万美元。两所在行业聚集效应、做市机制（多做市商制对指定做市商制）与费用水平上各有差异。本文给出中型企业的现实选择框架。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,47 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市路径 LISTING PATH</div><h1>纳斯达克与纽交所怎么选</h1>
 <div class="sub">定位差异、上市标准、行业聚集与做市机制的系统对比</div><div class="en">Nasdaq and the NYSE differ less in prestige than in structure. Nasdaq runs three tiers - Capital Market, Global Market and Global Select - and its Capital Market net-income standard asks for just US$750,000, making it the practical entry point for mid-sized companies. The NYSE sets higher aggregate thresholds; its earnings test requires US$10 million of pre-tax income over three years, subject to the current rulebook. The two venues also differ in sector clustering, fee levels and trading mechanics: a multiple-market-maker dealer model versus designated market makers. This article lays out how a mid-sized company should actually choose, including the impact of Nasdaq rules effective 14 May 2026.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">纳斯达克（Nasdaq）与纽约证券交易所（NYSE）是美国两大全国性证券交易所，选择的核心不在名气，而在三点。一是门槛结构：纳斯达克分资本市场、全球市场、全球精选市场三层，资本市场层的净利润标准仅要求75万美元，是中型企业的现实入口；纽交所门槛整体更高，盈利测试要求近三年累计税前利润不低于1000万美元（具体分项以现行规则为准）。二是行业聚集：科技、生物医药公司高度集中于纳斯达克，工业、金融、消费蓝筹传统上偏向纽交所。三是交易机制：纳斯达克实行多做市商制，纽交所实行指定做市商（DMM）制度。对多数中型企业尤其科技属性企业，纳斯达克资本市场层是更现实的选择；纽交所适合体量与利润已达蓝筹量级的企业。</div>
-<h2>一、两所的定位差异：基因决定生态</h2>
-<p><strong>结论先行：纽交所是拍卖制传统的蓝筹市场，纳斯达克是电子做市商市场，两者的差异源自出身，并延续到今天的公司构成。</strong></p>
-<p>纽交所的历史可追溯至1792年的《梧桐树协议》，两个多世纪以来，它以交易大厅、拍卖撮合与严格的准入筛选，形成了成熟大企业聚集的市场形象。纳斯达克成立于1971年，是全球早期实现全电子化报价交易的股票市场，从诞生之日起就与技术、成长和新兴产业绑定在一起。</p>
-<p>这种基因差异沉淀为今天的市场生态：纽交所的上市公司以工业、能源、金融、消费等传统行业的成熟企业为主；纳斯达克则聚集了大量科技、互联网、半导体与生物医药公司，其中既包括全球市值居前的科技巨头，也包括大量处于成长期的中小市值公司。</p>
-<p><strong>本质上，两所之间不存在谁更正规的问题——都受美国证监会（SEC）监管、适用同一套证券法律与信息披露体系，差异在于门槛、生态与机制。</strong></p>
-<h2>二、上市标准的逻辑：分层制对单一主板</h2>
-<p><strong>结论先行：纳斯达克用三层市场覆盖从中型到超大型企业，纽交所用较高的单一主板门槛筛选成熟企业。</strong></p>
-<p>纳斯达克分为三层：资本市场（Capital Market）、全球市场（Global Market）与全球精选市场（Global Select Market）。每一层都设有多套并行标准（如净利润标准、股东权益标准、市值标准），满足其一即可申请。其中资本市场层的净利润标准，要求净利润达到75万美元并配合股东权益、公众持股等条件，是三层之中对中型企业最可及的入口；全球精选市场的财务与流动性门槛则位居美股各层级中的最高一档。</p>
-<p>纽交所主板采用较高的单一门槛体系：盈利测试通常要求近三年累计税前利润不低于1000万美元，并对最近两个年度设有分项要求；另有以市值与收入为核心的替代测试。具体分项数字随规则修订调整，应以两所现行上市规则文本为准。</p>
-<p>分层制还有一个常被低估的好处：企业可以先进入资本市场层，随着体量增长满足更高层级标准后申请转层，无需重新IPO。这为中型企业提供了一条渐进升级的路径。</p>
-<p><strong>关键在于：标准差异的背后是筛选哲学——纽交所筛选已经成熟的企业，纳斯达克陪伴正在成长的企业。</strong></p>
-<h2>三、行业聚集效应：同行在哪里，估值锚就在哪里</h2>
-<p><strong>结论先行：上市地的行业聚集决定了可比公司集合与研究覆盖，这比挂牌仪式的形式差异重要得多。</strong></p>
-<p>投资者给新股定价的基本方法是可比公司法：找到同行业、同商业模式的已上市公司，参照其估值倍数定价。科技、互联网、生物医药、半导体公司高度集中于纳斯达克，意味着这些行业的发行人在纳斯达克能找到更完整的可比公司集合、更密集的行业分析师覆盖，以及更熟悉其商业模式的机构投资者。</p>
-<p>指数生态强化了这种聚集：以纳斯达克100为代表的指数体系，为科技成长股提供了额外的被动资金配置渠道；纽交所一侧，则以工业、金融、消费蓝筹与全球化大企业为传统优势区，配息型、价值型投资者的关注度更高。</p>
-<p>对发行人而言，行业聚集不是面子问题，而是定价效率问题：在同行密集的市场，投资者的学习成本低，路演沟通更顺畅，估值分歧更小。华尔街彤鼎俱乐部在与拟赴美上市的企业主交流时，通常建议把可比公司图谱作为选所决策的第一份材料。</p>
-<p><strong>因此，选交易所之前先问一句：我的可比公司都挂在哪里？答案往往已经替你做了大半个决定。</strong></p>
-<h2>四、做市机制：多做市商制与指定做市商制</h2>
-<p><strong>结论先行：两种机制在正常行情下体验接近，差异体现在承担流动性义务的主体与方式不同。</strong></p>
-<p>纳斯达克实行多做市商制：每只股票由多家注册做市商同时报出买卖价格，相互竞争成交；资本市场层的上市条件中即包含至少3名注册做市商的要求。做市商越多、竞争越充分，买卖价差通常越窄。</p>
-<p>纽交所实行指定做市商（DMM）制度：每只上市股票指定一家做市商，承担维持公平有序市场的义务，尤其在开盘、收盘集合竞价与剧烈波动时段发挥人工与算法结合的稳定作用。这一机制在极端行情下的秩序维护上有其传统优势。</p>
-<p>对中小盘发行人，更现实的问题是：无论在哪一所，流动性最终取决于公司基本面、公众持股规模与投资者关系工作，机制只是基础设施。做市商的数量与积极性会直接影响买卖价差与成交连续性，这也是上市后市值管理工作中需要持续关注的环节。</p>
-<p><strong>本质上，机制差异是微观结构层面的，企业不必神化任何一种制度，而应把精力放在自身流动性基本盘上。</strong></p>
-<h2>五、费用差异：方向性判断即可</h2>
-<p><strong>结论先行：纳斯达克的上市初费与年费整体低于纽交所，但费用不应成为选择的主变量。</strong></p>
-<p>两所的上市初费与年费均按股本或股份数量分档计收，方向性的结论是：纳斯达克的整体费用水平低于纽交所，这也是其对中小企业友好定位的一部分。具体金额随年度费率表调整，本文不列具体数字，以两所公布的现行费率为准。</p>
-<p>更重要的是把费用放进全局：相对于承销费、律师费、审计费等发行成本，以及上市后的合规维护、投资者关系与董责险等持续成本，交易所收费在总成本中的占比很小。用交易所费用差异来决定上市地，属于抓小放大。</p>
-<p><strong>因此，费用可以比较，但真正该比较的是两所生态对公司估值与融资能力的长期影响。</strong></p>
-<h2>六、2026年的新变量：2500万美元募资门槛</h2>
-<p><strong>结论先行：2026年5月14日生效的纳斯达克新规，抬高了特定背景企业小规模IPO的门槛，直接改变了中小发行人的方案设计。</strong></p>
-<p>根据该新规，主要在中国经营的公司在纳斯达克IPO，须满足最低2500万美元的公开发行募资额等要求；适用范围的具体界定与执行细节，以纳斯达克正式规则文本及其后续解释为准。</p>
-<p>对发行人的含义有三层：其一，过去数百万美元募资额的小型IPO路径明显收窄，以极小发行规模先挂牌、再图后续的策略不再可行；其二，2500万美元的发行规模要求发行人具备与之匹配的基本面、估值与机构认购能力，上市准备的质量门槛整体抬高；其三，融资策划必须更前置——上市前的私募轮次、基石投资者安排与发行结构设计，需要作为一个整体来规划，而不是临近申报再拼凑。</p>
-<p><strong>关键在于：新规筛掉的是准备不足的发行，而不是中型企业本身——把发行规模与基本面做扎实，通道依然是通的。</strong></p>
-<h2>七、中型企业的现实选择框架</h2>
-<p><strong>结论先行：对净利润在百万美元量级的中型企业，真正的问题不是纳斯达克还是纽交所，而是如何达到并稳住纳斯达克的标准。</strong></p>
-<p>纽交所主板的利润与市值量级，对多数中型企业并不现实；纳斯达克资本市场层75万美元的净利润标准，叠加新规下的募资门槛，构成了更贴近实际的约束集合。选择框架可以概括为三问：第一问，行业可比公司聚集在哪一所——决定估值效率；第二问，未来三年的财务表现能稳定满足哪一层标准——决定申请层级与转层路径；第三问，发行规模能否满足并超过2500万美元门槛——决定发行方案与前置融资安排。</p>
-<p>三问都有肯定答案的企业，纳斯达克资本市场层通常是性价比更高的起点；利润体量已达千万美元级、寻求蓝筹形象与配息型投资者的企业，才真正进入纽交所与纳斯达克更高层级之间的比较。</p>
-<p>彤鼎集团在上市规划中的做法，是先用三年财务预测对照各层级标准逐项测算，再设计发行结构与融资节奏；华尔街彤鼎俱乐部也持续围绕美股上市标准、发行策略与上市后市值管理等主题，为企业家提供资本认知与资源对接。</p>
-<p><strong>因此，纳斯达克与纽交所之争对多数中型企业是个伪命题——真命题是：用哪一层标准、多大的发行规模、什么样的时间表，走进美股市场。</strong></p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>纳斯达克（Nasdaq）与纽约证券交易所（NYSE）是美国两大全国性证券交易所，选择的核心不在名气，而在三点。一是门槛结构：纳斯达克分资本市场、全球市场、全球精选市场三层，资本市场层的净利润标准仅要求75万美元，是中型企业的现实入口；纽交所门槛整体更高，盈利测试要求近三年累计税前利润不低于1000万美元（具体分项以现行规则为准）。</p><p>二是行业聚集：科技、生物医药公司高度集中于纳斯达克，工业、金融、消费蓝筹传统上偏向纽交所。三是交易机制：纳斯达克实行多做市商制，纽交所实行指定做市商（DMM）制度。对多数中型企业尤其科技属性企业，纳斯达克资本市场层是更现实的选择；纽交所适合体量与利润已达蓝筹量级的企业。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">两所的定位差异：基因决定生态</a></li><li><a href="#sec-02">上市标准的逻辑：分层制对单一主板</a></li><li><a href="#sec-03">行业聚集效应：同行在哪里，估值锚就在哪里</a></li><li><a href="#sec-04">做市机制：多做市商制与指定做市商制</a></li><li><a href="#sec-05">费用差异：方向性判断即可</a></li><li><a href="#sec-06">2026年的新变量：2500万美元募资门槛</a></li><li><a href="#sec-07">中型企业的现实选择框架</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、两所的定位差异：基因决定生态</h2><div class="ts-lead"><span class="tag">结论先行</span><p>纽交所是拍卖制传统的蓝筹市场，纳斯达克是电子做市商市场，两者的差异源自出身，并延续到今天的公司构成。</p></div><p>纽交所的历史可追溯至1792年的《梧桐树协议》，两个多世纪以来，它以交易大厅、拍卖撮合与严格的准入筛选，形成了成熟大企业聚集的市场形象。纳斯达克成立于1971年，是全球早期实现全电子化报价交易的股票市场，从诞生之日起就与技术、成长和新兴产业绑定在一起。</p><p>这种基因差异沉淀为今天的市场生态：纽交所的上市公司以工业、能源、金融、消费等传统行业的成熟企业为主；纳斯达克则聚集了大量科技、互联网、半导体与生物医药公司，其中既包括全球市值居前的科技巨头，也包括大量处于成长期的中小市值公司。</p><p><strong>本质上，两所之间不存在谁更正规的问题——都受美国证监会（SEC）监管、适用同一套证券法律与信息披露体系，差异在于门槛、生态与机制。</strong></p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、上市标准的逻辑：分层制对单一主板</h2><div class="ts-lead"><span class="tag">结论先行</span><p>纳斯达克用三层市场覆盖从中型到超大型企业，纽交所用较高的单一主板门槛筛选成熟企业。</p></div><p>纳斯达克分为三层：资本市场（Capital Market）、全球市场（Global Market）与全球精选市场（Global Select Market）。每一层都设有多套并行标准（如净利润标准、股东权益标准、市值标准），满足其一即可申请。</p><p data-ts="1">其中资本市场层的净利润标准，要求净利润达到75万美元并配合股东权益、公众持股等条件，是三层之中对中型企业最可及的入口；全球精选市场的财务与流动性门槛则位居美股各层级中的最高一档。</p><p>纽交所主板采用较高的单一门槛体系：盈利测试通常要求近三年累计税前利润不低于1000万美元，并对最近两个年度设有分项要求；另有以市值与收入为核心的替代测试。具体分项数字随规则修订调整，应以两所现行上市规则文本为准。</p><p>分层制还有一个常被低估的好处：企业可以先进入资本市场层，随着体量增长满足更高层级标准后申请转层，无需重新IPO。这为中型企业提供了一条渐进升级的路径。</p><p><strong>关键在于：标准差异的背后是筛选哲学——纽交所筛选已经成熟的企业，纳斯达克陪伴正在成长的企业。</strong></p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、行业聚集效应：同行在哪里，估值锚就在哪里</h2><div class="ts-lead"><span class="tag">结论先行</span><p>上市地的行业聚集决定了可比公司集合与研究覆盖，这比挂牌仪式的形式差异重要得多。</p></div><p>投资者给新股定价的基本方法是可比公司法：找到同行业、同商业模式的已上市公司，参照其估值倍数定价。科技、互联网、生物医药、半导体公司高度集中于纳斯达克，意味着这些行业的发行人在纳斯达克能找到更完整的可比公司集合、更密集的行业分析师覆盖，以及更熟悉其商业模式的机构投资者。</p><p>指数生态强化了这种聚集：以纳斯达克100为代表的指数体系，为科技成长股提供了额外的被动资金配置渠道；纽交所一侧，则以工业、金融、消费蓝筹与全球化大企业为传统优势区，配息型、价值型投资者的关注度更高。</p><p>对发行人而言，行业聚集不是面子问题，而是定价效率问题：在同行密集的市场，投资者的学习成本低，路演沟通更顺畅，估值分歧更小。华尔街彤鼎俱乐部在与拟赴美上市的企业主交流时，通常建议把可比公司图谱作为选所决策的第一份材料。</p><p><strong>因此，选交易所之前先问一句：我的可比公司都挂在哪里？答案往往已经替你做了大半个决定。</strong></p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、做市机制：多做市商制与指定做市商制</h2><div class="ts-lead"><span class="tag">结论先行</span><p>两种机制在正常行情下体验接近，差异体现在承担流动性义务的主体与方式不同。</p></div><p>纳斯达克实行多做市商制：每只股票由多家注册做市商同时报出买卖价格，相互竞争成交；资本市场层的上市条件中即包含至少3名注册做市商的要求。做市商越多、竞争越充分，买卖价差通常越窄。</p><p>纽交所实行指定做市商（DMM）制度：每只上市股票指定一家做市商，承担维持公平有序市场的义务，尤其在开盘、收盘集合竞价与剧烈波动时段发挥人工与算法结合的稳定作用。这一机制在极端行情下的秩序维护上有其传统优势。</p><p>对中小盘发行人，更现实的问题是：无论在哪一所，流动性最终取决于公司基本面、公众持股规模与投资者关系工作，机制只是基础设施。做市商的数量与积极性会直接影响买卖价差与成交连续性，这也是上市后市值管理工作中需要持续关注的环节。</p><p><strong>本质上，机制差异是微观结构层面的，企业不必神化任何一种制度，而应把精力放在自身流动性基本盘上。</strong></p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、费用差异：方向性判断即可</h2><div class="ts-lead"><span class="tag">结论先行</span><p>纳斯达克的上市初费与年费整体低于纽交所，但费用不应成为选择的主变量。</p></div><p>两所的上市初费与年费均按股本或股份数量分档计收，方向性的结论是：纳斯达克的整体费用水平低于纽交所，这也是其对中小企业友好定位的一部分。具体金额随年度费率表调整，本文不列具体数字，以两所公布的现行费率为准。</p><p>更重要的是把费用放进全局：相对于承销费、律师费、审计费等发行成本，以及上市后的合规维护、投资者关系与董责险等持续成本，交易所收费在总成本中的占比很小。用交易所费用差异来决定上市地，属于抓小放大。</p><p><strong>因此，费用可以比较，但真正该比较的是两所生态对公司估值与融资能力的长期影响。</strong></p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、2026年的新变量：2500万美元募资门槛</h2><div class="ts-lead"><span class="tag">结论先行</span><p>2026年5月14日生效的纳斯达克新规，抬高了特定背景企业小规模IPO的门槛，直接改变了中小发行人的方案设计。</p></div><p>根据该新规，主要在中国经营的公司在纳斯达克IPO，须满足最低2500万美元的公开发行募资额等要求；适用范围的具体界定与执行细节，以纳斯达克正式规则文本及其后续解释为准。</p><p>对发行人的含义有三层：</p><ol class="ts-pts"><li><b>其一</b>，过去数百万美元募资额的小型IPO路径明显收窄，以极小发行规模先挂牌、再图后续的策略不再可行；</li><li><b>其二</b>，2500万美元的发行规模要求发行人具备与之匹配的基本面、估值与机构认购能力，上市准备的质量门槛整体抬高；</li><li><b>其三</b>，融资策划必须更前置——上市前的私募轮次、基石投资者安排与发行结构设计，需要作为一个整体来规划，而不是临近申报再拼凑。</li></ol><p><strong>关键在于：新规筛掉的是准备不足的发行，而不是中型企业本身——把发行规模与基本面做扎实，通道依然是通的。</strong></p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、中型企业的现实选择框架</h2><div class="ts-lead"><span class="tag">结论先行</span><p>对净利润在百万美元量级的中型企业，真正的问题不是纳斯达克还是纽交所，而是如何达到并稳住纳斯达克的标准。</p></div><p>纽交所主板的利润与市值量级，对多数中型企业并不现实；纳斯达克资本市场层75万美元的净利润标准，叠加新规下的募资门槛，构成了更贴近实际的约束集合。选择框架可以概括为三问：第一问，行业可比公司聚集在哪一所——决定估值效率；第二问，未来三年的财务表现能稳定满足哪一层标准——决定申请层级与转层路径；第三问，发行规模能否满足并超过2500万美元门槛——决定发行方案与前置融资安排。</p><p>三问都有肯定答案的企业，纳斯达克资本市场层通常是性价比更高的起点；利润体量已达千万美元级、寻求蓝筹形象与配息型投资者的企业，才真正进入纽交所与纳斯达克更高层级之间的比较。</p><p>彤鼎集团在上市规划中的做法，是先用三年财务预测对照各层级标准逐项测算，再设计发行结构与融资节奏；华尔街彤鼎俱乐部也持续围绕美股上市标准、发行策略与上市后市值管理等主题，为企业家提供资本认知与资源对接。</p><p><strong>因此，纳斯达克与纽交所之争对多数中型企业是个伪命题——真命题是：用哪一层标准、多大的发行规模、什么样的时间表，走进美股市场。</strong></p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="beijing-exchange-path.html" style="color:#6b5426;font-weight:700;">北交所与专精特新上市路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hkex-listing-reform-2026.html" style="color:#6b5426;font-weight:700;">港交所上市机制改革：同股不同权门槛下调与保密递表全面放开</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="us-hk-a-share-choice.html" style="color:#6b5426;font-weight:700;">美股港股A股三选一决策指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hkex-return-mechanism-2026.html" style="color:#6b5426;font-weight:700;">港交所退回机制新规：上市申请被退回，全部中介机构名单将公开</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-dual-listing.html" style="color:#6b5426;font-weight:700;">中概股回港双重上市</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

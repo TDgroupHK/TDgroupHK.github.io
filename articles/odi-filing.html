@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ODI境外投资备案实操","inLanguage":"zh-CN","abstract":"ODI (Overseas Direct Investment) filing is the mandatory PRC procedure for a domestic corporate investor to invest abroad - incorporating an offshore entity, acquiring offshore equity, or injecting capital into an offshore subsidiary. Building a red-chip or Singapore-path listing structure requires it before any capital leaves the country. Three authorities are involved: the development and reform authority (project filing or approval), the commerce authority (Certificate of Overseas Investment), and the foreign exchange authority together with the remitting bank. The three tests are genuine commercial purpose, lawful and traceable source of funds, and an industry outside the prohibited and restricted catalogues. The process normally takes one to three months.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/odi-filing.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"ODI（境外直接投资）备案，是境内企业主体向境外投资时依法向发改部门与商务部门履行的备案或核准程序，并据此办理外汇登记与资金出境。搭建境外上市架构时，境内企业向BVI、开曼、香港、新加坡主体出资均须先完成ODI备案，整体周期通常1至3个月。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,47 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">跨境架构 STRUCTURING</div><h1>ODI境外投资备案实操</h1>
 <div class="sub">三个部门、三份文件、四步流程与合规要点</div><div class="en">ODI (Overseas Direct Investment) filing is the mandatory PRC procedure for a domestic corporate investor to invest abroad - incorporating an offshore entity, acquiring offshore equity, or injecting capital into an offshore subsidiary. Building a red-chip or Singapore-path listing structure requires it before any capital leaves the country. Three authorities are involved: the development and reform authority (project filing or approval), the commerce authority (Certificate of Overseas Investment), and the foreign exchange authority together with the remitting bank. The three tests are genuine commercial purpose, lawful and traceable source of funds, and an industry outside the prohibited and restricted catalogues. The process normally takes one to three months.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">ODI（Overseas Direct Investment，境外直接投资）备案，是指中国境内企业主体向境外进行直接投资——包括在境外新设公司、收购境外股权、向境外子公司注资——时，依法向发展改革部门与商务部门履行的备案或核准程序，并据此在银行办理外汇登记与资金出境。搭建红筹或新加坡路径的境外上市架构时，凡涉及境内企业向BVI、开曼、香港、新加坡等境外主体出资，均须先完成ODI备案，否则资金无法通过正规渠道出境。ODI涉及三条线、三份关键文件：发改部门的项目备案通知书或核准文件、商务部门的《企业境外投资证书》、以及外汇管理部门与银行办理的境外直接投资外汇登记。三项实质要件是：投资具有真实合理的商业目的、资金来源合法且可追溯、投资领域不属于禁止类且未落入限制类。整体周期通常为1至3个月，涉及核准类项目的时间更长。</div>
-<h2>一、ODI备案是什么，什么时候必须办</h2>
-<p><strong>结论先说：只要出资主体是境内企业、资金去向是境外主体，就需要ODI，与投资金额大小无关。</strong></p>
-<p>ODI备案是中国对境内主体境外直接投资的管理制度。按照境外投资管理的相关规定，境内企业在境外设立公司、收购境外企业股权、向已设立的境外公司增资，均属于境外直接投资，需依法向主管部门办理备案或核准，并在此基础上完成外汇登记。</p>
-<p>对拟境外上市的企业而言，ODI出现在架构搭建的第一步。无论是红筹架构中境内公司对香港或BVI主体的出资，还是新加坡路径中境内主体向新加坡运营公司注资，只要资金从境内企业账户流向境外主体，就必须先取得备案文件、再办理出境。</p>
-<p>需要区分的是投资主体：企业出资走ODI，自然人出资走个人境外投资外汇登记（即通常所称的37号文登记）。一个完整的境外上市架构中，两条线常常并行——创始人个人持股平台走37号文，境内经营主体的对外投资走ODI。<strong>本质上，ODI管的是企业的钱怎么合规出境，而不是架构长什么样。</strong></p>
-
-<h2>二、三个主管部门与三份关键文件</h2>
-<p><strong>结论先说：ODI不是一个窗口办完的事，三份文件有严格的先后顺序，缺任何一份，银行都不会放款。</strong></p>
-<p>第一条线是发展改革部门，负责境外投资项目的备案或核准。对非敏感行业、投资额在规定限额以下的一般项目实行备案制，流程相对简便，出具项目备案通知书；对敏感国家地区、敏感行业或大额投资实行核准制，审查更严格、周期更长。管辖层级取决于投资规模与项目性质，分为省级与国家级。</p>
-<p>第二条线是商务部门，负责境外投资的备案管理，审核通过后发放《企业境外投资证书》。这是ODI流程中最核心的成果文件，也是后续办理外汇出境手续的前提凭证。</p>
-<p>第三条线是外汇管理部门与银行。企业凭发改备案文件与境外投资证书，向银行申请办理境外直接投资项下的外汇登记，登记完成后方可通过合规渠道汇出投资款，完成对境外主体的实缴出资。</p>
-<p>顺序上通常是先发改、后商务、再外汇。<strong>关键在于，这三步是串联而非并联，任何一步材料返工都会顺延整体时间表，因此ODI必须在架构设计阶段就纳入时间规划，而不是等到要打款时再启动。</strong></p>
-
-<h2>三、四步办理流程</h2>
-<p><strong>结论先说：ODI备案的通过率，很大程度上取决于第一步材料准备的质量，尤其是可行性研究报告。</strong></p>
-<p>第一步，项目论证与材料准备。通常需要准备：境内投资主体的营业执照与经审计的财务报表、境外投资项目的可行性研究报告或投资说明、拟设立或收购的境外公司基本信息、投资金额与资金来源说明、董事会或股东会关于本次境外投资的决议、投资主体的股权结构图与最终受益人说明等。可行性研究报告需要说明投资的真实商业目的、投资规模的合理性与资金安排。</p>
-<p>第二步，发改部门备案。向有管辖权的发改部门提交境外投资项目备案申请。多数非敏感、限额以下项目在材料齐备后取得项目备案通知书。</p>
-<p>第三步，商务部门备案。向商务部门提交境外投资备案申请，审核通过后取得《企业境外投资证书》。</p>
-<p>第四步，外汇登记与资金出境。凭前述两份文件到银行办理境外直接投资外汇登记，完成后按登记的投资额度分次或一次性汇出资金，并在境外主体层面完成实缴手续。此后境外主体的重大变更（增资、减资、股权转让、注销等）还需办理相应的变更或注销登记，保持境内外信息一致。</p>
-
-<h2>四、四个必须守住的合规要点</h2>
-<p><strong>结论先说：ODI审查的重心不是形式材料，而是这笔钱出去干什么、从哪儿来、去哪个行业、与整体架构是否自洽。</strong></p>
-<p>要点一，真实合理的商业目的。可行性研究报告应清晰回答为什么要在此时、以此规模、向该地区进行这项投资，其商业逻辑是什么。为搭建境外上市架构而进行的ODI，应在材料中合理说明企业的资本化规划与境外主体在业务中的定位，避免出现仅为资金出境而设的表述。</p>
-<p>要点二，资金来源合法可追溯。用于境外投资的资金必须来源合法，并能提供自有资金、经营积累或合规融资的证明。来源不明的资金无法通过ODI渠道出境。</p>
-<p>要点三，避开禁止类与谨慎对待限制类。境外投资按行业分为鼓励类、限制类与禁止类。禁止类（如危害国家安全、违反国际义务的投资）不得开展；限制类（如房地产、酒店、影城、娱乐业、体育俱乐部，以及在境外设立无具体实业项目的股权投资基金或投资平台等）需履行核准程序且审查严格。搭建上市架构的持股主体设计，需要特别注意不被认定为无具体实业项目的境外投资平台。</p>
-<p>要点四，备案方案与上市架构协同。备案文件中的投资主体、投资路径、投资金额、持股比例，必须与最终的上市架构图一致。若备案后架构调整而未同步办理变更，会在上市审计与法律尽职调查阶段被作为问题事项提出。</p>
-
-<h2>五、四类常见难点与应对</h2>
-<p><strong>结论先说：ODI的难点集中在文本质量、时间预算与返程投资的路径设计三处。</strong></p>
-<p>难点一，可行性研究报告的撰写。报告需要在商业逻辑、财务测算与风险评估三方面自洽，并与企业实际经营数据吻合。报告质量直接影响备案效率，建议在具备实操经验的专业机构协助下完成。</p>
-<p>难点二，周期较长。ODI涉及多个部门串联审核，整体周期通常为1至3个月；若材料需要补正，或项目适用核准程序，时间将进一步延长。在境外上市整体时间表中，架构搭建与合规登记环节通常预留3至6个月，ODI是其中的主要占用项。</p>
-<p>难点三，大额投资适用核准。投资金额较大或涉及敏感行业、敏感地区的项目，需走核准程序而非备案程序，审查更为严格。企业应在方案设计阶段就依据投资规模判断适用程序，避免按备案预期安排时间表而实际落入核准。</p>
-<p>难点四，返程投资的特殊性。若境外资金最终以外商投资形式回到境内（典型的红筹结构），需同步考虑返程投资的合规性，确保资金出境、境外持股、返程设立或收购的整条路径在外汇与外商投资管理规则下均能被解释清楚，避免出现路径断点。</p>
-
-<h2>六、ODI与个人37号文登记的分工与协同</h2>
-<p><strong>结论先说：ODI管企业，37号文管个人，两者主体不同、程序不同，但必须在同一张架构图上对齐。</strong></p>
-<p>ODI备案适用于企业主体的境外投资；境内自然人在境外设立特殊目的公司（如个人持股平台BVI公司）并进行境外投融资、返程投资的，适用个人境外投资外汇登记，即通常所称的37号文登记，一般通过银行办理。</p>
-<p>在典型的境外上市架构中，创始人及核心团队以个人名义通过37号文登记设立BVI持股平台，持有开曼上市主体股权；若架构中还存在境内经营主体对境外实体的出资，该部分走ODI。两条线针对不同主体，但共同构成整个架构的资金合规路径，任何一端缺失，都会在上市审核中被认定为架构瑕疵。</p>
-<p>因此，合规出海的起点是把ODI与37号文一并纳入顶层架构设计，而不是在需要打款时才临时补办。彤鼎集团在为企业设计跨境上市架构时，会将ODI备案与个人层面的外汇登记同步纳入整体时间表；华尔街彤鼎俱乐部亦围绕跨境架构、备案要求与资金路径等议题，为有资本化规划的企业主提供资本认知与资源对接。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>ODI（Overseas Direct Investment，境外直接投资）备案，是指中国境内企业主体向境外进行直接投资——包括在境外新设公司、收购境外股权、向境外子公司注资——时，依法向发展改革部门与商务部门履行的备案或核准程序，并据此在银行办理外汇登记与资金出境。</p><p>搭建红筹或新加坡路径的境外上市架构时，凡涉及境内企业向BVI、开曼、香港、新加坡等境外主体出资，均须先完成ODI备案，否则资金无法通过正规渠道出境。ODI涉及三条线、三份关键文件：发改部门的项目备案通知书或核准文件、商务部门的《企业境外投资证书》、以及外汇管理部门与银行办理的境外直接投资外汇登记。</p><p>三项实质要件是：投资具有真实合理的商业目的、资金来源合法且可追溯、投资领域不属于禁止类且未落入限制类。整体周期通常为1至3个月，涉及核准类项目的时间更长。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">ODI备案是什么，什么时候必须办</a></li><li><a href="#sec-02">三个主管部门与三份关键文件</a></li><li><a href="#sec-03">四步办理流程</a></li><li><a href="#sec-04">四个必须守住的合规要点</a></li><li><a href="#sec-05">四类常见难点与应对</a></li><li><a href="#sec-06">ODI与个人37号文登记的分工与协同</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、ODI备案是什么，什么时候必须办</h2><p><strong>结论先说：只要出资主体是境内企业、资金去向是境外主体，就需要ODI，与投资金额大小无关。</strong></p><p>ODI备案是中国对境内主体境外直接投资的管理制度。按照境外投资管理的相关规定，境内企业在境外设立公司、收购境外企业股权、向已设立的境外公司增资，均属于境外直接投资，需依法向主管部门办理备案或核准，并在此基础上完成外汇登记。</p><p>对拟境外上市的企业而言，ODI出现在架构搭建的第一步。无论是红筹架构中境内公司对香港或BVI主体的出资，还是新加坡路径中境内主体向新加坡运营公司注资，只要资金从境内企业账户流向境外主体，就必须先取得备案文件、再办理出境。</p><p>需要区分的是投资主体：企业出资走ODI，自然人出资走个人境外投资外汇登记（即通常所称的37号文登记）。一个完整的境外上市架构中，两条线常常并行——创始人个人持股平台走37号文，境内经营主体的对外投资走ODI。<strong>本质上，ODI管的是企业的钱怎么合规出境，而不是架构长什么样。</strong></p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、三个主管部门与三份关键文件</h2><p><strong>结论先说：ODI不是一个窗口办完的事，三份文件有严格的先后顺序，缺任何一份，银行都不会放款。</strong></p><p>第一条线是发展改革部门，负责境外投资项目的备案或核准。对非敏感行业、投资额在规定限额以下的一般项目实行备案制，流程相对简便，出具项目备案通知书；对敏感国家地区、敏感行业或大额投资实行核准制，审查更严格、周期更长。管辖层级取决于投资规模与项目性质，分为省级与国家级。</p><p>第二条线是商务部门，负责境外投资的备案管理，审核通过后发放《企业境外投资证书》。这是ODI流程中最核心的成果文件，也是后续办理外汇出境手续的前提凭证。</p><p>第三条线是外汇管理部门与银行。企业凭发改备案文件与境外投资证书，向银行申请办理境外直接投资项下的外汇登记，登记完成后方可通过合规渠道汇出投资款，完成对境外主体的实缴出资。</p><p>顺序上通常是先发改、后商务、再外汇。<strong>关键在于，这三步是串联而非并联，任何一步材料返工都会顺延整体时间表，因此ODI必须在架构设计阶段就纳入时间规划，而不是等到要打款时再启动。</strong></p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、四步办理流程</h2><p><strong>结论先说：ODI备案的通过率，很大程度上取决于第一步材料准备的质量，尤其是可行性研究报告。</strong></p><p>第一步，项目论证与材料准备。通常需要准备：境内投资主体的营业执照与经审计的财务报表、境外投资项目的可行性研究报告或投资说明、拟设立或收购的境外公司基本信息、投资金额与资金来源说明、董事会或股东会关于本次境外投资的决议、投资主体的股权结构图与最终受益人说明等。可行性研究报告需要说明投资的真实商业目的、投资规模的合理性与资金安排。</p><p>第二步，发改部门备案。向有管辖权的发改部门提交境外投资项目备案申请。多数非敏感、限额以下项目在材料齐备后取得项目备案通知书。</p><p>第三步，商务部门备案。向商务部门提交境外投资备案申请，审核通过后取得《企业境外投资证书》。</p><p>第四步，外汇登记与资金出境。凭前述两份文件到银行办理境外直接投资外汇登记，完成后按登记的投资额度分次或一次性汇出资金，并在境外主体层面完成实缴手续。此后境外主体的重大变更（增资、减资、股权转让、注销等）还需办理相应的变更或注销登记，保持境内外信息一致。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、四个必须守住的合规要点</h2><p><strong>结论先说：ODI审查的重心不是形式材料，而是这笔钱出去干什么、从哪儿来、去哪个行业、与整体架构是否自洽。</strong></p><p>要点一，真实合理的商业目的。可行性研究报告应清晰回答为什么要在此时、以此规模、向该地区进行这项投资，其商业逻辑是什么。为搭建境外上市架构而进行的ODI，应在材料中合理说明企业的资本化规划与境外主体在业务中的定位，避免出现仅为资金出境而设的表述。</p><p>要点二，资金来源合法可追溯。用于境外投资的资金必须来源合法，并能提供自有资金、经营积累或合规融资的证明。来源不明的资金无法通过ODI渠道出境。</p><p>要点三，避开禁止类与谨慎对待限制类。境外投资按行业分为鼓励类、限制类与禁止类。禁止类（如危害国家安全、违反国际义务的投资）不得开展；限制类（如房地产、酒店、影城、娱乐业、体育俱乐部，以及在境外设立无具体实业项目的股权投资基金或投资平台等）需履行核准程序且审查严格。</p><p data-ts="1">搭建上市架构的持股主体设计，需要特别注意不被认定为无具体实业项目的境外投资平台。</p><p>要点四，备案方案与上市架构协同。备案文件中的投资主体、投资路径、投资金额、持股比例，必须与最终的上市架构图一致。若备案后架构调整而未同步办理变更，会在上市审计与法律尽职调查阶段被作为问题事项提出。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、四类常见难点与应对</h2><p><strong>结论先说：ODI的难点集中在文本质量、时间预算与返程投资的路径设计三处。</strong></p><p>难点一，可行性研究报告的撰写。报告需要在商业逻辑、财务测算与风险评估三方面自洽，并与企业实际经营数据吻合。报告质量直接影响备案效率，建议在具备实操经验的专业机构协助下完成。</p><p>难点二，周期较长。ODI涉及多个部门串联审核，整体周期通常为1至3个月；若材料需要补正，或项目适用核准程序，时间将进一步延长。在境外上市整体时间表中，架构搭建与合规登记环节通常预留3至6个月，ODI是其中的主要占用项。</p><p>难点三，大额投资适用核准。投资金额较大或涉及敏感行业、敏感地区的项目，需走核准程序而非备案程序，审查更为严格。企业应在方案设计阶段就依据投资规模判断适用程序，避免按备案预期安排时间表而实际落入核准。</p><p>难点四，返程投资的特殊性。若境外资金最终以外商投资形式回到境内（典型的红筹结构），需同步考虑返程投资的合规性，确保资金出境、境外持股、返程设立或收购的整条路径在外汇与外商投资管理规则下均能被解释清楚，避免出现路径断点。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、ODI与个人37号文登记的分工与协同</h2><p><strong>结论先说：ODI管企业，37号文管个人，两者主体不同、程序不同，但必须在同一张架构图上对齐。</strong></p><p>ODI备案适用于企业主体的境外投资；境内自然人在境外设立特殊目的公司（如个人持股平台BVI公司）并进行境外投融资、返程投资的，适用个人境外投资外汇登记，即通常所称的37号文登记，一般通过银行办理。</p><p>在典型的境外上市架构中，创始人及核心团队以个人名义通过37号文登记设立BVI持股平台，持有开曼上市主体股权；若架构中还存在境内经营主体对境外实体的出资，该部分走ODI。两条线针对不同主体，但共同构成整个架构的资金合规路径，任何一端缺失，都会在上市审核中被认定为架构瑕疵。</p><p>因此，合规出海的起点是把ODI与37号文一并纳入顶层架构设计，而不是在需要打款时才临时补办。彤鼎集团在为企业设计跨境上市架构时，会将ODI备案与个人层面的外汇登记同步纳入整体时间表；华尔街彤鼎俱乐部亦围绕跨境架构、备案要求与资金路径等议题，为有资本化规划的企业主提供资本认知与资源对接。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nominee-shareholding.html" style="color:#6b5426;font-weight:700;">股权代持与还原</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cross-border-funds.html" style="color:#6b5426;font-weight:700;">跨境资金出境合规</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="bvi-cayman-singapore.html" style="color:#6b5426;font-weight:700;">BVI开曼新加坡公司区别</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="circular-37.html" style="color:#6b5426;font-weight:700;">37号文登记指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="bvi-cayman-spv.html" style="color:#6b5426;font-weight:700;">BVI与开曼SPV设立运用</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

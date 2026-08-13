@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Pre-IPO融资谈判策略","inLanguage":"zh-CN","abstract":"Negotiating a Pre-IPO round: valuation anchoring, liquidation preference, ratchets and the terms that decide control.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/pre-ipo-negotiation.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"Pre-IPO融资谈判策略。Pre-IPO融资谈判策略完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,53 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">融资条款 TERMS</div><h1>Pre-IPO融资谈判策略</h1>
 <div class="sub"></div><div class="en">Negotiating a Pre-IPO round: valuation anchoring, liquidation preference, ratchets and the terms that decide control.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">Pre-IPO轮（通常是企业启动上市辅导前后的最后一轮机构融资）的谈判难度最高，因为此时投资人议价能力最强（企业急需资金推进上市）、条款最复杂（涉及Pre-IPO专属条款如棘轮条款、强制回购等）、估值博弈最激烈（上市前最后一次定价机会）。Pre-IPO谈判的5大核心议题依次是：估值（Pre-IPO投资人与IPO估值的价差保障）、对赌条款（上市时间和业绩双重对赌）、优先清算权、强制回购条款、信息权与审批权。其中估值和对赌条款是最核心的两个博弈点，也是最容易签出不合理条款的地方。</div>
-<h2>一、Pre-IPO轮的特殊性</h2>
-<p>Pre-IPO轮与普通VC轮次有几个本质区别，必须在谈判前充分理解。</p>
-<p>第一，投资人的退出路径更清晰。Pre-IPO投资人进来就是为了在IPO时退出，他们对上市时间线和上市后股价非常敏感，这会让他们在条款上格外强硬（需要锁定退出收益的保障机制）。</p>
-<p>第二，杠杆更多在投资人一侧。企业在Pre-IPO阶段通常已经花了大量时间和金钱启动上市辅导，此时如果融资失败，前期投入可能大量损失。这让企业方的谈判底气相对较弱。</p>
-<p>第三，条款的长期影响更大。Pre-IPO轮的条款会直接反映在招股书中（SEC要求披露所有重要融资协议的关键条款），而且投资人持有的股份在上市时会被公众市场看到，任何过于苛刻的条款都可能引发公众投资人对公司治理的担忧。</p>
-<h2>二、估值谈判策略</h2>
-<h3>Pre-IPO折扣的合理范围</h3>
-<p>Pre-IPO投资人通常要求以预期IPO估值的一定折扣进行投资，作为对锁定期和流动性风险的补偿。合理的Pre-IPO折扣通常在20%至40%之间（即Pre-IPO估值约为预期IPO估值的60%至80%）。超过40%的折扣（即Pre-IPO估值低于预期IPO估值的60%）通常意味着企业方让步过多，或者企业当前估值水平过高。</p>
-<h3>估值基准的建立</h3>
-<p>Pre-IPO估值谈判的关键是建立合理的估值锚点。方法：选取3至5家已在目标交易所上市的同类公司（行业相近、规模相当）的当前估值倍数（通常是PS或PE）；按照这些可比公司的中位数估值倍数，结合企业的预期财务数据，计算出合理的IPO估值区间；在此基础上按照协商的折扣确定Pre-IPO估值。</p>
-<p>重要：估值基准必须基于可验证的公开市场数据，不能凭空出一个高估值然后要求投资人接受。合理的估值基准不只有利于与投资人的谈判，也为后续的IPO路演奠定了可信的估值逻辑基础。</p>
-<h3>估值与稀释比例的协同</h3>
-<p>企业方在谈判估值时，应该同时计算不同估值下对应的稀释比例，确保融资完成后创始人的持股比例仍然在可接受的范围内，且满足纳斯达克对上市时公众持股比例的要求。</p>
-<h2>三、对赌条款谈判策略</h2>
-<h3>Pre-IPO对赌的常见形式</h3>
-<p>上市时间对赌：如企业未能在约定时间（通常18至36个月）内完成IPO，投资人有权要求回购股份或获得额外股权补偿。</p>
-<p>上市估值对赌：如果IPO估值低于Pre-IPO估值的一定倍数（如IPO估值低于Pre-IPO估值的150%），投资人获得额外股权补偿。</p>
-<p>业绩对赌：如企业在约定年度的业绩未达到预设目标，投资人获得额外股权补偿或要求创始人回购部分股份。</p>
-<h3>对赌谈判的5个原则</h3>
-<p>原则1：坚持主体是公司而非创始人个人。对赌义务由公司承担（如需向投资人增发股份），而非由创始人个人用现金回购，可以将对赌触发时的财务压力降到最低。</p>
-<p>原则2：上市时间线对赌必须留有充足余量。正常新加坡路径上市需要12至18个月，合理的对赌时间线应该是至少36个月，给市场环境变化留出足够缓冲。</p>
-<p>原则3：设定客观免责条款。如果上市未能按时完成是因为监管政策变化、市场整体崩溃（如大盘下跌超过30%）等不可抗力因素，应当免除或延期执行对赌义务。</p>
-<p>原则4：对赌补偿上限。约定对赌触发后创始人需要补偿投资人的最大股权比例（如不超过10%），避免无上限的对赌成为无底洞。</p>
-<p>原则5：对等条款保护。如果投资人要求下行对赌（未达预期就补偿），创始人应该争取上行对赌（超额完成就从投资人处收回一定股权），保持风险对等。</p>
-<h2>四、其他关键条款谈判要点</h2>
-<h3>优先清算权</h3>
-<p>坚持非参与型1倍清算优先权（1x Non-Participating Liquidation Preference）。参考第30篇优先股条款详解，拒绝参与型清算优先权和超过1倍的多倍清算优先权。</p>
-<h3>强制回购权</h3>
-<p>坚决拒绝或严格限制：任何形式的创始人个人承担回购义务的条款；强制回购的触发条件（如仅因未能上市就触发）不加任何免责情形的条款；回购价格超过原始投资额加合理年化收益的条款。</p>
-<h3>信息权与审批权</h3>
-<p>投资人通常要求信息权（定期获得财务报告）和重大决策审批权（重大收购、关联交易等需要投资人同意）。信息权通常可以接受；审批权应该尽量限制在真正重大的事项（如出售公司主要资产），避免投资人对日常经营决策的干预。</p>
-<h2>五、谈判的底线与让步策略</h2>
-<h3>明确不可让步的底线</h3>
-<p>在谈判开始前，内部明确以下底线：估值的最低可接受值（低于这个估值宁可不接受这笔投资）；对赌条款中不可接受的安排（如创始人个人回购义务）；参与型清算优先权的拒绝立场。这些底线一旦确定，不要在谈判压力下动摇。</p>
-<h3>有价值的让步点</h3>
-<p>在坚守底线的同时，主动在以下方面表达灵活性，换取投资人在核心条款上的让步：信息披露的频率和深度（投资人通常重视这一点但对其他条款影响有限）；董事会观察员席位（给投资人观察员而非正式董事席位，让其有参与感但无投票权）；优先购买权（下轮融资时投资人有权按持股比例继续跟投）。</p>
-<h3>利用竞争压力</h3>
-<p>如果有多家机构同时在谈判，适度让各方知道存在竞争，可以有效压缩条款让步空间。但不要过度使用这一策略，在尽调阶段保持对潜在投资人的一定保密性，避免泄露竞争细节损害任何一方的谈判诚意。</p>
-<h3>结语：Pre-IPO是决定上市后股权结构的最后一关</h3>
-<p>Pre-IPO轮融资谈判的质量，直接决定了公司上市时的股权结构、创始人的实际持股比例、以及挂牌后投资人结构是否有利于股价长期表现。</p>
-<p>彤鼎集团（香港）有限公司在为企业提供Pre-IPO融资引荐的同时，也提供Term Sheet的专业审阅和谈判策略支持，确保企业在获得所需资金的同时，不在条款上埋下影响长期发展的隐患。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p>
-<p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>Pre-IPO轮（通常是企业启动上市辅导前后的最后一轮机构融资）的谈判难度最高，因为此时投资人议价能力最强（企业急需资金推进上市）、条款最复杂（涉及Pre-IPO专属条款如棘轮条款、强制回购等）、估值博弈最激烈（上市前最后一次定价机会）。</p><p>Pre-IPO谈判的5大核心议题依次是：估值（Pre-IPO投资人与IPO估值的价差保障）、对赌条款（上市时间和业绩双重对赌）、优先清算权、强制回购条款、信息权与审批权。其中估值和对赌条款是最核心的两个博弈点，也是最容易签出不合理条款的地方。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">Pre-IPO轮的特殊性</a></li><li><a href="#sec-02">估值谈判策略</a></li><li><a href="#sec-03">对赌条款谈判策略</a></li><li><a href="#sec-04">其他关键条款谈判要点</a></li><li><a href="#sec-05">谈判的底线与让步策略</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、Pre-IPO轮的特殊性</h2><p>Pre-IPO轮与普通VC轮次有几个本质区别，必须在谈判前充分理解。</p><p>第一，投资人的退出路径更清晰。Pre-IPO投资人进来就是为了在IPO时退出，他们对上市时间线和上市后股价非常敏感，这会让他们在条款上格外强硬（需要锁定退出收益的保障机制）。</p><p>第二，杠杆更多在投资人一侧。企业在Pre-IPO阶段通常已经花了大量时间和金钱启动上市辅导，此时如果融资失败，前期投入可能大量损失。这让企业方的谈判底气相对较弱。</p><p>第三，条款的长期影响更大。Pre-IPO轮的条款会直接反映在招股书中（SEC要求披露所有重要融资协议的关键条款），而且投资人持有的股份在上市时会被公众市场看到，任何过于苛刻的条款都可能引发公众投资人对公司治理的担忧。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、估值谈判策略</h2><p><h3>Pre-IPO折扣的合理范围</h3></p><p>Pre-IPO投资人通常要求以预期IPO估值的一定折扣进行投资，作为对锁定期和流动性风险的补偿。合理的Pre-IPO折扣通常在20%至40%之间（即Pre-IPO估值约为预期IPO估值的60%至80%）。</p><p data-ts="1">超过40%的折扣（即Pre-IPO估值低于预期IPO估值的60%）通常意味着企业方让步过多，或者企业当前估值水平过高。</p><p><h3>估值基准的建立</h3></p><p>Pre-IPO估值谈判的关键是建立合理的估值锚点。方法：选取3至5家已在目标交易所上市的同类公司（行业相近、规模相当）的当前估值倍数（通常是PS或PE）；按照这些可比公司的中位数估值倍数，结合企业的预期财务数据，计算出合理的IPO估值区间；在此基础上按照协商的折扣确定Pre-IPO估值。</p><p>重要：估值基准必须基于可验证的公开市场数据，不能凭空出一个高估值然后要求投资人接受。合理的估值基准不只有利于与投资人的谈判，也为后续的IPO路演奠定了可信的估值逻辑基础。</p><p><h3>估值与稀释比例的协同</h3></p><p>企业方在谈判估值时，应该同时计算不同估值下对应的稀释比例，确保融资完成后创始人的持股比例仍然在可接受的范围内，且满足纳斯达克对上市时公众持股比例的要求。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、对赌条款谈判策略</h2><p><h3>Pre-IPO对赌的常见形式</h3></p><p>上市时间对赌：如企业未能在约定时间（通常18至36个月）内完成IPO，投资人有权要求回购股份或获得额外股权补偿。</p><p>上市估值对赌：如果IPO估值低于Pre-IPO估值的一定倍数（如IPO估值低于Pre-IPO估值的150%），投资人获得额外股权补偿。</p><p>业绩对赌：如企业在约定年度的业绩未达到预设目标，投资人获得额外股权补偿或要求创始人回购部分股份。</p><p><h3>对赌谈判的5个原则</h3></p><p>原则1：坚持主体是公司而非创始人个人。对赌义务由公司承担（如需向投资人增发股份），而非由创始人个人用现金回购，可以将对赌触发时的财务压力降到最低。</p><p>原则2：上市时间线对赌必须留有充足余量。正常新加坡路径上市需要12至18个月，合理的对赌时间线应该是至少36个月，给市场环境变化留出足够缓冲。</p><p>原则3：设定客观免责条款。如果上市未能按时完成是因为监管政策变化、市场整体崩溃（如大盘下跌超过30%）等不可抗力因素，应当免除或延期执行对赌义务。</p><p>原则4：对赌补偿上限。约定对赌触发后创始人需要补偿投资人的最大股权比例（如不超过10%），避免无上限的对赌成为无底洞。</p><p>原则5：对等条款保护。如果投资人要求下行对赌（未达预期就补偿），创始人应该争取上行对赌（超额完成就从投资人处收回一定股权），保持风险对等。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、其他关键条款谈判要点</h2><p><h3>优先清算权</h3></p><p>坚持非参与型1倍清算优先权（1x Non-Participating Liquidation Preference）。参考第30篇优先股条款详解，拒绝参与型清算优先权和超过1倍的多倍清算优先权。</p><p><h3>强制回购权</h3></p><p>坚决拒绝或严格限制：任何形式的创始人个人承担回购义务的条款；强制回购的触发条件（如仅因未能上市就触发）不加任何免责情形的条款；回购价格超过原始投资额加合理年化收益的条款。</p><p><h3>信息权与审批权</h3></p><p>投资人通常要求信息权（定期获得财务报告）和重大决策审批权（重大收购、关联交易等需要投资人同意）。信息权通常可以接受；审批权应该尽量限制在真正重大的事项（如出售公司主要资产），避免投资人对日常经营决策的干预。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、谈判的底线与让步策略</h2><p><h3>明确不可让步的底线</h3></p><p>在谈判开始前，内部明确以下底线：估值的最低可接受值（低于这个估值宁可不接受这笔投资）；对赌条款中不可接受的安排（如创始人个人回购义务）；参与型清算优先权的拒绝立场。这些底线一旦确定，不要在谈判压力下动摇。</p><p><h3>有价值的让步点</h3></p><p>在坚守底线的同时，主动在以下方面表达灵活性，换取投资人在核心条款上的让步：信息披露的频率和深度（投资人通常重视这一点但对其他条款影响有限）；董事会观察员席位（给投资人观察员而非正式董事席位，让其有参与感但无投票权）；优先购买权（下轮融资时投资人有权按持股比例继续跟投）。</p><p><h3>利用竞争压力</h3></p><p>如果有多家机构同时在谈判，适度让各方知道存在竞争，可以有效压缩条款让步空间。但不要过度使用这一策略，在尽调阶段保持对潜在投资人的一定保密性，避免泄露竞争细节损害任何一方的谈判诚意。</p><p><h3>结语：Pre-IPO是决定上市后股权结构的最后一关</h3></p><p>Pre-IPO轮融资谈判的质量，直接决定了公司上市时的股权结构、创始人的实际持股比例、以及挂牌后投资人结构是否有利于股价长期表现。</p><p>彤鼎集团（香港）有限公司在为企业提供Pre-IPO融资引荐的同时，也提供Term Sheet的专业审阅和谈判策略支持，确保企业在获得所需资金的同时，不在条款上埋下影响长期发展的隐患。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p><p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pre-ipo-financing.html" style="color:#6b5426;font-weight:700;">Pre-IPO融资谈判要点</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="option-pool.html" style="color:#6b5426;font-weight:700;">期权池设计完整指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="liquidation-preference.html" style="color:#6b5426;font-weight:700;">优先清算权怎么谈：条款清单里最容易被忽略的一条</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pre-ipo-risk.html" style="color:#6b5426;font-weight:700;">Pre-IPO投资的机会与风险</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="vam-clause-risk.html" style="color:#6b5426;font-weight:700;">融资对赌条款风险</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

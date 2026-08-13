@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"香港18C特专科技上市：已上市企业揭示的门槛与打法","inLanguage":"zh-CN","abstract":"As of 30 June 2026, 21 specialist technology companies had listed under Chapter 18C, with 13 new listings in the first half of 2026 raising HKD 29.823 billion. This article sets out the eligible sectors, the two thresholds for commercialised and pre-commercialised applicants, the sophisticated independent investor requirement and post-listing restrictions.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/hk-18c-specialist-tech.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"截至2026年6月30日，按18C规则上市的特专科技公司累计21家；2026年上半年新增13家、募资298.23亿港元，占当期新股数量14.9%、募资总额14.2%。本文解析18C的适用范围、已商业化与未商业化两套门槛、领航资深独立投资者要求与上市后约束。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,63 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市路径 LISTING PATH</div><h1>香港18C特专科技上市：已上市企业揭示的门槛与打法</h1>
 <div class="sub">AI与硬科技成为核心主线的通道解析</div><div class="en">As of 30 June 2026, 21 specialist technology companies had listed under Chapter 18C, with 13 new listings in the first half of 2026 raising HKD 29.823 billion. This article sets out the eligible sectors, the two thresholds for commercialised and pre-commercialised applicants, the sophisticated independent investor requirement and post-listing restrictions.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">香港18C特专科技章，是指香港交易所主板上市规则中专为未盈利、甚至未商业化的特专科技公司设置的独立上市通道，自2023年3月31日起施行，覆盖新一代信息技术、先进硬件及软件、先进材料、新能源及节能环保、新食品及农业技术五大行业。截至2026年6月30日，通过该章节完成上市的特专科技公司累计已达21家；仅2026年上半年就新增13家，合计募资298.23亿港元，占同期香港新股数量87家的14.9%、占同期IPO募资总额2101.95亿港元的14.2%。18C的核心逻辑，是用市值、研发投入强度与资深独立投资者的真金白银，替代传统的盈利与收入门槛，并以更长的禁售期约束控股股东与关键人士。因此，18C不是一条降低要求的捷径，本质上是一条把审核重心从财务报表转移到技术实力与机构定价能力上的通道。</div>
-<h2>一、18C是什么：一条为未盈利硬科技企业单独开辟的通道</h2>
-<p>结论先说：18C解决的是一个具体问题——有技术、有研发投入、有明确产业价值，但还没有盈利甚至还没有收入的科技企业，如何进入公开市场融资。</p>
-<p>香港交易所主板上市规则的传统财务测试，围绕盈利、收入与现金流展开，本质上是为已经跑通商业模式的企业设计的。这套标准对处在长研发周期的硬科技企业并不友好：一家做先进材料或半导体设备的公司，可能需要五到八年的持续投入才能进入量产爬坡阶段，在此之前它无法满足任何一项传统财务测试，却恰恰是最需要资本的阶段。</p>
-<p>18C的解法是替换评价坐标系。它不再问企业赚了多少钱，而是问三件事：市值有多大，研发投入占多大比例，有没有专业的机构投资者愿意在上市前用真金白银投票。这三项构成了18C的评价三角。</p>
-<p>适用范围上，18C明确划定五大特专科技行业：新一代信息技术、先进硬件及软件、先进材料、新能源及节能环保、新食品及农业技术。行业清单并非封闭，交易所保留对新兴领域的认定弹性，但企业若不落在上述范围内，原则上不能援引18C申请上市。</p>
-<p>需要区分清楚的是，18C与既有的18A生物科技章、18B特殊目的收购公司章并列，共同构成了香港主板在传统8A章财务测试之外的多元入口，再加上19C双重主要上市章节，形成了一套按企业形态分流的制度组合。因此，选择18C的首要动作不是准备材料，关键在于先确认自己是否真的落在这五个行业口径之内。</p>
-<h2>二、已商业化与未商业化：两套完全不同的门槛</h2>
-<p>结论先说：18C把申请人分成两类，两类的市值门槛、研发比例要求、禁售约束全都不同，混淆这一分类会导致整个申报方案的返工。</p>
-<p><strong>分类的分界线是收入</strong></p>
-<p>18C以最近一个经审计会计年度的经营收益是否达到2.5亿港元，作为区分已商业化公司与未商业化公司的标准。达到该线的属于已商业化公司，未达到的属于未商业化公司。这条线看似只是一个数字，实际决定了后续几乎所有条款的适用版本。</p>
-<p><strong>市值门槛的分档与阶段性下调</strong></p>
-<p>18C初始设定的上市时预期市值要求，为已商业化公司不低于60亿港元、未商业化公司不低于100亿港元。这一门槛在实施后经历了阶段性调整，交易所在2024年9月起的一段窗口期内将两档分别下调至40亿港元与80亿港元，以适应市场估值环境的变化。企业在测算自身是否够线时，应以申报当时生效的规则文本为准，而不是套用某一时点的旧数字。</p>
-<p><strong>门槛差异背后的监管逻辑</strong></p>
-<p>未商业化公司的市值要求高于已商业化公司，表面上看是更严，实质上是一种风险对价：一家还没有产生规模化收入的企业，公开市场无法用收入验证其商业模式，只能用更高的市值门槛筛掉体量过小、抗风险能力不足的申请人。因此，未商业化公司走18C，本质上是在用估值高度换取上市资格。</p>
-<p>实务中最常见的误判，是企业按当期收入接近2.5亿港元就默认自己属于已商业化公司。收益的确认口径、是否属于持续经营业务、是否包含一次性或非经常性收入，都会被申报会计师和交易所逐项检视。关键在于把这条线的口径在项目启动阶段就与申报会计师锁定，而不是等到问询阶段再来调整。</p>
-<h2>三、研发投入：18C真正的硬指标</h2>
-<p>结论先说：在18C的三角评价体系中，市值可以被市场情绪影响，投资者可以被商务安排影响，唯有研发投入占比是一个无法临时包装的历史事实。</p>
-<p><strong>研发开支比例的三档要求</strong></p>
-<p>18C要求申请人的研发开支占总营运开支达到规定比例，并按商业化程度分档：已商业化公司的比例要求为不低于15%；未商业化公司则更高，其中年收益在1.5亿港元至2.5亿港元区间的，要求不低于30%；年收益低于1.5亿港元的，要求不低于50%。分档逻辑清晰——收入越少，越需要用研发强度证明企业确实在做技术而不是在等风口。</p>
-<p><strong>研发年限与持续性</strong></p>
-<p>比例之外，18C还要求申请人已从事相关研发活动至少三个会计年度，且上述比例需要在多个年度中持续满足，而非某一年的突击投入。这意味着企业若在申报前一年才把费用重新归集为研发开支，几乎必然在审核中被穿透。</p>
-<p><strong>研发开支的归集口径是核心风险点</strong></p>
-<p>什么算研发开支，什么算生产成本或销售费用，在会计准则下存在判断空间。实务中的高频问题包括：工程师薪酬在研发与量产支持之间的分摊、试产阶段材料投入的资本化与费用化选择、委外开发费用的确认时点、以及研发相关的股份支付是否计入。这些判断一旦在申报前被调整，就会同时改变分子与分母，进而改变比例结论。因此，研发口径的确定必须由申报会计师在尽职调查早期介入，并保留完整的工时记录、项目立项文件与验收凭证作为支撑。</p>
-<p>从已完成上市的21家特专科技公司看，研发投入强度长期显著高于同业，是一个共同特征。这类企业往往在申请上市的三到五年前就已建立规范的研发项目管理制度，而不是为了上市临时补建。本质上，18C考察的不是研发数字，而是企业是否真的以技术为主线组织经营。</p>
-<h2>四、领航资深独立投资者：把定价权前置交给市场</h2>
-<p>结论先说：这是18C与所有传统上市通道最本质的差别——监管把对企业价值的判断，部分外包给了愿意提前下注的专业机构。</p>
-<p><strong>制度设计的出发点</strong></p>
-<p>对于一家没有盈利、甚至没有收入的公司，审核机构无法用财务模型判断其价值。18C的处理方式是引入资深独立投资者概念：如果有成熟的专业机构在上市之前就已经以市场化价格投资并长期持有，说明这家企业的技术与商业前景已经通过了一轮真实的市场检验。</p>
-<p><strong>领航资深独立投资者的具体要求</strong></p>
-<p>18C要求申请人在上市申请时须已获得至少两名领航资深独立投资者的投资。所谓领航，指该投资者在上市申请日之前的至少12个月期间一直持有申请人股份，且其持股比例或投资金额达到规定水平——通常表述为持有申请人已发行股本一定比例以上，或在该期间内投资金额达到相当规模。除领航投资者外，全体资深独立投资者在上市时合计须持有申请人一定比例的已发行股本，且该比例按上市时市值分档递减：市值越高，要求的合计持股比例越低。</p>
-<p><strong>独立性是审核焦点</strong></p>
-<p>资深独立投资者必须与申请人及其核心关联方相互独立。实务中容易被质疑的情形包括：投资方与创始人存在共同控制关系、投资款项存在回流安排、投资协议中包含保底或回购条款使其实质上不承担股权风险。任何一项被认定成立，该投资者都可能不被计入。需要特别提示的是，一切带有保底性质的安排，不仅无助于满足18C要求，反而会直接损害其独立性认定。</p>
-<p>对企业而言，这一条款的实际影响是把融资节奏前移。企业必须在计划上市的至少一年以前就完成关键轮次融资，并且在选择投资人时把机构资质与持股稳定性放在与估值同等重要的位置。因此，18C事实上要求企业提前一到两年就开始规划股东名册，关键在于把上市方案与融资方案作为同一件事来设计。</p>
-<h2>五、禁售期与上市后约束：18C的对价</h2>
-<p>结论先说：18C在入口端放宽了财务要求，就必然在出口端收紧减持自由，这是一组配对的制度安排。</p>
-<p>禁售安排的基本结构是分层与分类：控股股东、关键人士（通常包括创始人、执行董事及对技术具有决定性作用的核心人员）与领航资深独立投资者，三类主体分别适用不同的禁售期；同时，未商业化公司的禁售约束严于已商业化公司。总体而言，控股股东自上市之日起须经历完整的禁售期，其后还有一段限制处置期，期间即使可以出售也不得因此丧失控股地位；关键人士的安排与之类似但时长较短；领航资深独立投资者亦被纳入禁售范围，这一点区别于传统上市中前轮投资者上市即可流通的惯例。企业在设计员工激励与老股东退出方案时，应以申报当时生效的规则文本逐条核对具体月数。</p>
-<p>更长的禁售期带来两项直接后果。其一是流通盘偏小：上市初期可自由交易的股份比例低于传统IPO，股价对增量资金与情绪的敏感度更高，波动幅度往往更大。其二是市值管理的时间表被拉长：企业无法依靠早期股东换手来形成交易活跃度，必须靠持续的业务里程碑披露来吸引长期资金。</p>
-<p>此外，18C上市公司在上市后仍需持续披露研发进展、关键技术节点与商业化进度。对未商业化公司而言，这类披露构成投资者判断的主要依据，披露质量直接影响估值稳定性。因此，走18C的企业必须在上市前就建立起能够长期支撑技术披露的内部信息管理体系，本质上是把研发管理提升为一项公开市场能力。</p>
-<h2>六、21家企业揭示的三条打法</h2>
-<p>结论先说：从截至2026年6月30日累计21家特专科技公司的上市实践中，可以归纳出三条具有共性的操作路径。</p>
-<p><strong>其一：把估值锚点建立在产业地位而非财务预测上</strong></p>
-<p>由于缺乏盈利数据，18C企业的估值高度依赖投资者对其技术卡位与产业链地位的认知。已完成上市的案例中，能够清晰说明自身在某一细分技术环节不可替代性的企业，更容易在簿记建档阶段获得机构订单。相反，把叙事重心放在未来三年收入预测上的企业，往往在问询阶段就要承受更多质疑。</p>
-<p><strong>其二：把资深独立投资者的引入提前到上市申请的12个月以上</strong></p>
-<p>领航资深独立投资者的12个月持股期要求，意味着任何临时性的引资安排都无法满足条件。实践中，节奏把握较好的企业通常在提交申请前的18个月至24个月即完成关键轮次，为持股期留出充分冗余，同时避免在上市窗口临近时被动接受不利估值。</p>
-<p><strong>其三：把AI与硬科技的主线叙事做实</strong></p>
-<p>2026年上半年13家新上市的特专科技公司，募资规模合计298.23亿港元，人工智能与硬科技构成核心主线。这一结构说明，资金正在向具备算力、算法、先进制造与关键材料能力的企业集中。企业若处在这条主线上，应在招股文件中把技术指标、专利结构、客户验证进度量化到可比对的程度；若不在这条主线上，则应更审慎评估18C是否为最优通道。</p>
-<p>还需要提示一个容易被忽略的事实：2026年上半年香港新股数量为87家，特专科技公司占14.9%，即绝大多数发行人仍走传统章节。18C是一条重要通道，但它从来不是多数企业的通道。</p>
-<h2>七、什么样的企业适合走18C，什么样的不适合</h2>
-<p>结论先说：适配判断可以压缩为四个问题，任何一项答案为否，都应重新评估通道选择。</p>
-<p>首要问题：企业是否明确落在五大特专科技行业之内，并能用产品形态、技术路线与客户结构清晰论证。若需要靠概念包装才能勉强归类，审核阶段几乎必然被拆穿。</p>
-<p>其次：企业的上市时预期市值是否具备达到规则门槛的现实基础。判断依据应当是最近一轮市场化融资的投后估值与可比公司的估值区间，而非管理层的期望值。若差距在两倍以上，更务实的选择是先完成一轮融资再申报。</p>
-<p>再次：企业的研发开支占总营运开支比例，在过去三个会计年度是否稳定满足对应档位要求。这一项无法在申报期补救，是最应在项目启动阶段就完成自查的指标。</p>
-<p>最后：股东名册中是否已有符合独立性要求、且持股满12个月的专业机构投资者。若尚无，企业需要的不是上市顾问，而是先做一轮结构化的融资安排。</p>
-<p>相应地，有四类企业不适合走18C：一是收入与利润已经稳定、完全可以满足主板8A章财务测试的企业，走18C反而要承受更长的禁售期与更严的持续披露义务；二是市值明显不足、需要靠激进假设才能触线的企业；三是研发投入比例不达标、且短期内无法通过真实业务调整达标的企业；四是核心股东希望上市后短期内退出的企业，18C的禁售安排与这一诉求直接冲突。</p>
-<p>华尔街彤鼎俱乐部围绕18C通道与其他境外上市路径的比较，为企业家组织闭门交流与专业机构对接，其中涉及Pre-IPO项目的部分仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。本质上，18C的价值不在于门槛更低，而在于它为一类特定形态的企业提供了在盈利之前进入公开市场的合法通道；关键在于企业是否真的属于这一类。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>香港18C特专科技章，是指香港交易所主板上市规则中专为未盈利、甚至未商业化的特专科技公司设置的独立上市通道，自2023年3月31日起施行，覆盖新一代信息技术、先进硬件及软件、先进材料、新能源及节能环保、新食品及农业技术五大行业。</p><p>截至2026年6月30日，通过该章节完成上市的特专科技公司累计已达21家；仅2026年上半年就新增13家，合计募资298.23亿港元，占同期香港新股数量87家的14.9%、占同期IPO募资总额2101.95亿港元的14.2%。</p><p>18C的核心逻辑，是用市值、研发投入强度与资深独立投资者的真金白银，替代传统的盈利与收入门槛，并以更长的禁售期约束控股股东与关键人士。因此，18C不是一条降低要求的捷径，本质上是一条把审核重心从财务报表转移到技术实力与机构定价能力上的通道。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">18C是什么：一条为未盈利硬科技企业单独开辟的通道</a></li><li><a href="#sec-02">已商业化与未商业化：两套完全不同的门槛</a></li><li><a href="#sec-03">研发投入：18C真正的硬指标</a></li><li><a href="#sec-04">领航资深独立投资者：把定价权前置交给市场</a></li><li><a href="#sec-05">禁售期与上市后约束：18C的对价</a></li><li><a href="#sec-06">21家企业揭示的三条打法</a></li><li><a href="#sec-07">什么样的企业适合走18C，什么样的不适合</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、18C是什么：一条为未盈利硬科技企业单独开辟的通道</h2><p>结论先说：18C解决的是一个具体问题——有技术、有研发投入、有明确产业价值，但还没有盈利甚至还没有收入的科技企业，如何进入公开市场融资。</p><p>香港交易所主板上市规则的传统财务测试，围绕盈利、收入与现金流展开，本质上是为已经跑通商业模式的企业设计的。这套标准对处在长研发周期的硬科技企业并不友好：一家做先进材料或半导体设备的公司，可能需要五到八年的持续投入才能进入量产爬坡阶段，在此之前它无法满足任何一项传统财务测试，却恰恰是最需要资本的阶段。</p><p>18C的解法是替换评价坐标系。它不再问企业赚了多少钱，而是问三件事：市值有多大，研发投入占多大比例，有没有专业的机构投资者愿意在上市前用真金白银投票。这三项构成了18C的评价三角。</p><p>适用范围上，18C明确划定五大特专科技行业：新一代信息技术、先进硬件及软件、先进材料、新能源及节能环保、新食品及农业技术。行业清单并非封闭，交易所保留对新兴领域的认定弹性，但企业若不落在上述范围内，原则上不能援引18C申请上市。</p><p>需要区分清楚的是，18C与既有的18A生物科技章、18B特殊目的收购公司章并列，共同构成了香港主板在传统8A章财务测试之外的多元入口，再加上19C双重主要上市章节，形成了一套按企业形态分流的制度组合。</p><p data-ts="1">因此，选择18C的首要动作不是准备材料，关键在于先确认自己是否真的落在这五个行业口径之内。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、已商业化与未商业化：两套完全不同的门槛</h2><p>结论先说：18C把申请人分成两类，两类的市值门槛、研发比例要求、禁售约束全都不同，混淆这一分类会导致整个申报方案的返工。</p><p><strong>分类的分界线是收入</strong></p><p>18C以最近一个经审计会计年度的经营收益是否达到2.5亿港元，作为区分已商业化公司与未商业化公司的标准。达到该线的属于已商业化公司，未达到的属于未商业化公司。这条线看似只是一个数字，实际决定了后续几乎所有条款的适用版本。</p><p><strong>市值门槛的分档与阶段性下调</strong></p><p>18C初始设定的上市时预期市值要求，为已商业化公司不低于60亿港元、未商业化公司不低于100亿港元。这一门槛在实施后经历了阶段性调整，交易所在2024年9月起的一段窗口期内将两档分别下调至40亿港元与80亿港元，以适应市场估值环境的变化。</p><p data-ts="1">企业在测算自身是否够线时，应以申报当时生效的规则文本为准，而不是套用某一时点的旧数字。</p><p><strong>门槛差异背后的监管逻辑</strong></p><p>未商业化公司的市值要求高于已商业化公司，表面上看是更严，实质上是一种风险对价：一家还没有产生规模化收入的企业，公开市场无法用收入验证其商业模式，只能用更高的市值门槛筛掉体量过小、抗风险能力不足的申请人。因此，未商业化公司走18C，本质上是在用估值高度换取上市资格。</p><p>实务中最常见的误判，是企业按当期收入接近2.5亿港元就默认自己属于已商业化公司。收益的确认口径、是否属于持续经营业务、是否包含一次性或非经常性收入，都会被申报会计师和交易所逐项检视。</p><p data-ts="1">关键在于把这条线的口径在项目启动阶段就与申报会计师锁定，而不是等到问询阶段再来调整。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、研发投入：18C真正的硬指标</h2><p>结论先说：在18C的三角评价体系中，市值可以被市场情绪影响，投资者可以被商务安排影响，唯有研发投入占比是一个无法临时包装的历史事实。</p><p><strong>研发开支比例的三档要求</strong></p><p>18C要求申请人的研发开支占总营运开支达到规定比例，并按商业化程度分档：已商业化公司的比例要求为不低于15%；未商业化公司则更高，其中年收益在1.5亿港元至2.5亿港元区间的，要求不低于30%；年收益低于1.5亿港元的，要求不低于50%。分档逻辑清晰——收入越少，越需要用研发强度证明企业确实在做技术而不是在等风口。</p><p><strong>研发年限与持续性</strong></p><p>比例之外，18C还要求申请人已从事相关研发活动至少三个会计年度，且上述比例需要在多个年度中持续满足，而非某一年的突击投入。这意味着企业若在申报前一年才把费用重新归集为研发开支，几乎必然在审核中被穿透。</p><p><strong>研发开支的归集口径是核心风险点</strong></p><p>什么算研发开支，什么算生产成本或销售费用，在会计准则下存在判断空间。实务中的高频问题包括：工程师薪酬在研发与量产支持之间的分摊、试产阶段材料投入的资本化与费用化选择、委外开发费用的确认时点、以及研发相关的股份支付是否计入。</p><p data-ts="1">这些判断一旦在申报前被调整，就会同时改变分子与分母，进而改变比例结论。因此，研发口径的确定必须由申报会计师在尽职调查早期介入，并保留完整的工时记录、项目立项文件与验收凭证作为支撑。</p><p>从已完成上市的21家特专科技公司看，研发投入强度长期显著高于同业，是一个共同特征。这类企业往往在申请上市的三到五年前就已建立规范的研发项目管理制度，而不是为了上市临时补建。本质上，18C考察的不是研发数字，而是企业是否真的以技术为主线组织经营。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、领航资深独立投资者：把定价权前置交给市场</h2><p>结论先说：这是18C与所有传统上市通道最本质的差别——监管把对企业价值的判断，部分外包给了愿意提前下注的专业机构。</p><p><strong>制度设计的出发点</strong></p><p>对于一家没有盈利、甚至没有收入的公司，审核机构无法用财务模型判断其价值。18C的处理方式是引入资深独立投资者概念：如果有成熟的专业机构在上市之前就已经以市场化价格投资并长期持有，说明这家企业的技术与商业前景已经通过了一轮真实的市场检验。</p><p><strong>领航资深独立投资者的具体要求</strong></p><p>18C要求申请人在上市申请时须已获得至少两名领航资深独立投资者的投资。所谓领航，指该投资者在上市申请日之前的至少12个月期间一直持有申请人股份，且其持股比例或投资金额达到规定水平——通常表述为持有申请人已发行股本一定比例以上，或在该期间内投资金额达到相当规模。</p><p data-ts="1">除领航投资者外，全体资深独立投资者在上市时合计须持有申请人一定比例的已发行股本，且该比例按上市时市值分档递减：市值越高，要求的合计持股比例越低。</p><p><strong>独立性是审核焦点</strong></p><p>资深独立投资者必须与申请人及其核心关联方相互独立。实务中容易被质疑的情形包括：投资方与创始人存在共同控制关系、投资款项存在回流安排、投资协议中包含保底或回购条款使其实质上不承担股权风险。</p><p data-ts="1">任何一项被认定成立，该投资者都可能不被计入。需要特别提示的是，一切带有保底性质的安排，不仅无助于满足18C要求，反而会直接损害其独立性认定。</p><p>对企业而言，这一条款的实际影响是把融资节奏前移。企业必须在计划上市的至少一年以前就完成关键轮次融资，并且在选择投资人时把机构资质与持股稳定性放在与估值同等重要的位置。因此，18C事实上要求企业提前一到两年就开始规划股东名册，关键在于把上市方案与融资方案作为同一件事来设计。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、禁售期与上市后约束：18C的对价</h2><p>结论先说：18C在入口端放宽了财务要求，就必然在出口端收紧减持自由，这是一组配对的制度安排。</p><p>禁售安排的基本结构是分层与分类：控股股东、关键人士（通常包括创始人、执行董事及对技术具有决定性作用的核心人员）与领航资深独立投资者，三类主体分别适用不同的禁售期；同时，未商业化公司的禁售约束严于已商业化公司。</p><p data-ts="1">总体而言，控股股东自上市之日起须经历完整的禁售期，其后还有一段限制处置期，期间即使可以出售也不得因此丧失控股地位；关键人士的安排与之类似但时长较短；领航资深独立投资者亦被纳入禁售范围，这一点区别于传统上市中前轮投资者上市即可流通的惯例。</p><p data-ts="1">企业在设计员工激励与老股东退出方案时，应以申报当时生效的规则文本逐条核对具体月数。</p><p>更长的禁售期带来两项直接后果。其一是流通盘偏小：上市初期可自由交易的股份比例低于传统IPO，股价对增量资金与情绪的敏感度更高，波动幅度往往更大。其二是市值管理的时间表被拉长：企业无法依靠早期股东换手来形成交易活跃度，必须靠持续的业务里程碑披露来吸引长期资金。</p><p>此外，18C上市公司在上市后仍需持续披露研发进展、关键技术节点与商业化进度。对未商业化公司而言，这类披露构成投资者判断的主要依据，披露质量直接影响估值稳定性。因此，走18C的企业必须在上市前就建立起能够长期支撑技术披露的内部信息管理体系，本质上是把研发管理提升为一项公开市场能力。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、21家企业揭示的三条打法</h2><p>结论先说：从截至2026年6月30日累计21家特专科技公司的上市实践中，可以归纳出三条具有共性的操作路径。</p><p><strong>其一：把估值锚点建立在产业地位而非财务预测上</strong></p><p>由于缺乏盈利数据，18C企业的估值高度依赖投资者对其技术卡位与产业链地位的认知。已完成上市的案例中，能够清晰说明自身在某一细分技术环节不可替代性的企业，更容易在簿记建档阶段获得机构订单。相反，把叙事重心放在未来三年收入预测上的企业，往往在问询阶段就要承受更多质疑。</p><p><strong>其二：把资深独立投资者的引入提前到上市申请的12个月以上</strong></p><p>领航资深独立投资者的12个月持股期要求，意味着任何临时性的引资安排都无法满足条件。实践中，节奏把握较好的企业通常在提交申请前的18个月至24个月即完成关键轮次，为持股期留出充分冗余，同时避免在上市窗口临近时被动接受不利估值。</p><p><strong>其三：把AI与硬科技的主线叙事做实</strong></p><p>2026年上半年13家新上市的特专科技公司，募资规模合计298.23亿港元，人工智能与硬科技构成核心主线。这一结构说明，资金正在向具备算力、算法、先进制造与关键材料能力的企业集中。</p><p data-ts="1">企业若处在这条主线上，应在招股文件中把技术指标、专利结构、客户验证进度量化到可比对的程度；若不在这条主线上，则应更审慎评估18C是否为最优通道。</p><p>还需要提示一个容易被忽略的事实：2026年上半年香港新股数量为87家，特专科技公司占14.9%，即绝大多数发行人仍走传统章节。18C是一条重要通道，但它从来不是多数企业的通道。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、什么样的企业适合走18C，什么样的不适合</h2><p>结论先说：适配判断可以压缩为四个问题，任何一项答案为否，都应重新评估通道选择。</p><p>首要问题：企业是否明确落在五大特专科技行业之内，并能用产品形态、技术路线与客户结构清晰论证。若需要靠概念包装才能勉强归类，审核阶段几乎必然被拆穿。</p><p>其次：企业的上市时预期市值是否具备达到规则门槛的现实基础。判断依据应当是最近一轮市场化融资的投后估值与可比公司的估值区间，而非管理层的期望值。若差距在两倍以上，更务实的选择是先完成一轮融资再申报。</p><p>再次：企业的研发开支占总营运开支比例，在过去三个会计年度是否稳定满足对应档位要求。这一项无法在申报期补救，是最应在项目启动阶段就完成自查的指标。</p><p>最后：股东名册中是否已有符合独立性要求、且持股满12个月的专业机构投资者。若尚无，企业需要的不是上市顾问，而是先做一轮结构化的融资安排。</p><p>相应地，有四类企业不适合走18C：一是收入与利润已经稳定、完全可以满足主板8A章财务测试的企业，走18C反而要承受更长的禁售期与更严的持续披露义务；二是市值明显不足、需要靠激进假设才能触线的企业；三是研发投入比例不达标、且短期内无法通过真实业务调整达标的企业；四是核心股东希望上市后短期内退出的企业，18C的禁售安排与这一诉求直接冲突。</p><p>华尔街彤鼎俱乐部围绕18C通道与其他境外上市路径的比较，为企业家组织闭门交流与专业机构对接，其中涉及Pre-IPO项目的部分仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p><p data-ts="1">本质上，18C的价值不在于门槛更低，而在于它为一类特定形态的企业提供了在盈利之前进入公开市场的合法通道；关键在于企业是否真的属于这一类。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="spac-mainstream-2026.html" style="color:#6b5426;font-weight:700;">SPAC为何成中概股赴美主流通道</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-18a-biotech.html" style="color:#6b5426;font-weight:700;">香港18A生物科技上市路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="us-listing-guide-2026.html" style="color:#6b5426;font-weight:700;">2026赴美上市完整指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="public-float-holders.html" style="color:#6b5426;font-weight:700;">公众持股与股东人数：纳斯达克硬指标</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="best-path-2026.html" style="color:#6b5426;font-weight:700;">2026赴美上市最佳路径推荐</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

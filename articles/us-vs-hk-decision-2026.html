@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"美股还是港股：2026年新形势下的路径决策框架","inLanguage":"zh-CN","abstract":"With Nasdaq raising its thresholds and Hong Kong recording its strongest first half in years, the basis for choosing a listing venue has changed. This article offers a six-dimension decision framework covering offering size, sector fit and valuation anchors, liquidity and refinancing capacity, filing and compliance costs, shareholder exit arrangements, and timing.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/us-vs-hk-decision-2026.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"纳斯达克新规抬高门槛、港股募资创新高，路径选择的判断依据已经改变。本文提供募资规模、行业适配与估值锚点、流动性与再融资、备案与合规成本、股东退出安排、时间窗口六个维度的决策框架。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,61 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市路径 LISTING PATH</div><h1>美股还是港股：2026年新形势下的路径决策框架</h1>
 <div class="sub">六个维度判断你的企业该去哪个市场</div><div class="en">With Nasdaq raising its thresholds and Hong Kong recording its strongest first half in years, the basis for choosing a listing venue has changed. This article offers a six-dimension decision framework covering offering size, sector fit and valuation anchors, liquidity and refinancing capacity, filing and compliance costs, shareholder exit arrangements, and timing.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">美股与港股的路径选择，是指企业在境外上市规划阶段，就募资规模、行业适配、流动性、合规成本、股东退出与执行确定性作出的通道决策。2026年这一决策的前提条件发生了实质变化：港股2026年上半年募资总额达2080.15亿港元，上市中资企业85家，较2025年上半年的40家增长112.5%；其中一季度含GEM共40只新股、募资约1100亿港元，为五年新高，同比增长489.3%。与此同时，纳斯达克新规于2026年5月14日获美国证券交易委员会批准，将在华企业IPO最低公众募资额提高至2500万美元，以SPAC方式上市的无限制流通公众股市值亦不得低于2500万美元，并禁止直接上市登陆全球市场与资本市场层级，同时引入实质经营地审查。因此，2026年的路径决策不再是估值高低的单一比较，本质上是一次六维度的匹配测算。</div>
-<h2>一、2026年的新形势：两个市场同时改变了游戏规则</h2>
-<p>结论先说：把2024年之前的经验直接套用到2026年的决策上，是当前最常见的错误。</p>
-<p><strong>港股一侧：容量与深度同时扩张</strong></p>
-<p>2026年上半年，港股IPO募资总额达到2080.15亿港元，上市中资企业85家，相较2025年同期的40家增长112.5%。一季度的表现更为集中，含GEM在内共40只新股完成发行，募资约1100亿港元，创下五年新高，同比增长489.3%。这一组数据的含义并不只是热度：募资总额与新股数量同步放大，意味着市场的承接深度而非单纯情绪在改善，中大型发行获得足额认购的可能性显著提升。</p>
-<p><strong>美股一侧：门槛与审查同时抬高</strong></p>
-<p>2026年5月14日，美国证券交易委员会批准了纳斯达克关于在华企业上市的新规。核心变化有三项：一是在华企业IPO的最低公众募资额提高至2500万美元；二是以特殊目的收购公司方式完成上市的，无限制流通公众股市值不得低于2500万美元；三是禁止通过直接上市方式登陆全球市场层级与资本市场层级。此外，新规引入实质经营地审查，即监管将穿透注册地，考察企业的实际经营与管理所在地。</p>
-<p><strong>备案端：意向分布仍高度集中于香港</strong></p>
-<p>从中国证监会境外上市备案的受理情况看，拟赴香港上市的企业为252家，拟赴美国54家，拟赴台湾1家、拟赴新加坡2家。这一分布说明，在企业的实际选择中，香港仍是主流方向，但赴美通道并未关闭，只是筛选强度提高。</p>
-<p>需要清醒认识的是，这两组变化的方向并不相同：港股在扩容，美股在提标。因此，同一家企业在2024年得出的结论，2026年未必成立；关键在于用当期规则重做一次测算，而不是沿用旧判断。</p>
-<h2>二、维度一：募资规模与市场承接能力</h2>
-<p>结论先说：这是六个维度中唯一具有一票否决属性的指标——募资规模不达标，其他维度再匹配也无法执行。</p>
-<p>纳斯达克新规明确要求在华企业IPO的最低公众募资额为2500万美元，这一数字直接改变了小额发行的可行性。按常见的公众持股比例安排推算，要满足这一募资额，企业在发行时通常需要具备约1亿美元或以上的整体估值基础，且需要承销商有能力组织到足额的公众认购。以特殊目的收购公司方式完成上市的企业同样受约束：合并后无限制流通的公众股市值不得低于2500万美元，这意味着赎回率过高的交易将无法通过审核。</p>
-<p>港股一侧没有等价的单一硬性募资门槛，但存在实质约束：发行规模过小的项目难以获得优质保荐人承做，也难以吸引基石投资者与机构订单，上市后可能长期缺乏交易。从2026年上半年2080.15亿港元的募资总量与87家新股的数量结构看，市场资源正向中大型发行集中。</p>
-<p>实务判断标准可以简化为三档。募资规模在2500万美元以下的企业，两个市场目前都不具备现实可行性，更适合先完成私募轮次；募资规模在2500万美元至1亿美元区间的，两个市场均可考虑，但需要逐项比对成本与后续融资安排；募资规模在1亿美元以上的，两个市场的承接能力都不构成障碍，决策权重应转移至后续五个维度。因此，路径决策的起点不是问去哪里，关键在于先确定融多少。</p>
-<h2>三、维度二：行业适配与估值锚点</h2>
-<p>结论先说：估值差异的根源不是市场偏好，而是可比公司的存在与否。</p>
-<p><strong>看的是可比公司，不是市场标签</strong></p>
-<p>一家企业能获得什么估值倍数，取决于该市场是否存在成熟的可比公司群体、是否有覆盖该行业的卖方分析师、以及是否有配置该行业的机构资金池。缺少这三者，即使市场整体估值水平较高，单一发行人也拿不到。因此，判断动作应当是列出自身在两个市场各自的可比公司清单，若某一市场清单为空或只有一两家且流动性不佳，该市场对本企业而言就不构成有效的估值锚点。</p>
-<p><strong>港股的行业适配区间</strong></p>
-<p>香港市场对消费、医药医疗、先进制造、新能源与金融地产等行业已形成相对完整的对标体系与投研覆盖。2026年上半年，通过18C特专科技章上市的公司新增13家、募资298.23亿港元，占同期新股数量87家的14.9%、占募资总额2101.95亿港元的14.2%，人工智能与硬科技构成核心主线，说明港股对未盈利硬科技资产的定价能力已经建立。此外，生物科技18A章、特殊目的收购公司18B章、特专科技18C章与双重主要上市19C章，共同构成了按企业形态分流的入口体系。</p>
-<p><strong>美股的行业适配区间</strong></p>
-<p>美国市场对软件与互联网、人工智能应用、创新药与医疗器械等行业的机构覆盖更为密集，可比公司数量更多，长线基金的行业细分程度更高。对于业务与客户主要分布在欧美的企业，美股投资者理解成本更低，这一点往往比估值倍数本身更重要。</p>
-<p>需要提醒的是，行业适配的判断不应停留在上市时点。企业还需评估上市三年后是否仍有分析师覆盖——缺乏覆盖的中小市值发行人，交易量会持续萎缩，届时再融资与股东退出都将受阻。本质上，选择市场就是选择未来长期与自己对话的投资人群体。</p>
-<h2>四、维度三：流动性与再融资能力</h2>
-<p>结论先说：上市不是终点，能否在上市后持续融到钱，往往比首发估值更能决定企业的长期价值。</p>
-<p>流动性方面，美股整体日均成交活跃度高于港股，但这一比较在头部标的与中小市值标的之间存在明显分化。港股头部标的的流动性并不弱，且随着2026年上半年市场容量的扩张，中大型发行的交易深度有所改善；而两个市场的中小市值标的都同样面临成交清淡的风险。因此，用市场整体数据推断自身个股流动性，是一种典型的判断错误。</p>
-<p>再融资工具方面，美股的工具箱更为完整：按市价增发、向特定机构定向增发、可转换债券、储架发行等工具使用频率高、执行周期短，成熟发行人可以在数周内完成一轮补充融资。港股的再融资同样可行，一般性授权、供股、配售等安排制度清晰，但工具组合的灵活度与执行速度相对逊色。</p>
-<p>对应的决策含义是：如果企业属于需要持续大额投入的类型——例如仍处在产能扩张期的制造企业、需要长期投入研发的科技企业——再融资便利度应当被赋予高于首发估值的权重。若企业的资本开支高峰已经过去，首发募资即可覆盖未来三年需求，则这一维度的权重可以下调。关键在于把再融资需求量化为未来三年的资金缺口数字，而不是笼统地说需要或不需要。</p>
-<h2>五、维度四：备案、合规成本与执行确定性</h2>
-<p>结论先说：合规成本的差异不在费用高低，而在不确定性的分布位置。</p>
-<p><strong>境内备案是共同前提</strong></p>
-<p>自2023年3月31日起施行的境外上市备案管理制度，适用于境内企业直接或间接境外上市，无论目的地是香港还是美国。企业还需同步处理境内个人境外持股平台的37号文外汇登记，以及境内主体对外投资的ODI备案。这三项工作在两条路径下都必须完成，只是与境外流程的衔接节奏不同。截至目前，拟赴港备案企业252家、拟赴美54家，数量差异本身反映了市场对确定性的偏好。</p>
-<p><strong>赴美路径的新增变量</strong></p>
-<p>纳斯达克2026年新规引入的实质经营地审查，是赴美企业当前最需要提前应对的变量。监管将穿透注册地，考察管理层所在地、主要资产所在地、经营决策发生地与收入来源地，据此判断企业是否应适用针对在华企业的特别要求。企业若通过境外主体上市，必须确保该主体具备真实经营实质，包括本地员工、办公场所、实际业务活动与独立的经营决策，而非仅有注册文件。同时，赴美上市还需应对上市公司会计监督委员会的审计底稿检查机制与《外国公司问责法案》所确立的审计监管要求。</p>
-<p><strong>成本结构的实际差异</strong></p>
-<p>赴美路径的显性费用通常包括境外架构搭建与合规登记、符合上市公司会计监督委员会要求的审计、美国及开曼律师费用、承销与发行费用；港股路径的主要构成为保荐人、申报会计师、境内外律师与包销安排。两组费用的口径不同，且随架构层级与审计工作量大幅浮动，企业应按自身情况单独测算，不宜套用平均数。更容易被忽略的是上市后的年度持续合规支出——年报审计、独立董事、董监高责任险、投资者关系与信息披露，这是一项长期固定负担，必须在决策阶段就纳入模型。</p>
-<p>因此，这一维度的正确评估方式，是把不确定性折算为时间与成本的期望值：一条路径若审核预期明确但费用较高，未必劣于费用较低但审核变量较多的路径。本质上，企业买的是确定性。</p>
-<h2>六、维度五与维度六：股东退出安排与时间窗口</h2>
-<p>结论先说：股东结构决定了上市后能否顺利退出，时间窗口决定了这次上市能否踩准市场节奏。</p>
-<p><strong>维度五：股东结构与退出安排</strong></p>
-<p>需要在决策阶段就厘清三件事。其一是既有投资人的退出预期：若基金存续期临近，其对流动性的要求会高于对估值的要求，这将直接影响市场选择。其二是禁售安排的匹配度：不同市场、不同上市章节对控股股东与关键人士的禁售期要求不同，其中香港18C特专科技章的禁售约束明显长于传统通道，而美股在锁定期之外还需考虑10b5-1交易计划的设立时点与规则性要求。其三是股权激励的兑现路径：员工期权在何时、以何种方式变现，涉及税务与外汇两个维度，必须与架构设计同步规划，而非上市后再补。</p>
-<p><strong>维度六：时间窗口与执行确定性</strong></p>
-<p>两条路径的全流程周期接近，通常在12至18个月区间，差异主要体现在审核节奏与不可控变量的分布。港股一侧，2026年上半年的市场容量扩张为发行提供了较好的窗口条件，但窗口具有周期性，不宜假设长期存在。美股一侧，2026年上半年赴美中概股共17只，其中15家采用特殊目的收购公司方式，占比88.2%，总募资约15.56亿美元——这一结构说明传统IPO通道在新规下的执行难度上升，而特殊目的收购公司方式虽然时间可控，却面临赎回率与后续市值维持的挑战。</p>
-<p>把两个维度合并看，决策含义是明确的：若企业的股东退出压力大且时间敏感，应优先选择执行确定性更高的通道；若企业仍有充分的时间冗余，则可以为更匹配的估值锚点等待窗口。关键在于诚实评估自己还有多少时间。</p>
-<h2>七、框架怎么用，以及各自不适合的企业类型</h2>
-<p>结论先说：这六个维度不应被平均加权，而应按企业自身情况分配权重，并允许单一维度否决。</p>
-<p>使用方法分三步。步骤一是硬约束筛查：用维度一的募资规模、维度四的备案与审查要求做否决式判断，任何一项不满足，直接排除该市场。步骤二是权重分配：按企业的核心诉求分配剩余维度的权重——追求估值的企业提高维度二的权重，重资产扩张型企业提高维度三的权重，基金退出压力大的企业提高维度五与维度六的权重。步骤三是逐维打分并做敏感性测试：把最关键的两项假设分别上下浮动，观察结论是否翻转；若结论极易翻转，说明两个市场对本企业而言差异并不显著，此时应转而比较执行确定性与成本。</p>
-<p><strong>不适合赴美的企业类型</strong></p>
-<p>有四类企业目前不宜将美股作为首选：一是公众募资额难以达到2500万美元的中小型发行人，新规下这一门槛是刚性的；二是境外上市主体缺乏真实经营实质、仅有注册安排的企业，实质经营地审查将直接暴露这一问题；三是业务、客户与供应链完全集中于中国大陆、缺乏可比公司与分析师覆盖的传统行业企业，即使上市成功也易陷入长期低流动性；四是难以承担持续审计与合规成本、或对跨境监管变量承受力弱的企业。</p>
-<p><strong>不适合赴港的企业类型</strong></p>
-<p>同样有四类企业不宜将港股作为首选：一是主要收入、客户与品牌影响力集中在欧美市场的企业，亚洲投资人对其业务的理解成本更高；二是所处行业在港股缺乏可比公司与投研覆盖的企业，估值锚点难以建立；三是发行规模过小、上市后大概率长期缺乏成交的企业；四是需要高频使用灵活再融资工具、对执行速度要求极高的企业。</p>
-<p>还需要强调的是，两个市场并非互斥。成熟的资本规划中，它们可以形成组合：先在一个市场完成首发、积累公开市场运作经验与合规记录，再通过双重主要上市或第二上市补充另一个平台，兼顾估值与投资人基础。香港主板的19C双重主要上市章节，正是为这类安排提供的制度接口。因此，路径选择不是一次性决策，而是长期资本战略的起点——在搭建架构的那一刻，就应当为未来的多平台布局留出空间。</p>
-<p>华尔街彤鼎俱乐部围绕美股与港股路径的比较、架构设计与投后市值管理，为企业家组织闭门交流与专业机构对接，其中涉及Pre-IPO项目的部分仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。本质上，不存在更好的市场，只存在与企业当下阶段、行业属性、股东结构和时间约束更匹配的市场；关键在于用当期规则、而非旧经验，把这六个维度逐项算清楚。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>美股与港股的路径选择，是指企业在境外上市规划阶段，就募资规模、行业适配、流动性、合规成本、股东退出与执行确定性作出的通道决策。2026年这一决策的前提条件发生了实质变化：港股2026年上半年募资总额达2080.15亿港元，上市中资企业85家，较2025年上半年的40家增长112.5%；其中一季度含GEM共40只新股、募资约1100亿港元，为五年新高，同比增长489.3%。</p><p>与此同时，纳斯达克新规于2026年5月14日获美国证券交易委员会批准，将在华企业IPO最低公众募资额提高至2500万美元，以SPAC方式上市的无限制流通公众股市值亦不得低于2500万美元，并禁止直接上市登陆全球市场与资本市场层级，同时引入实质经营地审查。</p><p>因此，2026年的路径决策不再是估值高低的单一比较，本质上是一次六维度的匹配测算。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">2026年的新形势：两个市场同时改变了游戏规则</a></li><li><a href="#sec-02">维度一：募资规模与市场承接能力</a></li><li><a href="#sec-03">维度二：行业适配与估值锚点</a></li><li><a href="#sec-04">维度三：流动性与再融资能力</a></li><li><a href="#sec-05">维度四：备案、合规成本与执行确定性</a></li><li><a href="#sec-06">维度五与维度六：股东退出安排与时间窗口</a></li><li><a href="#sec-07">框架怎么用，以及各自不适合的企业类型</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、2026年的新形势：两个市场同时改变了游戏规则</h2><p>结论先说：把2024年之前的经验直接套用到2026年的决策上，是当前最常见的错误。</p><p><strong>港股一侧：容量与深度同时扩张</strong></p><p>2026年上半年，港股IPO募资总额达到2080.15亿港元，上市中资企业85家，相较2025年同期的40家增长112.5%。一季度的表现更为集中，含GEM在内共40只新股完成发行，募资约1100亿港元，创下五年新高，同比增长489.3%。</p><p data-ts="1">这一组数据的含义并不只是热度：募资总额与新股数量同步放大，意味着市场的承接深度而非单纯情绪在改善，中大型发行获得足额认购的可能性显著提升。</p><p><strong>美股一侧：门槛与审查同时抬高</strong></p><p>2026年5月14日，美国证券交易委员会批准了纳斯达克关于在华企业上市的新规。核心变化有三项：一是在华企业IPO的最低公众募资额提高至2500万美元；二是以特殊目的收购公司方式完成上市的，无限制流通公众股市值不得低于2500万美元；三是禁止通过直接上市方式登陆全球市场层级与资本市场层级。</p><p data-ts="1">此外，新规引入实质经营地审查，即监管将穿透注册地，考察企业的实际经营与管理所在地。</p><p><strong>备案端：意向分布仍高度集中于香港</strong></p><p>从中国证监会境外上市备案的受理情况看，拟赴香港上市的企业为252家，拟赴美国54家，拟赴台湾1家、拟赴新加坡2家。这一分布说明，在企业的实际选择中，香港仍是主流方向，但赴美通道并未关闭，只是筛选强度提高。</p><p>需要清醒认识的是，这两组变化的方向并不相同：港股在扩容，美股在提标。因此，同一家企业在2024年得出的结论，2026年未必成立；关键在于用当期规则重做一次测算，而不是沿用旧判断。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、维度一：募资规模与市场承接能力</h2><p>结论先说：这是六个维度中唯一具有一票否决属性的指标——募资规模不达标，其他维度再匹配也无法执行。</p><p>纳斯达克新规明确要求在华企业IPO的最低公众募资额为2500万美元，这一数字直接改变了小额发行的可行性。按常见的公众持股比例安排推算，要满足这一募资额，企业在发行时通常需要具备约1亿美元或以上的整体估值基础，且需要承销商有能力组织到足额的公众认购。</p><p data-ts="1">以特殊目的收购公司方式完成上市的企业同样受约束：合并后无限制流通的公众股市值不得低于2500万美元，这意味着赎回率过高的交易将无法通过审核。</p><p>港股一侧没有等价的单一硬性募资门槛，但存在实质约束：发行规模过小的项目难以获得优质保荐人承做，也难以吸引基石投资者与机构订单，上市后可能长期缺乏交易。从2026年上半年2080.15亿港元的募资总量与87家新股的数量结构看，市场资源正向中大型发行集中。</p><p>实务判断标准可以简化为三档。募资规模在2500万美元以下的企业，两个市场目前都不具备现实可行性，更适合先完成私募轮次；募资规模在2500万美元至1亿美元区间的，两个市场均可考虑，但需要逐项比对成本与后续融资安排；募资规模在1亿美元以上的，两个市场的承接能力都不构成障碍，决策权重应转移至后续五个维度。因此，路径决策的起点不是问去哪里，关键在于先确定融多少。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、维度二：行业适配与估值锚点</h2><p>结论先说：估值差异的根源不是市场偏好，而是可比公司的存在与否。</p><p><strong>看的是可比公司，不是市场标签</strong></p><p>一家企业能获得什么估值倍数，取决于该市场是否存在成熟的可比公司群体、是否有覆盖该行业的卖方分析师、以及是否有配置该行业的机构资金池。缺少这三者，即使市场整体估值水平较高，单一发行人也拿不到。</p><p data-ts="1">因此，判断动作应当是列出自身在两个市场各自的可比公司清单，若某一市场清单为空或只有一两家且流动性不佳，该市场对本企业而言就不构成有效的估值锚点。</p><p><strong>港股的行业适配区间</strong></p><p>香港市场对消费、医药医疗、先进制造、新能源与金融地产等行业已形成相对完整的对标体系与投研覆盖。2026年上半年，通过18C特专科技章上市的公司新增13家、募资298.23亿港元，占同期新股数量87家的14.9%、占募资总额2101.95亿港元的14.2%，人工智能与硬科技构成核心主线，说明港股对未盈利硬科技资产的定价能力已经建立。</p><p data-ts="1">此外，生物科技18A章、特殊目的收购公司18B章、特专科技18C章与双重主要上市19C章，共同构成了按企业形态分流的入口体系。</p><p><strong>美股的行业适配区间</strong></p><p>美国市场对软件与互联网、人工智能应用、创新药与医疗器械等行业的机构覆盖更为密集，可比公司数量更多，长线基金的行业细分程度更高。对于业务与客户主要分布在欧美的企业，美股投资者理解成本更低，这一点往往比估值倍数本身更重要。</p><p>需要提醒的是，行业适配的判断不应停留在上市时点。企业还需评估上市三年后是否仍有分析师覆盖——缺乏覆盖的中小市值发行人，交易量会持续萎缩，届时再融资与股东退出都将受阻。本质上，选择市场就是选择未来长期与自己对话的投资人群体。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、维度三：流动性与再融资能力</h2><p>结论先说：上市不是终点，能否在上市后持续融到钱，往往比首发估值更能决定企业的长期价值。</p><p>流动性方面，美股整体日均成交活跃度高于港股，但这一比较在头部标的与中小市值标的之间存在明显分化。港股头部标的的流动性并不弱，且随着2026年上半年市场容量的扩张，中大型发行的交易深度有所改善；而两个市场的中小市值标的都同样面临成交清淡的风险。因此，用市场整体数据推断自身个股流动性，是一种典型的判断错误。</p><p>再融资工具方面，美股的工具箱更为完整：按市价增发、向特定机构定向增发、可转换债券、储架发行等工具使用频率高、执行周期短，成熟发行人可以在数周内完成一轮补充融资。港股的再融资同样可行，一般性授权、供股、配售等安排制度清晰，但工具组合的灵活度与执行速度相对逊色。</p><p>对应的决策含义是：如果企业属于需要持续大额投入的类型——例如仍处在产能扩张期的制造企业、需要长期投入研发的科技企业——再融资便利度应当被赋予高于首发估值的权重。若企业的资本开支高峰已经过去，首发募资即可覆盖未来三年需求，则这一维度的权重可以下调。关键在于把再融资需求量化为未来三年的资金缺口数字，而不是笼统地说需要或不需要。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、维度四：备案、合规成本与执行确定性</h2><p>结论先说：合规成本的差异不在费用高低，而在不确定性的分布位置。</p><p><strong>境内备案是共同前提</strong></p><p>自2023年3月31日起施行的境外上市备案管理制度，适用于境内企业直接或间接境外上市，无论目的地是香港还是美国。企业还需同步处理境内个人境外持股平台的37号文外汇登记，以及境内主体对外投资的ODI备案。</p><p data-ts="1">这三项工作在两条路径下都必须完成，只是与境外流程的衔接节奏不同。截至目前，拟赴港备案企业252家、拟赴美54家，数量差异本身反映了市场对确定性的偏好。</p><p><strong>赴美路径的新增变量</strong></p><p>纳斯达克2026年新规引入的实质经营地审查，是赴美企业当前最需要提前应对的变量。监管将穿透注册地，考察管理层所在地、主要资产所在地、经营决策发生地与收入来源地，据此判断企业是否应适用针对在华企业的特别要求。</p><p data-ts="1">企业若通过境外主体上市，必须确保该主体具备真实经营实质，包括本地员工、办公场所、实际业务活动与独立的经营决策，而非仅有注册文件。同时，赴美上市还需应对上市公司会计监督委员会的审计底稿检查机制与《外国公司问责法案》所确立的审计监管要求。</p><p><strong>成本结构的实际差异</strong></p><p>赴美路径的显性费用通常包括境外架构搭建与合规登记、符合上市公司会计监督委员会要求的审计、美国及开曼律师费用、承销与发行费用；港股路径的主要构成为保荐人、申报会计师、境内外律师与包销安排。</p><p data-ts="1">两组费用的口径不同，且随架构层级与审计工作量大幅浮动，企业应按自身情况单独测算，不宜套用平均数。更容易被忽略的是上市后的年度持续合规支出——年报审计、独立董事、董监高责任险、投资者关系与信息披露，这是一项长期固定负担，必须在决策阶段就纳入模型。</p><p>因此，这一维度的正确评估方式，是把不确定性折算为时间与成本的期望值：一条路径若审核预期明确但费用较高，未必劣于费用较低但审核变量较多的路径。本质上，企业买的是确定性。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、维度五与维度六：股东退出安排与时间窗口</h2><p>结论先说：股东结构决定了上市后能否顺利退出，时间窗口决定了这次上市能否踩准市场节奏。</p><p><strong>维度五：股东结构与退出安排</strong></p><p>需要在决策阶段就厘清三件事。</p><ol class="ts-pts"><li><b>其一是既有投资人的退出预期：</b>若基金存续期临近，其对流动性的要求会高于对估值的要求，这将直接影响市场选择。</li><li><b>其二是禁售安排的匹配度：</b>不同市场、不同上市章节对控股股东与关键人士的禁售期要求不同，其中香港18C特专科技章的禁售约束明显长于传统通道，而美股在锁定期之外还需考虑10b5-1交易计划的设立时点与规则性要求。</li><li><b>其三是股权激励的兑现路径：</b>员工期权在何时、以何种方式变现，涉及税务与外汇两个维度，必须与架构设计同步规划，而非上市后再补。</li></ol><p><strong>维度六：时间窗口与执行确定性</strong></p><p>两条路径的全流程周期接近，通常在12至18个月区间，差异主要体现在审核节奏与不可控变量的分布。港股一侧，2026年上半年的市场容量扩张为发行提供了较好的窗口条件，但窗口具有周期性，不宜假设长期存在。</p><p data-ts="1">美股一侧，2026年上半年赴美中概股共17只，其中15家采用特殊目的收购公司方式，占比88.2%，总募资约15.56亿美元——这一结构说明传统IPO通道在新规下的执行难度上升，而特殊目的收购公司方式虽然时间可控，却面临赎回率与后续市值维持的挑战。</p><p>把两个维度合并看，决策含义是明确的：若企业的股东退出压力大且时间敏感，应优先选择执行确定性更高的通道；若企业仍有充分的时间冗余，则可以为更匹配的估值锚点等待窗口。关键在于诚实评估自己还有多少时间。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、框架怎么用，以及各自不适合的企业类型</h2><p>结论先说：这六个维度不应被平均加权，而应按企业自身情况分配权重，并允许单一维度否决。</p><p>使用方法分三步。</p><ol class="ts-pts"><li><b>步骤一是硬约束筛查：</b>用维度一的募资规模、维度四的备案与审查要求做否决式判断，任何一项不满足，直接排除该市场。</li><li><b>步骤二是权重分配：</b>按企业的核心诉求分配剩余维度的权重——追求估值的企业提高维度二的权重，重资产扩张型企业提高维度三的权重，基金退出压力大的企业提高维度五与维度六的权重。</li><li><b>步骤三是逐维打分并做敏感性测试：</b>把最关键的两项假设分别上下浮动，观察结论是否翻转；若结论极易翻转，说明两个市场对本企业而言差异并不显著，此时应转而比较执行确定性与成本。</li></ol><p><strong>不适合赴美的企业类型</strong></p><p>有四类企业目前不宜将美股作为首选：一是公众募资额难以达到2500万美元的中小型发行人，新规下这一门槛是刚性的；二是境外上市主体缺乏真实经营实质、仅有注册安排的企业，实质经营地审查将直接暴露这一问题；三是业务、客户与供应链完全集中于中国大陆、缺乏可比公司与分析师覆盖的传统行业企业，即使上市成功也易陷入长期低流动性；四是难以承担持续审计与合规成本、或对跨境监管变量承受力弱的企业。</p><p><strong>不适合赴港的企业类型</strong></p><p>同样有四类企业不宜将港股作为首选：一是主要收入、客户与品牌影响力集中在欧美市场的企业，亚洲投资人对其业务的理解成本更高；二是所处行业在港股缺乏可比公司与投研覆盖的企业，估值锚点难以建立；三是发行规模过小、上市后大概率长期缺乏成交的企业；四是需要高频使用灵活再融资工具、对执行速度要求极高的企业。</p><p>还需要强调的是，两个市场并非互斥。成熟的资本规划中，它们可以形成组合：先在一个市场完成首发、积累公开市场运作经验与合规记录，再通过双重主要上市或第二上市补充另一个平台，兼顾估值与投资人基础。</p><p data-ts="1">香港主板的19C双重主要上市章节，正是为这类安排提供的制度接口。因此，路径选择不是一次性决策，而是长期资本战略的起点——在搭建架构的那一刻，就应当为未来的多平台布局留出空间。</p><p>华尔街彤鼎俱乐部围绕美股与港股路径的比较、架构设计与投后市值管理，为企业家组织闭门交流与专业机构对接，其中涉及Pre-IPO项目的部分仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p><p data-ts="1">本质上，不存在更好的市场，只存在与企业当下阶段、行业属性、股东结构和时间约束更匹配的市场；关键在于用当期规则、而非旧经验，把这六个维度逐项算清楚。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="public-float-holders.html" style="color:#6b5426;font-weight:700;">公众持股与股东人数：纳斯达克硬指标</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="beyond-25m-threshold.html" style="color:#6b5426;font-weight:700;">募资不足2500万美元：四条资本化出路</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-china-stocks.html" style="color:#6b5426;font-weight:700;">中概股在美股市场的格局</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="spac-mainstream-2026.html" style="color:#6b5426;font-weight:700;">SPAC为何成中概股赴美主流通道</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-18c-specialist-tech.html" style="color:#6b5426;font-weight:700;">香港18C特专科技上市：门槛与打法</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

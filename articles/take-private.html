@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"私有化退市全流程","inLanguage":"zh-CN","abstract":"The full take-private sequence for a U.S.-listed issuer: special committee, fairness opinion, financing and shareholder vote.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/take-private.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"从公众公司回归私有公司的完整操作指南。私有化退市全流程完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,63 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">资本运作 CAPITAL OPS</div><h1>私有化退市全流程</h1>
 <div class="sub">从公众公司回归私有公司的完整操作指南</div><div class="en">The full take-private sequence for a U.S.-listed issuer: special committee, fairness opinion, financing and shareholder vote.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">私有化退市是上市公司大股东（通常是创始人或PE机构）向全体公众股东发出要约收购，以溢价回购所有流通股，将公司从公众公司转回私有公司的过程。对很多中概股而言，私有化是在美股市场估值长期被低估、持续承受合规成本压力的情况下，一个主动维护股东权益的战略选择。整个流程通常需要6至12个月，总成本包括溢价收购价（通常比当前股价溢价20%至50%）加上法律费用加上融资成本。私有化完成后，公司可以在没有公众市场压力的情况下重新整合，为未来回归港股或A股做准备。</div>
-<h2>一、为什么中概股会考虑私有化</h2>
-<p>中概股私有化的浪潮在2015至2016年达到顶峰，此后陆续有企业在不同时期完成私有化。驱动私有化决策的原因通常有以下几类。</p>
-<h3>原因1：估值长期被低估</h3>
-<p>很多优质的中国企业在美股市场的估值远低于其内在价值，甚至低于同类企业在中国A股或港股的估值。当这种价值差异足够大时，大股东通过私有化退市、再以更高估值在其他市场重新上市，可以为股东创造显著价值。</p>
-<h3>原因2：持续合规成本压力</h3>
-<p>美股上市公司每年需要承担100至200万美元的合规成本（PCAOB审计、SOX合规、SEC披露、D&amp;O保险等）。对于市值较小的公司，这些成本可能吞噬相当大比例的利润，得不偿失。</p>
-<h3>原因3：中美监管不确定性</h3>
-<p>中美关系的周期性波动、HFCAA法案等监管风险，让部分中概股管理层选择主动退出美股市场，回到更熟悉的监管环境。</p>
-<h3>原因4：战略转型需要私有灵活性</h3>
-<p>某些重大战略转型（如业务模式根本性调整、资产重组、管理层更换）在公开市场的透明度要求下难以顺利推进。私有化后可以在没有外部股东干扰的情况下完成转型，再以更优态势重新上市。</p>
-<h2>二、私有化的两种主要形式</h2>
-<h3>形式1：管理层收购（Management Buyout，MBO）</h3>
-<p>由公司现任管理层（通常包括创始人和CEO）联合PE基金，共同发起要约收购，回购所有公众股东的股份，实现公司私有化。</p>
-<p>MBO的特点：发起方是内部人，对公司有最深入的了解，谈判能动性强；通常需要PE机构提供杠杆融资支持（因为管理层自身资金有限）；完成后管理层和PE成为公司的全部股东，共同规划下一阶段的资本路径。</p>
-<h3>形式2：战略投资人收购（Strategic Buyer Acquisition）</h3>
-<p>由外部战略投资人（产业并购方、主权基金等）发起要约，收购上市公司全部股份。这种形式本质上是公司被收购，而非管理层主导的私有化。</p>
-<p>这种情况下，创始人通常会完全退出（通过出售股份获得变现），或者与收购方谈判保留部分股份和管理职位，继续参与公司运营。</p>
-<h2>三、私有化的完整流程</h2>
-<h3>阶段1：前期准备和内部决策 1至2个月</h3>
-<p>大股东和管理团队内部讨论私有化方案，评估可行性和时机；聘请财务顾问（通常是投行）提供独立财务意见；联系潜在的PE共同投资人；初步确定收购要约价格区间（通常以当前股价为基础，设定20%至50%的溢价）。</p>
-<h3>阶段2：组建收购团队并完成融资安排 1至2个月</h3>
-<p>确定收购联合体的构成（管理层加PE投资人等）；安排过桥贷款或并购融资（通常由银行提供以公司资产为抵押的杠杆贷款，约占总收购金额的50%至70%）；聘请收购方法律顾问；签署保密协议防止信息泄露。</p>
-<h3>阶段3：向公司董事会提交要约 1个月</h3>
-<p>发起方向公司董事会提交初步非约束性要约（Non-binding Offer Letter），说明拟收购价格和主要条款。董事会收到要约后，必须成立由独立董事组成的特别委员会（Special Committee）负责评估要约，并聘请独立财务顾问（与发起方无关联的投行）发表独立财务意见。</p>
-<h3>阶段4：谈判与尽职调查 2至3个月</h3>
-<p>特别委员会代表公众股东与发起方就收购价格和条款进行谈判；发起方的收购团队对目标公司进行全面的尽职调查（财务、法律、业务等）；双方最终就收购协议（Merger Agreement）达成一致。</p>
-<p>在此期间，特别委员会的独立财务顾问会就收购价格是否公平发表财务公平意见（Fairness Opinion），保护公众股东利益。</p>
-<h3>阶段5：签署合并协议并公告 1至2周</h3>
-<p>发起方和公司签署正式的合并协议（Merger Agreement）或购买协议（Purchase Agreement）；公司向SEC提交相关文件（SC 13E-3表格）；公开宣布私有化计划，通常会导致股价立即上涨至接近收购价格。</p>
-<h3>阶段6：SEC审核和股东大会 2至3个月</h3>
-<p>向SEC提交的文件需要经过SEC审核（通常1至2轮问询）；通过SEC审核后，公司召开临时股东大会，就私有化方案进行投票。一般要求持有大多数流通股（排除发起人股份）的股东投票赞成才能通过。</p>
-<h3>阶段7：完成交割和退市 1个月</h3>
-<p>股东大会通过后，完成资金交割——收购方支付收购款给全部公众股东；公司在纳斯达克正式退市；完成必要的法律程序（通常通过开曼公司法的合并程序）。</p>
-<h2>四、私有化的成本构成</h2>
-<p>私有化的总成本通常是一笔巨大的资金投入，企业在考虑私有化时必须提前做好资金规划。</p>
-<h3>主要成本1：溢价收购公众股东股份</h3>
-<p>这是最大的成本项。以一家市值1亿美元、溢价30%私有化的公司为例，如果大股东持有60%，需要收购剩余40%的公众股份，按溢价30%计算，需要支付约5200万美元（4000万美元按溢价后）。</p>
-<h3>主要成本2：融资成本</h3>
-<p>大型私有化通常需要杠杆融资。银行并购贷款的利率通常在SOFR加300至500个基点（2025年约7%至9%），加上融资安排费用，整体融资成本不低。</p>
-<h3>主要成本3：专业费用</h3>
-<p>法律费用（收购方律师加公司特别委员会律师）约300至800万美元；财务顾问费用约200至500万美元；审计及其他专业费用约100至200万美元。</p>
-<h2>五、私有化后的资本路径</h2>
-<p>私有化不是终点，而是资本重组的中间站。完成私有化后，企业通常会走向以下几条路径。</p>
-<h3>路径1：回归港股上市</h3>
-<p>最常见的路径。利用私有化期间完成业务整合、财务规范、治理提升，然后以更优质的状态在港股重新挂牌，享受更高的估值和更多的南向资金关注。</p>
-<h3>路径2：寻求A股上市</h3>
-<p>对于核心业务在中国大陆的企业，A股的高估值倍数（特别是硬科技领域）是极大的吸引力。私有化后重新梳理业务结构，争取A股科创板或创业板挂牌。</p>
-<h3>路径3：保持私有并寻求战略并购</h3>
-<p>部分公司在私有化后选择不再上市，而是作为优质私有资产，寻求与产业巨头的战略并购，让PE投资人通过并购退出获得回报。</p>
-<h3>结语：私有化是资本路径的重新选择</h3>
-<p>中概股私有化不是失败，而是一次主动的资本路径重新选择。当美股市场无法给予公司应有的估值认可，当合规成本与上市收益不成比例，当战略转型需要更大的灵活度，私有化退市是完全合理的资本决策。</p>
-<p>私有化完成后，企业完成整合、焕然一新，以更强的姿态回归亚洲资本市场，往往能获得比在美股时高出数倍的估值。这才是私有化背后真正的战略逻辑。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>私有化退市是上市公司大股东（通常是创始人或PE机构）向全体公众股东发出要约收购，以溢价回购所有流通股，将公司从公众公司转回私有公司的过程。对很多中概股而言，私有化是在美股市场估值长期被低估、持续承受合规成本压力的情况下，一个主动维护股东权益的战略选择。</p><p>整个流程通常需要6至12个月，总成本包括溢价收购价（通常比当前股价溢价20%至50%）加上法律费用加上融资成本。私有化完成后，公司可以在没有公众市场压力的情况下重新整合，为未来回归港股或A股做准备。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">为什么中概股会考虑私有化</a></li><li><a href="#sec-02">私有化的两种主要形式</a></li><li><a href="#sec-03">私有化的完整流程</a></li><li><a href="#sec-04">私有化的成本构成</a></li><li><a href="#sec-05">私有化后的资本路径</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、为什么中概股会考虑私有化</h2><p>中概股私有化的浪潮在2015至2016年达到顶峰，此后陆续有企业在不同时期完成私有化。驱动私有化决策的原因通常有以下几类。</p><p><h3>原因1：估值长期被低估</h3></p><p>很多优质的中国企业在美股市场的估值远低于其内在价值，甚至低于同类企业在中国A股或港股的估值。当这种价值差异足够大时，大股东通过私有化退市、再以更高估值在其他市场重新上市，可以为股东创造显著价值。</p><p><h3>原因2：持续合规成本压力</h3></p><p>美股上市公司每年需要承担100至200万美元的合规成本（PCAOB审计、SOX合规、SEC披露、D&amp;O保险等）。对于市值较小的公司，这些成本可能吞噬相当大比例的利润，得不偿失。</p><p><h3>原因3：中美监管不确定性</h3></p><p>中美关系的周期性波动、HFCAA法案等监管风险，让部分中概股管理层选择主动退出美股市场，回到更熟悉的监管环境。</p><p><h3>原因4：战略转型需要私有灵活性</h3></p><p>某些重大战略转型（如业务模式根本性调整、资产重组、管理层更换）在公开市场的透明度要求下难以顺利推进。私有化后可以在没有外部股东干扰的情况下完成转型，再以更优态势重新上市。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、私有化的两种主要形式</h2><p><h3>形式1：管理层收购（Management Buyout，MBO）</h3></p><p>由公司现任管理层（通常包括创始人和CEO）联合PE基金，共同发起要约收购，回购所有公众股东的股份，实现公司私有化。</p><p>MBO的特点：发起方是内部人，对公司有最深入的了解，谈判能动性强；通常需要PE机构提供杠杆融资支持（因为管理层自身资金有限）；完成后管理层和PE成为公司的全部股东，共同规划下一阶段的资本路径。</p><p><h3>形式2：战略投资人收购（Strategic Buyer Acquisition）</h3></p><p>由外部战略投资人（产业并购方、主权基金等）发起要约，收购上市公司全部股份。这种形式本质上是公司被收购，而非管理层主导的私有化。</p><p>这种情况下，创始人通常会完全退出（通过出售股份获得变现），或者与收购方谈判保留部分股份和管理职位，继续参与公司运营。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、私有化的完整流程</h2><p><h3>阶段1：前期准备和内部决策 1至2个月</h3></p><p>大股东和管理团队内部讨论私有化方案，评估可行性和时机；聘请财务顾问（通常是投行）提供独立财务意见；联系潜在的PE共同投资人；初步确定收购要约价格区间（通常以当前股价为基础，设定20%至50%的溢价）。</p><p><h3>阶段2：组建收购团队并完成融资安排 1至2个月</h3></p><p>确定收购联合体的构成（管理层加PE投资人等）；安排过桥贷款或并购融资（通常由银行提供以公司资产为抵押的杠杆贷款，约占总收购金额的50%至70%）；聘请收购方法律顾问；签署保密协议防止信息泄露。</p><p><h3>阶段3：向公司董事会提交要约 1个月</h3></p><p>发起方向公司董事会提交初步非约束性要约（Non-binding Offer Letter），说明拟收购价格和主要条款。董事会收到要约后，必须成立由独立董事组成的特别委员会（Special Committee）负责评估要约，并聘请独立财务顾问（与发起方无关联的投行）发表独立财务意见。</p><p><h3>阶段4：谈判与尽职调查 2至3个月</h3></p><p>特别委员会代表公众股东与发起方就收购价格和条款进行谈判；发起方的收购团队对目标公司进行全面的尽职调查（财务、法律、业务等）；双方最终就收购协议（Merger Agreement）达成一致。</p><p>在此期间，特别委员会的独立财务顾问会就收购价格是否公平发表财务公平意见（Fairness Opinion），保护公众股东利益。</p><p><h3>阶段5：签署合并协议并公告 1至2周</h3></p><p>发起方和公司签署正式的合并协议（Merger Agreement）或购买协议（Purchase Agreement）；公司向SEC提交相关文件（SC 13E-3表格）；公开宣布私有化计划，通常会导致股价立即上涨至接近收购价格。</p><p><h3>阶段6：SEC审核和股东大会 2至3个月</h3></p><p>向SEC提交的文件需要经过SEC审核（通常1至2轮问询）；通过SEC审核后，公司召开临时股东大会，就私有化方案进行投票。一般要求持有大多数流通股（排除发起人股份）的股东投票赞成才能通过。</p><p><h3>阶段7：完成交割和退市 1个月</h3></p><p>股东大会通过后，完成资金交割——收购方支付收购款给全部公众股东；公司在纳斯达克正式退市；完成必要的法律程序（通常通过开曼公司法的合并程序）。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、私有化的成本构成</h2><p>私有化的总成本通常是一笔巨大的资金投入，企业在考虑私有化时必须提前做好资金规划。</p><p><h3>主要成本1：溢价收购公众股东股份</h3></p><p>这是最大的成本项。以一家市值1亿美元、溢价30%私有化的公司为例，如果大股东持有60%，需要收购剩余40%的公众股份，按溢价30%计算，需要支付约5200万美元（4000万美元按溢价后）。</p><p><h3>主要成本2：融资成本</h3></p><p>大型私有化通常需要杠杆融资。银行并购贷款的利率通常在SOFR加300至500个基点（2025年约7%至9%），加上融资安排费用，整体融资成本不低。</p><p><h3>主要成本3：专业费用</h3></p><p>法律费用（收购方律师加公司特别委员会律师）约300至800万美元；财务顾问费用约200至500万美元；审计及其他专业费用约100至200万美元。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、私有化后的资本路径</h2><p>私有化不是终点，而是资本重组的中间站。完成私有化后，企业通常会走向以下几条路径。</p><p><h3>路径1：回归港股上市</h3></p><p>最常见的路径。利用私有化期间完成业务整合、财务规范、治理提升，然后以更优质的状态在港股重新挂牌，享受更高的估值和更多的南向资金关注。</p><p><h3>路径2：寻求A股上市</h3></p><p>对于核心业务在中国大陆的企业，A股的高估值倍数（特别是硬科技领域）是极大的吸引力。私有化后重新梳理业务结构，争取A股科创板或创业板挂牌。</p><p><h3>路径3：保持私有并寻求战略并购</h3></p><p>部分公司在私有化后选择不再上市，而是作为优质私有资产，寻求与产业巨头的战略并购，让PE投资人通过并购退出获得回报。</p><p><h3>结语：私有化是资本路径的重新选择</h3></p><p>中概股私有化不是失败，而是一次主动的资本路径重新选择。当美股市场无法给予公司应有的估值认可，当合规成本与上市收益不成比例，当战略转型需要更大的灵活度，私有化退市是完全合理的资本决策。</p><p>私有化完成后，企业完成整合、焕然一新，以更强的姿态回归亚洲资本市场，往往能获得比在美股时高出数倍的估值。这才是私有化背后真正的战略逻辑。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="rwa-tokenization.html" style="color:#6b5426;font-weight:700;">RWA资产代币化与企业融资</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="spinoff-listing.html" style="color:#6b5426;font-weight:700;">分拆子公司独立上市</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="multi-entity-packaging.html" style="color:#6b5426;font-weight:700;">多主体打包上市可行性</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="stock-merger.html" style="color:#6b5426;font-weight:700;">上市公司换股并购</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="shell-company-diligence.html" style="color:#6b5426;font-weight:700;">借壳上市的壳资源识别与尽调要点</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

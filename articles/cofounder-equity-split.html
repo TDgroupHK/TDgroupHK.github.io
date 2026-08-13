@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"合伙人股权怎么分：初创公司创始团队的股权分配方法与三条不可逆红线","inLanguage":"zh-CN","abstract":"Splitting founder equity is one of the few early decisions that is genuinely hard to reverse. This article sets out a four-factor allocation method, the case against equal splits, and how a four-year vesting schedule with a twelve-month cliff keeps ownership tied to continued contribution. It also examines three structural red lines—nominee shareholding, missing buyback terms, and unsigned spousal consent—that surface during due diligence and listing review.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/cofounder-equity-split.html"},"datePublished":"2026-08-08","dateModified":"2026-08-08","description":"几个合伙人一起创业，股权到底按什么分？本文给出四个维度的定量分配方法、期权池预留区间与控制权刻度，说明平均分为什么是风险最高的做法，拆解成熟机制（4 年成熟、12 个月悬崖期）与回购定价的要点，并说明代持、缺失退出条款、配偶未签字这三条在后续融资与上市审核中难以补救的红线。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,45 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">初创融资 EARLY STAGE</div><h1>合伙人股权怎么分：初创公司创始团队的股权分配方法与三条不可逆红线</h1>
 <div class="sub">从四维度定量打分到成熟机制，把创始股权做成经得起融资尽调与上市审核的结构</div><div class="en">Splitting founder equity is one of the few early decisions that is genuinely hard to reverse. This article sets out a four-factor allocation method, the case against equal splits, and how a four-year vesting schedule with a twelve-month cliff keeps ownership tied to continued contribution. It also examines three structural red lines—nominee shareholding, missing buyback terms, and unsigned spousal consent—that surface during due diligence and listing review.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">创始团队股权分配，是指在公司设立或早期阶段，按各合伙人未来数年可预期的投入与责任，把公司所有权切分为可执行、可调整、可退出的持股结构。做法分三层：一是比例，核心创始人保持相对集中的持股，首轮外部融资前通常落在 50%-67% 区间，并预留 10%-20% 的期权池；二是时间，全部创始股权设置 4 年成熟期与 12 个月悬崖期，未成熟部分在离职时按约定价格收回；三是文件，在章程、股东协议与配偶确认函三处把安排固定下来且表述一致。平均分配之所以风险最高，不在于它不公平，而在于它同时让决策与融资两端失效。本质上，股权分配分的不是过去几个月的功劳，而是未来 4 至 8 年的责任。</div>
-<h2>一、平均分为什么是风险最高的分法</h2>
-<p><strong>结论先行：平均分不是公平，而是把决策权与最终责任同时归零。</strong></p>
-<p>股权均分是指两名及以上合伙人不区分角色与投入，按人数等额持股，例如两人各 50%、三人各三分之一。它的吸引力在于回避了创业初期最难开口的那场谈判，代价是把谈判推迟到公司已经有价值之后。</p>
-<p>决策层面的问题最直接。境内有限责任公司修改章程、增减注册资本、合并分立等事项，需经代表三分之二以上表决权的股东通过；两人各半时任何一方都无法单独形成有效表决，公司在需要快速决定融资条款或架构搭建时会停在原地。三人各三分之一同样脆弱：任意两人联合即可改变第三人的处境。</p>
-<p>融资层面的问题紧随其后。投资人评估早期项目时，会看股权结构是否指向一个对最终结果负责的人；过于分散的持股往往在尽调阶段就被要求调整，常见口径是核心创始人持股不低于 30%-40%，或通过一致行动协议、表决权委托集中表决权。让出比例的一方，让的是已经标价的东西。</p>
-<p>更深的问题是时间错配。分股权发生在第 1 个月，兑现的却是第 12 至 96 个月的投入；入伙时能看到的只有对方过去几周的表现。因此，平均分本质上是在信息最少的时刻，做了一个最难更改的决定。</p>
-<h2>二、四维度定量打分：把感觉换成可复核的分配表</h2>
-<p><strong>结论先行：先定权重，再对号入座，最后才得出比例。</strong></p>
-<p>四维度打分是指把创始股权拆成若干项可讨论的权重，逐项给分后加总得出比例，而不是直接对总比例讨价还价。常用四项为：创意与前期投入（10%-20%）、全职投入与机会成本（25%-40%）、不可替代的能力或资源（20%-30%）、最终责任与决策承担（20%-30%）。权重须由全体合伙人先共同确定并写下来，再逐人打分；顺序颠倒，讨论就会退化成对人的评价。</p>
-<p>现金出资应当单独计算，不与人力投入混在同一张表里。较稳妥的处理是单独折股，或按借款处理，约定在首轮外部融资完成后以本金加约定利率偿还。混算的后果是：出资 50 万元的合伙人以为买到了长期话语权，全职工作的合伙人则认为对方只是出了一笔钱。</p>
-<p>兼职合伙人按 0.3-0.5 的系数折算，并且必须使用与全职者不同的成熟节奏——全职按 4 年匀速成熟，兼职按里程碑成熟，完成约定交付才释放对应批次。以顾问身份提供资源的人，通常安排在期权池而非创始股权中，比例区间一般为 0.2%-1%。</p>
-<p>打分完成后要留白。首轮外部融资前预留 10%-20% 的期权池，由在册股东同比稀释；池子太小会在关键岗位招聘时被迫扩池，而扩池多半发生在投资人要求之下，稀释的只有创始团队。同时要预留控制权刻度：境内特别决议门槛是三分之二，持股 34% 即处在对重大事项的否决位置。关键在于，比例是算出来的，控制权是设计出来的。</p>
-<h2>三、人走股留：成熟机制、悬崖期与回购定价</h2>
-<p><strong>结论先行：分配只解决起点，成熟机制才解决终点。</strong></p>
-<p>股权成熟（vesting）是指创始人名下的股权按时间或里程碑分批确认归属，未到期部分在其离开时由公司或其他股东按约定价格收回。通行节奏是 4 年成熟、12 个月悬崖期：满 12 个月一次性成熟 25%，此后按月或按季匀速释放，第 48 个月全部到期；悬崖期内离开的，不带走任何股权。</p>
-<p>起算日应写全职到岗日，而不是工商登记日，两者常相差 3 至 9 个月。全职工作满一年以上才补签的团队，可按实际服务月数折抵，但折抵上限建议不超过 50%，否则机制在签署当天就已失去大部分约束力。</p>
-<p>回购定价是整套机制真正的分水岭。通行的分层是：未成熟部分按原始出资额或名义价格收回（境内常见按实缴出资额，境外常见按票面价）；已成熟部分区分离职原因，无因离职按最近一轮估值的 60%-80% 与经审计净资产孰低者，有因离职按原始出资额，支付一般分 12 至 36 个月。</p>
-<p>文件落点因架构而异。境内公司需要股东会决议、章程条款与股东协议三处一致，只写在股东协议而章程不改，执行时会在工商变更环节受阻；境外架构则在开曼或 BVI 主体层面通过限制性股份协议实现反向成熟，条款语言与员工期权计划不同，不能直接套用。另需事先约定被整体收购时的加速条款，采用单触发还是双触发，留到交易谈判当天再谈已经来不及。本质上，成熟机制保护的不是公司，而是留下来继续工作的那些人。</p>
-<h2>四、红线一：代持</h2>
-<p><strong>结论先行：代持在融资尽调与上市审核中一律要求还原，还原成本远高于当初省下的麻烦。</strong></p>
-<p>股权代持是指实际出资人不以自己名义登记为股东，而由名义股东持有股权并代为行使权利。早期采用它的理由通常很具体：某位合伙人身份不便显名、人数超出有限责任公司五十人的股东上限、或只是嫌工商变更麻烦。这些理由在设立当天成立，在融资当天全部失效。</p>
-<p>审核口径是明确的。境内上市要求发行人股权权属清晰、不存在重大权属纠纷；存在过代持的，须在申报前完成还原，并说明形成原因、还原过程、有无纠纷、定价是否公允。境外发行同样要在招股文件中披露真实受益人。代持不是能不能被查出来的问题，而是必须由自己讲清楚的问题。</p>
-<p>跨境架构下，代持还会破坏外汇登记的真实性。境内居民个人以境内外合法资产权益向特殊目的公司出资，应办理 37 号文项下的境外投资外汇登记，登记主体必须是真实的权益持有人。以代持人名义办理，会造成登记信息与实际权益归属不符，后续分红汇回、减资与退出资金入境都缺少合规通道。</p>
-<p>还原本身也有成本。代持还原在税务上可能被认定为股权转让，按财产转让所得计征个人所得税，税率 20%；申报价格明显偏低又无正当理由的，主管税务机关可按净资产份额等方法核定收入。因此，宁可在第一天就安排直接持股，或用有限合伙持股平台解决人数与显名问题。</p>
-<h2>五、红线二：股权已成既成事实，却没有退出与回购条款</h2>
-<p><strong>结论先行：没有回购条款，离场的合伙人就变成不参与经营却握有表决权的长期股东。</strong></p>
-<p>既成事实股权是指已完成工商登记或股东名册记载，但未附带任何成熟、回购、竞业与随售约束的持股。问题不在持有本身，而在于公司失去了在人员变动时调整股权的合法手段——除非对方自愿转让，任何强行调整都构成对股东财产权的剥夺。</p>
-<p>后果最先出现在融资桌上。投资人要求全体在册股东签署交易文件并作出陈述与保证，一位早已不参与经营、持股 15%-25% 的旧合伙人此时处在实质性的否决位置：他不需要反对，只需要不回邮件，交割就无法推进。事后回购的报价以最近估值为锚，常见落点在原始出资额的 5 倍以上。</p>
-<p>补救若拖到申报期，代价会转成两项。其一是股权稳定性：申报前 12 至 36 个月内的股权变动，需逐笔说明合理性与定价公允性。其二是股份支付：回购或转让价格低于当期公允价值的，差额可能被要求确认为股份支付费用计入当期损益，在净利润刚跨过门槛的项目上，这一笔足以让整个申报期重排。</p>
-<p>因此，成熟与回购条款必须在首次外部融资之前完成签署。彼时估值尚低，条款对所有人都是对称的；融资之后再提，提议的一方总会被理解为针对某个具体的人。创始人之间怎么开这个口，是华尔街彤鼎俱乐部闭门交流里被反复讨论的题目——它几乎没有技术难度，难度全在时机。</p>
-<h2>六、红线三：配偶未签字与继承缺口</h2>
-<p><strong>结论先行：婚姻关系存续期间取得的股权，默认属于夫妻共同财产。</strong></p>
-<p>配偶确认是指创始人的配偶以书面形式确认对该部分股权的处置安排，通常包括：知悉并同意章程与股东协议的约束、离婚时仅就财产价值主张权利而不主张成为公司股东、授权创始人一方单独行使表决权。依据民法典婚姻家庭编，夫妻在婚姻关系存续期间取得的生产、经营、投资的收益归夫妻共同所有，另有书面约定的除外。</p>
-<p>风险在离婚时具体化。分割的对象是财产价值，争议却往往落在股东资格上：有限责任公司股权对外转让涉及其他股东的同意与同等条件下的受让安排；争议持续期间该部分股权状态不确定，投资人的交易文件无法完成签署。一场持续 12 至 24 个月的分割诉讼，足以让一轮融资失效。</p>
-<p>继承是同一问题的另一面。自然人股东死亡后，其合法继承人可以继承股东资格，但公司章程另有规定的除外。章程里的一句话，决定了继承人是直接成为股东，还是仅取得相应的财产价值补偿。多数早期公司沿用模板章程，等真正需要这一条时已经来不及修改。</p>
-<p>操作上，配偶确认函应与股东协议同时签署；境外架构在特殊目的公司层面也需要相应的配偶同意文件，两地文本必须指向同一套安排。婚内财产协议与家族信托是更彻底的做法，但都要求在权益价值尚低、关系清晰时设立，越晚设立可被质疑的空间越大。彤鼎集团（香港）有限公司为企业管理咨询机构，在此类项目中承担架构梳理与流程统筹，涉及持牌业务的部分由持牌合作机构承做，具体法律与税务文件应由执业律师与税务师出具。本质上，把家庭财产边界写清楚，保护的是配偶与公司两侧。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>创始团队股权分配，是指在公司设立或早期阶段，按各合伙人未来数年可预期的投入与责任，把公司所有权切分为可执行、可调整、可退出的持股结构。做法分三层：一是比例，核心创始人保持相对集中的持股，首轮外部融资前通常落在 50%-67% 区间，并预留 10%-20% 的期权池；二是时间，全部创始股权设置 4 年成熟期与 12 个月悬崖期，未成熟部分在离职时按约定价格收回；三是文件，在章程、股东协议与配偶确认函三处把安排固定下来且表述一致。</p><p>平均分配之所以风险最高，不在于它不公平，而在于它同时让决策与融资两端失效。本质上，股权分配分的不是过去几个月的功劳，而是未来 4 至 8 年的责任。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">平均分为什么是风险最高的分法</a></li><li><a href="#sec-02">四维度定量打分：把感觉换成可复核的分配表</a></li><li><a href="#sec-03">人走股留：成熟机制、悬崖期与回购定价</a></li><li><a href="#sec-04">红线一：代持</a></li><li><a href="#sec-05">红线二：股权已成既成事实，却没有退出与回购条款</a></li><li><a href="#sec-06">红线三：配偶未签字与继承缺口</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、平均分为什么是风险最高的分法</h2><div class="ts-lead"><span class="tag">结论先行</span><p>平均分不是公平，而是把决策权与最终责任同时归零。</p></div><p>股权均分是指两名及以上合伙人不区分角色与投入，按人数等额持股，例如两人各 50%、三人各三分之一。它的吸引力在于回避了创业初期最难开口的那场谈判，代价是把谈判推迟到公司已经有价值之后。</p><p>决策层面的问题最直接。境内有限责任公司修改章程、增减注册资本、合并分立等事项，需经代表三分之二以上表决权的股东通过；两人各半时任何一方都无法单独形成有效表决，公司在需要快速决定融资条款或架构搭建时会停在原地。三人各三分之一同样脆弱：任意两人联合即可改变第三人的处境。</p><p>融资层面的问题紧随其后。投资人评估早期项目时，会看股权结构是否指向一个对最终结果负责的人；过于分散的持股往往在尽调阶段就被要求调整，常见口径是核心创始人持股不低于 30%-40%，或通过一致行动协议、表决权委托集中表决权。让出比例的一方，让的是已经标价的东西。</p><p>更深的问题是时间错配。分股权发生在第 1 个月，兑现的却是第 12 至 96 个月的投入；入伙时能看到的只有对方过去几周的表现。因此，平均分本质上是在信息最少的时刻，做了一个最难更改的决定。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、四维度定量打分：把感觉换成可复核的分配表</h2><div class="ts-lead"><span class="tag">结论先行</span><p>先定权重，再对号入座，最后才得出比例。</p></div><p>四维度打分是指把创始股权拆成若干项可讨论的权重，逐项给分后加总得出比例，而不是直接对总比例讨价还价。常用四项为：创意与前期投入（10%-20%）、全职投入与机会成本（25%-40%）、不可替代的能力或资源（20%-30%）、最终责任与决策承担（20%-30%）。</p><p data-ts="1">权重须由全体合伙人先共同确定并写下来，再逐人打分；顺序颠倒，讨论就会退化成对人的评价。</p><p>现金出资应当单独计算，不与人力投入混在同一张表里。较稳妥的处理是单独折股，或按借款处理，约定在首轮外部融资完成后以本金加约定利率偿还。混算的后果是：出资 50 万元的合伙人以为买到了长期话语权，全职工作的合伙人则认为对方只是出了一笔钱。</p><p>兼职合伙人按 0.3-0.5 的系数折算，并且必须使用与全职者不同的成熟节奏——全职按 4 年匀速成熟，兼职按里程碑成熟，完成约定交付才释放对应批次。以顾问身份提供资源的人，通常安排在期权池而非创始股权中，比例区间一般为 0.2%-1%。</p><p>打分完成后要留白。首轮外部融资前预留 10%-20% 的期权池，由在册股东同比稀释；池子太小会在关键岗位招聘时被迫扩池，而扩池多半发生在投资人要求之下，稀释的只有创始团队。同时要预留控制权刻度：境内特别决议门槛是三分之二，持股 34% 即处在对重大事项的否决位置。关键在于，比例是算出来的，控制权是设计出来的。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、人走股留：成熟机制、悬崖期与回购定价</h2><div class="ts-lead"><span class="tag">结论先行</span><p>分配只解决起点，成熟机制才解决终点。</p></div><p>股权成熟（vesting）是指创始人名下的股权按时间或里程碑分批确认归属，未到期部分在其离开时由公司或其他股东按约定价格收回。通行节奏是 4 年成熟、12 个月悬崖期：满 12 个月一次性成熟 25%，此后按月或按季匀速释放，第 48 个月全部到期；悬崖期内离开的，不带走任何股权。</p><p>起算日应写全职到岗日，而不是工商登记日，两者常相差 3 至 9 个月。全职工作满一年以上才补签的团队，可按实际服务月数折抵，但折抵上限建议不超过 50%，否则机制在签署当天就已失去大部分约束力。</p><p>回购定价是整套机制真正的分水岭。通行的分层是：未成熟部分按原始出资额或名义价格收回（境内常见按实缴出资额，境外常见按票面价）；已成熟部分区分离职原因，无因离职按最近一轮估值的 60%-80% 与经审计净资产孰低者，有因离职按原始出资额，支付一般分 12 至 36 个月。</p><p>文件落点因架构而异。境内公司需要股东会决议、章程条款与股东协议三处一致，只写在股东协议而章程不改，执行时会在工商变更环节受阻；境外架构则在开曼或 BVI 主体层面通过限制性股份协议实现反向成熟，条款语言与员工期权计划不同，不能直接套用。</p><p data-ts="1">另需事先约定被整体收购时的加速条款，采用单触发还是双触发，留到交易谈判当天再谈已经来不及。本质上，成熟机制保护的不是公司，而是留下来继续工作的那些人。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、红线一：代持</h2><div class="ts-lead"><span class="tag">结论先行</span><p>代持在融资尽调与上市审核中一律要求还原，还原成本远高于当初省下的麻烦。</p></div><p>股权代持是指实际出资人不以自己名义登记为股东，而由名义股东持有股权并代为行使权利。早期采用它的理由通常很具体：某位合伙人身份不便显名、人数超出有限责任公司五十人的股东上限、或只是嫌工商变更麻烦。这些理由在设立当天成立，在融资当天全部失效。</p><p>审核口径是明确的。境内上市要求发行人股权权属清晰、不存在重大权属纠纷；存在过代持的，须在申报前完成还原，并说明形成原因、还原过程、有无纠纷、定价是否公允。境外发行同样要在招股文件中披露真实受益人。代持不是能不能被查出来的问题，而是必须由自己讲清楚的问题。</p><p>跨境架构下，代持还会破坏外汇登记的真实性。境内居民个人以境内外合法资产权益向特殊目的公司出资，应办理 37 号文项下的境外投资外汇登记，登记主体必须是真实的权益持有人。以代持人名义办理，会造成登记信息与实际权益归属不符，后续分红汇回、减资与退出资金入境都缺少合规通道。</p><p>还原本身也有成本。代持还原在税务上可能被认定为股权转让，按财产转让所得计征个人所得税，税率 20%；申报价格明显偏低又无正当理由的，主管税务机关可按净资产份额等方法核定收入。因此，宁可在第一天就安排直接持股，或用有限合伙持股平台解决人数与显名问题。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、红线二：股权已成既成事实，却没有退出与回购条款</h2><div class="ts-lead"><span class="tag">结论先行</span><p>没有回购条款，离场的合伙人就变成不参与经营却握有表决权的长期股东。</p></div><p>既成事实股权是指已完成工商登记或股东名册记载，但未附带任何成熟、回购、竞业与随售约束的持股。问题不在持有本身，而在于公司失去了在人员变动时调整股权的合法手段——除非对方自愿转让，任何强行调整都构成对股东财产权的剥夺。</p><p>后果最先出现在融资桌上。投资人要求全体在册股东签署交易文件并作出陈述与保证，一位早已不参与经营、持股 15%-25% 的旧合伙人此时处在实质性的否决位置：他不需要反对，只需要不回邮件，交割就无法推进。事后回购的报价以最近估值为锚，常见落点在原始出资额的 5 倍以上。</p><p>补救若拖到申报期，代价会转成两项。其一是股权稳定性：申报前 12 至 36 个月内的股权变动，需逐笔说明合理性与定价公允性。其二是股份支付：回购或转让价格低于当期公允价值的，差额可能被要求确认为股份支付费用计入当期损益，在净利润刚跨过门槛的项目上，这一笔足以让整个申报期重排。</p><p>因此，成熟与回购条款必须在首次外部融资之前完成签署。彼时估值尚低，条款对所有人都是对称的；融资之后再提，提议的一方总会被理解为针对某个具体的人。创始人之间怎么开这个口，是华尔街彤鼎俱乐部闭门交流里被反复讨论的题目——它几乎没有技术难度，难度全在时机。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、红线三：配偶未签字与继承缺口</h2><div class="ts-lead"><span class="tag">结论先行</span><p>婚姻关系存续期间取得的股权，默认属于夫妻共同财产。</p></div><p>配偶确认是指创始人的配偶以书面形式确认对该部分股权的处置安排，通常包括：知悉并同意章程与股东协议的约束、离婚时仅就财产价值主张权利而不主张成为公司股东、授权创始人一方单独行使表决权。</p><p data-ts="1">依据民法典婚姻家庭编，夫妻在婚姻关系存续期间取得的生产、经营、投资的收益归夫妻共同所有，另有书面约定的除外。</p><p>风险在离婚时具体化。分割的对象是财产价值，争议却往往落在股东资格上：有限责任公司股权对外转让涉及其他股东的同意与同等条件下的受让安排；争议持续期间该部分股权状态不确定，投资人的交易文件无法完成签署。一场持续 12 至 24 个月的分割诉讼，足以让一轮融资失效。</p><p>继承是同一问题的另一面。自然人股东死亡后，其合法继承人可以继承股东资格，但公司章程另有规定的除外。章程里的一句话，决定了继承人是直接成为股东，还是仅取得相应的财产价值补偿。多数早期公司沿用模板章程，等真正需要这一条时已经来不及修改。</p><p>操作上，配偶确认函应与股东协议同时签署；境外架构在特殊目的公司层面也需要相应的配偶同意文件，两地文本必须指向同一套安排。婚内财产协议与家族信托是更彻底的做法，但都要求在权益价值尚低、关系清晰时设立，越晚设立可被质疑的空间越大。</p><p data-ts="1">彤鼎集团（香港）有限公司为企业管理咨询机构，在此类项目中承担架构梳理与流程统筹，涉及持牌业务的部分由持牌合作机构承做，具体法律与税务文件应由执业律师与税务师出具。本质上，把家庭财产边界写清楚，保护的是配偶与公司两侧。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="spac-vs-ipo.html" style="color:#6b5426;font-weight:700;">SPAC上市与传统IPO对比</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hkex-listing-reform-2026.html" style="color:#6b5426;font-weight:700;">港交所上市机制改革：同股不同权门槛下调与保密递表全面放开</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="return-to-a-share.html" style="color:#6b5426;font-weight:700;">中概股回归A股路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-18a-biotech.html" style="color:#6b5426;font-weight:700;">香港18A生物科技上市路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-vs-nyse.html" style="color:#6b5426;font-weight:700;">纳斯达克与纽交所怎么选</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

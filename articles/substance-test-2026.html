@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"实质经营地审查：纳斯达克如何认定一家公司是不是中国公司","inLanguage":"zh-CN","abstract":"Nasdaq's 2026 rules determine applicability by substance rather than place of incorporation, examining whether an issuer is operated, managed and controlled from China across revenue, assets, personnel, board composition, headquarters functions and equity or contractual control. Changing the registered address alone does not change the answer.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/substance-test-2026.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"纳斯达克2026新规将审查推进到发行人是否实质由中国经营、管理、控制的事实认定。本文拆解经营、管理、控制三个维度的具体判定要素，以及为何仅靠注册地变更无法规避审查。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,83 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市路径 LISTING PATH</div><h1>实质经营地审查：纳斯达克如何认定一家公司是不是中国公司</h1>
 <div class="sub">新规最核心的判定标准与架构设计影响</div><div class="en">Nasdaq's 2026 rules determine applicability by substance rather than place of incorporation, examining whether an issuer is operated, managed and controlled from China across revenue, assets, personnel, board composition, headquarters functions and equity or contractual control. Changing the registered address alone does not change the answer.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">实质经营地审查是指：交易所在判断一家发行人是否适用针对在华运营企业的特别上市标准时，不以公司注册地或控股架构所在法域为准，而是审查发行人是否实质由中国经营、管理、控制这一组事实。2026年5月14日美国证券交易委员会以加速程序批准纳斯达克上市规则修订案后，这一判断标准成为新规适用的入口条件：一旦被认定为在华运营企业，首次公开发行须采用尽职承销发行模式且面向公众投资者的最低募资总额不得低于2500万美元，以业务合并方式上市的无限制流通公众股市值不得低于2500万美元，并且不得以直接上市方式登陆纳斯达克全球市场与资本市场。审查沿三个维度展开：经营维度看收入、资产、员工与生产经营场所的地理分布；管理维度看董事会与高级管理人员的所在地与实际决策发生地；控制维度看股权穿透后的实际控制人身份与协议控制安排。关键在于：这三项都是事实问题，因此仅靠注册地变更无法规避审查，真实的经营实质才是核心。</div>
-<h2>一、为什么实质经营地成了新规的入口条件</h2>
-<p><strong>结论先行：</strong>2500万美元门槛是新规的内容，实质经营地审查是新规的开关——不先解决适用与否的问题，门槛数字本身没有意义。</p>
-<p>任何差异化监管规则都需要一个适用范围的界定。纳斯达克在2026年5月的修订案中，针对主要在中国境内运营的企业增设了更严格的首次上市标准，那么随之而来的问题就是：什么叫主要在中国境内运营。</p>
-<p>这个问题的答案本可以很简单：以注册地为准。但监管机构没有选择这条路径，原因也很直接——境外上市的中国企业普遍采用离岸控股架构，控股主体注册在开曼群岛、英属维尔京群岛等法域，香港或新加坡设中间控股公司，实际业务全部在中国境内。若以注册地为标准，规则将在生效当天即告落空。</p>
-<p>因此，修订案把审查依据从注册地推进到了实质：交易所需要判断发行人是否实质由中国经营、管理、控制。这是一次从法律形式到商业实质的判断标准迁移，也是这次修订中影响最深远的部分。本质上，交易所要回答的不是这家公司在哪里注册，而是这家公司在哪里存在。</p>
-<h2>二、经营维度：业务在哪里发生</h2>
-<p><strong>结论先行：</strong>经营维度是三个维度中最难以人为安排的一个，因为它由客观的商业事实构成，且在财务报表与审计底稿中留有完整痕迹。</p>
-<p>经营维度审查的是发行人业务活动的地理分布，通常从以下事实入手。</p>
-<p><strong>收入来源地。</strong></p>
-<p>发行人的营业收入按客户所在地、合同签署地、服务交付地划分后，中国境内占比多少。这一数据在招股说明书的收入分部披露中必须列明，无法回避。若境内收入占比超过绝大部分，其余维度即便安排得再完整，认定结论也难以改变。</p>
-<p><strong>主要资产所在地。</strong></p>
-<p>固定资产、无形资产、存货、生产设施、研发中心的实际所在地。这些资产在审计中需要实地监盘与产权核查，其地理位置是可独立验证的事实。</p>
-<p><strong>人员与组织分布。</strong></p>
-<p>员工总数按所在地划分的构成，尤其是研发人员、生产人员与销售人员的分布。一家宣称经营重心在境外的企业，若95%的员工在中国境内、境外主体仅有数名行政人员，这一事实本身即构成认定依据。</p>
-<p><strong>供应链与客户结构。</strong></p>
-<p>主要供应商与主要客户的所在地、采购与销售的结算货币、以及业务对中国境内产业链的依赖程度，都会被纳入判断。</p>
-<p><strong>经营许可与资质。</strong></p>
-<p>业务开展所依赖的行政许可、经营资质、专利与商标的注册地，反映了业务在法律上依附于哪个司法辖区。</p>
-<p>这些事实的共同特点是：它们必须在审计与法律尽职调查中被完整披露，并且与财务报表、税务申报、社保记录、海关数据等外部证据相互印证。因此，经营维度基本不存在通过文件安排改变结论的空间。</p>
-<h2>三、管理维度：决策在哪里作出</h2>
-<p><strong>结论先行：</strong>管理维度审查的不是董事名册上写了谁，而是实际的经营决策在物理上和事实上发生在哪里。</p>
-<p>管理维度通常从以下几个方面展开审查。</p>
-<p><strong>董事会构成与会议地点。</strong></p>
-<p>董事的国籍、常住地、任职背景，以及董事会会议的实际召开地点与召开方式。若董事会成员绝大多数常住中国境内、会议实质上在境内召开，则管理重心的认定指向明确。</p>
-<p><strong>高级管理人员的实际所在地。</strong></p>
-<p>首席执行官、首席财务官、首席运营官等关键管理人员的日常办公地点、居住地与出入境记录。这里的关键词是日常——短期委任、名义任职、挂名安排在尽职调查中容易被识别。</p>
-<p><strong>总部职能的实际承载主体。</strong></p>
-<p>财务管理、人力资源、法务合规、战略规划、信息系统等总部职能，实际由哪个主体、哪个团队、在哪个地点承担。境外控股主体若仅有注册地址与代理秘书服务，不具备承载总部职能的人员与场所，则其管理地位难以成立。</p>
-<p><strong>重大事项的决策链条。</strong></p>
-<p>重大投资、重大合同、重大人事任免的审批流程，实际起点在哪里、由谁拍板、境外主体是实质审议还是形式确认。这一点在尽职调查中会通过调阅董事会决议、审批流程记录与内部邮件往来加以验证。</p>
-<p>管理维度比经营维度存在更多的安排空间，但这一空间也伴随着更高的成本与更长的时间要求。真实迁移管理职能意味着高管的实际居住地变更、团队的实际搬迁、决策流程的真实重构，这些都是需要按年计算并留下持续记录的事项。因此，临近申报才启动的管理迁移，往往难以形成有说服力的事实基础。</p>
-<h2>四、控制维度：权力最终归属于谁</h2>
-<p><strong>结论先行：</strong>控制维度穿透的是股权与协议的全链条，直到找到能够实际支配发行人经营决策的自然人或主体。</p>
-<p><strong>股权穿透后的实际控制人。</strong></p>
-<p>审查沿股权链条逐层穿透，直至识别出最终受益人与实际控制人。实际控制人的国籍与常住地，是控制维度中权重最高的单项事实。多层离岸架构不会阻断穿透，因为境外上市的信息披露要求本身就包含了对主要股东与实际控制人的完整披露义务。</p>
-<p><strong>协议控制安排。</strong></p>
-<p>协议控制架构，即通过一系列合同安排而非股权持有来取得对境内运营实体的控制与收益归集，是境外上市中长期存在的架构形式。在实质经营地审查中，协议控制安排的存在恰恰是一项正面认定依据——因为它以书面形式确认了发行人的收益与控制来源于中国境内实体。</p>
-<p><strong>表决权安排与特殊权利。</strong></p>
-<p>双重股权结构、一致行动协议、董事提名权、以及对重大事项的否决权等特殊安排，都会被纳入控制关系的判断。形式上分散的股权结构，若通过一致行动安排集中于境内主体，仍然指向境内控制。</p>
-<p><strong>资金与收益的流向。</strong></p>
-<p>利润的归集路径、分红的实际去向、境内外资金往来的规模与方向，从经济实质上反映了控制关系的真实归属。</p>
-<p>控制维度的审查逻辑与反洗钱、外汇监管、税务居民认定中的穿透逻辑高度一致。这意味着相关事实在多个监管体系中已经留下记录，跨体系的不一致本身就是风险点。本质上，控制维度问的是：谁能决定这家公司做什么。</p>
-<h2>五、为什么注册地变更无法规避审查</h2>
-<p><strong>结论先行：</strong>注册地是法律形式，实质经营地是商业事实；新规审查的对象是后者，因此改变前者不产生规避效果，反而可能构成披露风险。</p>
-<p>实践中存在一种常见的误解：把控股主体从开曼群岛迁移到新加坡，或在新加坡新设一家控股公司作为发行主体，即可脱离在华运营企业的认定范围。这一理解在新规下不成立，原因有三。</p>
-<p><strong>其一，注册地本就不是审查依据。</strong></p>
-<p>修订案的表述指向发行人是否实质由中国经营、管理、控制。注册地在这一表述中不占任何位置。一家注册在新加坡但收入、资产、人员、管理、控制全部在中国境内的企业，其认定结论与注册在开曼群岛的同类企业没有区别。</p>
-<p><strong>其二，事实链条在多处留痕且相互印证。</strong></p>
-<p>收入分部披露、审计底稿、税务申报、社保与用工记录、海关与外汇数据、董事会决议、高管出入境记录——这些证据分散在不同体系中，由不同机构独立形成。仅靠架构文件无法同时改写所有这些记录。</p>
-<p><strong>其三，形式与实质的背离本身构成风险。</strong></p>
-<p>若企业在申报文件中就经营重心作出与事实不符的陈述，面临的就不再是上市标准适用问题，而是信息披露的准确性问题。美国证券法项下的披露责任是严格的，一项不实陈述可能引发的后果，远重于适用更严格的上市标准。同时，中国证监会境外上市备案制自2023年3月31日施行以来，对红筹架构的合规性、历史沿革与实际控制关系同样进行穿透审查，境内外披露口径必须一致。</p>
-<p>因此，把注册地变更当作规避工具，是把一个事实问题误当作文件问题来处理。关键在于：审查针对的是实质，能够改变审查结论的只有实质本身的变化。</p>
-<h2>六、这对新加坡路径意味着什么</h2>
-<p><strong>结论先行：</strong>新加坡路径的价值不在于换一个注册地，而在于为企业提供一个可以承载真实经营实质的境外平台——实质迁移有效，壳迁移无效。</p>
-<p>需要区分两种截然不同的做法。</p>
-<p><strong>壳迁移：无效。</strong></p>
-<p>仅在新加坡注册一家控股公司，配备注册地址与代理秘书服务，无人员、无办公场所、无实际业务，境内运营实体与收入结构完全不变。这种安排在实质经营地审查中不产生任何效果，因为经营、管理、控制三个维度的事实全部未发生变化。</p>
-<p><strong>实质迁移：有效但需要时间。</strong></p>
-<p>把部分真实的业务职能迁移至新加坡并使其实际运转，例如设立区域总部承担东南亚市场的销售与客户服务、将部分研发团队实际派驻、由新加坡主体直接签署并履行境外客户合同、关键管理人员实际常驻并在当地形成决策记录、境外收入在新加坡主体确认并纳税。这类安排会真实改变收入分部结构、人员分布与决策发生地，因而在审查中具有实际意义。但它的前提是业务本身具备国际化的基础，且需要按年计算的时间积累。</p>
-<p>新加坡之所以在实践中被广泛采用，有其客观原因：普通法体系与国际投资人的认知一致性较高；公司治理与信息披露标准与国际接轨；作为区域性金融与贸易枢纽，具备承载区域总部职能的产业与人才基础；与多个司法辖区订有税收协定网络，便于跨境利润的合规安排。这些是制度性优势，不是规避工具。</p>
-<p>必须同时指出的是，任何跨境业务与主体的安排，都需要同步满足境内的合规要求：涉及境内主体对外投资的，需履行境外投资即ODI的备案或核准程序；自然人股东通过境外特殊目的公司持股的，需依据37号文办理外汇登记；涉及境外发行上市的，需履行中国证监会备案程序。绕开这些程序的架构安排，境内合规风险将大于境外收益。</p>
-<p>本质上，新加坡路径的正确用法是：为已经具备或有条件发展国际业务的企业，提供一个法律与税务上更稳健的境外经营与融资平台，并让架构真实反映业务的地理分布。它不解决没有国际业务的企业的认定问题，也不承诺任何认定结果。</p>
-<h2>七、架构设计的实践要点与时间安排</h2>
-<p><strong>结论先行：</strong>在实质经营地成为审查对象之后，架构设计的目标应当从优化形式转向反映实质，而实质的形成需要提前按年规划。</p>
-<p><strong>其一，先做事实盘点，再谈架构。</strong></p>
-<p>在设计任何架构之前，应先按三个维度盘点企业现状：境内外收入占比、资产与人员分布、董事与高管的实际所在、股权穿透后的实际控制人、是否存在协议控制安排。这份盘点决定了企业当前的认定结论，也决定了后续所有工作的起点。</p>
-<p><strong>其二，判断是否具备实质迁移的业务基础。</strong></p>
-<p>若企业已有稳定的境外收入、境外客户或境外供应链，实质迁移具备可行性；若业务完全依赖境内市场与境内产业链，则应当直接接受在华运营企业的认定，并按2500万美元发行规模与尽职承销的要求来设计方案，而不是在架构上做无效投入。</p>
-<p><strong>其三，为实质形成预留时间。</strong></p>
-<p>真实的职能迁移需要连续的记录支撑：实际的雇佣与社保记录、实际的办公租赁、实际签署并履行的客户合同、实际发生的当地纳税、实际召开的董事会。这些记录通常需要覆盖申报所依据的完整财务报告期，因此架构工作应当在预计申报时点之前以年为单位提前启动，而不是在申报前数月突击安排。</p>
-<p><strong>其四，保持境内外披露口径一致。</strong></p>
-<p>中国证监会备案、美国证券法项下的信息披露、审计报告的分部信息、税务申报的所得来源认定，四者对同一组事实的描述必须一致。任何一处的不一致，都可能在另一处被放大为合规问题。</p>
-<p><strong>其五，把架构成本纳入整体测算。</strong></p>
-<p>跨境架构的搭建与维持存在持续成本，包括境外主体的人员与场所支出、审计与税务合规费用、法律意见与备案费用。这些成本应当与2500万美元发行规模下的融资收益一并测算，以判断整体方案的经济合理性。</p>
-<p>彤鼎集团（香港）有限公司在境外上市服务中，帮助企业完成实质经营地的事实盘点、设计与业务实质相匹配的股权与经营架构、统筹境内备案与境外申报的时间衔接，并对接具备相应资质的持牌合作机构承做审计、法律与承销事项；华尔街彤鼎俱乐部则为企业家提供跨境资本市场规则的持续更新与同行经验交流。涉及Pre-IPO项目信息的部分，仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>实质经营地审查是指：交易所在判断一家发行人是否适用针对在华运营企业的特别上市标准时，不以公司注册地或控股架构所在法域为准，而是审查发行人是否实质由中国经营、管理、控制这一组事实。2026年5月14日美国证券交易委员会以加速程序批准纳斯达克上市规则修订案后，这一判断标准成为新规适用的入口条件：一旦被认定为在华运营企业，首次公开发行须采用尽职承销发行模式且面向公众投资者的最低募资总额不得低于2500万美元，以业务合并方式上市的无限制流通公众股市值不得低于2500万美元，并且不得以直接上市方式登陆纳斯达克全球市场与资本市场。</p><p>审查沿三个维度展开：经营维度看收入、资产、员工与生产经营场所的地理分布；管理维度看董事会与高级管理人员的所在地与实际决策发生地；控制维度看股权穿透后的实际控制人身份与协议控制安排。关键在于：这三项都是事实问题，因此仅靠注册地变更无法规避审查，真实的经营实质才是核心。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">为什么实质经营地成了新规的入口条件</a></li><li><a href="#sec-02">经营维度：业务在哪里发生</a></li><li><a href="#sec-03">管理维度：决策在哪里作出</a></li><li><a href="#sec-04">控制维度：权力最终归属于谁</a></li><li><a href="#sec-05">为什么注册地变更无法规避审查</a></li><li><a href="#sec-06">这对新加坡路径意味着什么</a></li><li><a href="#sec-07">架构设计的实践要点与时间安排</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、为什么实质经营地成了新规的入口条件</h2><div class="ts-lead"><span class="tag">结论先行</span><p>2500万美元门槛是新规的内容，实质经营地审查是新规的开关——不先解决适用与否的问题，门槛数字本身没有意义。</p></div><p>任何差异化监管规则都需要一个适用范围的界定。纳斯达克在2026年5月的修订案中，针对主要在中国境内运营的企业增设了更严格的首次上市标准，那么随之而来的问题就是：什么叫主要在中国境内运营。</p><p>这个问题的答案本可以很简单：以注册地为准。但监管机构没有选择这条路径，原因也很直接——境外上市的中国企业普遍采用离岸控股架构，控股主体注册在开曼群岛、英属维尔京群岛等法域，香港或新加坡设中间控股公司，实际业务全部在中国境内。若以注册地为标准，规则将在生效当天即告落空。</p><p>因此，修订案把审查依据从注册地推进到了实质：交易所需要判断发行人是否实质由中国经营、管理、控制。这是一次从法律形式到商业实质的判断标准迁移，也是这次修订中影响最深远的部分。本质上，交易所要回答的不是这家公司在哪里注册，而是这家公司在哪里存在。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、经营维度：业务在哪里发生</h2><div class="ts-lead"><span class="tag">结论先行</span><p>经营维度是三个维度中最难以人为安排的一个，因为它由客观的商业事实构成，且在财务报表与审计底稿中留有完整痕迹。</p></div><p>经营维度审查的是发行人业务活动的地理分布，通常从以下事实入手。</p><p><strong>收入来源地。</strong></p><p>发行人的营业收入按客户所在地、合同签署地、服务交付地划分后，中国境内占比多少。这一数据在招股说明书的收入分部披露中必须列明，无法回避。若境内收入占比超过绝大部分，其余维度即便安排得再完整，认定结论也难以改变。</p><p><strong>主要资产所在地。</strong></p><p>固定资产、无形资产、存货、生产设施、研发中心的实际所在地。这些资产在审计中需要实地监盘与产权核查，其地理位置是可独立验证的事实。</p><p><strong>人员与组织分布。</strong></p><p>员工总数按所在地划分的构成，尤其是研发人员、生产人员与销售人员的分布。一家宣称经营重心在境外的企业，若95%的员工在中国境内、境外主体仅有数名行政人员，这一事实本身即构成认定依据。</p><p><strong>供应链与客户结构。</strong></p><p>主要供应商与主要客户的所在地、采购与销售的结算货币、以及业务对中国境内产业链的依赖程度，都会被纳入判断。</p><p><strong>经营许可与资质。</strong></p><p>业务开展所依赖的行政许可、经营资质、专利与商标的注册地，反映了业务在法律上依附于哪个司法辖区。</p><p>这些事实的共同特点是：它们必须在审计与法律尽职调查中被完整披露，并且与财务报表、税务申报、社保记录、海关数据等外部证据相互印证。因此，经营维度基本不存在通过文件安排改变结论的空间。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、管理维度：决策在哪里作出</h2><div class="ts-lead"><span class="tag">结论先行</span><p>管理维度审查的不是董事名册上写了谁，而是实际的经营决策在物理上和事实上发生在哪里。</p></div><p>管理维度通常从以下几个方面展开审查。</p><p><strong>董事会构成与会议地点。</strong></p><p>董事的国籍、常住地、任职背景，以及董事会会议的实际召开地点与召开方式。若董事会成员绝大多数常住中国境内、会议实质上在境内召开，则管理重心的认定指向明确。</p><p><strong>高级管理人员的实际所在地。</strong></p><p>首席执行官、首席财务官、首席运营官等关键管理人员的日常办公地点、居住地与出入境记录。这里的关键词是日常——短期委任、名义任职、挂名安排在尽职调查中容易被识别。</p><p><strong>总部职能的实际承载主体。</strong></p><p>财务管理、人力资源、法务合规、战略规划、信息系统等总部职能，实际由哪个主体、哪个团队、在哪个地点承担。境外控股主体若仅有注册地址与代理秘书服务，不具备承载总部职能的人员与场所，则其管理地位难以成立。</p><p><strong>重大事项的决策链条。</strong></p><p>重大投资、重大合同、重大人事任免的审批流程，实际起点在哪里、由谁拍板、境外主体是实质审议还是形式确认。这一点在尽职调查中会通过调阅董事会决议、审批流程记录与内部邮件往来加以验证。</p><p>管理维度比经营维度存在更多的安排空间，但这一空间也伴随着更高的成本与更长的时间要求。真实迁移管理职能意味着高管的实际居住地变更、团队的实际搬迁、决策流程的真实重构，这些都是需要按年计算并留下持续记录的事项。因此，临近申报才启动的管理迁移，往往难以形成有说服力的事实基础。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、控制维度：权力最终归属于谁</h2><div class="ts-lead"><span class="tag">结论先行</span><p>控制维度穿透的是股权与协议的全链条，直到找到能够实际支配发行人经营决策的自然人或主体。</p></div><p><strong>股权穿透后的实际控制人。</strong></p><p>审查沿股权链条逐层穿透，直至识别出最终受益人与实际控制人。实际控制人的国籍与常住地，是控制维度中权重最高的单项事实。多层离岸架构不会阻断穿透，因为境外上市的信息披露要求本身就包含了对主要股东与实际控制人的完整披露义务。</p><p><strong>协议控制安排。</strong></p><p>协议控制架构，即通过一系列合同安排而非股权持有来取得对境内运营实体的控制与收益归集，是境外上市中长期存在的架构形式。在实质经营地审查中，协议控制安排的存在恰恰是一项正面认定依据——因为它以书面形式确认了发行人的收益与控制来源于中国境内实体。</p><p><strong>表决权安排与特殊权利。</strong></p><p>双重股权结构、一致行动协议、董事提名权、以及对重大事项的否决权等特殊安排，都会被纳入控制关系的判断。形式上分散的股权结构，若通过一致行动安排集中于境内主体，仍然指向境内控制。</p><p><strong>资金与收益的流向。</strong></p><p>利润的归集路径、分红的实际去向、境内外资金往来的规模与方向，从经济实质上反映了控制关系的真实归属。</p><p>控制维度的审查逻辑与反洗钱、外汇监管、税务居民认定中的穿透逻辑高度一致。这意味着相关事实在多个监管体系中已经留下记录，跨体系的不一致本身就是风险点。本质上，控制维度问的是：谁能决定这家公司做什么。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、为什么注册地变更无法规避审查</h2><div class="ts-lead"><span class="tag">结论先行</span><p>注册地是法律形式，实质经营地是商业事实；新规审查的对象是后者，因此改变前者不产生规避效果，反而可能构成披露风险。</p></div><p>实践中存在一种常见的误解：把控股主体从开曼群岛迁移到新加坡，或在新加坡新设一家控股公司作为发行主体，即可脱离在华运营企业的认定范围。这一理解在新规下不成立，原因有三。</p><p><strong>其一，注册地本就不是审查依据。</strong></p><p>修订案的表述指向发行人是否实质由中国经营、管理、控制。注册地在这一表述中不占任何位置。一家注册在新加坡但收入、资产、人员、管理、控制全部在中国境内的企业，其认定结论与注册在开曼群岛的同类企业没有区别。</p><p><strong>其二，事实链条在多处留痕且相互印证。</strong></p><p>收入分部披露、审计底稿、税务申报、社保与用工记录、海关与外汇数据、董事会决议、高管出入境记录——这些证据分散在不同体系中，由不同机构独立形成。仅靠架构文件无法同时改写所有这些记录。</p><p><strong>其三，形式与实质的背离本身构成风险。</strong></p><p>若企业在申报文件中就经营重心作出与事实不符的陈述，面临的就不再是上市标准适用问题，而是信息披露的准确性问题。美国证券法项下的披露责任是严格的，一项不实陈述可能引发的后果，远重于适用更严格的上市标准。</p><p data-ts="1">同时，中国证监会境外上市备案制自2023年3月31日施行以来，对红筹架构的合规性、历史沿革与实际控制关系同样进行穿透审查，境内外披露口径必须一致。</p><p>因此，把注册地变更当作规避工具，是把一个事实问题误当作文件问题来处理。关键在于：审查针对的是实质，能够改变审查结论的只有实质本身的变化。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、这对新加坡路径意味着什么</h2><div class="ts-lead"><span class="tag">结论先行</span><p>新加坡路径的价值不在于换一个注册地，而在于为企业提供一个可以承载真实经营实质的境外平台——实质迁移有效，壳迁移无效。</p></div><p>需要区分两种截然不同的做法。</p><p><strong>壳迁移：无效。</strong></p><p>仅在新加坡注册一家控股公司，配备注册地址与代理秘书服务，无人员、无办公场所、无实际业务，境内运营实体与收入结构完全不变。这种安排在实质经营地审查中不产生任何效果，因为经营、管理、控制三个维度的事实全部未发生变化。</p><p><strong>实质迁移：有效但需要时间。</strong></p><p>把部分真实的业务职能迁移至新加坡并使其实际运转，例如设立区域总部承担东南亚市场的销售与客户服务、将部分研发团队实际派驻、由新加坡主体直接签署并履行境外客户合同、关键管理人员实际常驻并在当地形成决策记录、境外收入在新加坡主体确认并纳税。</p><p data-ts="1">这类安排会真实改变收入分部结构、人员分布与决策发生地，因而在审查中具有实际意义。但它的前提是业务本身具备国际化的基础，且需要按年计算的时间积累。</p><p>新加坡之所以在实践中被广泛采用，有其客观原因：普通法体系与国际投资人的认知一致性较高；公司治理与信息披露标准与国际接轨；作为区域性金融与贸易枢纽，具备承载区域总部职能的产业与人才基础；与多个司法辖区订有税收协定网络，便于跨境利润的合规安排。这些是制度性优势，不是规避工具。</p><p>必须同时指出的是，任何跨境业务与主体的安排，都需要同步满足境内的合规要求：涉及境内主体对外投资的，需履行境外投资即ODI的备案或核准程序；自然人股东通过境外特殊目的公司持股的，需依据37号文办理外汇登记；涉及境外发行上市的，需履行中国证监会备案程序。绕开这些程序的架构安排，境内合规风险将大于境外收益。</p><p>本质上，新加坡路径的正确用法是：为已经具备或有条件发展国际业务的企业，提供一个法律与税务上更稳健的境外经营与融资平台，并让架构真实反映业务的地理分布。它不解决没有国际业务的企业的认定问题，也不承诺任何认定结果。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、架构设计的实践要点与时间安排</h2><div class="ts-lead"><span class="tag">结论先行</span><p>在实质经营地成为审查对象之后，架构设计的目标应当从优化形式转向反映实质，而实质的形成需要提前按年规划。</p></div><p><strong>其一，先做事实盘点，再谈架构。</strong></p><p>在设计任何架构之前，应先按三个维度盘点企业现状：境内外收入占比、资产与人员分布、董事与高管的实际所在、股权穿透后的实际控制人、是否存在协议控制安排。这份盘点决定了企业当前的认定结论，也决定了后续所有工作的起点。</p><p><strong>其二，判断是否具备实质迁移的业务基础。</strong></p><p>若企业已有稳定的境外收入、境外客户或境外供应链，实质迁移具备可行性；若业务完全依赖境内市场与境内产业链，则应当直接接受在华运营企业的认定，并按2500万美元发行规模与尽职承销的要求来设计方案，而不是在架构上做无效投入。</p><p><strong>其三，为实质形成预留时间。</strong></p><p>真实的职能迁移需要连续的记录支撑：实际的雇佣与社保记录、实际的办公租赁、实际签署并履行的客户合同、实际发生的当地纳税、实际召开的董事会。这些记录通常需要覆盖申报所依据的完整财务报告期，因此架构工作应当在预计申报时点之前以年为单位提前启动，而不是在申报前数月突击安排。</p><p><strong>其四，保持境内外披露口径一致。</strong></p><p>中国证监会备案、美国证券法项下的信息披露、审计报告的分部信息、税务申报的所得来源认定，四者对同一组事实的描述必须一致。任何一处的不一致，都可能在另一处被放大为合规问题。</p><p><strong>其五，把架构成本纳入整体测算。</strong></p><p>跨境架构的搭建与维持存在持续成本，包括境外主体的人员与场所支出、审计与税务合规费用、法律意见与备案费用。这些成本应当与2500万美元发行规模下的融资收益一并测算，以判断整体方案的经济合理性。</p><p>彤鼎集团（香港）有限公司在境外上市服务中，帮助企业完成实质经营地的事实盘点、设计与业务实质相匹配的股权与经营架构、统筹境内备案与境外申报的时间衔接，并对接具备相应资质的持牌合作机构承做审计、法律与承销事项；华尔街彤鼎俱乐部则为企业家提供跨境资本市场规则的持续更新与同行经验交流。</p><p data-ts="1">涉及Pre-IPO项目信息的部分，仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="offshore-jurisdiction-choice.html" style="color:#6b5426;font-weight:700;">开曼、BVI与注册地选择逻辑</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pre-ipo-share-price-fairness.html" style="color:#6b5426;font-weight:700;">备案前12个月新增股东：入股价格公允性如何说清楚</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="csrc-filing-feedback.html" style="color:#6b5426;font-weight:700;">境外上市备案：证监会补充材料要求</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="h-share-full-circulation.html" style="color:#6b5426;font-weight:700;">H股全流通：境内未上市股份变成可流通H股的完整路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="data-compliance-overseas-listing.html" style="color:#6b5426;font-weight:700;">境外上市的数据合规：网络安全审查与数据出境的三条路径</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

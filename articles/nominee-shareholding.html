@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"股权代持与还原","inLanguage":"zh-CN","abstract":"Why nominee shareholding blocks a listing, and the sequence for unwinding it cleanly before the audit begins.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/nominee-shareholding.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"股权代持是指实际出资人（隐名股东）不直接持有公司股权，而是委托他人（名义股东）代为持有的安排。在创业早期，代持非常普遍——为了规避身份限制、简化决策、税务考虑等原因，很多公司都存在不同程度的代持。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,58 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">跨境架构 STRUCTURING</div><h1>股权代持与还原</h1>
 <div class="sub"></div><div class="en">Why nominee shareholding blocks a listing, and the sequence for unwinding it cleanly before the audit begins.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">股权代持是指实际出资人（隐名股东）不直接持有公司股权，而是委托他人（名义股东）代为持有的安排。在创业早期，代持非常普遍——为了规避身份限制、简化决策、税务考虑等原因，很多公司都存在不同程度的代持。但在上市过程中，代持是必须彻底清理的隐形地雷：无论是A股、港股还是美股，监管机构都要求上市主体的股权清晰、真实、可追溯，不允许存在未披露的代持。代持还原（把名义股东持有的股权还给实际出资人）会触发税务问题，且需要在上市辅导启动前完成。代持清理得越早，公司估值越低，税务成本也越低；拖到Pre-IPO后才清理，税务成本可能高出数倍。</div>
-<h2>一、什么是股权代持</h2>
-<p>股权代持涉及两个角色：实际出资人（隐名股东，真正出钱并享有股权权益的人）和名义股东（显名股东，在工商登记上持有股权但实际上是代别人持有的人）。两者之间通常有一份代持协议，约定名义股东代实际出资人持有股权，股权的真实权益归实际出资人所有。</p>
-<p>代持在创业公司中非常常见，常见原因包括：实际出资人的身份不便直接持股（如公职人员、外籍人士、有竞业限制的人）、为了简化公司决策（把分散的小股东股权集中由一人代持）、税务或其他考虑、早期不规范的股权安排遗留问题。</p>
-<h2>二、为什么上市必须清理代持</h2>
-<h3>原因1：监管要求股权清晰</h3>
-<p>无论是中国证监会（A股）、香港交易所（港股）还是美国SEC（美股），都要求上市主体的股权结构清晰、真实、稳定、可追溯。未披露的代持违反了股权清晰的基本要求，是上市审核中的实质性障碍。</p>
-<h3>原因2：代持引发股权权属争议风险</h3>
-<p>代持关系下，如果名义股东和实际出资人之间发生纠纷（名义股东反悔、名义股东的债权人主张权利、名义股东离婚或去世导致股权被分割），会导致上市主体的股权稳定性出现问题。监管机构无法接受一个股权可能随时产生争议的公司上市。</p>
-<h3>原因3：信息披露的真实性要求</h3>
-<p>上市要求完整、真实地披露公司的实际控制人和主要股东。如果存在未披露的代持，意味着披露的股东信息不真实，这在所有市场都是严重的合规问题，可能导致上市失败，甚至引发后续的法律责任。</p>
-<h2>三、代持还原的税务问题</h2>
-<h3>代持还原被视同股权转让</h3>
-<p>代持还原（名义股东把代持的股权过户回实际出资人名下）在税务上通常被视同股权转让。如果还原时公司的估值高于实际出资人当初的出资成本，差额部分需要缴纳个人所得税（股权转让所得，税率20%）。</p>
-<h3>估值越高，税务成本越高</h3>
-<p>这是代持清理时机的关键。如果在公司估值还很低的早期就完成还原，差额小，税务成本低；如果拖到公司经过多轮融资、估值大幅提升后才还原，差额巨大，税务成本可能高达数百万甚至更多。</p>
-<p>举例说明：实际出资人当初出资100万，对应的股权当前估值已经涨到2000万。如果现在才还原，差额1900万需要按20%缴纳个人所得税，即380万。而如果在估值还是200万时就还原，差额只有100万，税务成本仅20万。时机差异导致的税务成本相差近20倍。</p>
-<h3>还原的税务合规</h3>
-<p>代持还原必须依法申报纳税，不能为了规避税务而采用虚假的低价转让等手段。税务机关对股权转让的核定征收有明确规定，明显偏低且无正当理由的转让价格会被税务机关核定调整。代持还原的税务处理应在专业税务师指导下进行。</p>
-<h2>四、代持清理的标准流程</h2>
-<h3>第一步：全面梳理代持关系</h3>
-<p>彻底排查公司历史上所有的代持安排：谁代谁持有、代持比例、代持原因、是否有书面代持协议、实际出资的资金流水凭证等。很多公司的代持是早期口头约定的，没有完整书面记录，这种情况需要补充完善证据链。</p>
-<h3>第二步：确认实际出资人身份的合规性</h3>
-<p>确认实际出资人是否有资格成为上市公司的显名股东。如果实际出资人本身有身份限制（如公职人员、有竞业限制等），需要先解决身份合规问题，否则还原后仍然无法满足上市要求。</p>
-<h3>第三步：签署还原协议并完成工商变更</h3>
-<p>名义股东与实际出资人签署股权还原协议，明确还原的股权、对价、税务承担等，然后到工商部门办理股权变更登记，将股权正式过户到实际出资人名下。</p>
-<h3>第四步：完成税务申报和缴纳</h3>
-<p>按照税务规定，就还原过程中产生的股权转让所得申报缴纳个人所得税。保留完整的纳税凭证，作为上市审计和尽调时的合规证明。</p>
-<h3>第五步：完善股权清晰的证据链</h3>
-<p>还原完成后，整理完整的股权清晰证明文件：原始出资凭证、代持协议、还原协议、税务缴纳凭证、工商变更记录等，形成完整的证据链，证明上市主体的股权真实、清晰、合规。</p>
-<h2>五、代持清理的常见难题</h2>
-<h3>难题1：缺乏书面代持协议</h3>
-<p>很多早期代持是口头约定的，没有书面协议。清理时需要补充证据：通过原始的出资资金流水、双方的往来记录、其他股东的证言等，重建代持关系的证据链。证据不足的代持还原，在上市审计时会受到质疑。</p>
-<h3>难题2：名义股东不配合</h3>
-<p>如果名义股东与实际出资人关系恶化，名义股东可能拒绝配合还原，甚至主张股权归自己所有。这种情况下可能需要通过法律途径解决，耗时耗力，且会影响上市进程。这也是为什么代持应该尽早清理——关系好的时候清理容易，关系恶化后清理极难。</p>
-<h3>难题3：税务成本过高</h3>
-<p>如果拖到公司估值很高才清理，巨额的税务成本会成为实际出资人的沉重负担。解决方案是尽早清理，或者在专业税务师的指导下，结合公司整体的股权重组方案，合规地优化税务安排。</p>
-<h3>难题4：多层代持和复杂代持</h3>
-<p>有些公司存在多层代持（A代B持有，B又代C持有）或交叉代持，关系极其复杂。这种情况需要专业团队系统梳理，逐层还原，确保最终的股权结构清晰可追溯。</p>
-<h2>六、给企业主的代持清理建议</h2>
-<p>建议1：尽早清理。代持清理的黄金时机是公司估值还低的早期。一旦决定未来要上市，就应该尽早启动代持清理，不要等到Pre-IPO才动手，否则税务成本会高得让人难以承受。</p>
-<p>建议2：完善证据。即使暂时不清理，也要确保代持关系有完整的书面协议和出资凭证，避免未来清理时因证据不足而陷入纠纷。</p>
-<p>建议3：专业指导。代持清理涉及法律、税务、工商等多个专业领域，应该在专业团队的指导下进行，确保清理过程合规、税务处理得当、证据链完整。</p>
-<p>建议4：与上市规划协同。代持清理应该纳入整体的上市架构设计中，与股权重组、税务规划、架构搭建协同推进，避免清理方案与上市架构产生冲突。</p>
-<h3>结语：股权清晰是上市的基石</h3>
-<p>股权清晰、真实、可追溯，是所有资本市场对上市公司最基本的要求。代持作为股权不清晰的典型表现，是上市路上必须彻底清除的障碍。</p>
-<p>代持清理的核心原则是尽早、合规、完整。越早清理，税务成本越低、难度越小；合规清理，才能经得起上市审计和监管尽调的检验；完整清理（包括证据链的完善），才能真正消除股权权属的隐患。彤鼎集团（香港）有限公司在顶层架构设计和上市辅导中，把股权清晰化作为首要的合规工作之一，帮助企业在上市前彻底解决代持等股权历史遗留问题。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p>
-<p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>股权代持是指实际出资人（隐名股东）不直接持有公司股权，而是委托他人（名义股东）代为持有的安排。在创业早期，代持非常普遍——为了规避身份限制、简化决策、税务考虑等原因，很多公司都存在不同程度的代持。但在上市过程中，代持是必须彻底清理的隐形地雷：无论是A股、港股还是美股，监管机构都要求上市主体的股权清晰、真实、可追溯，不允许存在未披露的代持。</p><p>代持还原（把名义股东持有的股权还给实际出资人）会触发税务问题，且需要在上市辅导启动前完成。代持清理得越早，公司估值越低，税务成本也越低；拖到Pre-IPO后才清理，税务成本可能高出数倍。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">什么是股权代持</a></li><li><a href="#sec-02">为什么上市必须清理代持</a></li><li><a href="#sec-03">代持还原的税务问题</a></li><li><a href="#sec-04">代持清理的标准流程</a></li><li><a href="#sec-05">代持清理的常见难题</a></li><li><a href="#sec-06">给企业主的代持清理建议</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、什么是股权代持</h2><p>股权代持涉及两个角色：实际出资人（隐名股东，真正出钱并享有股权权益的人）和名义股东（显名股东，在工商登记上持有股权但实际上是代别人持有的人）。两者之间通常有一份代持协议，约定名义股东代实际出资人持有股权，股权的真实权益归实际出资人所有。</p><p>代持在创业公司中非常常见，常见原因包括：实际出资人的身份不便直接持股（如公职人员、外籍人士、有竞业限制的人）、为了简化公司决策（把分散的小股东股权集中由一人代持）、税务或其他考虑、早期不规范的股权安排遗留问题。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、为什么上市必须清理代持</h2><p><h3>原因1：监管要求股权清晰</h3></p><p>无论是中国证监会（A股）、香港交易所（港股）还是美国SEC（美股），都要求上市主体的股权结构清晰、真实、稳定、可追溯。未披露的代持违反了股权清晰的基本要求，是上市审核中的实质性障碍。</p><p><h3>原因2：代持引发股权权属争议风险</h3></p><p>代持关系下，如果名义股东和实际出资人之间发生纠纷（名义股东反悔、名义股东的债权人主张权利、名义股东离婚或去世导致股权被分割），会导致上市主体的股权稳定性出现问题。监管机构无法接受一个股权可能随时产生争议的公司上市。</p><p><h3>原因3：信息披露的真实性要求</h3></p><p>上市要求完整、真实地披露公司的实际控制人和主要股东。如果存在未披露的代持，意味着披露的股东信息不真实，这在所有市场都是严重的合规问题，可能导致上市失败，甚至引发后续的法律责任。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、代持还原的税务问题</h2><p><h3>代持还原被视同股权转让</h3></p><p>代持还原（名义股东把代持的股权过户回实际出资人名下）在税务上通常被视同股权转让。如果还原时公司的估值高于实际出资人当初的出资成本，差额部分需要缴纳个人所得税（股权转让所得，税率20%）。</p><p><h3>估值越高，税务成本越高</h3></p><p>这是代持清理时机的关键。如果在公司估值还很低的早期就完成还原，差额小，税务成本低；如果拖到公司经过多轮融资、估值大幅提升后才还原，差额巨大，税务成本可能高达数百万甚至更多。</p><p>举例说明：实际出资人当初出资100万，对应的股权当前估值已经涨到2000万。如果现在才还原，差额1900万需要按20%缴纳个人所得税，即380万。而如果在估值还是200万时就还原，差额只有100万，税务成本仅20万。时机差异导致的税务成本相差近20倍。</p><p><h3>还原的税务合规</h3></p><p>代持还原必须依法申报纳税，不能为了规避税务而采用虚假的低价转让等手段。税务机关对股权转让的核定征收有明确规定，明显偏低且无正当理由的转让价格会被税务机关核定调整。代持还原的税务处理应在专业税务师指导下进行。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、代持清理的标准流程</h2><p><h3>第一步：全面梳理代持关系</h3></p><p>彻底排查公司历史上所有的代持安排：谁代谁持有、代持比例、代持原因、是否有书面代持协议、实际出资的资金流水凭证等。很多公司的代持是早期口头约定的，没有完整书面记录，这种情况需要补充完善证据链。</p><p><h3>第二步：确认实际出资人身份的合规性</h3></p><p>确认实际出资人是否有资格成为上市公司的显名股东。如果实际出资人本身有身份限制（如公职人员、有竞业限制等），需要先解决身份合规问题，否则还原后仍然无法满足上市要求。</p><p><h3>第三步：签署还原协议并完成工商变更</h3></p><p>名义股东与实际出资人签署股权还原协议，明确还原的股权、对价、税务承担等，然后到工商部门办理股权变更登记，将股权正式过户到实际出资人名下。</p><p><h3>第四步：完成税务申报和缴纳</h3></p><p>按照税务规定，就还原过程中产生的股权转让所得申报缴纳个人所得税。保留完整的纳税凭证，作为上市审计和尽调时的合规证明。</p><p><h3>第五步：完善股权清晰的证据链</h3></p><p>还原完成后，整理完整的股权清晰证明文件：原始出资凭证、代持协议、还原协议、税务缴纳凭证、工商变更记录等，形成完整的证据链，证明上市主体的股权真实、清晰、合规。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、代持清理的常见难题</h2><p><h3>难题1：缺乏书面代持协议</h3></p><p>很多早期代持是口头约定的，没有书面协议。清理时需要补充证据：通过原始的出资资金流水、双方的往来记录、其他股东的证言等，重建代持关系的证据链。证据不足的代持还原，在上市审计时会受到质疑。</p><p><h3>难题2：名义股东不配合</h3></p><p>如果名义股东与实际出资人关系恶化，名义股东可能拒绝配合还原，甚至主张股权归自己所有。这种情况下可能需要通过法律途径解决，耗时耗力，且会影响上市进程。这也是为什么代持应该尽早清理——关系好的时候清理容易，关系恶化后清理极难。</p><p><h3>难题3：税务成本过高</h3></p><p>如果拖到公司估值很高才清理，巨额的税务成本会成为实际出资人的沉重负担。解决方案是尽早清理，或者在专业税务师的指导下，结合公司整体的股权重组方案，合规地优化税务安排。</p><p><h3>难题4：多层代持和复杂代持</h3></p><p>有些公司存在多层代持（A代B持有，B又代C持有）或交叉代持，关系极其复杂。这种情况需要专业团队系统梳理，逐层还原，确保最终的股权结构清晰可追溯。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、给企业主的代持清理建议</h2><p>建议1：尽早清理。代持清理的黄金时机是公司估值还低的早期。一旦决定未来要上市，就应该尽早启动代持清理，不要等到Pre-IPO才动手，否则税务成本会高得让人难以承受。</p><p>建议2：完善证据。即使暂时不清理，也要确保代持关系有完整的书面协议和出资凭证，避免未来清理时因证据不足而陷入纠纷。</p><p>建议3：专业指导。代持清理涉及法律、税务、工商等多个专业领域，应该在专业团队的指导下进行，确保清理过程合规、税务处理得当、证据链完整。</p><p>建议4：与上市规划协同。代持清理应该纳入整体的上市架构设计中，与股权重组、税务规划、架构搭建协同推进，避免清理方案与上市架构产生冲突。</p><p><h3>结语：股权清晰是上市的基石</h3></p><p>股权清晰、真实、可追溯，是所有资本市场对上市公司最基本的要求。代持作为股权不清晰的典型表现，是上市路上必须彻底清除的障碍。</p><p>代持清理的核心原则是尽早、合规、完整。越早清理，税务成本越低、难度越小；合规清理，才能经得起上市审计和监管尽调的检验；完整清理（包括证据链的完善），才能真正消除股权权属的隐患。彤鼎集团（香港）有限公司在顶层架构设计和上市辅导中，把股权清晰化作为首要的合规工作之一，帮助企业在上市前彻底解决代持等股权历史遗留问题。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p><p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="equity-evolution.html" style="color:#6b5426;font-weight:700;">股权架构演进路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="odi-filing.html" style="color:#6b5426;font-weight:700;">ODI境外投资备案实操</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pre-ipo-share-price-fairness.html" style="color:#6b5426;font-weight:700;">备案前12个月新增股东：入股价格公允性如何说清楚</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="data-compliance-overseas-listing.html" style="color:#6b5426;font-weight:700;">境外上市的数据合规：网络安全审查与数据出境的三条路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hainan-ftp.html" style="color:#6b5426;font-weight:700;">海南自贸港企业上市与税收优惠</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

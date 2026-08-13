@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"律师团队选择","inLanguage":"zh-CN","abstract":"Selecting issuer and underwriter counsel across jurisdictions, what each side actually does, and how fees are structured.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/lawyer-selection.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"赴美上市需要配置4类律师：美国证券律师（负责F-1招股说明书撰写和SEC沟通）、开曼律师（负责开曼发行主体的设立和公司法意见）、中国律师（负责境内架构和合规事项）、新加坡律师（负责新加坡运营公司的设立和公司法意见）。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,47 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>律师团队选择</h1>
 <div class="sub"></div><div class="en">Selecting issuer and underwriter counsel across jurisdictions, what each side actually does, and how fees are structured.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">赴美上市需要配置4类律师：美国证券律师（负责F-1招股说明书撰写和SEC沟通）、开曼律师（负责开曼发行主体的设立和公司法意见）、中国律师（负责境内架构和合规事项）、新加坡律师（负责新加坡运营公司的设立和公司法意见）。其中美国证券律师是整个上市流程的核心法律顾问，其质量直接决定SEC问询的轮次和整体上市效率。选择美国证券律师的3个关键标准：中概股经验（过去2年辅导过至少5家同类规模中概股）、与SEC的沟通记录（问询处理的速度和质量）、团队稳定性（核心律师不会在项目中途跳槽）。</div>
-<h2>一、上市流程中的4类律师</h2>
-<h3>美国证券律师（最关键）</h3>
-<p>公司律师：代表上市公司，负责F-1招股说明书的主体撰写、SEC问询回复、各类上市法律文件的起草、合规意见书的出具。是整个上市流程的法律总协调方，通常在律师费中占比最高（约60%至70%）。</p>
-<p>承销商律师：代表承销商，对公司律师起草的文件进行独立审核，出具尽职调查意见。承销商律师的费用通常由承销商承担，不增加公司的法律成本。</p>
-<h3>开曼律师</h3>
-<p>负责开曼公司（上市发行主体）的注册设立、章程起草、股东协议审查、开曼公司法意见书出具（对SEC的F-1披露是必要文件）。开曼律师通常来自在开曼有正式执照的律所（如Maples、Walkers、Appleby等），费用相对固定，通常3至8万美元。</p>
-<h3>中国律师</h3>
-<p>负责境内运营公司的合规法律意见、监管许可证核查、关联交易的中国法律分析、境内知识产权核查等。通常由具有境外上市经验的国内律所担任（如中伦、金杜、汉坤等）。</p>
-<h3>新加坡律师</h3>
-<p>新加坡路径上市中，负责新加坡运营公司的注册设立、新加坡公司法意见书出具、新加坡监管合规意见。通常费用较低（5至15万美元），选择有跨境上市经验的新加坡律所即可。</p>
-<h2>二、如何选择美国证券律师</h2>
-<h3>评估维度1：中概股具体经验</h3>
-<p>不只是上市经验，而是中概股具体经验。处理美国本土IPO的经验与处理中概股的经验有显著差异——中概股涉及VIE架构或新加坡路径、境内监管合规、中美双重法律体系下的信息披露等特殊议题，需要律师有丰富的专项经验。</p>
-<p>评估方法：要求律师提供过去2年辅导的中概股IPO案例清单，核查这些案例的规模和复杂度是否与自己的项目相当。</p>
-<h3>评估维度2：与SEC的沟通质量</h3>
-<p>不同律师在处理SEC问询时的效率差异巨大。经验丰富的律师知道SEC的审查重点和惯常问询模式，可以在F-1撰写阶段就提前预防高频问询点，将问询轮次从标准3轮压缩到2轮，节省4至8周时间。评估方法：询问律师近期项目中SEC问询的平均轮次和回复周期。</p>
-<h3>评估维度3：团队资源与稳定性</h3>
-<p>一个项目通常需要1位合伙人（Partner）主导，2至4位助理律师（Associate）执行。合伙人的声誉和经验至关重要，但同样重要的是助理律师团队的稳定性——如果助理律师在项目进行中频繁更换，会造成大量的重复工作和效率损耗。</p>
-<h3>评估维度4：费用结构</h3>
-<p>美国证券律师通常按小时计费（合伙人时薪约800至1200美元，助理律师400至700美元）。一个完整中概股IPO项目的美国律师费通常在50至120万美元之间。部分律所提供固定费用方案（Flat Fee），可以更好地控制总成本。</p>
-<h2>三、律师的选择流程</h2>
-<h3>第一步：准备RFP（律师服务邀请书）</h3>
-<p>向3至5家目标律所发出RFP，说明公司基本情况、预期上市时间、融资规模、公司律师的经验要求。RFP应该要求律所提供：团队成员简历、可比项目案例清单、服务费用方案。</p>
-<h3>第二步：律所提案评估</h3>
-<p>收到各律所提案后，重点评估：核心合伙人的中概股案例数量和质量（不只看总数，更看近2年的案例）、指定的助理律师团队是否稳定（询问是否有可能因为其他项目拿走核心团队）、费用方案的透明度（小时计费的预估总额vs固定费用方案）。</p>
-<h3>第三步：面谈与试探性问题</h3>
-<p>安排与核心合伙人的面谈，提出以下试探性问题：他们如何处理SEC对VIE架构（或新加坡路径）的特殊问询？他们最近一个类似项目SEC问询了几轮？他们如何管理中国团队与美国律师团队之间的协作效率？回答的具体程度和实操深度是评判律师真实经验的最好方式。</p>
-<h2>四、与律师高效合作的关键</h2>
-<h3>原则1：提前整理好公司法律文件</h3>
-<p>律师开始工作时，需要审查大量公司历史文件。提前整理好完整的文件室（包括：历次融资协议、股东协议、公司章程、重大合同、知识产权登记证书、历史诉讼记录等），可以节省律师大量时间，直接降低律师费账单。</p>
-<h3>原则2：明确沟通机制</h3>
-<p>确定项目启动时就建立固定的每周进度会议（通常30至60分钟），确保律师、审计师、承销商、公司管理层对项目进度保持同步。律师遗漏的信息往往不是因为他们不知道，而是因为没有系统性的沟通机制让信息流动起来。</p>
-<h3>原则3：及时回复律师请求</h3>
-<p>律师的每一个信息请求背后通常都有SEC审核或监管时限的压力。管理层对律师请求的响应速度直接影响整体项目效率。建议指定一位专职项目经理（通常是CFO或法务负责人）统一对接所有律师请求，确保24至48小时内有实质性响应。</p>
-<h2>五、律师费的成本控制</h2>
-<p>律师费是上市成本中最难控制的一项，但以下方法可以有效降低不必要的费用。提前准备好标准化文件（如公司历史简介、关联方清单、重大合同摘要），减少律师整理信息的时间成本。指定一位内部法务负责人配合律师工作，过滤和整理信息后再提供给外部律师，避免让律师做低效率的信息整理工作。在项目启动前明确费用上限预期，如律师预计会超出预算，要求提前告知，不要等账单到来才发现超支。</p>
-<h3>结语：好律师是最值得的投资</h3>
-<p>在赴美上市的所有成本中，美国律师费看似最难看清楚价值，但实际上它是性价比最高的投入之一。一位好的美国证券律师通过提前规避SEC问询、压缩项目周期，节省的时间成本远超律师费本身。更重要的是，他们出具的法律意见和撰写的信息披露文件，是公司未来面对集体诉讼和SEC调查时最重要的法律盾牌。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>赴美上市需要配置4类律师：美国证券律师（负责F-1招股说明书撰写和SEC沟通）、开曼律师（负责开曼发行主体的设立和公司法意见）、中国律师（负责境内架构和合规事项）、新加坡律师（负责新加坡运营公司的设立和公司法意见）。其中美国证券律师是整个上市流程的核心法律顾问，其质量直接决定SEC问询的轮次和整体上市效率。</p><p>选择美国证券律师的3个关键标准：中概股经验（过去2年辅导过至少5家同类规模中概股）、与SEC的沟通记录（问询处理的速度和质量）、团队稳定性（核心律师不会在项目中途跳槽）。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">上市流程中的4类律师</a></li><li><a href="#sec-02">如何选择美国证券律师</a></li><li><a href="#sec-03">律师的选择流程</a></li><li><a href="#sec-04">与律师高效合作的关键</a></li><li><a href="#sec-05">律师费的成本控制</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、上市流程中的4类律师</h2><p><h3>美国证券律师（最关键）</h3></p><p>公司律师：代表上市公司，负责F-1招股说明书的主体撰写、SEC问询回复、各类上市法律文件的起草、合规意见书的出具。是整个上市流程的法律总协调方，通常在律师费中占比最高（约60%至70%）。</p><p>承销商律师：代表承销商，对公司律师起草的文件进行独立审核，出具尽职调查意见。承销商律师的费用通常由承销商承担，不增加公司的法律成本。</p><p><h3>开曼律师</h3></p><p>负责开曼公司（上市发行主体）的注册设立、章程起草、股东协议审查、开曼公司法意见书出具（对SEC的F-1披露是必要文件）。开曼律师通常来自在开曼有正式执照的律所（如Maples、Walkers、Appleby等），费用相对固定，通常3至8万美元。</p><p><h3>中国律师</h3></p><p>负责境内运营公司的合规法律意见、监管许可证核查、关联交易的中国法律分析、境内知识产权核查等。通常由具有境外上市经验的国内律所担任（如中伦、金杜、汉坤等）。</p><p><h3>新加坡律师</h3></p><p>新加坡路径上市中，负责新加坡运营公司的注册设立、新加坡公司法意见书出具、新加坡监管合规意见。通常费用较低（5至15万美元），选择有跨境上市经验的新加坡律所即可。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、如何选择美国证券律师</h2><p><h3>评估维度1：中概股具体经验</h3></p><p>不只是上市经验，而是中概股具体经验。处理美国本土IPO的经验与处理中概股的经验有显著差异——中概股涉及VIE架构或新加坡路径、境内监管合规、中美双重法律体系下的信息披露等特殊议题，需要律师有丰富的专项经验。</p><p>评估方法：要求律师提供过去2年辅导的中概股IPO案例清单，核查这些案例的规模和复杂度是否与自己的项目相当。</p><p><h3>评估维度2：与SEC的沟通质量</h3></p><p>不同律师在处理SEC问询时的效率差异巨大。经验丰富的律师知道SEC的审查重点和惯常问询模式，可以在F-1撰写阶段就提前预防高频问询点，将问询轮次从标准3轮压缩到2轮，节省4至8周时间。评估方法：询问律师近期项目中SEC问询的平均轮次和回复周期。</p><p><h3>评估维度3：团队资源与稳定性</h3></p><p>一个项目通常需要1位合伙人（Partner）主导，2至4位助理律师（Associate）执行。合伙人的声誉和经验至关重要，但同样重要的是助理律师团队的稳定性——如果助理律师在项目进行中频繁更换，会造成大量的重复工作和效率损耗。</p><p><h3>评估维度4：费用结构</h3></p><p>美国证券律师通常按小时计费（合伙人时薪约800至1200美元，助理律师400至700美元）。一个完整中概股IPO项目的美国律师费通常在50至120万美元之间。部分律所提供固定费用方案（Flat Fee），可以更好地控制总成本。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、律师的选择流程</h2><p><h3>第一步：准备RFP（律师服务邀请书）</h3></p><p>向3至5家目标律所发出RFP，说明公司基本情况、预期上市时间、融资规模、公司律师的经验要求。RFP应该要求律所提供：团队成员简历、可比项目案例清单、服务费用方案。</p><p><h3>第二步：律所提案评估</h3></p><p>收到各律所提案后，重点评估：核心合伙人的中概股案例数量和质量（不只看总数，更看近2年的案例）、指定的助理律师团队是否稳定（询问是否有可能因为其他项目拿走核心团队）、费用方案的透明度（小时计费的预估总额vs固定费用方案）。</p><p><h3>第三步：面谈与试探性问题</h3></p><p>安排与核心合伙人的面谈，提出以下试探性问题：他们如何处理SEC对VIE架构（或新加坡路径）的特殊问询？他们最近一个类似项目SEC问询了几轮？他们如何管理中国团队与美国律师团队之间的协作效率？回答的具体程度和实操深度是评判律师真实经验的最好方式。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、与律师高效合作的关键</h2><p><h3>原则1：提前整理好公司法律文件</h3></p><p>律师开始工作时，需要审查大量公司历史文件。提前整理好完整的文件室（包括：历次融资协议、股东协议、公司章程、重大合同、知识产权登记证书、历史诉讼记录等），可以节省律师大量时间，直接降低律师费账单。</p><p><h3>原则2：明确沟通机制</h3></p><p>确定项目启动时就建立固定的每周进度会议（通常30至60分钟），确保律师、审计师、承销商、公司管理层对项目进度保持同步。律师遗漏的信息往往不是因为他们不知道，而是因为没有系统性的沟通机制让信息流动起来。</p><p><h3>原则3：及时回复律师请求</h3></p><p>律师的每一个信息请求背后通常都有SEC审核或监管时限的压力。管理层对律师请求的响应速度直接影响整体项目效率。建议指定一位专职项目经理（通常是CFO或法务负责人）统一对接所有律师请求，确保24至48小时内有实质性响应。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、律师费的成本控制</h2><p>律师费是上市成本中最难控制的一项，但以下方法可以有效降低不必要的费用。提前准备好标准化文件（如公司历史简介、关联方清单、重大合同摘要），减少律师整理信息的时间成本。指定一位内部法务负责人配合律师工作，过滤和整理信息后再提供给外部律师，避免让律师做低效率的信息整理工作。</p><p data-ts="1">在项目启动前明确费用上限预期，如律师预计会超出预算，要求提前告知，不要等账单到来才发现超支。</p><p><h3>结语：好律师是最值得的投资</h3></p><p>在赴美上市的所有成本中，美国律师费看似最难看清楚价值，但实际上它是性价比最高的投入之一。一位好的美国证券律师通过提前规避SEC问询、压缩项目周期，节省的时间成本远超律师费本身。更重要的是，他们出具的法律意见和撰写的信息披露文件，是公司未来面对集体诉讼和SEC调查时最重要的法律盾牌。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cfo-team.html" style="color:#6b5426;font-weight:700;">CFO选聘与财务团队建设</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ads-explained.html" style="color:#6b5426;font-weight:700;">ADS美国存托股份详解</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="audit-committee.html" style="color:#6b5426;font-weight:700;">审计委员会与内控体系</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ip-cleanup.html" style="color:#6b5426;font-weight:700;">商标、专利、域名：上市前无形资产梳理最容易漏的三件事</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="roadshow-prep.html" style="color:#6b5426;font-weight:700;">路演完整准备指南</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "港交所上市机制改革落地：同股不同权门槛下调与保密递表全面放开", "inLanguage": "zh-CN", "abstract": "On 24 July 2026 the Stock Exchange of Hong Kong published the conclusions of its consultation on enhancing the competitiveness of the listing regime, with the amended Listing Rules taking effect immediately. The financial eligibility threshold for applicants with weighted voting rights falls from a market capitalisation of HK$40 billion to HK$20 billion, or HK$6 billion of market capitalisation together with HK$600 million of audited revenue in the most recent financial year. The cap on the voting power multiple rises to 20:1 for applicants capitalised at HK$40 billion or above, and the minimum WVR shareholding proportion is relaxed from 10% to 5% where the holding is worth at least HK$4 billion. Confidential filing is extended from a narrow set of applicants to all new applicants, and the market capitalisation threshold for secondary listings by overseas issuers is reduced accordingly. This article analyses the conditions, the beneficiary profile and the practical consequences of each change.", "author": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司"}, "publisher": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司", "url": "https://tdgroup.hk", "logo": {"@type": "ImageObject", "url": "https://tdgroup.hk/img/td-crest-gold.png"}}, "mainEntityOfPage": "https://tdgroup.hk/articles/hkex-listing-reform-2026.html", "datePublished": "2026-07-25", "dateModified": "2026-07-25", "image": "https://tdgroup.hk/img/og-card.jpg", "description": "香港交易所2026年7月24日刊发提升上市机制竞争力咨询总结，修订后的《上市规则》即时生效。不同投票权财务资格门槛由市值不低于400亿港元下调至200亿港元，或60亿港元市值加6亿港元收入；投票权倍数上限提高至20比1；保密形式递表扩大至所有新申请人；海外发行人第二上市市值门槛同步下调。本文拆解各项调整的适用条件、受益企业类型与操作层面的实际影响。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,54 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市路径 LISTING PATH</div><h1>港交所上市机制改革落地：同股不同权门槛下调与保密递表全面放开</h1>
 <div class="sub">200亿市值线、20比1投票权上限与第二上市门槛调整的规则拆解</div><div class="en">On 24 July 2026 the Stock Exchange of Hong Kong published the conclusions of its consultation on enhancing the competitiveness of the listing regime, with the amended Listing Rules taking effect immediately. The financial eligibility threshold for applicants with weighted voting rights falls from a market capitalisation of HK$40 billion to HK$20 billion, or HK$6 billion of market capitalisation together with HK$600 million of audited revenue in the most recent financial year. The cap on the voting power multiple rises to 20:1 for applicants capitalised at HK$40 billion or above, and the minimum WVR shareholding proportion is relaxed from 10% to 5% where the holding is worth at least HK$4 billion. Confidential filing is extended from a narrow set of applicants to all new applicants, and the market capitalisation threshold for secondary listings by overseas issuers is reduced accordingly. This article analyses the conditions, the beneficiary profile and the practical consequences of each change.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-25">2026年7月25日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">香港交易所于2026年7月24日刊发提升上市机制竞争力的咨询总结，修订后的《上市规则》即时生效。改革围绕三个方向展开：优化不同投票权上市规定、便利海外发行人来港上市、完善首次上市规定与安排。核心变化包括：不同投票权申请人的财务资格门槛，由市值不低于400亿港元，下调为市值不低于200亿港元，或市值不低于60亿港元且经审计的最近一个会计年度收入不低于6亿港元；上市时市值不低于400亿港元的申请人，投票权倍数上限由10比1提高至20比1；不同投票权持股金额不低于40亿港元时，其占已发行股本的比例要求由不低于10%放宽至不低于5%；以保密形式递交上市申请的安排，由此前限于第二上市及个别章节申请人，扩大至所有新申请人；海外发行人第二上市的市值门槛亦相应下调。本质上，这是一次以门槛与流程为抓手的竞争力调整，受益面集中在中型创新企业与已在境外上市的公司。</div>
-<h2>一、这次改革的坐标：三个方向、十项调整、即时生效</h2>
-<p><strong>结论先说：这不是一次单点修补，而是对港股上市门槛结构与申请流程的一次系统性下调，且没有设置过渡期，7月24日起递交的申请即适用新规。</strong></p>
-<p>香港交易所此前就提升上市机制竞争力发布征询文件，2026年7月24日刊发咨询总结，各项建议获市场广泛支持并获全部采纳，修订后的《上市规则》随即生效。改革内容归入三个方向：其一，优化不同投票权架构公司的上市规定；其二，便利已在海外上市的发行人来港作第二上市或双重主要上市；其三，完善首次上市的规定与程序安排，其中最受关注的是保密形式递交申请的适用范围。</p>
-<p>理解这次改革，需要先理解它想解决的问题。过去数年，香港市场在承接科技型与创新型企业上的结构性障碍主要有三处。障碍其一，不同投票权架构的财务门槛过高，市值不低于400亿港元的要求把绝大多数处于成长期的创新企业挡在门外，而这类企业恰恰是同股不同权安排的典型需求方。障碍其二，公开递表意味着企业在获得聆讯结果之前就要向竞争对手披露财务与业务细节，一旦申请失效或撤回，公开记录还会留存，令部分企业宁可推迟计划。障碍其三，已在境外上市的公司来港作第二上市时，市值门槛与本地主要上市规则之间存在不必要的差异。</p>
-<p>三项调整分别对应上述三处障碍。<strong>因此，判断这次改革对某家企业是否有意义，关键不在于新闻标题里的数字，而在于该企业此前究竟卡在哪一处。</strong></p>
-
-<h2>二、同股不同权财务门槛：从400亿到200亿，以及第二条通道</h2>
-<p><strong>结论先说：不同投票权的财务资格门槛下调幅度达一半，并新增了一条以收入为支撑的低市值通道，这是本次改革中影响面最广的一项。</strong></p>
-<p>修订后的规定是：不同投票权架构的申请人，须满足两项财务资格标准之一——市值不少于200亿港元；或者市值不少于60亿港元，且经审计的最近一个会计年度收入不少于6亿港元。此前的要求是市值不少于400亿港元，或市值不少于100亿港元且最近一个经审计会计年度收入不少于10亿港元。两条通道的门槛分别下调至原水平的一半与六成左右。</p>
-<p>这一调整的实际意义，需要结合同股不同权的使用场景来看。不同投票权架构的核心功能，是让创始团队在经历多轮股权融资、持股比例被显著稀释之后，仍能保有对公司经营方向的控制权。需要这一安排的，恰恰是那些依靠外部资本快速成长、创始人持股已降至较低水平的科技与创新企业。而在旧门槛下，400亿港元的市值要求意味着企业必须先长成一家大型公司才能使用这一工具，与需求发生的时点严重错位。</p>
-<p>新增的60亿港元市值加6亿港元收入通道，把判断依据从单一的市值预期，转向市值与经营实绩的组合。这对企业有两点直接影响。影响其一，估值波动的风险被部分对冲：市值取决于发行定价与市场情绪，而收入是已审计的历史数据，稳定性高得多，企业在筹备阶段的可预期性因此上升。影响其二，收入门槛把纯概念型、尚无规模化营收的项目排除在外，使这条通道的适用对象集中在已经跑通商业模式的成长期公司。</p>
-<p>需要提醒的是，财务资格只是不同投票权申请人须满足条件中的一项。适用主体资格、受益人限制、投票权终止安排、日落条款与相应的公司治理要求，均未因本次改革而取消。华尔街彤鼎俱乐部在与创始人交流控制权议题时反复强调的一点是：门槛下调改变的是能不能用，不是用起来有多简单。<strong>关键在于，同股不同权始终是一套配套义务密集的安排，不是一项可以随意采用的便利。</strong></p>
-
-<h2>三、投票权倍数与持股占比：20比1上限与5%下限的适用条件</h2>
-<p><strong>结论先说：这两项调整是给大市值申请人的定向放宽，均设有明确的金额条件，不适用于全部不同投票权公司。</strong></p>
-<p>调整之一，投票权倍数上限提高。若公司上市时市值不低于400亿港元，其不同投票权的投票权倍数上限可由10比1提高至20比1。这意味着一股高投票权股份最多可对应二十票，而此前上限为十票。对创始人而言，倍数提高的效果是：在同等控制权目标下，所需保有的经济权益比例可以更低，或者在同等持股比例下，可承受的后续稀释空间更大。</p>
-<p>调整之二，不同投票权持股占比的下限放宽。原规则要求不同投票权受益人合计持有的股份不低于已发行股本的10%，修订后，若这部分持股在上市时的金额不低于40亿港元，占比要求可放宽至不低于5%。这条规则的设计逻辑是以金额替代比例：当持股金额本身足够大时，受益人与公司的利益绑定已经充分，不必再以固定比例作为单一约束。</p>
-<p>把两项调整放在一起看，受益对象非常明确——上市时市值在400亿港元以上的大型创新企业。它们此前面对的问题是：市值越大，创始人为维持控制权所需锁定的经济权益金额越高，而10比1的倍数上限与10%的持股比例下限共同构成了一个刚性约束。新规把这两项约束同时松开，实质是承认在超大市值区间，原有的比例式约束成本过高。</p>
-<p>对中型企业而言，这两项调整基本不产生影响，它们真正受益于上一节所述的财务门槛下调。<strong>本质上，本次改革在不同投票权这一块采取的是分层放宽：中型企业放宽的是入场资格，大型企业放宽的是结构自由度。</strong></p>
-
-<h2>四、保密递表扩大至所有新申请人：价值在于窗口选择权</h2>
-<p><strong>结论先说：所有新申请人现均可以非公开形式递交上市申请，这项调整对企业的价值不在保密本身，而在于把公开时点的决定权交还给企业。</strong></p>
-<p>此前，以保密形式递交上市申请的安排适用范围有限，主要限于符合条件的第二上市申请人及个别章节下的申请人，其余申请人须在递表后按规定公开申请材料。修订后，所有新申请人均可选择以非公开形式递交申请。</p>
-<p>企业从这项调整中获得的实际利益有三层。利益其一，竞争信息的保护。招股材料包含完整的财务数据、客户与供应商集中度、业务模式细节与风险因素，公开递表等于在获得任何确定性之前，先向同业交出一份高质量的竞争情报。对身处激烈竞争赛道的企业，这一成本相当可观。利益其二，失败成本的降低。公开递表后若申请失效、撤回或被拒，公开记录会长期留存，对客户关系、员工稳定与后续融资谈判均构成负面信号。保密递表把这一风险大幅压缩。利益其三，发行窗口的选择空间。企业可以先完成审阅程序中的实质沟通，再结合市场状况决定公开材料与启动发行的时点，而不是被递表动作本身推着走。</p>
-<p>与此同时，本次改革在申请被拒绝的处理机制上也作了透明度方向的调整，包括就被拒申请公开相关信息与理由的安排。这一组合的政策意图是清楚的：在申请过程中给予企业更多保密空间，但对最终未获通过的情形保持市场可见度，以维持审阅标准的一致性与市场纪律。企业在评估保密递表的价值时，应当把这一侧的安排一并纳入考量，具体口径以港交所正式规则文本与指引为准。</p>
-<p>还有一点容易被误读：保密递表改变的是信息公开的时点与条件，不改变审阅的实质标准。企业的财务规范性、业务合规性、架构清晰度与信息披露质量要求没有任何放松。<strong>因此，把保密递表理解为一条准备工作可以做得更松的捷径，是一种危险的误解。</strong></p>
-
-<h2>五、海外发行人来港：第二上市门槛下调与规则看齐</h2>
-<p><strong>结论先说：已在境外上市的公司来港作第二上市，市值门槛出现实质性下调，中概股与其他境外上市中资企业是最直接的适用群体。</strong></p>
-<p>本次改革在海外发行人这一块的调整包含两个层面。层面其一，同股同权架构申请人作第二上市的市值门槛下调：具备两年良好合规纪录的申请人，市值要求由不少于100亿港元降至不少于60亿港元；具备五年良好合规纪录的申请人，其不少于30亿港元的市值要求维持不变。层面其二，采用不同投票权架构的第二上市申请人，其财务资格标准与主要上市的相应要求看齐，消除了两套规则之间此前存在的差异。</p>
-<p>这一调整的现实背景无需赘述。相当数量的中资企业在境外单一市场挂牌，长期面对流动性不足、估值中枢偏低、投资人基础与业务重心错配等问题，回港上市是可选路径之一。旧规则下100亿港元的市值门槛，把大量市值在数十亿港元区间的公司排除在外，而这个区间恰恰是流动性困境最集中的地带。门槛降至60亿港元后，可选择第二上市路径的公司数量将出现明显扩容。</p>
-<p>不过，市值门槛只是资格条件的一项，企业在评估路径时还须一并考虑几项现实约束。约束其一，良好合规纪录的年限要求，意味着境外上市后的合规瑕疵会直接影响回港资格。约束其二，第二上市与双重主要上市在监管义务、指数纳入资格与互联互通准入上存在差异，选择哪一条路径应当从股东结构与流动性目标倒推，而不是从门槛高低倒推。约束其三，涉及境内权益的境外上市与再上市，仍须遵循境内的备案要求，2023年3月31日起施行的境内企业境外发行证券和上市管理试行办法及其配套指引仍然适用，这一层义务不因香港本地规则调整而改变。</p>
-<p><strong>本质上，门槛下调解决的是能不能来的问题，来了之后能否改善流动性与估值，取决于企业自身的基本面与投资者关系工作。</strong></p>
-
-<h2>六、创新产业定义优化：业务模式创新被明确纳入</h2>
-<p><strong>结论先说：创新产业公司的认定口径从偏重技术创新，扩展到明确包含业务模式创新，这对消费、服务与平台型企业的适用性提升明显。</strong></p>
-<p>不同投票权架构的申请人须属于创新产业公司，这一前置要求本身未变，变化的是认定口径。修订后的规定明确，创新产业的范围涵盖以业务模式创新为核心的发行人，而不限于以技术研发为核心的公司。</p>
-<p>这一调整的实际影响在于消除了一类长期存在的模糊地带。过去，一家依靠供应链组织方式、渠道结构或服务交付模式建立竞争壁垒的企业，在论证自身是否属于创新产业时，往往需要花费大量篇幅把商业模式包装成技术叙事，而这种包装既增加了申请成本，也降低了披露的真实性。口径明确之后，这类企业可以按其真实的竞争逻辑作论证。</p>
-<p>需要清醒看待的是，口径扩展不等于门槛消失。企业仍须证明其创新之处对业务成功具有实质贡献、构成难以复制的竞争优势，并与研发投入、增长曲线或运营指标形成可验证的对应关系。仅以行业新颖或概念时髦作论据，通过的可能性并不会因这次调整而提高。<strong>关键在于，创新的论证责任仍在企业一侧，规则放宽的是被认可的创新形态，不是论证的严格程度。</strong></p>
-
-<h2>七、企业侧：谁真正受益，以及现在应当做什么</h2>
-<p><strong>结论先说：受益面集中在三类企业，而对所有筹备中的企业而言，最需要立刻做的是重新测算自身资格，而不是急于递表。</strong></p>
-<p>受益类型其一，市值预期在60亿至200亿港元区间、已有规模化收入、创始人持股被稀释至较低水平的成长期创新企业。它们此前无法使用不同投票权架构，现在具备了资格，控制权安排与融资节奏的设计空间随之打开。</p>
-<p>受益类型其二，已在境外上市、市值处于60亿至100亿港元区间且合规纪录良好的公司。它们此前够不到第二上市门槛，现在多了一条改善流动性与投资人结构的路径。</p>
-<p>受益类型其三，处于竞争敏感行业、此前因不愿公开递表而推迟上市计划的企业。保密递表全面放开之后，启动申请的心理成本与商业成本同时下降。</p>
-<p>对上述企业，接下来三个月的工作重点应当落在四件事上。事项其一，按新门槛重新测算资格，包括市值区间的合理预估、最近一个经审计会计年度收入的口径确认，以及不同投票权持股比例与金额的组合测算，形成一张可更新的资格对照表。事项其二，若拟采用不同投票权架构，须同步完成受益人范围、投票权终止情形、日落安排与治理配套的设计，这部分工作量通常远大于门槛测算本身。事项其三，若涉及境内权益，须把境内备案的时间轴与香港递表的时间轴并线排布，避免出现香港端准备就绪而境内程序滞后的错配。事项其四，若考虑保密递表，须在内部提前明确公开时点的决策机制与触发条件，避免把选择权用成拖延。</p>
-<p>还需要提示一个容易被忽略的风险：门槛下调往往伴随申请数量的短期上升，审阅资源的实际周转时间可能因此拉长。把新规生效理解为流程会更快，是一种缺乏依据的乐观。彤鼎集团在为企业提供上市路径规划时，通常会把规则变化带来的资格改善与市场拥挤带来的时间成本一并计入模型；华尔街彤鼎俱乐部亦会围绕港股新规、控制权架构与跨境上市路径等主题，为筹备中的企业主提供系统的资本认知与经验交流。<strong>因此，规则放宽真正的价值，在于让企业有条件按自己的节奏做选择，而不是催促企业加快动作。</strong></p></article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>香港交易所于2026年7月24日刊发提升上市机制竞争力的咨询总结，修订后的《上市规则》即时生效。改革围绕三个方向展开：优化不同投票权上市规定、便利海外发行人来港上市、完善首次上市规定与安排。核心变化包括：不同投票权申请人的财务资格门槛，由市值不低于400亿港元，下调为市值不低于200亿港元，或市值不低于60亿港元且经审计的最近一个会计年度收入不低于6亿港元；上市时市值不低于400亿港元的申请人，投票权倍数上限由10比1提高至20比1；不同投票权持股金额不低于40亿港元时，其占已发行股本的比例要求由不低于10%放宽至不低于5%；以保密形式递交上市申请的安排，由此前限于第二上市及个别章节申请人，扩大至所有新申请人；海外发行人第二上市的市值门槛亦相应下调。</p><p>本质上，这是一次以门槛与流程为抓手的竞争力调整，受益面集中在中型创新企业与已在境外上市的公司。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">这次改革的坐标：三个方向、十项调整、即时生效</a></li><li><a href="#sec-02">同股不同权财务门槛：从400亿到200亿，以及第二条通道</a></li><li><a href="#sec-03">投票权倍数与持股占比：20比1上限与5%下限的适用条件</a></li><li><a href="#sec-04">保密递表扩大至所有新申请人：价值在于窗口选择权</a></li><li><a href="#sec-05">海外发行人来港：第二上市门槛下调与规则看齐</a></li><li><a href="#sec-06">创新产业定义优化：业务模式创新被明确纳入</a></li><li><a href="#sec-07">企业侧：谁真正受益，以及现在应当做什么</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、这次改革的坐标：三个方向、十项调整、即时生效</h2><p><strong>结论先说：这不是一次单点修补，而是对港股上市门槛结构与申请流程的一次系统性下调，且没有设置过渡期，7月24日起递交的申请即适用新规。</strong></p><p>香港交易所此前就提升上市机制竞争力发布征询文件，2026年7月24日刊发咨询总结，各项建议获市场广泛支持并获全部采纳，修订后的《上市规则》随即生效。改革内容归入三个方向：</p><ol class="ts-pts"><li><b>其一</b>，优化不同投票权架构公司的上市规定；</li><li><b>其二</b>，便利已在海外上市的发行人来港作第二上市或双重主要上市；</li><li><b>其三，完善首次上市的规定与程序安排</b>，其中最受关注的是保密形式递交申请的适用范围。</li></ol><p>理解这次改革，需要先理解它想解决的问题。过去数年，香港市场在承接科技型与创新型企业上的结构性障碍主要有三处。障碍</p><ol class="ts-pts"><li><b>其一，不同投票权架构的财务门槛过高</b>，市值不低于400亿港元的要求把绝大多数处于成长期的创新企业挡在门外，而这类企业恰恰是同股不同权安排的典型需求方。障碍</li><li><b>其二</b>，公开递表意味着企业在获得聆讯结果之前就要向竞争对手披露财务与业务细节，一旦申请失效或撤回，公开记录还会留存，令部分企业宁可推迟计划。障碍</li><li><b>其三</b>，已在境外上市的公司来港作第二上市时，市值门槛与本地主要上市规则之间存在不必要的差异。</li></ol><p>三项调整分别对应上述三处障碍。<strong>因此，判断这次改革对某家企业是否有意义，关键不在于新闻标题里的数字，而在于该企业此前究竟卡在哪一处。</strong></p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、同股不同权财务门槛：从400亿到200亿，以及第二条通道</h2><p><strong>结论先说：不同投票权的财务资格门槛下调幅度达一半，并新增了一条以收入为支撑的低市值通道，这是本次改革中影响面最广的一项。</strong></p><p>修订后的规定是：不同投票权架构的申请人，须满足两项财务资格标准之一——市值不少于200亿港元；或者市值不少于60亿港元，且经审计的最近一个会计年度收入不少于6亿港元。此前的要求是市值不少于400亿港元，或市值不少于100亿港元且最近一个经审计会计年度收入不少于10亿港元。两条通道的门槛分别下调至原水平的一半与六成左右。</p><p>这一调整的实际意义，需要结合同股不同权的使用场景来看。不同投票权架构的核心功能，是让创始团队在经历多轮股权融资、持股比例被显著稀释之后，仍能保有对公司经营方向的控制权。需要这一安排的，恰恰是那些依靠外部资本快速成长、创始人持股已降至较低水平的科技与创新企业。</p><p data-ts="1">而在旧门槛下，400亿港元的市值要求意味着企业必须先长成一家大型公司才能使用这一工具，与需求发生的时点严重错位。</p><p>新增的60亿港元市值加6亿港元收入通道，把判断依据从单一的市值预期，转向市值与经营实绩的组合。这对企业有两点直接影响。影响其一，估值波动的风险被部分对冲：市值取决于发行定价与市场情绪，而收入是已审计的历史数据，稳定性高得多，企业在筹备阶段的可预期性因此上升。</p><p data-ts="1">影响其二，收入门槛把纯概念型、尚无规模化营收的项目排除在外，使这条通道的适用对象集中在已经跑通商业模式的成长期公司。</p><p>需要提醒的是，财务资格只是不同投票权申请人须满足条件中的一项。适用主体资格、受益人限制、投票权终止安排、日落条款与相应的公司治理要求，均未因本次改革而取消。华尔街彤鼎俱乐部在与创始人交流控制权议题时反复强调的一点是：门槛下调改变的是能不能用，不是用起来有多简单。<strong>关键在于，同股不同权始终是一套配套义务密集的安排，不是一项可以随意采用的便利。</strong></p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、投票权倍数与持股占比：20比1上限与5%下限的适用条件</h2><p><strong>结论先说：这两项调整是给大市值申请人的定向放宽，均设有明确的金额条件，不适用于全部不同投票权公司。</strong></p><p>调整之一，投票权倍数上限提高。若公司上市时市值不低于400亿港元，其不同投票权的投票权倍数上限可由10比1提高至20比1。这意味着一股高投票权股份最多可对应二十票，而此前上限为十票。</p><p data-ts="1">对创始人而言，倍数提高的效果是：在同等控制权目标下，所需保有的经济权益比例可以更低，或者在同等持股比例下，可承受的后续稀释空间更大。</p><p>调整之二，不同投票权持股占比的下限放宽。原规则要求不同投票权受益人合计持有的股份不低于已发行股本的10%，修订后，若这部分持股在上市时的金额不低于40亿港元，占比要求可放宽至不低于5%。</p><p data-ts="1">这条规则的设计逻辑是以金额替代比例：当持股金额本身足够大时，受益人与公司的利益绑定已经充分，不必再以固定比例作为单一约束。</p><p>把两项调整放在一起看，受益对象非常明确——上市时市值在400亿港元以上的大型创新企业。它们此前面对的问题是：市值越大，创始人为维持控制权所需锁定的经济权益金额越高，而10比1的倍数上限与10%的持股比例下限共同构成了一个刚性约束。新规把这两项约束同时松开，实质是承认在超大市值区间，原有的比例式约束成本过高。</p><p>对中型企业而言，这两项调整基本不产生影响，它们真正受益于上一节所述的财务门槛下调。<strong>本质上，本次改革在不同投票权这一块采取的是分层放宽：中型企业放宽的是入场资格，大型企业放宽的是结构自由度。</strong></p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、保密递表扩大至所有新申请人：价值在于窗口选择权</h2><p><strong>结论先说：所有新申请人现均可以非公开形式递交上市申请，这项调整对企业的价值不在保密本身，而在于把公开时点的决定权交还给企业。</strong></p><p>此前，以保密形式递交上市申请的安排适用范围有限，主要限于符合条件的第二上市申请人及个别章节下的申请人，其余申请人须在递表后按规定公开申请材料。修订后，所有新申请人均可选择以非公开形式递交申请。</p><p>企业从这项调整中获得的实际利益有三层。利益</p><ol class="ts-pts"><li><b>其一</b>，竞争信息的保护。招股材料包含完整的财务数据、客户与供应商集中度、业务模式细节与风险因素，公开递表等于在获得任何确定性之前，先向同业交出一份高质量的竞争情报。对身处激烈竞争赛道的企业，这一成本相当可观。利益</li><li><b>其二</b>，失败成本的降低。公开递表后若申请失效、撤回或被拒，公开记录会长期留存，对客户关系、员工稳定与后续融资谈判均构成负面信号。保密递表把这一风险大幅压缩。利益</li><li><b>其三</b>，发行窗口的选择空间。企业可以先完成审阅程序中的实质沟通，再结合市场状况决定公开材料与启动发行的时点，而不是被递表动作本身推着走。</li></ol><p>与此同时，本次改革在申请被拒绝的处理机制上也作了透明度方向的调整，包括就被拒申请公开相关信息与理由的安排。这一组合的政策意图是清楚的：在申请过程中给予企业更多保密空间，但对最终未获通过的情形保持市场可见度，以维持审阅标准的一致性与市场纪律。</p><p data-ts="1">企业在评估保密递表的价值时，应当把这一侧的安排一并纳入考量，具体口径以港交所正式规则文本与指引为准。</p><p>还有一点容易被误读：保密递表改变的是信息公开的时点与条件，不改变审阅的实质标准。企业的财务规范性、业务合规性、架构清晰度与信息披露质量要求没有任何放松。<strong>因此，把保密递表理解为一条准备工作可以做得更松的捷径，是一种危险的误解。</strong></p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、海外发行人来港：第二上市门槛下调与规则看齐</h2><p><strong>结论先说：已在境外上市的公司来港作第二上市，市值门槛出现实质性下调，中概股与其他境外上市中资企业是最直接的适用群体。</strong></p><p>本次改革在海外发行人这一块的调整包含两个层面。层面其一，同股同权架构申请人作第二上市的市值门槛下调：具备两年良好合规纪录的申请人，市值要求由不少于100亿港元降至不少于60亿港元；具备五年良好合规纪录的申请人，其不少于30亿港元的市值要求维持不变。</p><p data-ts="1">层面其二，采用不同投票权架构的第二上市申请人，其财务资格标准与主要上市的相应要求看齐，消除了两套规则之间此前存在的差异。</p><p>这一调整的现实背景无需赘述。相当数量的中资企业在境外单一市场挂牌，长期面对流动性不足、估值中枢偏低、投资人基础与业务重心错配等问题，回港上市是可选路径之一。旧规则下100亿港元的市值门槛，把大量市值在数十亿港元区间的公司排除在外，而这个区间恰恰是流动性困境最集中的地带。门槛降至60亿港元后，可选择第二上市路径的公司数量将出现明显扩容。</p><p>不过，市值门槛只是资格条件的一项，企业在评估路径时还须一并考虑几项现实约束。约束</p><ol class="ts-pts"><li><b>其一，良好合规纪录的年限要求</b>，意味着境外上市后的合规瑕疵会直接影响回港资格。约束</li><li><b>其二</b>，第二上市与双重主要上市在监管义务、指数纳入资格与互联互通准入上存在差异，选择哪一条路径应当从股东结构与流动性目标倒推，而不是从门槛高低倒推。约束</li><li><b>其三</b>，涉及境内权益的境外上市与再上市，仍须遵循境内的备案要求，2023年3月31日起施行的境内企业境外发行证券和上市管理试行办法及其配套指引仍然适用，这一层义务不因香港本地规则调整而改变。</li></ol><p><strong>本质上，门槛下调解决的是能不能来的问题，来了之后能否改善流动性与估值，取决于企业自身的基本面与投资者关系工作。</strong></p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、创新产业定义优化：业务模式创新被明确纳入</h2><p><strong>结论先说：创新产业公司的认定口径从偏重技术创新，扩展到明确包含业务模式创新，这对消费、服务与平台型企业的适用性提升明显。</strong></p><p>不同投票权架构的申请人须属于创新产业公司，这一前置要求本身未变，变化的是认定口径。修订后的规定明确，创新产业的范围涵盖以业务模式创新为核心的发行人，而不限于以技术研发为核心的公司。</p><p>这一调整的实际影响在于消除了一类长期存在的模糊地带。过去，一家依靠供应链组织方式、渠道结构或服务交付模式建立竞争壁垒的企业，在论证自身是否属于创新产业时，往往需要花费大量篇幅把商业模式包装成技术叙事，而这种包装既增加了申请成本，也降低了披露的真实性。口径明确之后，这类企业可以按其真实的竞争逻辑作论证。</p><p>需要清醒看待的是，口径扩展不等于门槛消失。企业仍须证明其创新之处对业务成功具有实质贡献、构成难以复制的竞争优势，并与研发投入、增长曲线或运营指标形成可验证的对应关系。仅以行业新颖或概念时髦作论据，通过的可能性并不会因这次调整而提高。</p><p data-ts="1"><strong>关键在于，创新的论证责任仍在企业一侧，规则放宽的是被认可的创新形态，不是论证的严格程度。</strong></p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、企业侧：谁真正受益，以及现在应当做什么</h2><p><strong>结论先说：受益面集中在三类企业，而对所有筹备中的企业而言，最需要立刻做的是重新测算自身资格，而不是急于递表。</strong></p><p>受益类型其一，市值预期在60亿至200亿港元区间、已有规模化收入、创始人持股被稀释至较低水平的成长期创新企业。它们此前无法使用不同投票权架构，现在具备了资格，控制权安排与融资节奏的设计空间随之打开。</p><p>受益类型其二，已在境外上市、市值处于60亿至100亿港元区间且合规纪录良好的公司。它们此前够不到第二上市门槛，现在多了一条改善流动性与投资人结构的路径。</p><p>受益类型其三，处于竞争敏感行业、此前因不愿公开递表而推迟上市计划的企业。保密递表全面放开之后，启动申请的心理成本与商业成本同时下降。</p><p>对上述企业，接下来三个月的工作重点应当落在四件事上。事项</p><ol class="ts-pts"><li><b>其一，按新门槛重新测算资格</b>，包括市值区间的合理预估、最近一个经审计会计年度收入的口径确认，以及不同投票权持股比例与金额的组合测算，形成一张可更新的资格对照表。事项</li><li><b>其二，若拟采用不同投票权架构</b>，须同步完成受益人范围、投票权终止情形、日落安排与治理配套的设计，这部分工作量通常远大于门槛测算本身。事项</li><li><b>其三，若涉及境内权益</b>，须把境内备案的时间轴与香港递表的时间轴并线排布，避免出现香港端准备就绪而境内程序滞后的错配。事项</li><li><b>其四，若考虑保密递表</b>，须在内部提前明确公开时点的决策机制与触发条件，避免把选择权用成拖延。</li></ol><p>还需要提示一个容易被忽略的风险：门槛下调往往伴随申请数量的短期上升，审阅资源的实际周转时间可能因此拉长。把新规生效理解为流程会更快，是一种缺乏依据的乐观。彤鼎集团在为企业提供上市路径规划时，通常会把规则变化带来的资格改善与市场拥挤带来的时间成本一并计入模型；华尔街彤鼎俱乐部亦会围绕港股新规、控制权架构与跨境上市路径等主题，为筹备中的企业主提供系统的资本认知与经验交流。</p><p data-ts="1"><strong>因此，规则放宽真正的价值，在于让企业有条件按自己的节奏做选择，而不是催促企业加快动作。</strong></p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hkex-return-mechanism-2026.html" style="color:#6b5426;font-weight:700;">港交所退回机制新规：上市申请被退回，全部中介机构名单将公开</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-vs-nyse.html" style="color:#6b5426;font-weight:700;">纳斯达克与纽交所怎么选</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="beijing-exchange-path.html" style="color:#6b5426;font-weight:700;">北交所与专精特新上市路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="singapore-vs-hongkong.html" style="color:#6b5426;font-weight:700;">新加坡路径与香港路径深度对比</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="singapore-path.html" style="color:#6b5426;font-weight:700;">新加坡路径赴美上市详解</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

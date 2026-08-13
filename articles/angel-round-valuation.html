@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的","inLanguage":"zh-CN","abstract":"Early-stage companies have neither profits nor stable cash flows, so an angel-round valuation is negotiated rather than calculated. This article sets out the three pricing anchors used in practice, the pre-money versus post-money distinction and the option pool shuffle, how an inflated price triggers anti-dilution provisions in a later down round, and how much equity a founder can give away in the first round while keeping control after two or three rounds. All figures are illustrative ranges from primary-market practice and do not constitute investment advice.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/angel-round-valuation.html"},"datePublished":"2026-08-08","dateModified":"2026-08-08","description":"早期公司没有利润与稳定现金流，天使轮估值究竟按什么定？本文拆解三种实务定价锚（可比交易、投资人目标持股比例倒推、里程碑折现），讲清投前与投后估值的换算差异、期权池放在投前还是投后对创始人稀释的具体影响，说明估值定太高如何在下一轮触发完全棘轮或加权平均反稀释条款，并给出天使轮 10%-20%、A 轮 15%-25% 的常见出让区间与连续三轮融资后创始人团队持股的推演算例。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,42 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">初创融资 EARLY STAGE</div><h1>天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的</h1>
 <div class="sub">定价锚、投前投后换算、期权池归属与反稀释触发——写给初创创始人的早期估值实务</div><div class="en">Early-stage companies have neither profits nor stable cash flows, so an angel-round valuation is negotiated rather than calculated. This article sets out the three pricing anchors used in practice, the pre-money versus post-money distinction and the option pool shuffle, how an inflated price triggers anti-dilution provisions in a later down round, and how much equity a founder can give away in the first round while keeping control after two or three rounds. All figures are illustrative ranges from primary-market practice and do not constitute investment advice.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">天使轮估值是指公司在尚无稳定利润与现金流的阶段，由创始人与投资人就本轮交易协商达成的成交价格，而非对企业内在价值的会计计量。早期定价不走市盈率或现金流折现的路径，实务中主要依赖三个锚：同赛道同轮次的可比交易价格、投资人目标持股比例倒推、下一轮里程碑折现。其中倒推法使用最普遍——机构天使通常要求本轮取得 15%-20% 的股权，融资额除以该比例即得投后估值；例如融资 1000 万元、让出 20%，则投后估值 5000 万元、投前 4000 万元。创始人真正要盯住的不是估值数字本身，而是三件事：投前与投后的口径差、期权池计入投前还是投后、下一轮价格上不去时反稀释条款如何反噬。本质上，首轮估值定的不是身价，而是此后两到三轮的稀释路径与控制权余量。</div>
-<h2>一、早期估值不是算出来的：三种真正在用的定价锚</h2>
-<p><strong>结论先行：早期公司没有可比利润与现金流，估值只能靠锚，实务中真正在用的是可比交易、目标持股倒推与里程碑折现三种。</strong></p>
-<p>可比交易法是指参照最近 6-12 个月内同赛道、同轮次已完成融资的估值区间给本轮定价。经验区间大致是：模式创新类项目天使轮投前估值多在 2000 万至 8000 万元，有技术门槛的硬科技项目常见 5000 万至 1.5 亿元，仅有原型与团队的更早期项目普遍在 1000 万至 3000 万元。局限在于早期条款不公开、可查数字多为投后口径。因此这个方法只能给出区间，给不出点位。</p>
-<p>投资人目标持股比例倒推法是指从投资人本轮希望取得的比例出发、用融资额反算估值，实务中使用最普遍。机构天使的常见诉求是 15%-20%，领投方可能要到 20%-25%；低于 10% 投入产出不成比例，高于 25% 则会让下一轮机构担心创始人激励不足。算例：融资 500 万元、投资人要 15%，投后约 3333 万元、投前约 2833 万元；融资 2000 万元、要 20%，投后 1 亿元、投前 8000 万元。关键在于，估值在这套算法里是融资额与比例的因变量，不是自变量。</p>
-<p>里程碑折现法是指先估算下一轮可实现的估值，再按达成概率与年化折现率折回当期，常用折现率 40%-60%、达成概率 50%-70%。算例：预计 18 个月后 A 轮投前估值 2 亿元，概率取 60%、年化折现率取 50%，折现因子约 1.84，折回当期约 6500 万元。谈判中投资人用倒推法出价、创始人用可比交易与里程碑还价。因此创始人进场前必须先备好自己的推演链条。</p>
-<h2>二、投前与投后：创始人最常算错的一步</h2>
-<p><strong>结论先行：投前估值加本轮融资额等于投后估值，创始人被稀释的比例只由投后估值决定，口径说错一次，代价就是几个百分点的股权。</strong></p>
-<p>投前估值（pre-money）是指本轮资金进入公司之前投资人对既有价值的认定，投后估值（post-money）是指投前估值加上本轮全部融资额。只有两个公式：投后等于投前加融资额；投资人本轮持股等于融资额除以投后估值。因此所有关于稀释的争论，最终都落回投后这个分母。</p>
-<p>算例最能说明问题：投前 4000 万元、融资 1000 万元，则投后 5000 万元，投资人持股 20%，创始人从 100% 降到 80%。若创始人口头说「估值四千万」而对方理解为投后，实际投前只有 3000 万元，投资人拿走 25%，创始人只剩 75%——同一句话，差 5 个百分点。</p>
-<p>口径差异还有语境层面的坑。中文口头说估值默认偏向投前，英文条款清单更常直接写 post-money，SAFE 与可转换债券近年普遍采用投后封顶估值（post-money valuation cap），转股时按封顶价锁定投资人比例，中间新增的摊薄全部由创始人承担。同一轮有多个投资人分批进入时，还须写明「同轮同价、同一投后基数」，否则拆成先后交割会让创始人剩余比例低于 80%。因此条款清单上必须逐字确认写的是 pre 还是 post。</p>
-<h2>三、期权池放在投前还是投后：被低估的隐性稀释</h2>
-<p><strong>结论先行：期权池计入投前，等于创始人独自承担；计入投后，则由创始人与新投资人按比例共担，同一笔池子两种处理相差 2-3 个百分点。</strong></p>
-<p>期权池是指公司为未来招聘预留、尚未授予具体员工的股权额度，天使轮常见 8%-15%，到 A 轮之前普遍补到 10%-20%。设不设不是争议点——早期公司靠期权弥补现金薪酬的不足；争议在于这部分稀释由谁承担。</p>
-<p>期权池洗牌（option pool shuffle）是指投资人在条款清单中要求期权池计入投前估值，即从创始人既有股权里切出来。算例：投前 4000 万元、融资 1000 万元、投后 5000 万元、投资人 20%。若约定在投前设立占投后股本 10% 的期权池，创始人最终持股为 100% 减去 20% 再减去 10%，等于 70%，而投资人仍是完整的 20%。</p>
-<p>同一笔池子放在投后则不同：先按投前 4000 万元完成融资，创始人 80%、投资人 20%；再设立 10% 期权池，双方同比例摊薄，创始人为 80% 乘以 90% 等于 72%，投资人为 18%。两者相差 2 个百分点；池子提到 15% 时，投前口径创始人剩 65%、投后口径剩 68%，差距扩大到 3 个百分点。</p>
-<p>更现实的谈判空间是把池子压到与真实招聘计划匹配：列出未来 12-18 个月要发的关键岗位与各自期权额度，倒推实际需要的规模，通常落在 8%-12%，其余留到下一轮再补。因此期权池谈的不是谁强硬，是谁把用途算得清楚。</p>
-<h2>四、估值定太高的代价：下一轮上不去，反稀释条款就开始工作</h2>
-<p><strong>结论先行：估值定高的代价不发生在本轮而在下一轮，一旦下轮每股价格低于本轮，反稀释条款自动启动，被额外摊薄的只有创始人与员工。</strong></p>
-<p>下轮估值下调（down round）是指后续融资的每股价格低于前一轮。反稀释条款是指前轮投资人在公司以更低价格发行股份时，有权调低其转换价格从而取得更多股份的保护性安排，常见两类：完全棘轮（full ratchet）与加权平均（weighted average，又分广基与窄基）。</p>
-<p>算例：天使轮投后估值 5000 万元、总股本 5000 万股、每股 1 元，投资人投入 1000 万元持有 1000 万股即 20%，创始人持 4000 万股即 80%。若 A 轮以每股 0.5 元发行 2000 万股，完全棘轮下天使投资人的转换价重设为 0.5 元，其 1000 万元对应 2000 万股，凭空多出 1000 万股，创始人被摊薄至约 66.7%；广基加权平均下转换价从 1 元调整至约 0.86 元，仅增发约 167 万股，创始人约剩 77.4%。两种条款之间，创始人的差额超过 10 个百分点。</p>
-<p>由此有三条实操结论：其一，尽量争取广基加权平均，避开完全棘轮；其二，争取加入后续融资参与条款（pay-to-play），即前轮投资人须按比例跟投才享有反稀释保护；其三也是根本的一条，不要把本轮价格顶到经营数据撑不住的位置，经验区间是天使到 A 轮估值增幅约 2-4 倍、A 到 B 轮约 2-3 倍。关键在于，估值定高只是把稀释延后并放大，不是消除稀释。</p>
-<h2>五、首轮该出让多少：从天使轮到 B 轮的股权推演</h2>
-<p><strong>结论先行：天使轮出让 10%-20%、A 轮 15%-25% 是常见区间，按此推演三轮后创始人团队约剩 45%-55%，每轮多让 5 个百分点则会掉到 40% 以下。</strong></p>
-<p>这个带宽有其道理：低于下限，投资人持股不足以支撑其投入的时间与后续跟投意愿；高于上限，下一轮机构会担心创始人激励被稀释过度而降低出价。因此它不是惯例，是双方利益的均衡点。</p>
-<p>克制路径算例：创始人团队起始 100%，天使轮出让 15% 剩 85%，设立 10% 期权池剩 76.5%，A 轮出让 20% 剩 61.2%，期权池补充 5% 剩 58.1%，B 轮出让 15% 剩 49.4%。三轮融资加两次扩池之后，创始人团队约剩 49%。</p>
-<p>激进路径算例：同样起始 100%，天使轮因估值谈低而被迫出让 25% 剩 75%，期权池 15% 剩 63.8%，A 轮出让 25% 剩 47.8%，B 轮出让 20% 剩 38.3%。同样三轮，只剩约 38%，比前一条路径少 11 个百分点，且在 A 轮结束时就已跌破半数。</p>
-<p>控制权不等于持股比例。可用工具有三类：同股不同权架构，香港与部分境外市场设有专门章节与准入条件、境内科创板亦有相应安排，但均须在融资早期就把主体与股权结构设计好，后期改造成本极高；董事会席位安排，天使轮后常见结构是创始人 2 席、投资人 1 席、独立董事 1 席，董事会多数比股权多数更直接决定日常经营；一致行动协议与投票权委托，把早期小股东的表决权归集。华尔街彤鼎俱乐部与早期创始人交流时反复提示的是，这些安排必须在持股跌破 50% 之前完成。因此控制权是提前设计出来的，不是事后争取来的。</p>
-<h2>六、回到主线：融多少钱、干成什么事，比估值数字重要</h2>
-<p><strong>结论先行：估值不是越高越好，先确定这一轮要干成什么事、需要多少钱、能买多长跑道，估值是这三件事推导出来的结果。</strong></p>
-<p>融资额应当由跑道倒推。合理跑道是 18-24 个月，因为下一轮从启动到资金到账通常需 6-9 个月，还要再留 6 个月缓冲。算例：月度净支出 60 万元，18 个月需 1080 万元，加 20% 缓冲约 1300 万元；若愿意出让 18%-20%，对应投后估值 6500 万至 7200 万元。这才是本轮估值的合理落点，而不是先想一个体面数字再去凑融资额。</p>
-<p>资金用途也要在见投资人之前拆清楚，早期项目的常见分配是研发与产品 40%-50%、市场与获客 20%-30%、团队扩充 15%-25%、合规与中介 5%-10%。最后一项常被漏算：股权架构搭建、境外主体设立、财务规范化，在天使轮阶段往往是几十万元量级，不预留就会在 A 轮尽调时拖延交割。</p>
-<p>判断估值是否合适可用三个自查口径：本轮资金能否把公司推到下一轮的门槛指标，例如年度经常性收入从 300 万元做到 1500 万元；稀释后创始人团队是否仍在 50% 以上，若已低于此线，治理安排是否到位；本轮价格是否给下一轮留出 2-3 倍的上涨空间。三条都能答上，估值就基本合理。</p>
-<p>早期融资的复杂性不在估值本身，而在估值、期权池、反稀释、清算优先权、董事会席位彼此咬合——单看一条都能接受，合在一起就可能在两轮后改变公司的归属。彤鼎集团（香港）有限公司为企业管理咨询机构，在提供架构设计与融资策划服务时，通常建议创始人把整套条款放在同一张纸上做联动测算，而非逐条谈判；涉及证券发行、承销等持牌业务，由持牌合作机构承做。本质上，首轮估值谈的是往后三年的股权结构，把它当成一次报价来谈，代价往往在两轮之后才显现。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>天使轮估值是指公司在尚无稳定利润与现金流的阶段，由创始人与投资人就本轮交易协商达成的成交价格，而非对企业内在价值的会计计量。早期定价不走市盈率或现金流折现的路径，实务中主要依赖三个锚：同赛道同轮次的可比交易价格、投资人目标持股比例倒推、下一轮里程碑折现。</p><p>其中倒推法使用最普遍——机构天使通常要求本轮取得 15%-20% 的股权，融资额除以该比例即得投后估值；例如融资 1000 万元、让出 20%，则投后估值 5000 万元、投前 4000 万元。创始人真正要盯住的不是估值数字本身，而是三件事：投前与投后的口径差、期权池计入投前还是投后、下一轮价格上不去时反稀释条款如何反噬。本质上，首轮估值定的不是身价，而是此后两到三轮的稀释路径与控制权余量。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">早期估值不是算出来的：三种真正在用的定价锚</a></li><li><a href="#sec-02">投前与投后：创始人最常算错的一步</a></li><li><a href="#sec-03">期权池放在投前还是投后：被低估的隐性稀释</a></li><li><a href="#sec-04">估值定太高的代价：下一轮上不去，反稀释条款就开始工作</a></li><li><a href="#sec-05">首轮该出让多少：从天使轮到 B 轮的股权推演</a></li><li><a href="#sec-06">回到主线：融多少钱、干成什么事，比估值数字重要</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、早期估值不是算出来的：三种真正在用的定价锚</h2><div class="ts-lead"><span class="tag">结论先行</span><p>早期公司没有可比利润与现金流，估值只能靠锚，实务中真正在用的是可比交易、目标持股倒推与里程碑折现三种。</p></div><p>可比交易法是指参照最近 6-12 个月内同赛道、同轮次已完成融资的估值区间给本轮定价。经验区间大致是：模式创新类项目天使轮投前估值多在 2000 万至 8000 万元，有技术门槛的硬科技项目常见 5000 万至 1.5 亿元，仅有原型与团队的更早期项目普遍在 1000 万至 3000 万元。</p><p data-ts="1">局限在于早期条款不公开、可查数字多为投后口径。因此这个方法只能给出区间，给不出点位。</p><p>投资人目标持股比例倒推法是指从投资人本轮希望取得的比例出发、用融资额反算估值，实务中使用最普遍。机构天使的常见诉求是 15%-20%，领投方可能要到 20%-25%；低于 10% 投入产出不成比例，高于 25% 则会让下一轮机构担心创始人激励不足。</p><p data-ts="1">算例：融资 500 万元、投资人要 15%，投后约 3333 万元、投前约 2833 万元；融资 2000 万元、要 20%，投后 1 亿元、投前 8000 万元。关键在于，估值在这套算法里是融资额与比例的因变量，不是自变量。</p><p>里程碑折现法是指先估算下一轮可实现的估值，再按达成概率与年化折现率折回当期，常用折现率 40%-60%、达成概率 50%-70%。算例：预计 18 个月后 A 轮投前估值 2 亿元，概率取 60%、年化折现率取 50%，折现因子约 1.84，折回当期约 6500 万元。</p><p data-ts="1">谈判中投资人用倒推法出价、创始人用可比交易与里程碑还价。因此创始人进场前必须先备好自己的推演链条。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、投前与投后：创始人最常算错的一步</h2><div class="ts-lead"><span class="tag">结论先行</span><p>投前估值加本轮融资额等于投后估值，创始人被稀释的比例只由投后估值决定，口径说错一次，代价就是几个百分点的股权。</p></div><p>投前估值（pre-money）是指本轮资金进入公司之前投资人对既有价值的认定，投后估值（post-money）是指投前估值加上本轮全部融资额。只有两个公式：投后等于投前加融资额；投资人本轮持股等于融资额除以投后估值。因此所有关于稀释的争论，最终都落回投后这个分母。</p><p>算例最能说明问题：投前 4000 万元、融资 1000 万元，则投后 5000 万元，投资人持股 20%，创始人从 100% 降到 80%。若创始人口头说「估值四千万」而对方理解为投后，实际投前只有 3000 万元，投资人拿走 25%，创始人只剩 75%——同一句话，差 5 个百分点。</p><p>口径差异还有语境层面的坑。中文口头说估值默认偏向投前，英文条款清单更常直接写 post-money，SAFE 与可转换债券近年普遍采用投后封顶估值（post-money valuation cap），转股时按封顶价锁定投资人比例，中间新增的摊薄全部由创始人承担。</p><p data-ts="1">同一轮有多个投资人分批进入时，还须写明「同轮同价、同一投后基数」，否则拆成先后交割会让创始人剩余比例低于 80%。因此条款清单上必须逐字确认写的是 pre 还是 post。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、期权池放在投前还是投后：被低估的隐性稀释</h2><div class="ts-lead"><span class="tag">结论先行</span><p>期权池计入投前，等于创始人独自承担；计入投后，则由创始人与新投资人按比例共担，同一笔池子两种处理相差 2-3 个百分点。</p></div><p>期权池是指公司为未来招聘预留、尚未授予具体员工的股权额度，天使轮常见 8%-15%，到 A 轮之前普遍补到 10%-20%。设不设不是争议点——早期公司靠期权弥补现金薪酬的不足；争议在于这部分稀释由谁承担。</p><p>期权池洗牌（option pool shuffle）是指投资人在条款清单中要求期权池计入投前估值，即从创始人既有股权里切出来。算例：投前 4000 万元、融资 1000 万元、投后 5000 万元、投资人 20%。</p><p data-ts="1">若约定在投前设立占投后股本 10% 的期权池，创始人最终持股为 100% 减去 20% 再减去 10%，等于 70%，而投资人仍是完整的 20%。</p><p>同一笔池子放在投后则不同：先按投前 4000 万元完成融资，创始人 80%、投资人 20%；再设立 10% 期权池，双方同比例摊薄，创始人为 80% 乘以 90% 等于 72%，投资人为 18%。两者相差 2 个百分点；池子提到 15% 时，投前口径创始人剩 65%、投后口径剩 68%，差距扩大到 3 个百分点。</p><p>更现实的谈判空间是把池子压到与真实招聘计划匹配：列出未来 12-18 个月要发的关键岗位与各自期权额度，倒推实际需要的规模，通常落在 8%-12%，其余留到下一轮再补。因此期权池谈的不是谁强硬，是谁把用途算得清楚。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、估值定太高的代价：下一轮上不去，反稀释条款就开始工作</h2><div class="ts-lead"><span class="tag">结论先行</span><p>估值定高的代价不发生在本轮而在下一轮，一旦下轮每股价格低于本轮，反稀释条款自动启动，被额外摊薄的只有创始人与员工。</p></div><p>下轮估值下调（down round）是指后续融资的每股价格低于前一轮。反稀释条款是指前轮投资人在公司以更低价格发行股份时，有权调低其转换价格从而取得更多股份的保护性安排，常见两类：完全棘轮（full ratchet）与加权平均（weighted average，又分广基与窄基）。</p><p>算例：天使轮投后估值 5000 万元、总股本 5000 万股、每股 1 元，投资人投入 1000 万元持有 1000 万股即 20%，创始人持 4000 万股即 80%。若 A 轮以每股 0.5 元发行 2000 万股，完全棘轮下天使投资人的转换价重设为 0.5 元，其 1000 万元对应 2000 万股，凭空多出 1000 万股，创始人被摊薄至约 66.7%；广基加权平均下转换价从 1 元调整至约 0.86 元，仅增发约 167 万股，创始人约剩 77.4%。两种条款之间，创始人的差额超过 10 个百分点。</p><p>由此有三条实操结论：其一，尽量争取广基加权平均，避开完全棘轮；其二，争取加入后续融资参与条款（pay-to-play），即前轮投资人须按比例跟投才享有反稀释保护；其三也是根本的一条，不要把本轮价格顶到经营数据撑不住的位置，经验区间是天使到 A 轮估值增幅约 2-4 倍、A 到 B 轮约 2-3 倍。关键在于，估值定高只是把稀释延后并放大，不是消除稀释。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、首轮该出让多少：从天使轮到 B 轮的股权推演</h2><div class="ts-lead"><span class="tag">结论先行</span><p>天使轮出让 10%-20%、A 轮 15%-25% 是常见区间，按此推演三轮后创始人团队约剩 45%-55%，每轮多让 5 个百分点则会掉到 40% 以下。</p></div><p>这个带宽有其道理：低于下限，投资人持股不足以支撑其投入的时间与后续跟投意愿；高于上限，下一轮机构会担心创始人激励被稀释过度而降低出价。因此它不是惯例，是双方利益的均衡点。</p><p>克制路径算例：创始人团队起始 100%，天使轮出让 15% 剩 85%，设立 10% 期权池剩 76.5%，A 轮出让 20% 剩 61.2%，期权池补充 5% 剩 58.1%，B 轮出让 15% 剩 49.4%。三轮融资加两次扩池之后，创始人团队约剩 49%。</p><p>激进路径算例：同样起始 100%，天使轮因估值谈低而被迫出让 25% 剩 75%，期权池 15% 剩 63.8%，A 轮出让 25% 剩 47.8%，B 轮出让 20% 剩 38.3%。同样三轮，只剩约 38%，比前一条路径少 11 个百分点，且在 A 轮结束时就已跌破半数。</p><p>控制权不等于持股比例。可用工具有三类：同股不同权架构，香港与部分境外市场设有专门章节与准入条件、境内科创板亦有相应安排，但均须在融资早期就把主体与股权结构设计好，后期改造成本极高；董事会席位安排，天使轮后常见结构是创始人 2 席、投资人 1 席、独立董事 1 席，董事会多数比股权多数更直接决定日常经营；一致行动协议与投票权委托，把早期小股东的表决权归集。</p><p data-ts="1">华尔街彤鼎俱乐部与早期创始人交流时反复提示的是，这些安排必须在持股跌破 50% 之前完成。因此控制权是提前设计出来的，不是事后争取来的。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、回到主线：融多少钱、干成什么事，比估值数字重要</h2><div class="ts-lead"><span class="tag">结论先行</span><p>估值不是越高越好，先确定这一轮要干成什么事、需要多少钱、能买多长跑道，估值是这三件事推导出来的结果。</p></div><p>融资额应当由跑道倒推。合理跑道是 18-24 个月，因为下一轮从启动到资金到账通常需 6-9 个月，还要再留 6 个月缓冲。算例：月度净支出 60 万元，18 个月需 1080 万元，加 20% 缓冲约 1300 万元；若愿意出让 18%-20%，对应投后估值 6500 万至 7200 万元。这才是本轮估值的合理落点，而不是先想一个体面数字再去凑融资额。</p><p>资金用途也要在见投资人之前拆清楚，早期项目的常见分配是研发与产品 40%-50%、市场与获客 20%-30%、团队扩充 15%-25%、合规与中介 5%-10%。最后一项常被漏算：股权架构搭建、境外主体设立、财务规范化，在天使轮阶段往往是几十万元量级，不预留就会在 A 轮尽调时拖延交割。</p><p>判断估值是否合适可用三个自查口径：本轮资金能否把公司推到下一轮的门槛指标，例如年度经常性收入从 300 万元做到 1500 万元；稀释后创始人团队是否仍在 50% 以上，若已低于此线，治理安排是否到位；本轮价格是否给下一轮留出 2-3 倍的上涨空间。三条都能答上，估值就基本合理。</p><p>早期融资的复杂性不在估值本身，而在估值、期权池、反稀释、清算优先权、董事会席位彼此咬合——单看一条都能接受，合在一起就可能在两轮后改变公司的归属。彤鼎集团（香港）有限公司为企业管理咨询机构，在提供架构设计与融资策划服务时，通常建议创始人把整套条款放在同一张纸上做联动测算，而非逐条谈判；涉及证券发行、承销等持牌业务，由持牌合作机构承做。</p><p data-ts="1">本质上，首轮估值谈的是往后三年的股权结构，把它当成一次报价来谈，代价往往在两轮之后才显现。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cofounder-equity-split.html" style="color:#6b5426;font-weight:700;">合伙人股权怎么分：初创公司创始团队的股权分配方法与三条不可逆红线</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

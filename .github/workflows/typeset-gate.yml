@@ -1,0 +1,51 @@
+name: 版式闸
+
+# 检查 articles/ 下有没有文章漏了排版（tools/retypeset.py）。
+#
+# 为什么要有这个：2026-08-13 之前全站 199 篇正文是「一段三百字、通篇无图」，
+# 手机上一段就是连续二十行，公众号那边尤其明显。重排之后，如果新文章
+# 或某次手改又绕过了排版引擎，页面会悄悄退回文字墙——**不报错、不掉分、
+# 只是没人愿意读**。这类问题不会自己暴露，所以必须有东西定期去看一眼。
+#
+# 排版只动版式不动文字，retypeset.py 每篇写盘前都会逐字比对正文，
+# 不一致就中止，因此这个闸不会改变任何内容。
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'articles/**.html'
+      - 'tools/typeset.py'
+      - 'tools/retypeset.py'
+  pull_request:
+    paths:
+      - 'articles/**.html'
+      - 'tools/typeset.py'
+      - 'tools/retypeset.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  typeset:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 检查是否有文章漏了排版
+        run: |
+          if ! python tools/retypeset.py --check; then
+            echo ""
+            echo "::error::有文章还没排版。在仓库根目录跑 python tools/retypeset.py 后重新提交。"
+            exit 1
+          fi
+
+      - name: 抽查排版不会改动正文
+        run: |
+          # --force 会先还原再重排，改到 typeset.py 时这一步能抓出「重排改了字」。
+          python tools/retypeset.py --force --dry-run

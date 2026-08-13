@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "外国私人发行人身份认定：两步测试与丧失后的合规升级", "inLanguage": "zh-CN", "abstract": "A foreign private issuer (FPI) is a non-U.S. issuer that clears a two-part test under the U.S. securities laws: either 50% or less of its voting securities are held of record by U.S. residents, or, if that threshold is exceeded, none of three U.S. contacts applies - a majority of officers or directors being U.S. citizens or residents, more than half of assets located in the United States, or the business being administered principally in the United States. FPI status carries a package of accommodations: an annual report on Form 20-F due four months after fiscal year end, no quarterly reports, furnishing current information on Form 6-K, financial statements in IFRS without U.S. GAAP reconciliation, and exemption from the fair disclosure, insider reporting and proxy solicitation regimes. Status is tested annually on the last business day of the second fiscal quarter, and an issuer that fails must move to the domestic reporting system from the first day of the following fiscal year.", "author": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司"}, "publisher": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司", "url": "https://tdgroup.hk", "logo": {"@type": "ImageObject", "url": "https://tdgroup.hk/img/td-crest-gold.png"}}, "mainEntityOfPage": "https://tdgroup.hk/articles/fpi-status-test.html", "datePublished": "2026-07-25", "dateModified": "2026-07-25", "image": "https://tdgroup.hk/img/og-card.jpg", "description": "外国私人发行人（FPI）是指在美国境外注册、并通过两步测试的非美国发行人：美国居民记录持股不超过50%，或虽超过50%但未触及多数高管董事为美国人、逾半资产在美国、业务主要在美国管理这三项联系中的任何一项。身份带来20-F年报、免季报、可用国际财务报告准则等简化待遇，每年在第二财季末测定，丧失后自下一财年起转用国内发行人体系。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,59 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">美股合规 US COMPLIANCE</div><h1>外国私人发行人身份认定：两步测试与丧失后的合规升级</h1>
 <div class="sub">股东测试、美国联系测试与年度测定时点的完整规则</div><div class="en">A foreign private issuer (FPI) is a non-U.S. issuer that clears a two-part test under the U.S. securities laws: either 50% or less of its voting securities are held of record by U.S. residents, or, if that threshold is exceeded, none of three U.S. contacts applies - a majority of officers or directors being U.S. citizens or residents, more than half of assets located in the United States, or the business being administered principally in the United States. FPI status carries a package of accommodations: an annual report on Form 20-F due four months after fiscal year end, no quarterly reports, furnishing current information on Form 6-K, financial statements in IFRS without U.S. GAAP reconciliation, and exemption from the fair disclosure, insider reporting and proxy solicitation regimes. Status is tested annually on the last business day of the second fiscal quarter, and an issuer that fails must move to the domestic reporting system from the first day of the following fiscal year.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-25">2026年7月25日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">外国私人发行人（Foreign Private Issuer，简称FPI）是指在美国境外注册成立、并通过美国证券法两步测试的非美国发行人。股东测试看持股：由美国居民记录持有的有表决权证券不超过50%，即直接构成FPI。联系测试看实质：即使美国居民记录持股超过50%，只要未触及三项美国联系中的任何一项——多数高管或董事为美国公民或美国居民、超过50%的资产位于美国境内、业务主要在美国境内管理——仍可保留FPI身份。这一身份对应一整套简化待遇：年报使用20-F表格且截止期为财年结束后四个月，无需提交季度报告而以6-K表格随报随交，财务报表可直接采用国际财务报告准则，公平披露规则、内部人持股报告规则与委托征集规则均不适用，交易所层面的公司治理要求还可援引母国惯例。身份每年在第二财季最后一个营业日测定，一旦不再符合，须自下一财年首日起全面转用美国国内发行人的报告体系。因此，FPI不是注册地带来的自然结果，而是一项需要逐年维护的合规状态。</div>
-<h2>一、FPI是一种身份，不是注册地的自然结果</h2>
-<p><strong>结论先说：一家开曼公司在美国交易所挂牌，并不自动等于外国私人发行人；这个身份由两步测试逐年判定，也可能在某一年悄无声息地丧失。</strong></p>
-<p>美国证券法对发行人的监管强度，并非按注册地一刀切，而是按"这家公司在多大程度上属于美国市场的本地公司"来分层。分层的技术工具，就是外国私人发行人这一概念。它把在美国公开发行并持续报告的非美国公司分成两类：与美国联系较弱的，适用一套简化的信息披露与治理要求；与美国联系已经足够紧密的，即便注册在境外，也要按美国本土公司的标准履行义务。</p>
-<p>这一分层逻辑的合理性在于成本与保护的平衡。一家主要股东、主要资产、主要管理层都在境外的公司，如果被要求完全按美国本土标准编制季度报表、披露逐个高管的薪酬明细、遵守委托征集规则，其合规成本会显著上升，而美国投资人从中获得的边际保护有限。反之，若一家公司名义上注册在境外，实质上股东、资产、管理全在美国，简化待遇就变成了监管套利。</p>
-<p>需要立刻纠正的一个常见误解是：把注册地当成身份来源。境外注册只是取得FPI身份的前提之一，不是充分条件。实践中，不少中国企业以开曼公司作为发行主体在美国挂牌，习惯性地认为FPI待遇是与生俱来的，因而从不监测股东结构与董事会构成的变化，直到某一年被审计师或律师提醒才发现身份已经不保。<strong>本质上，FPI是一项需要持续维护的合规状态，而不是一次性取得的资格。</strong></p>
-
-<h2>二、股东测试：50%这条线到底怎么数</h2>
-<p><strong>结论先说：股东测试的口径是"记录持有"，不是"实际受益持有"，但穿透规则会让托管账户后面的真实持有人被数出来。</strong></p>
-<p>股东测试的表述很简洁：由美国居民记录持有的有表决权证券，占发行人全部有表决权证券的比例不超过50%，即通过测试。真正复杂的是三个技术点。</p>
-<p>技术点其一，分母是有表决权证券，不是全部股本。设有双重股权结构的发行人，需要按表决权而非股数计算，创始人持有的高投票权股份会显著改变分子分母的构成。这也意味着，同股不同权安排在客观上有助于稳住FPI身份——但这是结构设计的附带效果，不应成为设置双重股权的主要理由。</p>
-<p>技术点其二，"记录持有"需要向下穿透。美国市场绝大多数股票以街名形式登记在存管机构名下，若只看股东名册，几乎所有股份都会被记为一个存管机构持有。规则要求发行人向存管机构、券商、代名人查询其所代持证券的受益持有人所在地，据此判断美国居民的持有比例。查询是有边界的：发行人只需就其已知或经合理查询可知的情况作出判断，无法查明的部分可按发行人主要交易市场所在地推定处理。</p>
-<p>技术点其三，"美国居民"的判断标准是居所而非国籍。一位持有中国护照但长期居住在美国的股东，在这项测试中计入美国一侧；一位持有美国护照但常住境外的股东，则不计入。这一点与后面联系测试中的"美国公民或居民"口径不同，容易混淆。</p>
-<p>从企业角度看，股东测试最危险的地方在于它的被动性。上市后的公开市场交易、增发引入的美国机构投资人、员工股权计划在美国雇员中的行权，都会推高美国记录持有比例，而这些变化没有一项需要发行人同意。<strong>关键在于，把股东结构监测做成季度例行动作，而不是等到测定日再临时统计。</strong></p>
-
-<h2>三、联系测试：三项标准命中任何一项即出局</h2>
-<p><strong>结论先说：美国居民记录持股超过50%并非终局，联系测试提供了第二条通道，但这条通道的三项标准是"全部不触及"才算通过，不是"多数不触及"。</strong></p>
-<p>联系测试考察的是发行人与美国的实质性联系，包含三项标准。</p>
-<p>标准之一，管理层与董事会的构成：高管人员中的多数，或董事中的多数，是美国公民或美国居民。这里的口径是公民或居民，两者满足其一即计入美国一侧，与股东测试只看居所不同。实践中最容易触发这一项的情形，是企业为了增强美股投资人信心而密集引入美籍独立董事，董事会中美籍人数在某次换届后越过半数。</p>
-<p>标准之二，资产的地理分布：超过50%的资产位于美国境内。资产按账面价值判断，通常以合并资产负债表为基础按所在地归集。收购一家美国目标公司、在美国购置生产设施或数据中心、把大额现金长期存放于美国银行账户，都会推高美国侧资产占比。跨境并购完成后未及时复核FPI身份，是这一项被触发的典型路径。</p>
-<p>标准之三，业务管理地：公司的业务主要在美国境内管理。这项标准没有量化门槛，判断依据是管理决策实际发生在哪里——高管日常办公地点、董事会与管理层会议召开地、核心经营决策的作出地与执行地。它是三项标准中弹性最大、也最需要提前留痕的一项。</p>
-<p>三项标准是并列关系而非累计关系：只要有一项成立，联系测试即告失败。换言之，一家美国居民记录持股已超过50%的公司，必须同时做到董事与高管中美籍人士不过半、美国资产不过半、业务管理地不在美国，才能保住身份。这一要求在企业业务重心持续向美国迁移时，会变得越来越难以满足。<strong>因此，联系测试的实质是：当一家公司在股东、人员、资产、管理四个维度上都已成为美国公司时，法律不再承认它的境外身份。</strong></p>
-
-<h2>四、FPI身份换来的五类实际待遇</h2>
-<p><strong>结论先说：FPI待遇的价值不在于少填几张表，而在于报告频率、披露颗粒度与治理灵活度三方面的系统性减负。</strong></p>
-<p>待遇之一，年度报告使用20-F表格，截止期为财年结束后四个月。美国国内发行人使用10-K表格，截止期依申报人类别为财年结束后六十日至九十日不等。四个月的窗口对跨境集团意义重大，因为境外子公司的审计与合并往往需要更长的周转时间。</p>
-<p>待遇之二，无需提交季度报告。国内发行人须按季提交10-Q，并在特定事项发生后四个工作日内提交8-K当期报告。FPI则以6-K表格提交当期信息，触发条件是发行人在母国已经公开、已向境外交易所报送或已向股东分发的重大信息——本质上是"母国披露什么，就同步给美国市场什么"。这一安排把披露节奏的主动权部分交还给发行人，但也意味着母国的任何一次公告都可能构成6-K义务。</p>
-<p>待遇之三，财务报表可直接采用国际财务报告准则理事会发布的国际财务报告准则，无需向美国公认会计原则作调节。这项待遇直接减少一整套调节表的编制与审计工作量。若采用其他境外会计准则，则仍需提供调节信息。</p>
-<p>待遇之四，公平披露规则、内部人持股报告与短线交易归入规则、委托征集规则均不适用。这意味着FPI的董事、高管与主要股东无需按美国国内标准逐笔申报持股变动，公司召开股东大会时也不必按美国委托征集规则准备并寄送委托材料，而是遵循注册地公司法与章程的要求。需要强调的是，不适用披露与程序规则，不等于豁免反欺诈规则——市场操纵与虚假陈述的责任对FPI同样成立。</p>
-<p>待遇之五，交易所公司治理要求可援引母国惯例豁免。美国主要交易所允许FPI在董事会独立性比例、提名与薪酬委员会设置、股东批准事项等方面遵循注册地惯例，但须在年报中说明其做法与交易所标准的差异。这项豁免有明确边界：审计委员会的独立性与职责要求不在豁免范围内，须按美国标准执行。</p>
-<p>把这五类待遇合在一起看，FPI身份大致相当于把一家境外公司的美国合规负担压低到国内发行人的一半左右。华尔街彤鼎俱乐部在与已上市企业主交流时反复提示的一点是：这套待遇的经济价值，通常在企业准备失去它的那一年才被真正感知到。</p>
-
-<h2>五、测定时点与丧失身份后的过渡安排</h2>
-<p><strong>结论先说：身份在每年第二财季最后一个营业日测定，不合格的后果不是立即生效，而是从下一财年的头一天起整体切换，中间留有约半年的准备期。</strong></p>
-<p>测定规则的设计相当务实。发行人须在每个财年的第二财季最后一个营业日，按前述两步测试复核自身身份。以自然年为财年的公司，这一天就是六月的最后一个营业日。若当日测试未通过，发行人并不需要在当年剩余时间改变报告方式，而是自下一财年首日起，按美国国内发行人的要求提交报告。</p>
-<p>这半年的过渡窗口需要用来完成四件事。其一，会计准则切换：若此前采用国际财务报告准则，须转换为美国公认会计原则，并按国内发行人要求提供可比期间的重述数据，这通常是工作量最大的一项。其二，报告体系搭建：建立季度结账与10-Q编制流程，建立8-K事项识别与四个工作日内提交的响应机制。其三，治理与人员规则落地：董事、高管及持股超过一定比例的股东开始适用内部人持股报告与短线交易归入规则，需要提前完成人员识别、电子申报授权与交易预清核制度的建设。其四，薪酬披露升级：从FPI允许的集体口径，切换为按个人逐项列示的国内口径，这一步往往在管理层内部引发实际阻力，需要更长的沟通时间。</p>
-<p>还有一项容易被忽略的连带影响：一旦转为国内发行人，此前依据S-8、F-3等境外发行人专用表格建立的注册安排需要同步调整，后续增发所使用的注册表格类型、生效方式与提交要求都会发生变化。这些技术衔接若在切换当年才启动，很容易造成融资窗口错失。</p>
-<p>反向的情形同样存在：一家已经按国内发行人报告的公司，若在某个测定日重新符合两步测试，可以选择自下一财年起恢复使用FPI表格。恢复不是自动的，需要发行人主动作出并保持一致的选择。<strong>本质上，规则给的是一个可逆的、按年结算的身份，而不是一次性的判决。</strong></p>
-
-<h2>六、监管动向：资格标准正在被重新审视</h2>
-<p><strong>结论先说：FPI的资格定义正在经历一次系统性检讨，方向是收紧而非放宽，企业应按"标准会更严"的假设做规划。</strong></p>
-<p>2025年6月，美国证券交易委员会就外国私人发行人资格标准公开发布了概念性征求意见文件，向市场征询是否应当修订现行定义，评论期于同年9月结束。触发这次检讨的背景是FPI群体结构的变化：越来越多的发行人虽然满足现行两步测试，却几乎不在任何境外市场交易，其股票流动性、投资人基础与信息需求实际上完全集中在美国，而它们同时享受着为"真正的跨境公司"设计的简化待遇。</p>
-<p>征求意见文件讨论的调整方向，主要围绕在现行两步测试之外增加实质性条件，例如要求发行人在境外市场存在真实的交易与上市联系、参考发行人注册地与主要经营地所在司法辖区的披露水平、或对不同类型的发行人区分适用不同待遇。具体规则形态尚未确定，能够确定的是问题意识本身——监管关注的核心，是"身份"与"实质"之间的背离。</p>
-<p>对中国背景的赴美上市企业而言，这一动向的现实含义有两点。其一，若最终规则引入境外交易或母国披露的实质要求，那些仅在美国单一市场交易的境外注册发行人受影响最直接，这恰恰是相当一部分中概股的形态。其二，规则若落地，通常会设置过渡期，但过渡期的长度不足以从零搭建一套美国国内报告体系，准备工作必须前置。</p>
-<p>需要说明的是，概念性征求意见并非正式规则草案，其后仍须经过规则提议、公开评论与最终采纳等程序，最终内容与生效时点均以监管机构正式发布的规则文本为准。企业在规划层面的合理做法，是把"可能不再享有FPI待遇"作为一个需要提前预算的情形，而不是一个需要立刻应对的既成事实。</p>
-
-<h2>七、企业侧的四项前置动作</h2>
-<p><strong>结论先说：FPI身份的维护成本远低于丧失后的补救成本，四项动作应当在上市当年就建立，而不是等到测定日临近。</strong></p>
-<p>动作之一，把股东结构监测做成季度制度。委托过户代理机构或投资者关系服务商，按季获取受益持有人地域分布的估算数据，重点跟踪美国机构持股比例的变化趋势。当美国记录持股比例接近40%时，即应启动预警，而不是等到越过50%。同时，把员工股权计划在美国雇员中的授予与行权情况纳入同一张监测表。</p>
-<p>动作之二，把董事会与高管构成纳入身份影响评估。每一次引入新的独立董事或聘任新的高管前，先行测算变更后美国公民及美国居民在董事与高管中的占比，并把结论写入提名委员会的决策文件。这项动作成本极低，却能避免一次换届就意外触发联系测试的情形。</p>
-<p>动作之三，在跨境并购与重大资产配置决策中增加一道身份复核。收购美国资产、在美国建设生产或研发设施、将集团现金集中至美国账户之前，先测算交易完成后美国境内资产占合并资产的比例。若测算结果逼近50%，可在交易结构、持有主体与资金安排上作出调整，代价通常远小于事后切换报告体系。</p>
-<p>动作之四，为业务管理地留下持续的证据链。董事会与管理层会议的召开地点、参会方式与决议签署地，核心经营决策的审批流转记录，主要高管的办公与居住安排，都应形成可追溯的书面记录。这项标准没有量化门槛，判断依赖事实的整体呈现，而事实需要在发生时被记录，事后无法补造。</p>
-<p>把这四项动作制度化之后，FPI身份就从一个每年临近测定日才被想起的技术问题，变成了公司治理日程中的常规议题。彤鼎集团在为企业提供上市后合规支持时，通常把身份测算表与季度合规检查表合并管理；华尔街彤鼎俱乐部亦会围绕美股持续督导、跨境架构与报告体系升级等主题，为已完成挂牌及正在筹备的企业主提供系统的资本认知与经验交流。<strong>关键在于，把可预见的合规变化提前纳入预算与日程，是上市公司管理层最需要建立的基本能力之一。</strong></p></article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>外国私人发行人（Foreign Private Issuer，简称FPI）是指在美国境外注册成立、并通过美国证券法两步测试的非美国发行人。股东测试看持股：由美国居民记录持有的有表决权证券不超过50%，即直接构成FPI。联系测试看实质：即使美国居民记录持股超过50%，只要未触及三项美国联系中的任何一项——多数高管或董事为美国公民或美国居民、超过50%的资产位于美国境内、业务主要在美国境内管理——仍可保留FPI身份。</p><p>这一身份对应一整套简化待遇：年报使用20-F表格且截止期为财年结束后四个月，无需提交季度报告而以6-K表格随报随交，财务报表可直接采用国际财务报告准则，公平披露规则、内部人持股报告规则与委托征集规则均不适用，交易所层面的公司治理要求还可援引母国惯例。</p><p>身份每年在第二财季最后一个营业日测定，一旦不再符合，须自下一财年首日起全面转用美国国内发行人的报告体系。因此，FPI不是注册地带来的自然结果，而是一项需要逐年维护的合规状态。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">FPI是一种身份，不是注册地的自然结果</a></li><li><a href="#sec-02">股东测试：50%这条线到底怎么数</a></li><li><a href="#sec-03">联系测试：三项标准命中任何一项即出局</a></li><li><a href="#sec-04">FPI身份换来的五类实际待遇</a></li><li><a href="#sec-05">测定时点与丧失身份后的过渡安排</a></li><li><a href="#sec-06">监管动向：资格标准正在被重新审视</a></li><li><a href="#sec-07">企业侧的四项前置动作</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、FPI是一种身份，不是注册地的自然结果</h2><p><strong>结论先说：一家开曼公司在美国交易所挂牌，并不自动等于外国私人发行人；这个身份由两步测试逐年判定，也可能在某一年悄无声息地丧失。</strong></p><p>美国证券法对发行人的监管强度，并非按注册地一刀切，而是按"这家公司在多大程度上属于美国市场的本地公司"来分层。分层的技术工具，就是外国私人发行人这一概念。它把在美国公开发行并持续报告的非美国公司分成两类：与美国联系较弱的，适用一套简化的信息披露与治理要求；与美国联系已经足够紧密的，即便注册在境外，也要按美国本土公司的标准履行义务。</p><p>这一分层逻辑的合理性在于成本与保护的平衡。一家主要股东、主要资产、主要管理层都在境外的公司，如果被要求完全按美国本土标准编制季度报表、披露逐个高管的薪酬明细、遵守委托征集规则，其合规成本会显著上升，而美国投资人从中获得的边际保护有限。</p><p data-ts="1">反之，若一家公司名义上注册在境外，实质上股东、资产、管理全在美国，简化待遇就变成了监管套利。</p><p>需要立刻纠正的一个常见误解是：把注册地当成身份来源。境外注册只是取得FPI身份的前提之一，不是充分条件。实践中，不少中国企业以开曼公司作为发行主体在美国挂牌，习惯性地认为FPI待遇是与生俱来的，因而从不监测股东结构与董事会构成的变化，直到某一年被审计师或律师提醒才发现身份已经不保。<strong>本质上，FPI是一项需要持续维护的合规状态，而不是一次性取得的资格。</strong></p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、股东测试：50%这条线到底怎么数</h2><p><strong>结论先说：股东测试的口径是"记录持有"，不是"实际受益持有"，但穿透规则会让托管账户后面的真实持有人被数出来。</strong></p><p>股东测试的表述很简洁：由美国居民记录持有的有表决权证券，占发行人全部有表决权证券的比例不超过50%，即通过测试。真正复杂的是三个技术点。</p><p>技术点其一，分母是有表决权证券，不是全部股本。设有双重股权结构的发行人，需要按表决权而非股数计算，创始人持有的高投票权股份会显著改变分子分母的构成。这也意味着，同股不同权安排在客观上有助于稳住FPI身份——但这是结构设计的附带效果，不应成为设置双重股权的主要理由。</p><p>技术点其二，"记录持有"需要向下穿透。美国市场绝大多数股票以街名形式登记在存管机构名下，若只看股东名册，几乎所有股份都会被记为一个存管机构持有。规则要求发行人向存管机构、券商、代名人查询其所代持证券的受益持有人所在地，据此判断美国居民的持有比例。</p><p data-ts="1">查询是有边界的：发行人只需就其已知或经合理查询可知的情况作出判断，无法查明的部分可按发行人主要交易市场所在地推定处理。</p><p>技术点其三，"美国居民"的判断标准是居所而非国籍。一位持有中国护照但长期居住在美国的股东，在这项测试中计入美国一侧；一位持有美国护照但常住境外的股东，则不计入。这一点与后面联系测试中的"美国公民或居民"口径不同，容易混淆。</p><p>从企业角度看，股东测试最危险的地方在于它的被动性。上市后的公开市场交易、增发引入的美国机构投资人、员工股权计划在美国雇员中的行权，都会推高美国记录持有比例，而这些变化没有一项需要发行人同意。<strong>关键在于，把股东结构监测做成季度例行动作，而不是等到测定日再临时统计。</strong></p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、联系测试：三项标准命中任何一项即出局</h2><p><strong>结论先说：美国居民记录持股超过50%并非终局，联系测试提供了第二条通道，但这条通道的三项标准是"全部不触及"才算通过，不是"多数不触及"。</strong></p><p>联系测试考察的是发行人与美国的实质性联系，包含三项标准。</p><p>标准之一，管理层与董事会的构成：高管人员中的多数，或董事中的多数，是美国公民或美国居民。这里的口径是公民或居民，两者满足其一即计入美国一侧，与股东测试只看居所不同。实践中最容易触发这一项的情形，是企业为了增强美股投资人信心而密集引入美籍独立董事，董事会中美籍人数在某次换届后越过半数。</p><p>标准之二，资产的地理分布：超过50%的资产位于美国境内。资产按账面价值判断，通常以合并资产负债表为基础按所在地归集。收购一家美国目标公司、在美国购置生产设施或数据中心、把大额现金长期存放于美国银行账户，都会推高美国侧资产占比。跨境并购完成后未及时复核FPI身份，是这一项被触发的典型路径。</p><p>标准之三，业务管理地：公司的业务主要在美国境内管理。这项标准没有量化门槛，判断依据是管理决策实际发生在哪里——高管日常办公地点、董事会与管理层会议召开地、核心经营决策的作出地与执行地。它是三项标准中弹性最大、也最需要提前留痕的一项。</p><p>三项标准是并列关系而非累计关系：只要有一项成立，联系测试即告失败。换言之，一家美国居民记录持股已超过50%的公司，必须同时做到董事与高管中美籍人士不过半、美国资产不过半、业务管理地不在美国，才能保住身份。</p><p data-ts="1">这一要求在企业业务重心持续向美国迁移时，会变得越来越难以满足。<strong>因此，联系测试的实质是：当一家公司在股东、人员、资产、管理四个维度上都已成为美国公司时，法律不再承认它的境外身份。</strong></p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、FPI身份换来的五类实际待遇</h2><p><strong>结论先说：FPI待遇的价值不在于少填几张表，而在于报告频率、披露颗粒度与治理灵活度三方面的系统性减负。</strong></p><p>待遇之一，年度报告使用20-F表格，截止期为财年结束后四个月。美国国内发行人使用10-K表格，截止期依申报人类别为财年结束后六十日至九十日不等。四个月的窗口对跨境集团意义重大，因为境外子公司的审计与合并往往需要更长的周转时间。</p><p>待遇之二，无需提交季度报告。国内发行人须按季提交10-Q，并在特定事项发生后四个工作日内提交8-K当期报告。FPI则以6-K表格提交当期信息，触发条件是发行人在母国已经公开、已向境外交易所报送或已向股东分发的重大信息——本质上是"母国披露什么，就同步给美国市场什么"。</p><p data-ts="1">这一安排把披露节奏的主动权部分交还给发行人，但也意味着母国的任何一次公告都可能构成6-K义务。</p><p>待遇之三，财务报表可直接采用国际财务报告准则理事会发布的国际财务报告准则，无需向美国公认会计原则作调节。这项待遇直接减少一整套调节表的编制与审计工作量。若采用其他境外会计准则，则仍需提供调节信息。</p><p>待遇之四，公平披露规则、内部人持股报告与短线交易归入规则、委托征集规则均不适用。这意味着FPI的董事、高管与主要股东无需按美国国内标准逐笔申报持股变动，公司召开股东大会时也不必按美国委托征集规则准备并寄送委托材料，而是遵循注册地公司法与章程的要求。</p><p data-ts="1">需要强调的是，不适用披露与程序规则，不等于豁免反欺诈规则——市场操纵与虚假陈述的责任对FPI同样成立。</p><p>待遇之五，交易所公司治理要求可援引母国惯例豁免。美国主要交易所允许FPI在董事会独立性比例、提名与薪酬委员会设置、股东批准事项等方面遵循注册地惯例，但须在年报中说明其做法与交易所标准的差异。</p><p data-ts="1">这项豁免有明确边界：审计委员会的独立性与职责要求不在豁免范围内，须按美国标准执行。</p><p>把这五类待遇合在一起看，FPI身份大致相当于把一家境外公司的美国合规负担压低到国内发行人的一半左右。华尔街彤鼎俱乐部在与已上市企业主交流时反复提示的一点是：这套待遇的经济价值，通常在企业准备失去它的那一年才被真正感知到。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、测定时点与丧失身份后的过渡安排</h2><p><strong>结论先说：身份在每年第二财季最后一个营业日测定，不合格的后果不是立即生效，而是从下一财年的头一天起整体切换，中间留有约半年的准备期。</strong></p><p>测定规则的设计相当务实。发行人须在每个财年的第二财季最后一个营业日，按前述两步测试复核自身身份。以自然年为财年的公司，这一天就是六月的最后一个营业日。若当日测试未通过，发行人并不需要在当年剩余时间改变报告方式，而是自下一财年首日起，按美国国内发行人的要求提交报告。</p><p>这半年的过渡窗口需要用来完成四件事。</p><ol class="ts-pts"><li><b>其一，会计准则切换：</b>若此前采用国际财务报告准则，须转换为美国公认会计原则，并按国内发行人要求提供可比期间的重述数据，这通常是工作量最大的一项。</li><li><b>其二，报告体系搭建：</b>建立季度结账与10-Q编制流程，建立8-K事项识别与四个工作日内提交的响应机制。</li><li><b>其三，治理与人员规则落地：</b>董事、高管及持股超过一定比例的股东开始适用内部人持股报告与短线交易归入规则，需要提前完成人员识别、电子申报授权与交易预清核制度的建设。</li><li><b>其四，薪酬披露升级：</b>从FPI允许的集体口径，切换为按个人逐项列示的国内口径，这一步往往在管理层内部引发实际阻力，需要更长的沟通时间。</li></ol><p>还有一项容易被忽略的连带影响：一旦转为国内发行人，此前依据S-8、F-3等境外发行人专用表格建立的注册安排需要同步调整，后续增发所使用的注册表格类型、生效方式与提交要求都会发生变化。这些技术衔接若在切换当年才启动，很容易造成融资窗口错失。</p><p>反向的情形同样存在：一家已经按国内发行人报告的公司，若在某个测定日重新符合两步测试，可以选择自下一财年起恢复使用FPI表格。恢复不是自动的，需要发行人主动作出并保持一致的选择。<strong>本质上，规则给的是一个可逆的、按年结算的身份，而不是一次性的判决。</strong></p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、监管动向：资格标准正在被重新审视</h2><p><strong>结论先说：FPI的资格定义正在经历一次系统性检讨，方向是收紧而非放宽，企业应按"标准会更严"的假设做规划。</strong></p><p>2025年6月，美国证券交易委员会就外国私人发行人资格标准公开发布了概念性征求意见文件，向市场征询是否应当修订现行定义，评论期于同年9月结束。触发这次检讨的背景是FPI群体结构的变化：越来越多的发行人虽然满足现行两步测试，却几乎不在任何境外市场交易，其股票流动性、投资人基础与信息需求实际上完全集中在美国，而它们同时享受着为"真正的跨境公司"设计的简化待遇。</p><p>征求意见文件讨论的调整方向，主要围绕在现行两步测试之外增加实质性条件，例如要求发行人在境外市场存在真实的交易与上市联系、参考发行人注册地与主要经营地所在司法辖区的披露水平、或对不同类型的发行人区分适用不同待遇。</p><p data-ts="1">具体规则形态尚未确定，能够确定的是问题意识本身——监管关注的核心，是"身份"与"实质"之间的背离。</p><p>对中国背景的赴美上市企业而言，这一动向的现实含义有两点。其一，若最终规则引入境外交易或母国披露的实质要求，那些仅在美国单一市场交易的境外注册发行人受影响最直接，这恰恰是相当一部分中概股的形态。</p><p data-ts="1">其二，规则若落地，通常会设置过渡期，但过渡期的长度不足以从零搭建一套美国国内报告体系，准备工作必须前置。</p><p>需要说明的是，概念性征求意见并非正式规则草案，其后仍须经过规则提议、公开评论与最终采纳等程序，最终内容与生效时点均以监管机构正式发布的规则文本为准。企业在规划层面的合理做法，是把"可能不再享有FPI待遇"作为一个需要提前预算的情形，而不是一个需要立刻应对的既成事实。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、企业侧的四项前置动作</h2><p><strong>结论先说：FPI身份的维护成本远低于丧失后的补救成本，四项动作应当在上市当年就建立，而不是等到测定日临近。</strong></p><p>动作之一，把股东结构监测做成季度制度。委托过户代理机构或投资者关系服务商，按季获取受益持有人地域分布的估算数据，重点跟踪美国机构持股比例的变化趋势。当美国记录持股比例接近40%时，即应启动预警，而不是等到越过50%。同时，把员工股权计划在美国雇员中的授予与行权情况纳入同一张监测表。</p><p>动作之二，把董事会与高管构成纳入身份影响评估。每一次引入新的独立董事或聘任新的高管前，先行测算变更后美国公民及美国居民在董事与高管中的占比，并把结论写入提名委员会的决策文件。这项动作成本极低，却能避免一次换届就意外触发联系测试的情形。</p><p>动作之三，在跨境并购与重大资产配置决策中增加一道身份复核。收购美国资产、在美国建设生产或研发设施、将集团现金集中至美国账户之前，先测算交易完成后美国境内资产占合并资产的比例。若测算结果逼近50%，可在交易结构、持有主体与资金安排上作出调整，代价通常远小于事后切换报告体系。</p><p>动作之四，为业务管理地留下持续的证据链。董事会与管理层会议的召开地点、参会方式与决议签署地，核心经营决策的审批流转记录，主要高管的办公与居住安排，都应形成可追溯的书面记录。这项标准没有量化门槛，判断依赖事实的整体呈现，而事实需要在发生时被记录，事后无法补造。</p><p>把这四项动作制度化之后，FPI身份就从一个每年临近测定日才被想起的技术问题，变成了公司治理日程中的常规议题。彤鼎集团在为企业提供上市后合规支持时，通常把身份测算表与季度合规检查表合并管理；华尔街彤鼎俱乐部亦会围绕美股持续督导、跨境架构与报告体系升级等主题，为已完成挂牌及正在筹备的企业主提供系统的资本认知与经验交流。</p><p data-ts="1"><strong>关键在于，把可预见的合规变化提前纳入预算与日程，是上市公司管理层最需要建立的基本能力之一。</strong></p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="before-short-sellers.html" style="color:#6b5426;font-weight:700;">做空机构盯上之前</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="independent-directors.html" style="color:#6b5426;font-weight:700;">独立董事招聘与职责</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="rule144-10b5-1.html" style="color:#6b5426;font-weight:700;">中概股高管减持：Rule 144 与 10b5-1 计划怎么配合</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="market-cap-management-system.html" style="color:#6b5426;font-weight:700;">主要指数成份股的市值管理制度：四项必载事项与那条最难写的条款</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="delisting-risk.html" style="color:#6b5426;font-weight:700;">美股退市风险与恢复合规</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

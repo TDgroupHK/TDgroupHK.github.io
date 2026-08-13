@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"承销商选择与合作","inLanguage":"zh-CN","abstract":"Working with underwriters through the offering, from mandate and comfort letters to allocation and aftermarket support.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/underwriter-guide.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"承销商（投行）是IPO发行环节的主导者——负责估值定价、组织路演、向机构投资人配售股票。选承销商最大的误区是迷信大牌：投行的名字好听，但对融资规模5000万美元以下的中小型IPO，大行往往投入的是边缘团队，项目优先级垫底。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,37 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>承销商选择与合作</h1>
 <div class="sub">决定发行成败的关键伙伴怎么挑</div><div class="en">Working with underwriters through the offering, from mandate and comfort letters to allocation and aftermarket support.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">承销商（投行）是IPO发行环节的主导者——负责估值定价、组织路演、向机构投资人配售股票。选承销商最大的误区是迷信大牌：投行的名字好听，但对融资规模5000万美元以下的中小型IPO，大行往往投入的是边缘团队，项目优先级垫底。正确的选择逻辑是匹配度：融资规模与投行的项目区间匹配、行业与投行的分销能力匹配、团队与项目的投入度匹配。评估一家承销商，看四样东西：最近两年做过的同规模中概股项目清单、这些项目的发行完成率和上市后表现、将由哪个具体团队执行、以及机构投资人网络的质量。选对承销商，发行成功了一半；选错承销商，好公司也可能发不出去。</div>
-<h2>一、承销商在IPO中做什么</h2>
-<p>承销商的核心职能贯穿发行全程：帮公司确定估值区间和发行结构；起草和把关招股书的市场化表述；组织路演，安排公司管理层与机构投资人见面；收集机构认购意向（簿记建档），确定最终发行价；把股票配售给投资人，并在上市后通过绿鞋机制稳定股价。</p>
-<p>简单说，公司把货备好，承销商负责把货卖出去、卖个好价钱。承销商的分销能力和定价判断，直接决定发行的成败和融资额。</p>
-<h2>二、投行的分层与适配</h2>
-<p>美股承销市场大体分三层。第一层是大行（Bulge Bracket），承接融资数亿美元以上的大型IPO，对中小项目兴趣有限。第二层是精品投行与中型投行（Boutique/Middle Market），专注数千万美元级别的发行，是绝大多数中概股中小型IPO的主力承销力量。第三层是小型券商，承做数百万至两千万美元的小微发行，分销能力有限，发行质量参差。</p>
-<p>适配原则：融资2000万至8000万美元的中概股项目，主承销商应重点在第二层中挑选——这些投行把你的项目当主力项目做，高级合伙人亲自带队，分销资源全力投入。同样的项目放到大行，得到的可能只是初级团队的例行公事。</p>
-<h2>三、评估承销商的五个维度</h2>
-<h3>维度1：同类项目的实绩</h3>
-<p>要求候选投行提供最近24个月完成的中概股或同规模IPO清单，逐一核查：发行是否足额完成、发行价落在初始区间的什么位置、上市后30天和180天的股价表现。实绩是最诚实的简历——SEC的公开文件都可以交叉验证，不要只听投行的自我介绍。</p>
-<h3>维度2：执行团队而非机构招牌</h3>
-<p>明确将由哪位董事总经理（MD）牵头、团队投入几个人、这位MD手上同时在跑几个项目。签约前当面见团队，把关键人员写进聘用协议（Engagement Letter）。买的是团队,不是logo。</p>
-<h3>维度3：机构分销网络</h3>
-<p>询问其长期合作的机构投资人构成:以长线基金为主还是对冲基金为主、亚洲资金与美国资金的比例、过往项目前十大认购方的类型。长线机构占比高的分销网络,发行后股价更稳。</p>
-<h3>维度4：研究覆盖能力</h3>
-<p>上市后是否有分析师覆盖,直接影响机构关注度。确认投行是否有覆盖你所在行业的分析师、过往项目挂牌后是否持续发布研究报告。能带研究覆盖的承销商,挂牌后的价值多一截。</p>
-<h3>维度5：费率与条款</h3>
-<p>承销佣金市场标准为融资额的5%至7%,中小项目偏上限。费率之外更要看条款细节:绿鞋安排、费用报销上限、终止条款、以及是否要求认股权证(部分小投行会索取,增加隐性稀释)。条款谈判是FA能为企业创造价值的重要环节。</p>
-<h2>四、单一主承销与联席承销</h2>
-<p>融资规模较小(3000万美元以下)的项目,通常一家主承销商即可,避免多家分食后谁都不上心。规模较大的项目,可采用一家主承销加一至两家联席的结构:主承销负责统筹和定价,联席补充分销渠道(如一家擅长亚洲机构、一家擅长美国本土机构),形成互补。</p>
-<p>需要警惕的组合是拼盘式承销团——五六家小券商凑数,看似阵容庞大,实则责任分散,发行执行力反而最弱。</p>
-<h2>五、什么时候选定承销商</h2>
-<p>承销商宜在审计基本完成、申报文件启动前选定(约挂牌前9至12个月),让其尽早参与发行结构和估值叙事的设计。选聘流程通常是:FA协助筛选出三至五家候选,安排选美(Bake-off)路演——各家投行向公司陈述其发行方案、估值观点和团队配置,公司综合比较后确定。</p>
-<p>彤鼎集团在辅导项目中承担承销商筛选与对接的统筹角色:基于对各家投行真实项目记录的了解,为企业匹配最适配的承销力量,并协助谈判聘用条款,避免企业在信息不对称中被动签约。</p>
-<h3>结语：承销商是把公司卖给市场的人</h3>
-<p>招股书写得再好,最终把股票卖出去的是承销商。这个伙伴选得准不准,决定了敲钟那天融到的是理想的钱,还是打折的钱。因此,用尽调投资标的的严谨程度去尽调你的承销商,是每个拟上市企业都值得投入的功课。</p>
-<p>在华尔街彤鼎俱乐部的闭门分享中,承销商的真实项目表现、各家投行的执行风格,是会员们交流最多的话题之一——来自已上市企业家的一手评价,往往比任何公开资料都更有参考价值。</p>
-<p>彤鼎集团是一家综合性国际资本服务机构，香港母公司为彤鼎集团（香港）有限公司，业务网络覆盖香港、深圳、上海，并延伸至新加坡。集团由曾任职于加拿大券商机构的廖启捷领衔，廖启捷现任彤鼎集团（香港）有限公司董事局主席，并担任港、沪、深三地上市辅导机构的创始合伙人。集团八大核心业务覆盖融资策划、架构设计、上市规划、税务筹划、增发融资、市值管理、跨境资本、家族办公室，已完成9家企业的纳斯达克挂牌辅导，目前另有多个项目正在辅导推进中。</p>
-<p>如您希望了解华尔街彤鼎俱乐部的会员详情，或您的企业有境内外上市及资本运作需求，欢迎私信或联系彤鼎团队。企业方也可将商业计划书（BP）投递给我们，彤鼎团队将进行初步分析，并提供一份定制化的上市路径方案供参考。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>承销商（投行）是IPO发行环节的主导者——负责估值定价、组织路演、向机构投资人配售股票。选承销商最大的误区是迷信大牌：投行的名字好听，但对融资规模5000万美元以下的中小型IPO，大行往往投入的是边缘团队，项目优先级垫底。</p><p>正确的选择逻辑是匹配度：融资规模与投行的项目区间匹配、行业与投行的分销能力匹配、团队与项目的投入度匹配。评估一家承销商，看四样东西：最近两年做过的同规模中概股项目清单、这些项目的发行完成率和上市后表现、将由哪个具体团队执行、以及机构投资人网络的质量。选对承销商，发行成功了一半；选错承销商，好公司也可能发不出去。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">承销商在IPO中做什么</a></li><li><a href="#sec-02">投行的分层与适配</a></li><li><a href="#sec-03">评估承销商的五个维度</a></li><li><a href="#sec-04">单一主承销与联席承销</a></li><li><a href="#sec-05">什么时候选定承销商</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、承销商在IPO中做什么</h2><p>承销商的核心职能贯穿发行全程：帮公司确定估值区间和发行结构；起草和把关招股书的市场化表述；组织路演，安排公司管理层与机构投资人见面；收集机构认购意向（簿记建档），确定最终发行价；把股票配售给投资人，并在上市后通过绿鞋机制稳定股价。</p><p>简单说，公司把货备好，承销商负责把货卖出去、卖个好价钱。承销商的分销能力和定价判断，直接决定发行的成败和融资额。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、投行的分层与适配</h2><p>美股承销市场大体分三层。</p><ol class="ts-pts"><li><b>第一层</b>是大行（Bulge Bracket），承接融资数亿美元以上的大型IPO，对中小项目兴趣有限。</li><li><b>第二层</b>是精品投行与中型投行（Boutique/Middle Market），专注数千万美元级别的发行，是绝大多数中概股中小型IPO的主力承销力量。</li><li><b>第三层是小型券商</b>，承做数百万至两千万美元的小微发行，分销能力有限，发行质量参差。</li></ol><p>适配原则：融资2000万至8000万美元的中概股项目，主承销商应重点在第二层中挑选——这些投行把你的项目当主力项目做，高级合伙人亲自带队，分销资源全力投入。同样的项目放到大行，得到的可能只是初级团队的例行公事。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、评估承销商的五个维度</h2><p><h3>维度1：同类项目的实绩</h3></p><p>要求候选投行提供最近24个月完成的中概股或同规模IPO清单，逐一核查：发行是否足额完成、发行价落在初始区间的什么位置、上市后30天和180天的股价表现。实绩是最诚实的简历——SEC的公开文件都可以交叉验证，不要只听投行的自我介绍。</p><p><h3>维度2：执行团队而非机构招牌</h3></p><p>明确将由哪位董事总经理（MD）牵头、团队投入几个人、这位MD手上同时在跑几个项目。签约前当面见团队，把关键人员写进聘用协议（Engagement Letter）。买的是团队,不是logo。</p><p><h3>维度3：机构分销网络</h3></p><p>询问其长期合作的机构投资人构成:以长线基金为主还是对冲基金为主、亚洲资金与美国资金的比例、过往项目前十大认购方的类型。长线机构占比高的分销网络,发行后股价更稳。</p><p><h3>维度4：研究覆盖能力</h3></p><p>上市后是否有分析师覆盖,直接影响机构关注度。确认投行是否有覆盖你所在行业的分析师、过往项目挂牌后是否持续发布研究报告。能带研究覆盖的承销商,挂牌后的价值多一截。</p><p><h3>维度5：费率与条款</h3></p><p>承销佣金市场标准为融资额的5%至7%,中小项目偏上限。费率之外更要看条款细节:绿鞋安排、费用报销上限、终止条款、以及是否要求认股权证(部分小投行会索取,增加隐性稀释)。条款谈判是FA能为企业创造价值的重要环节。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、单一主承销与联席承销</h2><p>融资规模较小(3000万美元以下)的项目,通常一家主承销商即可,避免多家分食后谁都不上心。规模较大的项目,可采用一家主承销加一至两家联席的结构:主承销负责统筹和定价,联席补充分销渠道(如一家擅长亚洲机构、一家擅长美国本土机构),形成互补。</p><p>需要警惕的组合是拼盘式承销团——五六家小券商凑数,看似阵容庞大,实则责任分散,发行执行力反而最弱。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、什么时候选定承销商</h2><p>承销商宜在审计基本完成、申报文件启动前选定(约挂牌前9至12个月),让其尽早参与发行结构和估值叙事的设计。选聘流程通常是:FA协助筛选出三至五家候选,安排选美(Bake-off)路演——各家投行向公司陈述其发行方案、估值观点和团队配置,公司综合比较后确定。</p><p>彤鼎集团在辅导项目中承担承销商筛选与对接的统筹角色:基于对各家投行真实项目记录的了解,为企业匹配最适配的承销力量,并协助谈判聘用条款,避免企业在信息不对称中被动签约。</p><p><h3>结语：承销商是把公司卖给市场的人</h3></p><p>招股书写得再好,最终把股票卖出去的是承销商。这个伙伴选得准不准,决定了敲钟那天融到的是理想的钱,还是打折的钱。因此,用尽调投资标的的严谨程度去尽调你的承销商,是每个拟上市企业都值得投入的功课。</p><p>在华尔街彤鼎俱乐部的闭门分享中,承销商的真实项目表现、各家投行的执行风格,是会员们交流最多的话题之一——来自已上市企业家的一手评价,往往比任何公开资料都更有参考价值。</p><p>彤鼎集团是一家综合性国际资本服务机构，香港母公司为彤鼎集团（香港）有限公司，业务网络覆盖香港、深圳、上海，并延伸至新加坡。集团由曾任职于加拿大券商机构的廖启捷领衔，廖启捷现任彤鼎集团（香港）有限公司董事局主席，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p data-ts="1">集团八大核心业务覆盖融资策划、架构设计、上市规划、税务筹划、增发融资、市值管理、跨境资本、家族办公室，已完成9家企业的纳斯达克挂牌辅导，目前另有多个项目正在辅导推进中。</p><p>如您希望了解华尔街彤鼎俱乐部的会员详情，或您的企业有境内外上市及资本运作需求，欢迎私信或联系彤鼎团队。企业方也可将商业计划书（BP）投递给我们，彤鼎团队将进行初步分析，并提供一份定制化的上市路径方案供参考。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="underwriter-selection.html" style="color:#6b5426;font-weight:700;">承销商选择指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="roadshow-investor-comms.html" style="color:#6b5426;font-weight:700;">路演与投资者沟通</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-ipo-pricing.html" style="color:#6b5426;font-weight:700;">港股IPO定价与簿记建档</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cornerstone-investors.html" style="color:#6b5426;font-weight:700;">港股基石投资者机制</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-board-lot-reform-2026.html" style="color:#6b5426;font-weight:700;">港股每手买卖单位改革：八种标准股数与每手价值区间</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

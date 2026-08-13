@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"融资死在交割前，通常经历六个阶段","inLanguage":"zh-CN","abstract":"Signing a term sheet is not the same as closing a financing round. Except for exclusivity, confidentiality and expense provisions, a term sheet is usually non-binding, while the path from signature to funds actually landing in the account typically takes three to six months onshore, and longer where offshore structures, foreign exchange registration or sector approvals are involved. This article looks, from the company side, at six stages where deals commonly break down: exclusivity, due diligence findings, unmet conditions precedent, the investor's own committee and funding schedule, existing shareholder rights, and renegotiation at the definitive documents stage.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/term-sheet-to-closing.html"},"datePublished":"2026-08-04","dateModified":"2026-08-04","description":"投资意向书签署并不等于融资完成。从签字到资金实际到账，境内交易通常需要三到六个月，涉及境外架构或行业审批的项目可能延长到六到十二个月。本文以企业方视角梳理这段窗口期内融资断裂的六个常见阶段：排他期的不对称约束、尽职调查翻出的历史问题、交割先决条件久拖不决、投资方内部决策与自身资金安排、老股东既有权利被触发，以及交割文件阶段的条款重谈，并给出企业方可执行的时间安排与现金安排。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,34 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">融资条款 FINANCING</div><h1>融资死在交割前，通常经历六个阶段</h1>
 <div class="sub">投资意向书不是终点，从签字到钱到账之间还有一段最容易断裂的路</div><div class="en">Signing a term sheet is not the same as closing a financing round. Except for exclusivity, confidentiality and expense provisions, a term sheet is usually non-binding, while the path from signature to funds actually landing in the account typically takes three to six months onshore, and longer where offshore structures, foreign exchange registration or sector approvals are involved. This article looks, from the company side, at six stages where deals commonly break down: exclusivity, due diligence findings, unmet conditions precedent, the investor's own committee and funding schedule, existing shareholder rights, and renegotiation at the definitive documents stage.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">投资意向书是指投资方与融资企业在正式交易文件签署之前，就估值、持股比例、治理安排等核心商业条款达成的框架性文件；除排他、保密、费用分担等少数条款外，其余内容通常不具备强制约束力。从意向书签署到资金实际到账，境内交易通常需要三到六个月，涉及境外架构、外汇登记或行业审批的项目往往延长到六到十二个月。在这段窗口期内，融资断裂的节点集中在六个环节：排他期对企业的单向占用、尽职调查暴露的历史问题、交割先决条件久拖不决、投资方内部决策与其自身资金安排、老股东既有权利被触发，以及交割文件阶段的条款重谈。对企业方而言，里程碑应当是资金到账，而不是签字仪式。</div>
-<h2>一、签字之后的头一个月：企业被锁住，对方随时可以走</h2>
-<p><strong>结论先行：投资意向书里真正具备约束力的往往只有排他、保密和费用分担这几条，而排他条款约束的是企业，不是投资方。一家做工业阀门的制造企业在签下意向书后，按对方要求停止了与另外两家机构的接触，排他期写的是六个月且没有例外情形；四个月后投资方以内部方向调整为由退出，企业再回头找先前那两家，估值口径已经变了，节奏也追不回来。</strong></p>
-<p>排他期的不对称在于，企业承担的是不可撤回的时间成本，投资方付出的多半只是尽调费用与内部人力。签字当天企业内部通常会松一口气，融资负责人开始把精力转向交割准备，与其他潜在投资方的沟通自然中断。因此这段时间一旦落空，损失的不只是几个月工期，还包括原本并行存在的谈判筹码。</p>
-<p>可操作的做法有两层。其一是给排他期设上限，三个月左右较为常见，并约定投资方未按期启动尽调、未按期出具书面反馈时排他自动失效。其二是写清例外情形，例如老股东按原条件继续出资、既有股东内部转让，以及企业为维持日常经营所必需的债权融资不受排他限制。关键在于，排他期是可以谈的条款，而不是不能改的格式条文。</p>
-<h2>二、尽职调查：旧账集中浮出水面的时刻</h2>
-<p><strong>结论先行：尽职调查很少改变投资方对一家企业基本面的判断，它改变的是价格与条件，而真正致命的往往是那些创始人自己都快忘了的历史安排。某家消费品牌在尽调阶段被翻出早年为方便结算而设立的一家关联贸易公司，账上与主体之间存在长期未清理的往来款，金额不算大，但性质上构成资金占用，投资方的法律顾问直接把它列为交割前必须清理的事项。</strong></p>
-<p>常见问题集中在几类。类型一是股权瑕疵，包括代持、早期投资人的口头承诺、离职员工尚未回收的股权。类型二是财务规范性，例如两套账并存、以个人账户收付货款、社保与公积金基数长期偏低形成的补缴敞口。类型三是业务合规，包括资质到期、环保或安全生产方面的历史处罚、核心供应商合同里的控制权变更条款。</p>
-<p>这些问题多数并非无法解决，难点在于解决需要时间，而时间在排他期里恰恰是稀缺资源。本质上，尽调不是一场考试，而是一台清单生成器：它把企业十年积累的模糊地带，一次性变成带截止日期的待办事项。因此在正式接触投资方之前自查一轮，通常比在尽调过程中被动应对更省时间，也更少影响估值。自查的顺序可以简单一些：先看股权链条是否清晰、有无代持与未回收股权，再看资金往来是否干净，最后看资质与许可的有效期，把需要外部机构配合的事项提前启动。</p>
-<h2>三、交割先决条件：清单越长，时间越不可控</h2>
-<p><strong>结论先行：交易文件签署之后资金并不会立刻到账，而是要等一份先决条件清单逐项满足，这份清单通常包含十到三十项，其中总有两三项不在企业自己的控制范围内。一家做精密零部件的供应商在交割清单上遇到的卡点是外商投资相关的登记与外汇变更手续，材料反复补正，前后花掉将近四个月，其间投资方的内部审批文件临近有效期，几乎需要重走一遍流程。</strong></p>
-<p>先决条件大体分为几组：股权瑕疵的清理与确权，关联方资金往来的归还，员工持股平台的设立与授予文件落定，境外架构下的登记与备案，以及行业主管部门的许可变更或重新核发。具体适用哪些程序、各自需要多长时间，应以监管机构的正式文本和主管部门的现场答复为准，不宜按同行经验值倒推。</p>
-<p>务实的做法是在签署交易文件之前就把清单拉出来，逐项写上责任人、预计天数和前后依赖关系，把耗时最长、外部依赖最重的几项排到最前面启动。关键在于，先决条件不是法务团队的收尾工作，而是决定资金到账日期的主路径，它应当出现在创始人每周过问的事项里。清单之外还有一条容易被忽视的时间线，即投资方内部审批文件、评估报告与各类政府批复本身都有有效期，任何一项过期都可能引发连锁的重做。</p>
-<h2>四、投资方那一侧：投决会与它自己的钱</h2>
-<p><strong>结论先行：意向书通常由投资团队签署，而最终决定权在投资决策委员会，团队的推荐意见与委员会的表决结果之间存在真实落差。一家做工业软件的公司在尽调结束后被告知，投资决策委员会对其收入确认方式和续费数据提出了新的疑问，需要补充一轮客户访谈，项目因此推迟一个季度，等到再次上会时，投资方的行业配置方向已经调整。</strong></p>
-<p>另一条常被忽略的线索是投资方自身的资金安排。机构的资金到位有其自身节奏，出资人的实缴进度、基金存续期临近、同期其他项目的资金占用，都会影响一笔交易的实际付款时点。企业方很难核查这些内部安排，但可以从可观察的迹象作出判断：对方近期是否有已完成交割的项目，本轮是否引入了共同投资人，交易文件里的付款条款是分期还是一次性。</p>
-<p>因此在交易文件中把付款时点、分期触发条件和逾期后果写清楚，比在意向书阶段多争取一档估值更有意义。本质上，一份能够执行的付款安排，价值高于一个漂亮但拿不到手的数字。</p>
-<h2>五、老股东的既有权利：挡在交易前面的历史条款</h2>
-<p><strong>结论先行：新一轮融资能否顺利落地，往往取决于此前几轮留下的股东权利条款，而这些条款在签意向书时很少被完整复核。某家区域连锁品牌在引入新投资方时才发现，早期一位股东持有优先购买权与共同出售权，历史文件中还有一条反稀释安排，按新一轮估值测算会被触发，创始团队的持股比例要额外让出一块。</strong></p>
-<p>老股东权利被触发的典型情形包括：优先购买权使得新投资方拿不到预期的持股比例；共同出售权让老股东有权按同等条件一并转让，从而改变交易结构；反稀释条款在本轮估值低于上一轮时自动调整历史投资人的持股比例；以及公司章程或股东协议中对新增股东、董事席位、重大事项表决所作的限制性约定。</p>
-<p>处理这类问题的时间成本主要花在沟通而非文本上，需要逐位老股东取得放弃函或同意函，其中总会有联系不上、或者临时提出附加条件的。因此在启动新一轮之前，把历次交易文件的权利条款做一次穿透梳理，并预留至少四到八周的沟通窗口，是更稳妥的安排。</p>
-<h2>六、交割文件阶段的重新拉扯，以及企业方的底线设置</h2>
-<p><strong>结论先行：意向书里的估值是一个起点而不是终点，正式交易文件的谈判会把它重新打开，尤其在尽调发现问题或外部环境发生变化之后。一家医疗器械领域的经销企业在交割文件阶段遇到的调整是：估值下调一档，同时增加了业绩对赌与优先清算安排；创始人权衡后签了字，两年后未达对赌目标，回购义务被触发，承受的压力反而超过当初不做这轮融资的情形。</strong></p>
-<p>需要重点留意的三类条款分别是估值调整机制、优先清算安排和业绩承诺。优先清算安排决定公司被整体出售时资金的分配顺序，倍数高低与是否继续参与剩余分配，组合起来差异很大；业绩承诺则把融资的不确定性从公司层面转移到了创始人个人身上。这些条款的谈判空间通常在交易文件阶段还在，一旦签署便很难回头。</p>
-<p>企业方能做的事情有限但明确：把资金到账而不是签约仪式当作里程碑；现金跑道按照本轮融资失败重新计算，确保在交割不成的情形下仍有九到十二个月的运营空间；在合规前提下保留与其他潜在投资方的接触余地；在董事会层面同步交割进度，避免只有创始人一个人清楚时间表。这类经验在华尔街彤鼎俱乐部的企业主交流中也被反复提到。</p>
-<p>彤鼎集团（香港）有限公司在这类交易中承担的是统筹与协调角色：梳理历史股权与合规瑕疵、把交割先决条件清单化并倒排时间表、协调境内外法律与财务顾问的工作节奏、在条款谈判中提示企业方的长期成本；涉及证券发行与承销等持牌业务，一律由持牌合作机构承做。本质上，融资是一段有截止日期的项目管理，谁把时间表握在自己手里，谁才更可能走到资金到账的那一天。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>投资意向书是指投资方与融资企业在正式交易文件签署之前，就估值、持股比例、治理安排等核心商业条款达成的框架性文件；除排他、保密、费用分担等少数条款外，其余内容通常不具备强制约束力。从意向书签署到资金实际到账，境内交易通常需要三到六个月，涉及境外架构、外汇登记或行业审批的项目往往延长到六到十二个月。</p><p>在这段窗口期内，融资断裂的节点集中在六个环节：排他期对企业的单向占用、尽职调查暴露的历史问题、交割先决条件久拖不决、投资方内部决策与其自身资金安排、老股东既有权利被触发，以及交割文件阶段的条款重谈。对企业方而言，里程碑应当是资金到账，而不是签字仪式。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">签字之后的头一个月：企业被锁住，对方随时可以走</a></li><li><a href="#sec-02">尽职调查：旧账集中浮出水面的时刻</a></li><li><a href="#sec-03">交割先决条件：清单越长，时间越不可控</a></li><li><a href="#sec-04">投资方那一侧：投决会与它自己的钱</a></li><li><a href="#sec-05">老股东的既有权利：挡在交易前面的历史条款</a></li><li><a href="#sec-06">交割文件阶段的重新拉扯，以及企业方的底线设置</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、签字之后的头一个月：企业被锁住，对方随时可以走</h2><div class="ts-lead"><span class="tag">结论先行</span><p>投资意向书里真正具备约束力的往往只有排他、保密和费用分担这几条，而排他条款约束的是企业，不是投资方。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家做工业阀门的制造企业在签下意向书后，按对方要求停止了与另外两家机构的接触，排他期写的是六个月且没有例外情形；四个月后投资方以内部方向调整为由退出，企业再回头找先前那两家，估值口径已经变了，节奏也追不回来。</p></div><p>排他期的不对称在于，企业承担的是不可撤回的时间成本，投资方付出的多半只是尽调费用与内部人力。签字当天企业内部通常会松一口气，融资负责人开始把精力转向交割准备，与其他潜在投资方的沟通自然中断。因此这段时间一旦落空，损失的不只是几个月工期，还包括原本并行存在的谈判筹码。</p><p>可操作的做法有两层。其一是给排他期设上限，三个月左右较为常见，并约定投资方未按期启动尽调、未按期出具书面反馈时排他自动失效。其二是写清例外情形，例如老股东按原条件继续出资、既有股东内部转让，以及企业为维持日常经营所必需的债权融资不受排他限制。关键在于，排他期是可以谈的条款，而不是不能改的格式条文。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、尽职调查：旧账集中浮出水面的时刻</h2><div class="ts-lead"><span class="tag">结论先行</span><p>尽职调查很少改变投资方对一家企业基本面的判断，它改变的是价格与条件，而真正致命的往往是那些创始人自己都快忘了的历史安排。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>某家消费品牌在尽调阶段被翻出早年为方便结算而设立的一家关联贸易公司，账上与主体之间存在长期未清理的往来款，金额不算大，但性质上构成资金占用，投资方的法律顾问直接把它列为交割前必须清理的事项。</p></div><p>常见问题集中在几类。类型一是股权瑕疵，包括代持、早期投资人的口头承诺、离职员工尚未回收的股权。类型二是财务规范性，例如两套账并存、以个人账户收付货款、社保与公积金基数长期偏低形成的补缴敞口。</p><p data-ts="1">类型三是业务合规，包括资质到期、环保或安全生产方面的历史处罚、核心供应商合同里的控制权变更条款。</p><p>这些问题多数并非无法解决，难点在于解决需要时间，而时间在排他期里恰恰是稀缺资源。本质上，尽调不是一场考试，而是一台清单生成器：它把企业十年积累的模糊地带，一次性变成带截止日期的待办事项。</p><p data-ts="1">因此在正式接触投资方之前自查一轮，通常比在尽调过程中被动应对更省时间，也更少影响估值。自查的顺序可以简单一些：先看股权链条是否清晰、有无代持与未回收股权，再看资金往来是否干净，最后看资质与许可的有效期，把需要外部机构配合的事项提前启动。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、交割先决条件：清单越长，时间越不可控</h2><div class="ts-lead"><span class="tag">结论先行</span><p>交易文件签署之后资金并不会立刻到账，而是要等一份先决条件清单逐项满足，这份清单通常包含十到三十项，其中总有两三项不在企业自己的控制范围内。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家做精密零部件的供应商在交割清单上遇到的卡点是外商投资相关的登记与外汇变更手续，材料反复补正，前后花掉将近四个月，其间投资方的内部审批文件临近有效期，几乎需要重走一遍流程。</p></div><p>先决条件大体分为几组：股权瑕疵的清理与确权，关联方资金往来的归还，员工持股平台的设立与授予文件落定，境外架构下的登记与备案，以及行业主管部门的许可变更或重新核发。具体适用哪些程序、各自需要多长时间，应以监管机构的正式文本和主管部门的现场答复为准，不宜按同行经验值倒推。</p><p>务实的做法是在签署交易文件之前就把清单拉出来，逐项写上责任人、预计天数和前后依赖关系，把耗时最长、外部依赖最重的几项排到最前面启动。关键在于，先决条件不是法务团队的收尾工作，而是决定资金到账日期的主路径，它应当出现在创始人每周过问的事项里。</p><p data-ts="1">清单之外还有一条容易被忽视的时间线，即投资方内部审批文件、评估报告与各类政府批复本身都有有效期，任何一项过期都可能引发连锁的重做。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、投资方那一侧：投决会与它自己的钱</h2><div class="ts-lead"><span class="tag">结论先行</span><p>意向书通常由投资团队签署，而最终决定权在投资决策委员会，团队的推荐意见与委员会的表决结果之间存在真实落差。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家做工业软件的公司在尽调结束后被告知，投资决策委员会对其收入确认方式和续费数据提出了新的疑问，需要补充一轮客户访谈，项目因此推迟一个季度，等到再次上会时，投资方的行业配置方向已经调整。</p></div><p>另一条常被忽略的线索是投资方自身的资金安排。机构的资金到位有其自身节奏，出资人的实缴进度、基金存续期临近、同期其他项目的资金占用，都会影响一笔交易的实际付款时点。企业方很难核查这些内部安排，但可以从可观察的迹象作出判断：对方近期是否有已完成交割的项目，本轮是否引入了共同投资人，交易文件里的付款条款是分期还是一次性。</p><p>因此在交易文件中把付款时点、分期触发条件和逾期后果写清楚，比在意向书阶段多争取一档估值更有意义。本质上，一份能够执行的付款安排，价值高于一个漂亮但拿不到手的数字。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、老股东的既有权利：挡在交易前面的历史条款</h2><div class="ts-lead"><span class="tag">结论先行</span><p>新一轮融资能否顺利落地，往往取决于此前几轮留下的股东权利条款，而这些条款在签意向书时很少被完整复核。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>某家区域连锁品牌在引入新投资方时才发现，早期一位股东持有优先购买权与共同出售权，历史文件中还有一条反稀释安排，按新一轮估值测算会被触发，创始团队的持股比例要额外让出一块。</p></div><p>老股东权利被触发的典型情形包括：优先购买权使得新投资方拿不到预期的持股比例；共同出售权让老股东有权按同等条件一并转让，从而改变交易结构；反稀释条款在本轮估值低于上一轮时自动调整历史投资人的持股比例；以及公司章程或股东协议中对新增股东、董事席位、重大事项表决所作的限制性约定。</p><p>处理这类问题的时间成本主要花在沟通而非文本上，需要逐位老股东取得放弃函或同意函，其中总会有联系不上、或者临时提出附加条件的。因此在启动新一轮之前，把历次交易文件的权利条款做一次穿透梳理，并预留至少四到八周的沟通窗口，是更稳妥的安排。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、交割文件阶段的重新拉扯，以及企业方的底线设置</h2><div class="ts-lead"><span class="tag">结论先行</span><p>意向书里的估值是一个起点而不是终点，正式交易文件的谈判会把它重新打开，尤其在尽调发现问题或外部环境发生变化之后。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家医疗器械领域的经销企业在交割文件阶段遇到的调整是：估值下调一档，同时增加了业绩对赌与优先清算安排；创始人权衡后签了字，两年后未达对赌目标，回购义务被触发，承受的压力反而超过当初不做这轮融资的情形。</p></div><p>需要重点留意的三类条款分别是估值调整机制、优先清算安排和业绩承诺。优先清算安排决定公司被整体出售时资金的分配顺序，倍数高低与是否继续参与剩余分配，组合起来差异很大；业绩承诺则把融资的不确定性从公司层面转移到了创始人个人身上。这些条款的谈判空间通常在交易文件阶段还在，一旦签署便很难回头。</p><p>企业方能做的事情有限但明确：把资金到账而不是签约仪式当作里程碑；现金跑道按照本轮融资失败重新计算，确保在交割不成的情形下仍有九到十二个月的运营空间；在合规前提下保留与其他潜在投资方的接触余地；在董事会层面同步交割进度，避免只有创始人一个人清楚时间表。这类经验在华尔街彤鼎俱乐部的企业主交流中也被反复提到。</p><p>彤鼎集团（香港）有限公司在这类交易中承担的是统筹与协调角色：梳理历史股权与合规瑕疵、把交割先决条件清单化并倒排时间表、协调境内外法律与财务顾问的工作节奏、在条款谈判中提示企业方的长期成本；涉及证券发行与承销等持牌业务，一律由持牌合作机构承做。</p><p data-ts="1">本质上，融资是一段有截止日期的项目管理，谁把时间表握在自己手里，谁才更可能走到资金到账的那一天。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="founder-secondary-sale.html" style="color:#6b5426;font-weight:700;">创始人卖老股，卖多少会被拦</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="financing-round-gap.html" style="color:#6b5426;font-weight:700;">空窗期拖过十八个月，下一轮就谈不动了</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="dd-onsite-rejection.html" style="color:#6b5426;font-weight:700;">报表很漂亮，尽调三天就撤了</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

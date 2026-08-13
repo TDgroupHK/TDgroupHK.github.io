@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"创始人控制权保护","inLanguage":"zh-CN","abstract":"Protecting founder control through dual-class shares, board composition, voting agreements and anti-dilution design.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/founder-control.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"很多中国企业主担心上市后失去对公司的控制权。这种担心是有依据的——如果上市架构设计不当，持股比例被稀释到一定程度后，创始人确实可能在董事会投票中失去主导权。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,62 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">融资条款 TERMS</div><h1>创始人控制权保护</h1>
 <div class="sub">上市后依然掌舵的系统化方法论</div><div class="en">Protecting founder control through dual-class shares, board composition, voting agreements and anti-dilution design.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">很多中国企业主担心上市后失去对公司的控制权。这种担心是有依据的——如果上市架构设计不当，持股比例被稀释到一定程度后，创始人确实可能在董事会投票中失去主导权。但通过正确的架构设计，创始人完全可以在持股比例被稀释的情况下依然保持对公司的实际控制。核心工具是AB股双重股权结构、董事会席位保护条款、超级投票权（Super Voting Rights）和一致行动协议。彤鼎集团（香港）有限公司辅导的多个赴美上市项目，都在架构设计阶段就把创始人控制权保护纳入了核心考量。</div>
-<h2>一、创始人控制权面临威胁的3个关键节点</h2>
-<h3>节点1：Pre-IPO融资阶段</h3>
-<p>每一轮融资都会稀释创始人的持股比例。如果企业经过天使轮、A轮、B轮、C轮、Pre-IPO轮，到挂牌时创始人的持股比例可能已经从90%以上下降到30%至40%甚至更低。</p>
-<p>持股比例的降低本身不一定意味着失控，关键是在每一轮融资的条款中是否设计了合理的控制权保护。接受了不合理的投票权让渡、董事会席位让渡，才是失控的真正原因。</p>
-<h3>节点2：IPO挂牌阶段</h3>
-<p>IPO时的股权结构设计直接决定创始人挂牌后的控制权格局。是否采用AB股结构、B类股持有多少投票权倍数、董事提名权如何设置，都是必须在挂牌前设计清楚的核心问题。一旦挂牌后才想改变这些安排，几乎是不可能的。</p>
-<h3>节点3：挂牌后增发阶段</h3>
-<p>挂牌后的每次增发（Follow-on Offering）都会进一步稀释现有股东包括创始人的持股比例。如果增发设计不当，可能让创始人的B类股投票权优势逐渐丧失。</p>
-<h2>二、核心工具1：AB股双重股权结构</h2>
-<p>AB股双重股权结构是保护创始人控制权最有力的工具，也是当今纳斯达克和港交所都允许的合规安排。</p>
-<h3>基本原理</h3>
-<p>在AB股架构下，公司的股份分为两类：A类股（普通股，向外部投资人和公众发行，通常每股1票投票权）和B类股（创始人专属持有，通常每股10票甚至20票投票权）。</p>
-<p>举例：创始人持有公司20%的经济利益（B类股），但因为B类股有10倍投票权，实际控制67%的投票权。即使公众股东和机构投资人合计持有80%的经济权益，创始人依然掌控大多数投票权。</p>
-<h3>AB股的使用门槛</h3>
-<p>纳斯达克允许AB股结构，但有一些要求：B类股的超级投票权通常最高10:1；B类股必须有自动转换机制（持有人转让时自动转为A类股，防止控制权转移给无关方）；招股书中必须充分披露双重股权架构及其对股东权益的影响。</p>
-<p>港交所自2018年改革后也允许双重股权结构，但仅限于创新型企业，且B类股投票权上限为10:1，持有B类股的创始人必须参与公司日常管理。</p>
-<h3>AB股的争议</h3>
-<p>部分机构投资人（特别是公司治理立场严格的欧洲机构）反对AB股结构，认为它削弱了股东的制衡能力。一些国际指数（如FTSE、部分S&amp;P指数成分）对AB股公司有限制。这些影响在规划时需要纳入考虑。</p>
-<h2>三、核心工具2：董事会席位保护条款</h2>
-<p>即使没有AB股，通过合理设计董事会席位保护条款，也可以在相当程度上维护创始人对公司战略的影响力。</p>
-<h3>具体安排</h3>
-<p>在公司章程或股东协议中约定：创始人或创始人团队有权提名特定数量的董事会席位，这一提名权不受持股比例变化影响；提名的董事不得由其他股东罢免，除非符合特定条件（如刑事犯罪等极端情形）。</p>
-<p>通常安排：创始人有权提名5席董事会席位中的3席，确保在普通决策上始终保有多数；同时按规定配置足够的独立董事满足纳斯达克治理要求。</p>
-<h3>保护性条款</h3>
-<p>在股东协议中设置特定事项需要特别多数票（如75%以上股东同意）才能通过，包括：修改AB股结构、更改公司章程、出售公司主要资产、重大并购等。这些条款实际上赋予了持有足够股份的创始人一票否决权。</p>
-<h2>四、核心工具3：一致行动协议</h2>
-<p>对于创始人团队而言，如果几位联合创始人在投票时保持一致，可以有效对抗外部投资人的稀释影响。一致行动协议（Voting Agreement）是合法且有效的安排。</p>
-<p>协议约定：各联合创始人在股东大会等重大事项表决时，必须按照多数联合创始人的意见投票（即内部先讨论出共同立场，再对外统一行动）；不得在未经其他联合创始人同意的情况下将股份转让给对公司有控制权意图的第三方。</p>
-<p>一致行动协议需要精细设计，明确触发条件、决策机制、违约后果。彤鼎团队辅导的多个项目中，联合创始人的一致行动协议是股权设计阶段的必要配套。</p>
-<h2>五、核心工具4：黄金股（Golden Share）</h2>
-<p>部分司法管辖区允许设立一股拥有特殊否决权的黄金股，持有黄金股的股东（通常是创始人）对特定重大事项有一票否决权，不论其他股东如何投票。</p>
-<p>黄金股在港交所上市架构中相对常见，在美股架构中较为罕见但非完全没有。通常通过开曼公司章程中的特殊股份条款实现类似效果。</p>
-<h2>六、不同场景下的控制权保护方案选择</h2>
-<h3>场景1：Pre-IPO尚未大量融资的企业</h3>
-<p>最理想的时机。应该从第一轮融资开始就在股东协议中设置控制权保护条款，确立AB股架构，避免将来被迫再补救。</p>
-<h3>场景2：已经完成多轮融资、准备上市的企业</h3>
-<p>在设计IPO架构时将现有股份重组为A/B两类股，同时说服现有投资人接受这一安排（通常以给予投资人更友好的清算权限或优先分红来换取控制权保护）。</p>
-<h3>场景3：已经以普通股架构挂牌的上市公司</h3>
-<p>这种情况最难，但不是没有办法。可以通过修改章程增加保护性条款（需要股东大会批准）、通过回购股份提高创始人持股比例、或者借助私有化退市后重新设计架构重新上市。</p>
-<h2>七、创始人常犯的控制权保护错误</h2>
-<h3>错误1：把AB股看作万能保护</h3>
-<p>AB股能保护投票权，但无法保护控制权的实质。如果创始人因为个人原因（道德风险、健康问题、离职）而失去对公司的日常管理，AB股的投票权也会失效。</p>
-<h3>错误2：为了融资条款妥协过多</h3>
-<p>很多创始人在Pre-IPO融资中为了获得较高估值，接受了过于苛刻的投资人保护条款（如批准权、一票否决权等）。这些条款在挂牌后会形成对创始人权力的实质性制约，未来整改成本极高。</p>
-<h3>错误3：忽视创始人接班人安排</h3>
-<p>AB股结构在创始人在职期间有效，但如果创始人突然离世或丧失工作能力，B类股如何处理往往没有清晰安排。必须在设计阶段就明确B类股的传承机制。</p>
-<h3>错误4：不了解纳斯达克的治理红线</h3>
-<p>纳斯达克对上市公司的治理要求中有一些红线无法通过AB股绕过，例如独立董事审计委员会的强制性要求、部分重大事项必须经全体股东批准等。控制权设计必须在这些红线之内。</p>
-<h3>结语：控制权保护要从第一天开始设计</h3>
-<p>控制权保护不是上市前才需要考虑的问题，而是企业从成立第一天就需要纳入规划的基础性工作。越早设计，代价越低；越晚动手，整改越难。</p>
-<p>中国企业赴美上市的过程是一次创始人从绝对控股到与公众投资人共治的转变。这个转变过程中，好的架构设计能让创始人在让出部分经济权益的同时保持对公司战略的实质掌舵权。这是创始人与公开资本市场和平共处的最优解。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>很多中国企业主担心上市后失去对公司的控制权。这种担心是有依据的——如果上市架构设计不当，持股比例被稀释到一定程度后，创始人确实可能在董事会投票中失去主导权。但通过正确的架构设计，创始人完全可以在持股比例被稀释的情况下依然保持对公司的实际控制。</p><p>核心工具是AB股双重股权结构、董事会席位保护条款、超级投票权（Super Voting Rights）和一致行动协议。彤鼎集团（香港）有限公司辅导的多个赴美上市项目，都在架构设计阶段就把创始人控制权保护纳入了核心考量。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">创始人控制权面临威胁的3个关键节点</a></li><li><a href="#sec-02">核心工具1：AB股双重股权结构</a></li><li><a href="#sec-03">核心工具2：董事会席位保护条款</a></li><li><a href="#sec-04">核心工具3：一致行动协议</a></li><li><a href="#sec-05">核心工具4：黄金股（Golden Share）</a></li><li><a href="#sec-06">不同场景下的控制权保护方案选择</a></li><li><a href="#sec-07">创始人常犯的控制权保护错误</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、创始人控制权面临威胁的3个关键节点</h2><p><h3>节点1：Pre-IPO融资阶段</h3></p><p>每一轮融资都会稀释创始人的持股比例。如果企业经过天使轮、A轮、B轮、C轮、Pre-IPO轮，到挂牌时创始人的持股比例可能已经从90%以上下降到30%至40%甚至更低。</p><p>持股比例的降低本身不一定意味着失控，关键是在每一轮融资的条款中是否设计了合理的控制权保护。接受了不合理的投票权让渡、董事会席位让渡，才是失控的真正原因。</p><p><h3>节点2：IPO挂牌阶段</h3></p><p>IPO时的股权结构设计直接决定创始人挂牌后的控制权格局。是否采用AB股结构、B类股持有多少投票权倍数、董事提名权如何设置，都是必须在挂牌前设计清楚的核心问题。一旦挂牌后才想改变这些安排，几乎是不可能的。</p><p><h3>节点3：挂牌后增发阶段</h3></p><p>挂牌后的每次增发（Follow-on Offering）都会进一步稀释现有股东包括创始人的持股比例。如果增发设计不当，可能让创始人的B类股投票权优势逐渐丧失。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、核心工具1：AB股双重股权结构</h2><p>AB股双重股权结构是保护创始人控制权最有力的工具，也是当今纳斯达克和港交所都允许的合规安排。</p><p><h3>基本原理</h3></p><p>在AB股架构下，公司的股份分为两类：A类股（普通股，向外部投资人和公众发行，通常每股1票投票权）和B类股（创始人专属持有，通常每股10票甚至20票投票权）。</p><p>举例：创始人持有公司20%的经济利益（B类股），但因为B类股有10倍投票权，实际控制67%的投票权。即使公众股东和机构投资人合计持有80%的经济权益，创始人依然掌控大多数投票权。</p><p><h3>AB股的使用门槛</h3></p><p>纳斯达克允许AB股结构，但有一些要求：B类股的超级投票权通常最高10:1；B类股必须有自动转换机制（持有人转让时自动转为A类股，防止控制权转移给无关方）；招股书中必须充分披露双重股权架构及其对股东权益的影响。</p><p>港交所自2018年改革后也允许双重股权结构，但仅限于创新型企业，且B类股投票权上限为10:1，持有B类股的创始人必须参与公司日常管理。</p><p><h3>AB股的争议</h3></p><p>部分机构投资人（特别是公司治理立场严格的欧洲机构）反对AB股结构，认为它削弱了股东的制衡能力。一些国际指数（如FTSE、部分S&amp;P指数成分）对AB股公司有限制。这些影响在规划时需要纳入考虑。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、核心工具2：董事会席位保护条款</h2><p>即使没有AB股，通过合理设计董事会席位保护条款，也可以在相当程度上维护创始人对公司战略的影响力。</p><p><h3>具体安排</h3></p><p>在公司章程或股东协议中约定：创始人或创始人团队有权提名特定数量的董事会席位，这一提名权不受持股比例变化影响；提名的董事不得由其他股东罢免，除非符合特定条件（如刑事犯罪等极端情形）。</p><p>通常安排：创始人有权提名5席董事会席位中的3席，确保在普通决策上始终保有多数；同时按规定配置足够的独立董事满足纳斯达克治理要求。</p><p><h3>保护性条款</h3></p><p>在股东协议中设置特定事项需要特别多数票（如75%以上股东同意）才能通过，包括：修改AB股结构、更改公司章程、出售公司主要资产、重大并购等。这些条款实际上赋予了持有足够股份的创始人一票否决权。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、核心工具3：一致行动协议</h2><p>对于创始人团队而言，如果几位联合创始人在投票时保持一致，可以有效对抗外部投资人的稀释影响。一致行动协议（Voting Agreement）是合法且有效的安排。</p><p>协议约定：各联合创始人在股东大会等重大事项表决时，必须按照多数联合创始人的意见投票（即内部先讨论出共同立场，再对外统一行动）；不得在未经其他联合创始人同意的情况下将股份转让给对公司有控制权意图的第三方。</p><p>一致行动协议需要精细设计，明确触发条件、决策机制、违约后果。彤鼎团队辅导的多个项目中，联合创始人的一致行动协议是股权设计阶段的必要配套。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、核心工具4：黄金股（Golden Share）</h2><p>部分司法管辖区允许设立一股拥有特殊否决权的黄金股，持有黄金股的股东（通常是创始人）对特定重大事项有一票否决权，不论其他股东如何投票。</p><p>黄金股在港交所上市架构中相对常见，在美股架构中较为罕见但非完全没有。通常通过开曼公司章程中的特殊股份条款实现类似效果。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、不同场景下的控制权保护方案选择</h2><p><h3>场景1：Pre-IPO尚未大量融资的企业</h3></p><p>最理想的时机。应该从第一轮融资开始就在股东协议中设置控制权保护条款，确立AB股架构，避免将来被迫再补救。</p><p><h3>场景2：已经完成多轮融资、准备上市的企业</h3></p><p>在设计IPO架构时将现有股份重组为A/B两类股，同时说服现有投资人接受这一安排（通常以给予投资人更友好的清算权限或优先分红来换取控制权保护）。</p><p><h3>场景3：已经以普通股架构挂牌的上市公司</h3></p><p>这种情况最难，但不是没有办法。可以通过修改章程增加保护性条款（需要股东大会批准）、通过回购股份提高创始人持股比例、或者借助私有化退市后重新设计架构重新上市。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、创始人常犯的控制权保护错误</h2><p><h3>错误1：把AB股看作万能保护</h3></p><p>AB股能保护投票权，但无法保护控制权的实质。如果创始人因为个人原因（道德风险、健康问题、离职）而失去对公司的日常管理，AB股的投票权也会失效。</p><p><h3>错误2：为了融资条款妥协过多</h3></p><p>很多创始人在Pre-IPO融资中为了获得较高估值，接受了过于苛刻的投资人保护条款（如批准权、一票否决权等）。这些条款在挂牌后会形成对创始人权力的实质性制约，未来整改成本极高。</p><p><h3>错误3：忽视创始人接班人安排</h3></p><p>AB股结构在创始人在职期间有效，但如果创始人突然离世或丧失工作能力，B类股如何处理往往没有清晰安排。必须在设计阶段就明确B类股的传承机制。</p><p><h3>错误4：不了解纳斯达克的治理红线</h3></p><p>纳斯达克对上市公司的治理要求中有一些红线无法通过AB股绕过，例如独立董事审计委员会的强制性要求、部分重大事项必须经全体股东批准等。控制权设计必须在这些红线之内。</p><p><h3>结语：控制权保护要从第一天开始设计</h3></p><p>控制权保护不是上市前才需要考虑的问题，而是企业从成立第一天就需要纳入规划的基础性工作。越早设计，代价越低；越晚动手，整改越难。</p><p>中国企业赴美上市的过程是一次创始人从绝对控股到与公众投资人共治的转变。这个转变过程中，好的架构设计能让创始人在让出部分经济权益的同时保持对公司战略的实质掌舵权。这是创始人与公开资本市场和平共处的最优解。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="valuation-methods.html" style="color:#6b5426;font-weight:700;">企业估值三种方法</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="option-pool.html" style="color:#6b5426;font-weight:700;">期权池设计完整指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pre-ipo-risk.html" style="color:#6b5426;font-weight:700;">Pre-IPO投资的机会与风险</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="fa-selection.html" style="color:#6b5426;font-weight:700;">赴美上市FA选择指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="fake-investors.html" style="color:#6b5426;font-weight:700;">识别假投资人与收购骗局</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

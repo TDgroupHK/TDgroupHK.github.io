@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"F-1招股书撰写要点","inLanguage":"zh-CN","abstract":"Drafting the F-1 registration statement: business section, MD&A, risk factors, and the disclosure standard the SEC applies.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/f1-prospectus.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"SEC核心文件的完整结构与写作方法。F-1招股书撰写要点完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,62 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>F-1招股书撰写要点</h1>
 <div class="sub">SEC核心文件的完整结构与写作方法</div><div class="en">Drafting the F-1 registration statement: business section, MD&amp;A, risk factors, and the disclosure standard the SEC applies.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">F-1是外国私人发行人向SEC提交的注册声明，也就是我们通常说的招股说明书。一份F-1的质量，直接决定了SEC问询的轮次多少和质量高低。一份准备充分的F-1可以把SEC问询压缩到2轮；准备不足的F-1可能引发5至6轮问询，导致整体上市周期延期3至6个月。F-1的10个核心章节按重要性排序：业务介绍、风险因素、管理层讨论与分析MDA、财务报表、关联交易、主要股东、股权结构说明、募集资金用途、股息政策、重大合同摘要。其中业务介绍和风险因素是SEC最重点审查的两个章节。</div>
-<h2>一、F-1的法律地位与提交流程</h2>
-<p>F-1表格（Registration Statement on Form F-1）是外国私人发行人（Foreign Private Issuer，FPI）首次公开发行证券时向SEC提交的注册声明。美国本土公司使用S-1表格，中国企业通常符合FPI条件（大多数股东非美国人），因此使用F-1。</p>
-<h3>F-1的提交流程</h3>
-<p>密交阶段（Confidential Submission）：企业可以先以保密方式向SEC提交F-1草稿，SEC进行内部审查并发出问询，企业回复后完成1至2轮问询。这一阶段不对外公开，让企业在公开市场压力下完成主要的问询修改。</p>
-<p>公开提交阶段：密交并完成主要问询后，企业正式公开提交F-1，从此所有文件对全球公众可查阅。公开提交通常在路演开始前约3至4周进行。</p>
-<p>最终招股说明书：定价完成后，企业提交包含最终发行价格、发行数量的最终版F-1，通常在挂牌前一天完成。</p>
-<h2>二、F-1的10个核心章节详解</h2>
-<h3>第1章：公司概述（Prospectus Summary）</h3>
-<p>整份招股说明书的执行摘要，通常5至10页。内容包括：公司业务一句话描述（Headline）、公司的核心竞争力总结、关键财务数据摘要（最近两年收入、利润、主要业务指标）、本次发行的基本信息（发行股数、价格区间、募集规模）。</p>
-<p>这一章是机构投资人阅读F-1时最先看的部分，必须简洁有力、清晰准确，在2分钟内让读者理解公司是做什么的、为什么值得投资。</p>
-<h3>第2章：风险因素（Risk Factors）</h3>
-<p>这是SEC审查最严格的章节，也是F-1中字数最多的部分之一，通常30至60页。SEC要求公司完整披露所有可能影响公司业务、财务状况、股价的重大风险。</p>
-<p>风险因素的分类通常包括：经营风险（竞争加剧、技术迭代、客户集中等）、行业风险（监管变化、行业周期等）、中国特有风险（监管政策、VIE架构风险、政治风险等）、公司治理风险（创始人控制风险、关键人才依赖等）、美股上市特有风险（汇率风险、SEC合规风险、诉讼风险等）。</p>
-<p>SEC特别关注风险因素的完整性——任何后来发生的重大事件，如果在IPO时的风险因素中没有提示，都可能成为集体诉讼的依据。</p>
-<h3>第3章：募集资金用途（Use of Proceeds）</h3>
-<p>清楚说明公司计划如何使用IPO募集的资金。通常按用途分类：研发投入XX%、市场扩张XX%、资本性支出XX%、营运资金补充XX%、其他XX%。</p>
-<p>用途说明必须具体可信——过于笼统的表述（如“用于一般企业目的”）会引发SEC的关注，投资人也会认为公司对资金使用没有清晰规划。</p>
-<h3>第4章：股息政策（Dividend Policy）</h3>
-<p>通常是一两段话：公司历史上是否支付过股息；未来是否计划支付；影响股息决策的主要因素（境内外汇管制、公司盈利状况等）。大多数中国成长型企业在这里写：暂不计划支付股息，利润将用于再投资业务增长。</p>
-<h3>第5章：资本化与稀释（Capitalization and Dilution）</h3>
-<p>说明IPO后公司的股本结构，以及新投资人的持股价格相对于历史成本的稀释情况。这一章节直接告诉投资人：他们在IPO时买入的股票，相对于早期股东的成本有多大溢价。</p>
-<h3>第6章：公司业务（Business）</h3>
-<p>这是F-1最实质性的章节，通常50至100页，详细描述公司的业务全貌，包括：行业背景与市场规模（引用第三方研究报告数据）、公司的发展历史和里程碑、产品与服务的详细描述、商业模式和盈利逻辑、客户结构和主要客户（必须保持一定程度的匿名）、竞争格局分析、核心技术壁垒、知识产权清单、监管和许可证情况、员工人数和分布。</p>
-<p>业务章节的写作质量，直接反映公司管理层对自身业务的理解深度。写得好的业务章节，让投资人读完后对公司有清晰认知；写得差的业务章节，会让投资人产生疑虑。</p>
-<h3>第7章：管理层讨论与分析（MD&amp;A）</h3>
-<p>这是CFO的主要写作任务，也是机构投资人最重要的财务分析来源。MDA需要：解释最近两至三个财年财务数据的变动原因（不能只列数字，必须解释为什么）、讨论公司的流动性和资本资源状况、说明公司的关键业务指标（KPI）及其趋势、披露重大合同义务和或有负债、分析汇率、季节性、通货膨胀等对业务的影响。</p>
-<h3>第8章：董事、高管和主要股东（Directors, Senior Management and Shareholders）</h3>
-<p>完整披露所有董事和高级管理人员的背景信息（简历、年龄、过往职务、与公司的关系）；披露薪酬信息（通常是集体披露而非个人薪酬明细）；披露所有持股5%以上的主要股东名单。</p>
-<h3>第9章：关联交易（Related Party Transactions）</h3>
-<p>完整披露公司与关联方（创始人、大股东、高管及其家属控制的实体）之间的所有重大交易，包括：交易金额、交易性质、定价依据。SEC对关联交易的完整性要求极高，任何遗漏都可能成为问询的焦点。</p>
-<h3>第10章：财务报表（Financial Statements）</h3>
-<p>经PCAOB审计师审计的完整财务报表，通常包括最近两至三个完整财年加最近一个中期报告期（如半年度）的：合并资产负债表、合并利润表、合并现金流量表、合并股东权益变动表、财务报表附注。附注是财务报表中信息量最大的部分，通常50至100页，详细说明所有会计政策、重大估计和判断、各项目的明细数据。</p>
-<h2>三、F-1写作的常见错误</h2>
-<h3>错误1：风险因素不完整</h3>
-<p>这是SEC问询中最常见的关注点。企业往往只披露对自己有利的风险描述，而回避真正重要的风险（如对单一客户的高度依赖、核心技术的知识产权保护薄弱、历史合规问题等）。SEC会逐条审查风险因素的完整性，不完整必然引发补充问询。</p>
-<h3>错误2：市场规模数据缺乏来源</h3>
-<p>业务章节中的市场规模数据必须引用可靠的第三方研究报告，且这些报告必须是真实存在的。直接编造或使用不可引用的数据是重大问题。</p>
-<h3>错误3：MDA只列数字不解释原因</h3>
-<p>MDA的核心价值是解释——数字背后的原因、趋势的驱动因素、未来的展望。只列数字变化而不解释原因的MDA，会被SEC要求大幅修改补充。</p>
-<h3>错误4：前瞻性陈述保护语过于笼统</h3>
-<p>F-1中的前瞻性陈述（预测、计划等）必须有充分的Safe Harbor保护语，明确说明这些陈述受各种已知和未知风险的影响，实际结果可能与预期有重大差异。</p>
-<h2>四、F-1撰写的工作分工</h2>
-<p>F-1的撰写是一个多方协同的工程，各方分工如下。</p>
-<p>公司管理层（CEO+CFO）：提供业务信息、回答律师和承销商的问题、审阅并确认所有财务和业务陈述的准确性。</p>
-<p>承销商（投行）：主导整体F-1框架设计；撰写封面页、发行说明、资本化结构等部分；协调各方工作推进节奏。</p>
-<p>公司律师：撰写风险因素、关联交易、诉讼事项等法律敏感章节；确保所有披露满足SEC要求；准备SEC问询的回复。</p>
-<p>PCAOB审计师：审计财务报表；出具审计报告；提供同意函（Consent）；就财务数据相关的问询提供意见。</p>
-<p>彤鼎集团（香港）有限公司：作为上市战略顾问，协助管理层梳理业务叙事框架、协调各方工作进度、就SEC问询策略提供整体建议。</p>
-<h3>结语：F-1的质量决定上市效率</h3>
-<p>F-1是企业向全球资本市场呈现自己的第一份正式文件。它的质量不仅影响SEC问询的轮次，更影响机构投资人对公司的第一印象，进而影响路演的效率和最终的发行定价。</p>
-<p>一份优质的F-1需要企业管理层、律师、审计师、承销商和上市顾问的紧密协同，任何一方的懈怠都会拖慢整体进度。从启动写作到完成初稿，通常需要8至12周的密集工作。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>F-1是外国私人发行人向SEC提交的注册声明，也就是我们通常说的招股说明书。一份F-1的质量，直接决定了SEC问询的轮次多少和质量高低。一份准备充分的F-1可以把SEC问询压缩到2轮；准备不足的F-1可能引发5至6轮问询，导致整体上市周期延期3至6个月。</p><p>F-1的10个核心章节按重要性排序：业务介绍、风险因素、管理层讨论与分析MDA、财务报表、关联交易、主要股东、股权结构说明、募集资金用途、股息政策、重大合同摘要。其中业务介绍和风险因素是SEC最重点审查的两个章节。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">F-1的法律地位与提交流程</a></li><li><a href="#sec-02">F-1的10个核心章节详解</a></li><li><a href="#sec-03">F-1写作的常见错误</a></li><li><a href="#sec-04">F-1撰写的工作分工</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、F-1的法律地位与提交流程</h2><p>F-1表格（Registration Statement on Form F-1）是外国私人发行人（Foreign Private Issuer，FPI）首次公开发行证券时向SEC提交的注册声明。</p><p data-ts="1">美国本土公司使用S-1表格，中国企业通常符合FPI条件（大多数股东非美国人），因此使用F-1。</p><p><h3>F-1的提交流程</h3></p><p>密交阶段（Confidential Submission）：企业可以先以保密方式向SEC提交F-1草稿，SEC进行内部审查并发出问询，企业回复后完成1至2轮问询。这一阶段不对外公开，让企业在公开市场压力下完成主要的问询修改。</p><p>公开提交阶段：密交并完成主要问询后，企业正式公开提交F-1，从此所有文件对全球公众可查阅。公开提交通常在路演开始前约3至4周进行。</p><p>最终招股说明书：定价完成后，企业提交包含最终发行价格、发行数量的最终版F-1，通常在挂牌前一天完成。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、F-1的10个核心章节详解</h2><p><h3>第1章：公司概述（Prospectus Summary）</h3></p><p>整份招股说明书的执行摘要，通常5至10页。内容包括：公司业务一句话描述（Headline）、公司的核心竞争力总结、关键财务数据摘要（最近两年收入、利润、主要业务指标）、本次发行的基本信息（发行股数、价格区间、募集规模）。</p><p>这一章是机构投资人阅读F-1时最先看的部分，必须简洁有力、清晰准确，在2分钟内让读者理解公司是做什么的、为什么值得投资。</p><p><h3>第2章：风险因素（Risk Factors）</h3></p><p>这是SEC审查最严格的章节，也是F-1中字数最多的部分之一，通常30至60页。SEC要求公司完整披露所有可能影响公司业务、财务状况、股价的重大风险。</p><p>风险因素的分类通常包括：经营风险（竞争加剧、技术迭代、客户集中等）、行业风险（监管变化、行业周期等）、中国特有风险（监管政策、VIE架构风险、政治风险等）、公司治理风险（创始人控制风险、关键人才依赖等）、美股上市特有风险（汇率风险、SEC合规风险、诉讼风险等）。</p><p>SEC特别关注风险因素的完整性——任何后来发生的重大事件，如果在IPO时的风险因素中没有提示，都可能成为集体诉讼的依据。</p><p><h3>第3章：募集资金用途（Use of Proceeds）</h3></p><p>清楚说明公司计划如何使用IPO募集的资金。通常按用途分类：研发投入XX%、市场扩张XX%、资本性支出XX%、营运资金补充XX%、其他XX%。</p><p>用途说明必须具体可信——过于笼统的表述（如“用于一般企业目的”）会引发SEC的关注，投资人也会认为公司对资金使用没有清晰规划。</p><p><h3>第4章：股息政策（Dividend Policy）</h3></p><p>通常是一两段话：公司历史上是否支付过股息；未来是否计划支付；影响股息决策的主要因素（境内外汇管制、公司盈利状况等）。大多数中国成长型企业在这里写：暂不计划支付股息，利润将用于再投资业务增长。</p><p><h3>第5章：资本化与稀释（Capitalization and Dilution）</h3></p><p>说明IPO后公司的股本结构，以及新投资人的持股价格相对于历史成本的稀释情况。这一章节直接告诉投资人：他们在IPO时买入的股票，相对于早期股东的成本有多大溢价。</p><p><h3>第6章：公司业务（Business）</h3></p><p>这是F-1最实质性的章节，通常50至100页，详细描述公司的业务全貌，包括：行业背景与市场规模（引用第三方研究报告数据）、公司的发展历史和里程碑、产品与服务的详细描述、商业模式和盈利逻辑、客户结构和主要客户（必须保持一定程度的匿名）、竞争格局分析、核心技术壁垒、知识产权清单、监管和许可证情况、员工人数和分布。</p><p>业务章节的写作质量，直接反映公司管理层对自身业务的理解深度。写得好的业务章节，让投资人读完后对公司有清晰认知；写得差的业务章节，会让投资人产生疑虑。</p><p><h3>第7章：管理层讨论与分析（MD&amp;A）</h3></p><p>这是CFO的主要写作任务，也是机构投资人最重要的财务分析来源。MDA需要：解释最近两至三个财年财务数据的变动原因（不能只列数字，必须解释为什么）、讨论公司的流动性和资本资源状况、说明公司的关键业务指标（KPI）及其趋势、披露重大合同义务和或有负债、分析汇率、季节性、通货膨胀等对业务的影响。</p><p><h3>第8章：董事、高管和主要股东（Directors, Senior Management and Shareholders）</h3></p><p>完整披露所有董事和高级管理人员的背景信息（简历、年龄、过往职务、与公司的关系）；披露薪酬信息（通常是集体披露而非个人薪酬明细）；披露所有持股5%以上的主要股东名单。</p><p><h3>第9章：关联交易（Related Party Transactions）</h3></p><p>完整披露公司与关联方（创始人、大股东、高管及其家属控制的实体）之间的所有重大交易，包括：交易金额、交易性质、定价依据。SEC对关联交易的完整性要求极高，任何遗漏都可能成为问询的焦点。</p><p><h3>第10章：财务报表（Financial Statements）</h3></p><p>经PCAOB审计师审计的完整财务报表，通常包括最近两至三个完整财年加最近一个中期报告期（如半年度）的：合并资产负债表、合并利润表、合并现金流量表、合并股东权益变动表、财务报表附注。</p><p data-ts="1">附注是财务报表中信息量最大的部分，通常50至100页，详细说明所有会计政策、重大估计和判断、各项目的明细数据。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、F-1写作的常见错误</h2><p><h3>错误1：风险因素不完整</h3></p><p>这是SEC问询中最常见的关注点。企业往往只披露对自己有利的风险描述，而回避真正重要的风险（如对单一客户的高度依赖、核心技术的知识产权保护薄弱、历史合规问题等）。SEC会逐条审查风险因素的完整性，不完整必然引发补充问询。</p><p><h3>错误2：市场规模数据缺乏来源</h3></p><p>业务章节中的市场规模数据必须引用可靠的第三方研究报告，且这些报告必须是真实存在的。直接编造或使用不可引用的数据是重大问题。</p><p><h3>错误3：MDA只列数字不解释原因</h3></p><p>MDA的核心价值是解释——数字背后的原因、趋势的驱动因素、未来的展望。只列数字变化而不解释原因的MDA，会被SEC要求大幅修改补充。</p><p><h3>错误4：前瞻性陈述保护语过于笼统</h3></p><p>F-1中的前瞻性陈述（预测、计划等）必须有充分的Safe Harbor保护语，明确说明这些陈述受各种已知和未知风险的影响，实际结果可能与预期有重大差异。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、F-1撰写的工作分工</h2><p>F-1的撰写是一个多方协同的工程，各方分工如下。</p><p>公司管理层（CEO+CFO）：提供业务信息、回答律师和承销商的问题、审阅并确认所有财务和业务陈述的准确性。</p><p>承销商（投行）：主导整体F-1框架设计；撰写封面页、发行说明、资本化结构等部分；协调各方工作推进节奏。</p><p>公司律师：撰写风险因素、关联交易、诉讼事项等法律敏感章节；确保所有披露满足SEC要求；准备SEC问询的回复。</p><p>PCAOB审计师：审计财务报表；出具审计报告；提供同意函（Consent）；就财务数据相关的问询提供意见。</p><p>彤鼎集团（香港）有限公司：作为上市战略顾问，协助管理层梳理业务叙事框架、协调各方工作进度、就SEC问询策略提供整体建议。</p><p><h3>结语：F-1的质量决定上市效率</h3></p><p>F-1是企业向全球资本市场呈现自己的第一份正式文件。它的质量不仅影响SEC问询的轮次，更影响机构投资人对公司的第一印象，进而影响路演的效率和最终的发行定价。</p><p>一份优质的F-1需要企业管理层、律师、审计师、承销商和上市顾问的紧密协同，任何一方的懈怠都会拖慢整体进度。从启动写作到完成初稿，通常需要8至12周的密集工作。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cornerstone-investors.html" style="color:#6b5426;font-weight:700;">港股基石投资者机制</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ip-cleanup.html" style="color:#6b5426;font-weight:700;">商标、专利、域名：上市前无形资产梳理最容易漏的三件事</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="listing-timetable.html" style="color:#6b5426;font-weight:700;">赴美上市完整时间表</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="capital-contribution-defects.html" style="color:#6b5426;font-weight:700;">出资瑕疵：十几年前的一笔注册资本，为什么能拖住整个上市进程</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ipo-cost.html" style="color:#6b5426;font-weight:700;">赴美上市费用全解</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

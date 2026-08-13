@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"中概股在美股市场的格局","inLanguage":"zh-CN","abstract":"How Chinese companies are distributed across Nasdaq tiers and what their profiles imply for new applicants.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/nasdaq-china-stocks.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"中概股的定义边界、纳斯达克三层市场分布、行业集中度与流动性分化，以及HFCAA与境外上市备案制两次监管变化对拟上市企业的实际影响。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,37 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市路径 LISTING PATH</div><h1>中概股在美股市场的格局</h1>
 <div class="sub">行业分布、市值梯队与监管变化，对拟上市企业意味着什么</div><div class="en">How Chinese companies are distributed across Nasdaq tiers and what their profiles imply for new applicants.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">中概股是指主要经营实体位于中国、但在美国证券交易所挂牌交易的公司股票。这一群体分布在纳斯达克的三个层级（资本市场 NCM、全球市场 NGM、全球精选市场 NGSM）以及纽约证券交易所，整体呈现"头部集中、长尾分散"的结构：少数头部企业占据了绝大部分总市值与成交量，而在数量上占多数的中小市值企业，日均成交额往往有限。行业分布则集中在消费互联网、教育服务、新能源与先进制造、医疗健康几个板块。自《外国公司问责法》（HFCAA）实施、中美审计监管合作落地、以及中国证监会境外上市备案制于2023年3月31日施行之后，中概股的审计监管与上市路径都发生了结构性变化——这直接决定了今天一家中国企业赴美上市应当选择哪条路径。</div>
-
-<h2>一、中概股的定义与边界</h2>
-<p>中概股的核心判定标准不是注册地，而是<strong>主要经营实体与收入来源是否在中国境内</strong>。一家在开曼注册、在纳斯达克挂牌、但业务全部在中国的公司，仍然被归类为中概股；反之，一家以新加坡运营实体为上市载体、业务实质在东南亚的公司，则不属于中概股范畴。</p>
-<p>这条边界之所以重要，是因为它直接决定了两件事：是否适用中国证监会的境外上市备案要求，以及是否落入美国《外国公司问责法》的审计监管框架。仅在港股主板挂牌的中国公司不计入美股中概股统计口径。本质上，"是不是中概股"是一个监管定性问题，而不是一个地理问题。</p>
-
-<h2>二、交易所与层级分布</h2>
-<p>结论先说：中概股并非集中在单一市场，而是按企业规模分散在四个层级里。纳斯达克实行三层市场制度，不同层级对应不同体量的企业。</p>
-<p><strong>纳斯达克资本市场（NCM）</strong>门槛最低，面向中小型成长企业，绝大多数中国企业首次赴美挂牌都从这一层起步。其盈利标准要求最近一个财年（或近三年中的两年）净利润不低于75万美元，另有股东权益500万美元、市值5000万美元两套可选标准，同时需满足最低发行价4美元、至少300名公众股东、3家做市商等条件。</p>
-<p><strong>纳斯达克全球市场（NGM）</strong>要求企业具备一定规模与稳定的持续经营记录；<strong>全球精选市场（NGSM）</strong>门槛最高，面向已完成规模化、具备稳定盈利与现金流的成熟企业。<strong>纽约证券交易所</strong>则聚集了部分体量较大的中概股。企业应当按自身实际规模选择层级，层级越高并不等于越合适——达不到门槛硬冲，反而会拉长周期、抬高成本。</p>
-
-<h2>三、行业分布的结构性特征</h2>
-<p>中概股的行业分布并不均衡，集中度相当高。消费互联网与电商板块贡献了最大的市值占比；教育服务板块在经历政策周期后规模明显收缩；新能源汽车与先进制造板块是近年增量的主要来源；医疗健康与生物科技板块企业数量不少，但市值分化极大。</p>
-<p>这种分布对拟上市企业的意义在于：<strong>你所在行业在美股是否已有可比公司，直接影响估值锚点的形成</strong>。有成熟可比公司的行业，投资人有现成的估值框架，定价过程相对顺畅；而在美股缺乏对标的细分行业，路演阶段往往要花大量精力先教育投资人"你这个生意是什么"，估值也更容易被压。关键在于，行业适配度是上市可行性评估中不亚于财务指标的一个维度。</p>
-
-<h2>四、市值梯队与流动性的真实分化</h2>
-<p>中概股最容易被忽视的现实是：<strong>挂牌成功与交易活跃是两回事</strong>。头部企业享有充分的机构覆盖、研究报告与流动性，而大量中小市值中概股长期处于低成交、低覆盖状态，日均成交额可能只有数万至数十万美元量级。</p>
-<p>流动性不足会带来一系列连锁反应：再融资困难（增发难以找到承接方）、估值折价、机构投资者因流动性门槛无法建仓、甚至面临交易所的最低股价与市值合规压力。因此在上市规划阶段就应当把挂牌后的流动性管理、投资者关系（IR）与研究覆盖纳入考量，而不是等敲钟之后再补。</p>
-
-<h2>五、监管环境的两次结构性变化</h2>
-<p>过去数年间，中概股的监管框架经历了两次重大调整，任何一家计划赴美上市的企业都必须理解。</p>
-<p>第一次是<strong>《外国公司问责法》（HFCAA）</strong>的实施。该法案要求在美上市公司的审计底稿必须接受美国上市公司会计监督委员会（PCAOB）检查，连续不符合要求将面临强制退市。随后中美双方就审计监管合作达成安排，PCAOB 得以对相关会计师事务所开展检查，这一风险得到阶段性缓解，但底稿可检查性仍是必须满足的前提。</p>
-<p>第二次是<strong>中国证监会境外上市备案制</strong>于2023年3月31日正式施行。境内企业直接或间接境外上市，均需向证监会履行备案程序。备案制带来的不是"能不能上"的问题，而是"周期是否可控"的问题——备案环节的时间存在不确定性，这也是部分企业转向新加坡路径的直接原因：以具有真实经营实质的新加坡主体作为上市载体，因不属于中概股定性，不适用备案要求。</p>
-
-<h2>六、对拟上市企业的四点启示</h2>
-<p>第一，<strong>先做定性判断，再谈财务达标</strong>。企业究竟属于中概股路径还是非中概股路径，决定了是否需要备案、周期多长、成本多少。这个判断应该在启动任何实质性工作之前完成。</p>
-<p>第二，<strong>按实际规模选层级</strong>。中小企业选纳斯达克资本市场是常态而非降级，先上市再逐步升层是可行且常见的路径。</p>
-<p>第三，<strong>把挂牌后的流动性问题前置考虑</strong>。上市不是终点。如果挂牌后长期无人交易、无研究覆盖，再融资和市值管理都无从谈起，上市的战略价值将大打折扣。</p>
-<p>第四，<strong>审计合规不留灰度</strong>。PCAOB 底稿检查是硬约束，财务规范化必须在申报前完成，任何侥幸都会在问询阶段被放大。本质上，赴美上市考验的从来不只是当下的利润数字，而是企业能否在一个高透明度的监管环境中持续经营。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>中概股是指主要经营实体位于中国、但在美国证券交易所挂牌交易的公司股票。这一群体分布在纳斯达克的三个层级（资本市场 NCM、全球市场 NGM、全球精选市场 NGSM）以及纽约证券交易所，整体呈现"头部集中、长尾分散"的结构：少数头部企业占据了绝大部分总市值与成交量，而在数量上占多数的中小市值企业，日均成交额往往有限。</p><p>行业分布则集中在消费互联网、教育服务、新能源与先进制造、医疗健康几个板块。自《外国公司问责法》（HFCAA）实施、中美审计监管合作落地、以及中国证监会境外上市备案制于2023年3月31日施行之后，中概股的审计监管与上市路径都发生了结构性变化——这直接决定了今天一家中国企业赴美上市应当选择哪条路径。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">中概股的定义与边界</a></li><li><a href="#sec-02">交易所与层级分布</a></li><li><a href="#sec-03">行业分布的结构性特征</a></li><li><a href="#sec-04">市值梯队与流动性的真实分化</a></li><li><a href="#sec-05">监管环境的两次结构性变化</a></li><li><a href="#sec-06">对拟上市企业的四点启示</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、中概股的定义与边界</h2><p>中概股的核心判定标准不是注册地，而是<strong>主要经营实体与收入来源是否在中国境内</strong>。一家在开曼注册、在纳斯达克挂牌、但业务全部在中国的公司，仍然被归类为中概股；反之，一家以新加坡运营实体为上市载体、业务实质在东南亚的公司，则不属于中概股范畴。</p><p>这条边界之所以重要，是因为它直接决定了两件事：是否适用中国证监会的境外上市备案要求，以及是否落入美国《外国公司问责法》的审计监管框架。仅在港股主板挂牌的中国公司不计入美股中概股统计口径。本质上，"是不是中概股"是一个监管定性问题，而不是一个地理问题。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、交易所与层级分布</h2><p>结论先说：中概股并非集中在单一市场，而是按企业规模分散在四个层级里。纳斯达克实行三层市场制度，不同层级对应不同体量的企业。</p><p><strong>纳斯达克资本市场（NCM）</strong>门槛最低，面向中小型成长企业，绝大多数中国企业首次赴美挂牌都从这一层起步。其盈利标准要求最近一个财年（或近三年中的两年）净利润不低于75万美元，另有股东权益500万美元、市值5000万美元两套可选标准，同时需满足最低发行价4美元、至少300名公众股东、3家做市商等条件。</p><p><strong>纳斯达克全球市场（NGM）</strong>要求企业具备一定规模与稳定的持续经营记录；<strong>全球精选市场（NGSM）</strong>门槛最高，面向已完成规模化、具备稳定盈利与现金流的成熟企业。<strong>纽约证券交易所</strong>则聚集了部分体量较大的中概股。</p><p data-ts="1">企业应当按自身实际规模选择层级，层级越高并不等于越合适——达不到门槛硬冲，反而会拉长周期、抬高成本。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、行业分布的结构性特征</h2><p>中概股的行业分布并不均衡，集中度相当高。消费互联网与电商板块贡献了最大的市值占比；教育服务板块在经历政策周期后规模明显收缩；新能源汽车与先进制造板块是近年增量的主要来源；医疗健康与生物科技板块企业数量不少，但市值分化极大。</p><p>这种分布对拟上市企业的意义在于：<strong>你所在行业在美股是否已有可比公司，直接影响估值锚点的形成</strong>。有成熟可比公司的行业，投资人有现成的估值框架，定价过程相对顺畅；而在美股缺乏对标的细分行业，路演阶段往往要花大量精力先教育投资人"你这个生意是什么"，估值也更容易被压。关键在于，行业适配度是上市可行性评估中不亚于财务指标的一个维度。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、市值梯队与流动性的真实分化</h2><p>中概股最容易被忽视的现实是：<strong>挂牌成功与交易活跃是两回事</strong>。头部企业享有充分的机构覆盖、研究报告与流动性，而大量中小市值中概股长期处于低成交、低覆盖状态，日均成交额可能只有数万至数十万美元量级。</p><p>流动性不足会带来一系列连锁反应：再融资困难（增发难以找到承接方）、估值折价、机构投资者因流动性门槛无法建仓、甚至面临交易所的最低股价与市值合规压力。因此在上市规划阶段就应当把挂牌后的流动性管理、投资者关系（IR）与研究覆盖纳入考量，而不是等敲钟之后再补。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、监管环境的两次结构性变化</h2><p>过去数年间，中概股的监管框架经历了两次重大调整，任何一家计划赴美上市的企业都必须理解。</p><p>第一次是<strong>《外国公司问责法》（HFCAA）</strong>的实施。该法案要求在美上市公司的审计底稿必须接受美国上市公司会计监督委员会（PCAOB）检查，连续不符合要求将面临强制退市。随后中美双方就审计监管合作达成安排，PCAOB 得以对相关会计师事务所开展检查，这一风险得到阶段性缓解，但底稿可检查性仍是必须满足的前提。</p><p>第二次是<strong>中国证监会境外上市备案制</strong>于2023年3月31日正式施行。境内企业直接或间接境外上市，均需向证监会履行备案程序。备案制带来的不是"能不能上"的问题，而是"周期是否可控"的问题——备案环节的时间存在不确定性，这也是部分企业转向新加坡路径的直接原因：以具有真实经营实质的新加坡主体作为上市载体，因不属于中概股定性，不适用备案要求。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、对拟上市企业的四点启示</h2><p>第一，<strong>先做定性判断，再谈财务达标</strong>。企业究竟属于中概股路径还是非中概股路径，决定了是否需要备案、周期多长、成本多少。这个判断应该在启动任何实质性工作之前完成。</p><p>第二，<strong>按实际规模选层级</strong>。中小企业选纳斯达克资本市场是常态而非降级，先上市再逐步升层是可行且常见的路径。</p><p>第三，<strong>把挂牌后的流动性问题前置考虑</strong>。上市不是终点。如果挂牌后长期无人交易、无研究覆盖，再融资和市值管理都无从谈起，上市的战略价值将大打折扣。</p><p>第四，<strong>审计合规不留灰度</strong>。PCAOB 底稿检查是硬约束，财务规范化必须在申报前完成，任何侥幸都会在问询阶段被放大。本质上，赴美上市考验的从来不只是当下的利润数字，而是企业能否在一个高透明度的监管环境中持续经营。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="a-to-h-listing.html" style="color:#6b5426;font-weight:700;">A股公司赴港上市：A+H路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="sea-expansion-listing.html" style="color:#6b5426;font-weight:700;">东南亚布局与新加坡路径协同</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="singapore-path.html" style="color:#6b5426;font-weight:700;">新加坡路径赴美上市详解</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="public-float-holders.html" style="color:#6b5426;font-weight:700;">公众持股与股东人数：纳斯达克硬指标</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-vs-nyse.html" style="color:#6b5426;font-weight:700;">纳斯达克与纽交所怎么选</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

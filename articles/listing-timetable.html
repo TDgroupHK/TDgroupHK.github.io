@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"赴美上市完整时间表","inLanguage":"zh-CN","abstract":"A month-by-month timetable for a U.S. listing, from feasibility assessment through audit, filing, roadshow and bell-ringing.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/listing-timetable.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"这是一个被普遍忽视但极为关键的问题。一家企业能否在12个月内顺利完成挂牌，关键不在于流程本身，而在于企业方对每一个月的工作内容、参与方、关键节点是否有清晰的预期。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,107 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>赴美上市完整时间表</h1>
 <div class="sub">12个月里每个月到底要做什么</div><div class="en">A month-by-month timetable for a U.S. listing, from feasibility assessment through audit, filing, roadshow and bell-ringing.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">这是一个被普遍忽视但极为关键的问题。一家企业能否在12个月内顺利完成挂牌，关键不在于流程本身，而在于企业方对每一个月的工作内容、参与方、关键节点是否有清晰的预期。</div>
-<h3>写在前面</h3>
-<p>很多创业者第一次听到赴美上市需要12个月时，第一反应是：这12个月到底在做什么？是律师在做？还是审计师在做？还是企业自己在做？</p>
-<p>彤鼎集团（香港）有限公司团队多年来辅导多家中国企业完成纳斯达克挂牌——包括教育服务行业某挂牌企业、新能源汽车经销行业某挂牌企业、建材行业某挂牌企业、生物科技行业某挂牌企业、环保行业某挂牌企业、新能源汽车行业某挂牌企业、综合行业某挂牌企业、境外某挂牌企业等——这些项目按照新加坡路径走完12个月的标准周期，每一个月的工作节奏都已经形成相对成熟的方法论。这篇文章就把这套时间表完整拆解给大家。</p>
-<h2>一、为什么是12个月</h2>
-<p>先讲清楚为什么是12个月。这个数字不是随意定的，而是由几个关键约束共同决定的。</p>
-<p>第一，审计周期。PCAOB注册的会计师事务所完成一家中国企业从中国会计准则到美国会计准则的转换，并出具至少两个完整财年的审计报告，标准周期是8至10个月。</p>
-<p>第二，离岸架构搭建。BVI、开曼、新加坡三层结构的注册、银行开户、股权重组、ODI备案等程序，标准周期是2至3个月。</p>
-<p>第三，招股说明书撰写与SEC审核。从招股说明书初稿撰写、SEC密交、问询回复、最终生效，标准周期是5至7个月。</p>
-<p>第四，路演与定价挂牌。从招股书生效到完成定价、敲钟，标准周期是1至2个月。</p>
-<p>这些工作是部分串行、部分并行的关系。串并结合后，最终汇总成12个月的标准周期。任何一个环节出问题，整个时间表都可能延后。</p>
-<h2>二、第1至2个月：架构搭建期</h2>
-<p>项目正式启动后的前两个月，重点是把跨境法律架构搭建起来。这是后续所有工作的地基，地基不牢，上面所有工作都会受影响。</p>
-<h3>具体工作清单</h3>
-<p>启动阶段，企业方需要完成：实控人个人外汇登记（37号文登记）、企业境外直接投资备案（ODI备案）等合规手续。</p>
-<p>律师团队同步推进：BVI公司注册、开曼公司注册、新加坡运营公司注册。每家公司的注册时间相对较短，但银行开户往往是难点，特别是开曼和BVI公司的银行开户，可能需要4至8周。</p>
-<p>跨境股权重组方案设计：实控人原本持有的境内公司股权，如何通过合规路径转换为境外架构。这一步需要法律、税务、外汇三方协同设计，确保整个重组过程合法合规。</p>
-<p>彤鼎集团（香港）有限公司辅导项目时，会在这一阶段完成全程的合规设计与统筹，确保企业不踩任何外汇管制或税务合规的红线。这部分工作专业性极强，是整个新加坡路径中最容易出错的环节之一。</p>
-<h3>企业方需要配合的事</h3>
-<p>提供完整的实控人身份资料、原有公司股东资料、近两年财务数据。配合签署一系列法律文件。配合银行开户的尽职调查问题。</p>
-<p>一句话总结：这两个月企业方主要是配合，但要快速响应——任何延迟都会向后延迟整个项目。</p>
-<h2>三、第3至4个月：财务规范期</h2>
-<p>架构搭建完成后，进入财务规范化阶段。这是整个12个月里最容易拖时间的阶段——很多项目就是在这一步卡住，导致整体周期被拉长到18个月甚至更久。</p>
-<h3>PCAOB审计师的工作</h3>
-<p>审计师在这一阶段正式进场。第一件事是把企业的中国会计准则报表转换为美国会计准则报表（US-GAAP）。这两套准则在收入确认、关联交易披露、税务处理、合并范围等方面有不少差异，转换过程需要大量的会计调整。</p>
-<p>接下来审计师会针对最近两个完整财年做完整的审计程序：函证客户、盘点存货、抽查凭证、核对银行流水、复核重大合同等等。</p>
-<h3>最容易出问题的几个点</h3>
-<p>关联交易：实控人或其关联公司与企业之间的资金往来，必须清晰可追溯，并完成必要的清理。</p>
-<p>收入确认：很多中国企业的收入确认时点与美国会计准则有差异，需要重新调整。</p>
-<p>往来款：长期挂账的应收应付，必须查清形成原因，并按规则处理。</p>
-<p>税务历史：欠缴税款、少缴税款、税务稽查未结案等问题，都需要在这一阶段处理干净。</p>
-<p>彤鼎集团（香港）有限公司在新加坡路径辅导中反复强调一点：财务规范化必须在正式审计前就启动。如果企业等到审计师进场才开始整理，时间会非常紧张。最理想的做法是在签订上市辅导合同前的6至12个月就开始预先整理。</p>
-<h2>四、第5至6个月：招股说明书撰写期</h2>
-<p>财务工作进展到一定阶段后，律师团队和企业方共同启动招股说明书（F-1表格）的撰写。</p>
-<h3>招股说明书包含什么</h3>
-<p>一份完整的招股说明书通常包括：公司概览、风险因素、行业分析、业务介绍、管理层讨论与分析、管理团队介绍、关联交易披露、股东信息、财务报表、附注与表格等。</p>
-<p>整份招股说明书的中英文总字数，通常在10至20万字之间。这是一个庞大的文档工程。</p>
-<h3>企业方在这一阶段最累</h3>
-<p>律师会向企业要大量的资料和信息：公司历史沿革、核心业务数据、所有重大合同、所有重要客户、所有重要供应商、所有员工合同、所有知识产权登记、所有诉讼信息等等。</p>
-<p>企业方需要指定专人对接律师，每个工作日基本都要回复律师的问题。这个阶段是企业方人力投入最大的阶段。</p>
-<h3>管理层讨论与分析（MD&amp;A）的撰写</h3>
-<p>招股说明书中最重要的一节是MD&amp;A——管理层从经营者视角对公司业务、财务、风险的全面讨论。这一节通常由律师起草、CFO审阅、CEO最终确认。</p>
-<p>MD&amp;A的质量直接影响SEC的审核效率——写得好，问询轮次少；写得差，可能要经历4至5轮问询，每一轮就是数周时间。</p>
-<h2>五、第7至8个月：SEC密交与第一轮问询</h2>
-<p>招股说明书完成初稿后，向美国证监会（SEC）以密交（Confidential Submission）的方式提交。密交的好处是文件不对公众披露，企业可以与SEC做闭门沟通。</p>
-<h3>第一轮问询通常的内容</h3>
-<p>SEC收到密交后通常在3至4周内出具第一轮问询函（Comment Letter），里面包含20至60个问题，集中在：会计政策的合理性、收入确认的具体方法、关联交易的披露完整性、风险因素的披露充分性、管理团队信息的准确性、行业数据来源的可靠性等。</p>
-<h3>回复问询是企业方+律师+审计师三方协同</h3>
-<p>每个问题需要由相应的专业方来准备答案。律师负责法律相关问题；审计师负责会计相关问题；企业方负责业务相关问题。然后由律师团队整合成正式的回复函，提交SEC。</p>
-<p>第一轮问询的回复，通常需要4至6周时间。</p>
-<h2>六、第9至10个月：后续问询与公开提交</h2>
-<p>SEC审阅完第一轮回复后，通常会出第二轮问询。第二轮的问题数量会少一些，深度更深。</p>
-<p>彤鼎集团（香港）有限公司辅导的项目中，准备充分的项目通常2至3轮问询就能进入下一阶段；准备不充分的项目可能要4至5轮，整体周期向后延伸2至3个月。</p>
-<h3>公开提交</h3>
-<p>当SEC对所有问题的回复都满意后，招股说明书会从密交状态转为公开提交状态。这一步意味着招股书的正式版本对全社会公开，企业的财务数据、业务信息、风险披露都进入公众视野。</p>
-<p>公开提交后，企业还要继续完成几项工作：纳斯达克挂牌申请的最终审批、独立董事的确认到位、各专业委员会（审计、薪酬、提名）的设立完成、内部控制声明的最终签署等。</p>
-<h2>七、第11个月：路演期</h2>
-<p>招股说明书生效后，进入路演（Roadshow）阶段。这是企业团队在挂牌前最关键的工作。</p>
-<h3>路演的核心目的</h3>
-<p>路演是企业管理团队（通常是CEO和CFO）面对全球机构投资人，讲述公司投资故事的过程。</p>
-<p>通过路演，承销商收集投资人的下单意向，了解市场对企业的认可度，最终用于定价决策。</p>
-<h3>路演的形式</h3>
-<p>一次完整的路演通常持续2至3周，覆盖美国东西海岸、亚洲（新加坡、香港）、欧洲（伦敦）的主要金融中心，每天和3至5家机构投资人分别交流。</p>
-<p>路演结束后，承销商会根据投资人下单情况，给出最终定价区间建议。</p>
-<h2>八、第12个月：定价、挂牌与敲钟</h2>
-<h3>定价</h3>
-<p>路演结束后2至3天，承销商与企业管理层一起，根据下单情况确定最终发行价。这一刻是整个上市过程的高潮——价格定得太高，可能上市当天就跌破发行价；定得太低，企业会留下“上市当天即涨”的遗憾，但融资额相对受限。</p>
-<h3>挂牌与敲钟</h3>
-<p>定价确定后的第二个交易日，企业正式在纳斯达克挂牌交易。CEO和管理团队赴纽约出席纳斯达克的敲钟仪式——这是创始人创业生涯的高光时刻。</p>
-<p>敲钟之后，企业正式成为一家美股上市公司。彤鼎集团（香港）有限公司辅导的多家纳斯达克挂牌项目，几乎都是按这一标准节奏走完12个月，最终顺利完成敲钟仪式的。</p>
-<h2>九、什么因素会让12个月变成18个月</h2>
-<p>理论上12个月可以挂牌，但实际操作中很多项目会延后。延后的原因通常集中在以下几个方面：</p>
-<h3>第一，前期准备不充分</h3>
-<p>最常见的延后原因。如果企业在签约前没有做过股权梳理、财务整理、税务规范，正式启动后这些问题集中暴露，每一个问题都可能拖延几周到几个月。</p>
-<h3>第二，关联交易处理不到位</h3>
-<p>实控人与关联公司之间的资金往来、合同关系，如果不彻底清理干净，审计阶段会反复返工。</p>
-<h3>第三，SEC问询轮次多</h3>
-<p>如果招股说明书写得不够规范，可能需要4至5轮甚至更多轮问询，每一轮就是数周时间。</p>
-<h3>第四，市场窗口判断不准</h3>
-<p>即便所有合规工作都完成了，如果选在市场不好的时点路演，可能导致定价不理想或投资人下单不足，需要等待更好的市场窗口。</p>
-<h3>第五，团队协作效率低</h3>
-<p>12个月的项目涉及律师、审计师、承销商、IR、Transfer Agent、印刷商、企业方等多方协同。任何一方反应慢，整个项目都会被拖累。这也是为什么彤鼎集团（香港）有限公司的角色定位是“整体统筹”——由有经验的团队作为项目总指挥，确保各方按节奏推进。</p>
-<h2>十、给企业方的几点建议</h2>
-<h3>第一，签约前先做好预先整理</h3>
-<p>如果企业还没正式签约上市辅导合同，先用6至12个月做股权清理、财务规范、税务整改、关联交易处理。这些前期工作做好，正式启动后整个12个月都能压缩到最低风险。</p>
-<h3>第二，配置专门的项目对接团队</h3>
-<p>企业内部至少要有一位项目经理级别的负责人，专门负责对接律师、审计师等中介。这位负责人最好直接向CEO汇报，有足够的决策权和调动权。</p>
-<h3>第三，CFO必须早进场</h3>
-<p>一家企业要顺利完成纳斯达克挂牌，必须有一位懂美股财务规则的CFO。如果企业内部没有合适人选，越早外聘越好，最好在项目启动前就到位。</p>
-<h3>第4，重视独立董事的物色</h3>
-<p>独立董事的物色比想象中难。要找到既懂行业、又有美股上市公司经验、还愿意担任独立董事的人选，往往需要几个月时间。建议在第6至8个月就启动物色工作。</p>
-<h3>第5，与上市辅导机构保持紧密协同</h3>
-<p>上市辅导机构是整个12个月的总指挥。彤鼎集团（香港）有限公司在过往辅导项目中反复验证一个原则：企业方与辅导机构每周至少要有一次完整的进度沟通会，确保所有问题在最早时间被发现和解决。</p>
-<h3>结语</h3>
-<p>12个月听起来很长，实际操作起来却非常紧凑。每一个月都有明确的工作内容、明确的参与方、明确的交付物。任何一个月的延后，都会向后传导，影响整体节奏。</p>
-<p>对中国企业来说，赴美上市的关键不是这12个月本身，而是签约前的预先准备。把签约前的6至12个月用好，正式启动后的12个月就能按部就班地推进；如果签约前没准备，签约后就要边做边整改，时间和成本都会大幅放大。</p>
-<p>理解这套完整时间表，是企业主走向纳斯达克的第一步认知功课。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>彤鼎团队过往主导的纳斯达克挂牌项目包括：教育服务行业某挂牌企业、新能源汽车经销行业某挂牌企业、建材行业某挂牌企业、包装行业某A股上市企业、生物科技行业某挂牌企业、环保行业某挂牌企业、新能源汽车行业某挂牌企业、综合行业某挂牌企业、境外某挂牌企业等，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等多个行业。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>这是一个被普遍忽视但极为关键的问题。一家企业能否在12个月内顺利完成挂牌，关键不在于流程本身，而在于企业方对每一个月的工作内容、参与方、关键节点是否有清晰的预期。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">为什么是12个月</a></li><li><a href="#sec-02">第1至2个月：架构搭建期</a></li><li><a href="#sec-03">第3至4个月：财务规范期</a></li><li><a href="#sec-04">第5至6个月：招股说明书撰写期</a></li><li><a href="#sec-05">第7至8个月：SEC密交与第一轮问询</a></li><li><a href="#sec-06">第9至10个月：后续问询与公开提交</a></li><li><a href="#sec-07">第11个月：路演期</a></li><li><a href="#sec-08">第12个月：定价、挂牌与敲钟</a></li><li><a href="#sec-09">什么因素会让12个月变成18个月</a></li><li><a href="#sec-10">给企业方的几点建议</a></li></ol></div><p><h3>写在前面</h3></p><p>很多创业者第一次听到赴美上市需要12个月时，第一反应是：这12个月到底在做什么？是律师在做？还是审计师在做？还是企业自己在做？</p><p>彤鼎集团（香港）有限公司团队多年来辅导多家中国企业完成纳斯达克挂牌——包括教育服务行业某挂牌企业、新能源汽车经销行业某挂牌企业、建材行业某挂牌企业、生物科技行业某挂牌企业、环保行业某挂牌企业、新能源汽车行业某挂牌企业、综合行业某挂牌企业、境外某挂牌企业等——这些项目按照新加坡路径走完12个月的标准周期，每一个月的工作节奏都已经形成相对成熟的方法论。这篇文章就把这套时间表完整拆解给大家。</p><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、为什么是12个月</h2><p>先讲清楚为什么是12个月。这个数字不是随意定的，而是由几个关键约束共同决定的。</p><p>第一，审计周期。PCAOB注册的会计师事务所完成一家中国企业从中国会计准则到美国会计准则的转换，并出具至少两个完整财年的审计报告，标准周期是8至10个月。</p><p>第二，离岸架构搭建。BVI、开曼、新加坡三层结构的注册、银行开户、股权重组、ODI备案等程序，标准周期是2至3个月。</p><p>第三，招股说明书撰写与SEC审核。从招股说明书初稿撰写、SEC密交、问询回复、最终生效，标准周期是5至7个月。</p><p>第四，路演与定价挂牌。从招股书生效到完成定价、敲钟，标准周期是1至2个月。</p><p>这些工作是部分串行、部分并行的关系。串并结合后，最终汇总成12个月的标准周期。任何一个环节出问题，整个时间表都可能延后。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、第1至2个月：架构搭建期</h2><p>项目正式启动后的前两个月，重点是把跨境法律架构搭建起来。这是后续所有工作的地基，地基不牢，上面所有工作都会受影响。</p><p><h3>具体工作清单</h3></p><p>启动阶段，企业方需要完成：实控人个人外汇登记（37号文登记）、企业境外直接投资备案（ODI备案）等合规手续。</p><p>律师团队同步推进：BVI公司注册、开曼公司注册、新加坡运营公司注册。每家公司的注册时间相对较短，但银行开户往往是难点，特别是开曼和BVI公司的银行开户，可能需要4至8周。</p><p>跨境股权重组方案设计：实控人原本持有的境内公司股权，如何通过合规路径转换为境外架构。这一步需要法律、税务、外汇三方协同设计，确保整个重组过程合法合规。</p><p>彤鼎集团（香港）有限公司辅导项目时，会在这一阶段完成全程的合规设计与统筹，确保企业不踩任何外汇管制或税务合规的红线。这部分工作专业性极强，是整个新加坡路径中最容易出错的环节之一。</p><p><h3>企业方需要配合的事</h3></p><p>提供完整的实控人身份资料、原有公司股东资料、近两年财务数据。配合签署一系列法律文件。配合银行开户的尽职调查问题。</p><p>一句话总结：这两个月企业方主要是配合，但要快速响应——任何延迟都会向后延迟整个项目。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、第3至4个月：财务规范期</h2><p>架构搭建完成后，进入财务规范化阶段。这是整个12个月里最容易拖时间的阶段——很多项目就是在这一步卡住，导致整体周期被拉长到18个月甚至更久。</p><p><h3>PCAOB审计师的工作</h3></p><p>审计师在这一阶段正式进场。第一件事是把企业的中国会计准则报表转换为美国会计准则报表（US-GAAP）。这两套准则在收入确认、关联交易披露、税务处理、合并范围等方面有不少差异，转换过程需要大量的会计调整。</p><p>接下来审计师会针对最近两个完整财年做完整的审计程序：函证客户、盘点存货、抽查凭证、核对银行流水、复核重大合同等等。</p><p><h3>最容易出问题的几个点</h3></p><p>关联交易：实控人或其关联公司与企业之间的资金往来，必须清晰可追溯，并完成必要的清理。</p><p>收入确认：很多中国企业的收入确认时点与美国会计准则有差异，需要重新调整。</p><p>往来款：长期挂账的应收应付，必须查清形成原因，并按规则处理。</p><p>税务历史：欠缴税款、少缴税款、税务稽查未结案等问题，都需要在这一阶段处理干净。</p><p>彤鼎集团（香港）有限公司在新加坡路径辅导中反复强调一点：财务规范化必须在正式审计前就启动。如果企业等到审计师进场才开始整理，时间会非常紧张。最理想的做法是在签订上市辅导合同前的6至12个月就开始预先整理。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、第5至6个月：招股说明书撰写期</h2><p>财务工作进展到一定阶段后，律师团队和企业方共同启动招股说明书（F-1表格）的撰写。</p><p><h3>招股说明书包含什么</h3></p><p>一份完整的招股说明书通常包括：公司概览、风险因素、行业分析、业务介绍、管理层讨论与分析、管理团队介绍、关联交易披露、股东信息、财务报表、附注与表格等。</p><p>整份招股说明书的中英文总字数，通常在10至20万字之间。这是一个庞大的文档工程。</p><p><h3>企业方在这一阶段最累</h3></p><p>律师会向企业要大量的资料和信息：公司历史沿革、核心业务数据、所有重大合同、所有重要客户、所有重要供应商、所有员工合同、所有知识产权登记、所有诉讼信息等等。</p><p>企业方需要指定专人对接律师，每个工作日基本都要回复律师的问题。这个阶段是企业方人力投入最大的阶段。</p><p><h3>管理层讨论与分析（MD&amp;A）的撰写</h3></p><p>招股说明书中最重要的一节是MD&amp;A——管理层从经营者视角对公司业务、财务、风险的全面讨论。这一节通常由律师起草、CFO审阅、CEO最终确认。</p><p>MD&amp;A的质量直接影响SEC的审核效率——写得好，问询轮次少；写得差，可能要经历4至5轮问询，每一轮就是数周时间。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、第7至8个月：SEC密交与第一轮问询</h2><p>招股说明书完成初稿后，向美国证监会（SEC）以密交（Confidential Submission）的方式提交。密交的好处是文件不对公众披露，企业可以与SEC做闭门沟通。</p><p><h3>第一轮问询通常的内容</h3></p><p>SEC收到密交后通常在3至4周内出具第一轮问询函（Comment Letter），里面包含20至60个问题，集中在：会计政策的合理性、收入确认的具体方法、关联交易的披露完整性、风险因素的披露充分性、管理团队信息的准确性、行业数据来源的可靠性等。</p><p><h3>回复问询是企业方+律师+审计师三方协同</h3></p><p>每个问题需要由相应的专业方来准备答案。律师负责法律相关问题；审计师负责会计相关问题；企业方负责业务相关问题。然后由律师团队整合成正式的回复函，提交SEC。</p><p>第一轮问询的回复，通常需要4至6周时间。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、第9至10个月：后续问询与公开提交</h2><p>SEC审阅完第一轮回复后，通常会出第二轮问询。第二轮的问题数量会少一些，深度更深。</p><p>彤鼎集团（香港）有限公司辅导的项目中，准备充分的项目通常2至3轮问询就能进入下一阶段；准备不充分的项目可能要4至5轮，整体周期向后延伸2至3个月。</p><p><h3>公开提交</h3></p><p>当SEC对所有问题的回复都满意后，招股说明书会从密交状态转为公开提交状态。这一步意味着招股书的正式版本对全社会公开，企业的财务数据、业务信息、风险披露都进入公众视野。</p><p>公开提交后，企业还要继续完成几项工作：纳斯达克挂牌申请的最终审批、独立董事的确认到位、各专业委员会（审计、薪酬、提名）的设立完成、内部控制声明的最终签署等。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、第11个月：路演期</h2><p>招股说明书生效后，进入路演（Roadshow）阶段。这是企业团队在挂牌前最关键的工作。</p><p><h3>路演的核心目的</h3></p><p>路演是企业管理团队（通常是CEO和CFO）面对全球机构投资人，讲述公司投资故事的过程。</p><p>通过路演，承销商收集投资人的下单意向，了解市场对企业的认可度，最终用于定价决策。</p><p><h3>路演的形式</h3></p><p>一次完整的路演通常持续2至3周，覆盖美国东西海岸、亚洲（新加坡、香港）、欧洲（伦敦）的主要金融中心，每天和3至5家机构投资人分别交流。</p><p>路演结束后，承销商会根据投资人下单情况，给出最终定价区间建议。</p><hr class="ts-hr"><h2 id="sec-08"><span class="no">CHAPTER 08</span>八、第12个月：定价、挂牌与敲钟</h2><p><h3>定价</h3></p><p>路演结束后2至3天，承销商与企业管理层一起，根据下单情况确定最终发行价。这一刻是整个上市过程的高潮——价格定得太高，可能上市当天就跌破发行价；定得太低，企业会留下“上市当天即涨”的遗憾，但融资额相对受限。</p><p><h3>挂牌与敲钟</h3></p><p>定价确定后的第二个交易日，企业正式在纳斯达克挂牌交易。CEO和管理团队赴纽约出席纳斯达克的敲钟仪式——这是创始人创业生涯的高光时刻。</p><p>敲钟之后，企业正式成为一家美股上市公司。彤鼎集团（香港）有限公司辅导的多家纳斯达克挂牌项目，几乎都是按这一标准节奏走完12个月，最终顺利完成敲钟仪式的。</p><hr class="ts-hr"><h2 id="sec-09"><span class="no">CHAPTER 09</span>九、什么因素会让12个月变成18个月</h2><p>理论上12个月可以挂牌，但实际操作中很多项目会延后。延后的原因通常集中在以下几个方面：</p><p><h3>第一，前期准备不充分</h3></p><p>最常见的延后原因。如果企业在签约前没有做过股权梳理、财务整理、税务规范，正式启动后这些问题集中暴露，每一个问题都可能拖延几周到几个月。</p><p><h3>第二，关联交易处理不到位</h3></p><p>实控人与关联公司之间的资金往来、合同关系，如果不彻底清理干净，审计阶段会反复返工。</p><p><h3>第三，SEC问询轮次多</h3></p><p>如果招股说明书写得不够规范，可能需要4至5轮甚至更多轮问询，每一轮就是数周时间。</p><p><h3>第四，市场窗口判断不准</h3></p><p>即便所有合规工作都完成了，如果选在市场不好的时点路演，可能导致定价不理想或投资人下单不足，需要等待更好的市场窗口。</p><p><h3>第五，团队协作效率低</h3></p><p>12个月的项目涉及律师、审计师、承销商、IR、Transfer Agent、印刷商、企业方等多方协同。任何一方反应慢，整个项目都会被拖累。这也是为什么彤鼎集团（香港）有限公司的角色定位是“整体统筹”——由有经验的团队作为项目总指挥，确保各方按节奏推进。</p><hr class="ts-hr"><h2 id="sec-10"><span class="no">CHAPTER 10</span>十、给企业方的几点建议</h2><p><h3>第一，签约前先做好预先整理</h3></p><p>如果企业还没正式签约上市辅导合同，先用6至12个月做股权清理、财务规范、税务整改、关联交易处理。这些前期工作做好，正式启动后整个12个月都能压缩到最低风险。</p><p><h3>第二，配置专门的项目对接团队</h3></p><p>企业内部至少要有一位项目经理级别的负责人，专门负责对接律师、审计师等中介。这位负责人最好直接向CEO汇报，有足够的决策权和调动权。</p><p><h3>第三，CFO必须早进场</h3></p><p>一家企业要顺利完成纳斯达克挂牌，必须有一位懂美股财务规则的CFO。如果企业内部没有合适人选，越早外聘越好，最好在项目启动前就到位。</p><p><h3>第4，重视独立董事的物色</h3></p><p>独立董事的物色比想象中难。要找到既懂行业、又有美股上市公司经验、还愿意担任独立董事的人选，往往需要几个月时间。建议在第6至8个月就启动物色工作。</p><p><h3>第5，与上市辅导机构保持紧密协同</h3></p><p>上市辅导机构是整个12个月的总指挥。彤鼎集团（香港）有限公司在过往辅导项目中反复验证一个原则：企业方与辅导机构每周至少要有一次完整的进度沟通会，确保所有问题在最早时间被发现和解决。</p><p><h3>结语</h3></p><p>12个月听起来很长，实际操作起来却非常紧凑。每一个月都有明确的工作内容、明确的参与方、明确的交付物。任何一个月的延后，都会向后传导，影响整体节奏。</p><p>对中国企业来说，赴美上市的关键不是这12个月本身，而是签约前的预先准备。把签约前的6至12个月用好，正式启动后的12个月就能按部就班地推进；如果签约前没准备，签约后就要边做边整改，时间和成本都会大幅放大。</p><p>理解这套完整时间表，是企业主走向纳斯达克的第一步认知功课。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>彤鼎团队过往主导的纳斯达克挂牌项目包括：教育服务行业某挂牌企业、新能源汽车经销行业某挂牌企业、建材行业某挂牌企业、包装行业某A股上市企业、生物科技行业某挂牌企业、环保行业某挂牌企业、新能源汽车行业某挂牌企业、综合行业某挂牌企业、境外某挂牌企业等，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等多个行业。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ipo-restart.html" style="color:#6b5426;font-weight:700;">IPO中止后的重启路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="lawyer-selection.html" style="color:#6b5426;font-weight:700;">律师团队选择</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-placement-lookthrough.html" style="color:#6b5426;font-weight:700;">港股IPO配售穿透核查：交易所在核查什么</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pre-ipo-financial-cleanup.html" style="color:#6b5426;font-weight:700;">上市前财务规范化整改</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="us-gaap-differences.html" style="color:#6b5426;font-weight:700;">US-GAAP与中国会计准则差异</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

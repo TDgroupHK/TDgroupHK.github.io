@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"中概股高管减持：Rule 144 与 10b5-1 计划怎么配合","inLanguage":"zh-CN","abstract":"Directors, officers and affiliates of US-listed Chinese issuers must satisfy both Rule 144's volume and manner-of-sale conditions and the insider trading rules when selling shares. This article explains the affiliate volume limitation, the Form 144 notice threshold, the cooling-off periods introduced by the 2022 amendments to Rule 10b5-1, and how the two regimes fit together in practice.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/rule144-10b5-1.html"},"datePublished":"2026-08-01","dateModified":"2026-08-01","description":"中概股董事、高管与关联方卖出股份，需要同时满足Rule 144的数量与方式限制和内幕交易规则。本文说明Rule 144对关联方的成交量限制与Form 144申报门槛、Rule 10b5-1计划2022年修订后的冷静期与认证要求，以及两者在实操中如何衔接。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,43 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">挂牌之后 AFTER LISTING</div><h1>中概股高管减持：Rule 144 与 10b5-1 计划怎么配合</h1>
 <div class="sub">一个管「能卖多少、怎么卖」，一个管「什么时候决定卖」，两个都要过</div><div class="en">Directors, officers and affiliates of US-listed Chinese issuers must satisfy both Rule 144's volume and manner-of-sale conditions and the insider trading rules when selling shares. This article explains the affiliate volume limitation, the Form 144 notice threshold, the cooling-off periods introduced by the 2022 amendments to Rule 10b5-1, and how the two regimes fit together in practice.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">中概股董事、高管与关联方卖出所持股份，需要同时通过两道各自独立的规则。Rule 144 解决「能卖多少、以什么方式卖」：关联方在任意三个月内的卖出数量，不得超过同类已发行股份的1%与该类股票在提交Form 144前四周的平均周成交量两者中的较大者；单次拟卖出超过5,000股或5万美元的，还需向SEC提交Form 144。Rule 10b5-1 解决「什么时候作出卖出决定」：通过预先设立的交易计划，把决策时点固定在不掌握重大非公开信息的时刻。2022年12月的修订为该计划加入了冷静期，董事与高管为「计划设立或修改后90天」与「所在财季财务业绩提交后两个交易日」中的较晚者、上限120天，其他人为30天，自2023年2月27日起生效。两者不能互相替代——通过了Rule 144的数量限制，不代表决策时点是干净的。</div>
-<h2>一、两道规则各管什么</h2>
-<p><strong>结论先行：Rule 144 管交易的形态，内幕交易规则管决策的时点，任何一笔卖出都要同时过这两关。</strong></p>
-<p>中概股的实控人与高管在考虑减持时，最常见的误解是把它当成一件事。实际上美国的规则把它拆成了两个互不相关的问题。</p>
-<p>第一个问题是形态问题：这笔卖出的数量、方式、信息条件是否符合要求。这由Rule 144回答，它为受限证券与控制证券的转售提供了一个安全港。</p>
-<p>第二个问题是时点问题：作出卖出决定的那一刻，此人是否掌握重大非公开信息。这由Rule 10b-5的反欺诈条款约束，而Rule 10b5-1提供了一个可以事前建立的抗辩结构。</p>
-<p>两者的独立性是关键。一笔完全符合Rule 144数量限制的卖出，如果决策发生在掌握未公开财报数据之后，仍然构成内幕交易；反过来，一份规范的10b5-1计划也不能豁免Rule 144的数量与申报要求。因此，本质上需要的是两套流程并行，而不是选一个。</p>
-<h2>二、Rule 144 对关联方的数量限制</h2>
-<p><strong>结论先行：数量上限是一个「取较大者」的公式，会随成交量变化，需要在每次卖出前重新计算。</strong></p>
-<p>对关联方而言，在任意三个月期间内卖出的同类股权证券数量，不得超过以下两者中的较大者：该类已发行股份总数的1%；或者，若该类股票在证券交易所上市，其在提交Form 144销售通知前四周的平均每周成交量。</p>
-<p>这个公式有两个实操含义。其一，上限不是固定值。成交活跃时期的可卖出额度会高于清淡时期，因此同一持股比例在不同时点对应的可卖出数量不同。其二，计算的基准时点与Form 144的提交时点绑定，这意味着申报与计算不是两件事，顺序不能颠倒。</p>
-<p>关联方同时还需满足方式条件与信息条件：卖出应通过经纪商的常规交易进行，且发行人需符合当期公开信息的要求。对外国私人发行人而言，当期公开信息的满足路径与美国本土发行人不同，需要单独确认。发行人身份的认定标准另见本站《外国私人发行人身份认定：两步测试与丧失后的合规升级》。</p>
-<h2>三、Form 144：什么时候必须申报</h2>
-<p><strong>结论先行：门槛是三个月内超过5,000股或5万美元，两个条件满足其一即触发。</strong></p>
-<p>关联方计划在三个月内卖出超过5,000股，或者卖出金额超过5万美元的，须向SEC提交Form 144销售通知。这两个门槛是「或」的关系，不是「且」——数量小但金额大，同样触发。</p>
-<p>需要提醒的是门槛本身很低。对多数中概股的董事与高管来说，任何有实际意义的减持都会超过这个门槛，因此Form 144实际上是常规动作而非例外情形。把它当成例外来处理，容易在节奏上出问题。</p>
-<p>更重要的是前一节提到的顺序关系：成交量限制的计算基准是Form 144提交前的四周，因此正确的流程是先确定拟卖出数量与申报时点、完成计算、提交Form 144，再执行卖出。反过来先卖再补申报，既不符合规则，也会让数量计算失去基准。</p>
-<h2>四、Rule 10b5-1 计划：把决策时点固定下来</h2>
-<p><strong>结论先行：这份计划的作用不是许可卖出，而是把「决定卖」和「执行卖」在时间上分开，使前者发生在信息干净的时刻。</strong></p>
-<p>Rule 10b5-1允许内部人事先设立交易计划，约定未来卖出的数量、价格与时间，或者约定一个决定这些要素的公式，此后按计划自动执行。它把内部人交易从逐笔自证当时不知情，变成制度性地证明决策发生在知情之前。</p>
-<p>SEC于2022年12月对该规则作出重大修订，2023年2月27日生效。修订的核心是冷静期：对董事与高管，冷静期是以下两者中较晚的一个——计划设立或修改后90天，或计划设立或修改所在财季的财务业绩提交后两个交易日，且总长不超过120天；对其他人，冷静期为设立或修改后30天。</p>
-<p>修订同时增加了三项约束。董事与高管须作出善意认证，声明在设立计划时不掌握有关发行人或其证券的重大非公开信息，且并非为规避内幕交易规则而设立。原则上不得同时持有多份重叠的计划。单笔交易计划在任意12个月内限用一次。</p>
-<p>这些约束合起来改变的是节奏。临时决定卖出、当月执行的做法不再可行；一份计划要产生效果，必须在真正需要资金之前相当长的时间就设立好。因此，本质上10b5-1把减持从一个决策变成了一项需要提前规划的安排。内幕交易的整体红线另见本站《内幕交易合规红线》。</p>
-<h2>五、两套流程怎么衔接</h2>
-<p><strong>结论先行：正确的顺序是先设计划、走完冷静期，再在计划执行的同时满足Rule 144的申报与数量要求。</strong></p>
-<p>实践中较为稳妥的路径是这样几步。首先在窗口期内、不掌握重大非公开信息的时点设立10b5-1计划，同时完成善意认证，并确认不存在重叠计划。其次等待冷静期走完——对董事与高管，需要同时满足90天与财报提交后两个交易日两个条件，且注意120天上限。</p>
-<p>计划开始执行后，Rule 144的义务并不消失。每次卖出前仍需按公式计算三个月期间内的可卖出上限，在触发门槛时提交Form 144，并确保通过经纪商的常规交易执行。这两套流程的时间轴是重叠的，而不是先后的。</p>
-<p>一个容易被忽略的衔接点是：修改计划会重新起算冷静期。因此计划设立时的参数设计需要留出足够余量，避免因为市场变化频繁调整——每一次调整都意味着又要等待一轮冷静期。关键在于，这套制度奖励的是提前规划，惩罚的是临场应变。</p>
-<h2>六、给中概股实控人与法务的四个检查问题</h2>
-<p><strong>结论先行：这四个问题都能在内部查证，不需要判断市场。</strong></p>
-<p>第一，公司现有的内部人交易政策，是否已经按2022年修订更新？沿用修订前的模板，冷静期与认证条款会缺失。</p>
-<p>第二，董事与高管现有的10b5-1计划，是否存在重叠？以及是否有人在12个月内使用了多于一次的单笔交易计划？</p>
-<p>第三，负责计算Rule 144成交量上限的人是谁，计算依据的四周区间与Form 144提交时点是否对齐？</p>
-<p>第四，公司是否掌握全部内部人的减持安排全貌？披露与合规责任在公司一侧，而信息通常散在个人手里。</p>
-<p>彤鼎在这一阶段提供的是信息披露、公司治理与投资者关系层面的企业管理咨询，不接触交易、不参与任何形式的市场操纵，也不对股价作任何承诺；具体证券交易的执行与法律意见由持牌合作机构承做。华尔街彤鼎俱乐部内，挂牌后的合规实务是成员讨论较为集中的议题之一。如需了解俱乐部会员详情，可发送邮件至 liaoqijie@tdgroup.hk。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>中概股董事、高管与关联方卖出所持股份，需要同时通过两道各自独立的规则。Rule 144 解决「能卖多少、以什么方式卖」：关联方在任意三个月内的卖出数量，不得超过同类已发行股份的1%与该类股票在提交Form 144前四周的平均周成交量两者中的较大者；单次拟卖出超过5,000股或5万美元的，还需向SEC提交Form 144。</p><p>Rule 10b5-1 解决「什么时候作出卖出决定」：通过预先设立的交易计划，把决策时点固定在不掌握重大非公开信息的时刻。2022年12月的修订为该计划加入了冷静期，董事与高管为「计划设立或修改后90天」与「所在财季财务业绩提交后两个交易日」中的较晚者、上限120天，其他人为30天，自2023年2月27日起生效。两者不能互相替代——通过了Rule 144的数量限制，不代表决策时点是干净的。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">两道规则各管什么</a></li><li><a href="#sec-02">Rule 144 对关联方的数量限制</a></li><li><a href="#sec-03">Form 144：什么时候必须申报</a></li><li><a href="#sec-04">Rule 10b5-1 计划：把决策时点固定下来</a></li><li><a href="#sec-05">两套流程怎么衔接</a></li><li><a href="#sec-06">给中概股实控人与法务的四个检查问题</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、两道规则各管什么</h2><div class="ts-lead"><span class="tag">结论先行</span><p>Rule 144 管交易的形态，内幕交易规则管决策的时点，任何一笔卖出都要同时过这两关。</p></div><p>中概股的实控人与高管在考虑减持时，最常见的误解是把它当成一件事。实际上美国的规则把它拆成了两个互不相关的问题。</p><p>第一个问题是形态问题：这笔卖出的数量、方式、信息条件是否符合要求。这由Rule 144回答，它为受限证券与控制证券的转售提供了一个安全港。</p><p>第二个问题是时点问题：作出卖出决定的那一刻，此人是否掌握重大非公开信息。这由Rule 10b-5的反欺诈条款约束，而Rule 10b5-1提供了一个可以事前建立的抗辩结构。</p><p>两者的独立性是关键。一笔完全符合Rule 144数量限制的卖出，如果决策发生在掌握未公开财报数据之后，仍然构成内幕交易；反过来，一份规范的10b5-1计划也不能豁免Rule 144的数量与申报要求。因此，本质上需要的是两套流程并行，而不是选一个。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、Rule 144 对关联方的数量限制</h2><div class="ts-lead"><span class="tag">结论先行</span><p>数量上限是一个「取较大者」的公式，会随成交量变化，需要在每次卖出前重新计算。</p></div><p>对关联方而言，在任意三个月期间内卖出的同类股权证券数量，不得超过以下两者中的较大者：该类已发行股份总数的1%；或者，若该类股票在证券交易所上市，其在提交Form 144销售通知前四周的平均每周成交量。</p><p>这个公式有两个实操含义。其一，上限不是固定值。成交活跃时期的可卖出额度会高于清淡时期，因此同一持股比例在不同时点对应的可卖出数量不同。其二，计算的基准时点与Form 144的提交时点绑定，这意味着申报与计算不是两件事，顺序不能颠倒。</p><p>关联方同时还需满足方式条件与信息条件：卖出应通过经纪商的常规交易进行，且发行人需符合当期公开信息的要求。对外国私人发行人而言，当期公开信息的满足路径与美国本土发行人不同，需要单独确认。</p><p data-ts="1">发行人身份的认定标准另见本站《外国私人发行人身份认定：两步测试与丧失后的合规升级》。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、Form 144：什么时候必须申报</h2><div class="ts-lead"><span class="tag">结论先行</span><p>门槛是三个月内超过5,000股或5万美元，两个条件满足其一即触发。</p></div><p>关联方计划在三个月内卖出超过5,000股，或者卖出金额超过5万美元的，须向SEC提交Form 144销售通知。这两个门槛是「或」的关系，不是「且」——数量小但金额大，同样触发。</p><p>需要提醒的是门槛本身很低。对多数中概股的董事与高管来说，任何有实际意义的减持都会超过这个门槛，因此Form 144实际上是常规动作而非例外情形。把它当成例外来处理，容易在节奏上出问题。</p><p>更重要的是前一节提到的顺序关系：成交量限制的计算基准是Form 144提交前的四周，因此正确的流程是先确定拟卖出数量与申报时点、完成计算、提交Form 144，再执行卖出。反过来先卖再补申报，既不符合规则，也会让数量计算失去基准。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、Rule 10b5-1 计划：把决策时点固定下来</h2><div class="ts-lead"><span class="tag">结论先行</span><p>这份计划的作用不是许可卖出，而是把「决定卖」和「执行卖」在时间上分开，使前者发生在信息干净的时刻。</p></div><p>Rule 10b5-1允许内部人事先设立交易计划，约定未来卖出的数量、价格与时间，或者约定一个决定这些要素的公式，此后按计划自动执行。它把内部人交易从逐笔自证当时不知情，变成制度性地证明决策发生在知情之前。</p><p>SEC于2022年12月对该规则作出重大修订，2023年2月27日生效。修订的核心是冷静期：对董事与高管，冷静期是以下两者中较晚的一个——计划设立或修改后90天，或计划设立或修改所在财季的财务业绩提交后两个交易日，且总长不超过120天；对其他人，冷静期为设立或修改后30天。</p><p>修订同时增加了三项约束。董事与高管须作出善意认证，声明在设立计划时不掌握有关发行人或其证券的重大非公开信息，且并非为规避内幕交易规则而设立。原则上不得同时持有多份重叠的计划。单笔交易计划在任意12个月内限用一次。</p><p>这些约束合起来改变的是节奏。临时决定卖出、当月执行的做法不再可行；一份计划要产生效果，必须在真正需要资金之前相当长的时间就设立好。因此，本质上10b5-1把减持从一个决策变成了一项需要提前规划的安排。内幕交易的整体红线另见本站《内幕交易合规红线》。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、两套流程怎么衔接</h2><div class="ts-lead"><span class="tag">结论先行</span><p>正确的顺序是先设计划、走完冷静期，再在计划执行的同时满足Rule 144的申报与数量要求。</p></div><p>实践中较为稳妥的路径是这样几步。首先在窗口期内、不掌握重大非公开信息的时点设立10b5-1计划，同时完成善意认证，并确认不存在重叠计划。其次等待冷静期走完——对董事与高管，需要同时满足90天与财报提交后两个交易日两个条件，且注意120天上限。</p><p>计划开始执行后，Rule 144的义务并不消失。每次卖出前仍需按公式计算三个月期间内的可卖出上限，在触发门槛时提交Form 144，并确保通过经纪商的常规交易执行。这两套流程的时间轴是重叠的，而不是先后的。</p><p>一个容易被忽略的衔接点是：修改计划会重新起算冷静期。因此计划设立时的参数设计需要留出足够余量，避免因为市场变化频繁调整——每一次调整都意味着又要等待一轮冷静期。关键在于，这套制度奖励的是提前规划，惩罚的是临场应变。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、给中概股实控人与法务的四个检查问题</h2><div class="ts-lead"><span class="tag">结论先行</span><p>这四个问题都能在内部查证，不需要判断市场。</p></div><p>第一，公司现有的内部人交易政策，是否已经按2022年修订更新？沿用修订前的模板，冷静期与认证条款会缺失。</p><p>第二，董事与高管现有的10b5-1计划，是否存在重叠？以及是否有人在12个月内使用了多于一次的单笔交易计划？</p><p>第三，负责计算Rule 144成交量上限的人是谁，计算依据的四周区间与Form 144提交时点是否对齐？</p><p>第四，公司是否掌握全部内部人的减持安排全貌？披露与合规责任在公司一侧，而信息通常散在个人手里。</p><p>彤鼎在这一阶段提供的是信息披露、公司治理与投资者关系层面的企业管理咨询，不接触交易、不参与任何形式的市场操纵，也不对股价作任何承诺；具体证券交易的执行与法律意见由持牌合作机构承做。</p><p data-ts="1">华尔街彤鼎俱乐部内，挂牌后的合规实务是成员讨论较为集中的议题之一。如需了解俱乐部会员详情，可发送邮件至 liaoqijie@tdgroup.hk。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="lockup-expiry.html" style="color:#6b5426;font-weight:700;">上市后的锁定期与解禁减持</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="us-market-cap-toolkit.html" style="color:#6b5426;font-weight:700;">美股没有「市值管理」这个概念：中概股公司的对应工具箱</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-buyback-treasury-shares.html" style="color:#6b5426;font-weight:700;">港股回购与库存股份：2024年新机制改了什么，与A股又差在哪</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="share-reduction-rules-2024.html" style="color:#6b5426;font-weight:700;">减持新规下，实控人的退出路径还剩哪些</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="valuation-enhancement-plan.html" style="color:#6b5426;font-weight:700;">长期破净公司的估值提升计划：谁必须做、写什么、怎么披露</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

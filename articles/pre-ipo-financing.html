@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Pre-IPO融资谈判要点","inLanguage":"zh-CN","abstract":"Pre-IPO financing is the last private round before a listing. From kickoff to a signed term sheet the standard cycle is 6 to 9 months across eight steps. Typical parameters: round size 15% to 30% of the expected IPO raise, dilution held to 15% to 25%, four core document sets prepared in 4 to 6 weeks, a long list of 30 to 50 investors narrowed to a short list of 10 to 15, due diligence of 6 to 12 weeks, term sheet negotiation of 2 to 4 weeks and 4 to 8 weeks from term sheet to closing. The decisive value sits in the terms - liquidation preference, anti-dilution, board seats, drag-along and performance undertakings - not in the headline valuation.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/pre-ipo-financing.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"Pre-IPO融资，是指企业在正式启动上市申报前的最后一轮或几轮私募融资，其标准周期从启动到拿到Term Sheet为6至9个月，可拆解为八个步骤：明确融资目标、准备核心材料、建立估值参考模型、筛选投资人名单、启动初步接触、配合深度尽调、Term Sheet谈判、签署投资协议。前四步由企业方主导，通"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
@@ -196,53 +263,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">融资条款 TERMS</div><h1>Pre-IPO融资谈判要点</h1>
 <div class="sub">从融资目标到Term Sheet的6至9个月全流程与条款博弈</div><div class="en">Pre-IPO financing is the last private round before a listing. From kickoff to a signed term sheet the standard cycle is 6 to 9 months across eight steps. Typical parameters: round size 15% to 30% of the expected IPO raise, dilution held to 15% to 25%, four core document sets prepared in 4 to 6 weeks, a long list of 30 to 50 investors narrowed to a short list of 10 to 15, due diligence of 6 to 12 weeks, term sheet negotiation of 2 to 4 weeks and 4 to 8 weeks from term sheet to closing. The decisive value sits in the terms - liquidation preference, anti-dilution, board seats, drag-along and performance undertakings - not in the headline valuation.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">Pre-IPO融资，是指企业在正式启动上市申报前的最后一轮或几轮私募融资，其标准周期从启动到拿到Term Sheet为6至9个月，可拆解为八个步骤：明确融资目标、准备核心材料、建立估值参考模型、筛选投资人名单、启动初步接触、配合深度尽调、Term Sheet谈判、签署投资协议。前四步由企业方主导，通常3个月内完成；后四步与投资人共同推进。常用参数区间是：本轮融资规模设定为预计上市募资规模的15%至30%，本轮股权稀释控制在15%至25%，核心材料准备4至6周，长名单30至50家、短名单10至15家，尽职调查6至12周，Term Sheet谈判2至4周，签约到交割再需4至8周。关键在于，Pre-IPO融资真正决定长期得失的不是估值数字，而是清算优先权、反稀释、董事会席位、领售权与业绩承诺这几组条款的具体写法。</div>
-<h2>一、Pre-IPO融资与前几轮融资的四个本质差别</h2>
-<p><strong>结论先说：Pre-IPO不是"再融一轮"，它是私有公司向公众公司过渡的最后一次结构性调整。</strong>与天使轮、A轮、B轮相比，它有四个显著差别。</p>
-<p>第一，定价逻辑不同。早期轮次定价基于赛道与团队想象空间，Pre-IPO轮的估值已经必须锚定可比上市公司的估值倍数，因为投资人退出路径明确指向公开市场，估值一旦脱离二级市场参照系，本轮投资人的退出收益就无从测算。</p>
-<p>第二，投资人性质不同。本轮进入的以财务投资人为主——私募股权基金、产业基金、战略投资人。他们关心的不是企业能否讲出新故事，而是能否在12至24个月内完成申报、能否在锁定期结束后有足够流动性退出。</p>
-<p>第三，尽调深度不同。早期轮次的尽调可能几周结束，Pre-IPO轮的尽调是按准上市公司标准做的：商业尽调、财务尽调、法律尽调，技术驱动型企业另加技术尽调，全流程6至12周。这轮尽调查出来的问题，往往就是后续申报时中介机构会重复提出的问题。</p>
-<p>第四，融资的功能不同。补充资本只是其中一半功能，另一半是为申报铺路——专业财务投资人愿意进入，本身就构成对企业治理规范度、财务真实性、信息披露能力的一次外部验证。<strong>本质上，Pre-IPO轮是企业第一次按公众公司标准接受体检。</strong></p>
-
-<h2>二、从启动到Term Sheet的八个步骤与时间表</h2>
-<p><strong>结论先说：八个步骤中，前四步完全可控，后四步只能争取主动，因此前四步的完成质量决定后四步的效率。</strong></p>
-<p>步骤一，明确融资目标，1至2周。启动任何对外接触前必须先回答三个问题：融多少钱、让多少股、钱用在哪里。可用的标准框架是：本轮规模设为预计上市募资规模的15%至30%；稀释比例控制在15%至25%；资金用途按里程碑拆分，例如产品研发30%、市场扩张40%、团队建设20%、运营储备10%。这三个数字在第一次对外沟通前就必须定死，中途反复调整会直接损伤专业形象。</p>
-<p>步骤二，准备核心材料，4至6周。需要四套：15至20页的投资简介（Pitch Deck），用于初次接触；30至50页的商业计划书（BP），用于深度沟通；财务模型（含历史3年实际数据与未来3至5年预测）；以及数据室（Data Room），涵盖公司章程、股东协议、重大合同、财务报表、税务证明、知识产权登记等全部尽调资料。这一步工作量最大，也最容易被低估。</p>
-<p>步骤三，建立估值参考模型。基于行业可比公司数据同时做三档参考——保守估值、基准估值、激进估值，用于谈判中的锚定。实务建议是本轮定价贴近基准估值，向上留出10%至20%的空间给投资人自行判断。</p>
-<p>步骤四，筛选投资人名单。先建长名单30至50家，再收敛到短名单10至15家。筛选看五个维度：投资阶段是否匹配（是否在Pre-IPO阶段活跃）、行业经验是否匹配（本行业是否有2至3个以上投资案例）、退出能力是否匹配（是否有过上市退出经验）、单笔规模是否匹配、币种与地域是否匹配（人民币基金还是美元基金）。</p>
-<p>步骤五，启动初步接触，4至6周。节奏是每周接触3至5家。标准动作顺序为：先发Pitch Deck而不发完整BP，等待3至7天的初步反馈，安排1小时左右的首次电话会，投资人内部讨论后决定是否进入深度沟通。10至15家短名单中，通常有3至5家会进入下一阶段。</p>
-<p>步骤六，配合深度尽调，6至12周。这一阶段的唯一评价标准是响应速度：尽调问题24小时内有回应、所需资料在合理时间内交付。提前建好数据室的企业尽调常在6周内结束，边做边整理的企业拖到12周甚至更久是常态，而每多拖一个月，市场环境与投资人内部预算都可能生变。</p>
-<p>步骤七，Term Sheet谈判，2至4周。通常会有2至3家给出投资意向书，这是整轮融资最关键的环节，详见下文第四节。</p>
-<p>步骤八，签署投资协议，4至8周。律师起草股份购买协议（SPA）、股东协议（SHA）与章程修订，完成全部先决条件——股权代持还原、关联交易清理、税务处理等，再经董事会决议与股东会决议，资金交割完成本轮融资。<strong>因此，6至9个月的周期里，真正属于"谈判"的时间只有2至4周，其余全是准备与配合。</strong></p>
-
-<h2>三、估值锚点：定高定低都要付代价</h2>
-<p><strong>结论先说：估值不是越高越好，估值过高会吓退投资人并倒逼出苛刻条款，估值过低则直接损失创始人权益。</strong></p>
-<p>合理锚点必须建立在四个依据上：可比公司的估值倍数、行业平均水平、本轮融资时的市场状况、企业自身基本面。三种常用方法分别对应不同企业类型：收入倍数法（PS）适合增长快但盈利尚不稳定的企业；利润倍数法（PE）适合盈利稳定的成熟企业；现金流折现法（DCF）适合现金流可预测的企业。</p>
-<p>三档估值参考的用法是：保守估值作为谈判底线，低于此线宁可不融；基准估值作为报价；激进估值作为向上争取的空间，但不作为公开报价，否则一旦被证伪会削弱全部叙事的可信度。</p>
-<p>还有一个容易被忽略的联动关系：本轮估值会成为下一轮和上市定价的参照。如果本轮定价过高，上市时按市场行情定价可能出现倒挂，前一轮投资人账面亏损，会在申报阶段成为谈判阻力。<strong>关键在于，估值是一条连续的曲线，不是一次性的单点博弈。</strong></p>
-
-<h2>四、Term Sheet的五组核心条款</h2>
-<p><strong>结论先说：Term Sheet看似只有几页纸，但每一条都在分配未来5至10年的运营空间与收益顺序。</strong>五组条款必须逐条读懂。</p>
-<p>第一组，投资金额与估值：投前估值、投后估值、对应股权比例。要特别核对期权池（ESOP）是在投前还是投后计入——同样的投前估值，期权池从投前扣除会实质性多稀释创始人若干个百分点。</p>
-<p>第二组，优先股条款：清算优先权、反稀释、转换权。清算优先权分为不参与分配型与参与分配型，倍数常见为1倍；一旦出现超过1倍的参与分配型清算优先权，在中低价退出情形下普通股股东可能所得极少。反稀释条款中，加权平均法对创始人相对温和，完全棘轮法在后续降价融资时会造成剧烈稀释。</p>
-<p>第三组，控制权条款：董事会席位、保护性条款、否决权范围。保护性条款通常覆盖增资、分红、重大资产处置、修改章程、变更主营业务等事项，条款清单越长，日常经营的自由度越低。</p>
-<p>第四组，退出条款：回购权（触发条件与回购利率）、共同售卖权、领售权。回购权的触发条件写得越宽泛，企业未来面临的现金压力越大。</p>
-<p>第五组，信息权与知情权：报告频率、审计要求、查账权范围。这一组条款本身合理，但需明确边界与保密义务，避免竞争敏感信息外流。</p>
-<p>华尔街彤鼎俱乐部在会员交流中，常把这五组条款的实际写法作为讨论重点，因为多数创始人第一次接触Term Sheet时，注意力几乎全部集中在估值一栏。涉及Pre-IPO项目的部分，仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p>
-
-<h2>五、四个最容易吃亏的条款陷阱</h2>
-<p><strong>陷阱一：高估值换苛刻条款。</strong>部分投资人用明显高于市场的估值吸引创始人签约，同时在条款中植入业绩对赌、超额参与型清算优先权、完全棘轮反稀释等安排。表面上拿到了高估值，实质上把未来的全部下行风险转嫁给了创始人。可行的判断标准很直接：估值合理而条款友好，优于估值虚高而条款苛刻。</p>
-<p><strong>陷阱二：业绩对赌的隐藏风险。</strong>对赌要求企业在约定时点达到某个收入或利润目标，未达标则以股份或现金补偿。它常以补充协议形式出现，容易被当作附属文件草签，但一旦触发，创始人股权可能大幅稀释，甚至影响上市申报时的股权结构稳定性。若无法完全回避，务必争取三点：目标设定基于可实现的基准情形而非激进情形；补偿方式优先选择股份调整而非现金；设置触发上限。</p>
-<p><strong>陷阱三：领售权失控。</strong>领售权（Drag-Along Right）允许投资人在特定条件下强制其他股东一并出售公司。若触发条件设置过松——例如仅需持有少数比例的优先股股东同意即可发动，创始人可能在不情愿的情况下被迫出售企业。合理做法是设置触发门槛（如需经多数优先股股东与创始人共同同意）、设置最低价格保护、并明确排除低于本轮估值的出售情形。</p>
-<p><strong>陷阱四：董事会席位过度让渡。</strong>投资人要求董事席位是正常的，但席位分配一旦失衡，创始人会在重大决策上被否决。实务上的常见安排是保持创始方席位不少于董事会总席位的50%，并将投资人否决权限定在明确列举的重大事项范围内，而不是笼统覆盖全部经营决策。</p>
-
-<h2>六、签约之后同样关键的三件事</h2>
-<p><strong>结论先说：拿到Term Sheet只是中点，融资完成后的执行质量决定下一步能否顺利衔接申报。</strong></p>
-<p>第一，严格按里程碑使用资金。投资协议约定的资金用途具有约束力，投资人会持续监控，任何偏离都可能在后续轮次或申报阶段被翻出来。</p>
-<p>第二，建立投资人沟通机制。通行做法是每月一次进度报告、每季度一次正式汇报。这不只是履约，也是在为申报期建立一支了解企业、愿意背书的股东队伍。</p>
-<p>第三，在融资到位后6至12个月启动正式的上市准备工作，包括顶层架构落地（境内个人设立境外持股平台须依法办理37号文外汇登记，境内企业对外投资须完成ODI备案）、按美国会计准则梳理财务、聘请PCAOB注册会计师事务所、启动治理结构调整。Pre-IPO融资与上市辅导本就是连续的两个阶段，中间的空档拖得越久，前一轮尽调成果的复用价值越低。</p>
-<p>因此，回到最初的问题——Pre-IPO融资的谈判要点是什么？答案不在估值那一行，而在条款清单的每一条：清算优先权是几倍、是否参与分配，反稀释用加权平均还是完全棘轮，董事会席位如何分配，领售权的触发门槛设在哪里，对赌是否存在及其上限。<strong>关键在于，先把这五个问题逐条问清楚，再谈签不签。</strong></p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>Pre-IPO融资，是指企业在正式启动上市申报前的最后一轮或几轮私募融资，其标准周期从启动到拿到Term Sheet为6至9个月，可拆解为八个步骤：明确融资目标、准备核心材料、建立估值参考模型、筛选投资人名单、启动初步接触、配合深度尽调、Term Sheet谈判、签署投资协议。</p><p>前四步由企业方主导，通常3个月内完成；后四步与投资人共同推进。常用参数区间是：本轮融资规模设定为预计上市募资规模的15%至30%，本轮股权稀释控制在15%至25%，核心材料准备4至6周，长名单30至50家、短名单10至15家，尽职调查6至12周，Term Sheet谈判2至4周，签约到交割再需4至8周。</p><p>关键在于，Pre-IPO融资真正决定长期得失的不是估值数字，而是清算优先权、反稀释、董事会席位、领售权与业绩承诺这几组条款的具体写法。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">Pre-IPO融资与前几轮融资的四个本质差别</a></li><li><a href="#sec-02">从启动到Term Sheet的八个步骤与时间表</a></li><li><a href="#sec-03">估值锚点：定高定低都要付代价</a></li><li><a href="#sec-04">Term Sheet的五组核心条款</a></li><li><a href="#sec-05">四个最容易吃亏的条款陷阱</a></li><li><a href="#sec-06">签约之后同样关键的三件事</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、Pre-IPO融资与前几轮融资的四个本质差别</h2><p><strong>结论先说：Pre-IPO不是"再融一轮"，它是私有公司向公众公司过渡的最后一次结构性调整。</strong>与天使轮、A轮、B轮相比，它有四个显著差别。</p><p>第一，定价逻辑不同。早期轮次定价基于赛道与团队想象空间，Pre-IPO轮的估值已经必须锚定可比上市公司的估值倍数，因为投资人退出路径明确指向公开市场，估值一旦脱离二级市场参照系，本轮投资人的退出收益就无从测算。</p><p>第二，投资人性质不同。本轮进入的以财务投资人为主——私募股权基金、产业基金、战略投资人。他们关心的不是企业能否讲出新故事，而是能否在12至24个月内完成申报、能否在锁定期结束后有足够流动性退出。</p><p>第三，尽调深度不同。早期轮次的尽调可能几周结束，Pre-IPO轮的尽调是按准上市公司标准做的：商业尽调、财务尽调、法律尽调，技术驱动型企业另加技术尽调，全流程6至12周。这轮尽调查出来的问题，往往就是后续申报时中介机构会重复提出的问题。</p><p>第四，融资的功能不同。补充资本只是其中一半功能，另一半是为申报铺路——专业财务投资人愿意进入，本身就构成对企业治理规范度、财务真实性、信息披露能力的一次外部验证。<strong>本质上，Pre-IPO轮是企业第一次按公众公司标准接受体检。</strong></p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、从启动到Term Sheet的八个步骤与时间表</h2><p><strong>结论先说：八个步骤中，前四步完全可控，后四步只能争取主动，因此前四步的完成质量决定后四步的效率。</strong></p><p>步骤一，明确融资目标，1至2周。启动任何对外接触前必须先回答三个问题：融多少钱、让多少股、钱用在哪里。可用的标准框架是：本轮规模设为预计上市募资规模的15%至30%；稀释比例控制在15%至25%；资金用途按里程碑拆分，例如产品研发30%、市场扩张40%、团队建设20%、运营储备10%。这三个数字在第一次对外沟通前就必须定死，中途反复调整会直接损伤专业形象。</p><p>步骤二，准备核心材料，4至6周。需要四套：15至20页的投资简介（Pitch Deck），用于初次接触；30至50页的商业计划书（BP），用于深度沟通；财务模型（含历史3年实际数据与未来3至5年预测）；以及数据室（Data Room），涵盖公司章程、股东协议、重大合同、财务报表、税务证明、知识产权登记等全部尽调资料。这一步工作量最大，也最容易被低估。</p><p>步骤三，建立估值参考模型。基于行业可比公司数据同时做三档参考——保守估值、基准估值、激进估值，用于谈判中的锚定。实务建议是本轮定价贴近基准估值，向上留出10%至20%的空间给投资人自行判断。</p><p>步骤四，筛选投资人名单。先建长名单30至50家，再收敛到短名单10至15家。筛选看五个维度：投资阶段是否匹配（是否在Pre-IPO阶段活跃）、行业经验是否匹配（本行业是否有2至3个以上投资案例）、退出能力是否匹配（是否有过上市退出经验）、单笔规模是否匹配、币种与地域是否匹配（人民币基金还是美元基金）。</p><p>步骤五，启动初步接触，4至6周。节奏是每周接触3至5家。标准动作顺序为：先发Pitch Deck而不发完整BP，等待3至7天的初步反馈，安排1小时左右的首次电话会，投资人内部讨论后决定是否进入深度沟通。10至15家短名单中，通常有3至5家会进入下一阶段。</p><p>步骤六，配合深度尽调，6至12周。这一阶段的唯一评价标准是响应速度：尽调问题24小时内有回应、所需资料在合理时间内交付。提前建好数据室的企业尽调常在6周内结束，边做边整理的企业拖到12周甚至更久是常态，而每多拖一个月，市场环境与投资人内部预算都可能生变。</p><p>步骤七，Term Sheet谈判，2至4周。通常会有2至3家给出投资意向书，这是整轮融资最关键的环节，详见下文第四节。</p><p>步骤八，签署投资协议，4至8周。律师起草股份购买协议（SPA）、股东协议（SHA）与章程修订，完成全部先决条件——股权代持还原、关联交易清理、税务处理等，再经董事会决议与股东会决议，资金交割完成本轮融资。</p><p data-ts="1"><strong>因此，6至9个月的周期里，真正属于"谈判"的时间只有2至4周，其余全是准备与配合。</strong></p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、估值锚点：定高定低都要付代价</h2><p><strong>结论先说：估值不是越高越好，估值过高会吓退投资人并倒逼出苛刻条款，估值过低则直接损失创始人权益。</strong></p><p>合理锚点必须建立在四个依据上：可比公司的估值倍数、行业平均水平、本轮融资时的市场状况、企业自身基本面。三种常用方法分别对应不同企业类型：收入倍数法（PS）适合增长快但盈利尚不稳定的企业；利润倍数法（PE）适合盈利稳定的成熟企业；现金流折现法（DCF）适合现金流可预测的企业。</p><p>三档估值参考的用法是：保守估值作为谈判底线，低于此线宁可不融；基准估值作为报价；激进估值作为向上争取的空间，但不作为公开报价，否则一旦被证伪会削弱全部叙事的可信度。</p><p>还有一个容易被忽略的联动关系：本轮估值会成为下一轮和上市定价的参照。如果本轮定价过高，上市时按市场行情定价可能出现倒挂，前一轮投资人账面亏损，会在申报阶段成为谈判阻力。<strong>关键在于，估值是一条连续的曲线，不是一次性的单点博弈。</strong></p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、Term Sheet的五组核心条款</h2><p><strong>结论先说：Term Sheet看似只有几页纸，但每一条都在分配未来5至10年的运营空间与收益顺序。</strong>五组条款必须逐条读懂。</p><p>第一组，投资金额与估值：投前估值、投后估值、对应股权比例。要特别核对期权池（ESOP）是在投前还是投后计入——同样的投前估值，期权池从投前扣除会实质性多稀释创始人若干个百分点。</p><p>第二组，优先股条款：清算优先权、反稀释、转换权。清算优先权分为不参与分配型与参与分配型，倍数常见为1倍；一旦出现超过1倍的参与分配型清算优先权，在中低价退出情形下普通股股东可能所得极少。</p><p data-ts="1">反稀释条款中，加权平均法对创始人相对温和，完全棘轮法在后续降价融资时会造成剧烈稀释。</p><p>第三组，控制权条款：董事会席位、保护性条款、否决权范围。保护性条款通常覆盖增资、分红、重大资产处置、修改章程、变更主营业务等事项，条款清单越长，日常经营的自由度越低。</p><p>第四组，退出条款：回购权（触发条件与回购利率）、共同售卖权、领售权。回购权的触发条件写得越宽泛，企业未来面临的现金压力越大。</p><p>第五组，信息权与知情权：报告频率、审计要求、查账权范围。这一组条款本身合理，但需明确边界与保密义务，避免竞争敏感信息外流。</p><p>华尔街彤鼎俱乐部在会员交流中，常把这五组条款的实际写法作为讨论重点，因为多数创始人第一次接触Term Sheet时，注意力几乎全部集中在估值一栏。涉及Pre-IPO项目的部分，仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、四个最容易吃亏的条款陷阱</h2><p><strong>陷阱一：高估值换苛刻条款。</strong>部分投资人用明显高于市场的估值吸引创始人签约，同时在条款中植入业绩对赌、超额参与型清算优先权、完全棘轮反稀释等安排。表面上拿到了高估值，实质上把未来的全部下行风险转嫁给了创始人。可行的判断标准很直接：估值合理而条款友好，优于估值虚高而条款苛刻。</p><p><strong>陷阱二：业绩对赌的隐藏风险。</strong>对赌要求企业在约定时点达到某个收入或利润目标，未达标则以股份或现金补偿。它常以补充协议形式出现，容易被当作附属文件草签，但一旦触发，创始人股权可能大幅稀释，甚至影响上市申报时的股权结构稳定性。</p><p data-ts="1">若无法完全回避，务必争取三点：目标设定基于可实现的基准情形而非激进情形；补偿方式优先选择股份调整而非现金；设置触发上限。</p><p><strong>陷阱三：领售权失控。</strong>领售权（Drag-Along Right）允许投资人在特定条件下强制其他股东一并出售公司。若触发条件设置过松——例如仅需持有少数比例的优先股股东同意即可发动，创始人可能在不情愿的情况下被迫出售企业。</p><p data-ts="1">合理做法是设置触发门槛（如需经多数优先股股东与创始人共同同意）、设置最低价格保护、并明确排除低于本轮估值的出售情形。</p><p><strong>陷阱四：董事会席位过度让渡。</strong>投资人要求董事席位是正常的，但席位分配一旦失衡，创始人会在重大决策上被否决。实务上的常见安排是保持创始方席位不少于董事会总席位的50%，并将投资人否决权限定在明确列举的重大事项范围内，而不是笼统覆盖全部经营决策。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、签约之后同样关键的三件事</h2><p><strong>结论先说：拿到Term Sheet只是中点，融资完成后的执行质量决定下一步能否顺利衔接申报。</strong></p><p>第一，严格按里程碑使用资金。投资协议约定的资金用途具有约束力，投资人会持续监控，任何偏离都可能在后续轮次或申报阶段被翻出来。</p><p>第二，建立投资人沟通机制。通行做法是每月一次进度报告、每季度一次正式汇报。这不只是履约，也是在为申报期建立一支了解企业、愿意背书的股东队伍。</p><p>第三，在融资到位后6至12个月启动正式的上市准备工作，包括顶层架构落地（境内个人设立境外持股平台须依法办理37号文外汇登记，境内企业对外投资须完成ODI备案）、按美国会计准则梳理财务、聘请PCAOB注册会计师事务所、启动治理结构调整。</p><p data-ts="1">Pre-IPO融资与上市辅导本就是连续的两个阶段，中间的空档拖得越久，前一轮尽调成果的复用价值越低。</p><p>因此，回到最初的问题——Pre-IPO融资的谈判要点是什么？答案不在估值那一行，而在条款清单的每一条：清算优先权是几倍、是否参与分配，反稀释用加权平均还是完全棘轮，董事会席位如何分配，领售权的触发门槛设在哪里，对赌是否存在及其上限。<strong>关键在于，先把这五个问题逐条问清楚，再谈签不签。</strong></p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="valuation-gap-financing.html" style="color:#6b5426;font-weight:700;">估值倒挂下的融资策略</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="due-diligence-dataroom.html" style="color:#6b5426;font-weight:700;">应对投资人尽调与数据室准备</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="founder-control.html" style="color:#6b5426;font-weight:700;">创始人控制权保护</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="fa-selection.html" style="color:#6b5426;font-weight:700;">赴美上市FA选择指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="valuation-methods.html" style="color:#6b5426;font-weight:700;">企业估值三种方法</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

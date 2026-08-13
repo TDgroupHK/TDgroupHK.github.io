@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"信息披露6-K与20-F","inLanguage":"zh-CN","abstract":"The disclosure regime for foreign private issuers: what triggers a 6-K, what belongs in the 20-F, and how materiality is judged.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/disclosure-6k-20f.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"上市公司最常见的信息披露错误有两类：一是迟迟不披露重大事项（担心负面影响而拖延），这会被认定为内幕信息管理不当；二是披露了不应披露的前瞻性信息（过于激进的业绩预测），成为集体诉讼的素材。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,52 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">挂牌之后 POST-LISTING</div><h1>信息披露6-K与20-F</h1>
 <div class="sub"></div><div class="en">The disclosure regime for foreign private issuers: what triggers a 6-K, what belongs in the 20-F, and how materiality is judged.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">上市公司最常见的信息披露错误有两类：一是迟迟不披露重大事项（担心负面影响而拖延），这会被认定为内幕信息管理不当；二是披露了不应披露的前瞻性信息（过于激进的业绩预测），成为集体诉讼的素材。信息披露的黄金原则是：判断是否需要立即披露，只需回答一个问题——如果这个信息被市场知道，会影响投资人的买卖决策吗？如果答案是肯定的，就必须立即披露。外国私人发行人（FPI）使用6-K表格进行临时披露；美国本土公司使用8-K表格。中概股的常见误解是以为FPI的披露要求比本土公司宽松，实际上SEC对FPI的重大事项披露要求同样严格，只是表格形式不同。</div>
-<h2>一、6-K与8-K的区别与联系</h2>
-<h3>8-K：美国本土公司的即时披露表格</h3>
-<p>8-K是美国本土上市公司向SEC提交的即时报告表格，用于披露除定期报告之外的重大事项。8-K的提交有严格的时限要求（通常是重大事项发生后4个工作日内）。8-K包含超过20个具体披露项目，每个项目对应不同类型的重大事项，如管理层变动（Item 5.02）、重大合同（Item 1.01）、财务报表变更（Item 4.01）等。</p>
-<h3>6-K：外国私人发行人的即时披露表格</h3>
-<p>6-K是外国私人发行人（FPI，包括绝大多数中概股）使用的即时披露表格。与8-K相比，6-K没有具体的项目划分，更灵活——FPI只需要提交其在本国或主要上市地要求披露的信息，或者认为应当向美国市场披露的重大信息。</p>
-<p>实践中的操作：中概股通常将英文版新闻稿或中文公告的英文译本作为附件提交给6-K。提交6-K后，该信息即成为向全市场公开的已披露信息，消除了内幕信息风险。</p>
-<h2>二、必须立即提交6-K的常见情形</h2>
-<h3>管理层变动</h3>
-<p>CEO、CFO、COO等核心高管的任命或离职，必须立即披露。高管离职是市场极为敏感的事件，特别是CFO的离职往往引发对财务问题的担忧，必须在离职决定确认后的第一个工作日内完成6-K提交。同时应该在6-K中说明离职原因（尽量客观）和继任安排，减少市场的不确定性解读。</p>
-<h3>重大合同的签署或终止</h3>
-<p>与主要客户或供应商签署的大额合同（通常金额超过公司上一财年收入的5%），需要在签署后及时披露。合同的主要条款（合同金额、期限、主要权利义务）应在6-K中说明。同样，重大合同的终止或实质性修改，也需要及时披露。</p>
-<h3>重大融资活动</h3>
-<p>PIPE、可转债发行、ATM计划建立、传统增发等所有融资活动，均需在完成定价或签署相关协议后立即提交6-K。融资金额、条款主要内容、资金用途都是必须披露的关键信息。</p>
-<h3>重大收购或资产出售</h3>
-<p>收购其他公司或出售重大资产（通常价值超过公司总资产的5%至10%），需要在签署意向协议或约束性协议后立即披露，并在完成交割后再次披露最终结果。</p>
-<h3>法律诉讼的重大进展</h3>
-<p>公司成为被告的重大诉讼（特别是集体诉讼）的立案、和解、判决，都需要通过6-K及时向市场披露。不披露重大诉讼进展是常见的SEC问询触发点。</p>
-<h3>季度业绩发布</h3>
-<p>季报（Earnings Release）以6-K形式提交，附上包含财务数据的英文新闻稿。提交时间通常在季度结束后4至6周内，并同步在美国市场收盘后召开业绩电话会议。</p>
-<h2>三、不需要立即披露的情形</h2>
-<p>并不是所有的公司事项都需要立即披露。以下情形通常可以等到定期报告（季报或年报）时一并披露：常规的小额采购合同（金额不重大）、日常的人员招聘和非核心岗位变动、非核心业务的小额资产处置、监管机构的例行检查（不涉及实质性处罚）。</p>
-<p>判断标准：该信息对合理投资人的投资决策是否重要。金额门槛和具体情形需要结合公司规模、信息的质性影响综合判断，建议在有疑问时咨询SEC律师。</p>
-<h2>四、披露的写作规范</h2>
-<h3>语言要求</h3>
-<p>6-K附件通常以英文撰写（或同时提供中英文版本）。语言应该准确、清晰、中性，避免过度乐观的表述（可能被认定为误导性陈述）和过度悲观的表述（可能引发不必要的市场恐慌）。</p>
-<h3>前瞻性陈述的Safe Harbor声明</h3>
-<p>任何包含对未来业绩、计划、预期的陈述，都必须附带Safe Harbor声明，提醒投资人前瞻性陈述存在不确定性，实际结果可能与陈述有重大差异。Safe Harbor声明的标准语言应该由公司律师提前准备好，在每份包含前瞻性内容的披露文件中复用。</p>
-<h3>重大未公开信息的管理</h3>
-<p>在6-K提交并对外公开之前，所有知晓相关信息的内部人员不得买卖公司股票，否则构成内幕交易。建立清晰的内部信息管控机制（黑名单制度）——列出哪些员工属于知情人，这些人在相关信息公开前不得交易股票。</p>
-<h2>五、常见的信息披露错误</h2>
-<h3>错误1：选择性披露（违反Reg FD）</h3>
-<p>在正式公开披露之前，将重大信息私下透露给某些特定的机构投资人或分析师，违反了SEC的公平披露规则（Reg FD）。一旦被认定违反Reg FD，公司将面临SEC调查和处罚。正确做法：在与投资人或分析师会面时，只讨论已经公开披露的信息；如果在会面中无意中透露了重大未公开信息，必须立即向全市场同步披露（通过6-K）。</p>
-<h3>错误2：披露时间过晚</h3>
-<p>重大事项发生后超过4个工作日才提交6-K（按照FPI的通常实践要求），是常见的合规瑕疵。即使没有SEC的强制期限要求，延迟披露也会引发市场对信息管理的质疑，并可能在后续发生诉讼时成为不利证据。</p>
-<h3>错误3：披露内容不完整</h3>
-<p>只披露了好消息，对同一事项的负面方面进行了隐瞒或淡化，导致披露内容产生误导。SEC对信息披露的要求不只是不能有虚假陈述，也不能有会导致误导的重大遗漏。</p>
-<h2>六、建立信息披露的内部管控体系</h2>
-<p>每家上市公司应该建立完整的信息披露委员会（Disclosure Committee），通常由CEO、CFO、法务负责人、IR总监组成，负责对所有潜在的重大事项进行评估和披露决策。</p>
-<p>建立标准化的披露流程：重大事项识别→内部评估→法律顾问咨询→董事会通知（如需要）→起草6-K→法律顾问审核→CEO/CFO签字→提交SEC→对外发布新闻稿→通知IR团队跟进。</p>
-<p>定期对全体知情员工进行内幕交易和信息披露合规培训，特别是在公司人员扩充、业务增长后，确保新加入的员工了解合规要求。</p>
-<h3>结语：信息披露是上市公司的诚信名片</h3>
-<p>信息披露的质量是资本市场对公司诚信度的直接评分。一家信息披露及时、完整、准确的公司，在遭遇市场逆境时能够获得更多投资人的信任和耐心；一家在信息披露上频繁出现问题的公司，即使基本面不错，也难以获得机构的长期持有。</p>
-<p>把信息披露做好，不只是为了避免SEC处罚，更是对自己品牌和声誉的长期投资。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>上市公司最常见的信息披露错误有两类：一是迟迟不披露重大事项（担心负面影响而拖延），这会被认定为内幕信息管理不当；二是披露了不应披露的前瞻性信息（过于激进的业绩预测），成为集体诉讼的素材。信息披露的黄金原则是：判断是否需要立即披露，只需回答一个问题——如果这个信息被市场知道，会影响投资人的买卖决策吗？</p><p>如果答案是肯定的，就必须立即披露。外国私人发行人（FPI）使用6-K表格进行临时披露；美国本土公司使用8-K表格。中概股的常见误解是以为FPI的披露要求比本土公司宽松，实际上SEC对FPI的重大事项披露要求同样严格，只是表格形式不同。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">6-K与8-K的区别与联系</a></li><li><a href="#sec-02">必须立即提交6-K的常见情形</a></li><li><a href="#sec-03">不需要立即披露的情形</a></li><li><a href="#sec-04">披露的写作规范</a></li><li><a href="#sec-05">常见的信息披露错误</a></li><li><a href="#sec-06">建立信息披露的内部管控体系</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、6-K与8-K的区别与联系</h2><p><h3>8-K：美国本土公司的即时披露表格</h3></p><p>8-K是美国本土上市公司向SEC提交的即时报告表格，用于披露除定期报告之外的重大事项。8-K的提交有严格的时限要求（通常是重大事项发生后4个工作日内）。8-K包含超过20个具体披露项目，每个项目对应不同类型的重大事项，如管理层变动（Item 5.02）、重大合同（Item 1.01）、财务报表变更（Item 4.01）等。</p><p><h3>6-K：外国私人发行人的即时披露表格</h3></p><p>6-K是外国私人发行人（FPI，包括绝大多数中概股）使用的即时披露表格。与8-K相比，6-K没有具体的项目划分，更灵活——FPI只需要提交其在本国或主要上市地要求披露的信息，或者认为应当向美国市场披露的重大信息。</p><p>实践中的操作：中概股通常将英文版新闻稿或中文公告的英文译本作为附件提交给6-K。提交6-K后，该信息即成为向全市场公开的已披露信息，消除了内幕信息风险。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、必须立即提交6-K的常见情形</h2><p><h3>管理层变动</h3></p><p>CEO、CFO、COO等核心高管的任命或离职，必须立即披露。高管离职是市场极为敏感的事件，特别是CFO的离职往往引发对财务问题的担忧，必须在离职决定确认后的第一个工作日内完成6-K提交。同时应该在6-K中说明离职原因（尽量客观）和继任安排，减少市场的不确定性解读。</p><p><h3>重大合同的签署或终止</h3></p><p>与主要客户或供应商签署的大额合同（通常金额超过公司上一财年收入的5%），需要在签署后及时披露。合同的主要条款（合同金额、期限、主要权利义务）应在6-K中说明。同样，重大合同的终止或实质性修改，也需要及时披露。</p><p><h3>重大融资活动</h3></p><p>PIPE、可转债发行、ATM计划建立、传统增发等所有融资活动，均需在完成定价或签署相关协议后立即提交6-K。融资金额、条款主要内容、资金用途都是必须披露的关键信息。</p><p><h3>重大收购或资产出售</h3></p><p>收购其他公司或出售重大资产（通常价值超过公司总资产的5%至10%），需要在签署意向协议或约束性协议后立即披露，并在完成交割后再次披露最终结果。</p><p><h3>法律诉讼的重大进展</h3></p><p>公司成为被告的重大诉讼（特别是集体诉讼）的立案、和解、判决，都需要通过6-K及时向市场披露。不披露重大诉讼进展是常见的SEC问询触发点。</p><p><h3>季度业绩发布</h3></p><p>季报（Earnings Release）以6-K形式提交，附上包含财务数据的英文新闻稿。提交时间通常在季度结束后4至6周内，并同步在美国市场收盘后召开业绩电话会议。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、不需要立即披露的情形</h2><p>并不是所有的公司事项都需要立即披露。以下情形通常可以等到定期报告（季报或年报）时一并披露：常规的小额采购合同（金额不重大）、日常的人员招聘和非核心岗位变动、非核心业务的小额资产处置、监管机构的例行检查（不涉及实质性处罚）。</p><p>判断标准：该信息对合理投资人的投资决策是否重要。金额门槛和具体情形需要结合公司规模、信息的质性影响综合判断，建议在有疑问时咨询SEC律师。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、披露的写作规范</h2><p><h3>语言要求</h3></p><p>6-K附件通常以英文撰写（或同时提供中英文版本）。语言应该准确、清晰、中性，避免过度乐观的表述（可能被认定为误导性陈述）和过度悲观的表述（可能引发不必要的市场恐慌）。</p><p><h3>前瞻性陈述的Safe Harbor声明</h3></p><p>任何包含对未来业绩、计划、预期的陈述，都必须附带Safe Harbor声明，提醒投资人前瞻性陈述存在不确定性，实际结果可能与陈述有重大差异。Safe Harbor声明的标准语言应该由公司律师提前准备好，在每份包含前瞻性内容的披露文件中复用。</p><p><h3>重大未公开信息的管理</h3></p><p>在6-K提交并对外公开之前，所有知晓相关信息的内部人员不得买卖公司股票，否则构成内幕交易。建立清晰的内部信息管控机制（黑名单制度）——列出哪些员工属于知情人，这些人在相关信息公开前不得交易股票。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、常见的信息披露错误</h2><p><h3>错误1：选择性披露（违反Reg FD）</h3></p><p>在正式公开披露之前，将重大信息私下透露给某些特定的机构投资人或分析师，违反了SEC的公平披露规则（Reg FD）。一旦被认定违反Reg FD，公司将面临SEC调查和处罚。正确做法：在与投资人或分析师会面时，只讨论已经公开披露的信息；如果在会面中无意中透露了重大未公开信息，必须立即向全市场同步披露（通过6-K）。</p><p><h3>错误2：披露时间过晚</h3></p><p>重大事项发生后超过4个工作日才提交6-K（按照FPI的通常实践要求），是常见的合规瑕疵。即使没有SEC的强制期限要求，延迟披露也会引发市场对信息管理的质疑，并可能在后续发生诉讼时成为不利证据。</p><p><h3>错误3：披露内容不完整</h3></p><p>只披露了好消息，对同一事项的负面方面进行了隐瞒或淡化，导致披露内容产生误导。SEC对信息披露的要求不只是不能有虚假陈述，也不能有会导致误导的重大遗漏。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、建立信息披露的内部管控体系</h2><p>每家上市公司应该建立完整的信息披露委员会（Disclosure Committee），通常由CEO、CFO、法务负责人、IR总监组成，负责对所有潜在的重大事项进行评估和披露决策。</p><p>建立标准化的披露流程：重大事项识别→内部评估→法律顾问咨询→董事会通知（如需要）→起草6-K→法律顾问审核→CEO/CFO签字→提交SEC→对外发布新闻稿→通知IR团队跟进。</p><p>定期对全体知情员工进行内幕交易和信息披露合规培训，特别是在公司人员扩充、业务增长后，确保新加入的员工了解合规要求。</p><p><h3>结语：信息披露是上市公司的诚信名片</h3></p><p>信息披露的质量是资本市场对公司诚信度的直接评分。一家信息披露及时、完整、准确的公司，在遭遇市场逆境时能够获得更多投资人的信任和耐心；一家在信息披露上频繁出现问题的公司，即使基本面不错，也难以获得机构的长期持有。</p><p>把信息披露做好，不只是为了避免SEC处罚，更是对自己品牌和声誉的长期投资。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="market-cap-playbook.html" style="color:#6b5426;font-weight:700;">市值管理全攻略</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="class-action-do.html" style="color:#6b5426;font-weight:700;">集体诉讼与D&amp;O保险</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="quarterly-compliance.html" style="color:#6b5426;font-weight:700;">上市公司季报合规指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="first-year-listed.html" style="color:#6b5426;font-weight:700;">上市第一年十个坑</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ir-fundamentals.html" style="color:#6b5426;font-weight:700;">上市公司IR体系搭建</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

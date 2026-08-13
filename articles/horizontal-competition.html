@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "同业竞争：老板名下另一家公司，为什么能挡住整个上市进程", "inLanguage": "zh-CN", "abstract": "Horizontal competition, or competing business, refers to the situation where an issuer and its controlling shareholder, actual controller or other enterprises under their control engage in the same or similar business and therefore compete with each other. This article explains how competing business is actually identified in listing review, which looks past registered business scope to the substance of products, customers and supply channels; how far the identification radius extends, from the controlling shareholder to close family members, directors and senior management; how the three principal venues differ, with mainland filing review, the Hong Kong regime of disclosure plus a deed of non-competition, and the United States model of related-party and risk-factor disclosure; and the four practical remedies of deregistration, disposal to independent third parties, injection into the listing group and business demarcation, together with the limits of undertakings and why cosmetic clean-ups fail.", "author": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司"}, "publisher": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司", "url": "https://tdgroup.hk", "logo": {"@type": "ImageObject", "url": "https://tdgroup.hk/img/td-crest-gold.png"}}, "mainEntityOfPage": "https://tdgroup.hk/articles/horizontal-competition.html", "datePublished": "2026-07-27", "dateModified": "2026-07-27", "image": "https://tdgroup.hk/img/og-card.jpg", "description": "同业竞争是指发行人与控股股东、实际控制人及其控制的其他企业从事相同或相似业务、构成竞争关系的情形。本文讲清认定看实际业务而非营业执照的判断方法、从控股股东延伸到亲属与董监高的认定半径、内地备案与香港披露与美国信息披露的三地口径差异、注销转让纳入划分四条清理路径，以及不竞争承诺的效力边界与形式清理为何站不住。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,55 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>同业竞争：老板名下另一家公司，为什么能挡住整个上市进程</h1>
 <div class="sub">认定半径、三地口径差异与四条清理路径</div><div class="en">Horizontal competition, or competing business, refers to the situation where an issuer and its controlling shareholder, actual controller or other enterprises under their control engage in the same or similar business and therefore compete with each other. This article explains how competing business is actually identified in listing review, which looks past registered business scope to the substance of products, customers and supply channels; how far the identification radius extends, from the controlling shareholder to close family members, directors and senior management; how the three principal venues differ, with mainland filing review, the Hong Kong regime of disclosure plus a deed of non-competition, and the United States model of related-party and risk-factor disclosure; and the four practical remedies of deregistration, disposal to independent third parties, injection into the listing group and business demarcation, together with the limits of undertakings and why cosmetic clean-ups fail.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-27">2026年7月27日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">同业竞争是指发行人与其控股股东、实际控制人及其控制的其他企业，从事相同或相似的业务，从而在产品、客户、供应渠道或市场区域上构成直接或间接竞争关系的情形。它的认定不以营业执照登记的经营范围为准，而以实际从事的业务为准；认定半径也不止于控股股东本身，还延伸至其配偶、双方父母子女控制的企业，以及发行人董事、监事、高级管理人员及其近亲属控制的相关主体。在境外上市备案、香港上市与美国上市三条路径下，监管态度并不相同：内地审核关注是否构成重大不利影响与信息披露是否真实完整；香港侧重招股文件中「与控股股东的关系」章节的披露与不竞争承诺安排；美国不禁止竞争关系本身，但要求在关联方交易与风险因素中充分披露。清理路径通常有注销、转让给无关联第三方、纳入上市主体、业务边界划分四条，具体适用以中国证监会、香港联交所与美国证券交易委员会正式规则文本为准。</div>
-<h2>一、什么算同业竞争：审核看的不是营业执照，是实际在做什么</h2>
-<p><strong>结论先行：同业竞争的认定从来不看两家公司的营业执照怎么写，而看它们实际卖什么、卖给谁、从哪里进货，只要在产品、客户、渠道、区域中的任何一项上撞车，登记范围写得再不一样也没用。</strong></p>
-<p>假设有一家做工业阀门的公司，老板姓周，二十年前和内弟一起创业，后来两人各开一家厂——周老板的厂做高压阀门，内弟的厂做低压阀门，两家分工清楚，逢年过节还互相调货。现在周老板准备把自己这家厂推上市，中介进场做尽调，头一轮就把内弟那家厂圈了出来。周老板不理解：一家高压一家低压，营业执照上写的产品类别都不一样，怎么会是同业竞争？中介的回答很直接——两家厂的前五大客户重了三家，主要原材料从同一批供应商采购，销售人员在同一批展会上碰面。这就是竞争，跟执照上写什么没有关系。</p>
-<p>这个假设的情形，是审核实务中反复出现的一类结构。判断同业竞争，通常从四个维度同时看：产品或服务是否相同或可相互替代；客户群体是否重叠；采购渠道与供应商是否重叠；经营区域是否交叉。四项之中命中越多，竞争关系越难否认。反过来，仅仅因为两家公司的行业代码不同、经营范围表述不同就主张不构成竞争，在审核中几乎不会被接受。因此，企业自查同业竞争的起手式，不是去调执照，而是去调两家公司近三年的客户名单与供应商名单。</p>
-<p>还有一类更隐蔽的情形是上下游关系。母公司做原材料、拟上市主体做成品，表面上是上下游而非竞争，但如果双方都在向同一批终端客户直接供货，或者上游企业同时具备成品生产能力，竞争关系依然成立。本质上，监管关注的是同一控制之下的两个主体，是否存在利益输送与业务转移的现实可能，而不是名义上的分工说法。</p>
-
-<h2>二、认定半径有多大：从控股股东一直画到董监高的亲属</h2>
-<p><strong>结论先行：同业竞争的认定半径远大于多数创始人的直觉，它以控股股东与实际控制人为圆心，向配偶及双方父母子女控制的企业延伸，再向发行人董事、监事、高级管理人员及其近亲属延伸。</strong></p>
-<p>先说圆心。控股股东与实际控制人自身控制的其他企业，只要与发行人业务相同或相似，构成同业竞争没有争议。这一层是所有企业自查时都不会漏掉的。</p>
-<p>难点在第二层：近亲属。中国证监会在首发业务问题解答的历次修订中，对这一半径做过实质调整——早期口径下，控股股东、实际控制人的关系密切家庭成员控制的企业与发行人存在竞争的，一并按同业竞争认定；后续修订将范围收敛为控股股东、实际控制人的配偶，以及双方的父母、子女所控制的企业按同业竞争认定，其他亲属控制的竞争性企业则改为要求充分披露其对发行人独立性的影响以及未来的收购安排。这个调整看似只是措辞变化，对企业的实际影响却很大：它把一部分远亲关系从必须清理降级为必须说清楚，但同时也意味着，凡是落在配偶与双方父母子女这一圈之内的，没有任何解释空间。</p>
-<p>回到周老板的例子。内弟属于配偶一方的兄弟，不在配偶及双方父母子女这一圈内，按收敛后的口径不当然认定为同业竞争，但仍需就独立性影响与未来安排充分披露——而披露本身就是一道难关：既要说清两家厂的客户为什么会重叠，又要说清未来如何避免利益冲突，还要经得起监管的追问。因此，落在披露区间并不等于安全上岸，只是从必须动手术变成了必须交代清楚。</p>
-<p>第三层是董事、监事与高级管理人员。这一层最容易被忽略，因为创始人往往只盯着自己名下的公司。实践中常见的情形是：某位销售副总早年注册过一家贸易公司，做的正是同一类产品的区域代理，人进了拟上市主体，公司还在，也还在经营。这类主体一旦在尽调中被翻出来，处理起来往往比控股股东名下的企业更麻烦——它不在创始人的控制之下，谈判筹码有限。关键在于，同业竞争自查必须做成一张覆盖全部关键人员及其近亲属的关系图谱，而不是创始人一个人的对外投资清单。</p>
-<p>在华尔街彤鼎俱乐部的闭门交流中，不止一位企业负责人提到过同一个教训：真正拖慢进度的，几乎从来不是自己名下那家一眼就能看见的公司，而是那些在尽调第三轮才浮出水面的亲属主体与高管旧投资。因此，把关系图谱做全、做早，比事后逐个补救成本低得多。</p>
-
-<h2>三、三地口径不一样：备案审核、香港披露与美国信息披露</h2>
-<p><strong>结论先行：同业竞争不是一条全球统一的红线，内地审核关注是否构成重大不利影响，香港以充分披露加不竞争承诺为主要机制，美国原则上不禁止竞争关系本身但要求关联方与风险因素披露到位。</strong></p>
-<p>先看内地口径。在注册制与备案管理的框架下，监管态度已经从早期的原则上不得存在同业竞争，转向关注是否存在对发行人构成重大不利影响的同业竞争，并要求发行人充分披露避免同业竞争的措施、相关资产与业务的未来安排，以及防止产生重大不利影响的具体机制。这一转向的实际含义是：竞争关系的存在本身不再自动构成上市障碍，但它必须被解释清楚、被制度性地约束住，并且解释要经得起反复问询。需要说明的是，重大不利影响的判断涉及竞争业务与发行人业务的关联度、可替代性与利益冲突程度等多项因素的综合认定，具体判断标准以中国证监会正式规则文本与个案审核意见为准，不宜自行套用坊间流传的量化口径。</p>
-<p>再看香港。香港联交所的机制核心是披露：上市文件中须设「与控股股东的关系」章节，说明申请人相对于控股股东的独立性，并讨论控股股东及其紧密联系人所从事的竞争性业务，包括所作出的不竞争承诺条款。与此配套的一项高风险点是被剔除业务的披露：当申请人在重组过程中把某些业务或公司剥离给控股股东或董事时，监管方要判断被剥离的部分是否与上市集团构成竞争，此处披露不充分或不准确，可能导致上市申请被拒。这与分拆上市场景下要求母子公司业务边界清晰，是同一套逻辑的两个应用面。因此，在香港路径下，同业竞争的功夫主要下在文件里，而不是下在必须把竞争主体清零上。</p>
-<p>最后看美国。美国证券监管的基本立场是信息披露而非实质审核，竞争关系本身不构成上市障碍，但发行人须在注册文件的关联方交易部分披露与控股股东、董事及其关联主体之间的交易与关系，并在风险因素中揭示利益冲突可能带来的不利后果。表面上门槛最低，实际风险却未必最小：披露不充分在美国市场对应的是后续的证券民事诉讼与集体诉讼风险，代价发生在上市之后而非之前。本质上，三地不是宽严之别，而是把同一道题的答题时点放在了不同位置——内地放在审核期，香港放在文件编制期，美国放在上市之后的持续责任期。</p>
-
-<h2>四、四条清理路径：注销、转让、纳入、划分</h2>
-<p><strong>结论先行：同业竞争的清理只有四条主路——把竞争主体注销、转让给无关联第三方、纳入上市主体、或在业务上做出可核查的边界划分，每条路径的适用条件与代价都不相同，选错路径比不选更糟。</strong></p>
-<p>路径一，注销。适用于竞争主体规模小、业务可关停、员工与客户可平移的情形。它最干净，一了百了，但要注意注销不是签个决议就完事：税务注销、员工安置、存量合同的履行与终止、客户关系的承接，任何一项处理不当，都可能在申报期内产生新的问题。因此，注销的时点应尽量提前，避免注销动作本身落在申报期内成为问询对象。</p>
-<p>路径二，转让给无关联第三方。适用于竞争主体有独立经营价值、不宜直接关停的情形。这条路径的核心风险是转让的真实性：受让方与原股东之间是否仍存在资金往来、代持安排、人员交叉或业务依赖，是审核必然追问的内容。名义上转出去、实际上还在自己手里的安排，不但清理无效，还会额外增加信息披露真实性的问题。关键在于，转让要做成经得起穿透核查的真实交易，包括合理对价、资金实际支付、控制权实际转移。</p>
-<p>路径三，纳入上市主体。适用于竞争业务本身有价值、与主业协同、且股权关系可理顺的情形。这是最彻底也往往最优的方案：竞争没有了，业务规模还增加了。但它的前置条件不低——被纳入主体的财务规范程度、历史沿革清晰度、资产权属完整性都要达到与上市主体同等的标准，否则等于把一个新的问题源装进了申报主体。因此，纳入之前必须先对被纳入方做一遍等同标准的体检，而不是先装进来再慢慢规范。</p>
-<p>路径四，业务边界划分。适用于竞争主体因客观原因无法注销、转让或纳入的情形，通过在产品线、客户类型、销售区域上作出明确划分，并辅以书面安排，把竞争关系降到可控范围。这条路径最灵活，也最容易做成花架子——划分标准必须具体到可核查，并且要有持续执行与监督的机制，否则一句划分市场区域的原则性表述，在问询面前撑不过两个回合。本质上，前三条路径改变的是事实，第四条路径改变的是安排，而审核对安排的信任度天然低于对事实的信任度。</p>
-
-<h2>五、不竞争承诺能撑多久：它是补充机制，不是免死金牌</h2>
-<p><strong>结论先行：不竞争承诺是同业竞争处理方案的组成部分，不是替代品，它在香港路径下是标准配置，但在任何路径下都无法单独把一个实质性的竞争关系解释掉。</strong></p>
-<p>不竞争承诺是指控股股东、实际控制人及其控制的其他企业向发行人作出的书面承诺，内容通常包括：不从事与发行人构成竞争的业务；已有的竞争性业务在约定条件下处置或注入；发行人对承诺方未来取得的竞争性商业机会享有优先选择权；违反承诺时承担相应责任。在香港路径下，这类承诺常以契约形式作出，并在上市文件中披露其主要条款，是「与控股股东的关系」章节的常规内容。</p>
-<p>承诺的价值在于把未来的行为约束写成可执行的义务，但它有三条明显的效力边界。其一，它约束的是承诺方，对承诺方之外的主体——比如已经转让出去的公司、亲属控制但不受承诺覆盖的企业——效力有限。其二，它约束的是未来，对存量的竞争事实没有溯及力，存量问题仍要靠前一节的四条路径解决。其三，它的执行依赖于发行人对承诺方的实际制衡能力，而控股股东恰恰是最难被制衡的一方，因此监管会关注承诺是否配套了可操作的触发机制与救济安排，而不只是一纸表态。</p>
-<p>实务中一个反复出现的误判是：企业以为签了承诺函就把问题解决了，于是在申报材料中把大量篇幅花在承诺条款的措辞打磨上，却回避了竞争业务当下的真实状态。审核的追问方向恰恰相反——先问现在是什么状态，再问未来怎么约束。因此，承诺函应当是清理方案落地之后的收口文件，而不是清理方案本身。</p>
-
-<h2>六、为什么很多清理是假清理：形式过关、实质未解</h2>
-<p><strong>结论先行：同业竞争方案在审核中翻车，八成不是因为没做清理，而是因为做的是形式清理——股权关系变了，人、钱、客户、供应链还在原地。</strong></p>
-<p>类型一，股权代持式转让。把竞争主体的股权转给司机、亲戚、老同学，工商登记上干净了，实际控制关系分毫未变。这类安排在穿透核查面前极其脆弱：资金流水、董事任免、公章保管、办公场所、社保缴纳单位，任何一条链路都可能暴露真实控制关系。更严重的是，一旦被认定为代持未如实披露，问题性质就从同业竞争升级为信息披露真实性问题，后果不可同日而语。</p>
-<p>类型二，账面分家、业务不分。两家公司股权彻底切割，但共用一套销售团队、共用仓库、共用信息系统，甚至由同一批人对同一批客户报价。审核关注的独立性包括业务独立、资产独立、人员独立、财务独立与机构独立，股权切割只覆盖了其中一小部分。因此，判断清理是否到位的自查标准不是股权结构图，而是这两家公司能不能各自独立地完成一笔从获客到交付到收款的完整业务。</p>
-<p>类型三，时点太晚。所有清理动作都集中在申报前的最后几个月完成，报告期内大量存在竞争与关联交易的事实无法回避，反而把监管注意力集中吸引到这一块。清理越晚，需要解释的报告期就越长，问询轮次通常也越多。关键在于，同业竞争的处理是一项应当在启动上市规划的头一年就开始推进的工作，而不是临门一脚的技术处理。</p>
-<p>类型四，只清企业、不清人。主体处理干净了，但关键岗位人员仍在两边任职、领两份薪酬、签两边的合同。人员交叉是独立性核查的重点，也是最容易被内部忽略的部分，因为在企业内部这往往被视为效率安排而非合规问题。本质上，审核判断同业竞争是否解决，看的是利益冲突的现实可能是否被消除，而不是文件是否齐备。</p>
-
-<h2>七、什么时候动手、先做哪一步：一份可执行的推进顺序</h2>
-<p><strong>结论先行：同业竞争的处理要按关系图谱、影响评估、路径选择、执行落地、文件收口五步推进，且必须在正式启动上市申报之前完成主要动作，留出足以覆盖报告期的时间缓冲。</strong></p>
-<p>步骤一，画全关系图谱。以控股股东、实际控制人为圆心，向其配偶及双方父母子女延伸，再覆盖发行人董事、监事、高级管理人员及其近亲属，列出全部对外投资与任职主体，逐一标注实际从事的业务、主要客户与供应商。这张图谱的完整性决定后面所有工作的有效性，遗漏一个主体，后续方案就要推倒重来一次。</p>
-<p>步骤二，做影响评估。对图谱中被识别为存在竞争关系的主体，逐个评估业务相似度、客户与渠道重叠度、规模占比以及利益冲突的现实可能，区分出必须清理、需要划分边界、只需充分披露三类。评估结论应形成书面判断依据，而不是停留在口头共识——因为这份判断依据在后续问询中会被反复引用。</p>
-<p>步骤三，选择路径并测算代价。对必须清理的主体，在注销、转让、纳入三条路径中作出选择，同时前置测算税务成本、员工安置成本、客户流失风险与时间成本。这一步最忌讳的是只看合规不看代价：有些方案在合规上最干净，但可能击穿企业当期的经营基础，反而危及上市本身。</p>
-<p>步骤四，执行落地并跨越时间缓冲。清理动作完成后，需要一段足够长的时间让财务报表与业务运行反映出清理后的真实状态，理想情况是让整个报告期都处于清理完成之后的状态。因此，倒推时间表时，应当把清理完成时点放在计划申报时点之前留出充分余量的位置，而不是掐着申报节点安排。</p>
-<p>步骤五，文件收口。在事实层面处理完毕后，再制作不竞争承诺、独立性说明、业务划分协议等文件，把已经发生的事实固定下来，并对未来行为作出约束。顺序不能颠倒，先出文件后做事实，是审核中最容易被识破的一类操作。华尔街彤鼎俱乐部在上市预备期的专题讨论中，反复强调的正是这个顺序问题：文件是事实的记录，不是事实的替代。</p>
-<p>最后需要提示两点。提示其一，本文所述认定口径与处理路径来自公开发布的规则与监管实践的一般性梳理，个案判断需结合企业股权结构、业务形态与拟上市地综合作出，且规则可能更新，最终口径以中国证监会、香港联合交易所与美国证券交易委员会的正式规则文本及个案答复为准。提示其二，关系图谱核查、清理方案设计、税务与员工安置安排均属专业判断事项，应由律师、会计师与税务师结合企业实际情况共同作出，本文为知识梳理，不替代专业意见。<strong>因此，同业竞争真正的难点从来不在于懂不懂规则，而在于愿不愿意在启动上市的头一年，就动那些盘根多年、牵扯亲情与旧部的业务安排。</strong></p></article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>同业竞争是指发行人与其控股股东、实际控制人及其控制的其他企业，从事相同或相似的业务，从而在产品、客户、供应渠道或市场区域上构成直接或间接竞争关系的情形。它的认定不以营业执照登记的经营范围为准，而以实际从事的业务为准；认定半径也不止于控股股东本身，还延伸至其配偶、双方父母子女控制的企业，以及发行人董事、监事、高级管理人员及其近亲属控制的相关主体。</p><p>在境外上市备案、香港上市与美国上市三条路径下，监管态度并不相同：内地审核关注是否构成重大不利影响与信息披露是否真实完整；香港侧重招股文件中「与控股股东的关系」章节的披露与不竞争承诺安排；美国不禁止竞争关系本身，但要求在关联方交易与风险因素中充分披露。</p><p>清理路径通常有注销、转让给无关联第三方、纳入上市主体、业务边界划分四条，具体适用以中国证监会、香港联交所与美国证券交易委员会正式规则文本为准。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">什么算同业竞争：审核看的不是营业执照，是实际在做什么</a></li><li><a href="#sec-02">认定半径有多大：从控股股东一直画到董监高的亲属</a></li><li><a href="#sec-03">三地口径不一样：备案审核、香港披露与美国信息披露</a></li><li><a href="#sec-04">四条清理路径：注销、转让、纳入、划分</a></li><li><a href="#sec-05">不竞争承诺能撑多久：它是补充机制，不是免死金牌</a></li><li><a href="#sec-06">为什么很多清理是假清理：形式过关、实质未解</a></li><li><a href="#sec-07">什么时候动手、先做哪一步：一份可执行的推进顺序</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、什么算同业竞争：审核看的不是营业执照，是实际在做什么</h2><div class="ts-lead"><span class="tag">结论先行</span><p>同业竞争的认定从来不看两家公司的营业执照怎么写，而看它们实际卖什么、卖给谁、从哪里进货，只要在产品、客户、渠道、区域中的任何一项上撞车，登记范围写得再不一样也没用。</p></div><p>假设有一家做工业阀门的公司，老板姓周，二十年前和内弟一起创业，后来两人各开一家厂——周老板的厂做高压阀门，内弟的厂做低压阀门，两家分工清楚，逢年过节还互相调货。现在周老板准备把自己这家厂推上市，中介进场做尽调，头一轮就把内弟那家厂圈了出来。</p><p data-ts="1">周老板不理解：一家高压一家低压，营业执照上写的产品类别都不一样，怎么会是同业竞争？中介的回答很直接——两家厂的前五大客户重了三家，主要原材料从同一批供应商采购，销售人员在同一批展会上碰面。这就是竞争，跟执照上写什么没有关系。</p><p>这个假设的情形，是审核实务中反复出现的一类结构。判断同业竞争，通常从四个维度同时看：产品或服务是否相同或可相互替代；客户群体是否重叠；采购渠道与供应商是否重叠；经营区域是否交叉。四项之中命中越多，竞争关系越难否认。</p><p data-ts="1">反过来，仅仅因为两家公司的行业代码不同、经营范围表述不同就主张不构成竞争，在审核中几乎不会被接受。因此，企业自查同业竞争的起手式，不是去调执照，而是去调两家公司近三年的客户名单与供应商名单。</p><p>还有一类更隐蔽的情形是上下游关系。母公司做原材料、拟上市主体做成品，表面上是上下游而非竞争，但如果双方都在向同一批终端客户直接供货，或者上游企业同时具备成品生产能力，竞争关系依然成立。</p><p data-ts="1">本质上，监管关注的是同一控制之下的两个主体，是否存在利益输送与业务转移的现实可能，而不是名义上的分工说法。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、认定半径有多大：从控股股东一直画到董监高的亲属</h2><div class="ts-lead"><span class="tag">结论先行</span><p>同业竞争的认定半径远大于多数创始人的直觉，它以控股股东与实际控制人为圆心，向配偶及双方父母子女控制的企业延伸，再向发行人董事、监事、高级管理人员及其近亲属延伸。</p></div><p>先说圆心。控股股东与实际控制人自身控制的其他企业，只要与发行人业务相同或相似，构成同业竞争没有争议。这一层是所有企业自查时都不会漏掉的。</p><p>难点在第二层：近亲属。中国证监会在首发业务问题解答的历次修订中，对这一半径做过实质调整——早期口径下，控股股东、实际控制人的关系密切家庭成员控制的企业与发行人存在竞争的，一并按同业竞争认定；后续修订将范围收敛为控股股东、实际控制人的配偶，以及双方的父母、子女所控制的企业按同业竞争认定，其他亲属控制的竞争性企业则改为要求充分披露其对发行人独立性的影响以及未来的收购安排。</p><p data-ts="1">这个调整看似只是措辞变化，对企业的实际影响却很大：它把一部分远亲关系从必须清理降级为必须说清楚，但同时也意味着，凡是落在配偶与双方父母子女这一圈之内的，没有任何解释空间。</p><p>回到周老板的例子。内弟属于配偶一方的兄弟，不在配偶及双方父母子女这一圈内，按收敛后的口径不当然认定为同业竞争，但仍需就独立性影响与未来安排充分披露——而披露本身就是一道难关：既要说清两家厂的客户为什么会重叠，又要说清未来如何避免利益冲突，还要经得起监管的追问。因此，落在披露区间并不等于安全上岸，只是从必须动手术变成了必须交代清楚。</p><p>第三层是董事、监事与高级管理人员。这一层最容易被忽略，因为创始人往往只盯着自己名下的公司。实践中常见的情形是：某位销售副总早年注册过一家贸易公司，做的正是同一类产品的区域代理，人进了拟上市主体，公司还在，也还在经营。</p><p data-ts="1">这类主体一旦在尽调中被翻出来，处理起来往往比控股股东名下的企业更麻烦——它不在创始人的控制之下，谈判筹码有限。关键在于，同业竞争自查必须做成一张覆盖全部关键人员及其近亲属的关系图谱，而不是创始人一个人的对外投资清单。</p><p>在华尔街彤鼎俱乐部的闭门交流中，不止一位企业负责人提到过同一个教训：真正拖慢进度的，几乎从来不是自己名下那家一眼就能看见的公司，而是那些在尽调第三轮才浮出水面的亲属主体与高管旧投资。因此，把关系图谱做全、做早，比事后逐个补救成本低得多。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、三地口径不一样：备案审核、香港披露与美国信息披露</h2><div class="ts-lead"><span class="tag">结论先行</span><p>同业竞争不是一条全球统一的红线，内地审核关注是否构成重大不利影响，香港以充分披露加不竞争承诺为主要机制，美国原则上不禁止竞争关系本身但要求关联方与风险因素披露到位。</p></div><p>先看内地口径。在注册制与备案管理的框架下，监管态度已经从早期的原则上不得存在同业竞争，转向关注是否存在对发行人构成重大不利影响的同业竞争，并要求发行人充分披露避免同业竞争的措施、相关资产与业务的未来安排，以及防止产生重大不利影响的具体机制。</p><p data-ts="1">这一转向的实际含义是：竞争关系的存在本身不再自动构成上市障碍，但它必须被解释清楚、被制度性地约束住，并且解释要经得起反复问询。需要说明的是，重大不利影响的判断涉及竞争业务与发行人业务的关联度、可替代性与利益冲突程度等多项因素的综合认定，具体判断标准以中国证监会正式规则文本与个案审核意见为准，不宜自行套用坊间流传的量化口径。</p><p>再看香港。香港联交所的机制核心是披露：上市文件中须设「与控股股东的关系」章节，说明申请人相对于控股股东的独立性，并讨论控股股东及其紧密联系人所从事的竞争性业务，包括所作出的不竞争承诺条款。</p><p data-ts="1">与此配套的一项高风险点是被剔除业务的披露：当申请人在重组过程中把某些业务或公司剥离给控股股东或董事时，监管方要判断被剥离的部分是否与上市集团构成竞争，此处披露不充分或不准确，可能导致上市申请被拒。</p><p data-ts="1">这与分拆上市场景下要求母子公司业务边界清晰，是同一套逻辑的两个应用面。因此，在香港路径下，同业竞争的功夫主要下在文件里，而不是下在必须把竞争主体清零上。</p><p>最后看美国。美国证券监管的基本立场是信息披露而非实质审核，竞争关系本身不构成上市障碍，但发行人须在注册文件的关联方交易部分披露与控股股东、董事及其关联主体之间的交易与关系，并在风险因素中揭示利益冲突可能带来的不利后果。</p><p data-ts="1">表面上门槛最低，实际风险却未必最小：披露不充分在美国市场对应的是后续的证券民事诉讼与集体诉讼风险，代价发生在上市之后而非之前。本质上，三地不是宽严之别，而是把同一道题的答题时点放在了不同位置——内地放在审核期，香港放在文件编制期，美国放在上市之后的持续责任期。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、四条清理路径：注销、转让、纳入、划分</h2><div class="ts-lead"><span class="tag">结论先行</span><p>同业竞争的清理只有四条主路——把竞争主体注销、转让给无关联第三方、纳入上市主体、或在业务上做出可核查的边界划分，每条路径的适用条件与代价都不相同，选错路径比不选更糟。</p></div><p>路径一，注销。适用于竞争主体规模小、业务可关停、员工与客户可平移的情形。它最干净，一了百了，但要注意注销不是签个决议就完事：税务注销、员工安置、存量合同的履行与终止、客户关系的承接，任何一项处理不当，都可能在申报期内产生新的问题。因此，注销的时点应尽量提前，避免注销动作本身落在申报期内成为问询对象。</p><p>路径二，转让给无关联第三方。适用于竞争主体有独立经营价值、不宜直接关停的情形。这条路径的核心风险是转让的真实性：受让方与原股东之间是否仍存在资金往来、代持安排、人员交叉或业务依赖，是审核必然追问的内容。</p><p data-ts="1">名义上转出去、实际上还在自己手里的安排，不但清理无效，还会额外增加信息披露真实性的问题。关键在于，转让要做成经得起穿透核查的真实交易，包括合理对价、资金实际支付、控制权实际转移。</p><p>路径三，纳入上市主体。适用于竞争业务本身有价值、与主业协同、且股权关系可理顺的情形。这是最彻底也往往最优的方案：竞争没有了，业务规模还增加了。但它的前置条件不低——被纳入主体的财务规范程度、历史沿革清晰度、资产权属完整性都要达到与上市主体同等的标准，否则等于把一个新的问题源装进了申报主体。因此，纳入之前必须先对被纳入方做一遍等同标准的体检，而不是先装进来再慢慢规范。</p><p>路径四，业务边界划分。适用于竞争主体因客观原因无法注销、转让或纳入的情形，通过在产品线、客户类型、销售区域上作出明确划分，并辅以书面安排，把竞争关系降到可控范围。这条路径最灵活，也最容易做成花架子——划分标准必须具体到可核查，并且要有持续执行与监督的机制，否则一句划分市场区域的原则性表述，在问询面前撑不过两个回合。</p><p data-ts="1">本质上，前三条路径改变的是事实，第四条路径改变的是安排，而审核对安排的信任度天然低于对事实的信任度。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、不竞争承诺能撑多久：它是补充机制，不是免死金牌</h2><div class="ts-lead"><span class="tag">结论先行</span><p>不竞争承诺是同业竞争处理方案的组成部分，不是替代品，它在香港路径下是标准配置，但在任何路径下都无法单独把一个实质性的竞争关系解释掉。</p></div><p>不竞争承诺是指控股股东、实际控制人及其控制的其他企业向发行人作出的书面承诺，内容通常包括：不从事与发行人构成竞争的业务；已有的竞争性业务在约定条件下处置或注入；发行人对承诺方未来取得的竞争性商业机会享有优先选择权；违反承诺时承担相应责任。</p><p data-ts="1">在香港路径下，这类承诺常以契约形式作出，并在上市文件中披露其主要条款，是「与控股股东的关系」章节的常规内容。</p><p>承诺的价值在于把未来的行为约束写成可执行的义务，但它有三条明显的效力边界。</p><ol class="ts-pts"><li><b>其一，它约束的是承诺方</b>，对承诺方之外的主体——比如已经转让出去的公司、亲属控制但不受承诺覆盖的企业——效力有限。</li><li><b>其二，它约束的是未来</b>，对存量的竞争事实没有溯及力，存量问题仍要靠前一节的四条路径解决。</li><li><b>其三</b>，它的执行依赖于发行人对承诺方的实际制衡能力，而控股股东恰恰是最难被制衡的一方，因此监管会关注承诺是否配套了可操作的触发机制与救济安排，而不只是一纸表态。</li></ol><p>实务中一个反复出现的误判是：企业以为签了承诺函就把问题解决了，于是在申报材料中把大量篇幅花在承诺条款的措辞打磨上，却回避了竞争业务当下的真实状态。审核的追问方向恰恰相反——先问现在是什么状态，再问未来怎么约束。因此，承诺函应当是清理方案落地之后的收口文件，而不是清理方案本身。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、为什么很多清理是假清理：形式过关、实质未解</h2><div class="ts-lead"><span class="tag">结论先行</span><p>同业竞争方案在审核中翻车，八成不是因为没做清理，而是因为做的是形式清理——股权关系变了，人、钱、客户、供应链还在原地。</p></div><p>类型一，股权代持式转让。把竞争主体的股权转给司机、亲戚、老同学，工商登记上干净了，实际控制关系分毫未变。这类安排在穿透核查面前极其脆弱：资金流水、董事任免、公章保管、办公场所、社保缴纳单位，任何一条链路都可能暴露真实控制关系。</p><p data-ts="1">更严重的是，一旦被认定为代持未如实披露，问题性质就从同业竞争升级为信息披露真实性问题，后果不可同日而语。</p><p>类型二，账面分家、业务不分。两家公司股权彻底切割，但共用一套销售团队、共用仓库、共用信息系统，甚至由同一批人对同一批客户报价。审核关注的独立性包括业务独立、资产独立、人员独立、财务独立与机构独立，股权切割只覆盖了其中一小部分。</p><p data-ts="1">因此，判断清理是否到位的自查标准不是股权结构图，而是这两家公司能不能各自独立地完成一笔从获客到交付到收款的完整业务。</p><p>类型三，时点太晚。所有清理动作都集中在申报前的最后几个月完成，报告期内大量存在竞争与关联交易的事实无法回避，反而把监管注意力集中吸引到这一块。清理越晚，需要解释的报告期就越长，问询轮次通常也越多。</p><p data-ts="1">关键在于，同业竞争的处理是一项应当在启动上市规划的头一年就开始推进的工作，而不是临门一脚的技术处理。</p><p>类型四，只清企业、不清人。主体处理干净了，但关键岗位人员仍在两边任职、领两份薪酬、签两边的合同。人员交叉是独立性核查的重点，也是最容易被内部忽略的部分，因为在企业内部这往往被视为效率安排而非合规问题。</p><p data-ts="1">本质上，审核判断同业竞争是否解决，看的是利益冲突的现实可能是否被消除，而不是文件是否齐备。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、什么时候动手、先做哪一步：一份可执行的推进顺序</h2><div class="ts-lead"><span class="tag">结论先行</span><p>同业竞争的处理要按关系图谱、影响评估、路径选择、执行落地、文件收口五步推进，且必须在正式启动上市申报之前完成主要动作，留出足以覆盖报告期的时间缓冲。</p></div><p>步骤一，画全关系图谱。以控股股东、实际控制人为圆心，向其配偶及双方父母子女延伸，再覆盖发行人董事、监事、高级管理人员及其近亲属，列出全部对外投资与任职主体，逐一标注实际从事的业务、主要客户与供应商。</p><p data-ts="1">这张图谱的完整性决定后面所有工作的有效性，遗漏一个主体，后续方案就要推倒重来一次。</p><p>步骤二，做影响评估。对图谱中被识别为存在竞争关系的主体，逐个评估业务相似度、客户与渠道重叠度、规模占比以及利益冲突的现实可能，区分出必须清理、需要划分边界、只需充分披露三类。评估结论应形成书面判断依据，而不是停留在口头共识——因为这份判断依据在后续问询中会被反复引用。</p><p>步骤三，选择路径并测算代价。对必须清理的主体，在注销、转让、纳入三条路径中作出选择，同时前置测算税务成本、员工安置成本、客户流失风险与时间成本。这一步最忌讳的是只看合规不看代价：有些方案在合规上最干净，但可能击穿企业当期的经营基础，反而危及上市本身。</p><p>步骤四，执行落地并跨越时间缓冲。清理动作完成后，需要一段足够长的时间让财务报表与业务运行反映出清理后的真实状态，理想情况是让整个报告期都处于清理完成之后的状态。因此，倒推时间表时，应当把清理完成时点放在计划申报时点之前留出充分余量的位置，而不是掐着申报节点安排。</p><p>步骤五，文件收口。在事实层面处理完毕后，再制作不竞争承诺、独立性说明、业务划分协议等文件，把已经发生的事实固定下来，并对未来行为作出约束。顺序不能颠倒，先出文件后做事实，是审核中最容易被识破的一类操作。</p><p data-ts="1">华尔街彤鼎俱乐部在上市预备期的专题讨论中，反复强调的正是这个顺序问题：文件是事实的记录，不是事实的替代。</p><p>最后需要提示两点。提示其一，本文所述认定口径与处理路径来自公开发布的规则与监管实践的一般性梳理，个案判断需结合企业股权结构、业务形态与拟上市地综合作出，且规则可能更新，最终口径以中国证监会、香港联合交易所与美国证券交易委员会的正式规则文本及个案答复为准。</p><p data-ts="1">提示其二，关系图谱核查、清理方案设计、税务与员工安置安排均属专业判断事项，应由律师、会计师与税务师结合企业实际情况共同作出，本文为知识梳理，不替代专业意见。<strong>因此，同业竞争真正的难点从来不在于懂不懂规则，而在于愿不愿意在启动上市的头一年，就动那些盘根多年、牵扯亲情与旧部的业务安排。</strong></p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ipo-cost.html" style="color:#6b5426;font-weight:700;">赴美上市费用全解</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="audit-committee.html" style="color:#6b5426;font-weight:700;">审计委员会与内控体系</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="capital-contribution-defects.html" style="color:#6b5426;font-weight:700;">出资瑕疵：十几年前的一笔注册资本，为什么能拖住整个上市进程</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="related-party-funds.html" style="color:#6b5426;font-weight:700;">关联方资金占用：上市前必须清到零的一笔账</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-usm-paperless-2026.html" style="color:#6b5426;font-weight:700;">香港无纸证券市场USM：2026年11月落地</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

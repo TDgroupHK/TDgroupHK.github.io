@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"美股退市风险与恢复合规","inLanguage":"zh-CN","abstract":"Delisting triggers on U.S. exchanges, the compliance cure periods available, and the path back to good standing.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/delisting-risk.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"一美元规则、合股自救与恢复合规的完整路径。美股退市风险与恢复合规完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,48 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">挂牌之后 POST-LISTING</div><h1>美股退市风险与恢复合规</h1>
 <div class="sub">一美元规则、合股自救与恢复合规的完整路径</div><div class="en">Delisting triggers on U.S. exchanges, the compliance cure periods available, and the path back to good standing.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">纳斯达克对上市公司有持续上市标准，最常见的三类退市风险是：股价长期低于1美元（一美元规则）、市值或股东权益跌破最低标准、未按时提交定期报告。触发标准后，纳斯达克会发出不合规通知（Deficiency Notice），公司通常有180天的恢复合规期（部分情形可再延180天）。恢复合规的常用手段包括：反向分割（合股）拉高股价、业务和市值改善、补交延迟的报告。关键认知是：收到不合规通知不等于退市，它是一个有明确规则、有充足时间窗口的合规程序；真正致命的是管理层的拖延和无动于衷。本文讲清楚三类退市风险的触发标准、时间线和自救路径。</div>
-<h2>一、三类最常见的退市风险</h2>
-<h3>风险1：股价低于1美元（一美元规则）</h3>
-<p>纳斯达克要求上市公司的股票买入价（Bid Price）不得连续30个交易日低于1美元。一旦触发，纳斯达克发出不合规通知，公司获得180个自然日的恢复期——期间只要股价连续10个交易日回到1美元以上，即恢复合规。</p>
-<p>如果180天内未能恢复，满足一定条件（如其他上市标准仍达标、并承诺采取反向分割等措施）的公司，可以再获得第二个180天。两轮共360天仍未恢复，将面临退市聆讯。</p>
-<h3>风险2：市值或股东权益不达标</h3>
-<p>以纳斯达克资本市场为例，持续上市要求公司满足以下三项之一：股东权益不低于250万美元、上市证券市值不低于3500万美元、或最近一个财年（或近三年中的两年）净利润不低于50万美元。全部不满足即触发不合规，同样有恢复期安排。</p>
-<h3>风险3：未按时提交定期报告</h3>
-<p>年报20-F或季度报告6-K延迟提交，会触发提交不合规。公司需要向纳斯达克提交恢复合规计划，说明何时能补交。报告延迟往往被市场解读为财务或内控出了问题，对股价的伤害通常比延迟本身更大。</p>
-<h2>二、收到不合规通知后的标准动作</h2>
-<p>第一步，48小时内发布6-K公告。收到不合规通知本身是需要披露的事项，公司必须及时公告，并在公告中说明恢复合规的计划，稳定市场预期。</p>
-<p>第二步，成立恢复合规工作组。由CFO牵头，联合美国律师、IR团队，制定明确的恢复路线图和时间表。</p>
-<p>第三步，评估根本原因。股价低迷是流动性问题还是基本面问题？市值不足是市场错杀还是业务萎缩？对症下药，而不是只治标。</p>
-<p>第四步，与纳斯达克保持沟通。纳斯达克上市资格部门是可以沟通的，主动汇报恢复进展、按要求提交计划，能为公司争取程序上的最大空间。</p>
-<h2>三、反向分割：一美元危机的标准解法</h2>
-<h3>什么是反向分割</h3>
-<p>反向分割（Reverse Split，合股）是把多股合并为一股，比如10合1：股东原来持有的10股变成1股，股价理论上变为原来的10倍。总市值不变，股数减少，股价抬升。这是解决一美元问题最直接的工具。</p>
-<h3>反向分割的操作要点</h3>
-<p>合股比例的选择要留足安全边际——如果股价0.3美元，10合1后是3美元，看似安全；但合股后若股价继续阴跌，跌回1美元以下将再次触发危机,且第二次合股对市场信心的伤害更大。通常建议把合股后的目标价设在4美元以上，留出充分的缓冲。</p>
-<p>合股需要董事会批准（部分情况需股东大会批准）、提前向纳斯达克申报、并至少提前一定时间对外公告。整个流程通常需要4至8周，所以不能拖到180天恢复期的最后才动手。</p>
-<h3>反向分割的市场影响</h3>
-<p>必须诚实地说：合股本身不创造价值，它只是技术性地抬高股价。市场对合股的第一反应通常偏负面（被解读为公司承认股价起不来）。因此，合股最好与实质性的利好（业绩改善、新业务、回购计划）配合宣布，用基本面的信号对冲技术操作的负面观感。</p>
-<h2>四、市值与权益不达标的自救路径</h2>
-<p>路径1：补充股东权益。通过PIPE定向增发、可转债转股等方式补充权益资本，直接修复股东权益指标。</p>
-<p>路径2：提升市值。系统性的市值管理组合拳——加强IR、扩大研究覆盖、发布回购计划、释放业务利好，推动市值回到标准之上。</p>
-<p>路径3：降层保牌。如果公司在更高层级（如全球市场）不达标，可以申请降到资本市场层级，用更低的持续上市标准保住上市地位，之后再图恢复。降层不是体面的选择，但远好于退市。</p>
-<h2>五、退市的真实后果</h2>
-<p>如果最终未能恢复合规而被退市，股票通常转到场外市场（OTC）交易。退市的后果是严重的：流动性大幅萎缩（OTC的成交量通常只有交易所的零头）、机构投资人被迫清仓（多数机构章程禁止持有OTC股票）、再融资能力基本丧失、公司品牌严重受损。</p>
-<p>因此，退市防御的投入产出比极高——花几十万美元做合股和市值修复，对比退市后数千万美元市值蒸发和融资功能丧失，孰轻孰重一目了然。</p>
-<h2>六、退市风险的预防</h2>
-<p>预防1：股价跌破2美元就要警觉，不要等跌破1美元才行动。2美元是启动市值管理组合拳的警戒线。</p>
-<p>预防2：每季度自查持续上市指标。把股东权益、市值、股价对照持续上市标准做季度体检，提前发现苗头。</p>
-<p>预防3：财报永远按时交。建立年报20-F的倒排时间表，审计工作提前启动，绝不触碰报告延迟这条线。</p>
-<p>预防4：保持与市场的沟通。很多股价低迷源于市场不了解而非基本面恶化，持续的IR投入是最便宜的退市保险。</p>
-<h3>结语：合规危机考验的是管理层的响应速度</h3>
-<p>美股的退市程序是一套规则清晰、留有充分自救窗口的机制。它淘汰的不是遇到困难的公司，而是对危机无动于衷的管理层。</p>
-<p>收到不合规通知后，快速响应、对症下药、与交易所积极沟通的公司，绝大多数都能恢复合规。彤鼎集团的市值管理服务，帮助面临合规压力的上市公司制定并执行恢复合规方案，守住来之不易的上市地位。</p>
-<p>彤鼎集团是一家综合性国际资本服务机构，香港母公司为彤鼎集团（香港）有限公司，业务网络覆盖香港、深圳、上海，并延伸至新加坡。集团专注为企业提供全球化的境内外上市及资本市场全流程一站式服务，由曾任职于加拿大券商机构的廖启捷领衔，廖启捷现任彤鼎集团（香港）有限公司董事局主席，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>集团八大核心业务覆盖融资策划、架构设计、上市规划、税务筹划、增发融资、市值管理、跨境资本、家族办公室，提供从商业模式梳理、顶层架构设计、上市辅导，到财务顾问、法律顾问、并购重组的资本运作全链条服务。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p>
-<p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>纳斯达克对上市公司有持续上市标准，最常见的三类退市风险是：股价长期低于1美元（一美元规则）、市值或股东权益跌破最低标准、未按时提交定期报告。触发标准后，纳斯达克会发出不合规通知（Deficiency Notice），公司通常有180天的恢复合规期（部分情形可再延180天）。</p><p>恢复合规的常用手段包括：反向分割（合股）拉高股价、业务和市值改善、补交延迟的报告。关键认知是：收到不合规通知不等于退市，它是一个有明确规则、有充足时间窗口的合规程序；真正致命的是管理层的拖延和无动于衷。本文讲清楚三类退市风险的触发标准、时间线和自救路径。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">三类最常见的退市风险</a></li><li><a href="#sec-02">收到不合规通知后的标准动作</a></li><li><a href="#sec-03">反向分割：一美元危机的标准解法</a></li><li><a href="#sec-04">市值与权益不达标的自救路径</a></li><li><a href="#sec-05">退市的真实后果</a></li><li><a href="#sec-06">退市风险的预防</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、三类最常见的退市风险</h2><p><h3>风险1：股价低于1美元（一美元规则）</h3></p><p>纳斯达克要求上市公司的股票买入价（Bid Price）不得连续30个交易日低于1美元。一旦触发，纳斯达克发出不合规通知，公司获得180个自然日的恢复期——期间只要股价连续10个交易日回到1美元以上，即恢复合规。</p><p>如果180天内未能恢复，满足一定条件（如其他上市标准仍达标、并承诺采取反向分割等措施）的公司，可以再获得第二个180天。两轮共360天仍未恢复，将面临退市聆讯。</p><p><h3>风险2：市值或股东权益不达标</h3></p><p>以纳斯达克资本市场为例，持续上市要求公司满足以下三项之一：股东权益不低于250万美元、上市证券市值不低于3500万美元、或最近一个财年（或近三年中的两年）净利润不低于50万美元。全部不满足即触发不合规，同样有恢复期安排。</p><p><h3>风险3：未按时提交定期报告</h3></p><p>年报20-F或季度报告6-K延迟提交，会触发提交不合规。公司需要向纳斯达克提交恢复合规计划，说明何时能补交。报告延迟往往被市场解读为财务或内控出了问题，对股价的伤害通常比延迟本身更大。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、收到不合规通知后的标准动作</h2><p>第一步，48小时内发布6-K公告。收到不合规通知本身是需要披露的事项，公司必须及时公告，并在公告中说明恢复合规的计划，稳定市场预期。</p><p>第二步，成立恢复合规工作组。由CFO牵头，联合美国律师、IR团队，制定明确的恢复路线图和时间表。</p><p>第三步，评估根本原因。股价低迷是流动性问题还是基本面问题？市值不足是市场错杀还是业务萎缩？对症下药，而不是只治标。</p><p>第四步，与纳斯达克保持沟通。纳斯达克上市资格部门是可以沟通的，主动汇报恢复进展、按要求提交计划，能为公司争取程序上的最大空间。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、反向分割：一美元危机的标准解法</h2><p><h3>什么是反向分割</h3></p><p>反向分割（Reverse Split，合股）是把多股合并为一股，比如10合1：股东原来持有的10股变成1股，股价理论上变为原来的10倍。总市值不变，股数减少，股价抬升。这是解决一美元问题最直接的工具。</p><p><h3>反向分割的操作要点</h3></p><p>合股比例的选择要留足安全边际——如果股价0.3美元，10合1后是3美元，看似安全；但合股后若股价继续阴跌，跌回1美元以下将再次触发危机,且第二次合股对市场信心的伤害更大。通常建议把合股后的目标价设在4美元以上，留出充分的缓冲。</p><p>合股需要董事会批准（部分情况需股东大会批准）、提前向纳斯达克申报、并至少提前一定时间对外公告。整个流程通常需要4至8周，所以不能拖到180天恢复期的最后才动手。</p><p><h3>反向分割的市场影响</h3></p><p>必须诚实地说：合股本身不创造价值，它只是技术性地抬高股价。市场对合股的第一反应通常偏负面（被解读为公司承认股价起不来）。因此，合股最好与实质性的利好（业绩改善、新业务、回购计划）配合宣布，用基本面的信号对冲技术操作的负面观感。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、市值与权益不达标的自救路径</h2><p>路径1：补充股东权益。通过PIPE定向增发、可转债转股等方式补充权益资本，直接修复股东权益指标。</p><p>路径2：提升市值。系统性的市值管理组合拳——加强IR、扩大研究覆盖、发布回购计划、释放业务利好，推动市值回到标准之上。</p><p>路径3：降层保牌。如果公司在更高层级（如全球市场）不达标，可以申请降到资本市场层级，用更低的持续上市标准保住上市地位，之后再图恢复。降层不是体面的选择，但远好于退市。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、退市的真实后果</h2><p>如果最终未能恢复合规而被退市，股票通常转到场外市场（OTC）交易。退市的后果是严重的：流动性大幅萎缩（OTC的成交量通常只有交易所的零头）、机构投资人被迫清仓（多数机构章程禁止持有OTC股票）、再融资能力基本丧失、公司品牌严重受损。</p><p>因此，退市防御的投入产出比极高——花几十万美元做合股和市值修复，对比退市后数千万美元市值蒸发和融资功能丧失，孰轻孰重一目了然。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、退市风险的预防</h2><p>预防1：股价跌破2美元就要警觉，不要等跌破1美元才行动。2美元是启动市值管理组合拳的警戒线。</p><p>预防2：每季度自查持续上市指标。把股东权益、市值、股价对照持续上市标准做季度体检，提前发现苗头。</p><p>预防3：财报永远按时交。建立年报20-F的倒排时间表，审计工作提前启动，绝不触碰报告延迟这条线。</p><p>预防4：保持与市场的沟通。很多股价低迷源于市场不了解而非基本面恶化，持续的IR投入是最便宜的退市保险。</p><p><h3>结语：合规危机考验的是管理层的响应速度</h3></p><p>美股的退市程序是一套规则清晰、留有充分自救窗口的机制。它淘汰的不是遇到困难的公司，而是对危机无动于衷的管理层。</p><p>收到不合规通知后，快速响应、对症下药、与交易所积极沟通的公司，绝大多数都能恢复合规。彤鼎集团的市值管理服务，帮助面临合规压力的上市公司制定并执行恢复合规方案，守住来之不易的上市地位。</p><p>彤鼎集团是一家综合性国际资本服务机构，香港母公司为彤鼎集团（香港）有限公司，业务网络覆盖香港、深圳、上海，并延伸至新加坡。集团专注为企业提供全球化的境内外上市及资本市场全流程一站式服务，由曾任职于加拿大券商机构的廖启捷领衔，廖启捷现任彤鼎集团（香港）有限公司董事局主席，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>集团八大核心业务覆盖融资策划、架构设计、上市规划、税务筹划、增发融资、市值管理、跨境资本、家族办公室，提供从商业模式梳理、顶层架构设计、上市辅导，到财务顾问、法律顾问、并购重组的资本运作全链条服务。</p><p data-ts="1">团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p><p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="lockup-expiry.html" style="color:#6b5426;font-weight:700;">上市后的锁定期与解禁减持</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="insider-trading.html" style="color:#6b5426;font-weight:700;">内幕交易合规红线</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-tier-upgrade.html" style="color:#6b5426;font-weight:700;">纳斯达克市场升级指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-delisting-risk.html" style="color:#6b5426;font-weight:700;">纳斯达克退市风险</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="annual-report-20f.html" style="color:#6b5426;font-weight:700;">年报20-F撰写指南</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

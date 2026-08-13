@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"BVI与开曼SPV设立运用","inLanguage":"zh-CN","abstract":"What a special purpose vehicle does in a listing structure, why layered SPVs are used, and how each layer is capitalised.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/bvi-cayman-spv.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"BVI与开曼SPV设立运用。BVI与开曼SPV设立运用完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,54 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">跨境架构 STRUCTURING</div><h1>BVI与开曼SPV设立运用</h1>
 <div class="sub"></div><div class="en">What a special purpose vehicle does in a listing structure, why layered SPVs are used, and how each layer is capitalised.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">特殊目的公司（SPV，Special Purpose Vehicle）是为特定目的而设立的公司实体，在跨境上市架构中无处不在。BVI公司、开曼公司本质上都是SPV——它们不从事实际经营，而是作为持股、融资、隔离风险的工具存在。在标准的境外上市架构中，BVI公司通常作为创始人和投资人的个人持股平台（注重私密性和灵活性），开曼公司通常作为境外上市的发行主体（注重国际资本市场的认可度）。理解不同SPV的特点和用途，是搭建合理跨境架构的基础。SPV设立简单、成本可控，但每一个SPV在架构中都应该有明确的功能定位，不能为设而设。</div>
-<h2>一、什么是SPV</h2>
-<p>特殊目的公司（SPV）是为实现特定目的而设立的公司实体。它通常不从事实际的生产经营活动，而是作为持股、融资、风险隔离、资产证券化等特定功能的工具。在跨境上市架构中，BVI公司、开曼公司、有时还有香港公司，都是不同功能的SPV。</p>
-<p>SPV的核心价值在于：隔离风险（将特定资产或业务装入独立的法律实体）、灵活持股（提供灵活的股权安排）、税务优化（利用离岸司法管辖区的税务优势）、私密性（部分离岸地提供较高的股东信息私密性）。</p>
-<h2>二、跨境架构中的主要SPV类型</h2>
-<h3>BVI公司（英属维尔京群岛）</h3>
-<p>BVI是全球最受欢迎的离岸公司注册地之一。BVI公司的特点：注册和维护成本低、股东信息私密性高、没有公司所得税、设立和管理灵活。</p>
-<p>在跨境上市架构中，BVI公司通常用作创始人和投资人的个人持股平台。每个创始人或投资人通过自己的BVI公司持有上层开曼公司的股权，这样既保护了个人持股的私密性，又便于未来的股权转让和安排。</p>
-<h3>开曼公司（开曼群岛）</h3>
-<p>开曼群岛是境外上市发行主体最常用的注册地。开曼公司的特点：国际资本市场高度认可（纳斯达克、纽交所、港交所都接受开曼公司作为上市主体）、没有公司所得税和资本利得税、法律体系成熟、适合复杂的股权结构安排（如AB股）。</p>
-<p>在跨境上市架构中，开曼公司通常作为最终的上市发行主体，是面向公众投资人发行股票的实体。</p>
-<h3>香港公司</h3>
-<p>如前文所述，香港公司在跨境架构中通常作为中间控股层，连接开曼发行主体和境内运营实体，主要价值在于税务优化（5%股息预提税）和资金流动便利。</p>
-<h2>三、BVI与开曼的区别与选择</h2>
-<h3>私密性对比</h3>
-<p>BVI的股东信息私密性更高，公众通常无法查询BVI公司的股东信息。开曼近年来在国际监管压力下，信息透明度有所提高。因此个人持股平台多用BVI，注重私密性。</p>
-<h3>资本市场认可度对比</h3>
-<p>开曼公司作为上市发行主体的认可度高于BVI。全球主要交易所对开曼公司作为上市主体有成熟的接受机制，因此发行主体几乎都用开曼，而非BVI。</p>
-<h3>成本对比</h3>
-<p>BVI公司的注册和维护成本通常低于开曼公司。因此在架构中，需要数量较多的个人持股平台用BVI（成本低），而只需要一个的上市发行主体用开曼（认可度高）。</p>
-<h3>典型搭配</h3>
-<p>标准跨境架构的典型搭配是：创始人和各投资人各自用BVI公司作为持股平台，这些BVI公司共同持有一个开曼公司，开曼公司作为上市发行主体，开曼公司下面通过香港公司控制境内运营实体。这个搭配兼顾了私密性、认可度和成本。</p>
-<h2>四、SPV的设立流程</h2>
-<h3>BVI公司设立</h3>
-<p>BVI公司设立流程简单：确定公司名称、股东和董事，委托BVI的注册代理机构提交注册申请，通常数个工作日即可完成。BVI公司需要有一个BVI本地的注册代理和注册地址。</p>
-<h3>开曼公司设立</h3>
-<p>开曼公司设立流程类似：确定公司名称、股权架构（如是否采用AB股）、股东和董事，委托开曼的注册代理提交申请。如果是用作上市主体，章程需要根据上市要求专业设计（包括AB股结构、董事会安排等）。</p>
-<h3>设立时的专业考量</h3>
-<p>SPV的设立看似简单，但在上市架构中，每个SPV的设立都需要考虑其在整体架构中的功能、与其他实体的股权关系、未来的股权变动安排、税务影响等。专业的架构设计能确保每个SPV都恰当地发挥作用。</p>
-<h2>五、SPV运用的关键原则</h2>
-<h3>原则1：每个SPV都要有明确功能</h3>
-<p>架构中的每一个SPV都应该有明确的功能定位（持股平台、发行主体、中间控股、风险隔离等）。不应该为设而设，搭建一堆没有明确功能的SPV只会增加架构的复杂度和维护成本。</p>
-<h3>原则2：避免架构过度复杂</h3>
-<p>SPV的数量应该与架构的实际需要匹配。过度复杂的架构（层层叠叠的SPV）会增加维护成本、税务复杂度和合规难度，也会让投资人和监管机构难以理解。简洁、清晰、有逻辑的架构是最好的架构。</p>
-<h3>原则3：注意实质和合规要求</h3>
-<p>虽然SPV通常不从事实际经营，但部分SPV（特别是希望享受税务优惠的中间控股公司）需要满足一定的实质要求。同时，所有SPV的设立和运用都必须符合相关的反洗钱、CRS信息交换等合规要求。</p>
-<h3>原则4：与整体架构协同设计</h3>
-<p>SPV不是孤立设立的，而是整体上市架构的组成部分。每个SPV的设立都应该在整体架构设计的框架下进行，确保各实体之间的股权关系、资金流动、税务安排协调一致。</p>
-<h2>六、SPV的维护</h2>
-<p>SPV设立后需要持续维护：缴纳年度的注册维护费用、保持注册代理和注册地址、根据所在司法管辖区的要求完成必要的申报、应对CRS等信息交换要求。虽然SPV的维护相对简单，但不能忽视，否则可能因为未及时维护而导致公司被注销或产生罚款。</p>
-<h3>结语：SPV是架构师手中的积木</h3>
-<p>SPV是搭建跨境上市架构的基础积木。BVI、开曼、香港等不同的SPV各有特点，组合起来构成一个完整、合理的跨境架构。</p>
-<p>理解每种SPV的特点和用途、为每个SPV赋予明确的功能、保持架构的简洁清晰，是搭建优质跨境架构的关键。彤鼎集团（香港）有限公司在顶层架构设计中，会根据企业的具体需求，合理选择和组合各类SPV，搭建既能实现商业目标、又简洁合规的跨境架构。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p>
-<p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>特殊目的公司（SPV，Special Purpose Vehicle）是为特定目的而设立的公司实体，在跨境上市架构中无处不在。BVI公司、开曼公司本质上都是SPV——它们不从事实际经营，而是作为持股、融资、隔离风险的工具存在。</p><p>在标准的境外上市架构中，BVI公司通常作为创始人和投资人的个人持股平台（注重私密性和灵活性），开曼公司通常作为境外上市的发行主体（注重国际资本市场的认可度）。理解不同SPV的特点和用途，是搭建合理跨境架构的基础。SPV设立简单、成本可控，但每一个SPV在架构中都应该有明确的功能定位，不能为设而设。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">什么是SPV</a></li><li><a href="#sec-02">跨境架构中的主要SPV类型</a></li><li><a href="#sec-03">BVI与开曼的区别与选择</a></li><li><a href="#sec-04">SPV的设立流程</a></li><li><a href="#sec-05">SPV运用的关键原则</a></li><li><a href="#sec-06">SPV的维护</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、什么是SPV</h2><p>特殊目的公司（SPV）是为实现特定目的而设立的公司实体。它通常不从事实际的生产经营活动，而是作为持股、融资、风险隔离、资产证券化等特定功能的工具。在跨境上市架构中，BVI公司、开曼公司、有时还有香港公司，都是不同功能的SPV。</p><p>SPV的核心价值在于：隔离风险（将特定资产或业务装入独立的法律实体）、灵活持股（提供灵活的股权安排）、税务优化（利用离岸司法管辖区的税务优势）、私密性（部分离岸地提供较高的股东信息私密性）。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、跨境架构中的主要SPV类型</h2><p><h3>BVI公司（英属维尔京群岛）</h3></p><p>BVI是全球最受欢迎的离岸公司注册地之一。BVI公司的特点：注册和维护成本低、股东信息私密性高、没有公司所得税、设立和管理灵活。</p><p>在跨境上市架构中，BVI公司通常用作创始人和投资人的个人持股平台。每个创始人或投资人通过自己的BVI公司持有上层开曼公司的股权，这样既保护了个人持股的私密性，又便于未来的股权转让和安排。</p><p><h3>开曼公司（开曼群岛）</h3></p><p>开曼群岛是境外上市发行主体最常用的注册地。开曼公司的特点：国际资本市场高度认可（纳斯达克、纽交所、港交所都接受开曼公司作为上市主体）、没有公司所得税和资本利得税、法律体系成熟、适合复杂的股权结构安排（如AB股）。</p><p>在跨境上市架构中，开曼公司通常作为最终的上市发行主体，是面向公众投资人发行股票的实体。</p><p><h3>香港公司</h3></p><p>如前文所述，香港公司在跨境架构中通常作为中间控股层，连接开曼发行主体和境内运营实体，主要价值在于税务优化（5%股息预提税）和资金流动便利。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、BVI与开曼的区别与选择</h2><p><h3>私密性对比</h3></p><p>BVI的股东信息私密性更高，公众通常无法查询BVI公司的股东信息。开曼近年来在国际监管压力下，信息透明度有所提高。因此个人持股平台多用BVI，注重私密性。</p><p><h3>资本市场认可度对比</h3></p><p>开曼公司作为上市发行主体的认可度高于BVI。全球主要交易所对开曼公司作为上市主体有成熟的接受机制，因此发行主体几乎都用开曼，而非BVI。</p><p><h3>成本对比</h3></p><p>BVI公司的注册和维护成本通常低于开曼公司。因此在架构中，需要数量较多的个人持股平台用BVI（成本低），而只需要一个的上市发行主体用开曼（认可度高）。</p><p><h3>典型搭配</h3></p><p>标准跨境架构的典型搭配是：创始人和各投资人各自用BVI公司作为持股平台，这些BVI公司共同持有一个开曼公司，开曼公司作为上市发行主体，开曼公司下面通过香港公司控制境内运营实体。这个搭配兼顾了私密性、认可度和成本。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、SPV的设立流程</h2><p><h3>BVI公司设立</h3></p><p>BVI公司设立流程简单：确定公司名称、股东和董事，委托BVI的注册代理机构提交注册申请，通常数个工作日即可完成。BVI公司需要有一个BVI本地的注册代理和注册地址。</p><p><h3>开曼公司设立</h3></p><p>开曼公司设立流程类似：确定公司名称、股权架构（如是否采用AB股）、股东和董事，委托开曼的注册代理提交申请。如果是用作上市主体，章程需要根据上市要求专业设计（包括AB股结构、董事会安排等）。</p><p><h3>设立时的专业考量</h3></p><p>SPV的设立看似简单，但在上市架构中，每个SPV的设立都需要考虑其在整体架构中的功能、与其他实体的股权关系、未来的股权变动安排、税务影响等。专业的架构设计能确保每个SPV都恰当地发挥作用。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、SPV运用的关键原则</h2><p><h3>原则1：每个SPV都要有明确功能</h3></p><p>架构中的每一个SPV都应该有明确的功能定位（持股平台、发行主体、中间控股、风险隔离等）。不应该为设而设，搭建一堆没有明确功能的SPV只会增加架构的复杂度和维护成本。</p><p><h3>原则2：避免架构过度复杂</h3></p><p>SPV的数量应该与架构的实际需要匹配。过度复杂的架构（层层叠叠的SPV）会增加维护成本、税务复杂度和合规难度，也会让投资人和监管机构难以理解。简洁、清晰、有逻辑的架构是最好的架构。</p><p><h3>原则3：注意实质和合规要求</h3></p><p>虽然SPV通常不从事实际经营，但部分SPV（特别是希望享受税务优惠的中间控股公司）需要满足一定的实质要求。同时，所有SPV的设立和运用都必须符合相关的反洗钱、CRS信息交换等合规要求。</p><p><h3>原则4：与整体架构协同设计</h3></p><p>SPV不是孤立设立的，而是整体上市架构的组成部分。每个SPV的设立都应该在整体架构设计的框架下进行，确保各实体之间的股权关系、资金流动、税务安排协调一致。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、SPV的维护</h2><p>SPV设立后需要持续维护：缴纳年度的注册维护费用、保持注册代理和注册地址、根据所在司法管辖区的要求完成必要的申报、应对CRS等信息交换要求。虽然SPV的维护相对简单，但不能忽视，否则可能因为未及时维护而导致公司被注销或产生罚款。</p><p><h3>结语：SPV是架构师手中的积木</h3></p><p>SPV是搭建跨境上市架构的基础积木。BVI、开曼、香港等不同的SPV各有特点，组合起来构成一个完整、合理的跨境架构。</p><p>理解每种SPV的特点和用途、为每个SPV赋予明确的功能、保持架构的简洁清晰，是搭建优质跨境架构的关键。彤鼎集团（香港）有限公司在顶层架构设计中，会根据企业的具体需求，合理选择和组合各类SPV，搭建既能实现商业目标、又简洁合规的跨境架构。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p><p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="bvi-cayman-singapore.html" style="color:#6b5426;font-weight:700;">BVI开曼新加坡公司区别</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="circular-37.html" style="color:#6b5426;font-weight:700;">37号文登记指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="offshore-jurisdiction-choice.html" style="color:#6b5426;font-weight:700;">开曼、BVI与注册地选择逻辑</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="odi-filing.html" style="color:#6b5426;font-weight:700;">ODI境外投资备案实操</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="transfer-pricing.html" style="color:#6b5426;font-weight:700;">跨境转让定价与税务合规</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

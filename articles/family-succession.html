@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"家族接班与资本安排","inLanguage":"zh-CN","abstract":"Aligning family succession with a listing plan: trust structures, control transfer and the timing that avoids tax friction.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/family-succession.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"中国大量家族企业正在同时面临两个挑战：一代创始人希望将企业传给二代，同时希望通过上市实现资产的流动性和企业的做大做强。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,46 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">财富传承 WEALTH</div><h1>家族接班与资本安排</h1>
 <div class="sub"></div><div class="en">Aligning family succession with a listing plan: trust structures, control transfer and the timing that avoids tax friction.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">中国大量家族企业正在同时面临两个挑战：一代创始人希望将企业传给二代，同时希望通过上市实现资产的流动性和企业的做大做强。这两件事如果分开推进，往往都会遇到障碍——单独推进接班，企业估值没有资本市场背书，接班后的股权价值难以量化；单独推进上市，如果创始人年龄较大且二代尚未准备好，机构投资人对管理层的长期稳定性会有顾虑。将接班规划与上市规划同步推进，是解决这一两难困境的最优路径：用上市推动接班（二代在上市过程中快速成长为合格的上市公司高管），用接班支撑上市（机构投资人看到完整的接班方案会更有信心）。</div>
-<h2>一、家族企业上市面临的特殊挑战</h2>
-<h3>挑战1：家族控制权与公众股东权益的平衡</h3>
-<p>家族企业上市后，创始家族不再是公司的唯一所有人，必须对所有公众股东承担信托义务（Fiduciary Duty）。很多创始人难以接受这一角色转变：无法再像私有公司那样随意决策、必须向公众股东公开披露所有重大信息、某些决策必须经过独立董事和审计委员会审批。</p>
-<p>应对方案：通过AB股双重股权结构保留创始家族的决策控制权（参考第28篇），同时在治理架构上满足纳斯达克的独立董事要求，在控制权和治理规范性之间达到平衡。</p>
-<h3>挑战2：家族关联交易的合规处理</h3>
-<p>家族企业通常有大量与家族成员控制的实体之间的关联交易（供应商、客户、地产出租等）。这些交易在私有公司阶段属于正常安排，但在上市公司背景下必须经过独立审计委员会的审查，证明定价公平合理，并在SEC文件中完整披露。</p>
-<p>应对方案：在上市辅导启动前12至18个月，系统梳理所有关联交易，对不必要的关联交易进行清理，保留的关联交易按照市场化原则重新签署正式合同并完整记录。</p>
-<h3>挑战3：二代准备度不足</h3>
-<p>如果创始人计划将CFO或CEO职位传给二代，但二代没有足够的专业资历和市场认可度，机构投资人在尽调和路演时会对管理层的专业性提出质疑，影响发行价和认购质量。</p>
-<h2>二、接班规划与上市规划的4个协同要点</h2>
-<h3>协同要点1：接班时间线与上市时间线的协调</h3>
-<p>理想的安排是：在公司提交上市申请之前（约12至18个月），将二代正式任命为某个核心职位（如联席CEO、执行副总裁等）；让二代在上市准备过程中参与所有核心工作（路演、SEC问询应对、机构投资人沟通），积累公众公司管理经验；挂牌成功后，根据二代的实际表现决定是否启动完全交接。</p>
-<h3>协同要点2：二代的能力建设计划</h3>
-<p>如果二代目前还不具备公众公司高管的能力，需要提前2至3年启动能力建设计划：安排二代在知名企业或投行、律所进行职业培训；让二代主导某个重要的内部项目，积累管理经验；引入外部顾问（如彤鼎团队）作为二代的资本市场导师，系统讲授上市公司治理和资本市场运作知识。</p>
-<h3>协同要点3：股权结构的提前规划</h3>
-<p>创始人计划如何将股权传给二代（直接赠与、信托传承、遗产传承等），需要在上市架构设计时就同步规划。一旦公司上市，股权结构调整的税务成本和法律复杂度都大幅上升。参考第66篇股权信托设计，了解如何在上市前合规高效地完成股权的代际传承安排。</p>
-<h3>协同要点4：机构投资人对接班的预期管理</h3>
-<p>在路演和IR过程中，主动向机构投资人说明家族的接班规划：创始人未来的角色（如转为董事会主席而非CEO）、二代的资历和准备情况、外部职业经理人团队的引入计划（如二代暂时不独立担当，配备有经验的职业经理人辅助）。透明且合理的接班计划，远比被动应对投资人的质疑要好得多。</p>
-<h2>三、家族企业上市中的股权传承安排</h2>
-<h3>上市前完成家族信托安排</h3>
-<p>如第66篇所述，将创始人持有的公司股权装入家族信托，是保护财富、规避遗产税、确保控制权有序传承的最优安排。在上市前完成这一安排，可以利用上市前的较低估值锁定更低的税基，同时避免上市后调整架构的复杂性。</p>
-<h3>二代的股权激励安排</h3>
-<p>如果二代将作为上市公司的核心管理层，应该在ESOP框架内给予合理的股权激励（期权或RSU），与其他高管保持一致，避免被外部投资人认为是家族内部的不当利益输送。</p>
-<h3>家族股权的锁定期安排</h3>
-<p>上市时，家族持有的股票通常需要签署与其他内部人相同的锁定协议（180天）。锁定期结束后的减持需要提前规划（10b5-1计划），并与公司IR团队协同沟通，避免大量减持引发市场恐慌。</p>
-<h2>四、家族企业治理升级的必做事项</h2>
-<p>家族企业在上市前需要完成一系列治理升级，将原有的家族式治理（由创始人一人说了算）转变为公众公司治理（董事会监督、独立委员会制衡、信息公开透明）。</p>
-<p>必做事项1：建立正式的董事会，引入独立董事。建议在上市前12至18个月就完成独立董事的招募，让他们参与上市前的公司治理决策，建立合作默契。</p>
-<p>必做事项2：建立审计委员会、薪酬委员会、提名与治理委员会，并制定各委员会的章程和运作流程。</p>
-<p>必做事项3：制定正式的公司道德行为准则（Code of Ethics），包括关联交易政策、举报人保护政策、反腐败政策等，并对全体员工进行培训。</p>
-<p>必做事项4：建立CEO和CFO的绩效评估机制，将高管薪酬与公司业绩挂钩，通过薪酬委员会进行独立评估，消除外部对家族企业高管薪酬过高的质疑。</p>
-<h3>结语：接班和上市都是百年基业的关键节点</h3>
-<p>家族企业的接班和上市，是两件同等重要的百年大事。把它们分开看、分开规划，往往会相互掣肘；把它们放在一起看、协同规划，可以让两件事相互赋能。</p>
-<p>彤鼎集团（香港）有限公司在辅导家族企业上市时，始终把家族治理升级和接班规划作为顶层架构设计的重要组成部分，确保资本化不只是为一代创始人服务，更是为整个家族企业的百年传承奠定制度基础。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p>
-<p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>中国大量家族企业正在同时面临两个挑战：一代创始人希望将企业传给二代，同时希望通过上市实现资产的流动性和企业的做大做强。这两件事如果分开推进，往往都会遇到障碍——单独推进接班，企业估值没有资本市场背书，接班后的股权价值难以量化；单独推进上市，如果创始人年龄较大且二代尚未准备好，机构投资人对管理层的长期稳定性会有顾虑。</p><p>将接班规划与上市规划同步推进，是解决这一两难困境的最优路径：用上市推动接班（二代在上市过程中快速成长为合格的上市公司高管），用接班支撑上市（机构投资人看到完整的接班方案会更有信心）。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">家族企业上市面临的特殊挑战</a></li><li><a href="#sec-02">接班规划与上市规划的4个协同要点</a></li><li><a href="#sec-03">家族企业上市中的股权传承安排</a></li><li><a href="#sec-04">家族企业治理升级的必做事项</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、家族企业上市面临的特殊挑战</h2><p><h3>挑战1：家族控制权与公众股东权益的平衡</h3></p><p>家族企业上市后，创始家族不再是公司的唯一所有人，必须对所有公众股东承担信托义务（Fiduciary Duty）。很多创始人难以接受这一角色转变：无法再像私有公司那样随意决策、必须向公众股东公开披露所有重大信息、某些决策必须经过独立董事和审计委员会审批。</p><p>应对方案：通过AB股双重股权结构保留创始家族的决策控制权（参考第28篇），同时在治理架构上满足纳斯达克的独立董事要求，在控制权和治理规范性之间达到平衡。</p><p><h3>挑战2：家族关联交易的合规处理</h3></p><p>家族企业通常有大量与家族成员控制的实体之间的关联交易（供应商、客户、地产出租等）。这些交易在私有公司阶段属于正常安排，但在上市公司背景下必须经过独立审计委员会的审查，证明定价公平合理，并在SEC文件中完整披露。</p><p>应对方案：在上市辅导启动前12至18个月，系统梳理所有关联交易，对不必要的关联交易进行清理，保留的关联交易按照市场化原则重新签署正式合同并完整记录。</p><p><h3>挑战3：二代准备度不足</h3></p><p>如果创始人计划将CFO或CEO职位传给二代，但二代没有足够的专业资历和市场认可度，机构投资人在尽调和路演时会对管理层的专业性提出质疑，影响发行价和认购质量。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、接班规划与上市规划的4个协同要点</h2><p><h3>协同要点1：接班时间线与上市时间线的协调</h3></p><p>理想的安排是：在公司提交上市申请之前（约12至18个月），将二代正式任命为某个核心职位（如联席CEO、执行副总裁等）；让二代在上市准备过程中参与所有核心工作（路演、SEC问询应对、机构投资人沟通），积累公众公司管理经验；挂牌成功后，根据二代的实际表现决定是否启动完全交接。</p><p><h3>协同要点2：二代的能力建设计划</h3></p><p>如果二代目前还不具备公众公司高管的能力，需要提前2至3年启动能力建设计划：安排二代在知名企业或投行、律所进行职业培训；让二代主导某个重要的内部项目，积累管理经验；引入外部顾问（如彤鼎团队）作为二代的资本市场导师，系统讲授上市公司治理和资本市场运作知识。</p><p><h3>协同要点3：股权结构的提前规划</h3></p><p>创始人计划如何将股权传给二代（直接赠与、信托传承、遗产传承等），需要在上市架构设计时就同步规划。一旦公司上市，股权结构调整的税务成本和法律复杂度都大幅上升。参考第66篇股权信托设计，了解如何在上市前合规高效地完成股权的代际传承安排。</p><p><h3>协同要点4：机构投资人对接班的预期管理</h3></p><p>在路演和IR过程中，主动向机构投资人说明家族的接班规划：创始人未来的角色（如转为董事会主席而非CEO）、二代的资历和准备情况、外部职业经理人团队的引入计划（如二代暂时不独立担当，配备有经验的职业经理人辅助）。透明且合理的接班计划，远比被动应对投资人的质疑要好得多。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、家族企业上市中的股权传承安排</h2><p><h3>上市前完成家族信托安排</h3></p><p>如第66篇所述，将创始人持有的公司股权装入家族信托，是保护财富、规避遗产税、确保控制权有序传承的最优安排。在上市前完成这一安排，可以利用上市前的较低估值锁定更低的税基，同时避免上市后调整架构的复杂性。</p><p><h3>二代的股权激励安排</h3></p><p>如果二代将作为上市公司的核心管理层，应该在ESOP框架内给予合理的股权激励（期权或RSU），与其他高管保持一致，避免被外部投资人认为是家族内部的不当利益输送。</p><p><h3>家族股权的锁定期安排</h3></p><p>上市时，家族持有的股票通常需要签署与其他内部人相同的锁定协议（180天）。锁定期结束后的减持需要提前规划（10b5-1计划），并与公司IR团队协同沟通，避免大量减持引发市场恐慌。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、家族企业治理升级的必做事项</h2><p>家族企业在上市前需要完成一系列治理升级，将原有的家族式治理（由创始人一人说了算）转变为公众公司治理（董事会监督、独立委员会制衡、信息公开透明）。</p><p>必做事项1：建立正式的董事会，引入独立董事。建议在上市前12至18个月就完成独立董事的招募，让他们参与上市前的公司治理决策，建立合作默契。</p><p>必做事项2：建立审计委员会、薪酬委员会、提名与治理委员会，并制定各委员会的章程和运作流程。</p><p>必做事项3：制定正式的公司道德行为准则（Code of Ethics），包括关联交易政策、举报人保护政策、反腐败政策等，并对全体员工进行培训。</p><p>必做事项4：建立CEO和CFO的绩效评估机制，将高管薪酬与公司业绩挂钩，通过薪酬委员会进行独立评估，消除外部对家族企业高管薪酬过高的质疑。</p><p><h3>结语：接班和上市都是百年基业的关键节点</h3></p><p>家族企业的接班和上市，是两件同等重要的百年大事。把它们分开看、分开规划，往往会相互掣肘；把它们放在一起看、协同规划，可以让两件事相互赋能。</p><p>彤鼎集团（香港）有限公司在辅导家族企业上市时，始终把家族治理升级和接班规划作为顶层架构设计的重要组成部分，确保资本化不只是为一代创始人服务，更是为整个家族企业的百年传承奠定制度基础。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p><p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="esop-tax-deferral.html" style="color:#6b5426;font-weight:700;">股权激励个税递延与优化</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="esop-tax.html" style="color:#6b5426;font-weight:700;">股权激励税务优化</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="owner-cash.html" style="color:#6b5426;font-weight:700;">老板从公司拿钱的合规方式</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="equity-generational-transfer.html" style="color:#6b5426;font-weight:700;">股权代际转移的三种路径与税务考量</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="trust-structures-listing.html" style="color:#6b5426;font-weight:700;">家族信托与上市公司股权</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

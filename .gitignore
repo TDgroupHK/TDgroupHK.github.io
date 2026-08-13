@@ -1,0 +1,6 @@
+# 平台分发稿（tools/platform_export.py 生成）：只在本地用，不进仓库、不上官网
+dist/
+
+# Python 缓存
+__pycache__/
+*.pyc

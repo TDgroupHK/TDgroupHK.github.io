@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"长期破净公司的估值提升计划：谁必须做、写什么、怎么披露","inLanguage":"zh-CN","abstract":"Under CSRC Regulatory Guideline No. 10 on market value management, listed companies whose shares have traded below audited net asset value per share for twelve consecutive months must adopt and disclose a valuation enhancement plan. This article sets out the precise test, the board approval and disclosure procedure, the substantive limits on what such a plan may say, and the annual review obligation that follows.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/valuation-enhancement-plan.html"},"datePublished":"2026-08-01","dateModified":"2026-08-01","description":"《上市公司监管指引第10号——市值管理》要求长期破净公司制定并披露估值提升计划。本文说明「长期破净」的具体判定口径、计划必须经董事会审议后披露的程序要求、内容上「明确具体可执行、不得引起歧义或误导」的边界，以及年度评估与业绩说明会专项说明这两项后续义务。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,42 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">挂牌之后 AFTER LISTING</div><h1>长期破净公司的估值提升计划：谁必须做、写什么、怎么披露</h1>
 <div class="sub">判定线可以自己算，计划的内容边界比想象中窄</div><div class="en">Under CSRC Regulatory Guideline No. 10 on market value management, listed companies whose shares have traded below audited net asset value per share for twelve consecutive months must adopt and disclose a valuation enhancement plan. This article sets out the precise test, the board approval and disclosure procedure, the substantive limits on what such a plan may say, and the annual review obligation that follows.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">估值提升计划是指长期破净的上市公司依据《上市公司监管指引第10号——市值管理》制定、经董事会审议后披露的书面安排。触发条件是一条可以自行计算的判定线：股票连续12个月每个交易日的收盘价均低于最近一个会计年度经审计的每股净资产。计划的内容要求「明确、具体、可执行，不得使用容易引起歧义或者误导投资者的表述」，因此它的落点必须是经营与治理层面的可执行动作，写成股价目标或对市场表态反而偏离了规则本意。计划披露之后还有两项持续义务：至少每年评估一次实施效果，需要完善的经董事会审议后披露；市净率低于所在行业平均水平的公司，还应在年度业绩说明会中就执行情况作专项说明。该指引于2024年11月15日发布并自发布之日起实施。</div>
-<h2>一、判定线：三个要件缺一不可</h2>
-<p><strong>结论先行：长期破净的判定是纯客观计算，公司可以自己算出来，不存在解释空间。</strong></p>
-<p>指引给出的口径是：股票连续12个月每个交易日的收盘价，均低于其最近一个会计年度经审计的每股净资产。这句话里有三个要件。</p>
-<p>其一，比较的基准是**最近一个会计年度经审计的每股净资产**，不是季度报告或半年报的数字。这意味着基准在一年内是固定的，随年报更新而跳变，而不是随季度滚动。</p>
-<p>其二，观察窗口是**连续12个月**，不是某个时点或某个季度的平均。</p>
-<p>其三，也是最容易被忽略的一条——要求是**每个交易日**都低于。这意味着窗口期内只要出现一个交易日的收盘价不低于该基准，连续性即被打断，需要重新起算。因此，本质上这是一条严格的判定线，而不是一个大致的状态描述。</p>
-<p>需要提醒的是，这条线在年报披露后可能发生跳变：经审计的每股净资产更新之后，此前不构成长期破净的公司可能进入范围，反之亦然。关键在于公司应当把它纳入定期核算，而不是等到被提醒。</p>
-<h2>二、程序要求：董事会审议之后才能披露</h2>
-<p><strong>结论先行：估值提升计划不是证券部或董办可以自行发布的文件，必须经董事会审议。</strong></p>
-<p>指引明确要求，长期破净公司应当制定估值提升计划，并经董事会审议后披露。这一程序安排改变了这项工作在公司内部的位置——它不是信息披露事务，而是需要在董事会层面留下决策记录的治理事项。</p>
-<p>这一点与指引整体的责任安排一致：指引明确了上市公司董事会、董事和高级管理人员等相关方在市值管理中的责任。因此，估值提升计划的起草过程需要业务、财务、董办共同参与，最终由董事会承担审议责任。实践中若把它当成一份公告模板来处理，程序上就已经不合规了。</p>
-<p>后续的修订同样受此约束。评估之后认为需要完善的，完善后的计划同样应当经董事会审议后披露，不能以更新公告的形式绕过。</p>
-<h2>三、内容边界：可执行的动作，不是对股价的表态</h2>
-<p><strong>结论先行：规则原文划的边界是「明确、具体、可执行，不得使用容易引起歧义或者误导投资者的表述」——这一句同时排除了空话和承诺。</strong></p>
-<p>先说被排除的部分。写成「力争市值回升至某一水平」「争取估值修复」这类表述，既不具体也不可执行，且容易被投资者理解为对价格的承诺，正落在「引起歧义或者误导」的范围内。指引同时明确禁止上市公司以市值管理为名实施违法违规行为，把计划写成价格目标，方向上就与立法意图相反。</p>
-<p>再说应当写入的部分。指引在总体要求中列明了上市公司可以依法合规运用的方式：并购重组、股权激励、员工持股计划、现金分红、投资者关系管理、信息披露、股份回购。这七类构成了估值提升计划的合理素材库，它们的共同特征是全部作用于公司质量与市场沟通，而非直接作用于交易与价格。</p>
-<p>因此，一份经得起检验的计划，写的是公司打算在未来一段时间内做哪些具体的经营与治理动作、由谁负责、在什么时点完成、如何验证是否完成。本质上它是一份可考核的工作安排，而不是一份态度声明。判断标准很简单：计划里的每一条，公司自己能不能在一年后确认做没做到。</p>
-<h2>四、披露之后：两项容易被漏掉的持续义务</h2>
-<p><strong>结论先行：披露不是终点，指引还安排了年度评估与业绩说明会专项说明两项后续动作。</strong></p>
-<p>其一是年度评估。长期破净公司应当至少每年对估值提升计划的实施效果进行评估；评估后认为需要完善的，应当经董事会审议后披露。这意味着计划一旦发布，就进入了一个需要持续维护的循环，而不是一次性交付。</p>
-<p>其二是业绩说明会的专项说明。市净率低于所在行业平均水平的长期破净公司，应当就估值提升计划的执行情况在年度业绩说明会中进行专项说明。注意这一条的适用范围比长期破净本身更窄——它叠加了「市净率低于所在行业平均水平」这一条件，因此并非所有长期破净公司都触发。</p>
-<p>这两项义务合起来的效果是：计划的内容将在一年后被公开对照检验。这也从反面说明了第三节的判断标准为什么重要——写下无法验证的表述，代价会在年度评估和业绩说明会上显现。</p>
-<h2>五、几个常见的误解</h2>
-<p><strong>结论先行：多数误解来自把这项要求理解成对股价负责，而它要求的是对动作负责。</strong></p>
-<p>误解之一，认为估值提升计划是给市场的信号，因此写得越有想象空间越好。实际情况相反：容易引起歧义或误导的表述是规则明确排除的对象，而可执行的具体动作才是要求。</p>
-<p>误解之二，认为公司基本面没问题、只是市场没发现，所以计划里只需要加强宣传。这个判断本身可能成立，但在指引的框架下，投资者关系管理与信息披露同样是列明的合规方式，需要落成具体安排——由谁负责、多久一次、覆盖哪些渠道，而不是写一句「加强与投资者沟通」。</p>
-<p>误解之三，认为长期破净是行业性的，因此本公司无需单独应对。指引对市净率低于所在行业平均水平的公司安排了额外的说明义务，恰恰说明行业比较是被纳入考量的维度，而不是可以援引的豁免理由。</p>
-<p>关于市值管理整体的合规边界与红线，另见本站《市值管理的合规边界》；美股上市公司不适用本指引，其对应的工具与规则另见本站《美股没有「市值管理」这个概念：中概股公司的对应工具箱》。</p>
-<h2>六、这项工作在公司内部通常卡在哪里</h2>
-<p><strong>结论先行：卡点很少在写作本身，而在于计划所依赖的动作需要跨部门确认可行性。</strong></p>
-<p>估值提升计划的每一条都指向具体业务动作：现金分红涉及财务与股东回报政策，股权激励与员工持股涉及人力与股东大会安排，并购重组涉及战略与资金，股份回购涉及资金安排与执行窗口。这些动作各自有决策链条，董办无法代为承诺。</p>
-<p>因此实践中较为稳妥的做法是先做可行性排查再动笔：把七类合规方式逐项对照本公司的实际条件，筛出确实可以在计划期内落地的几项，再写进计划。反过来先写一份漂亮的计划再倒推执行，通常会在年度评估时暴露。</p>
-<p>彤鼎在这一阶段提供的是信息披露、投资者关系与资本运作层面的企业管理咨询，不接触交易、不参与任何形式的市场操纵，也不对股价作任何承诺。华尔街彤鼎俱乐部内，上市公司治理与披露实务是成员讨论较为集中的议题之一。如需了解俱乐部会员详情，可发送邮件至 liaoqijie@tdgroup.hk。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>估值提升计划是指长期破净的上市公司依据《上市公司监管指引第10号——市值管理》制定、经董事会审议后披露的书面安排。触发条件是一条可以自行计算的判定线：股票连续12个月每个交易日的收盘价均低于最近一个会计年度经审计的每股净资产。</p><p>计划的内容要求「明确、具体、可执行，不得使用容易引起歧义或者误导投资者的表述」，因此它的落点必须是经营与治理层面的可执行动作，写成股价目标或对市场表态反而偏离了规则本意。计划披露之后还有两项持续义务：至少每年评估一次实施效果，需要完善的经董事会审议后披露；市净率低于所在行业平均水平的公司，还应在年度业绩说明会中就执行情况作专项说明。该指引于2024年11月15日发布并自发布之日起实施。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">判定线：三个要件缺一不可</a></li><li><a href="#sec-02">程序要求：董事会审议之后才能披露</a></li><li><a href="#sec-03">内容边界：可执行的动作，不是对股价的表态</a></li><li><a href="#sec-04">披露之后：两项容易被漏掉的持续义务</a></li><li><a href="#sec-05">几个常见的误解</a></li><li><a href="#sec-06">这项工作在公司内部通常卡在哪里</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、判定线：三个要件缺一不可</h2><div class="ts-lead"><span class="tag">结论先行</span><p>长期破净的判定是纯客观计算，公司可以自己算出来，不存在解释空间。</p></div><p>指引给出的口径是：股票连续12个月每个交易日的收盘价，均低于其最近一个会计年度经审计的每股净资产。这句话里有三个要件。</p><p>其一，比较的基准是**最近一个会计年度经审计的每股净资产**，不是季度报告或半年报的数字。这意味着基准在一年内是固定的，随年报更新而跳变，而不是随季度滚动。</p><p>其二，观察窗口是**连续12个月**，不是某个时点或某个季度的平均。</p><p>其三，也是最容易被忽略的一条——要求是**每个交易日**都低于。这意味着窗口期内只要出现一个交易日的收盘价不低于该基准，连续性即被打断，需要重新起算。因此，本质上这是一条严格的判定线，而不是一个大致的状态描述。</p><p>需要提醒的是，这条线在年报披露后可能发生跳变：经审计的每股净资产更新之后，此前不构成长期破净的公司可能进入范围，反之亦然。关键在于公司应当把它纳入定期核算，而不是等到被提醒。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、程序要求：董事会审议之后才能披露</h2><div class="ts-lead"><span class="tag">结论先行</span><p>估值提升计划不是证券部或董办可以自行发布的文件，必须经董事会审议。</p></div><p>指引明确要求，长期破净公司应当制定估值提升计划，并经董事会审议后披露。这一程序安排改变了这项工作在公司内部的位置——它不是信息披露事务，而是需要在董事会层面留下决策记录的治理事项。</p><p>这一点与指引整体的责任安排一致：指引明确了上市公司董事会、董事和高级管理人员等相关方在市值管理中的责任。因此，估值提升计划的起草过程需要业务、财务、董办共同参与，最终由董事会承担审议责任。实践中若把它当成一份公告模板来处理，程序上就已经不合规了。</p><p>后续的修订同样受此约束。评估之后认为需要完善的，完善后的计划同样应当经董事会审议后披露，不能以更新公告的形式绕过。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、内容边界：可执行的动作，不是对股价的表态</h2><div class="ts-lead"><span class="tag">结论先行</span><p>规则原文划的边界是「明确、具体、可执行，不得使用容易引起歧义或者误导投资者的表述」——这一句同时排除了空话和承诺。</p></div><p>先说被排除的部分。写成「力争市值回升至某一水平」「争取估值修复」这类表述，既不具体也不可执行，且容易被投资者理解为对价格的承诺，正落在「引起歧义或者误导」的范围内。指引同时明确禁止上市公司以市值管理为名实施违法违规行为，把计划写成价格目标，方向上就与立法意图相反。</p><p>再说应当写入的部分。指引在总体要求中列明了上市公司可以依法合规运用的方式：并购重组、股权激励、员工持股计划、现金分红、投资者关系管理、信息披露、股份回购。这七类构成了估值提升计划的合理素材库，它们的共同特征是全部作用于公司质量与市场沟通，而非直接作用于交易与价格。</p><p>因此，一份经得起检验的计划，写的是公司打算在未来一段时间内做哪些具体的经营与治理动作、由谁负责、在什么时点完成、如何验证是否完成。本质上它是一份可考核的工作安排，而不是一份态度声明。判断标准很简单：计划里的每一条，公司自己能不能在一年后确认做没做到。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、披露之后：两项容易被漏掉的持续义务</h2><div class="ts-lead"><span class="tag">结论先行</span><p>披露不是终点，指引还安排了年度评估与业绩说明会专项说明两项后续动作。</p></div><p>其一是年度评估。长期破净公司应当至少每年对估值提升计划的实施效果进行评估；评估后认为需要完善的，应当经董事会审议后披露。这意味着计划一旦发布，就进入了一个需要持续维护的循环，而不是一次性交付。</p><p>其二是业绩说明会的专项说明。市净率低于所在行业平均水平的长期破净公司，应当就估值提升计划的执行情况在年度业绩说明会中进行专项说明。注意这一条的适用范围比长期破净本身更窄——它叠加了「市净率低于所在行业平均水平」这一条件，因此并非所有长期破净公司都触发。</p><p>这两项义务合起来的效果是：计划的内容将在一年后被公开对照检验。这也从反面说明了第三节的判断标准为什么重要——写下无法验证的表述，代价会在年度评估和业绩说明会上显现。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、几个常见的误解</h2><div class="ts-lead"><span class="tag">结论先行</span><p>多数误解来自把这项要求理解成对股价负责，而它要求的是对动作负责。</p></div><p>误解之一，认为估值提升计划是给市场的信号，因此写得越有想象空间越好。实际情况相反：容易引起歧义或误导的表述是规则明确排除的对象，而可执行的具体动作才是要求。</p><p>误解之二，认为公司基本面没问题、只是市场没发现，所以计划里只需要加强宣传。这个判断本身可能成立，但在指引的框架下，投资者关系管理与信息披露同样是列明的合规方式，需要落成具体安排——由谁负责、多久一次、覆盖哪些渠道，而不是写一句「加强与投资者沟通」。</p><p>误解之三，认为长期破净是行业性的，因此本公司无需单独应对。指引对市净率低于所在行业平均水平的公司安排了额外的说明义务，恰恰说明行业比较是被纳入考量的维度，而不是可以援引的豁免理由。</p><p>关于市值管理整体的合规边界与红线，另见本站《市值管理的合规边界》；美股上市公司不适用本指引，其对应的工具与规则另见本站《美股没有「市值管理」这个概念：中概股公司的对应工具箱》。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、这项工作在公司内部通常卡在哪里</h2><div class="ts-lead"><span class="tag">结论先行</span><p>卡点很少在写作本身，而在于计划所依赖的动作需要跨部门确认可行性。</p></div><p>估值提升计划的每一条都指向具体业务动作：现金分红涉及财务与股东回报政策，股权激励与员工持股涉及人力与股东大会安排，并购重组涉及战略与资金，股份回购涉及资金安排与执行窗口。这些动作各自有决策链条，董办无法代为承诺。</p><p>因此实践中较为稳妥的做法是先做可行性排查再动笔：把七类合规方式逐项对照本公司的实际条件，筛出确实可以在计划期内落地的几项，再写进计划。反过来先写一份漂亮的计划再倒推执行，通常会在年度评估时暴露。</p><p>彤鼎在这一阶段提供的是信息披露、投资者关系与资本运作层面的企业管理咨询，不接触交易、不参与任何形式的市场操纵，也不对股价作任何承诺。华尔街彤鼎俱乐部内，上市公司治理与披露实务是成员讨论较为集中的议题之一。如需了解俱乐部会员详情，可发送邮件至 liaoqijie@tdgroup.hk。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="independent-directors.html" style="color:#6b5426;font-weight:700;">独立董事招聘与职责</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="follow-on-offering.html" style="color:#6b5426;font-weight:700;">上市公司增发配股指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="short-attack-defense.html" style="color:#6b5426;font-weight:700;">做空攻击防御</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="index-inclusion.html" style="color:#6b5426;font-weight:700;">指数纳入路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-tier-upgrade.html" style="color:#6b5426;font-weight:700;">纳斯达克市场升级指南</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

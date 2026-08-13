@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"上市后的锁定期与解禁减持","inLanguage":"zh-CN","abstract":"A lock-up period is the window after an IPO during which designated shareholders may not sell. It comes from three distinct sources that are routinely confused: exchange or statutory rules, the underwriters' lock-up agreement, and private undertakings given to pre-IPO investors and employee holding vehicles. In the US the customary underwriter lock-up runs 180 days, while Rule 144 separately governs resale of restricted and control securities through holding periods, volume limits and Form 144 filings that do not lapse when the lock-up does. In Hong Kong a controlling shareholder may not dispose of shares in the first six months and may not cease to be controlling in the following six. Unlock dates rarely produce the sell-off the market fears; float design, disclosure discipline and a pre-planned selling cadence decide the outcome.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/lockup-expiry.html","datePublished":"2026-07-22","dateModified":"2026-07-22","image":"https://tdgroup.hk/img/og-card.jpg","description":"锁定期是指企业上市后特定股东在约定期限内不得出售股份的安排，来源有三：交易所规则强制、承销协议锁定承诺、投资协议合同约定。美股IPO惯例锁定180天，港股主板要求控股股东前6个月不得出售、其后6个月不得丧失控股地位。解禁不等于可自由卖出，Rule 144的持有期、数量限制与申报义务仍然适用。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,58 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市之后 POST-IPO</div><h1>上市后的锁定期与解禁减持</h1>
 <div class="sub">从美股180天到港股6+6，股东退出的规则、节奏与代价</div><div class="en">A lock-up period is the window after an IPO during which designated shareholders may not sell. It comes from three distinct sources that are routinely confused: exchange or statutory rules, the underwriters' lock-up agreement, and private undertakings given to pre-IPO investors and employee holding vehicles. In the US the customary underwriter lock-up runs 180 days, while Rule 144 separately governs resale of restricted and control securities through holding periods, volume limits and Form 144 filings that do not lapse when the lock-up does. In Hong Kong a controlling shareholder may not dispose of shares in the first six months and may not cease to be controlling in the following six. Unlock dates rarely produce the sell-off the market fears; float design, disclosure discipline and a pre-planned selling cadence decide the outcome.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-22">2026年7月22日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">锁定期（lock-up）是指企业上市后，特定股东在约定期限内不得出售所持股份的安排。它有三个彼此独立的来源，实务中常被混为一谈：一是交易所规则的强制要求，例如香港主板规则要求控股股东在上市后前6个月不得出售股份、其后6个月不得因出售而丧失控股股东地位；二是承销协议项下的锁定承诺，美股IPO的惯例期限为180天，豁免权掌握在承销商而非监管机构手中；三是投资协议中对Pre-IPO投资人与员工持股平台的合同约定。此外，美国证券法下的Rule 144对限制性证券与关联方持股的转售另有一套约束——报告公司项下的持有期为6个月，关联方还须满足现行公开信息、数量限制（每3个月不超过已发行股份的1%或前4周平均周成交量的较高者）与Form 144申报要求，这套约束不因锁定期届满而消失。因此，解禁不等于可以自由卖出。</div>
-<h2>一、锁定期的三个来源：规则、承销协议与投资条款</h2>
-<p><strong>结论先说：把锁定期当成一件事，是解禁安排出问题的主要原因；它其实是三套彼此独立、期限不同、豁免权归属不同的约束。</strong></p>
-<p>第一类来源是交易所规则与法规的强制要求。这类约束的对象通常是控股股东与实际控制人，目的在于保证上市后一段时间内控制权的稳定，防止发行人把上市当成一次性套现。它由规则直接规定，发行人与承销商都无权豁免，只能按期届满。</p>
-<p>第二类来源是承销协议项下的锁定函（lock-up agreement）。在美股IPO中，承销商会要求董事、高级管理人员、主要股东以及通常持股1%以上的其他股东，签署一份向承销商作出的锁定承诺，惯例期限为自招股说明书生效日起180天。这是一份商业合同，不是监管要求，因此豁免权属于牵头承销商——它可以在期限届满前书面同意部分或全部提前解除。</p>
-<p>第三类来源是投资协议。Pre-IPO轮次的投资人、员工持股平台、创始人之间的一致行动安排，往往各自约定了不同的持有期与转让限制，期限从上市后12个月到36个月不等。这类条款只对签约方有效，但它决定了真正可流通的股份规模。</p>
-<p>三类来源的期限很少对齐。一家企业上市后可能出现的局面是：承销商锁定180天届满，但控股股东仍受规则约束12个月，同时某只基金还有一份24个月的合同锁定未到期。<strong>关键在于，做解禁安排之前必须先把这三张时间表画在同一张纸上，而不是只盯着最短的那一条。</strong></p>
-
-<h2>二、美股：180天锁定之外，Rule 144才是长期约束</h2>
-<p><strong>结论先说：美股股东真正的减持约束不是180天，而是Rule 144，它在锁定期结束之后仍然长期有效。</strong></p>
-<p>Rule 144是美国证券法下的一条安全港规则，用于解决一个基本问题：未经注册发行取得的股份（限制性证券）与关联方持有的股份（控制证券），在什么条件下可以合法转售而不被视为承销行为。它设定的门槛包括四个方面。</p>
-<p>其一是持有期。对于已履行持续披露义务的报告公司，限制性证券的最短持有期为6个月；对于非报告公司，持有期为12个月。持有期从取得股份并支付对价之日起算，而不是从上市之日起算，这一点在Pre-IPO投资人的时间表上经常被算错。</p>
-<p>其二是现行公开信息要求。转售时，发行人必须已按规定提交定期报告，市场上存在充分的公开信息。年报或季报逾期，会直接堵住关联方的转售通道。</p>
-<p>其三是数量限制。关联方在任何三个月内出售的数量，不得超过同类已发行股份总数的1%与该股票前四周平均周成交量两者中的较高者。对于日均成交量偏低的中小市值公司，这条限制的实际杀伤力远大于表面数字——流动性不足时，1%可能需要数周才能消化。</p>
-<p>其四是交易方式与申报。关联方须通过经纪商以常规交易方式卖出，不得公开招揽买家；出售数量或金额达到规则设定的门槛时，还须向美国证券交易委员会提交Form 144。具体的数量与金额门槛以监管机构正式规则文本为准。</p>
-<p><strong>本质上，180天解决的是"上市后短期不许卖"，Rule 144解决的是"以后怎么卖"。把前者的到期当成后者的解除，是中概股股东最常见的合规误判。</strong></p>
-
-<h2>三、香港：控股股东的6+6与基石投资者的6个月</h2>
-<p><strong>结论先说：港股的锁定安排写在上市规则里，刚性更强，但结构比美股简单——核心是控股股东的两个半年，加上基石投资者的六个月禁售。</strong></p>
-<p>香港主板上市规则对控股股东设有两段限制。第一段是上市之日起的前6个月，控股股东不得出售其在上市文件中披露的股份。第二段是紧接其后的6个月，控股股东可以出售，但不得因此丧失控股股东地位。两段相加，构成实务中所说的"6+6"。这一安排的立法意图很清楚：控制权的连续性是投资人定价的前提，上市后第一年不允许出现控制权的实质变动。</p>
-<p>基石投资者则适用另一条线。基石投资者是指在招股阶段签署协议、承诺按发行价认购一定金额股份并接受禁售期的机构投资者，其禁售期为上市日后至少6个月。2025年8月生效的一轮发行机制优化中，香港市场就基石禁售期是否调整为分阶段解禁进行过讨论，最终结论是保留原有的6个月安排不变。对企业而言，这意味着基石认购在提升发行确定性的同时，仍然对应一个明确的、可预期的解禁时点。</p>
-<p>需要单独提示的是，未盈利生物科技公司与特专科技公司适用的章节，对主要股东、领航资深投资者等角色另有附加的持股与限售要求，具体条款以联交所正式规则文本为准。此类发行人的解禁时间表往往比一般发行人更复杂，须在递表前就与保荐人核对清楚。</p>
-<p><strong>因此，港股路径下的减持规划，起点不是上市之后，而是股权结构确定之时——谁被认定为控股股东，直接决定了这份时间表怎么写。</strong></p>
-
-<h2>四、解禁日不是抛售日：市场影响的真实机制</h2>
-<p><strong>结论先说：解禁本身不下跌，解禁遇上"流通盘小、锁定比例高、基本面无新叙事"这三个条件同时成立时才下跌。</strong></p>
-<p>解禁对股价的影响，来自供给结构的突变，而不是抛售行为本身。上市初期，实际可交易的股份往往只占总股本的一小部分，价格是在一个很薄的流通盘上形成的。当一大批锁定股份进入可流通状态，即便持有人一股未卖，市场的定价基准也已经改变——投资者会按"潜在供给"重新计算合理价格。</p>
-<p>决定影响幅度的因素有三个。第一是解禁规模相对于流通盘的比例，解禁股数与现有自由流通量之比越高，冲击越大；第二是持有人结构，财务投资人与创始团队的减持意愿差异巨大，前者受基金存续期约束，后者受控制权与市场信号的约束；第三是解禁时点的信息环境，若解禁窗口与财报、重大合同、指数调整等事件重叠，价格反应会被显著放大或抵消。</p>
-<p>成熟发行人的通行做法，是在解禁前主动管理预期：提前披露主要股东的持股意向，说明是否存在集中减持计划；把解禁时点与业绩发布、投资者开放日等正向事件安排在合理的先后顺序上；必要时通过大宗交易将股份一次性转让给长期机构投资者，避免二级市场承接压力。华尔街彤鼎俱乐部在与企业家的交流中反复强调的一点是，解禁是一个可以提前12个月准备的事件，而不是一个到期才需要应对的意外。</p>
-<p><strong>本质上，市场害怕的不是解禁，而是不知道解禁之后会发生什么。信息缺口本身就是折价来源。</strong></p>
-
-<h2>五、合规减持的四条硬约束</h2>
-<p><strong>结论先说：锁定期届满之后，减持是否合规，取决于四件事——身份、窗口、计划与披露。</strong></p>
-<p>第一是身份认定。是否构成关联方（affiliate）决定了适用哪一套规则。董事、高级管理人员、以及能够对发行人施加控制影响的主要股东，通常被认定为关联方，须持续适用Rule 144的数量限制与申报义务；非关联方在满足持有期与信息要求后，限制大幅放宽。身份可能变化，卸任董事之后仍有一段观察期，不能在离职次日即按非关联方处理。</p>
-<p>第二是交易窗口。上市公司普遍设有内部交易政策，规定财报发布前的一段时间为静默期，董事与知情人不得买卖本公司股票。窗口期之外，若掌握尚未公开的重大信息，禁止交易的义务依然存在——内幕交易的判断标准是信息本身，不是日历。</p>
-<p>第三是预设交易计划。Rule 10b5-1允许内部人事先设立书面交易计划，在设立时不知悉重大非公开信息的前提下，按预设的价格、数量与时间机械执行，作为内幕交易指控的积极抗辩。美国证券交易委员会在2022年对该规则作出修订，引入了冷静期要求（董事与高管的冷静期为计划设立后90天与财报提交后2个交易日两者中的较晚者，且不超过120天；其他内部人为30天）、书面确认要求与相应的披露义务，并对重叠计划与单笔交易计划作出限制。具体适用以监管机构正式规则文本为准。</p>
-<p>第四是披露。关联方的持股变动可能触发多套申报义务，包括权益变动申报与内部人交易报告；港股市场则有股东权益披露与董事持股权益申报的对应要求。申报迟延本身就是独立的违规事项，与减持是否赚钱无关。</p>
-<p><strong>关键在于，合规减持是一套流程，不是一个决定。企业应当在上市前就把这套流程写进内部交易政策，而不是在第一笔减持发生时临时找律师。</strong></p>
-
-<h2>六、跨境股东的额外一层：资金怎么回来</h2>
-<p><strong>结论先说：对境内自然人股东而言，减持完成只解决了"卖得出去"，还剩下"钱能不能合规回来"这半个问题。</strong></p>
-<p>红筹或VIE架构下，境内自然人股东通常通过境外特殊目的公司间接持有上市主体股份。这一持股链条在搭建时须完成37号文项下的境外投资外汇登记，登记内容包括特殊目的公司的基本情况与个人的权益结构。减持所得属于该登记项下的资本变动收益，其调回境内需要与既有登记信息相匹配。</p>
-<p>实务中最常见的问题有三类：登记信息长期未做变更，导致减持时的股权结构与登记不符；持股主体经过多轮重组，中间环节的资料无法完整还原；以及通过代持安排持股，权益人与登记名义人不一致。任何一类问题都可能使减持款项滞留境外，或在调回环节遇到显著延迟。</p>
-<p>企业方面，若涉及境外主体向境内的投资安排，还须关注ODI备案的完整性与后续变更。跨境资金的合规路径需要提前规划，通常不是在减持决定作出之后才能补办的事项。<strong>因此，上市前的架构梳理，应当把"退出时资金如何回流"作为一项独立的检查内容，而不是默认它会自动成立。</strong></p>
-
-<h2>七、上市前就该做的四项设计</h2>
-<p><strong>结论先说：解禁是上市前架构设计的结果，能在上市后调整的空间非常有限。</strong></p>
-<p>第一，设计流通盘。发行比例、公众持股量与自由流通量的安排，直接决定了解禁时的冲击系数。流通盘过小虽然有利于上市初期的价格表现，但会把全部压力推迟到解禁窗口。合理的做法是在发行阶段就把自由流通量做到能够承接后续供给的水平。</p>
-<p>第二，设计锁定期的层次。让不同类型的股东适用不同的解禁时点，避免所有锁定在同一天集中到期。创始团队、财务投资人、员工持股平台的解禁时间形成阶梯，市场消化压力会平缓得多。</p>
-<p>第三，设计减持的制度容器。上市前完成内部交易政策、窗口期安排、预设交易计划模板的准备，使上市后的每一笔减持都有可依循的流程，而不是逐笔判断。</p>
-<p>第四，设计沟通节奏。主要股东的持股意向、是否存在减持计划、锁定期届满后的安排，应当纳入常规的投资者沟通内容。市场对确定性的定价，永远高于对乐观预期的定价。</p>
-<p>彤鼎集团（香港）有限公司在为企业提供上市规划与市值管理服务时，会把解禁时间表作为架构设计阶段的必检项；华尔街彤鼎俱乐部亦定期就上市后的股东行为管理与资本运作节奏组织闭门交流，相关内容仅面向符合条件的合格投资者与企业决策者，充分揭示相关风险，不构成任何投资建议或收益承诺。<strong>本质上，一份好的解禁安排，是在企业还没有股价的时候就写好的。</strong></p></article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>锁定期（lock-up）是指企业上市后，特定股东在约定期限内不得出售所持股份的安排。它有三个彼此独立的来源，实务中常被混为一谈：一是交易所规则的强制要求，例如香港主板规则要求控股股东在上市后前6个月不得出售股份、其后6个月不得因出售而丧失控股股东地位；二是承销协议项下的锁定承诺，美股IPO的惯例期限为180天，豁免权掌握在承销商而非监管机构手中；三是投资协议中对Pre-IPO投资人与员工持股平台的合同约定。</p><p>此外，美国证券法下的Rule 144对限制性证券与关联方持股的转售另有一套约束——报告公司项下的持有期为6个月，关联方还须满足现行公开信息、数量限制（每3个月不超过已发行股份的1%或前4周平均周成交量的较高者）与Form 144申报要求，这套约束不因锁定期届满而消失。因此，解禁不等于可以自由卖出。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">锁定期的三个来源：规则、承销协议与投资条款</a></li><li><a href="#sec-02">美股：180天锁定之外，Rule 144才是长期约束</a></li><li><a href="#sec-03">香港：控股股东的6+6与基石投资者的6个月</a></li><li><a href="#sec-04">解禁日不是抛售日：市场影响的真实机制</a></li><li><a href="#sec-05">合规减持的四条硬约束</a></li><li><a href="#sec-06">跨境股东的额外一层：资金怎么回来</a></li><li><a href="#sec-07">上市前就该做的四项设计</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、锁定期的三个来源：规则、承销协议与投资条款</h2><p><strong>结论先说：把锁定期当成一件事，是解禁安排出问题的主要原因；它其实是三套彼此独立、期限不同、豁免权归属不同的约束。</strong></p><p>第一类来源是交易所规则与法规的强制要求。这类约束的对象通常是控股股东与实际控制人，目的在于保证上市后一段时间内控制权的稳定，防止发行人把上市当成一次性套现。它由规则直接规定，发行人与承销商都无权豁免，只能按期届满。</p><p>第二类来源是承销协议项下的锁定函（lock-up agreement）。在美股IPO中，承销商会要求董事、高级管理人员、主要股东以及通常持股1%以上的其他股东，签署一份向承销商作出的锁定承诺，惯例期限为自招股说明书生效日起180天。</p><p data-ts="1">这是一份商业合同，不是监管要求，因此豁免权属于牵头承销商——它可以在期限届满前书面同意部分或全部提前解除。</p><p>第三类来源是投资协议。Pre-IPO轮次的投资人、员工持股平台、创始人之间的一致行动安排，往往各自约定了不同的持有期与转让限制，期限从上市后12个月到36个月不等。这类条款只对签约方有效，但它决定了真正可流通的股份规模。</p><p>三类来源的期限很少对齐。一家企业上市后可能出现的局面是：承销商锁定180天届满，但控股股东仍受规则约束12个月，同时某只基金还有一份24个月的合同锁定未到期。<strong>关键在于，做解禁安排之前必须先把这三张时间表画在同一张纸上，而不是只盯着最短的那一条。</strong></p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、美股：180天锁定之外，Rule 144才是长期约束</h2><p><strong>结论先说：美股股东真正的减持约束不是180天，而是Rule 144，它在锁定期结束之后仍然长期有效。</strong></p><p>Rule 144是美国证券法下的一条安全港规则，用于解决一个基本问题：未经注册发行取得的股份（限制性证券）与关联方持有的股份（控制证券），在什么条件下可以合法转售而不被视为承销行为。它设定的门槛包括四个方面。</p><p>其一是持有期。对于已履行持续披露义务的报告公司，限制性证券的最短持有期为6个月；对于非报告公司，持有期为12个月。持有期从取得股份并支付对价之日起算，而不是从上市之日起算，这一点在Pre-IPO投资人的时间表上经常被算错。</p><p>其二是现行公开信息要求。转售时，发行人必须已按规定提交定期报告，市场上存在充分的公开信息。年报或季报逾期，会直接堵住关联方的转售通道。</p><p>其三是数量限制。关联方在任何三个月内出售的数量，不得超过同类已发行股份总数的1%与该股票前四周平均周成交量两者中的较高者。对于日均成交量偏低的中小市值公司，这条限制的实际杀伤力远大于表面数字——流动性不足时，1%可能需要数周才能消化。</p><p>其四是交易方式与申报。关联方须通过经纪商以常规交易方式卖出，不得公开招揽买家；出售数量或金额达到规则设定的门槛时，还须向美国证券交易委员会提交Form 144。具体的数量与金额门槛以监管机构正式规则文本为准。</p><p><strong>本质上，180天解决的是"上市后短期不许卖"，Rule 144解决的是"以后怎么卖"。把前者的到期当成后者的解除，是中概股股东最常见的合规误判。</strong></p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、香港：控股股东的6+6与基石投资者的6个月</h2><p><strong>结论先说：港股的锁定安排写在上市规则里，刚性更强，但结构比美股简单——核心是控股股东的两个半年，加上基石投资者的六个月禁售。</strong></p><p>香港主板上市规则对控股股东设有两段限制。第一段是上市之日起的前6个月，控股股东不得出售其在上市文件中披露的股份。第二段是紧接其后的6个月，控股股东可以出售，但不得因此丧失控股股东地位。</p><p data-ts="1">两段相加，构成实务中所说的"6+6"。这一安排的立法意图很清楚：控制权的连续性是投资人定价的前提，上市后第一年不允许出现控制权的实质变动。</p><p>基石投资者则适用另一条线。基石投资者是指在招股阶段签署协议、承诺按发行价认购一定金额股份并接受禁售期的机构投资者，其禁售期为上市日后至少6个月。2025年8月生效的一轮发行机制优化中，香港市场就基石禁售期是否调整为分阶段解禁进行过讨论，最终结论是保留原有的6个月安排不变。</p><p data-ts="1">对企业而言，这意味着基石认购在提升发行确定性的同时，仍然对应一个明确的、可预期的解禁时点。</p><p>需要单独提示的是，未盈利生物科技公司与特专科技公司适用的章节，对主要股东、领航资深投资者等角色另有附加的持股与限售要求，具体条款以联交所正式规则文本为准。此类发行人的解禁时间表往往比一般发行人更复杂，须在递表前就与保荐人核对清楚。</p><p><strong>因此，港股路径下的减持规划，起点不是上市之后，而是股权结构确定之时——谁被认定为控股股东，直接决定了这份时间表怎么写。</strong></p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、解禁日不是抛售日：市场影响的真实机制</h2><p><strong>结论先说：解禁本身不下跌，解禁遇上"流通盘小、锁定比例高、基本面无新叙事"这三个条件同时成立时才下跌。</strong></p><p>解禁对股价的影响，来自供给结构的突变，而不是抛售行为本身。上市初期，实际可交易的股份往往只占总股本的一小部分，价格是在一个很薄的流通盘上形成的。当一大批锁定股份进入可流通状态，即便持有人一股未卖，市场的定价基准也已经改变——投资者会按"潜在供给"重新计算合理价格。</p><p>决定影响幅度的因素有三个。第一是解禁规模相对于流通盘的比例，解禁股数与现有自由流通量之比越高，冲击越大；第二是持有人结构，财务投资人与创始团队的减持意愿差异巨大，前者受基金存续期约束，后者受控制权与市场信号的约束；第三是解禁时点的信息环境，若解禁窗口与财报、重大合同、指数调整等事件重叠，价格反应会被显著放大或抵消。</p><p>成熟发行人的通行做法，是在解禁前主动管理预期：提前披露主要股东的持股意向，说明是否存在集中减持计划；把解禁时点与业绩发布、投资者开放日等正向事件安排在合理的先后顺序上；必要时通过大宗交易将股份一次性转让给长期机构投资者，避免二级市场承接压力。</p><p data-ts="1">华尔街彤鼎俱乐部在与企业家的交流中反复强调的一点是，解禁是一个可以提前12个月准备的事件，而不是一个到期才需要应对的意外。</p><p><strong>本质上，市场害怕的不是解禁，而是不知道解禁之后会发生什么。信息缺口本身就是折价来源。</strong></p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、合规减持的四条硬约束</h2><p><strong>结论先说：锁定期届满之后，减持是否合规，取决于四件事——身份、窗口、计划与披露。</strong></p><p>第一是身份认定。是否构成关联方（affiliate）决定了适用哪一套规则。董事、高级管理人员、以及能够对发行人施加控制影响的主要股东，通常被认定为关联方，须持续适用Rule 144的数量限制与申报义务；非关联方在满足持有期与信息要求后，限制大幅放宽。身份可能变化，卸任董事之后仍有一段观察期，不能在离职次日即按非关联方处理。</p><p>第二是交易窗口。上市公司普遍设有内部交易政策，规定财报发布前的一段时间为静默期，董事与知情人不得买卖本公司股票。窗口期之外，若掌握尚未公开的重大信息，禁止交易的义务依然存在——内幕交易的判断标准是信息本身，不是日历。</p><p>第三是预设交易计划。Rule 10b5-1允许内部人事先设立书面交易计划，在设立时不知悉重大非公开信息的前提下，按预设的价格、数量与时间机械执行，作为内幕交易指控的积极抗辩。美国证券交易委员会在2022年对该规则作出修订，引入了冷静期要求（董事与高管的冷静期为计划设立后90天与财报提交后2个交易日两者中的较晚者，且不超过120天；其他内部人为30天）、书面确认要求与相应的披露义务，并对重叠计划与单笔交易计划作出限制。具体适用以监管机构正式规则文本为准。</p><p>第四是披露。关联方的持股变动可能触发多套申报义务，包括权益变动申报与内部人交易报告；港股市场则有股东权益披露与董事持股权益申报的对应要求。申报迟延本身就是独立的违规事项，与减持是否赚钱无关。</p><p><strong>关键在于，合规减持是一套流程，不是一个决定。企业应当在上市前就把这套流程写进内部交易政策，而不是在第一笔减持发生时临时找律师。</strong></p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、跨境股东的额外一层：资金怎么回来</h2><p><strong>结论先说：对境内自然人股东而言，减持完成只解决了"卖得出去"，还剩下"钱能不能合规回来"这半个问题。</strong></p><p>红筹或VIE架构下，境内自然人股东通常通过境外特殊目的公司间接持有上市主体股份。这一持股链条在搭建时须完成37号文项下的境外投资外汇登记，登记内容包括特殊目的公司的基本情况与个人的权益结构。减持所得属于该登记项下的资本变动收益，其调回境内需要与既有登记信息相匹配。</p><p>实务中最常见的问题有三类：登记信息长期未做变更，导致减持时的股权结构与登记不符；持股主体经过多轮重组，中间环节的资料无法完整还原；以及通过代持安排持股，权益人与登记名义人不一致。任何一类问题都可能使减持款项滞留境外，或在调回环节遇到显著延迟。</p><p>企业方面，若涉及境外主体向境内的投资安排，还须关注ODI备案的完整性与后续变更。跨境资金的合规路径需要提前规划，通常不是在减持决定作出之后才能补办的事项。<strong>因此，上市前的架构梳理，应当把"退出时资金如何回流"作为一项独立的检查内容，而不是默认它会自动成立。</strong></p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、上市前就该做的四项设计</h2><p><strong>结论先说：解禁是上市前架构设计的结果，能在上市后调整的空间非常有限。</strong></p><p>第一，设计流通盘。发行比例、公众持股量与自由流通量的安排，直接决定了解禁时的冲击系数。流通盘过小虽然有利于上市初期的价格表现，但会把全部压力推迟到解禁窗口。合理的做法是在发行阶段就把自由流通量做到能够承接后续供给的水平。</p><p>第二，设计锁定期的层次。让不同类型的股东适用不同的解禁时点，避免所有锁定在同一天集中到期。创始团队、财务投资人、员工持股平台的解禁时间形成阶梯，市场消化压力会平缓得多。</p><p>第三，设计减持的制度容器。上市前完成内部交易政策、窗口期安排、预设交易计划模板的准备，使上市后的每一笔减持都有可依循的流程，而不是逐笔判断。</p><p>第四，设计沟通节奏。主要股东的持股意向、是否存在减持计划、锁定期届满后的安排，应当纳入常规的投资者沟通内容。市场对确定性的定价，永远高于对乐观预期的定价。</p><p>彤鼎集团（香港）有限公司在为企业提供上市规划与市值管理服务时，会把解禁时间表作为架构设计阶段的必检项；华尔街彤鼎俱乐部亦定期就上市后的股东行为管理与资本运作节奏组织闭门交流，相关内容仅面向符合条件的合格投资者与企业决策者，充分揭示相关风险，不构成任何投资建议或收益承诺。<strong>本质上，一份好的解禁安排，是在企业还没有股价的时候就写好的。</strong></p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="share-reduction-rules-2024.html" style="color:#6b5426;font-weight:700;">减持新规下，实控人的退出路径还剩哪些</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-buyback-treasury-shares.html" style="color:#6b5426;font-weight:700;">港股回购与库存股份：2024年新机制改了什么，与A股又差在哪</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="insider-trading.html" style="color:#6b5426;font-weight:700;">内幕交易合规红线</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="fpi-status-test.html" style="color:#6b5426;font-weight:700;">外国私人发行人身份认定：两步测试与丧失后的合规升级</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="independent-directors.html" style="color:#6b5426;font-weight:700;">独立董事招聘与职责</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"创始人卖老股，卖多少会被拦","inLanguage":"zh-CN","abstract":"A founder secondary sale moves money into the founder's pocket rather than onto the company's balance sheet, and that single distinction shapes how investors respond. This article examines the practical thresholds from the company's perspective: why a modest percentage is tolerated while a larger one reads as a negative signal, how selling shares can also mean selling veto rights and board influence, and why transfers during the pre-listing reporting period draw regulatory questions on pricing fairness and share-based payment accounting. It also outlines the cross-border sequence for offshore holding structures, covering registration changes, foreign exchange paths, valuation support and tax planning.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/founder-secondary-sale.html"},"datePublished":"2026-08-03","dateModified":"2026-08-03","description":"老股转让让钱进创始人口袋，增资让钱进公司账上，这条分水岭决定了投资人的态度。本文从企业方视角拆解创始人存量股权转让的三条数字线：比例线为什么一过就变成负面信号，控制权线为什么卖掉的可能不只是钱，时点线为什么在报告期内会被反复问询；并给出跨境架构下的登记、定价与税负安排顺序。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,35 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">融资条款 FINANCING</div><h1>创始人卖老股，卖多少会被拦</h1>
 <div class="sub">老股转让的比例线、时点线与控制权线，以及企业方该怎么把它做进交易文件</div><div class="en">A founder secondary sale moves money into the founder's pocket rather than onto the company's balance sheet, and that single distinction shapes how investors respond. This article examines the practical thresholds from the company's perspective: why a modest percentage is tolerated while a larger one reads as a negative signal, how selling shares can also mean selling veto rights and board influence, and why transfers during the pre-listing reporting period draw regulatory questions on pricing fairness and share-based payment accounting. It also outlines the cross-border sequence for offshore holding structures, covering registration changes, foreign exchange paths, valuation support and tax planning.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">创始人老股转让是指公司创始股东将其已持有的存量股权转让给新投资人或原股东，交易对价直接支付给创始人个人，公司账面不因此增加资金，与增资扩股形成本质区别。市场实践中，早期与成长期交易里的创始人套现比例通常被控制在本轮交易总额的较小区间，或个人持股的个位数百分比区间，超出这一区间往往被解读为创始人对公司长期前景的动机信号。老股转让同时牵动控制权结构：创始人持股比例下降可能触发同股不同权架构的特别表决权失效条款、董事会提名席位变化以及保护性条款的表决门槛重置。在拟上市路径下，报告期内的股权变动会被要求说明定价依据，转让价格显著低于同期融资价格的，通常需要按股份支付原则作会计处理。跨境持股架构下还涉及境外投资与外汇登记的变更手续。</div>
-<h2>一、钱进公司还是进口袋，投资人的态度从这里分岔</h2>
-<p><strong>结论先行：投资人拦的从来不是创始人拿钱这件事本身，而是钱的去向。一家做医疗器械的企业在成长期融资谈到尾声，条款几乎都谈完了，创始人在最后一次会上提了一句：本轮里他想同时转让一部分个人持股。投资方当场没有拒绝，但要求把这件事拆成两份文件重新走一遍流程，尽调补充了创始人个人负债情况的问询，交割因此推迟了将近两个月。创始人事后不解：同样是一笔钱，为什么增资就顺，老股转让就卡。</strong></p>
-<p>分岔点只有一处。增资扩股中，投资人的出资进入公司资本公积与实收资本，变成公司可以用来建产线、招人、做临床的资源；老股转让中，同样一笔钱穿过公司，落到创始人个人账户，公司的现金流量表上不会多出一分钱。因此，即便交易金额、估值、股权比例三个数字完全一致，两种结构在投资人眼里是完全不同的两件事。</p>
-<p>这个差别还会传导到公司治理上。增资后，新股东与创始人共同面对一个资金更充裕的公司，利益是同向的；老股转让后，创始人已经把一部分账面价值兑现成现金，新股东则要在未来若干年里靠公司经营把这部分价值再挣回来，利益错位从交割日就开始了。本质上，投资人拦的是这种错位在交易结构里被悄悄植入。</p>
-<h2>二、比例线：同一件事，小比例是安排，大比例是信号</h2>
-<p><strong>结论先行：老股转让的争议几乎不在&quot;能不能卖&quot;，而在&quot;卖多少&quot;。市场上通行的做法是把创始人在单轮交易中的转让规模控制在一个较小区间——常见的参照是本轮交易总额的一小部分，或创始人个人持股的个位数百分比；一旦越过这条线，交易性质在投资人的判断里就从&quot;合理安排&quot;变成了&quot;动机信号&quot;。</strong></p>
-<p>某家连锁餐饮品牌在扩张轮融资时就撞上过这条线。创始人计划转让的股数接近其个人持股的两成，理由是要归还早年为开店做的个人担保借款。投资方的反应不是拒绝，而是把估值往下调，并要求加入更长的股份锁定期。创始人最后把规模压回到不足一成，同时提供借款合同与还款计划作为资金用途说明，估值才谈回原来的水平。</p>
-<p>比例之所以是分水岭，是因为它替代了投资人无法直接观测的东西：创始人对公司未来的真实判断。一位创始人如果相信公司还有数倍成长空间，理性选择是尽量少卖；卖得多，要么说明他不这么相信，要么说明他有更急迫的个人资金需求——两种解释对新股东都不是好消息。关键在于，这条线并没有写在任何法规里，不同行业、不同轮次、不同投资人的容忍度并不相同，企业方应当在提出之前先摸清对方的口径。</p>
-<p>还有一层现实考量常被忽略：适度的转让对交易本身是有帮助的。创始人如果全部身家压在一家未上市公司里，家庭负担、子女教育、既有债务任何一项紧张，都可能推动他为了短期流动性去做长期错误的决策——比如接受一个条件苛刻但打款快的投资人，或者过早推动一次不成熟的退出。因此不少成熟投资人反而会主动建议创始人在合适轮次里做一次小规模转让，让他能安心做五年以上的判断。</p>
-<h2>三、控制权线：卖掉的可能不只是钱</h2>
-<p><strong>结论先行：创始人转让存量股权时，真正需要先算的不是到手金额，而是转让后自己在表决权、董事会与保护性条款三个维度上还剩下什么。股权比例是这三样东西的底座，底座一动，上面的结构可能整体位移。</strong></p>
-<p>同股不同权架构下，这个风险尤其隐蔽。特别表决权的设计通常附带失效条款：创始人持股比例低于某一门槛、或将特别表决权股份转让给第三方时，该部分股份自动转换为普通股。一家计划赴境外上市的科技型企业曾在转让谈判后期才发现，拟转让的股数会让创始人持股跌破章程约定的门槛线，特别表决权将在交割日整体失效，原本设计好的上市后控制权安排一夜归零。最终的处理方式是调整转让标的的股份类别与数量，只转让不带特别表决权的部分。</p>
-<p>董事会席位与保护性条款是另外两个联动点。多数交易文件把董事提名权与股东持股比例挂钩，持股跌破阈值，提名席位随之减少；保护性条款的表决门槛也常按持股比例设定，创始人比例下降，某些原本需要他点头的事项会变成不需要。这些条款分散在章程、股东协议与投资协议的不同位置，单看每一条都不显眼，叠加起来足以改变一家公司的决策结构。因此，转让方案定稿前应当把涉及比例阈值的条款逐条做一次穿透测算，而不是只算价格。</p>
-<h2>四、时点线：报告期内的每一次转让都要能解释</h2>
-<p><strong>结论先行：同一笔转让，发生在上市申报报告期之外和之内，面对的审核压力完全不同。报告期内的股权变动通常会被要求逐笔说明转让原因、定价依据、款项支付路径以及受让方与公司及关联方的关系。</strong></p>
-<p>定价公允性是问询的重点。如果创始人向员工持股平台或新引入的股东转让股权，价格明显低于同期融资价格或公允价值，按照企业会计准则中关于股份支付的处理原则，差额部分通常需要确认为费用计入当期损益，直接影响报告期利润。一家原本利润规模不大的制造业企业就因为一次低价转让，在申报前被要求追溯调整，报告期净利润被拉低了一个不小的幅度，上市节奏因此推后。这类会计处理的具体判断标准以监管机构与准则制定机构的正式文本为准，企业方在交易前应当先请审计机构出具意见，而不是先签完再补。</p>
-<p>上市前后还存在若干静默与锁定安排：申报受理后的股权变动一般会引发中止或补充披露，上市后创始股东通常受法定与承诺锁定期约束，窗口期内的减持还要遵守相应的信息披露与预披露要求。这些口径在不同上市地并不一致。关键在于，老股转让在时间轴上的合适位置，通常是在申报之前留出足够长的缓冲期，而不是贴着申报节点做。</p>
-<h2>五、跨境架构：登记、路径与税负，顺序错了就补不回来</h2>
-<p><strong>结论先行：在境外持股架构下，老股转让不只是一份股权转让协议，它同时是一次跨境资金流动和一次登记事项变更，三者必须在同一张时间表上排好。</strong></p>
-<p>境内居民通过境外特殊目的公司持有权益的，依据现行外汇管理规定需要办理相应的境外投资外汇登记，持股主体、比例等要素发生变化时，还需要办理变更登记；转让价款的出入境路径要与登记事项一致，否则资金可能卡在中间环节。一家在境外搭好架构的消费类企业曾在转让完成后才去补办变更登记，结果创始人拿到的对价在境外账户上停留了很久无法合规入境，一次本来是为了解决家庭资金安排的转让，反而制造了新的资金占用。相关登记要求与操作口径以外汇管理部门与商务主管部门的现行正式文本为准，并可能随政策调整，企业方应在交易启动阶段就向经办银行与专业顾问确认。</p>
-<p>税负安排同样要提前做，而不是等到交割后再算。股权转让所得在转让方所在税收管辖区、标的公司所在地以及中间控股层所在地都可能产生纳税义务，不同架构下的适用规则、可主张的条约待遇与所需证明材料差异很大；一些安排一旦交割完成就不可逆，事后再想优化通常只剩有限空间。因此，跨境老股转让的合理顺序是：先确认登记路径与资金通道是否走得通，再确认税务处理，最后才谈价格与交割日——反过来做，谈成的价格可能根本落不了地。华尔街彤鼎俱乐部在企业主群体中持续沉淀这一类跨境结构安排的实践经验。</p>
-<h2>六、企业方的做法：把它写进交易文件，而不是私下做</h2>
-<p><strong>结论先行：老股转让最容易出问题的做法，是创始人绕开本轮融资的交易文件，私下与某个受让方单独签一份协议。这种做法在尽调、申报、后续融资三个环节里几乎必然被翻出来，而彼时的解释成本远高于当初摊开来谈的成本。</strong></p>
-<p>正确的处理路径大致有四步。步骤一，在本轮融资的条款清单阶段就把转让意向摊开，与投资方一并谈定规模、价格与支付节奏，写进同一套交易文件，让转让成为交易的一部分而非交易之外的动作。步骤二，准备定价依据，包括同期融资价格、独立估值报告或可比交易参照，并保留完整的谈判与决策记录，以备日后审核问询。步骤三，提前梳理原股东优先购买权与共同出售权：多数股东协议约定老股转让须先向现有股东发出要约，部分投资人还享有按比例一同出售的权利，漏走这道程序的转让在法律上存在被挑战的空间。步骤四，同步办理工商变更、境外登记变更与税务申报，并把资金用途以书面方式向投资方说明——用于偿还早年为公司承担的个人债务、解决家庭必要开支，与用于其他用途，在投资人眼里是完全不同的两件事。</p>
-<p>需要提醒的是，以上每一步的具体要求都会随交易结构、行业属性与上市地选择而变化，本文所述比例区间均为市场经验性表述，不构成固定标准。本质上，创始人老股转让是一次要在钱、控制权与信任三个账户之间同时结算的安排：做在明处、做在文件里、做在正确的顺序上，它就是一次正常的股权安排；做在暗处，它会在最需要顺利的那个环节变成阻力。</p>
-<p>彤鼎集团（香港）有限公司在这类安排中承担的是统筹与协调角色：与企业方一起梳理转让规模与控制权阈值的联动关系，规划跨境登记与资金路径的先后顺序，协调审计、税务与法律顾问就定价依据和会计处理形成一致口径，并把相关安排嵌入本轮融资的整体交易文件。涉及证券发行、承销、信托受托等持牌业务的，一律由具备相应牌照的合作机构承做。本质上，这项工作的价值不在于把一次转让谈成更高的价格，而在于让这次转让在三年后回头看时，不成为任何一个关键环节的障碍。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>创始人老股转让是指公司创始股东将其已持有的存量股权转让给新投资人或原股东，交易对价直接支付给创始人个人，公司账面不因此增加资金，与增资扩股形成本质区别。市场实践中，早期与成长期交易里的创始人套现比例通常被控制在本轮交易总额的较小区间，或个人持股的个位数百分比区间，超出这一区间往往被解读为创始人对公司长期前景的动机信号。</p><p>老股转让同时牵动控制权结构：创始人持股比例下降可能触发同股不同权架构的特别表决权失效条款、董事会提名席位变化以及保护性条款的表决门槛重置。在拟上市路径下，报告期内的股权变动会被要求说明定价依据，转让价格显著低于同期融资价格的，通常需要按股份支付原则作会计处理。跨境持股架构下还涉及境外投资与外汇登记的变更手续。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">钱进公司还是进口袋，投资人的态度从这里分岔</a></li><li><a href="#sec-02">比例线：同一件事，小比例是安排，大比例是信号</a></li><li><a href="#sec-03">控制权线：卖掉的可能不只是钱</a></li><li><a href="#sec-04">时点线：报告期内的每一次转让都要能解释</a></li><li><a href="#sec-05">跨境架构：登记、路径与税负，顺序错了就补不回来</a></li><li><a href="#sec-06">企业方的做法：把它写进交易文件，而不是私下做</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、钱进公司还是进口袋，投资人的态度从这里分岔</h2><div class="ts-lead"><span class="tag">结论先行</span><p>投资人拦的从来不是创始人拿钱这件事本身，而是钱的去向。一家做医疗器械的企业在成长期融资谈到尾声，条款几乎都谈完了，创始人在最后一次会上提了一句：本轮里他想同时转让一部分个人持股。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>投资方当场没有拒绝，但要求把这件事拆成两份文件重新走一遍流程，尽调补充了创始人个人负债情况的问询，交割因此推迟了将近两个月。创始人事后不解：同样是一笔钱，为什么增资就顺，老股转让就卡。</p></div><p>分岔点只有一处。增资扩股中，投资人的出资进入公司资本公积与实收资本，变成公司可以用来建产线、招人、做临床的资源；老股转让中，同样一笔钱穿过公司，落到创始人个人账户，公司的现金流量表上不会多出一分钱。</p><p data-ts="1">因此，即便交易金额、估值、股权比例三个数字完全一致，两种结构在投资人眼里是完全不同的两件事。</p><p>这个差别还会传导到公司治理上。增资后，新股东与创始人共同面对一个资金更充裕的公司，利益是同向的；老股转让后，创始人已经把一部分账面价值兑现成现金，新股东则要在未来若干年里靠公司经营把这部分价值再挣回来，利益错位从交割日就开始了。本质上，投资人拦的是这种错位在交易结构里被悄悄植入。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、比例线：同一件事，小比例是安排，大比例是信号</h2><div class="ts-lead"><span class="tag">结论先行</span><p>老股转让的争议几乎不在&quot;能不能卖&quot;，而在&quot;卖多少&quot;。市场上通行的做法是把创始人在单轮交易中的转让规模控制在一个较小区间——常见的参照是本轮交易总额的一小部分，或创始人个人持股的个位数百分比；一旦越过这条线，交易性质在投资人的判断里就从&quot;合理安排&quot;变成了&quot;动机信号&quot;。</p></div><p>某家连锁餐饮品牌在扩张轮融资时就撞上过这条线。创始人计划转让的股数接近其个人持股的两成，理由是要归还早年为开店做的个人担保借款。投资方的反应不是拒绝，而是把估值往下调，并要求加入更长的股份锁定期。</p><p data-ts="1">创始人最后把规模压回到不足一成，同时提供借款合同与还款计划作为资金用途说明，估值才谈回原来的水平。</p><p>比例之所以是分水岭，是因为它替代了投资人无法直接观测的东西：创始人对公司未来的真实判断。一位创始人如果相信公司还有数倍成长空间，理性选择是尽量少卖；卖得多，要么说明他不这么相信，要么说明他有更急迫的个人资金需求——两种解释对新股东都不是好消息。</p><p data-ts="1">关键在于，这条线并没有写在任何法规里，不同行业、不同轮次、不同投资人的容忍度并不相同，企业方应当在提出之前先摸清对方的口径。</p><p>还有一层现实考量常被忽略：适度的转让对交易本身是有帮助的。创始人如果全部身家压在一家未上市公司里，家庭负担、子女教育、既有债务任何一项紧张，都可能推动他为了短期流动性去做长期错误的决策——比如接受一个条件苛刻但打款快的投资人，或者过早推动一次不成熟的退出。</p><p data-ts="1">因此不少成熟投资人反而会主动建议创始人在合适轮次里做一次小规模转让，让他能安心做五年以上的判断。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、控制权线：卖掉的可能不只是钱</h2><div class="ts-lead"><span class="tag">结论先行</span><p>创始人转让存量股权时，真正需要先算的不是到手金额，而是转让后自己在表决权、董事会与保护性条款三个维度上还剩下什么。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>股权比例是这三样东西的底座，底座一动，上面的结构可能整体位移。</p></div><p>同股不同权架构下，这个风险尤其隐蔽。特别表决权的设计通常附带失效条款：创始人持股比例低于某一门槛、或将特别表决权股份转让给第三方时，该部分股份自动转换为普通股。一家计划赴境外上市的科技型企业曾在转让谈判后期才发现，拟转让的股数会让创始人持股跌破章程约定的门槛线，特别表决权将在交割日整体失效，原本设计好的上市后控制权安排一夜归零。最终的处理方式是调整转让标的的股份类别与数量，只转让不带特别表决权的部分。</p><p>董事会席位与保护性条款是另外两个联动点。多数交易文件把董事提名权与股东持股比例挂钩，持股跌破阈值，提名席位随之减少；保护性条款的表决门槛也常按持股比例设定，创始人比例下降，某些原本需要他点头的事项会变成不需要。</p><p data-ts="1">这些条款分散在章程、股东协议与投资协议的不同位置，单看每一条都不显眼，叠加起来足以改变一家公司的决策结构。因此，转让方案定稿前应当把涉及比例阈值的条款逐条做一次穿透测算，而不是只算价格。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、时点线：报告期内的每一次转让都要能解释</h2><div class="ts-lead"><span class="tag">结论先行</span><p>同一笔转让，发生在上市申报报告期之外和之内，面对的审核压力完全不同。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>报告期内的股权变动通常会被要求逐笔说明转让原因、定价依据、款项支付路径以及受让方与公司及关联方的关系。</p></div><p>定价公允性是问询的重点。如果创始人向员工持股平台或新引入的股东转让股权，价格明显低于同期融资价格或公允价值，按照企业会计准则中关于股份支付的处理原则，差额部分通常需要确认为费用计入当期损益，直接影响报告期利润。</p><p data-ts="1">一家原本利润规模不大的制造业企业就因为一次低价转让，在申报前被要求追溯调整，报告期净利润被拉低了一个不小的幅度，上市节奏因此推后。这类会计处理的具体判断标准以监管机构与准则制定机构的正式文本为准，企业方在交易前应当先请审计机构出具意见，而不是先签完再补。</p><p>上市前后还存在若干静默与锁定安排：申报受理后的股权变动一般会引发中止或补充披露，上市后创始股东通常受法定与承诺锁定期约束，窗口期内的减持还要遵守相应的信息披露与预披露要求。这些口径在不同上市地并不一致。</p><p data-ts="1">关键在于，老股转让在时间轴上的合适位置，通常是在申报之前留出足够长的缓冲期，而不是贴着申报节点做。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、跨境架构：登记、路径与税负，顺序错了就补不回来</h2><div class="ts-lead"><span class="tag">结论先行</span><p>在境外持股架构下，老股转让不只是一份股权转让协议，它同时是一次跨境资金流动和一次登记事项变更，三者必须在同一张时间表上排好。</p></div><p>境内居民通过境外特殊目的公司持有权益的，依据现行外汇管理规定需要办理相应的境外投资外汇登记，持股主体、比例等要素发生变化时，还需要办理变更登记；转让价款的出入境路径要与登记事项一致，否则资金可能卡在中间环节。</p><p data-ts="1">一家在境外搭好架构的消费类企业曾在转让完成后才去补办变更登记，结果创始人拿到的对价在境外账户上停留了很久无法合规入境，一次本来是为了解决家庭资金安排的转让，反而制造了新的资金占用。</p><p data-ts="1">相关登记要求与操作口径以外汇管理部门与商务主管部门的现行正式文本为准，并可能随政策调整，企业方应在交易启动阶段就向经办银行与专业顾问确认。</p><p>税负安排同样要提前做，而不是等到交割后再算。股权转让所得在转让方所在税收管辖区、标的公司所在地以及中间控股层所在地都可能产生纳税义务，不同架构下的适用规则、可主张的条约待遇与所需证明材料差异很大；一些安排一旦交割完成就不可逆，事后再想优化通常只剩有限空间。</p><p data-ts="1">因此，跨境老股转让的合理顺序是：先确认登记路径与资金通道是否走得通，再确认税务处理，最后才谈价格与交割日——反过来做，谈成的价格可能根本落不了地。华尔街彤鼎俱乐部在企业主群体中持续沉淀这一类跨境结构安排的实践经验。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、企业方的做法：把它写进交易文件，而不是私下做</h2><div class="ts-lead"><span class="tag">结论先行</span><p>老股转让最容易出问题的做法，是创始人绕开本轮融资的交易文件，私下与某个受让方单独签一份协议。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>这种做法在尽调、申报、后续融资三个环节里几乎必然被翻出来，而彼时的解释成本远高于当初摊开来谈的成本。</p></div><p>正确的处理路径大致有四步。</p><ol class="ts-pts"><li><b>步骤一</b>，在本轮融资的条款清单阶段就把转让意向摊开，与投资方一并谈定规模、价格与支付节奏，写进同一套交易文件，让转让成为交易的一部分而非交易之外的动作。</li><li><b>步骤二，准备定价依据</b>，包括同期融资价格、独立估值报告或可比交易参照，并保留完整的谈判与决策记录，以备日后审核问询。</li><li><b>步骤三，提前梳理原股东优先购买权与共同出售权：</b>多数股东协议约定老股转让须先向现有股东发出要约，部分投资人还享有按比例一同出售的权利，漏走这道程序的转让在法律上存在被挑战的空间。</li><li><b>步骤四</b>，同步办理工商变更、境外登记变更与税务申报，并把资金用途以书面方式向投资方说明——用于偿还早年为公司承担的个人债务、解决家庭必要开支，与用于其他用途，在投资人眼里是完全不同的两件事。</li></ol><p>需要提醒的是，以上每一步的具体要求都会随交易结构、行业属性与上市地选择而变化，本文所述比例区间均为市场经验性表述，不构成固定标准。本质上，创始人老股转让是一次要在钱、控制权与信任三个账户之间同时结算的安排：做在明处、做在文件里、做在正确的顺序上，它就是一次正常的股权安排；做在暗处，它会在最需要顺利的那个环节变成阻力。</p><p>彤鼎集团（香港）有限公司在这类安排中承担的是统筹与协调角色：与企业方一起梳理转让规模与控制权阈值的联动关系，规划跨境登记与资金路径的先后顺序，协调审计、税务与法律顾问就定价依据和会计处理形成一致口径，并把相关安排嵌入本轮融资的整体交易文件。</p><p data-ts="1">涉及证券发行、承销、信托受托等持牌业务的，一律由具备相应牌照的合作机构承做。本质上，这项工作的价值不在于把一次转让谈成更高的价格，而在于让这次转让在三年后回头看时，不成为任何一个关键环节的障碍。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="financing-round-gap.html" style="color:#6b5426;font-weight:700;">空窗期拖过十八个月，下一轮就谈不动了</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="dd-onsite-rejection.html" style="color:#6b5426;font-weight:700;">报表很漂亮，尽调三天就撤了</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="vam-triggered.html" style="color:#6b5426;font-weight:700;">对赌回购触发之后：别急着找钱，先算账</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"纳斯达克市场升级指南","inLanguage":"zh-CN","abstract":"Moving from the Capital Market tier to the Global or Global Select tier: the financial tests and the benefits of upgrading.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/nasdaq-tier-upgrade.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"纳斯达克分为3个市场层级，从低到高依次是：纳斯达克资本市场（Nasdaq Capital Market，NCM）、纳斯达克全球市场（Nasdaq Global Market，NGM）、纳斯达克全球精选市场（Nasdaq Global Select Market，NGSM。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,39 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">挂牌之后 POST-LISTING</div><h1>纳斯达克市场升级指南</h1>
 <div class="sub"></div><div class="en">Moving from the Capital Market tier to the Global or Global Select tier: the financial tests and the benefits of upgrading.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">纳斯达克分为3个市场层级，从低到高依次是：纳斯达克资本市场（Nasdaq Capital Market，NCM）、纳斯达克全球市场（Nasdaq Global Market，NGM）、纳斯达克全球精选市场（Nasdaq Global Select Market，NGSM）。绝大多数中概股首次上市在NCM（门槛最低），但随着公司规模扩大和财务实力增强，升级到更高层级会带来实质性的机构认可度提升和流动性改善。从NCM升级到NGM需要满足更高的财务门槛（市值、盈利、净资产等）；从NGM升级到NGSM是进入机构投资人视野的关键一步。升级申请流程约需3至6个月，不需要重新上市，只需向纳斯达克提交申请并满足新标准即可。</div>
-<h2>一、纳斯达克3个市场层级的门槛对比</h2>
-<h3>纳斯达克资本市场（NCM）——入门级</h3>
-<p>财务标准（3套标准任选其一）：一是盈利标准，净利润不低于75万美元，近期股东权益不低于500万美元，市值不低于500万美元；二是市值标准，市值不低于5000万美元，股东权益不低于400万美元；三是净资产标准，净资产不低于400万美元，市值不低于500万美元。最低发行价4美元，上市后股东至少300人，公众持股价值至少500万美元。</p>
-<h3>纳斯达克全球市场（NGM）——中级</h3>
-<p>财务标准（4套标准任选其一，门槛显著高于NCM）：以盈利标准为例，要求近1年税前收益不低于100万美元，股东权益不低于1500万美元，市值不低于5000万美元。最低发行价4美元，上市后股东至少400人，公众持股价值至少1500万美元。</p>
-<h3>纳斯达克全球精选市场（NGSM）——</h3>
-<p>纳斯达克最高级别，也是全球标准最高的证券交易所之一。盈利标准要求：过去3年总税前利润不低于1100万美元（最近2年各不低于220万美元）；市值标准要求：市值不低于8.5亿美元；股东权益标准：股东权益不低于1.1亿美元且市值不低于5.5亿美元。公众持股至少110万股，上市后股东至少550人。</p>
-<h2>二、升级带来的实质好处</h2>
-<h3>好处1：进入更高层级指数成分股的资格</h3>
-<p>Russell 1000/2000、S&amp;P MidCap 400等主流指数的纳入标准通常要求公司在更高层级的交易所上市。从NCM升级到NGSM，可能使公司具备被纳入这些指数的资格，带来大量被动投资基金的自动持仓。</p>
-<h3>好处2：提升机构投资人的认可度</h3>
-<p>很多大型机构投资人的投资政策明确只投资NGSM层级的上市公司。从NCM升级到NGSM，意味着公司的投资人宇宙（Investable Universe）显著扩大，能够接触到此前因为层级限制而无法持股的机构。</p>
-<h3>好处3：信号价值</h3>
-<p>升级本身是一个强烈的正面信号——它向市场证明公司已经满足了更高的财务门槛，是对公司成长路径的重要里程碑确认。升级公告通常会带来股价的短期上涨（1%至5%）。</p>
-<h3>好处4：改善流动性</h3>
-<p>更高层级的公司通常获得更多的做市商（Market Maker）覆盖和更高的日均成交量，降低了买卖价差，改善了股票的整体流动性。</p>
-<h2>三、升级申请的流程</h2>
-<h3>第一步：自我评估是否满足目标层级的所有标准</h3>
-<p>不只是财务标准，还需要检查：公众持股比例是否满足要求、公众持股股东数量是否满足要求、公司治理是否满足目标层级的更高要求（如独立董事比例等）。</p>
-<h3>第二步：向纳斯达克提交升级申请</h3>
-<p>联系纳斯达克上市资格团队，提交升级申请表格及相关财务证明文件。纳斯达克会指定一位上市顾问（Listing Specialist）负责审核申请。</p>
-<h3>第三步：纳斯达克审核（通常4至12周）</h3>
-<p>纳斯达克审核公司提交的所有材料，可能要求补充信息或澄清。审核通过后，纳斯达克向公司发出升级通知，并告知正式升级的生效日期。</p>
-<h3>第四步：升级生效与公告</h3>
-<p>升级正式生效后，公司的市场层级代码发生变化，纳斯达克官网上公司的列表位置也会相应调整。公司应通过6-K公告这一里程碑，并通过IR渠道主动向机构投资人和分析师传播这一信息。</p>
-<h2>四、什么时候应该申请升级</h2>
-<p>最佳升级时机：公司连续2至3个季度的财务表现稳定满足目标层级标准、公司刚完成一次成功的再融资（股东数量和公众持股价值刚好也提升）、公司正在计划NDR（非正式路演）可以配合升级公告一起对外传播。</p>
-<p>不建议仅满足门槛就立刻申请——建议在关键财务指标超过门槛20%至30%的余量后再申请，一方面让升级更稳健，另一方面避免升级后因为某季度业绩波动重新跌破标准引发降层风险。</p>
-<h3>结语：层级升级是公司成长的制度性认可</h3>
-<p>纳斯达克市场层级升级不只是一个数字变化，它是资本市场对公司成长的制度性认可，是打开更大机构投资人市场的钥匙。每一家有成长雄心的中概股，都应该把升级到NGSM列入中长期资本战略的重要目标之一。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>纳斯达克分为3个市场层级，从低到高依次是：纳斯达克资本市场（Nasdaq Capital Market，NCM）、纳斯达克全球市场（Nasdaq Global Market，NGM）、纳斯达克全球精选市场（Nasdaq Global Select Market，NGSM）。</p><p>绝大多数中概股首次上市在NCM（门槛最低），但随着公司规模扩大和财务实力增强，升级到更高层级会带来实质性的机构认可度提升和流动性改善。从NCM升级到NGM需要满足更高的财务门槛（市值、盈利、净资产等）；从NGM升级到NGSM是进入机构投资人视野的关键一步。</p><p>升级申请流程约需3至6个月，不需要重新上市，只需向纳斯达克提交申请并满足新标准即可。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">纳斯达克3个市场层级的门槛对比</a></li><li><a href="#sec-02">升级带来的实质好处</a></li><li><a href="#sec-03">升级申请的流程</a></li><li><a href="#sec-04">什么时候应该申请升级</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、纳斯达克3个市场层级的门槛对比</h2><p><h3>纳斯达克资本市场（NCM）——入门级</h3></p><p>财务标准（3套标准任选其一）：一是盈利标准，净利润不低于75万美元，近期股东权益不低于500万美元，市值不低于500万美元；二是市值标准，市值不低于5000万美元，股东权益不低于400万美元；三是净资产标准，净资产不低于400万美元，市值不低于500万美元。最低发行价4美元，上市后股东至少300人，公众持股价值至少500万美元。</p><p><h3>纳斯达克全球市场（NGM）——中级</h3></p><p>财务标准（4套标准任选其一，门槛显著高于NCM）：以盈利标准为例，要求近1年税前收益不低于100万美元，股东权益不低于1500万美元，市值不低于5000万美元。最低发行价4美元，上市后股东至少400人，公众持股价值至少1500万美元。</p><p><h3>纳斯达克全球精选市场（NGSM）——</h3></p><p>纳斯达克最高级别，也是全球标准最高的证券交易所之一。盈利标准要求：过去3年总税前利润不低于1100万美元（最近2年各不低于220万美元）；市值标准要求：市值不低于8.5亿美元；股东权益标准：股东权益不低于1.1亿美元且市值不低于5.5亿美元。公众持股至少110万股，上市后股东至少550人。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、升级带来的实质好处</h2><p><h3>好处1：进入更高层级指数成分股的资格</h3></p><p>Russell 1000/2000、S&amp;P MidCap 400等主流指数的纳入标准通常要求公司在更高层级的交易所上市。从NCM升级到NGSM，可能使公司具备被纳入这些指数的资格，带来大量被动投资基金的自动持仓。</p><p><h3>好处2：提升机构投资人的认可度</h3></p><p>很多大型机构投资人的投资政策明确只投资NGSM层级的上市公司。从NCM升级到NGSM，意味着公司的投资人宇宙（Investable Universe）显著扩大，能够接触到此前因为层级限制而无法持股的机构。</p><p><h3>好处3：信号价值</h3></p><p>升级本身是一个强烈的正面信号——它向市场证明公司已经满足了更高的财务门槛，是对公司成长路径的重要里程碑确认。升级公告通常会带来股价的短期上涨（1%至5%）。</p><p><h3>好处4：改善流动性</h3></p><p>更高层级的公司通常获得更多的做市商（Market Maker）覆盖和更高的日均成交量，降低了买卖价差，改善了股票的整体流动性。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、升级申请的流程</h2><p><h3>第一步：自我评估是否满足目标层级的所有标准</h3></p><p>不只是财务标准，还需要检查：公众持股比例是否满足要求、公众持股股东数量是否满足要求、公司治理是否满足目标层级的更高要求（如独立董事比例等）。</p><p><h3>第二步：向纳斯达克提交升级申请</h3></p><p>联系纳斯达克上市资格团队，提交升级申请表格及相关财务证明文件。纳斯达克会指定一位上市顾问（Listing Specialist）负责审核申请。</p><p><h3>第三步：纳斯达克审核（通常4至12周）</h3></p><p>纳斯达克审核公司提交的所有材料，可能要求补充信息或澄清。审核通过后，纳斯达克向公司发出升级通知，并告知正式升级的生效日期。</p><p><h3>第四步：升级生效与公告</h3></p><p>升级正式生效后，公司的市场层级代码发生变化，纳斯达克官网上公司的列表位置也会相应调整。公司应通过6-K公告这一里程碑，并通过IR渠道主动向机构投资人和分析师传播这一信息。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、什么时候应该申请升级</h2><p>最佳升级时机：公司连续2至3个季度的财务表现稳定满足目标层级标准、公司刚完成一次成功的再融资（股东数量和公众持股价值刚好也提升）、公司正在计划NDR（非正式路演）可以配合升级公告一起对外传播。</p><p>不建议仅满足门槛就立刻申请——建议在关键财务指标超过门槛20%至30%的余量后再申请，一方面让升级更稳健，另一方面避免升级后因为某季度业绩波动重新跌破标准引发降层风险。</p><p><h3>结语：层级升级是公司成长的制度性认可</h3></p><p>纳斯达克市场层级升级不只是一个数字变化，它是资本市场对公司成长的制度性认可，是打开更大机构投资人市场的钥匙。每一家有成长雄心的中概股，都应该把升级到NGSM列入中长期资本战略的重要目标之一。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="follow-on-offering.html" style="color:#6b5426;font-weight:700;">上市公司增发配股指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-delisting-risk.html" style="color:#6b5426;font-weight:700;">纳斯达克退市风险</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="esg-disclosure.html" style="color:#6b5426;font-weight:700;">ESG披露要求与实操</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="independent-directors.html" style="color:#6b5426;font-weight:700;">独立董事招聘与职责</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="insider-trading.html" style="color:#6b5426;font-weight:700;">内幕交易合规红线</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

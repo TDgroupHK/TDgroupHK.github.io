@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"减持新规下，实控人的退出路径还剩哪些","inLanguage":"zh-CN","abstract":"The CSRC Interim Measures on share reductions by listed company shareholders impose several layers of restriction on major shareholders, controlling shareholders and actual controllers. This article follows the text of the rules on the two categories of outright bars, the price and dividend linked conditions, the volume caps for auction and block trades, the fifteen trading day pre disclosure requirement, and passive reductions arising from pledge enforcement.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/share-reduction-rules-2024.html"},"datePublished":"2026-08-01","dateModified":"2026-08-01","description":"《上市公司股东减持股份管理暂行办法》对大股东、控股股东与实际控制人设置了多层限制。本文按规则原文说明两类不得减持情形、破净破发与分红不达标三条挂钩条件的精确口径、集中竞价1%与大宗交易2%的数量上限、十五个交易日的预披露要求，以及质押处置与离婚等被动情形的适用规则。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,50 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">挂牌之后 AFTER LISTING</div><h1>减持新规下，实控人的退出路径还剩哪些</h1>
 <div class="sub">破净、破发、分红不达标各是一条独立的门，条件与但书都写得很具体</div><div class="en">The CSRC Interim Measures on share reductions by listed company shareholders impose several layers of restriction on major shareholders, controlling shareholders and actual controllers. This article follows the text of the rules on the two categories of outright bars, the price and dividend linked conditions, the volume caps for auction and block trades, the fifteen trading day pre disclosure requirement, and passive reductions arising from pledge enforcement.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">《上市公司股东减持股份管理暂行办法》（中国证券监督管理委员会令第224号，2024年5月23日委务会议审议通过）把减持限制分成几层。适用对象上，持股百分之五以上的股东与实际控制人统称大股东。第一层是两类不得减持情形：股东自身因涉嫌与本公司有关的证券期货违法犯罪被立案调查、或被行政处罚判处刑罚未满六个月等；以及上市公司层面出现被立案调查、被公开谴责未满三个月、可能触及重大违法强制退市等情形。第二层是与股价和分红挂钩的三条限制：最近三个已披露经审计年度未实施现金分红或累计现金分红低于同期年均归母净利润百分之三十、最近二十个交易日中任一日收盘价（向后复权）低于每股归母净资产、以及低于首次公开发行价格——出现任一情形，控股股东与实际控制人不得通过集中竞价或大宗交易减持，但已按规定披露减持计划或中国证监会另有规定的除外。第三层是数量与程序：集中竞价三个月内不超过公司股份总数百分之一，大宗交易不超过百分之二，且应当在首次卖出前十五个交易日报告并披露减持计划。</div>
-<h2>一、先分清三种身份，适用的条款不同</h2>
-<p><strong>结论先行：办法把主体分成大股东、控股股东与实际控制人、以及其他股东三层，限制强度依次不同，看错身份会看错规则。</strong></p>
-<p>办法第二条给出的口径是：上市公司持有百分之五以上股份的股东、实际控制人，以下统称大股东。董事、监事、高级管理人员减持股份，以及其他股东减持其持有的公司首次公开发行前发行的股份，同样适用本办法。</p>
-<p>关键在于「控股股东、实际控制人」这一层。与股价和分红挂钩的三条限制只针对这一层，普通的百分之五以上股东不适用；而数量上限与预披露要求则对全体大股东适用。因此，同一家公司里不同股东面对的规则可能完全不同。</p>
-<p>还有两条容易被忽略的延伸。其一，一致行动人须共同遵守相应规定——大股东与其一致行动人共同遵守大股东的规定，控股股东、实际控制人与其一致行动人共同遵守更严的那一层。其二，身份丧失不等于义务立即解除：通过协议转让减持导致不再具有大股东身份的，应当在减持后六个月内继续遵守预披露与数量限制；导致不再具有控股股东、实际控制人身份的，还应当在六个月内继续遵守与分红、破净挂钩的那一条。</p>
-<h2>二、两类「不得减持」：股东自己出事，和公司出事</h2>
-<p><strong>结论先行：这两条是绝对禁止，没有例外条款，与股价无关。</strong></p>
-<p>第一类看股东自身。存在以下情形之一的，大股东不得减持本公司股份：该股东因涉嫌与本上市公司有关的证券期货违法犯罪，被中国证监会立案调查或者被司法机关立案侦查，或者被行政处罚、判处刑罚未满六个月的；该股东因涉及与本上市公司有关的违法违规，被证券交易所公开谴责未满三个月的；该股东因涉及证券期货违法被行政处罚、尚未足额缴纳罚没款的（但法律、行政法规另有规定，或者减持资金用于缴纳罚没款的除外）；以及中国证监会规定的其他情形。</p>
-<p>第二类看公司。存在以下情形之一的，上市公司控股股东、实际控制人不得减持本公司股份：上市公司因涉嫌证券期货违法犯罪被立案调查或者被司法机关立案侦查，或者被行政处罚、判处刑罚未满六个月的；上市公司被证券交易所公开谴责未满三个月的；上市公司可能触及重大违法强制退市情形，在证券交易所规定的限制转让期限内的；以及中国证监会规定的其他情形。</p>
-<p>需要注意两类条款的对象不同：第一类问的是「这个股东有没有事」，第二类问的是「这家公司有没有事」。因此实控人可能在自己完全干净的情况下，因为公司层面的立案而被锁住。本质上这是把责任与公司绑定，而不只是与个人绑定。</p>
-<h2>三、破净、破发、分红不达标：三条挂钩条件的精确口径</h2>
-<p><strong>结论先行：这三条各自独立，触发其一即适用，且每一条的计算口径都写得很具体，不能凭印象判断。</strong></p>
-<p>第一条是分红。最近三个已披露经审计的年度报告的会计年度未实施现金分红，或者累计现金分红金额低于同期年均归属于上市公司股东净利润的百分之三十的，构成触发；其中净利润为负的会计年度不纳入计算。这一句里有三个要点：看的是已披露经审计的年度报告、比较基准是同期年均归母净利润的百分之三十、亏损年度剔除。</p>
-<p>第二条是破净。最近二十个交易日中，任一日股票收盘价（向后复权）低于最近一个会计年度或者最近一期财务报告期末每股归属于上市公司股东的净资产的，构成触发。注意三处：收盘价需向后复权、二十个交易日内**任一日**低于即可、比较基准可以是最近一个会计年度或最近一期财务报告期末的数值。</p>
-<p>第三条是破发。最近二十个交易日中，任一日股票收盘价（向后复权）低于首次公开发行时的股票发行价格的，上市公司首次公开发行时的控股股东、实际控制人及其一致行动人不得通过集中竞价或大宗交易减持。公司在首次公开发行时披露无控股股东、实际控制人的，由首次公开发行时持股百分之五以上的第一大股东及其一致行动人遵守；且这些主体在不再具有相关身份后，应当继续遵守。</p>
-<p>三条都附有同一句但书：已经按照办法第九条规定披露减持计划，或者中国证监会另有规定的除外。因此这三条的准确表述不是「一律不得减持」，而是在未按规定预披露减持计划的情况下不得通过这两种方式减持。判断自身处境时，需要把这句但书与第九条的预披露要求放在一起读。</p>
-<h2>四、能卖多少：集中竞价百分之一，大宗交易百分之二</h2>
-<p><strong>结论先行：两条数量上限按三个月滚动计算，且大宗交易的受让方还有六个月锁定。</strong></p>
-<p>大股东通过证券交易所集中竞价交易减持股份，或者其他股东通过集中竞价减持其持有的公司首次公开发行前发行的股份的，三个月内减持股份的总数不得超过公司股份总数的百分之一。</p>
-<p>通过大宗交易方式减持的，三个月内减持股份的总数不得超过公司股份总数的百分之二；并且，股份受让方在受让后六个月内不得减持其所受让的股份。</p>
-<p>协议转让方式没有设置同样的数量上限，但同样约束受让方——受让方在受让后六个月内不得减持所受让的股份。这三条合起来的效果是，无论走哪条通道，股份都不会在短期内被转手到市场上。因此，本质上规则限制的不只是出让方的节奏，也限制了承接方的节奏。</p>
-<p>需要提醒的是这些比例的分母是公司股份总数，不是股东自身持股数量。持股比例高的实控人，可减持额度受同一个分母约束，退出所需的时间跨度会显著长于持股比例低的股东。</p>
-<h2>五、预披露：首次卖出前十五个交易日</h2>
-<p><strong>结论先行：预披露不是事后备案，且计划没执行完也要公告，这一点常被漏掉。</strong></p>
-<p>大股东计划通过集中竞价交易或者大宗交易方式减持股份的，应当在首次卖出前十五个交易日向证券交易所报告并披露减持计划。</p>
-<p>减持计划应当包括：拟减持股份的数量与来源；减持的时间区间、价格区间、方式和原因（减持时间区间应当符合证券交易所的规定）；不存在办法规定的各类不得减持情形的说明；以及证券交易所规定的其他内容。</p>
-<p>执行环节有两个对称的义务。减持计划实施完毕的，应当在二个交易日内向证券交易所报告并公告；在预先披露的减持时间区间内未实施减持或者减持计划未实施完毕的，同样应当在时间区间届满后的二个交易日内报告并公告。后一种情形最容易被忽略——没有卖，也要说。</p>
-<p>公司这一侧另有一项常规动作：上市公司董事会秘书应当每季度检查大股东减持本公司股份的情况，发现违法违规的应当及时向中国证监会、证券交易所报告。这条把监督义务明确落到了董秘身上。</p>
-<h2>六、被动减持与「绕道」：质押处置、离婚、融券与衍生品</h2>
-<p><strong>结论先行：办法对非主动的减持与变相的减持都作了安排，被动不等于豁免。</strong></p>
-<p>关于被动减持。股东因司法强制执行或者股票质押、融资融券、约定购回式证券交易违约处置等减持股份的，应当根据具体减持方式分别适用办法的相关规定，并遵守证券交易所的相关规则。其中，大股东所持股份被人民法院通过集中竞价或者大宗交易方式强制执行的，应当在收到相关执行通知后二个交易日内披露，此时不适用十五个交易日预披露的规定；披露内容应当包括拟处置股份数量、来源、减持方式、时间区间等。股票质押走到处置这一步的完整机制，另见本站《上市公司实控人的股票质押：什么时候是融资工具，什么时候是暴雷前兆》。</p>
-<p>关于身份变动。因离婚、法人或者非法人组织终止、公司分立等导致大股东减持股份的，股份过出方与过入方应当在股票过户后持续共同遵守办法关于大股东减持的规定；原主体属于控股股东、实际控制人的，双方还应当共同遵守更严的那一层。这一条堵住了通过身份拆分稀释义务的路径。</p>
-<p>关于工具。大股东不得融券卖出本公司股份，不得开展以本公司股票为合约标的物的衍生品交易。持有的股份在限制转让期限内或者存在其他不得减持情形的，不得通过转融通出借该部分股份，也不得融券卖出；在获得具有限制转让期限的股份前存在尚未了结的融券合约的，应当在获得相关股份前了结。</p>
-<h2>七、给实控人与董办的五个检查问题</h2>
-<p><strong>结论先行：这五个问题都能用公司自己的数据算出答案，不需要判断市场。</strong></p>
-<p>第一，最近三个已披露经审计年度的累计现金分红，是否达到同期年均归母净利润的百分之三十？亏损年度已剔除后再算。</p>
-<p>第二，最近二十个交易日中，向后复权的收盘价是否有任何一日低于每股归母净资产，或者低于首次公开发行价格？只要有一日即触发。</p>
-<p>第三，若已触发上述情形，此前是否已按规定披露过减持计划？但书的适用取决于这一点。</p>
-<p>第四，未来十二个月的减持需求，按集中竞价百分之一与大宗交易百分之二的三个月上限折算，需要多长时间才能完成？这决定了规划应当提前多久启动。</p>
-<p>第五，董秘的季度检查机制是否已经建立并留痕？这是办法明确要求的公司侧动作。</p>
-<p>彤鼎在这一阶段提供的是公司治理、信息披露与资本运作层面的企业管理咨询，不接触交易、不参与任何形式的市场操纵，也不对股价作任何承诺；具体的减持执行与法律意见由持牌合作机构承做。华尔街彤鼎俱乐部内，控制权安排与股东退出结构是成员讨论较为集中的议题之一。如需了解俱乐部会员详情，可发送邮件至 liaoqijie@tdgroup.hk。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>《上市公司股东减持股份管理暂行办法》（中国证券监督管理委员会令第224号，2024年5月23日委务会议审议通过）把减持限制分成几层。适用对象上，持股百分之五以上的股东与实际控制人统称大股东。第一层是两类不得减持情形：股东自身因涉嫌与本公司有关的证券期货违法犯罪被立案调查、或被行政处罚判处刑罚未满六个月等；以及上市公司层面出现被立案调查、被公开谴责未满三个月、可能触及重大违法强制退市等情形。</p><p>第二层是与股价和分红挂钩的三条限制：最近三个已披露经审计年度未实施现金分红或累计现金分红低于同期年均归母净利润百分之三十、最近二十个交易日中任一日收盘价（向后复权）低于每股归母净资产、以及低于首次公开发行价格——出现任一情形，控股股东与实际控制人不得通过集中竞价或大宗交易减持，但已按规定披露减持计划或中国证监会另有规定的除外。</p><p>第三层是数量与程序：集中竞价三个月内不超过公司股份总数百分之一，大宗交易不超过百分之二，且应当在首次卖出前十五个交易日报告并披露减持计划。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">先分清三种身份，适用的条款不同</a></li><li><a href="#sec-02">两类「不得减持」：股东自己出事，和公司出事</a></li><li><a href="#sec-03">破净、破发、分红不达标：三条挂钩条件的精确口径</a></li><li><a href="#sec-04">能卖多少：集中竞价百分之一，大宗交易百分之二</a></li><li><a href="#sec-05">预披露：首次卖出前十五个交易日</a></li><li><a href="#sec-06">被动减持与「绕道」：质押处置、离婚、融券与衍生品</a></li><li><a href="#sec-07">给实控人与董办的五个检查问题</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、先分清三种身份，适用的条款不同</h2><div class="ts-lead"><span class="tag">结论先行</span><p>办法把主体分成大股东、控股股东与实际控制人、以及其他股东三层，限制强度依次不同，看错身份会看错规则。</p></div><p>办法第二条给出的口径是：上市公司持有百分之五以上股份的股东、实际控制人，以下统称大股东。董事、监事、高级管理人员减持股份，以及其他股东减持其持有的公司首次公开发行前发行的股份，同样适用本办法。</p><p>关键在于「控股股东、实际控制人」这一层。与股价和分红挂钩的三条限制只针对这一层，普通的百分之五以上股东不适用；而数量上限与预披露要求则对全体大股东适用。因此，同一家公司里不同股东面对的规则可能完全不同。</p><p>还有两条容易被忽略的延伸。其一，一致行动人须共同遵守相应规定——大股东与其一致行动人共同遵守大股东的规定，控股股东、实际控制人与其一致行动人共同遵守更严的那一层。其二，身份丧失不等于义务立即解除：通过协议转让减持导致不再具有大股东身份的，应当在减持后六个月内继续遵守预披露与数量限制；导致不再具有控股股东、实际控制人身份的，还应当在六个月内继续遵守与分红、破净挂钩的那一条。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、两类「不得减持」：股东自己出事，和公司出事</h2><div class="ts-lead"><span class="tag">结论先行</span><p>这两条是绝对禁止，没有例外条款，与股价无关。</p></div><p>第一类看股东自身。存在以下情形之一的，大股东不得减持本公司股份：该股东因涉嫌与本上市公司有关的证券期货违法犯罪，被中国证监会立案调查或者被司法机关立案侦查，或者被行政处罚、判处刑罚未满六个月的；该股东因涉及与本上市公司有关的违法违规，被证券交易所公开谴责未满三个月的；该股东因涉及证券期货违法被行政处罚、尚未足额缴纳罚没款的（但法律、行政法规另有规定，或者减持资金用于缴纳罚没款的除外）；以及中国证监会规定的其他情形。</p><p>第二类看公司。存在以下情形之一的，上市公司控股股东、实际控制人不得减持本公司股份：上市公司因涉嫌证券期货违法犯罪被立案调查或者被司法机关立案侦查，或者被行政处罚、判处刑罚未满六个月的；上市公司被证券交易所公开谴责未满三个月的；上市公司可能触及重大违法强制退市情形，在证券交易所规定的限制转让期限内的；以及中国证监会规定的其他情形。</p><p>需要注意两类条款的对象不同：第一类问的是「这个股东有没有事」，第二类问的是「这家公司有没有事」。因此实控人可能在自己完全干净的情况下，因为公司层面的立案而被锁住。本质上这是把责任与公司绑定，而不只是与个人绑定。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、破净、破发、分红不达标：三条挂钩条件的精确口径</h2><div class="ts-lead"><span class="tag">结论先行</span><p>这三条各自独立，触发其一即适用，且每一条的计算口径都写得很具体，不能凭印象判断。</p></div><p>第一条是分红。最近三个已披露经审计的年度报告的会计年度未实施现金分红，或者累计现金分红金额低于同期年均归属于上市公司股东净利润的百分之三十的，构成触发；其中净利润为负的会计年度不纳入计算。</p><p data-ts="1">这一句里有三个要点：看的是已披露经审计的年度报告、比较基准是同期年均归母净利润的百分之三十、亏损年度剔除。</p><p>第二条是破净。最近二十个交易日中，任一日股票收盘价（向后复权）低于最近一个会计年度或者最近一期财务报告期末每股归属于上市公司股东的净资产的，构成触发。注意三处：收盘价需向后复权、二十个交易日内**任一日**低于即可、比较基准可以是最近一个会计年度或最近一期财务报告期末的数值。</p><p>第三条是破发。最近二十个交易日中，任一日股票收盘价（向后复权）低于首次公开发行时的股票发行价格的，上市公司首次公开发行时的控股股东、实际控制人及其一致行动人不得通过集中竞价或大宗交易减持。</p><p data-ts="1">公司在首次公开发行时披露无控股股东、实际控制人的，由首次公开发行时持股百分之五以上的第一大股东及其一致行动人遵守；且这些主体在不再具有相关身份后，应当继续遵守。</p><p>三条都附有同一句但书：已经按照办法第九条规定披露减持计划，或者中国证监会另有规定的除外。因此这三条的准确表述不是「一律不得减持」，而是在未按规定预披露减持计划的情况下不得通过这两种方式减持。判断自身处境时，需要把这句但书与第九条的预披露要求放在一起读。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、能卖多少：集中竞价百分之一，大宗交易百分之二</h2><div class="ts-lead"><span class="tag">结论先行</span><p>两条数量上限按三个月滚动计算，且大宗交易的受让方还有六个月锁定。</p></div><p>大股东通过证券交易所集中竞价交易减持股份，或者其他股东通过集中竞价减持其持有的公司首次公开发行前发行的股份的，三个月内减持股份的总数不得超过公司股份总数的百分之一。</p><p>通过大宗交易方式减持的，三个月内减持股份的总数不得超过公司股份总数的百分之二；并且，股份受让方在受让后六个月内不得减持其所受让的股份。</p><p>协议转让方式没有设置同样的数量上限，但同样约束受让方——受让方在受让后六个月内不得减持所受让的股份。这三条合起来的效果是，无论走哪条通道，股份都不会在短期内被转手到市场上。因此，本质上规则限制的不只是出让方的节奏，也限制了承接方的节奏。</p><p>需要提醒的是这些比例的分母是公司股份总数，不是股东自身持股数量。持股比例高的实控人，可减持额度受同一个分母约束，退出所需的时间跨度会显著长于持股比例低的股东。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、预披露：首次卖出前十五个交易日</h2><div class="ts-lead"><span class="tag">结论先行</span><p>预披露不是事后备案，且计划没执行完也要公告，这一点常被漏掉。</p></div><p>大股东计划通过集中竞价交易或者大宗交易方式减持股份的，应当在首次卖出前十五个交易日向证券交易所报告并披露减持计划。</p><p>减持计划应当包括：拟减持股份的数量与来源；减持的时间区间、价格区间、方式和原因（减持时间区间应当符合证券交易所的规定）；不存在办法规定的各类不得减持情形的说明；以及证券交易所规定的其他内容。</p><p>执行环节有两个对称的义务。减持计划实施完毕的，应当在二个交易日内向证券交易所报告并公告；在预先披露的减持时间区间内未实施减持或者减持计划未实施完毕的，同样应当在时间区间届满后的二个交易日内报告并公告。后一种情形最容易被忽略——没有卖，也要说。</p><p>公司这一侧另有一项常规动作：上市公司董事会秘书应当每季度检查大股东减持本公司股份的情况，发现违法违规的应当及时向中国证监会、证券交易所报告。这条把监督义务明确落到了董秘身上。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、被动减持与「绕道」：质押处置、离婚、融券与衍生品</h2><div class="ts-lead"><span class="tag">结论先行</span><p>办法对非主动的减持与变相的减持都作了安排，被动不等于豁免。</p></div><p>关于被动减持。股东因司法强制执行或者股票质押、融资融券、约定购回式证券交易违约处置等减持股份的，应当根据具体减持方式分别适用办法的相关规定，并遵守证券交易所的相关规则。其中，大股东所持股份被人民法院通过集中竞价或者大宗交易方式强制执行的，应当在收到相关执行通知后二个交易日内披露，此时不适用十五个交易日预披露的规定；披露内容应当包括拟处置股份数量、来源、减持方式、时间区间等。</p><p data-ts="1">股票质押走到处置这一步的完整机制，另见本站《上市公司实控人的股票质押：什么时候是融资工具，什么时候是暴雷前兆》。</p><p>关于身份变动。因离婚、法人或者非法人组织终止、公司分立等导致大股东减持股份的，股份过出方与过入方应当在股票过户后持续共同遵守办法关于大股东减持的规定；原主体属于控股股东、实际控制人的，双方还应当共同遵守更严的那一层。这一条堵住了通过身份拆分稀释义务的路径。</p><p>关于工具。大股东不得融券卖出本公司股份，不得开展以本公司股票为合约标的物的衍生品交易。持有的股份在限制转让期限内或者存在其他不得减持情形的，不得通过转融通出借该部分股份，也不得融券卖出；在获得具有限制转让期限的股份前存在尚未了结的融券合约的，应当在获得相关股份前了结。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、给实控人与董办的五个检查问题</h2><div class="ts-lead"><span class="tag">结论先行</span><p>这五个问题都能用公司自己的数据算出答案，不需要判断市场。</p></div><p>第一，最近三个已披露经审计年度的累计现金分红，是否达到同期年均归母净利润的百分之三十？亏损年度已剔除后再算。</p><p>第二，最近二十个交易日中，向后复权的收盘价是否有任何一日低于每股归母净资产，或者低于首次公开发行价格？只要有一日即触发。</p><p>第三，若已触发上述情形，此前是否已按规定披露过减持计划？但书的适用取决于这一点。</p><p>第四，未来十二个月的减持需求，按集中竞价百分之一与大宗交易百分之二的三个月上限折算，需要多长时间才能完成？这决定了规划应当提前多久启动。</p><p>第五，董秘的季度检查机制是否已经建立并留痕？这是办法明确要求的公司侧动作。</p><p>彤鼎在这一阶段提供的是公司治理、信息披露与资本运作层面的企业管理咨询，不接触交易、不参与任何形式的市场操纵，也不对股价作任何承诺；具体的减持执行与法律意见由持牌合作机构承做。华尔街彤鼎俱乐部内，控制权安排与股东退出结构是成员讨论较为集中的议题之一。如需了解俱乐部会员详情，可发送邮件至 liaoqijie@tdgroup.hk。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="share-pledge-risk.html" style="color:#6b5426;font-weight:700;">上市公司实控人的股票质押：什么时候是融资工具，什么时候是暴雷前兆</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="rule144-10b5-1.html" style="color:#6b5426;font-weight:700;">中概股高管减持：Rule 144 与 10b5-1 计划怎么配合</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="board-building.html" style="color:#6b5426;font-weight:700;">独立董事与董事会建设</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="esg-disclosure.html" style="color:#6b5426;font-weight:700;">ESG披露要求与实操</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="disclosure-6k-20f.html" style="color:#6b5426;font-weight:700;">信息披露6-K与20-F</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

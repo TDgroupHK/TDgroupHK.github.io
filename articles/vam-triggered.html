@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"对赌回购触发之后：别急着找钱，先算账","inLanguage":"zh-CN","abstract":"A repurchase trigger under a valuation adjustment mechanism means a listing deadline, performance target or other condition has failed, entitling investors to demand buyback. The first step is not raising cash but recalculating three things - who owes the obligation, how the amount is computed and capped, and whether multiple investors trigger simultaneously. Only then can extension, repricing, instalments or share-for-debt be negotiated.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/vam-triggered.html"},"datePublished":"2026-08-01","dateModified":"2026-08-01","description":"对赌回购触发，是指约定的上市时限、业绩目标或其他条件未能达成，投资人据此要求回购其所持股权。触发之后最先要做的不是筹钱，而是重新算三笔账：谁是回购义务人（创始人个人还是目标公司，两者在司法实践中的处理口径不同）、回购总额按什么公式计算并是否设有上限、多个投资人是否同步触发及顺位如何。算清之后才谈得上展期、调价、分期、以股抵债这四个谈判方向。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,51 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">融资条款 TERMS</div><h1>对赌回购触发之后：别急着找钱，先算账</h1>
 <div class="sub">算清义务人、总额与效力边界，再谈怎么谈</div><div class="en">A repurchase trigger under a valuation adjustment mechanism means a listing deadline, performance target or other condition has failed, entitling investors to demand buyback. The first step is not raising cash but recalculating three things - who owes the obligation, how the amount is computed and capped, and whether multiple investors trigger simultaneously. Only then can extension, repricing, instalments or share-for-debt be negotiated.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">对赌回购被触发，是指融资协议中约定的上市时限、业绩目标或其他条件未能按期达成，投资人据此有权要求回购其所持股权。触发之后创始人最常见的本能反应是四处找钱，这个顺序是错的。正确的做法是先重新算三笔账：其一，回购义务人到底是谁——创始人个人、控股股东，还是目标公司本身，三者在司法实践中的处理口径并不相同；其二，回购总额按什么公式计算，本金之外的约定利率怎么计、有没有上限条款；其三，协议里有几个投资人、是否同步触发、清偿顺位怎么排。这三笔账没算清之前谈判没有基础。算清之后，可谈的方向通常有四个：展期并重新约定时限、调整估值或转换比例、分期履行并提供担保、以股抵债或引入新投资人承接。</div>
-<h2>一、什么情况下回购会被触发</h2>
-<p>回购触发条款，是指协议约定在特定条件未达成时，投资人有权要求特定主体按约定价格买回其所持股权的安排。实务中触发情形集中在三类。</p>
-<p>其一，上市时限届满未能完成上市。这是最常见的触发原因，协议通常约定一个明确的截止期限（如交割后若干年内完成合格上市），到期未成即触发。需要注意的是&quot;合格上市&quot;往往有定义，包括上市地、估值下限、募资规模等限制，达不到定义标准的上市可能仍然构成未达成。</p>
-<p>其二，业绩目标未达成。约定的营业收入、净利润或其他经营指标未能实现。这类条款有的直接触发回购，有的先触发估值调整（股权补偿），补偿之后仍不达标才触发回购。</p>
-<p>其三，重大违约或特定事件。包括实控人变更、核心资产转移、重大未披露事项被发现、创始人离职或丧失控制权等。</p>
-<p>其四要单独提醒：交叉触发。一份协议的违约可能同时触发另一份协议的条款。因此，触发之后最先要做的就是把手里所有融资文件重新读一遍，确认到底触发了几处。关键在于：很多创始人直到谈判中途才发现触发范围比自己以为的大，谈判姿态因此被动。</p>
-<h2>二、算账之一：谁是回购义务人</h2>
-<p>结论先说：义务人是创始人个人还是目标公司，直接决定这场谈判的性质。</p>
-<p>如果义务人是创始人或控股股东个人，这是股东与股东之间的约定。司法实践一般认为，此类安排属于当事人意思自治范畴，通常予以认可。这意味着创始人个人财产面临直接风险，谈判的空间在于支付节奏和担保安排，而不在于效力本身。</p>
-<p>如果义务人是目标公司本身，情况不同。司法实践中对公司回购自身股权的约定，一般会结合资本维持原则、是否履行减资程序、是否损害债权人利益等因素审查，处理口径与股东间对赌存在差异。这意味着效力本身可能成为谈判筹码。但必须说明：这类判断高度依赖个案事实与最新司法口径，本文不构成法律意见，具体应由持牌律师就个案出具意见。</p>
-<p>还有一种常见结构是双重义务：公司承担优先顺位回购义务，创始人承担补充或连带责任。这种情况下，两条路径的分析都要做。</p>
-<p>因此，翻开协议最先要做的是找到&quot;回购义务人&quot;的准确表述，而不是先看金额。</p>
-<h2>三、算账之二：回购总额到底是多少</h2>
-<p>回购总额的常见计算方式是投资本金加上按约定年利率计算的收益，扣除已分配的股利。魔鬼在细节里，有四个地方必须核实。</p>
-<p>其一，利率是单利还是复利。以一笔假设的示例说明：假设投资本金一亿元、约定年利率百分之八、期间为三年，按单利计算约为一点二四亿元，按复利计算约为一点二六亿元。金额差异在这个量级上还不算悬殊，但期限越长、利率越高，两者差距越大。</p>
-<p>其二，起算日是交割日还是工商变更日。两者可能相差数月，对应的利息差额是实打实的钱。</p>
-<p>其三，有没有上限条款。签约时如果争取到了回购总额上限，此刻它就是最有价值的一条。没有上限的协议，在长期限下总额可能超出创始人的预期。签约阶段应当守住的边界，可参阅<a href="vam-five-lines.html">签对赌协议前要守住的五条保命线</a>。</p>
-<p>其四，已分配股利、已支付的其他款项是否可以抵扣。这一条经常被忽略，而它可能直接减少一笔可观的金额。</p>
-<p>关键在于：把总额算到精确数字，谈判才有锚点。带着一个模糊的&quot;大概一个多亿&quot;上谈判桌，等于把定价权让给对方。</p>
-<h2>四、算账之三：几个投资人，什么顺位</h2>
-<p>多轮融资的企业，触发时往往不止一家投资人有权主张。这笔账要算三件事。</p>
-<p>其一，是否同步触发。不同轮次的协议条款不同，上市时限、业绩口径都可能不一致，实际触发时点可能相差数月。先触发的一方如果单独达成安排，会改变后触发一方的谈判环境。</p>
-<p>其二，清偿顺位与最惠待遇条款。部分协议约定后轮投资人优先，也有协议约定&quot;若给予其他投资人更优条件则自动适用&quot;的最惠条款。这意味着与任何一家单独谈成的条件，可能自动扩散到全部投资人——因此，分头谈判往往不如统一沟通。</p>
-<p>其三，一致行动或联合行使的约定。若干投资人可能约定联合行使权利，此时对手方实际上是一个整体。</p>
-<p>一种反复出现的情形是：创始人先找关系最近的那家投资人谈成了展期，以为可以逐个击破，结果最惠条款把这个条件自动给了所有人，反而丧失了整体打包谈判的空间。因此，动手之前先把全部协议的相互关系画成一张图。</p>
-<h2>五、可谈的四个方向</h2>
-<p>算清三笔账之后，谈判通常沿四个方向展开，多数方案是它们的组合。</p>
-<p>其一，展期并重新约定时限。适用于上市进程确有实质进展、只是时点滞后的情形。对价通常是提高约定利率、追加担保或给予额外股权补偿。谈判时最有说服力的材料不是承诺，是可验证的进度：中介机构进场情况、审计完成度、申报时间表。</p>
-<p>其二，调整估值或转换比例。以股权补偿替代现金回购，创始人让渡部分股权，投资人放弃或推迟回购主张。这一方向对现金流紧张但股权仍有价值的企业最实用，代价是创始人持股被稀释，需要同步核算稀释后是否仍能维持控制权。相关条款机制可参阅<a href="anti-dilution-clauses.html">反稀释条款的三种算法与谈判空间</a>。</p>
-<p>其三，分期履行并提供担保。把一次性回购拆成若干期，配以股权质押、房产抵押或第三方担保。这一方向的关键是分期节奏要与企业真实现金流匹配，而不是与投资人的期望匹配——排出一个做不到的还款表，只会在头一期就再次违约。</p>
-<p>其四，以股抵债或引入新投资人承接。由新投资人受让老投资人的股权，老投资人退出，回购义务随之解除。这条路在企业基本面尚可时是最干净的方案，难点在于新投资人的定价通常不会好看。谈判的整体思路可参阅<a href="pre-ipo-negotiation.html">上市前融资的谈判策略</a>。</p>
-<h2>六、最不该做的三件事</h2>
-<p>其一，拖延不沟通。触发之后失联或含糊其辞，会把一个商业问题迅速变成信任问题。投资人在信息真空里只会做最坏假设，并倾向于尽快启动法律程序锁定权利。主动、及时、带着完整算账结果去沟通，是成本最低的动作。</p>
-<p>其二，单方面停止履行其他义务。因为回购谈不拢就停止提供财务报表、拒绝配合审计、擅自变更公司登记事项，这些行为通常会构成新的独立违约，把谈判筹码变成对方的证据。</p>
-<p>其三，把公司资产挪去个人履约。为了偿付个人回购义务而动用公司资金或资产，可能同时触及资金占用、损害公司利益、损害其他股东与债权人利益等多重问题，并在未来的上市尽调中留下几乎无法解释的记录。这是三件事里后果最严重的一件。</p>
-<p>因此，坏消息面前最贵的从来不是钱，是动作变形。</p>
-<h2>七、对上市进程的影响与清理时点</h2>
-<p>未了结的回购义务在申报期是必须处理的事项。处理逻辑有三层。</p>
-<p>其一，是否解除。多数情况下，申报前需要将对赌条款终止或解除，且解除应当是彻底的、不附恢复条件的。附条件恢复的解除（如&quot;上市失败则条款自动恢复&quot;）在审核中的接受度存在不确定性，需要与中介机构就个案确认。</p>
-<p>其二，是否披露。已经发生过触发、后经协商解除的历史，通常需要在申报文件中如实披露，包括触发原因、解决方案、是否已履行完毕。试图隐去这段历史的风险远大于披露本身——尽调会翻出资金流水与协议版本。</p>
-<p>其三，时点安排。回购义务的清理需要在报告期内完成并留出观察期，越晚处理，对申报时间表的挤压越大。一种常见的情形是企业为了赶窗口先递表、想着问询阶段再补，结果补的过程本身消耗掉了比等一轮更多的时间。上市失败的其他常见原因可参阅<a href="pre-ipo-risk.html">上市前融资的风险要点</a>。</p>
-<p>在华尔街彤鼎俱乐部的闭门交流中，走过这一关的企业家给出的共识是：回购条款真正考验的不是还钱能力，而是创始人与投资人在坏消息面前还能不能坐下来把账一起算清楚。本质上，能算清账的关系才谈得下去，算不清账的关系只能交给程序。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>对赌回购被触发，是指融资协议中约定的上市时限、业绩目标或其他条件未能按期达成，投资人据此有权要求回购其所持股权。触发之后创始人最常见的本能反应是四处找钱，这个顺序是错的。正确的做法是先重新算三笔账：其一，回购义务人到底是谁——创始人个人、控股股东，还是目标公司本身，三者在司法实践中的处理口径并不相同；其二，回购总额按什么公式计算，本金之外的约定利率怎么计、有没有上限条款；其三，协议里有几个投资人、是否同步触发、清偿顺位怎么排。</p><p>这三笔账没算清之前谈判没有基础。算清之后，可谈的方向通常有四个：展期并重新约定时限、调整估值或转换比例、分期履行并提供担保、以股抵债或引入新投资人承接。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">什么情况下回购会被触发</a></li><li><a href="#sec-02">算账之一：谁是回购义务人</a></li><li><a href="#sec-03">算账之二：回购总额到底是多少</a></li><li><a href="#sec-04">算账之三：几个投资人，什么顺位</a></li><li><a href="#sec-05">可谈的四个方向</a></li><li><a href="#sec-06">最不该做的三件事</a></li><li><a href="#sec-07">对上市进程的影响与清理时点</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、什么情况下回购会被触发</h2><p>回购触发条款，是指协议约定在特定条件未达成时，投资人有权要求特定主体按约定价格买回其所持股权的安排。实务中触发情形集中在三类。</p><p>其一，上市时限届满未能完成上市。这是最常见的触发原因，协议通常约定一个明确的截止期限（如交割后若干年内完成合格上市），到期未成即触发。需要注意的是&quot;合格上市&quot;往往有定义，包括上市地、估值下限、募资规模等限制，达不到定义标准的上市可能仍然构成未达成。</p><p>其二，业绩目标未达成。约定的营业收入、净利润或其他经营指标未能实现。这类条款有的直接触发回购，有的先触发估值调整（股权补偿），补偿之后仍不达标才触发回购。</p><p>其三，重大违约或特定事件。包括实控人变更、核心资产转移、重大未披露事项被发现、创始人离职或丧失控制权等。</p><p>其四要单独提醒：交叉触发。一份协议的违约可能同时触发另一份协议的条款。因此，触发之后最先要做的就是把手里所有融资文件重新读一遍，确认到底触发了几处。关键在于：很多创始人直到谈判中途才发现触发范围比自己以为的大，谈判姿态因此被动。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、算账之一：谁是回购义务人</h2><p>结论先说：义务人是创始人个人还是目标公司，直接决定这场谈判的性质。</p><p>如果义务人是创始人或控股股东个人，这是股东与股东之间的约定。司法实践一般认为，此类安排属于当事人意思自治范畴，通常予以认可。这意味着创始人个人财产面临直接风险，谈判的空间在于支付节奏和担保安排，而不在于效力本身。</p><p>如果义务人是目标公司本身，情况不同。司法实践中对公司回购自身股权的约定，一般会结合资本维持原则、是否履行减资程序、是否损害债权人利益等因素审查，处理口径与股东间对赌存在差异。这意味着效力本身可能成为谈判筹码。</p><p data-ts="1">但必须说明：这类判断高度依赖个案事实与最新司法口径，本文不构成法律意见，具体应由持牌律师就个案出具意见。</p><p>还有一种常见结构是双重义务：公司承担优先顺位回购义务，创始人承担补充或连带责任。这种情况下，两条路径的分析都要做。</p><p>因此，翻开协议最先要做的是找到&quot;回购义务人&quot;的准确表述，而不是先看金额。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、算账之二：回购总额到底是多少</h2><p>回购总额的常见计算方式是投资本金加上按约定年利率计算的收益，扣除已分配的股利。魔鬼在细节里，有四个地方必须核实。</p><p>其一，利率是单利还是复利。以一笔假设的示例说明：假设投资本金一亿元、约定年利率百分之八、期间为三年，按单利计算约为一点二四亿元，按复利计算约为一点二六亿元。金额差异在这个量级上还不算悬殊，但期限越长、利率越高，两者差距越大。</p><p>其二，起算日是交割日还是工商变更日。两者可能相差数月，对应的利息差额是实打实的钱。</p><p>其三，有没有上限条款。签约时如果争取到了回购总额上限，此刻它就是最有价值的一条。没有上限的协议，在长期限下总额可能超出创始人的预期。签约阶段应当守住的边界，可参阅<a href="vam-five-lines.html">签对赌协议前要守住的五条保命线</a>。</p><p>其四，已分配股利、已支付的其他款项是否可以抵扣。这一条经常被忽略，而它可能直接减少一笔可观的金额。</p><p>关键在于：把总额算到精确数字，谈判才有锚点。带着一个模糊的&quot;大概一个多亿&quot;上谈判桌，等于把定价权让给对方。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、算账之三：几个投资人，什么顺位</h2><p>多轮融资的企业，触发时往往不止一家投资人有权主张。这笔账要算三件事。</p><p>其一，是否同步触发。不同轮次的协议条款不同，上市时限、业绩口径都可能不一致，实际触发时点可能相差数月。先触发的一方如果单独达成安排，会改变后触发一方的谈判环境。</p><p>其二，清偿顺位与最惠待遇条款。部分协议约定后轮投资人优先，也有协议约定&quot;若给予其他投资人更优条件则自动适用&quot;的最惠条款。这意味着与任何一家单独谈成的条件，可能自动扩散到全部投资人——因此，分头谈判往往不如统一沟通。</p><p>其三，一致行动或联合行使的约定。若干投资人可能约定联合行使权利，此时对手方实际上是一个整体。</p><p>一种反复出现的情形是：创始人先找关系最近的那家投资人谈成了展期，以为可以逐个击破，结果最惠条款把这个条件自动给了所有人，反而丧失了整体打包谈判的空间。因此，动手之前先把全部协议的相互关系画成一张图。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、可谈的四个方向</h2><p>算清三笔账之后，谈判通常沿四个方向展开，多数方案是它们的组合。</p><p>其一，展期并重新约定时限。适用于上市进程确有实质进展、只是时点滞后的情形。对价通常是提高约定利率、追加担保或给予额外股权补偿。谈判时最有说服力的材料不是承诺，是可验证的进度：中介机构进场情况、审计完成度、申报时间表。</p><p>其二，调整估值或转换比例。以股权补偿替代现金回购，创始人让渡部分股权，投资人放弃或推迟回购主张。这一方向对现金流紧张但股权仍有价值的企业最实用，代价是创始人持股被稀释，需要同步核算稀释后是否仍能维持控制权。相关条款机制可参阅<a href="anti-dilution-clauses.html">反稀释条款的三种算法与谈判空间</a>。</p><p>其三，分期履行并提供担保。把一次性回购拆成若干期，配以股权质押、房产抵押或第三方担保。这一方向的关键是分期节奏要与企业真实现金流匹配，而不是与投资人的期望匹配——排出一个做不到的还款表，只会在头一期就再次违约。</p><p>其四，以股抵债或引入新投资人承接。由新投资人受让老投资人的股权，老投资人退出，回购义务随之解除。这条路在企业基本面尚可时是最干净的方案，难点在于新投资人的定价通常不会好看。谈判的整体思路可参阅<a href="pre-ipo-negotiation.html">上市前融资的谈判策略</a>。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、最不该做的三件事</h2><p>其一，拖延不沟通。触发之后失联或含糊其辞，会把一个商业问题迅速变成信任问题。投资人在信息真空里只会做最坏假设，并倾向于尽快启动法律程序锁定权利。主动、及时、带着完整算账结果去沟通，是成本最低的动作。</p><p>其二，单方面停止履行其他义务。因为回购谈不拢就停止提供财务报表、拒绝配合审计、擅自变更公司登记事项，这些行为通常会构成新的独立违约，把谈判筹码变成对方的证据。</p><p>其三，把公司资产挪去个人履约。为了偿付个人回购义务而动用公司资金或资产，可能同时触及资金占用、损害公司利益、损害其他股东与债权人利益等多重问题，并在未来的上市尽调中留下几乎无法解释的记录。这是三件事里后果最严重的一件。</p><p>因此，坏消息面前最贵的从来不是钱，是动作变形。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、对上市进程的影响与清理时点</h2><p>未了结的回购义务在申报期是必须处理的事项。处理逻辑有三层。</p><p>其一，是否解除。多数情况下，申报前需要将对赌条款终止或解除，且解除应当是彻底的、不附恢复条件的。附条件恢复的解除（如&quot;上市失败则条款自动恢复&quot;）在审核中的接受度存在不确定性，需要与中介机构就个案确认。</p><p>其二，是否披露。已经发生过触发、后经协商解除的历史，通常需要在申报文件中如实披露，包括触发原因、解决方案、是否已履行完毕。试图隐去这段历史的风险远大于披露本身——尽调会翻出资金流水与协议版本。</p><p>其三，时点安排。回购义务的清理需要在报告期内完成并留出观察期，越晚处理，对申报时间表的挤压越大。一种常见的情形是企业为了赶窗口先递表、想着问询阶段再补，结果补的过程本身消耗掉了比等一轮更多的时间。上市失败的其他常见原因可参阅<a href="pre-ipo-risk.html">上市前融资的风险要点</a>。</p><p>在华尔街彤鼎俱乐部的闭门交流中，走过这一关的企业家给出的共识是：回购条款真正考验的不是还钱能力，而是创始人与投资人在坏消息面前还能不能坐下来把账一起算清楚。本质上，能算清账的关系才谈得下去，算不清账的关系只能交给程序。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="vam-five-lines.html" style="color:#6b5426;font-weight:700;">对赌协议五条保命线</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="founder-control.html" style="color:#6b5426;font-weight:700;">创始人控制权保护</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="liquidation-preference.html" style="color:#6b5426;font-weight:700;">优先清算权怎么谈：条款清单里最容易被忽略的一条</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="fake-investors.html" style="color:#6b5426;font-weight:700;">识别假投资人与收购骗局</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="due-diligence-dataroom.html" style="color:#6b5426;font-weight:700;">应对投资人尽调与数据室准备</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

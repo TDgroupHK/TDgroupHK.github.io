@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"北交所与专精特新上市路径","inLanguage":"zh-CN","abstract":"The Beijing Stock Exchange route for specialised SMEs, its thresholds, and how it compares with an overseas listing.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/beijing-exchange-path.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"北京证券交易所（北交所）是中国专门服务创新型中小企业的证券交易所，是专精特新企业在国内上市的重要通道。与上交所、深交所相比，北交所的定位是服务更早期、规模更小但创新能力强的中小企业，上市门槛相对更低、更包容。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,55 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市路径 LISTING PATH</div><h1>北交所与专精特新上市路径</h1>
 <div class="sub"></div><div class="en">The Beijing Stock Exchange route for specialised SMEs, its thresholds, and how it compares with an overseas listing.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">北京证券交易所（北交所）是中国专门服务创新型中小企业的证券交易所，是专精特新企业在国内上市的重要通道。与上交所、深交所相比，北交所的定位是服务更早期、规模更小但创新能力强的中小企业，上市门槛相对更低、更包容。对于符合专精特新定位的中小企业，北交所提供了一条比主板、创业板、科创板门槛更友好的国内上市路径。北交所上市的核心特点是：以新三板创新层为基础（企业需要先在新三板挂牌满一定时间）、注重企业的创新能力和成长性、上市流程相对高效。本文系统介绍北交所的上市路径，帮助专精特新企业理解这一国内资本市场机遇。</div>
-<h2>一、北交所的定位</h2>
-<p>北京证券交易所成立于2021年，是中国资本市场服务创新型中小企业的专门交易所。北交所的核心定位是服务专精特新企业——即专业化、精细化、特色化、新颖化的中小企业，这些企业通常在细分领域有较强的技术或市场优势，但规模相对较小，还达不到主板、创业板或科创板的上市门槛。</p>
-<p>北交所与新三板（全国中小企业股份转让系统）紧密衔接。企业通常需要先在新三板挂牌，进入创新层，达到一定条件后再申请到北交所上市。这种层层递进的设计，让中小企业有一条从新三板到北交所的成长通道。</p>
-<h2>二、北交所与其他板块的区别</h2>
-<h3>与主板的区别</h3>
-<p>主板（上交所、深交所主板）服务的是成熟的大中型企业，上市门槛高（盈利、规模要求高）。北交所服务的是创新型中小企业，门槛相对更低、更包容，更注重企业的创新性和成长性而非当下的规模。</p>
-<h3>与科创板的区别</h3>
-<p>科创板（上交所）服务的是硬科技企业，强调科创属性，门槛较高。北交所服务的是更广泛的专精特新中小企业，不局限于硬科技，包容性更强，企业规模门槛更低。</p>
-<h3>与创业板的区别</h3>
-<p>创业板（深交所）服务成长型创新创业企业，门槛介于主板和北交所之间。北交所服务的企业通常规模更小、更早期，是中小企业上市的友好通道。</p>
-<h3>北交所的独特优势</h3>
-<p>北交所的独特优势在于：门槛更友好（适合规模较小的优质中小企业）、与新三板衔接（有清晰的成长通道）、政策支持力度大（国家大力支持专精特新企业发展）、上市流程相对高效。</p>
-<h2>三、北交所上市的基本路径</h2>
-<h3>第一步：新三板挂牌</h3>
-<p>企业首先需要在新三板挂牌。新三板挂牌的门槛相对较低，是企业进入资本市场的第一步。挂牌后企业进入新三板的基础层。</p>
-<h3>第二步：进入创新层</h3>
-<p>在新三板挂牌后，企业需要达到一定的条件（财务指标、规范运作等）进入新三板的创新层。创新层是新三板中更高的层级，是申请北交所上市的前提。</p>
-<h3>第三步：满足北交所上市条件</h3>
-<p>企业在创新层挂牌满一定时间（通常需要满12个月）后，达到北交所的上市条件，即可申请到北交所上市。北交所有多套上市标准（以市值为基础，结合盈利、营收、研发等指标），企业可以根据自身情况选择适用的标准。</p>
-<h3>第四步：北交所上市审核与发行</h3>
-<p>提交北交所上市申请，接受审核（注册制下，由北交所审核、证监会注册），审核通过后进行公开发行并上市。</p>
-<h2>四、北交所上市的条件</h2>
-<p>北交所设有多套上市标准，企业可以选择其中一套满足即可。这些标准通常以市值为基础，结合不同的财务指标。</p>
-<p>标准的设计思路是：市值较高的企业，对盈利的要求可以相对宽松；盈利较强的企业，对市值的要求可以相对宽松。这种多元化的标准设计，让不同类型的优质中小企业都有适合自己的上市通道。</p>
-<p>除了财务标准，北交所还要求企业：是新三板创新层企业且挂牌满12个月、公司治理规范、信息披露真实完整、具备持续经营能力和成长性。</p>
-<h2>五、专精特新企业的认定与价值</h2>
-<h3>什么是专精特新</h3>
-<p>专精特新是指专业化、精细化、特色化、新颖化的中小企业。国家对专精特新企业有分层培育机制，包括省级专精特新中小企业、专精特新小巨人企业等不同层级。获得专精特新认定的企业，通常在细分领域有较强的竞争力。</p>
-<h3>专精特新认定的价值</h3>
-<p>获得专精特新认定，对企业有多重价值：政策支持（财政补贴、税收优惠、融资支持等）、品牌背书（专精特新是国家认可的优质中小企业标志）、上市便利（专精特新企业是北交所重点服务对象，也受到其他板块的欢迎）。</p>
-<h2>六、北交所上市与境外上市的比较</h2>
-<p>对于符合条件的中小企业，北交所和境外上市（如纳斯达克）是两种不同的选择，各有优势。</p>
-<p>北交所的优势：国内市场，监管和语言环境熟悉；专精特新企业有政策支持；服务中小企业，门槛友好；人民币融资，无汇率风险。</p>
-<p>境外上市（如纳斯达克）的优势：国际资本市场，估值和融资能力可能更强；国际化品牌背书；再融资工具丰富；对某些行业的估值更高。</p>
-<p>企业应该根据自身的业务特点、发展阶段、融资需求、长期战略来选择最适合的上市路径。有些企业适合先在北交所上市积累资本市场经验，有些企业则更适合直接走境外上市路径。这需要专业的评估和规划。</p>
-<h2>七、给专精特新企业的上市建议</h2>
-<p>建议1：尽早进行资本规划。无论选择北交所还是境外上市，都需要提前规划（规范财务、清理股权、建立治理）。越早规划，上市之路越顺畅。</p>
-<p>建议2：争取专精特新认定。专精特新认定不仅带来政策支持，也是上市的有利条件。符合条件的企业应该积极申请。</p>
-<p>建议3：客观评估上市路径。北交所和境外上市各有优劣，企业应该基于自身情况客观评估，选择最适合的路径，而不是盲目跟风。</p>
-<p>建议4：寻求专业辅导。无论选择哪条上市路径，专业的上市辅导都能帮助企业少走弯路、提高上市成功率。</p>
-<h3>结语：为中小企业打开资本市场大门</h3>
-<p>北交所的设立，为广大专精特新中小企业打开了一扇国内资本市场的大门。对于规模还不大但创新能力强、成长性好的中小企业，北交所是一条门槛友好、政策支持的上市通道。</p>
-<p>企业应该根据自身的实际情况，在北交所、其他境内板块、境外上市等多种路径中，选择最适合自己的资本化道路。彤鼎集团（香港）有限公司为企业提供境内外上市的全方位咨询，帮助企业客观评估各种上市路径、选择最优方案、并提供专业的上市辅导支持。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p>
-<p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>北京证券交易所（北交所）是中国专门服务创新型中小企业的证券交易所，是专精特新企业在国内上市的重要通道。与上交所、深交所相比，北交所的定位是服务更早期、规模更小但创新能力强的中小企业，上市门槛相对更低、更包容。对于符合专精特新定位的中小企业，北交所提供了一条比主板、创业板、科创板门槛更友好的国内上市路径。</p><p>北交所上市的核心特点是：以新三板创新层为基础（企业需要先在新三板挂牌满一定时间）、注重企业的创新能力和成长性、上市流程相对高效。本文系统介绍北交所的上市路径，帮助专精特新企业理解这一国内资本市场机遇。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">北交所的定位</a></li><li><a href="#sec-02">北交所与其他板块的区别</a></li><li><a href="#sec-03">北交所上市的基本路径</a></li><li><a href="#sec-04">北交所上市的条件</a></li><li><a href="#sec-05">专精特新企业的认定与价值</a></li><li><a href="#sec-06">北交所上市与境外上市的比较</a></li><li><a href="#sec-07">给专精特新企业的上市建议</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、北交所的定位</h2><p>北京证券交易所成立于2021年，是中国资本市场服务创新型中小企业的专门交易所。北交所的核心定位是服务专精特新企业——即专业化、精细化、特色化、新颖化的中小企业，这些企业通常在细分领域有较强的技术或市场优势，但规模相对较小，还达不到主板、创业板或科创板的上市门槛。</p><p>北交所与新三板（全国中小企业股份转让系统）紧密衔接。企业通常需要先在新三板挂牌，进入创新层，达到一定条件后再申请到北交所上市。这种层层递进的设计，让中小企业有一条从新三板到北交所的成长通道。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、北交所与其他板块的区别</h2><p><h3>与主板的区别</h3></p><p>主板（上交所、深交所主板）服务的是成熟的大中型企业，上市门槛高（盈利、规模要求高）。北交所服务的是创新型中小企业，门槛相对更低、更包容，更注重企业的创新性和成长性而非当下的规模。</p><p><h3>与科创板的区别</h3></p><p>科创板（上交所）服务的是硬科技企业，强调科创属性，门槛较高。北交所服务的是更广泛的专精特新中小企业，不局限于硬科技，包容性更强，企业规模门槛更低。</p><p><h3>与创业板的区别</h3></p><p>创业板（深交所）服务成长型创新创业企业，门槛介于主板和北交所之间。北交所服务的企业通常规模更小、更早期，是中小企业上市的友好通道。</p><p><h3>北交所的独特优势</h3></p><p>北交所的独特优势在于：门槛更友好（适合规模较小的优质中小企业）、与新三板衔接（有清晰的成长通道）、政策支持力度大（国家大力支持专精特新企业发展）、上市流程相对高效。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、北交所上市的基本路径</h2><p><h3>第一步：新三板挂牌</h3></p><p>企业首先需要在新三板挂牌。新三板挂牌的门槛相对较低，是企业进入资本市场的第一步。挂牌后企业进入新三板的基础层。</p><p><h3>第二步：进入创新层</h3></p><p>在新三板挂牌后，企业需要达到一定的条件（财务指标、规范运作等）进入新三板的创新层。创新层是新三板中更高的层级，是申请北交所上市的前提。</p><p><h3>第三步：满足北交所上市条件</h3></p><p>企业在创新层挂牌满一定时间（通常需要满12个月）后，达到北交所的上市条件，即可申请到北交所上市。北交所有多套上市标准（以市值为基础，结合盈利、营收、研发等指标），企业可以根据自身情况选择适用的标准。</p><p><h3>第四步：北交所上市审核与发行</h3></p><p>提交北交所上市申请，接受审核（注册制下，由北交所审核、证监会注册），审核通过后进行公开发行并上市。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、北交所上市的条件</h2><p>北交所设有多套上市标准，企业可以选择其中一套满足即可。这些标准通常以市值为基础，结合不同的财务指标。</p><p>标准的设计思路是：市值较高的企业，对盈利的要求可以相对宽松；盈利较强的企业，对市值的要求可以相对宽松。这种多元化的标准设计，让不同类型的优质中小企业都有适合自己的上市通道。</p><p>除了财务标准，北交所还要求企业：是新三板创新层企业且挂牌满12个月、公司治理规范、信息披露真实完整、具备持续经营能力和成长性。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、专精特新企业的认定与价值</h2><p><h3>什么是专精特新</h3></p><p>专精特新是指专业化、精细化、特色化、新颖化的中小企业。国家对专精特新企业有分层培育机制，包括省级专精特新中小企业、专精特新小巨人企业等不同层级。获得专精特新认定的企业，通常在细分领域有较强的竞争力。</p><p><h3>专精特新认定的价值</h3></p><p>获得专精特新认定，对企业有多重价值：政策支持（财政补贴、税收优惠、融资支持等）、品牌背书（专精特新是国家认可的优质中小企业标志）、上市便利（专精特新企业是北交所重点服务对象，也受到其他板块的欢迎）。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、北交所上市与境外上市的比较</h2><p>对于符合条件的中小企业，北交所和境外上市（如纳斯达克）是两种不同的选择，各有优势。</p><p>北交所的优势：国内市场，监管和语言环境熟悉；专精特新企业有政策支持；服务中小企业，门槛友好；人民币融资，无汇率风险。</p><p>境外上市（如纳斯达克）的优势：国际资本市场，估值和融资能力可能更强；国际化品牌背书；再融资工具丰富；对某些行业的估值更高。</p><p>企业应该根据自身的业务特点、发展阶段、融资需求、长期战略来选择最适合的上市路径。有些企业适合先在北交所上市积累资本市场经验，有些企业则更适合直接走境外上市路径。这需要专业的评估和规划。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、给专精特新企业的上市建议</h2><p>建议1：尽早进行资本规划。无论选择北交所还是境外上市，都需要提前规划（规范财务、清理股权、建立治理）。越早规划，上市之路越顺畅。</p><p>建议2：争取专精特新认定。专精特新认定不仅带来政策支持，也是上市的有利条件。符合条件的企业应该积极申请。</p><p>建议3：客观评估上市路径。北交所和境外上市各有优劣，企业应该基于自身情况客观评估，选择最适合的路径，而不是盲目跟风。</p><p>建议4：寻求专业辅导。无论选择哪条上市路径，专业的上市辅导都能帮助企业少走弯路、提高上市成功率。</p><p><h3>结语：为中小企业打开资本市场大门</h3></p><p>北交所的设立，为广大专精特新中小企业打开了一扇国内资本市场的大门。对于规模还不大但创新能力强、成长性好的中小企业，北交所是一条门槛友好、政策支持的上市通道。</p><p>企业应该根据自身的实际情况，在北交所、其他境内板块、境外上市等多种路径中，选择最适合自己的资本化道路。彤鼎集团（香港）有限公司为企业提供境内外上市的全方位咨询，帮助企业客观评估各种上市路径、选择最优方案、并提供专业的上市辅导支持。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p><p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="us-hk-a-share-choice.html" style="color:#6b5426;font-weight:700;">美股港股A股三选一决策指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-vs-nyse.html" style="color:#6b5426;font-weight:700;">纳斯达克与纽交所怎么选</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="sgx-mainboard.html" style="color:#6b5426;font-weight:700;">新加坡交易所上市：门槛与流程</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="public-float-holders.html" style="color:#6b5426;font-weight:700;">公众持股与股东人数：纳斯达克硬指标</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="beyond-25m-threshold.html" style="color:#6b5426;font-weight:700;">募资不足2500万美元：四条资本化出路</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

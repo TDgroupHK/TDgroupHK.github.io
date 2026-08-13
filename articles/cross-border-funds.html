@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"跨境资金出境合规","inLanguage":"zh-CN","abstract":"Compliant routes for moving funds offshore: ODI, Circular 37 registration, and the boundaries that must not be crossed.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/cross-border-funds.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"ODI备案与37号文登记的实操全攻略。跨境资金出境合规完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,62 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">跨境架构 STRUCTURING</div><h1>跨境资金出境合规</h1>
 <div class="sub">ODI备案与37号文登记的实操全攻略</div><div class="en">Compliant routes for moving funds offshore: ODI, Circular 37 registration, and the boundaries that must not be crossed.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">中国企业赴美上市的新加坡路径，要求实控人和企业通过合规渠道把资金和股权关系搬到境外。这涉及两个核心合规程序：37号文登记（个人境外投资的外汇登记）和ODI备案（企业境外直接投资的商务部备案）。这两个程序缺一不可——没有37号文登记，实控人的跨境股权架构不合法；没有ODI备案，企业的境外子公司注资不合规。实操中，这两个程序的完成周期合计需要2至4个月，必须在正式启动上市辅导的同时就并行推进，否则会成为整个12个月流程的瓶颈。</div>
-<h2>一、为什么跨境合规这么重要</h2>
-<p>新加坡路径的核心架构是：实控人（中国公民）→ BVI公司 → 开曼公司（发行主体）→ 新加坡运营公司。这个架构的合规性，依赖于实控人在搭建这个架构时严格遵守中国的外汇管理规定。</p>
-<p>如果实控人在没有完成37号文登记的情况下，直接在境外设立公司并注入境内资产，就违反了中国的外汇管理法规。这不仅会导致境外架构在法律上存在瑕疵，还可能引发监管处罚，更严重的是可能在上市辅导的PCAOB审计或SEC问询阶段被发现，导致整个上市计划中断。</p>
-<h2>二、37号文登记：实控人个人的必做事项</h2>
-<h3>什么是37号文</h3>
-<p>37号文是国家外汇管理局2014年发布的《关于境内居民通过特殊目的公司境外投融资及返程投资外汇管理有关问题的通知》（汇发〔2014〕37号）的简称。它规定：中国境内居民（包括自然人和法人）通过在境外设立特殊目的公司（SPV）进行境外融资或返程投资的，必须向当地外汇管理局（外管局）进行登记备案。</p>
-<h3>哪些情况需要做37号文登记</h3>
-<p>凡是实控人（中国公民或境内居民）持有境外公司（包括BVI、开曼等）股权，并且该境外公司在中国境内有实质性业务投资或资金往来的，均需要进行37号文登记。</p>
-<p>具体到新加坡路径架构：实控人持有BVI公司，BVI公司持有开曼公司，开曼公司将来会通过WFOE或协议控制境内公司——这种架构必须进行37号文登记。</p>
-<h3>37号文登记的具体流程</h3>
-<p>第一步：准备申请材料。包括实控人身份证、护照、境外公司注册证明、境外公司章程、股权架构图、资金来源说明（证明出境资金来源合法）等。</p>
-<p>第二步：向实控人户籍所在地或主要业务所在地的外汇管理局提交申请。不同地区的外管局对材料要求可能略有差异，建议提前咨询当地外管局或委托专业机构代办。</p>
-<p>第三步：外管局审核。审核周期通常为15至30个工作日，审核通过后颁发外汇登记证明。</p>
-<p>第四步：每年年检。完成首次登记后，实控人需要每年向外管局提交年检材料，包括境外公司的最新财务状况、股权变化等。</p>
-<h3>37号文登记的常见问题</h3>
-<p>问题1：如果实控人已经在境外设立了公司但未做37号文登记怎么办？应该立即补办登记。未登记的情况可以申请补办，但需要说明原因并可能面临一定的行政处罚。尽早补办远比拖延强。</p>
-<p>问题2：37号文登记是否影响外汇管控？37号文登记本身不等于外汇管控的豁免，只是对个人境外投资行为的备案。实际资金出境仍然需要通过合法的外汇渠道，并提供相应证明文件。</p>
-<h2>三、ODI备案：企业的必做事项</h2>
-<h3>什么是ODI备案</h3>
-<p>ODI（Overseas Direct Investment，境外直接投资）备案是中国境内企业向境外进行股权投资时，向商务部门和发展改革委进行的备案审批程序。根据《境外投资管理办法》，境内企业的境外投资需要依法进行备案或审批。</p>
-<h3>ODI备案的适用场景</h3>
-<p>新加坡路径中，境内运营公司（或实控人控制的境内主体）向BVI、开曼、新加坡等境外公司进行股权投资或资本注入时，需要进行ODI备案。这是合规地把境内资金出境的必要程序。</p>
-<h3>ODI备案的具体流程</h3>
-<p>第一步：向当地商务部门（省级或市级商务局）提交ODI备案申请。材料包括：企业营业执照、法人身份证、拟投资境外公司的基本信息、投资金额和资金来源说明、可行性研究报告等。</p>
-<p>第二步：同步向国家发展改革委（通过网上系统）进行境外投资项目备案。对于投资金额在3亿美元以下的项目，通常实行备案制（而非审批制），备案周期较短。</p>
-<p>第三步：商务部门审核并出具《企业境外投资证书》。审核周期通常为15至25个工作日。</p>
-<p>第四步：凭《企业境外投资证书》向银行办理外汇汇出手续，完成资金出境。</p>
-<h3>ODI备案中常见的注意事项</h3>
-<p>注意1：ODI备案的主体必须是合法的境内企业，个人不能直接做ODI备案（个人出境投资走37号文路径）。</p>
-<p>注意2：备案材料中的投资目的和可行性分析必须真实，不能为了备案而编造投资逻辑。PCAOB审计和SEC问询会核查ODI备案材料的真实性。</p>
-<p>注意3：ODI备案完成后，每年需要向商务部门报送境外投资年度报告，披露境外子公司的经营状况和财务数据。</p>
-<h2>四、37号文和ODI的协同设计</h2>
-<p>在实际操作中，37号文登记（个人层面）和ODI备案（企业层面）需要协同设计，确保两套合规体系相互支撑、不产生矛盾。</p>
-<p>典型的协同方案：实控人个人先完成37号文登记，确认境外BVI公司的合法持有；境内运营公司完成ODI备案，获得向境外公司注资的合规通道；之后按照备案批准的金额，通过合法银行渠道将资金汇出境外，注入开曼或新加坡公司的账户。</p>
-<p>这两个程序的先后顺序和操作细节，需要根据具体架构设计来决定。彤鼎团队在辅导项目时，会在架构设计阶段就同步规划37号文和ODI的合规路径，确保资金和股权的出境合规有序。</p>
-<h2>五、其他相关的跨境合规事项</h2>
-<h3>外汇资金池管理</h3>
-<p>上市后，公司的境外美元资金和境内人民币资金之间的调配，需要通过合规的跨境资金池或内保外贷等机制实现。这是上市公司财务管理的重要组成部分，需要专业的跨境财务团队负责。</p>
-<h3>VIE架构的特殊合规要求</h3>
-<p>采用VIE架构的公司，境内运营实体与境外发行主体之间的协议控制关系，在境内法律层面处于相对模糊的状态。这类公司需要特别关注协议控制的法律风险，以及境内监管政策对VIE架构的最新态度。</p>
-<h3>利润汇回境内的合规路径</h3>
-<p>上市后，境外公司的利润如何合规地汇回境内（供实控人个人使用或用于境内业务扩张），需要通过股息分配、境外子公司向境内母公司提供服务收费等合规路径实现，不能绕过正常的税务申报和外汇申报程序。</p>
-<h2>六、合规时间线建议</h2>
-<p>根据彤鼎团队多年辅导经验，建议把跨境合规程序纳入以下时间线安排。</p>
-<p>启动辅导的第1个月：同步开始37号文登记和ODI备案的材料准备。这两个程序都需要收集大量材料，早准备早主动。</p>
-<p>第2个月：向外管局和商务部门正式提交申请。审核周期约1至2个月，整体应在第3至4个月完成。</p>
-<p>第3至4个月：获得37号文外汇登记证明和ODI《企业境外投资证书》，完成资金出境，境外架构正式建立合规基础。</p>
-<p>整个合规程序应与境外公司注册（BVI、开曼、新加坡）并行推进，确保在PCAOB审计师入场前，所有跨境合规手续均已完成。</p>
-<h3>结语：合规出境是上市之路的地基</h3>
-<p>对很多中国企业主来说，37号文和ODI是陌生的名词。但它们是整个新加坡路径上市架构能否站立起来的法律地基。地基不牢，上面建得再高也会倒塌。</p>
-<p>合规地把资金和股权关系搬到境外，是赴美上市最基础也最容易被忽视的工作。提前规划、提前启动、找专业团队协助，是把这件事做好的唯一正确方式。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>中国企业赴美上市的新加坡路径，要求实控人和企业通过合规渠道把资金和股权关系搬到境外。这涉及两个核心合规程序：37号文登记（个人境外投资的外汇登记）和ODI备案（企业境外直接投资的商务部备案）。这两个程序缺一不可——没有37号文登记，实控人的跨境股权架构不合法；没有ODI备案，企业的境外子公司注资不合规。</p><p>实操中，这两个程序的完成周期合计需要2至4个月，必须在正式启动上市辅导的同时就并行推进，否则会成为整个12个月流程的瓶颈。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">为什么跨境合规这么重要</a></li><li><a href="#sec-02">37号文登记：实控人个人的必做事项</a></li><li><a href="#sec-03">ODI备案：企业的必做事项</a></li><li><a href="#sec-04">37号文和ODI的协同设计</a></li><li><a href="#sec-05">其他相关的跨境合规事项</a></li><li><a href="#sec-06">合规时间线建议</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、为什么跨境合规这么重要</h2><p>新加坡路径的核心架构是：实控人（中国公民）→ BVI公司 → 开曼公司（发行主体）→ 新加坡运营公司。这个架构的合规性，依赖于实控人在搭建这个架构时严格遵守中国的外汇管理规定。</p><p>如果实控人在没有完成37号文登记的情况下，直接在境外设立公司并注入境内资产，就违反了中国的外汇管理法规。这不仅会导致境外架构在法律上存在瑕疵，还可能引发监管处罚，更严重的是可能在上市辅导的PCAOB审计或SEC问询阶段被发现，导致整个上市计划中断。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、37号文登记：实控人个人的必做事项</h2><p><h3>什么是37号文</h3></p><p>37号文是国家外汇管理局2014年发布的《关于境内居民通过特殊目的公司境外投融资及返程投资外汇管理有关问题的通知》（汇发〔2014〕37号）的简称。它规定：中国境内居民（包括自然人和法人）通过在境外设立特殊目的公司（SPV）进行境外融资或返程投资的，必须向当地外汇管理局（外管局）进行登记备案。</p><p><h3>哪些情况需要做37号文登记</h3></p><p>凡是实控人（中国公民或境内居民）持有境外公司（包括BVI、开曼等）股权，并且该境外公司在中国境内有实质性业务投资或资金往来的，均需要进行37号文登记。</p><p>具体到新加坡路径架构：实控人持有BVI公司，BVI公司持有开曼公司，开曼公司将来会通过WFOE或协议控制境内公司——这种架构必须进行37号文登记。</p><p><h3>37号文登记的具体流程</h3></p><p>第一步：准备申请材料。包括实控人身份证、护照、境外公司注册证明、境外公司章程、股权架构图、资金来源说明（证明出境资金来源合法）等。</p><p>第二步：向实控人户籍所在地或主要业务所在地的外汇管理局提交申请。不同地区的外管局对材料要求可能略有差异，建议提前咨询当地外管局或委托专业机构代办。</p><p>第三步：外管局审核。审核周期通常为15至30个工作日，审核通过后颁发外汇登记证明。</p><p>第四步：每年年检。完成首次登记后，实控人需要每年向外管局提交年检材料，包括境外公司的最新财务状况、股权变化等。</p><p><h3>37号文登记的常见问题</h3></p><p>问题1：如果实控人已经在境外设立了公司但未做37号文登记怎么办？应该立即补办登记。未登记的情况可以申请补办，但需要说明原因并可能面临一定的行政处罚。尽早补办远比拖延强。</p><p>问题2：37号文登记是否影响外汇管控？37号文登记本身不等于外汇管控的豁免，只是对个人境外投资行为的备案。实际资金出境仍然需要通过合法的外汇渠道，并提供相应证明文件。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、ODI备案：企业的必做事项</h2><p><h3>什么是ODI备案</h3></p><p>ODI（Overseas Direct Investment，境外直接投资）备案是中国境内企业向境外进行股权投资时，向商务部门和发展改革委进行的备案审批程序。根据《境外投资管理办法》，境内企业的境外投资需要依法进行备案或审批。</p><p><h3>ODI备案的适用场景</h3></p><p>新加坡路径中，境内运营公司（或实控人控制的境内主体）向BVI、开曼、新加坡等境外公司进行股权投资或资本注入时，需要进行ODI备案。这是合规地把境内资金出境的必要程序。</p><p><h3>ODI备案的具体流程</h3></p><p>第一步：向当地商务部门（省级或市级商务局）提交ODI备案申请。材料包括：企业营业执照、法人身份证、拟投资境外公司的基本信息、投资金额和资金来源说明、可行性研究报告等。</p><p>第二步：同步向国家发展改革委（通过网上系统）进行境外投资项目备案。对于投资金额在3亿美元以下的项目，通常实行备案制（而非审批制），备案周期较短。</p><p>第三步：商务部门审核并出具《企业境外投资证书》。审核周期通常为15至25个工作日。</p><p>第四步：凭《企业境外投资证书》向银行办理外汇汇出手续，完成资金出境。</p><p><h3>ODI备案中常见的注意事项</h3></p><p>注意1：ODI备案的主体必须是合法的境内企业，个人不能直接做ODI备案（个人出境投资走37号文路径）。</p><p>注意2：备案材料中的投资目的和可行性分析必须真实，不能为了备案而编造投资逻辑。PCAOB审计和SEC问询会核查ODI备案材料的真实性。</p><p>注意3：ODI备案完成后，每年需要向商务部门报送境外投资年度报告，披露境外子公司的经营状况和财务数据。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、37号文和ODI的协同设计</h2><p>在实际操作中，37号文登记（个人层面）和ODI备案（企业层面）需要协同设计，确保两套合规体系相互支撑、不产生矛盾。</p><p>典型的协同方案：实控人个人先完成37号文登记，确认境外BVI公司的合法持有；境内运营公司完成ODI备案，获得向境外公司注资的合规通道；之后按照备案批准的金额，通过合法银行渠道将资金汇出境外，注入开曼或新加坡公司的账户。</p><p>这两个程序的先后顺序和操作细节，需要根据具体架构设计来决定。彤鼎团队在辅导项目时，会在架构设计阶段就同步规划37号文和ODI的合规路径，确保资金和股权的出境合规有序。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、其他相关的跨境合规事项</h2><p><h3>外汇资金池管理</h3></p><p>上市后，公司的境外美元资金和境内人民币资金之间的调配，需要通过合规的跨境资金池或内保外贷等机制实现。这是上市公司财务管理的重要组成部分，需要专业的跨境财务团队负责。</p><p><h3>VIE架构的特殊合规要求</h3></p><p>采用VIE架构的公司，境内运营实体与境外发行主体之间的协议控制关系，在境内法律层面处于相对模糊的状态。这类公司需要特别关注协议控制的法律风险，以及境内监管政策对VIE架构的最新态度。</p><p><h3>利润汇回境内的合规路径</h3></p><p>上市后，境外公司的利润如何合规地汇回境内（供实控人个人使用或用于境内业务扩张），需要通过股息分配、境外子公司向境内母公司提供服务收费等合规路径实现，不能绕过正常的税务申报和外汇申报程序。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、合规时间线建议</h2><p>根据彤鼎团队多年辅导经验，建议把跨境合规程序纳入以下时间线安排。</p><p>启动辅导的第1个月：同步开始37号文登记和ODI备案的材料准备。这两个程序都需要收集大量材料，早准备早主动。</p><p>第2个月：向外管局和商务部门正式提交申请。审核周期约1至2个月，整体应在第3至4个月完成。</p><p>第3至4个月：获得37号文外汇登记证明和ODI《企业境外投资证书》，完成资金出境，境外架构正式建立合规基础。</p><p>整个合规程序应与境外公司注册（BVI、开曼、新加坡）并行推进，确保在PCAOB审计师入场前，所有跨境合规手续均已完成。</p><p><h3>结语：合规出境是上市之路的地基</h3></p><p>对很多中国企业主来说，37号文和ODI是陌生的名词。但它们是整个新加坡路径上市架构能否站立起来的法律地基。地基不牢，上面建得再高也会倒塌。</p><p>合规地把资金和股权关系搬到境外，是赴美上市最基础也最容易被忽视的工作。提前规划、提前启动、找专业团队协助，是把这件事做好的唯一正确方式。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pre-ipo-share-price-fairness.html" style="color:#6b5426;font-weight:700;">备案前12个月新增股东：入股价格公允性如何说清楚</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="substance-test-2026.html" style="color:#6b5426;font-weight:700;">实质经营地审查：如何认定中国公司</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="bvi-cayman-spv.html" style="color:#6b5426;font-weight:700;">BVI与开曼SPV设立运用</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hainan-ftp.html" style="color:#6b5426;font-weight:700;">海南自贸港企业上市与税收优惠</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="vie-deep-dive.html" style="color:#6b5426;font-weight:700;">VIE架构深度解读</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

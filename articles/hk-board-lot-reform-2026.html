@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "港股每手买卖单位改革：八种标准股数与每手价值区间", "inLanguage": "zh-CN", "abstract": "A board lot is the minimum trading unit for a security on the Stock Exchange of Hong Kong. Under the simplified board lot framework introduced in 2026, lot sizes are standardised into eight designated options - 1, 50, 100, 500, 1,000, 2,000, 5,000 and 10,000 shares - while the board lot value guidance range is reset, with the lower end moved from HK$2,000 to HK$1,000 and a new HK$50,000 upper end for securities with lot sizes above 100 shares. The first stage took effect on 2 July 2026 and the next stage is aligned with the uncollateralised paperless securities market launching on 16 November 2026. This article explains the rules, the two commencement dates, the interlock between offer price, lot size and entry ticket, the post-listing review and remediation mechanism, and the trade-offs in designing an offering structure.", "description": "香港联交所2026年简化每手买卖单位框架：每手股数标准化为1股、50股、100股、500股、1,000股、2,000股、5,000股、10,000股八种选项，每手价值指引下限由2,000港元降至1,000港元，每手股数大于100股的证券新增50,000港元上限。本文拆解规则全貌、两个生效节点、定价与每手股数的三角关系、上市后的评估与整改机制，以及发行结构设计的取舍。", "author": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司"}, "publisher": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司", "url": "https://tdgroup.hk", "logo": {"@type": "ImageObject", "url": "https://tdgroup.hk/img/td-crest-gold.png"}}, "mainEntityOfPage": "https://tdgroup.hk/articles/hk-board-lot-reform-2026.html", "datePublished": "2026-07-24", "dateModified": "2026-07-24", "image": "https://tdgroup.hk/img/og-card.jpg"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,42 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">港股交易机制 BOARD LOT</div><h1>港股每手买卖单位改革：八种标准股数与每手价值区间</h1>
 <div class="sub">首阶段2026年7月2日生效——1,000至50,000港元的每手价值指引，正在改写新股的定价与分销设计</div><div class="en">A board lot is the minimum trading unit for a security on the Stock Exchange of Hong Kong. Under the simplified board lot framework introduced in 2026, lot sizes are standardised into eight designated options - 1, 50, 100, 500, 1,000, 2,000, 5,000 and 10,000 shares - while the board lot value guidance range is reset, with the lower end moved from HK$2,000 to HK$1,000 and a new HK$50,000 upper end for securities with lot sizes above 100 shares. The first stage took effect on 2 July 2026 and the next stage is aligned with the uncollateralised paperless securities market launching on 16 November 2026. This article explains the rules, the two commencement dates, the interlock between offer price, lot size and entry ticket, the post-listing review and remediation mechanism, and the trade-offs in designing an offering structure.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-24">2026年7月24日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">每手买卖单位（board lot，市场俗称"一手"）是指在香港联交所买卖某只证券时所适用的最小交易数量单位。2026年，联交所推出简化每手买卖单位的新框架：将市场上原本数十种各不相同的每手股数标准化为八种指定选项——1股、50股、100股、500股、1,000股、2,000股、5,000股与10,000股；同时把每手价值的指引下限由2,000港元下调至1,000港元，并为每手股数大于100股的证券新增50,000港元的每手价值指引上限。改革分阶段推进，首阶段自2026年7月2日起生效，其后一个阶段与2026年11月16日推出的无纸证券市场衔接。对拟上市企业而言，这不是一条交易层面的科普，而是发行结构设计的硬参数：定价区间、每手股数与散户的一手门槛三者互相锁定，组合选错会直接压缩零售端的覆盖面，并可能在上市之后触发降低每手价值的整改要求。具体口径以香港联交所正式规则与指引文本为准。</div>
-<h2>一、每手买卖单位：一个被长期低估的发行参数</h2>
-<p><strong>结论先说：每手买卖单位决定了普通投资者买入一只股票的最低金额，它既是交易机制，也是发行人自己选定的分销参数——过去被当作技术细节处理，如今被正式纳入标准化管理。</strong></p>
-<p>在香港市场，投资者买卖股票不是以"股"为最小单位，而是以"手"为最小单位。一只股票的每手股数由发行人在上市时确定，此后可通过更改每手买卖单位的公司行动调整。每手股数乘以股价，就是市场常说的"入场费"，也就是一名散户买入这只股票所需的最低金额。同一价格水平下，每手股数定得高，入场费就高，能参与的零售投资者数量随之减少；定得低，入场费下降，交易活跃度与股东人数通常受益，但过小的每手价值又会抬高单位交易的相对成本。</p>
-<p>问题在于，长期以来市场上流通的每手股数多达数十种，从个位数到数万股不等，缺乏统一标准。这带来三层成本：投资者需要为每只股票单独计算入场费，交易系统与数据服务要维护大量非标准配置，而部分股价大幅波动的证券，其每手价值会漂移到极不合理的区间——要么低到几百港元，要么高到十几万港元。<strong>本质上，标准化改革要解决的不是"一手该是多少股"，而是"一手值多少钱"这个更本质的问题。</strong></p>
-<h2>二、八种股数与两条价值边界：新框架的完整规则</h2>
-<p><strong>结论先说：新框架由两组规则构成——一组限定每手股数的可选值，另一组限定每手价值应落入的区间，前者是硬性选项，后者是指引性边界。</strong></p>
-<p>其一，每手股数被标准化为八种指定选项：1股、50股、100股、500股、1,000股、2,000股、5,000股、10,000股。发行人在设定或调整每手买卖单位时，只能在这八个数值中选择，不能再自行设定诸如300股、800股、2,500股这类非标准值。这一变化把此前数十种并存的配置压缩到一个有限集合，投资者只需记住八种可能性，交易系统的配置复杂度也随之下降。</p>
-<p>其二，每手价值的指引区间被重新划定。指引下限由2,000港元降至1,000港元，意味着发行人可以把入场费设得比过去更低，为中小额投资者留出参与空间。与此同时，针对每手股数大于100股的证券，新增了50,000港元的每手价值指引上限——这是过去没有的约束，直接指向那些因股价上涨而使入场费变得过高的证券。两条边界合起来，把每手价值圈定在一个大致1,000至50,000港元的合理带内。</p>
-<p>需要注意规则的性质差异：每手股数的八种选项是可选集合的硬约束，而每手价值是"指引"，联交所通过定期审核与通知机制促使发行人回到区间内，而非在越界当日自动触发处罚。华尔街彤鼎俱乐部在与企业主的闭门交流中反复提示：把指引当作没有约束力的建议是常见误读，因为它对应的是一套持续的审核与整改流程。<strong>关键在于，这套规则约束的是发行人的选择空间，而不只是投资者的操作体验。</strong></p>
-<h2>三、分阶段落地：两个时间节点如何衔接</h2>
-<p><strong>结论先说：改革不是一次性切换，而是分阶段推进——首阶段先适用于新上市证券，其后一个阶段与无纸证券市场的推出同步，让存量证券的调整搭上基础设施升级的班车。</strong></p>
-<p>首阶段自2026年7月2日起生效。这个阶段的重点是新增部分：新上市的证券在设定每手买卖单位时，即需遵循八种标准股数与新的价值指引区间。对正在筹备上市的企业来说，这意味着招股阶段的每手股数选择从这一天起就落入了新框架，不存在过渡期内自由发挥的空间。</p>
-<p>其后一个阶段与2026年11月16日推出的无纸证券市场衔接。无纸证券制度取消实物股票、把持股与转让全面电子化，本身就要求对证券的登记、转让与交易单位作系统性梳理；把每手买卖单位的存量调整放在同一时点推进，可以让发行人的一次操作同时完成两项适配，减少重复的公司行动成本。此外，联交所还计划优化碎股交易机制，并研究推出新的自动对盘交易机制，按公开信息最快在2027年第三季推出——这一项目前仍属计划阶段，企业不宜据此作确定性安排。</p>
-<p>对企业的排期含义是明确的：如果上市时点落在2026年下半年，那么每手买卖单位的设定要同时考虑首阶段规则与其后与无纸证券市场衔接的安排，避免上市后不久又因基础设施切换而重做一次公司行动。<strong>因此，时间表本身就是这轮改革的一个变量。</strong></p>
-<h2>四、拟上市企业的三角关系：定价、每手股数与入场费</h2>
-<p><strong>结论先说：招股价、每手股数与入场费构成一个封闭的三角，任意确定两项，第三项就被锁死；新框架把每手股数的可选值压缩到八个，等于把这个三角的自由度进一步收窄。</strong></p>
-<p>发行人在招股阶段通常先确定估值与发行规模，进而形成招股价区间。招股价一旦大致落定，每手股数的八种选项就分别对应八个入场费水平。举例而言，若招股价定在10港元附近，选择100股为一手对应约1,000港元的入场费，选择500股则对应约5,000港元，选择2,000股即接近20,000港元。企业必须在这几个跳跃式的档位之间做选择，而不能像过去那样通过设定300股或800股来做精细微调。</p>
-<p>这一约束在两类企业身上表现得最明显。一类是招股价较高的企业，例如定价在50港元以上，此时即便选择100股为一手，入场费也已达5,000港元量级；若选择500股，入场费会逼近甚至越过指引上限，实际上只剩下少数几个可行选项。另一类是招股价很低的企业，例如定价不足1港元，此时需要较大的每手股数才能把每手价值抬到1,000港元的指引下限之上，可选区间同样受限。</p>
-<p>由此产生的实务动作是：定价、股份拆细比例与每手股数三者必须放在一起统筹。企业在确定发行前股本结构时，就应当反推——按目标估值与目标发行比例，每股价格大致落在哪个区间，该区间下哪几个每手股数选项能把入场费放进合理位置，是否需要通过发行前的股份拆细或合并来把每股价格挪到更舒服的位置。<strong>本质上，每手股数不再是招股书末尾填空的一个字段，而是要在结构设计阶段一起算清的参数。</strong></p>
-<h2>五、上市之后：评估期、超限通知与整改窗口</h2>
-<p><strong>结论先说：每手价值上限不是只在上市当天检查一次，而是通过持续的评估机制运行——超出上限的发行人会收到通知，并需在规定窗口内把每手价值降回区间。</strong></p>
-<p>按公开信息，联交所将定期审核证券的每手价值：以六个月为一个评估期，对评估期结束时每日平均收盘每手价值超过50,000港元的发行人发出通知，要求其在相关评估期结束后的六个月内降低每手价值。换言之，一家公司如果股价持续上涨、把入场费推高到区间之外，就会进入"六个月评估、六个月整改"的节奏，需要通过更改每手买卖单位或股份拆细等公司行动把每手价值调回来。</p>
-<p>这一机制对成长型企业的含义值得留意。股价上涨本身是好事，但它会带来一项以前不存在的持续性合规动作：董事会需要跟踪自家证券的每手价值走势，在接近上限时提前评估是拆细股份还是调整每手股数，并预留召开会议、发布公告、与登记机构和结算系统协调的时间。这些动作都需要成本与时间，临到通知发出才开始准备，往往会压缩本就有限的整改窗口。</p>
-<p>反过来，每手价值持续偏低的证券同样需要关注。虽然指引下限降至1,000港元为小额参与打开了空间，但每手价值长期贴近甚至低于下限，通常意味着股价已大幅下跌，此时发行人面对的问题早已不止是交易单位——它更可能与市值维持、流动性与上市地位的其他持续要求同时出现。<strong>关键在于，每手价值是一个需要被纳入常态化监测的指标，而不是上市时定完就不再触碰的静态设置。</strong></p>
-<h2>六、发行结构设计：覆盖面与成本之间的取舍</h2>
-<p><strong>结论先说：把入场费定低还是定高，本质上是在零售覆盖面、股东人数结构与交易成本之间做取舍，没有普适的最优解，但有可以量化的判断依据。</strong></p>
-<p>倾向于把入场费定低的理由主要有三条。其一是扩大零售参与基数，入场费从5,000港元降到1,000港元量级，理论上可以让参与人数显著增加，对股东人数分布与公众持股的稳定性有帮助。其二是提升上市初期的交易活跃度，较低的一手门槛通常伴随更高的成交笔数。其三是与港股通、指数纳入等后续安排相关的股东结构考量，较分散的持股结构在若干情形下更为有利。</p>
-<p>倾向于把入场费定高的理由同样存在。较高的一手门槛会筛掉一部分短线交易者，股东结构中机构与中长期持有人的占比相对更高，股价的日内波动可能相对温和；同时，每手价值过低会使单笔交易的固定成本占比上升，对投资者并不友好，也会增加发行人在登记与结算环节的事务量。对于本身估值较高、目标投资者以机构为主的企业，刻意压低入场费未必带来实质收益。</p>
-<p>可操作的判断依据有三项：一是对标同业已上市公司的入场费分布，看自己处在什么位置；二是评估目标股东结构，明确零售与机构的目标比例；三是压力测试股价上下波动的情形——若股价上涨一倍，每手价值是否会逼近上限；若下跌一半，是否会跌破下限。把这三项算完，八个选项里通常只剩下一到两个是真正合适的。<strong>因此，选项变少并不等于选择变简单，反而要求前期测算更细。</strong></p>
-<h2>七、企业该做的准备：从递表阶段就要算的一笔账</h2>
-<p><strong>结论先说：每手买卖单位的安排应当在递表阶段就纳入工作清单，而不是留到定价日前临时决定，因为它牵动股本结构、招股文件披露与上市后的持续义务三条线。</strong></p>
-<p>可落地的准备动作有四项。其一，在发行前股本重组时同步测算每股价格区间。企业在确定注册资本、股份拆细比例与发行前后股本时，就应把目标每股价格纳入考量，让它落在一个能与八种每手股数灵活匹配的区间，而不是等定价时才发现所有选项都不理想。其二，把每手股数与入场费的选择写入与保荐人、承销团队的工作计划，明确由谁在什么时点、依据什么数据作出建议，避免这项决定被默认沿用同业惯例。</p>
-<p>其三，在招股文件中把相关信息披露清楚，包括每手股数、按招股价区间计算的入场费，以及若适用的股份拆细安排；披露口径需要与交易所的规则表述一致，避免出现与新框架不符的旧表述残留。其四，建立上市后的监测机制：把每手价值纳入董事会与投资者关系团队的定期跟踪指标，设定一个内部预警线（例如每手价值达到指引上限的七成时启动评估），并预先梳理更改每手买卖单位所需的决策与公告流程，使得真到需要调整时，动作可以在窗口内完成。</p>
-<p>更宏观地看，这轮改革传递的信号是香港市场在交易机制层面持续做减法：把非标准化的历史遗留配置收敛为有限选项，把价格与数量的关系约束在合理区间，从而降低整个市场的摩擦成本。对企业而言，这类基础设施层面的变化通常不会出现在上市筹备的优先议题清单上，但它恰恰是那种"平时不显眼、临到定价日却没有回旋余地"的事项。华尔街彤鼎俱乐部亦会围绕上市规则更新、发行结构设计与上市后持续义务等主题，为有资本化规划的企业主提供系统的资本认知与资源对接。<strong>关键在于，把每手买卖单位从技术细节升级为结构参数，是这轮改革之后企业必须完成的认知调整。</strong></p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>每手买卖单位（board lot，市场俗称"一手"）是指在香港联交所买卖某只证券时所适用的最小交易数量单位。2026年，联交所推出简化每手买卖单位的新框架：将市场上原本数十种各不相同的每手股数标准化为八种指定选项——1股、50股、100股、500股、1,000股、2,000股、5,000股与10,000股；同时把每手价值的指引下限由2,000港元下调至1,000港元，并为每手股数大于100股的证券新增50,000港元的每手价值指引上限。</p><p>改革分阶段推进，首阶段自2026年7月2日起生效，其后一个阶段与2026年11月16日推出的无纸证券市场衔接。对拟上市企业而言，这不是一条交易层面的科普，而是发行结构设计的硬参数：定价区间、每手股数与散户的一手门槛三者互相锁定，组合选错会直接压缩零售端的覆盖面，并可能在上市之后触发降低每手价值的整改要求。具体口径以香港联交所正式规则与指引文本为准。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">每手买卖单位：一个被长期低估的发行参数</a></li><li><a href="#sec-02">八种股数与两条价值边界：新框架的完整规则</a></li><li><a href="#sec-03">分阶段落地：两个时间节点如何衔接</a></li><li><a href="#sec-04">拟上市企业的三角关系：定价、每手股数与入场费</a></li><li><a href="#sec-05">上市之后：评估期、超限通知与整改窗口</a></li><li><a href="#sec-06">发行结构设计：覆盖面与成本之间的取舍</a></li><li><a href="#sec-07">企业该做的准备：从递表阶段就要算的一笔账</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、每手买卖单位：一个被长期低估的发行参数</h2><p><strong>结论先说：每手买卖单位决定了普通投资者买入一只股票的最低金额，它既是交易机制，也是发行人自己选定的分销参数——过去被当作技术细节处理，如今被正式纳入标准化管理。</strong></p><p>在香港市场，投资者买卖股票不是以"股"为最小单位，而是以"手"为最小单位。一只股票的每手股数由发行人在上市时确定，此后可通过更改每手买卖单位的公司行动调整。每手股数乘以股价，就是市场常说的"入场费"，也就是一名散户买入这只股票所需的最低金额。</p><p data-ts="1">同一价格水平下，每手股数定得高，入场费就高，能参与的零售投资者数量随之减少；定得低，入场费下降，交易活跃度与股东人数通常受益，但过小的每手价值又会抬高单位交易的相对成本。</p><p>问题在于，长期以来市场上流通的每手股数多达数十种，从个位数到数万股不等，缺乏统一标准。这带来三层成本：投资者需要为每只股票单独计算入场费，交易系统与数据服务要维护大量非标准配置，而部分股价大幅波动的证券，其每手价值会漂移到极不合理的区间——要么低到几百港元，要么高到十几万港元。</p><p data-ts="1"><strong>本质上，标准化改革要解决的不是"一手该是多少股"，而是"一手值多少钱"这个更本质的问题。</strong></p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、八种股数与两条价值边界：新框架的完整规则</h2><p><strong>结论先说：新框架由两组规则构成——一组限定每手股数的可选值，另一组限定每手价值应落入的区间，前者是硬性选项，后者是指引性边界。</strong></p><p>其一，每手股数被标准化为八种指定选项：1股、50股、100股、500股、1,000股、2,000股、5,000股、10,000股。发行人在设定或调整每手买卖单位时，只能在这八个数值中选择，不能再自行设定诸如300股、800股、2,500股这类非标准值。</p><p data-ts="1">这一变化把此前数十种并存的配置压缩到一个有限集合，投资者只需记住八种可能性，交易系统的配置复杂度也随之下降。</p><p>其二，每手价值的指引区间被重新划定。指引下限由2,000港元降至1,000港元，意味着发行人可以把入场费设得比过去更低，为中小额投资者留出参与空间。与此同时，针对每手股数大于100股的证券，新增了50,000港元的每手价值指引上限——这是过去没有的约束，直接指向那些因股价上涨而使入场费变得过高的证券。</p><p data-ts="1">两条边界合起来，把每手价值圈定在一个大致1,000至50,000港元的合理带内。</p><p>需要注意规则的性质差异：每手股数的八种选项是可选集合的硬约束，而每手价值是"指引"，联交所通过定期审核与通知机制促使发行人回到区间内，而非在越界当日自动触发处罚。华尔街彤鼎俱乐部在与企业主的闭门交流中反复提示：把指引当作没有约束力的建议是常见误读，因为它对应的是一套持续的审核与整改流程。<strong>关键在于，这套规则约束的是发行人的选择空间，而不只是投资者的操作体验。</strong></p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、分阶段落地：两个时间节点如何衔接</h2><p><strong>结论先说：改革不是一次性切换，而是分阶段推进——首阶段先适用于新上市证券，其后一个阶段与无纸证券市场的推出同步，让存量证券的调整搭上基础设施升级的班车。</strong></p><p>首阶段自2026年7月2日起生效。这个阶段的重点是新增部分：新上市的证券在设定每手买卖单位时，即需遵循八种标准股数与新的价值指引区间。对正在筹备上市的企业来说，这意味着招股阶段的每手股数选择从这一天起就落入了新框架，不存在过渡期内自由发挥的空间。</p><p>其后一个阶段与2026年11月16日推出的无纸证券市场衔接。无纸证券制度取消实物股票、把持股与转让全面电子化，本身就要求对证券的登记、转让与交易单位作系统性梳理；把每手买卖单位的存量调整放在同一时点推进，可以让发行人的一次操作同时完成两项适配，减少重复的公司行动成本。</p><p data-ts="1">此外，联交所还计划优化碎股交易机制，并研究推出新的自动对盘交易机制，按公开信息最快在2027年第三季推出——这一项目前仍属计划阶段，企业不宜据此作确定性安排。</p><p>对企业的排期含义是明确的：如果上市时点落在2026年下半年，那么每手买卖单位的设定要同时考虑首阶段规则与其后与无纸证券市场衔接的安排，避免上市后不久又因基础设施切换而重做一次公司行动。<strong>因此，时间表本身就是这轮改革的一个变量。</strong></p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、拟上市企业的三角关系：定价、每手股数与入场费</h2><p><strong>结论先说：招股价、每手股数与入场费构成一个封闭的三角，任意确定两项，第三项就被锁死；新框架把每手股数的可选值压缩到八个，等于把这个三角的自由度进一步收窄。</strong></p><p>发行人在招股阶段通常先确定估值与发行规模，进而形成招股价区间。招股价一旦大致落定，每手股数的八种选项就分别对应八个入场费水平。举例而言，若招股价定在10港元附近，选择100股为一手对应约1,000港元的入场费，选择500股则对应约5,000港元，选择2,000股即接近20,000港元。</p><p data-ts="1">企业必须在这几个跳跃式的档位之间做选择，而不能像过去那样通过设定300股或800股来做精细微调。</p><p>这一约束在两类企业身上表现得最明显。一类是招股价较高的企业，例如定价在50港元以上，此时即便选择100股为一手，入场费也已达5,000港元量级；若选择500股，入场费会逼近甚至越过指引上限，实际上只剩下少数几个可行选项。</p><p data-ts="1">另一类是招股价很低的企业，例如定价不足1港元，此时需要较大的每手股数才能把每手价值抬到1,000港元的指引下限之上，可选区间同样受限。</p><p>由此产生的实务动作是：定价、股份拆细比例与每手股数三者必须放在一起统筹。企业在确定发行前股本结构时，就应当反推——按目标估值与目标发行比例，每股价格大致落在哪个区间，该区间下哪几个每手股数选项能把入场费放进合理位置，是否需要通过发行前的股份拆细或合并来把每股价格挪到更舒服的位置。</p><p data-ts="1"><strong>本质上，每手股数不再是招股书末尾填空的一个字段，而是要在结构设计阶段一起算清的参数。</strong></p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、上市之后：评估期、超限通知与整改窗口</h2><p><strong>结论先说：每手价值上限不是只在上市当天检查一次，而是通过持续的评估机制运行——超出上限的发行人会收到通知，并需在规定窗口内把每手价值降回区间。</strong></p><p>按公开信息，联交所将定期审核证券的每手价值：以六个月为一个评估期，对评估期结束时每日平均收盘每手价值超过50,000港元的发行人发出通知，要求其在相关评估期结束后的六个月内降低每手价值。</p><p data-ts="1">换言之，一家公司如果股价持续上涨、把入场费推高到区间之外，就会进入"六个月评估、六个月整改"的节奏，需要通过更改每手买卖单位或股份拆细等公司行动把每手价值调回来。</p><p>这一机制对成长型企业的含义值得留意。股价上涨本身是好事，但它会带来一项以前不存在的持续性合规动作：董事会需要跟踪自家证券的每手价值走势，在接近上限时提前评估是拆细股份还是调整每手股数，并预留召开会议、发布公告、与登记机构和结算系统协调的时间。</p><p data-ts="1">这些动作都需要成本与时间，临到通知发出才开始准备，往往会压缩本就有限的整改窗口。</p><p>反过来，每手价值持续偏低的证券同样需要关注。虽然指引下限降至1,000港元为小额参与打开了空间，但每手价值长期贴近甚至低于下限，通常意味着股价已大幅下跌，此时发行人面对的问题早已不止是交易单位——它更可能与市值维持、流动性与上市地位的其他持续要求同时出现。</p><p data-ts="1"><strong>关键在于，每手价值是一个需要被纳入常态化监测的指标，而不是上市时定完就不再触碰的静态设置。</strong></p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、发行结构设计：覆盖面与成本之间的取舍</h2><p><strong>结论先说：把入场费定低还是定高，本质上是在零售覆盖面、股东人数结构与交易成本之间做取舍，没有普适的最优解，但有可以量化的判断依据。</strong></p><p>倾向于把入场费定低的理由主要有三条。</p><ol class="ts-pts"><li><b>其一是扩大零售参与基数，入场费从5</b>,000港元降到1,000港元量级，理论上可以让参与人数显著增加，对股东人数分布与公众持股的稳定性有帮助。</li><li><b>其二是提升上市初期的交易活跃度</b>，较低的一手门槛通常伴随更高的成交笔数。</li><li><b>其三</b>是与港股通、指数纳入等后续安排相关的股东结构考量，较分散的持股结构在若干情形下更为有利。</li></ol><p>倾向于把入场费定高的理由同样存在。较高的一手门槛会筛掉一部分短线交易者，股东结构中机构与中长期持有人的占比相对更高，股价的日内波动可能相对温和；同时，每手价值过低会使单笔交易的固定成本占比上升，对投资者并不友好，也会增加发行人在登记与结算环节的事务量。对于本身估值较高、目标投资者以机构为主的企业，刻意压低入场费未必带来实质收益。</p><p>可操作的判断依据有三项：一是对标同业已上市公司的入场费分布，看自己处在什么位置；二是评估目标股东结构，明确零售与机构的目标比例；三是压力测试股价上下波动的情形——若股价上涨一倍，每手价值是否会逼近上限；若下跌一半，是否会跌破下限。</p><p data-ts="1">把这三项算完，八个选项里通常只剩下一到两个是真正合适的。<strong>因此，选项变少并不等于选择变简单，反而要求前期测算更细。</strong></p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、企业该做的准备：从递表阶段就要算的一笔账</h2><p><strong>结论先说：每手买卖单位的安排应当在递表阶段就纳入工作清单，而不是留到定价日前临时决定，因为它牵动股本结构、招股文件披露与上市后的持续义务三条线。</strong></p><p>可落地的准备动作有四项。其一，在发行前股本重组时同步测算每股价格区间。企业在确定注册资本、股份拆细比例与发行前后股本时，就应把目标每股价格纳入考量，让它落在一个能与八种每手股数灵活匹配的区间，而不是等定价时才发现所有选项都不理想。</p><p data-ts="1">其二，把每手股数与入场费的选择写入与保荐人、承销团队的工作计划，明确由谁在什么时点、依据什么数据作出建议，避免这项决定被默认沿用同业惯例。</p><p>其三，在招股文件中把相关信息披露清楚，包括每手股数、按招股价区间计算的入场费，以及若适用的股份拆细安排；披露口径需要与交易所的规则表述一致，避免出现与新框架不符的旧表述残留。其四，建立上市后的监测机制：把每手价值纳入董事会与投资者关系团队的定期跟踪指标，设定一个内部预警线（例如每手价值达到指引上限的七成时启动评估），并预先梳理更改每手买卖单位所需的决策与公告流程，使得真到需要调整时，动作可以在窗口内完成。</p><p>更宏观地看，这轮改革传递的信号是香港市场在交易机制层面持续做减法：把非标准化的历史遗留配置收敛为有限选项，把价格与数量的关系约束在合理区间，从而降低整个市场的摩擦成本。对企业而言，这类基础设施层面的变化通常不会出现在上市筹备的优先议题清单上，但它恰恰是那种"平时不显眼、临到定价日却没有回旋余地"的事项。</p><p data-ts="1">华尔街彤鼎俱乐部亦会围绕上市规则更新、发行结构设计与上市后持续义务等主题，为有资本化规划的企业主提供系统的资本认知与资源对接。<strong>关键在于，把每手买卖单位从技术细节升级为结构参数，是这轮改革之后企业必须完成的认知调整。</strong></p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-ipo-pricing.html" style="color:#6b5426;font-weight:700;">港股IPO定价与簿记建档</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-usm-paperless-2026.html" style="color:#6b5426;font-weight:700;">香港无纸证券市场USM：2026年11月落地</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-refiling-lapsed.html" style="color:#6b5426;font-weight:700;">港股递表失效与二次递表：六个月窗口的审核逻辑</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ipo-pricing.html" style="color:#6b5426;font-weight:700;">IPO定价机制</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="listing-window.html" style="color:#6b5426;font-weight:700;">上市时机与市场窗口</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

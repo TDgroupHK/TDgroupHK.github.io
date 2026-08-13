@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"VIE架构深度解读","inLanguage":"zh-CN","abstract":"How contractual control works in a VIE, where its enforceability risk sits, and which sectors still require it.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/vie-deep-dive.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"可变利益实体：中概股最重要的跨境控制工具。VIE架构深度解读完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,61 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">跨境架构 STRUCTURING</div><h1>VIE架构深度解读</h1>
 <div class="sub">可变利益实体：中概股最重要的跨境控制工具</div><div class="en">How contractual control works in a VIE, where its enforceability risk sits, and which sectors still require it.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">VIE架构（可变利益实体，Variable Interest Entity）是中国企业在外资准入受限行业（互联网、教育、媒体、电信等）赴美上市时使用的标准跨境控制结构。它不是通过股权关系持有境内公司，而是通过一系列合同协议来控制境内运营公司的经营决策和财务收益，从而绕过外资股权持有的限制。VIE架构的核心风险是：境内协议控制关系在中国法律层面缺乏明确保护，一旦相关方反悔或监管政策收紧，境外投资人可能失去对境内资产的实质控制。2021年起中国监管层对VIE架构的态度明显趋严，部分行业的VIE可行性已大幅降低。这也是彤鼎团队在过去两年大力推广新加坡路径（无需VIE）的核心原因之一。</div>
-<h2>一、VIE架构的起源与历史</h2>
-<p>VIE架构最早由新浪在2000年赴美上市时创造性地使用，此后迅速成为互联网、教育、媒体等外资准入受限行业的中国企业赴境外上市的标准结构。</p>
-<p>历史背景：中国对互联网、电信、教育、媒体等行业有明确的外资股权限制（通常外资持股不得超过50%甚至0%）。这些限制让外资直接持股境内运营公司成为不可能。VIE架构的发明解决了这一难题：外资不直接持股，但通过合同控制经营和财务。</p>
-<p>过去20年，绝大多数中概股互联网公司都采用了VIE架构，包括阿里巴巴、京东、百度、网易、携程等头部企业。VIE已经成为中国科技公司赴美上市的代名词。</p>
-<h2>二、VIE架构的完整结构</h2>
-<p>标准VIE架构从上到下分为五层，每一层都有清晰的法律功能。</p>
-<h3>第一层：境外发行主体（开曼公司）</h3>
-<p>上市公司实体，向公众投资人发行股票。开曼公司是境外投资人实际持有股权的主体。所有的上市融资、股东分红、股票激励都在这一层执行。</p>
-<h3>第二层：香港中间控股公司</h3>
-<p>开曼公司持有的香港子公司，主要功能是充当资金通道（利用香港与中国大陆的税务协定进行跨境分红）和法律隔离层。</p>
-<h3>第三层：境内全资外商独资企业（WFOE）</h3>
-<p>由香港公司全资持有的境内外商独资企业，是整个VIE架构的核心执行层。WFOE与境内运营公司签署一系列协议，通过合同关系控制运营公司的经营和财务。WFOE本身可以合法在中国经营，但不能在受限行业持有股权。</p>
-<h3>第四层：协议控制关系（VIE协议包）</h3>
-<p>这是VIE架构最核心、也最独特的部分——WFOE与境内运营公司之间签署的一系列合同协议，包括：独家服务协议（WFOE向运营公司提供独家技术和咨询服务，收取绝大部分利润）、股权质押协议（运营公司股东将其持有的股权质押给WFOE）、独家购买权协议（WFOE在法律允许时有权以名义价格购买运营公司股权）、投票权委托协议（运营公司股东将其投票权委托给WFOE指定人员行使）。</p>
-<p>通过这四类协议，WFOE（进而境外投资人）实现了对境内运营公司经营决策的实质控制和财务收益的全额转移，而无需持有任何股权。</p>
-<h3>第五层：境内运营公司（VIE实体）</h3>
-<p>实际持有互联网许可证、运营用户数据、承载核心业务的境内公司。这家公司的股东是中国公民（通常是创始人），法律上完全是中国内资公司，规避了外资准入限制。</p>
-<h2>三、VIE协议包的运作机制</h2>
-<p>理解VIE架构的关键，是理解这四类协议如何配合运作。</p>
-<h3>利润转移：独家服务协议</h3>
-<p>WFOE向运营公司提供独家的技术支持、管理咨询、知识产权许可等服务，运营公司为此支付服务费。服务费的金额通常设定为运营公司利润的绝大部分（如90%至100%），从而实现利润从境内运营公司到WFOE的合法转移，最终流向境外开曼公司和股东。</p>
-<h3>控制权保障：投票权委托与股权质押</h3>
-<p>运营公司的股东（中国公民）将其持有的全部股权质押给WFOE（提供违约时的强制执行保障），同时将其投票权全部委托给WFOE指定人员行使（确保运营公司的董事会和股东会决策始终符合境外公司的意志）。</p>
-<h3>未来退出保障：独家购买权</h3>
-<p>如果未来中国法律允许外资持有相关行业股权，WFOE有权以象征性价格（如人民币1元）购买运营公司全部股权，将VIE架构转换为正常的股权控制架构，彻底消除法律风险。</p>
-<h2>四、VIE架构的核心风险</h2>
-<h3>风险1：协议控制在中国法律层面缺乏明确保护</h3>
-<p>VIE架构的合法性在中国一直处于灰色地带。中国法院是否会认可并强制执行VIE协议，历史上存在很大不确定性。如果运营公司股东（通常是创始人或其家属）反悔，拒绝执行VIE协议，境外投资人很难通过中国法律途径维权。</p>
-<h3>风险2：监管政策突变风险</h3>
-<p>2021年下半年，中国监管层对滴滴、K12教育等行业的整顿，让市场对VIE架构的稳定性产生了严重担忧。部分行业的VIE架构在政策收紧后实际上已经失去了存在基础。未来监管政策的进一步收紧，可能让更多行业的VIE架构面临合法性挑战。</p>
-<h3>风险3：税务处理的不确定性</h3>
-<p>WFOE通过服务费收取运营公司利润时，需要缴纳增值税；运营公司支付给WFOE的服务费会影响其应纳税所得额。如果税务机关认定服务费定价不合理（不符合臂长原则），可能引发税务稽查和补税风险。</p>
-<h3>风险4：PCAOB审计的额外复杂性</h3>
-<p>VIE架构下，境外审计师需要审计包含VIE实体财务数据的合并报表，但对境内公司的实地审计历史上受到限制。这是2021至2023年中美审计监管摩擦的核心争议点之一，也是部分中概股面临退市压力的直接原因。</p>
-<h2>五、新加坡路径与VIE路径的比较</h2>
-<p>这是很多企业在上市路径选择时最关键的决策之一。</p>
-<h3>什么情况下必须用VIE</h3>
-<p>业务涉及互联网增值服务许可证（ICP）、互联网新闻信息许可证、网络视听许可证、K12教育（2021年后实际上已无法上市）等外资准入严格限制行业，且业务无法剥离到境外主体——这种情况下VIE是唯一可行的架构。</p>
-<h3>什么情况下可以用新加坡路径</h3>
-<p>业务不涉及外资准入严格限制（或可以通过新加坡公司承接业务）、主要收入来自跨境服务或可在新加坡层面确认收入——这种情况下新加坡路径是更优选择，无需承担VIE的法律和监管风险。</p>
-<p>彤鼎团队在过去两年辅导的所有新增项目中，已经将新加坡路径作为首选方案推荐，仅在业务确实无法脱离VIE架构的情况下才考虑传统VIE路径。</p>
-<h2>六、VIE架构的合规维护要点</h2>
-<p>已经采用VIE架构的上市公司，需要在日常运营中持续维护VIE协议的有效性。</p>
-<p>定期更新VIE协议：确保所有协议条款与公司实际业务情况保持一致，及时反映业务变化和股权变动。</p>
-<p>运营公司股东的配合管理：与运营公司股东（通常是创始人或其家属）保持良好关系，确保其持续配合执行VIE协议义务。任何股东变动都必须同步更新VIE协议。</p>
-<p>持续监控监管政策：密切跟踪中国监管层对VIE架构相关行业的政策动向，在政策变化早期就做出架构调整准备，不要等到政策正式出台才开始应对。</p>
-<p>在年报中完整披露VIE风险：SEC要求上市公司在年报的风险因素部分完整披露VIE架构的所有已知风险。不充分的风险披露是做空机构攻击的常见切入点。</p>
-<h3>结语：VIE是历史产物，新路径正在崛起</h3>
-<p>VIE架构是中国互联网行业特定历史时期的产物，解决了过去20年中国科技企业无法通过股权途径赴境外上市的结构性难题。</p>
-<p>但随着中国监管环境的变化和新加坡路径等新选项的成熟，VIE不再是赴美上市的唯一解。对大多数新兴成长型企业而言，在架构设计阶段就把新加坡路径作为首选，可以从根本上规避VIE的法律和监管风险，是更具前瞻性的选择。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>VIE架构（可变利益实体，Variable Interest Entity）是中国企业在外资准入受限行业（互联网、教育、媒体、电信等）赴美上市时使用的标准跨境控制结构。它不是通过股权关系持有境内公司，而是通过一系列合同协议来控制境内运营公司的经营决策和财务收益，从而绕过外资股权持有的限制。</p><p>VIE架构的核心风险是：境内协议控制关系在中国法律层面缺乏明确保护，一旦相关方反悔或监管政策收紧，境外投资人可能失去对境内资产的实质控制。2021年起中国监管层对VIE架构的态度明显趋严，部分行业的VIE可行性已大幅降低。这也是彤鼎团队在过去两年大力推广新加坡路径（无需VIE）的核心原因之一。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">VIE架构的起源与历史</a></li><li><a href="#sec-02">VIE架构的完整结构</a></li><li><a href="#sec-03">VIE协议包的运作机制</a></li><li><a href="#sec-04">VIE架构的核心风险</a></li><li><a href="#sec-05">新加坡路径与VIE路径的比较</a></li><li><a href="#sec-06">VIE架构的合规维护要点</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、VIE架构的起源与历史</h2><p>VIE架构最早由新浪在2000年赴美上市时创造性地使用，此后迅速成为互联网、教育、媒体等外资准入受限行业的中国企业赴境外上市的标准结构。</p><p>历史背景：中国对互联网、电信、教育、媒体等行业有明确的外资股权限制（通常外资持股不得超过50%甚至0%）。这些限制让外资直接持股境内运营公司成为不可能。VIE架构的发明解决了这一难题：外资不直接持股，但通过合同控制经营和财务。</p><p>过去20年，绝大多数中概股互联网公司都采用了VIE架构，包括阿里巴巴、京东、百度、网易、携程等头部企业。VIE已经成为中国科技公司赴美上市的代名词。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、VIE架构的完整结构</h2><p>标准VIE架构从上到下分为五层，每一层都有清晰的法律功能。</p><p><h3>第一层：境外发行主体（开曼公司）</h3></p><p>上市公司实体，向公众投资人发行股票。开曼公司是境外投资人实际持有股权的主体。所有的上市融资、股东分红、股票激励都在这一层执行。</p><p><h3>第二层：香港中间控股公司</h3></p><p>开曼公司持有的香港子公司，主要功能是充当资金通道（利用香港与中国大陆的税务协定进行跨境分红）和法律隔离层。</p><p><h3>第三层：境内全资外商独资企业（WFOE）</h3></p><p>由香港公司全资持有的境内外商独资企业，是整个VIE架构的核心执行层。WFOE与境内运营公司签署一系列协议，通过合同关系控制运营公司的经营和财务。WFOE本身可以合法在中国经营，但不能在受限行业持有股权。</p><p><h3>第四层：协议控制关系（VIE协议包）</h3></p><p>这是VIE架构最核心、也最独特的部分——WFOE与境内运营公司之间签署的一系列合同协议，包括：独家服务协议（WFOE向运营公司提供独家技术和咨询服务，收取绝大部分利润）、股权质押协议（运营公司股东将其持有的股权质押给WFOE）、独家购买权协议（WFOE在法律允许时有权以名义价格购买运营公司股权）、投票权委托协议（运营公司股东将其投票权委托给WFOE指定人员行使）。</p><p>通过这四类协议，WFOE（进而境外投资人）实现了对境内运营公司经营决策的实质控制和财务收益的全额转移，而无需持有任何股权。</p><p><h3>第五层：境内运营公司（VIE实体）</h3></p><p>实际持有互联网许可证、运营用户数据、承载核心业务的境内公司。这家公司的股东是中国公民（通常是创始人），法律上完全是中国内资公司，规避了外资准入限制。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、VIE协议包的运作机制</h2><p>理解VIE架构的关键，是理解这四类协议如何配合运作。</p><p><h3>利润转移：独家服务协议</h3></p><p>WFOE向运营公司提供独家的技术支持、管理咨询、知识产权许可等服务，运营公司为此支付服务费。服务费的金额通常设定为运营公司利润的绝大部分（如90%至100%），从而实现利润从境内运营公司到WFOE的合法转移，最终流向境外开曼公司和股东。</p><p><h3>控制权保障：投票权委托与股权质押</h3></p><p>运营公司的股东（中国公民）将其持有的全部股权质押给WFOE（提供违约时的强制执行保障），同时将其投票权全部委托给WFOE指定人员行使（确保运营公司的董事会和股东会决策始终符合境外公司的意志）。</p><p><h3>未来退出保障：独家购买权</h3></p><p>如果未来中国法律允许外资持有相关行业股权，WFOE有权以象征性价格（如人民币1元）购买运营公司全部股权，将VIE架构转换为正常的股权控制架构，彻底消除法律风险。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、VIE架构的核心风险</h2><p><h3>风险1：协议控制在中国法律层面缺乏明确保护</h3></p><p>VIE架构的合法性在中国一直处于灰色地带。中国法院是否会认可并强制执行VIE协议，历史上存在很大不确定性。如果运营公司股东（通常是创始人或其家属）反悔，拒绝执行VIE协议，境外投资人很难通过中国法律途径维权。</p><p><h3>风险2：监管政策突变风险</h3></p><p>2021年下半年，中国监管层对滴滴、K12教育等行业的整顿，让市场对VIE架构的稳定性产生了严重担忧。部分行业的VIE架构在政策收紧后实际上已经失去了存在基础。未来监管政策的进一步收紧，可能让更多行业的VIE架构面临合法性挑战。</p><p><h3>风险3：税务处理的不确定性</h3></p><p>WFOE通过服务费收取运营公司利润时，需要缴纳增值税；运营公司支付给WFOE的服务费会影响其应纳税所得额。如果税务机关认定服务费定价不合理（不符合臂长原则），可能引发税务稽查和补税风险。</p><p><h3>风险4：PCAOB审计的额外复杂性</h3></p><p>VIE架构下，境外审计师需要审计包含VIE实体财务数据的合并报表，但对境内公司的实地审计历史上受到限制。这是2021至2023年中美审计监管摩擦的核心争议点之一，也是部分中概股面临退市压力的直接原因。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、新加坡路径与VIE路径的比较</h2><p>这是很多企业在上市路径选择时最关键的决策之一。</p><p><h3>什么情况下必须用VIE</h3></p><p>业务涉及互联网增值服务许可证（ICP）、互联网新闻信息许可证、网络视听许可证、K12教育（2021年后实际上已无法上市）等外资准入严格限制行业，且业务无法剥离到境外主体——这种情况下VIE是唯一可行的架构。</p><p><h3>什么情况下可以用新加坡路径</h3></p><p>业务不涉及外资准入严格限制（或可以通过新加坡公司承接业务）、主要收入来自跨境服务或可在新加坡层面确认收入——这种情况下新加坡路径是更优选择，无需承担VIE的法律和监管风险。</p><p>彤鼎团队在过去两年辅导的所有新增项目中，已经将新加坡路径作为首选方案推荐，仅在业务确实无法脱离VIE架构的情况下才考虑传统VIE路径。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、VIE架构的合规维护要点</h2><p>已经采用VIE架构的上市公司，需要在日常运营中持续维护VIE协议的有效性。</p><p>定期更新VIE协议：确保所有协议条款与公司实际业务情况保持一致，及时反映业务变化和股权变动。</p><p>运营公司股东的配合管理：与运营公司股东（通常是创始人或其家属）保持良好关系，确保其持续配合执行VIE协议义务。任何股东变动都必须同步更新VIE协议。</p><p>持续监控监管政策：密切跟踪中国监管层对VIE架构相关行业的政策动向，在政策变化早期就做出架构调整准备，不要等到政策正式出台才开始应对。</p><p>在年报中完整披露VIE风险：SEC要求上市公司在年报的风险因素部分完整披露VIE架构的所有已知风险。不充分的风险披露是做空机构攻击的常见切入点。</p><p><h3>结语：VIE是历史产物，新路径正在崛起</h3></p><p>VIE架构是中国互联网行业特定历史时期的产物，解决了过去20年中国科技企业无法通过股权途径赴境外上市的结构性难题。</p><p>但随着中国监管环境的变化和新加坡路径等新选项的成熟，VIE不再是赴美上市的唯一解。对大多数新兴成长型企业而言，在架构设计阶段就把新加坡路径作为首选，可以从根本上规避VIE的法律和监管风险，是更具前瞻性的选择。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="transfer-pricing.html" style="color:#6b5426;font-weight:700;">跨境转让定价与税务合规</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="equity-evolution.html" style="color:#6b5426;font-weight:700;">股权架构演进路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="circular-37.html" style="color:#6b5426;font-weight:700;">37号文登记指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="substance-test-2026.html" style="color:#6b5426;font-weight:700;">实质经营地审查：如何认定中国公司</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nominee-shareholding.html" style="color:#6b5426;font-weight:700;">股权代持与还原</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"上市公司季报合规指南","inLanguage":"zh-CN","abstract":"Periodic reporting obligations after listing, the 6-K regime for foreign private issuers, and the internal calendar that keeps them on time.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/quarterly-compliance.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"外国私人发行人（FPI）在SEC的季报披露义务与美国本土公司（使用10-Q表格）有所不同：FPI使用6-K表格报送季度业绩及其他重大信息，没有强制要求的固定格式，但必须提交本国监管机构或股票交易所要求其披露的所有信息。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,72 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">挂牌之后 POST-LISTING</div><h1>上市公司季报合规指南</h1>
 <div class="sub">每季度必做的SEC披露工作</div><div class="en">Periodic reporting obligations after listing, the 6-K regime for foreign private issuers, and the internal calendar that keeps them on time.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">外国私人发行人（FPI）在SEC的季报披露义务与美国本土公司（使用10-Q表格）有所不同：FPI使用6-K表格报送季度业绩及其他重大信息，没有强制要求的固定格式，但必须提交本国监管机构或股票交易所要求其披露的所有信息。实操中，绝大多数在纳斯达克挂牌的中概股会主动发布季度业绩新闻稿（Press Release）并通过6-K提交给SEC，以维持与机构投资人的信息透明度。季报合规的3个关键节点：业绩新闻稿发布、管理层业绩电话会议、6-K文件的SEC提交。这3件事的节奏和质量，直接决定公司在机构投资人心目中的专业形象。</div>
-<h2>一、FPI季报披露与美国本土公司的差异</h2>
-<p>理解FPI的季报披露义务，首先需要明确外国私人发行人的特殊待遇。</p>
-<h3>FPI资格的判断</h3>
-<p>外国私人发行人（Foreign Private Issuer，FPI）是指：超过50%的有投票权股份不由美国居民持有，且满足以下条件之一：大多数董事和高管不是美国公民或居民、超过50%的资产在美国境外、业务主要在美国境外开展。绝大多数中概股都符合FPI条件。</p>
-<h3>FPI的主要合规优势</h3>
-<p>FPI不需要按照美国GAAP准则编制财务报表（可使用IFRS或本国GAAP加调节表），不需要每季度提交格式严格的10-Q报告（使用6-K提交所需信息即可），年报提交截止日期延长至财年结束后4个月（非FPI只有60至90天），不需要遵守Regulation FD关于同步披露的某些要求。</p>
-<h3>FPI的主要合规劣势</h3>
-<p>FPI的少数原则虽然减轻了合规负担，但机构投资人对FPI的信息透明度预期与本土公司一样高。如果FPI选择不主动提供季度财务数据，机构投资人会认为公司信息不透明，影响持股意愿。这也是为什么实践中大多数中概股选择主动发布季报，而不是只做最低限度的合规。</p>
-<h2>二、季报披露的完整工作流程</h2>
-<h3>财季结束后第1至2周：内部数据汇总</h3>
-<p>财务团队完成本季度财务数据的初步汇总，包括：收入、毛利率、主要费用项、净利润或亏损、现金和等价物余额、关键运营指标（用户数、订单量、GMV等）。</p>
-<p>CFO与CEO对数据进行内部审查，确认数据准确性，并与预算目标和前季度数据进行对比分析，为业绩电话会议的Q&amp;A做准备。</p>
-<h3>财季结束后第2至3周：起草业绩新闻稿</h3>
-<p>业绩新闻稿（Earnings Press Release）是最重要的季报对外文件，通常3至5页，包括：</p>
-<p>头版摘要：本季度最重要的财务和运营数据，用粗体突出同比和环比变化。</p>
-<p>管理层引述：CEO和CFO各一段话，说明本季度业绩的核心驱动因素和对未来的展望。</p>
-<p>详细财务数据表格：收入分拆、毛利分析、运营费用明细、净利润、EBITDA、自由现金流等。</p>
-<p>业绩指引（Guidance）：如果公司选择提供下一季度或全年的业绩预期，在这里披露。</p>
-<p>注意：业绩新闻稿发布前不得泄露给任何外部人士，包括分析师和机构投资人，否则违反Reg FD。</p>
-<h3>财季结束后第3至4周：业绩发布日</h3>
-<p>选择发布时机：通常在美国股市收盘后（美东时间下午4点后）发布，让市场有充足时间消化信息，避免当日交易中的剧烈波动。</p>
-<p>同步提交6-K：业绩新闻稿发布的同时，通过SEC的EDGAR系统提交6-K，将新闻稿作为附件。</p>
-<p>业绩电话会议：通常在新闻稿发布后30至60分钟举行，管理层就本季度业绩进行系统介绍（通常10至15分钟），然后开放机构投资人和分析师提问（通常30至45分钟）。</p>
-<h2>三、业绩电话会议的标准格式</h2>
-<h3>开场介绍</h3>
-<p>IR负责人主持开场，介绍参会的管理层成员，宣读前瞻性陈述的Safe Harbor声明（提醒听众本次电话中的前瞻性陈述受各种风险和不确定性影响，实际结果可能与预期有重大差异），说明提问规则。</p>
-<h3>管理层演讲（约10至15分钟）</h3>
-<p>CEO发言（5至8分钟）：业务亮点、战略进展、重大里程碑、行业趋势观察、对下一季度或全年的展望。</p>
-<p>CFO发言（5至7分钟）：财务数据详解（收入构成、毛利率变化原因、费用控制情况、现金流状况）、业绩指引（如有）、资本结构说明。</p>
-<h3>Q&amp;A环节（约30至45分钟）</h3>
-<p>操作员开放提问频道，分析师和投资人依次提问。每人通常有1至2个问题的机会。</p>
-<p>常见问题类型：收入增长驱动因素和可持续性、毛利率的趋势和压力来源、下一季度的业绩指引和不确定性、竞争格局变化、监管环境影响、资本配置计划（回购、分红、并购）。</p>
-<p>注意：在Q&amp;A中不能披露任何新的重大未公开信息。所有重要信息必须在新闻稿中已经披露，Q&amp;A只是对已披露信息的解释和阐述。</p>
-<h2>四、业绩指引的策略选择</h2>
-<p>是否提供业绩指引（Guidance）是每家上市公司必须做出的战略选择。</p>
-<h3>提供业绩指引的优点</h3>
-<p>帮助分析师和投资人建立合理预期，减少业绩发布时的股价波动；展示管理层对业务的深度理解和预测能力；当实际业绩超过指引时，带来正面的市场反应（所谓超预期）。</p>
-<h3>不提供业绩指引的原因</h3>
-<p>避免一旦业绩未达指引带来的股价下跌压力和诉讼风险；让公司管理层专注于长期价值而非短期季报数字；部分行业（如早期科技公司）的业绩本身预测性较低，提供不准确的指引反而损害公信力。</p>
-<h3>保守指引策略</h3>
-<p>最常见的最佳实践是：提供保守的业绩指引，让实际业绩高于指引（超预期）成为常态。长期维持超预期的节奏，可以逐渐建立市场对管理层执行能力的信任，这对股价长期表现有正面影响。</p>
-<h2>五、季报静默期的合规要求</h2>
-<p>静默期（Quiet Period/Blackout Period）是指在重大信息披露前，公司内部人不得进行股票交易、不得接受分析师调研的时间段。</p>
-<h3>财报静默期</h3>
-<p>通常从财季结束前两周开始，到业绩发布后开放。在这一时期：管理层和知情员工不得在公开市场买卖公司股票；公司不接受分析师或投资人的一对一会议（避免提前泄露未公开信息）；公司不得更新或确认分析师的盈利预测。</p>
-<h3>违反静默期的后果</h3>
-<p>如果公司在静默期内接受了分析师调研并透露了实质性信息，可能违反Reg FD，面临SEC的调查和处罚。历史上有多个中概股因为在财报前接受私下分析师调研而面临监管处罚。建立清晰的静默期制度并严格执行，是每家上市公司的基本合规义务。</p>
-<h2>六、提升季报质量的实用建议</h2>
-<h3>建议1：固定季报发布节奏</h3>
-<p>每季度在财季结束后的固定时间窗口（如第4至6周）发布业绩，让机构投资人和分析师可以提前安排时间，增加电话会议的参与度。频繁推迟或无规律的发布会让市场认为公司财务管理混乱。</p>
-<h3>建议2：业绩新闻稿语言直接诚实</h3>
-<p>遇到不好的季度，不要试图用复杂的非GAAP指标掩盖问题。诚实面对困难、清晰解释原因、说明管理层的应对措施，比回避问题更能维护市场信任。</p>
-<h3>建议3：提前准备Q&amp;A问题库</h3>
-<p>每次电话会议前，IR团队应该与CFO、CEO共同梳理本季度最可能被问到的15至20个问题，并准备标准答案。遇到没有准备好的问题，诚实说需要核实后跟进，比回答不准确信息的代价更小。</p>
-<h3>建议4：选择合适的电话会议服务商</h3>
-<p>专业的财报电话会议服务商（如Chorus Call、Broadridge等）提供标准化的拨入系统、录音和文字实录服务。电话会议结束后，文字实录应在24小时内发布，让未能参加直播的投资人可以事后阅读。</p>
-<h3>建议5：与分析师维护好关系</h3>
-<p>在静默期之外，保持与跟踪公司的分析师的定期沟通（通常每季度一次，外加重大事件时的临时更新）。分析师理解公司越深，其研究报告质量越高，对机构投资人的引导也越准确。</p>
-<h3>结语：季报节奏是上市公司的心跳</h3>
-<p>上市公司的季报披露节奏，就像心跳一样规律而重要。每季度稳定、准时、高质量地与市场沟通，是建立长期市场信任的基础。</p>
-<p>对中国企业而言，做好季报不只是合规义务，更是向全球投资人证明公司具备国际化经营能力的重要机会。每一次高质量的季报发布，都是在公开资本市场建立彤鼎团队所定义的那种长期公信力。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>外国私人发行人（FPI）在SEC的季报披露义务与美国本土公司（使用10-Q表格）有所不同：FPI使用6-K表格报送季度业绩及其他重大信息，没有强制要求的固定格式，但必须提交本国监管机构或股票交易所要求其披露的所有信息。实操中，绝大多数在纳斯达克挂牌的中概股会主动发布季度业绩新闻稿（Press Release）并通过6-K提交给SEC，以维持与机构投资人的信息透明度。</p><p>季报合规的3个关键节点：业绩新闻稿发布、管理层业绩电话会议、6-K文件的SEC提交。这3件事的节奏和质量，直接决定公司在机构投资人心目中的专业形象。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">FPI季报披露与美国本土公司的差异</a></li><li><a href="#sec-02">季报披露的完整工作流程</a></li><li><a href="#sec-03">业绩电话会议的标准格式</a></li><li><a href="#sec-04">业绩指引的策略选择</a></li><li><a href="#sec-05">季报静默期的合规要求</a></li><li><a href="#sec-06">提升季报质量的实用建议</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、FPI季报披露与美国本土公司的差异</h2><p>理解FPI的季报披露义务，首先需要明确外国私人发行人的特殊待遇。</p><p><h3>FPI资格的判断</h3></p><p>外国私人发行人（Foreign Private Issuer，FPI）是指：超过50%的有投票权股份不由美国居民持有，且满足以下条件之一：大多数董事和高管不是美国公民或居民、超过50%的资产在美国境外、业务主要在美国境外开展。绝大多数中概股都符合FPI条件。</p><p><h3>FPI的主要合规优势</h3></p><p>FPI不需要按照美国GAAP准则编制财务报表（可使用IFRS或本国GAAP加调节表），不需要每季度提交格式严格的10-Q报告（使用6-K提交所需信息即可），年报提交截止日期延长至财年结束后4个月（非FPI只有60至90天），不需要遵守Regulation FD关于同步披露的某些要求。</p><p><h3>FPI的主要合规劣势</h3></p><p>FPI的少数原则虽然减轻了合规负担，但机构投资人对FPI的信息透明度预期与本土公司一样高。如果FPI选择不主动提供季度财务数据，机构投资人会认为公司信息不透明，影响持股意愿。这也是为什么实践中大多数中概股选择主动发布季报，而不是只做最低限度的合规。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、季报披露的完整工作流程</h2><p><h3>财季结束后第1至2周：内部数据汇总</h3></p><p>财务团队完成本季度财务数据的初步汇总，包括：收入、毛利率、主要费用项、净利润或亏损、现金和等价物余额、关键运营指标（用户数、订单量、GMV等）。</p><p>CFO与CEO对数据进行内部审查，确认数据准确性，并与预算目标和前季度数据进行对比分析，为业绩电话会议的Q&amp;A做准备。</p><p><h3>财季结束后第2至3周：起草业绩新闻稿</h3></p><p>业绩新闻稿（Earnings Press Release）是最重要的季报对外文件，通常3至5页，包括：</p><p>头版摘要：本季度最重要的财务和运营数据，用粗体突出同比和环比变化。</p><p>管理层引述：CEO和CFO各一段话，说明本季度业绩的核心驱动因素和对未来的展望。</p><p>详细财务数据表格：收入分拆、毛利分析、运营费用明细、净利润、EBITDA、自由现金流等。</p><p>业绩指引（Guidance）：如果公司选择提供下一季度或全年的业绩预期，在这里披露。</p><p>注意：业绩新闻稿发布前不得泄露给任何外部人士，包括分析师和机构投资人，否则违反Reg FD。</p><p><h3>财季结束后第3至4周：业绩发布日</h3></p><p>选择发布时机：通常在美国股市收盘后（美东时间下午4点后）发布，让市场有充足时间消化信息，避免当日交易中的剧烈波动。</p><p>同步提交6-K：业绩新闻稿发布的同时，通过SEC的EDGAR系统提交6-K，将新闻稿作为附件。</p><p>业绩电话会议：通常在新闻稿发布后30至60分钟举行，管理层就本季度业绩进行系统介绍（通常10至15分钟），然后开放机构投资人和分析师提问（通常30至45分钟）。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、业绩电话会议的标准格式</h2><p><h3>开场介绍</h3></p><p>IR负责人主持开场，介绍参会的管理层成员，宣读前瞻性陈述的Safe Harbor声明（提醒听众本次电话中的前瞻性陈述受各种风险和不确定性影响，实际结果可能与预期有重大差异），说明提问规则。</p><p><h3>管理层演讲（约10至15分钟）</h3></p><p>CEO发言（5至8分钟）：业务亮点、战略进展、重大里程碑、行业趋势观察、对下一季度或全年的展望。</p><p>CFO发言（5至7分钟）：财务数据详解（收入构成、毛利率变化原因、费用控制情况、现金流状况）、业绩指引（如有）、资本结构说明。</p><p><h3>Q&amp;A环节（约30至45分钟）</h3></p><p>操作员开放提问频道，分析师和投资人依次提问。每人通常有1至2个问题的机会。</p><p>常见问题类型：收入增长驱动因素和可持续性、毛利率的趋势和压力来源、下一季度的业绩指引和不确定性、竞争格局变化、监管环境影响、资本配置计划（回购、分红、并购）。</p><p>注意：在Q&amp;A中不能披露任何新的重大未公开信息。所有重要信息必须在新闻稿中已经披露，Q&amp;A只是对已披露信息的解释和阐述。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、业绩指引的策略选择</h2><p>是否提供业绩指引（Guidance）是每家上市公司必须做出的战略选择。</p><p><h3>提供业绩指引的优点</h3></p><p>帮助分析师和投资人建立合理预期，减少业绩发布时的股价波动；展示管理层对业务的深度理解和预测能力；当实际业绩超过指引时，带来正面的市场反应（所谓超预期）。</p><p><h3>不提供业绩指引的原因</h3></p><p>避免一旦业绩未达指引带来的股价下跌压力和诉讼风险；让公司管理层专注于长期价值而非短期季报数字；部分行业（如早期科技公司）的业绩本身预测性较低，提供不准确的指引反而损害公信力。</p><p><h3>保守指引策略</h3></p><p>最常见的最佳实践是：提供保守的业绩指引，让实际业绩高于指引（超预期）成为常态。长期维持超预期的节奏，可以逐渐建立市场对管理层执行能力的信任，这对股价长期表现有正面影响。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、季报静默期的合规要求</h2><p>静默期（Quiet Period/Blackout Period）是指在重大信息披露前，公司内部人不得进行股票交易、不得接受分析师调研的时间段。</p><p><h3>财报静默期</h3></p><p>通常从财季结束前两周开始，到业绩发布后开放。在这一时期：管理层和知情员工不得在公开市场买卖公司股票；公司不接受分析师或投资人的一对一会议（避免提前泄露未公开信息）；公司不得更新或确认分析师的盈利预测。</p><p><h3>违反静默期的后果</h3></p><p>如果公司在静默期内接受了分析师调研并透露了实质性信息，可能违反Reg FD，面临SEC的调查和处罚。历史上有多个中概股因为在财报前接受私下分析师调研而面临监管处罚。建立清晰的静默期制度并严格执行，是每家上市公司的基本合规义务。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、提升季报质量的实用建议</h2><p><h3>建议1：固定季报发布节奏</h3></p><p>每季度在财季结束后的固定时间窗口（如第4至6周）发布业绩，让机构投资人和分析师可以提前安排时间，增加电话会议的参与度。频繁推迟或无规律的发布会让市场认为公司财务管理混乱。</p><p><h3>建议2：业绩新闻稿语言直接诚实</h3></p><p>遇到不好的季度，不要试图用复杂的非GAAP指标掩盖问题。诚实面对困难、清晰解释原因、说明管理层的应对措施，比回避问题更能维护市场信任。</p><p><h3>建议3：提前准备Q&amp;A问题库</h3></p><p>每次电话会议前，IR团队应该与CFO、CEO共同梳理本季度最可能被问到的15至20个问题，并准备标准答案。遇到没有准备好的问题，诚实说需要核实后跟进，比回答不准确信息的代价更小。</p><p><h3>建议4：选择合适的电话会议服务商</h3></p><p>专业的财报电话会议服务商（如Chorus Call、Broadridge等）提供标准化的拨入系统、录音和文字实录服务。电话会议结束后，文字实录应在24小时内发布，让未能参加直播的投资人可以事后阅读。</p><p><h3>建议5：与分析师维护好关系</h3></p><p>在静默期之外，保持与跟踪公司的分析师的定期沟通（通常每季度一次，外加重大事件时的临时更新）。分析师理解公司越深，其研究报告质量越高，对机构投资人的引导也越准确。</p><p><h3>结语：季报节奏是上市公司的心跳</h3></p><p>上市公司的季报披露节奏，就像心跳一样规律而重要。每季度稳定、准时、高质量地与市场沟通，是建立长期市场信任的基础。</p><p>对中国企业而言，做好季报不只是合规义务，更是向全球投资人证明公司具备国际化经营能力的重要机会。每一次高质量的季报发布，都是在公开资本市场建立彤鼎团队所定义的那种长期公信力。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="fpi-status-test.html" style="color:#6b5426;font-weight:700;">外国私人发行人身份认定：两步测试与丧失后的合规升级</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="market-cap-playbook.html" style="color:#6b5426;font-weight:700;">市值管理全攻略</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pipe-financing.html" style="color:#6b5426;font-weight:700;">上市公司PIPE融资</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="lockup-expiry.html" style="color:#6b5426;font-weight:700;">上市后的锁定期与解禁减持</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="before-short-sellers.html" style="color:#6b5426;font-weight:700;">做空机构盯上之前</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

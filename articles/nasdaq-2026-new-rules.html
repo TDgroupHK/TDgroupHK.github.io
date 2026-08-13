@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"纳斯达克新规落地：2500万美元门槛如何改写中国企业赴美路径","inLanguage":"zh-CN","abstract":"On 14 May 2026 the SEC approved Nasdaq's rule amendments imposing additional listing conditions on China-based issuers: a USD 25 million minimum public offering under a firm-commitment underwriting for IPOs, a USD 25 million minimum unrestricted publicly held market value for business combinations, and a prohibition on direct listings onto the Nasdaq Global and Capital Markets. The review standard shifts from financial metrics to whether the issuer is substantively operated, managed and controlled from China.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/nasdaq-2026-new-rules.html","datePublished":"2026-07-19","dateModified":"2026-08-08","image":"https://tdgroup.hk/img/og-card.jpg","description":"2026年5月14日SEC批准纳斯达克新规：在华企业IPO面向公众最低募资2500万美元、须采用尽职承销发行；SPAC路径无限制流通公众股市值不低于2500万美元；禁止直接上市登陆NGM与NCM，并引入实质经营地审查。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,70 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市路径 LISTING PATH</div><h1>纳斯达克新规落地：2500万美元门槛如何改写中国企业赴美路径</h1>
 <div class="sub">2026年5月新规全解与应对方案</div><div class="en">On 14 May 2026 the SEC approved Nasdaq's rule amendments imposing additional listing conditions on China-based issuers: a USD 25 million minimum public offering under a firm-commitment underwriting for IPOs, a USD 25 million minimum unrestricted publicly held market value for business combinations, and a prohibition on direct listings onto the Nasdaq Global and Capital Markets. The review standard shifts from financial metrics to whether the issuer is substantively operated, managed and controlled from China.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-08">2026年8月8日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">纳斯达克2026年新规是指：2026年5月14日，美国证券交易委员会以加速程序批准了纳斯达克提交的上市规则修订案，针对主要在中国境内运营的企业增设了更严格的首次上市标准。修订案的核心是三条：其一，以首次公开发行方式申请上市的在华运营企业，必须采用尽职承销发行模式，且面向公众投资者的最低募资总额不得低于2500万美元；其二，通过业务合并即特殊目的收购公司方式完成上市的，其无限制流通公众股市值不得低于2500万美元；其三，禁止在华运营企业以直接上市方式登陆纳斯达克全球市场与资本市场。更实质的变化在于审查口径：交易所的判断依据从净利润、公众持股量、股价、市值等传统财务指标，进一步推进到发行人是否实质由中国经营、管理、控制这一事实认定。因此，2500万美元只是可量化的那一半，另一半是无法用数字规避的实质经营地审查。</div>
-<h2>一、新规的确切内容：一份修订案改变了三种上市方式</h2>
-<p><strong>结论先行：</strong>新规不是提高了某一个财务指标，而是分别封堵、抬高、限制了在华运营企业登陆纳斯达克的三条既有通道。</p>
-<p>2026年5月14日，美国证券交易委员会以加速程序批准了纳斯达克证券交易所提交的上市规则修订案。加速程序意味着规则在批准后即行生效，不再设置通常的公众评论与过渡缓冲，市场几乎没有时间窗口去抢在旧规则下完成申报。这一点对正在筹备中的项目具有直接影响：申报节奏的价值在此次修订中被显著放大。</p>
-<p><strong>修订案针对首次公开发行的规定。</strong></p>
-<p>以首次公开发行方式申请上市的在华运营企业，须采用尽职承销发行模式，并且面向公众投资者的最低募资总额不得低于2500万美元。这里有两个并列条件，缺一不可：一是发行方式必须是尽职承销，二是公开发行募集的总额必须达到2500万美元这一绝对下限。此前，纳斯达克资本市场的量化标准并不直接约束募资总额，一家满足净利润或股东权益标准的企业，理论上可以用相当有限的募资规模完成挂牌。新规把这一空间关闭了。</p>
-<p><strong>修订案针对业务合并的规定。</strong></p>
-<p>通过业务合并方式完成上市，通常指与特殊目的收购公司合并，即市场惯称的SPAC路径。新规要求此类交易完成后，发行人的无限制流通公众股市值不得低于2500万美元。无限制流通公众股是指扣除关联方持股、锁定股份、限制性股份之后，真正可以自由交易的那部分股份。这一指标直接指向SPAC路径长期存在的痛点：赎回率过高导致合并完成后实际留存的公众股份极少，二级市场几乎没有流动性。</p>
-<p><strong>修订案针对直接上市的规定。</strong></p>
-<p>新规禁止在华运营企业以直接上市方式登陆纳斯达克全球市场与纳斯达克资本市场。直接上市是指不进行新股发行、不通过承销商配售，仅将既有股份登记后直接挂牌交易的方式。对在华运营企业而言，这条路径在纳斯达克的这两个层级上已经关闭。</p>
-<p>本质上，三条规定指向同一个目标：确保在华运营企业挂牌时具备足够的公众持股规模、真实的承销责任与可持续的二级市场流动性。</p>
-<h2>二、尽职承销发行意味着什么：承销商责任的位置变了</h2>
-<p><strong>结论先行：</strong>尽职承销与代销的区别，不在于费率高低，而在于谁承担发行失败的后果——这决定了承销商对项目的筛选尺度。</p>
-<p>在美股发行实践中，承销安排大致分为两类。代销安排下，承销商仅承担尽最大努力推销的义务，卖不出去的部分退回，承销商不承担余额包销责任，其风险敞口有限。尽职承销安排下，承销商需要对发行成功承担实质责任，通常表现为对约定发行规模的承接义务与相应的资本占用。</p>
-<p>这一区别的实际后果是：当承销商必须为发行结果承担风险时，它对项目的尽职调查深度、对估值的判断谨慎度、对基石与机构投资人预约的落实要求，都会相应提高。换句话说，监管把一部分筛选职能，从交易所前置转移给了承销商。过去凭借较低的承销责任即可推进的小额发行，在新规下将难以获得承销商承接。</p>
-<p>对企业的直接影响体现在三个层面。其一，承销商选聘的难度上升，具备2500万美元以上发行承接能力与机构销售网络的投行，数量本就有限，项目将面临更强的竞争性筛选。其二，承销费率结构可能上移，承销商承担的风险需要在定价中得到补偿。其三，发行前的机构投资人锁定工作被提前，路演不再是发行的起点，而是既有沟通成果的确认环节。</p>
-<p>关键在于：企业需要在启动申报之前，就把募资规模与投资人基础当作可行性前提来评估，而不是等到定价阶段再来解决。</p>
-<h2>三、纳斯达克三层市场：新规叠加在什么样的既有框架之上</h2>
-<p><strong>结论先行：</strong>新规不是取代原有量化标准，而是在原有标准之上叠加了一层专门针对在华运营企业的附加条件。</p>
-<p>纳斯达克设有三个层级的市场。纳斯达克资本市场是准入门槛相对宽松的层级，主要面向规模较小的成长型企业；纳斯达克全球市场居中；纳斯达克全球精选市场的财务与流动性要求最高。三个层级的持续上市义务与信息披露标准一致，差异主要体现在首次上市的量化门槛。</p>
-<p><strong>资本市场的既有标准。</strong></p>
-<p>以纳斯达克资本市场为例，其首次上市的财务标准提供三选一路径：净利润标准要求最近一个会计年度或最近三年中的两年，持续经营业务税后净利润不低于75万美元；股东权益标准要求股东权益不低于500万美元；市值标准要求上市证券市值不低于5000万美元。三者满足其一即可。同时，还需满足流动性与治理要求：每股价格不低于4美元、公众股东不少于300名、至少3家做市商，以及独立董事、审计委员会等公司治理条件。</p>
-<p>这里必须理解一个结构性关系：原有的三选一财务标准，主要衡量企业自身的财务体量与股权价值；而新规增设的2500万美元条件，衡量的是发行本身的规模与公众市场的承接厚度。两者衡量的对象不同，因此不能相互替代。一家满足75万美元净利润标准的企业，如果无法完成2500万美元的公开募资，在新规下仍然无法通过在纳斯达克的首次上市审查。</p>
-<p>这一叠加关系带来的实际结果是：新规实质上把在华运营企业的最低可行发行规模，从此前市场上常见的一千万美元级别，抬升到了2500万美元这一硬性水平。因此，此前依靠小额发行加挂牌后再融资的路径设计，需要整体重做。</p>
-<h2>四、审查口径的实质转向：从算数字到认事实</h2>
-<p><strong>结论先行：</strong>新规最深刻的变化不在门槛数字，而在于交易所把审查重心从可计算的财务指标，转向了对发行人实质归属的事实判断。</p>
-<p>传统的上市审查是一套算术：净利润是否达标、股东权益是否达标、市值是否达标、股价是否达标、公众股东是否够数、做市商是否够家数。这些指标的共同特征是可以被客观计量，也因此可以被结构化安排所影响。</p>
-<p>新规引入的判断维度不同。交易所需要回答的问题是：这家发行人是否实质由中国经营、管理、控制。这是一个事实认定问题，不是一个计算问题。它需要交易所审阅发行人的收入来源地、主要资产所在地、员工与生产基地分布、董事会与高级管理人员的实际所在与决策发生地、股权结构穿透后的实际控制人身份，以及协议控制安排的存在与效果。</p>
-<p>这一转向的直接后果是：适用范围的边界由事实决定，而非由注册地决定。一家注册在开曼群岛、控股主体设在英属维尔京群岛、业务运营全部在中国境内的企业，仍然属于新规的适用对象。反过来，仅仅把控股主体从一个离岸法域迁移到另一个法域，如果经营、管理、控制的事实没有发生真实迁移，也不会改变认定结果。</p>
-<p><strong>需要特别注意地域范围：</strong>规则文本所指的中国，<strong>包含香港与澳门</strong>。判定口径是「总部设于、注册于该等法域，或业务主要在该等法域管理」，交易所据此作整体判断，参考的因素包括账簿与记录所在地、是否有半数以上的资产、收入、董事、高级管理人员或员工位于该法域，以及实际控制人是否与该法域关联；单一因素均不具决定性。因此，仅把控股主体注册在香港，并不构成对本条的豁免——恰恰相反，香港主体本身就落在适用范围之内。</p>
-<p>本质上，交易所在这次修订中所做的，是把注意力从法律形式移到了商业实质。这一判断标准的具体展开，以及它对架构设计与新加坡路径的影响，是一个独立且更复杂的议题，需要专文分析。</p>
-<h2>五、新规不是孤立事件：与现行监管体系的叠加</h2>
-<p><strong>结论先行：</strong>2500万美元门槛叠加在一套已经相当完整的跨境上市监管体系之上，企业需要同时满足多个互不豁免的合规条件。</p>
-<p><strong>中国证监会境外上市备案制。</strong></p>
-<p>自2023年3月31日施行的境外上市备案管理制度，要求境内企业直接或间接境外发行上市，须向中国证监会履行备案程序。备案关注的核心包括股权架构的合规性、行业准入与外资限制、数据与网络安全、以及历史沿革中的合规瑕疵。备案是前置程序，未完成备案的项目无法推进境外发行。</p>
-<p><strong>外国公司问责法与审计监管。</strong></p>
-<p>依据2020年生效的《外国公司问责法》，若发行人的审计师因外国政府限制而无法接受美国公众公司会计监督委员会的完整检查，其证券将被禁止在美国交易。2022年8月中美监管机构签署审计监管合作协议后，系统性退市风险大幅缓解，但对企业而言，审计标准本身并未放松：首次PCAOB标准审计通常需要4至6个月，是上市时间表中周期最长的单一工作流。</p>
-<p><strong>外汇与境外投资合规。</strong></p>
-<p>自然人股东通过境外特殊目的公司持有境内权益的，需依据37号文办理外汇登记；境内企业主体对外投资的，需履行境外投资即ODI的相关备案或核准程序。这两条线决定了未来募集资金的回流通道与股东减持所得的合法出境路径，属于架构设计阶段就必须锁定的事项。</p>
-<p>把这些条件放在一起看：企业需要同时通过境内的备案审查、美国的审计监管、外汇与跨境投资的合规程序，以及新增的2500万美元发行规模与实质经营地审查。任何一环缺失，项目都无法完成。因此，跨境上市的项目管理，本质上是多条并行监管线的时间与条件协同问题。</p>
-<h2>六、对企业的实际影响：谁被抬高，谁被淘汰，谁被提前</h2>
-<p><strong>结论先行：</strong>新规对不同规模与不同阶段的企业影响是非对称的——它抬高了中型项目的成本，淘汰了小型项目的可行性，并把大型项目的准备工作整体提前。</p>
-<p><strong>小规模发行的可行性被实质关闭。</strong></p>
-<p>此前市场上存在大量以较小募资规模完成挂牌、挂牌后再通过增发解决资金需求的项目设计。在2500万美元的硬性下限之下，这一设计不再成立。如果企业的估值水平无法支撑2500万美元的公开发行而不造成过度稀释，那么纳斯达克首次上市在当前规则下就不是可行选项。</p>
-<p><strong>稀释比例成为新的核心变量。</strong></p>
-<p>2500万美元是绝对金额，不是比例。对一家投前估值1亿美元的企业，2500万美元的发行意味着约20%的股权稀释，属于常规区间；而对一家投前估值4000万美元的企业，同样的金额意味着接近38%的稀释，控制权结构将受到实质影响。因此，估值能力与发行规模的匹配度，取代了单纯的财务达标，成为可行性判断的起点。</p>
-<p><strong>时间表与成本结构整体上移。</strong></p>
-<p>更高的发行规模要求更扎实的机构投资人基础，这意味着投资人沟通、基石预约、行业分析师覆盖等工作需要在申报前完成，而不是与申报同步。叠加境内备案、审计、法律尽职调查等既有工作流，从启动到挂牌的完整周期需要按更保守的口径规划。审计线通常需要4至6个月，若同时存在财务规范化整改需求，整改与审计叠加的周期通常在12个月以上。</p>
-<p><strong>架构设计的容错空间收窄。</strong></p>
-<p>在实质经营地成为审查对象之后，架构安排的目的不能是掩盖事实，只能是真实反映业务的地理与治理分布。这要求架构设计工作在业务发展的更早阶段介入，因为真实的经营迁移需要时间积累，而时间是无法在申报阶段补齐的资源。</p>
-<h2>七、应对路径：企业现在应该做的五件事</h2>
-<p><strong>结论先行：</strong>新规环境下的正确应对不是寻找规则漏洞，而是重新校准上市方案的可行性边界，并把不可压缩的准备工作提前启动。</p>
-<p><strong>其一，重做可行性评估。</strong></p>
-<p>以2500万美元发行规模为约束条件，倒推所需的估值水平、可接受的稀释比例与相应的业绩支撑。如果测算结果显示当前阶段无法承受，正确的结论是推迟上市窗口并继续做大业务体量，而不是压缩发行规模去试探规则。</p>
-<p><strong>其二，提前锁定承销能力。</strong></p>
-<p>在尽职承销要求下，承销商的承接能力成为项目的前置条件。应当在方案设计阶段就与具备相应发行规模承接能力的投行建立沟通，明确其对行业、估值区间与发行时点的判断，并将关键人员配置与里程碑写入约定文件。</p>
-<p><strong>其三，把审计线放在最前面。</strong></p>
-<p>审计是周期最长且不可压缩的工作流。企业应在上市预备期就按可审计标准组织财务工作，确保合同流、发票流、物流与资金流四者可相互印证，避免在申报阶段回头补单据。</p>
-<p><strong>其四，同步推进境内合规线。</strong></p>
-<p>中国证监会备案、37号文外汇登记、ODI程序需要与境外发行工作并行推进。这几条线的共同特征是不可跳过、周期由监管节奏决定，因此越早启动，对整体时间表的挤压越小。</p>
-<p><strong>其五，正视实质经营地审查。</strong></p>
-<p>架构设计应当从掩盖思维转向反映思维——即让架构真实反映业务的经营、管理与控制分布，并为任何真实的跨境经营迁移预留足够的时间积累。仅靠注册地变更无法改变审查结论。</p>
-<p>彤鼎集团（香港）有限公司在境外上市服务中，帮助企业按现行规则重做可行性测算、设计与业务实质相匹配的股权架构、统筹境内外合规线的时间衔接，并对接具备相应承接能力的持牌合作机构；华尔街彤鼎俱乐部则为企业家提供资本市场规则的持续更新与同行经验交流。涉及Pre-IPO项目信息的部分，仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>纳斯达克2026年新规是指：2026年5月14日，美国证券交易委员会以加速程序批准了纳斯达克提交的上市规则修订案，针对主要在中国境内运营的企业增设了更严格的首次上市标准。修订案的核心是三条：其一，以首次公开发行方式申请上市的在华运营企业，必须采用尽职承销发行模式，且面向公众投资者的最低募资总额不得低于2500万美元；其二，通过业务合并即特殊目的收购公司方式完成上市的，其无限制流通公众股市值不得低于2500万美元；其三，禁止在华运营企业以直接上市方式登陆纳斯达克全球市场与资本市场。</p><p>更实质的变化在于审查口径：交易所的判断依据从净利润、公众持股量、股价、市值等传统财务指标，进一步推进到发行人是否实质由中国经营、管理、控制这一事实认定。因此，2500万美元只是可量化的那一半，另一半是无法用数字规避的实质经营地审查。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">新规的确切内容：一份修订案改变了三种上市方式</a></li><li><a href="#sec-02">尽职承销发行意味着什么：承销商责任的位置变了</a></li><li><a href="#sec-03">纳斯达克三层市场：新规叠加在什么样的既有框架之上</a></li><li><a href="#sec-04">审查口径的实质转向：从算数字到认事实</a></li><li><a href="#sec-05">新规不是孤立事件：与现行监管体系的叠加</a></li><li><a href="#sec-06">对企业的实际影响：谁被抬高，谁被淘汰，谁被提前</a></li><li><a href="#sec-07">应对路径：企业现在应该做的五件事</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、新规的确切内容：一份修订案改变了三种上市方式</h2><div class="ts-lead"><span class="tag">结论先行</span><p>新规不是提高了某一个财务指标，而是分别封堵、抬高、限制了在华运营企业登陆纳斯达克的三条既有通道。</p></div><p>2026年5月14日，美国证券交易委员会以加速程序批准了纳斯达克证券交易所提交的上市规则修订案。加速程序意味着规则在批准后即行生效，不再设置通常的公众评论与过渡缓冲，市场几乎没有时间窗口去抢在旧规则下完成申报。这一点对正在筹备中的项目具有直接影响：申报节奏的价值在此次修订中被显著放大。</p><p><strong>修订案针对首次公开发行的规定。</strong></p><p>以首次公开发行方式申请上市的在华运营企业，须采用尽职承销发行模式，并且面向公众投资者的最低募资总额不得低于2500万美元。这里有两个并列条件，缺一不可：一是发行方式必须是尽职承销，二是公开发行募集的总额必须达到2500万美元这一绝对下限。</p><p data-ts="1">此前，纳斯达克资本市场的量化标准并不直接约束募资总额，一家满足净利润或股东权益标准的企业，理论上可以用相当有限的募资规模完成挂牌。新规把这一空间关闭了。</p><p><strong>修订案针对业务合并的规定。</strong></p><p>通过业务合并方式完成上市，通常指与特殊目的收购公司合并，即市场惯称的SPAC路径。新规要求此类交易完成后，发行人的无限制流通公众股市值不得低于2500万美元。无限制流通公众股是指扣除关联方持股、锁定股份、限制性股份之后，真正可以自由交易的那部分股份。</p><p data-ts="1">这一指标直接指向SPAC路径长期存在的痛点：赎回率过高导致合并完成后实际留存的公众股份极少，二级市场几乎没有流动性。</p><p><strong>修订案针对直接上市的规定。</strong></p><p>新规禁止在华运营企业以直接上市方式登陆纳斯达克全球市场与纳斯达克资本市场。直接上市是指不进行新股发行、不通过承销商配售，仅将既有股份登记后直接挂牌交易的方式。对在华运营企业而言，这条路径在纳斯达克的这两个层级上已经关闭。</p><p>本质上，三条规定指向同一个目标：确保在华运营企业挂牌时具备足够的公众持股规模、真实的承销责任与可持续的二级市场流动性。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、尽职承销发行意味着什么：承销商责任的位置变了</h2><div class="ts-lead"><span class="tag">结论先行</span><p>尽职承销与代销的区别，不在于费率高低，而在于谁承担发行失败的后果——这决定了承销商对项目的筛选尺度。</p></div><p>在美股发行实践中，承销安排大致分为两类。代销安排下，承销商仅承担尽最大努力推销的义务，卖不出去的部分退回，承销商不承担余额包销责任，其风险敞口有限。尽职承销安排下，承销商需要对发行成功承担实质责任，通常表现为对约定发行规模的承接义务与相应的资本占用。</p><p>这一区别的实际后果是：当承销商必须为发行结果承担风险时，它对项目的尽职调查深度、对估值的判断谨慎度、对基石与机构投资人预约的落实要求，都会相应提高。换句话说，监管把一部分筛选职能，从交易所前置转移给了承销商。过去凭借较低的承销责任即可推进的小额发行，在新规下将难以获得承销商承接。</p><p>对企业的直接影响体现在三个层面。</p><ol class="ts-pts"><li><b>其一，承销商选聘的难度上升</b>，具备2500万美元以上发行承接能力与机构销售网络的投行，数量本就有限，项目将面临更强的竞争性筛选。</li><li><b>其二，承销费率结构可能上移</b>，承销商承担的风险需要在定价中得到补偿。</li><li><b>其三</b>，发行前的机构投资人锁定工作被提前，路演不再是发行的起点，而是既有沟通成果的确认环节。</li></ol><p>关键在于：企业需要在启动申报之前，就把募资规模与投资人基础当作可行性前提来评估，而不是等到定价阶段再来解决。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、纳斯达克三层市场：新规叠加在什么样的既有框架之上</h2><div class="ts-lead"><span class="tag">结论先行</span><p>新规不是取代原有量化标准，而是在原有标准之上叠加了一层专门针对在华运营企业的附加条件。</p></div><p>纳斯达克设有三个层级的市场。纳斯达克资本市场是准入门槛相对宽松的层级，主要面向规模较小的成长型企业；纳斯达克全球市场居中；纳斯达克全球精选市场的财务与流动性要求最高。三个层级的持续上市义务与信息披露标准一致，差异主要体现在首次上市的量化门槛。</p><p><strong>资本市场的既有标准。</strong></p><p>以纳斯达克资本市场为例，其首次上市的财务标准提供三选一路径：净利润标准要求最近一个会计年度或最近三年中的两年，持续经营业务税后净利润不低于75万美元；股东权益标准要求股东权益不低于500万美元；市值标准要求上市证券市值不低于5000万美元。</p><p data-ts="1">三者满足其一即可。同时，还需满足流动性与治理要求：每股价格不低于4美元、公众股东不少于300名、至少3家做市商，以及独立董事、审计委员会等公司治理条件。</p><p>这里必须理解一个结构性关系：原有的三选一财务标准，主要衡量企业自身的财务体量与股权价值；而新规增设的2500万美元条件，衡量的是发行本身的规模与公众市场的承接厚度。两者衡量的对象不同，因此不能相互替代。</p><p data-ts="1">一家满足75万美元净利润标准的企业，如果无法完成2500万美元的公开募资，在新规下仍然无法通过在纳斯达克的首次上市审查。</p><p>这一叠加关系带来的实际结果是：新规实质上把在华运营企业的最低可行发行规模，从此前市场上常见的一千万美元级别，抬升到了2500万美元这一硬性水平。因此，此前依靠小额发行加挂牌后再融资的路径设计，需要整体重做。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、审查口径的实质转向：从算数字到认事实</h2><div class="ts-lead"><span class="tag">结论先行</span><p>新规最深刻的变化不在门槛数字，而在于交易所把审查重心从可计算的财务指标，转向了对发行人实质归属的事实判断。</p></div><p>传统的上市审查是一套算术：净利润是否达标、股东权益是否达标、市值是否达标、股价是否达标、公众股东是否够数、做市商是否够家数。这些指标的共同特征是可以被客观计量，也因此可以被结构化安排所影响。</p><p>新规引入的判断维度不同。交易所需要回答的问题是：这家发行人是否实质由中国经营、管理、控制。这是一个事实认定问题，不是一个计算问题。它需要交易所审阅发行人的收入来源地、主要资产所在地、员工与生产基地分布、董事会与高级管理人员的实际所在与决策发生地、股权结构穿透后的实际控制人身份，以及协议控制安排的存在与效果。</p><p>这一转向的直接后果是：适用范围的边界由事实决定，而非由注册地决定。一家注册在开曼群岛、控股主体设在英属维尔京群岛、业务运营全部在中国境内的企业，仍然属于新规的适用对象。反过来，仅仅把控股主体从一个离岸法域迁移到另一个法域，如果经营、管理、控制的事实没有发生真实迁移，也不会改变认定结果。</p><p><strong>需要特别注意地域范围：</strong>规则文本所指的中国，<strong>包含香港与澳门</strong>。判定口径是「总部设于、注册于该等法域，或业务主要在该等法域管理」，交易所据此作整体判断，参考的因素包括账簿与记录所在地、是否有半数以上的资产、收入、董事、高级管理人员或员工位于该法域，以及实际控制人是否与该法域关联；单一因素均不具决定性。</p><p data-ts="1">因此，仅把控股主体注册在香港，并不构成对本条的豁免——恰恰相反，香港主体本身就落在适用范围之内。</p><p>本质上，交易所在这次修订中所做的，是把注意力从法律形式移到了商业实质。这一判断标准的具体展开，以及它对架构设计与新加坡路径的影响，是一个独立且更复杂的议题，需要专文分析。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、新规不是孤立事件：与现行监管体系的叠加</h2><div class="ts-lead"><span class="tag">结论先行</span><p>2500万美元门槛叠加在一套已经相当完整的跨境上市监管体系之上，企业需要同时满足多个互不豁免的合规条件。</p></div><p><strong>中国证监会境外上市备案制。</strong></p><p>自2023年3月31日施行的境外上市备案管理制度，要求境内企业直接或间接境外发行上市，须向中国证监会履行备案程序。备案关注的核心包括股权架构的合规性、行业准入与外资限制、数据与网络安全、以及历史沿革中的合规瑕疵。备案是前置程序，未完成备案的项目无法推进境外发行。</p><p><strong>外国公司问责法与审计监管。</strong></p><p>依据2020年生效的《外国公司问责法》，若发行人的审计师因外国政府限制而无法接受美国公众公司会计监督委员会的完整检查，其证券将被禁止在美国交易。2022年8月中美监管机构签署审计监管合作协议后，系统性退市风险大幅缓解，但对企业而言，审计标准本身并未放松：首次PCAOB标准审计通常需要4至6个月，是上市时间表中周期最长的单一工作流。</p><p><strong>外汇与境外投资合规。</strong></p><p>自然人股东通过境外特殊目的公司持有境内权益的，需依据37号文办理外汇登记；境内企业主体对外投资的，需履行境外投资即ODI的相关备案或核准程序。这两条线决定了未来募集资金的回流通道与股东减持所得的合法出境路径，属于架构设计阶段就必须锁定的事项。</p><p>把这些条件放在一起看：企业需要同时通过境内的备案审查、美国的审计监管、外汇与跨境投资的合规程序，以及新增的2500万美元发行规模与实质经营地审查。任何一环缺失，项目都无法完成。因此，跨境上市的项目管理，本质上是多条并行监管线的时间与条件协同问题。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、对企业的实际影响：谁被抬高，谁被淘汰，谁被提前</h2><div class="ts-lead"><span class="tag">结论先行</span><p>新规对不同规模与不同阶段的企业影响是非对称的——它抬高了中型项目的成本，淘汰了小型项目的可行性，并把大型项目的准备工作整体提前。</p></div><p><strong>小规模发行的可行性被实质关闭。</strong></p><p>此前市场上存在大量以较小募资规模完成挂牌、挂牌后再通过增发解决资金需求的项目设计。在2500万美元的硬性下限之下，这一设计不再成立。如果企业的估值水平无法支撑2500万美元的公开发行而不造成过度稀释，那么纳斯达克首次上市在当前规则下就不是可行选项。</p><p><strong>稀释比例成为新的核心变量。</strong></p><p>2500万美元是绝对金额，不是比例。对一家投前估值1亿美元的企业，2500万美元的发行意味着约20%的股权稀释，属于常规区间；而对一家投前估值4000万美元的企业，同样的金额意味着接近38%的稀释，控制权结构将受到实质影响。因此，估值能力与发行规模的匹配度，取代了单纯的财务达标，成为可行性判断的起点。</p><p><strong>时间表与成本结构整体上移。</strong></p><p>更高的发行规模要求更扎实的机构投资人基础，这意味着投资人沟通、基石预约、行业分析师覆盖等工作需要在申报前完成，而不是与申报同步。叠加境内备案、审计、法律尽职调查等既有工作流，从启动到挂牌的完整周期需要按更保守的口径规划。</p><p data-ts="1">审计线通常需要4至6个月，若同时存在财务规范化整改需求，整改与审计叠加的周期通常在12个月以上。</p><p><strong>架构设计的容错空间收窄。</strong></p><p>在实质经营地成为审查对象之后，架构安排的目的不能是掩盖事实，只能是真实反映业务的地理与治理分布。这要求架构设计工作在业务发展的更早阶段介入，因为真实的经营迁移需要时间积累，而时间是无法在申报阶段补齐的资源。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、应对路径：企业现在应该做的五件事</h2><div class="ts-lead"><span class="tag">结论先行</span><p>新规环境下的正确应对不是寻找规则漏洞，而是重新校准上市方案的可行性边界，并把不可压缩的准备工作提前启动。</p></div><p><strong>其一，重做可行性评估。</strong></p><p>以2500万美元发行规模为约束条件，倒推所需的估值水平、可接受的稀释比例与相应的业绩支撑。如果测算结果显示当前阶段无法承受，正确的结论是推迟上市窗口并继续做大业务体量，而不是压缩发行规模去试探规则。</p><p><strong>其二，提前锁定承销能力。</strong></p><p>在尽职承销要求下，承销商的承接能力成为项目的前置条件。应当在方案设计阶段就与具备相应发行规模承接能力的投行建立沟通，明确其对行业、估值区间与发行时点的判断，并将关键人员配置与里程碑写入约定文件。</p><p><strong>其三，把审计线放在最前面。</strong></p><p>审计是周期最长且不可压缩的工作流。企业应在上市预备期就按可审计标准组织财务工作，确保合同流、发票流、物流与资金流四者可相互印证，避免在申报阶段回头补单据。</p><p><strong>其四，同步推进境内合规线。</strong></p><p>中国证监会备案、37号文外汇登记、ODI程序需要与境外发行工作并行推进。这几条线的共同特征是不可跳过、周期由监管节奏决定，因此越早启动，对整体时间表的挤压越小。</p><p><strong>其五，正视实质经营地审查。</strong></p><p>架构设计应当从掩盖思维转向反映思维——即让架构真实反映业务的经营、管理与控制分布，并为任何真实的跨境经营迁移预留足够的时间积累。仅靠注册地变更无法改变审查结论。</p><p>彤鼎集团（香港）有限公司在境外上市服务中，帮助企业按现行规则重做可行性测算、设计与业务实质相匹配的股权架构、统筹境内外合规线的时间衔接，并对接具备相应承接能力的持牌合作机构；华尔街彤鼎俱乐部则为企业家提供资本市场规则的持续更新与同行经验交流。</p><p data-ts="1">涉及Pre-IPO项目信息的部分，仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="capital-market-2026-h2.html" style="color:#6b5426;font-weight:700;">2026下半年跨境资本市场五个变量</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="sg-hk-china-compare.html" style="color:#6b5426;font-weight:700;">新加坡·香港·中概股三路径对比</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="singapore-vs-hongkong.html" style="color:#6b5426;font-weight:700;">新加坡路径与香港路径深度对比</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="beyond-25m-threshold.html" style="color:#6b5426;font-weight:700;">募资不足2500万美元：四条资本化出路</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-listing-standards.html" style="color:#6b5426;font-weight:700;">纳斯达克三层市场与上市标准</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
