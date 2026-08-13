@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"反稀释条款的三种算法与谈判空间","inLanguage":"zh-CN","abstract":"Anti-dilution provisions adjust the conversion price of earlier preferred shares when a company raises at a lower valuation. The three common methods — full ratchet, broad-based weighted average, and narrow-based weighted average — differ significantly in their impact on founder ownership.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/anti-dilution-clauses.html"},"datePublished":"2026-07-26","dateModified":"2026-07-26","description":"反稀释条款在公司以低于前轮价格融资时调整前轮优先股的转换价格，从而保护前轮投资人的持股比例。三种常见算法——完全棘轮、广义加权平均与狭义加权平均——对创始人股比的影响差异显著。本文说明三者的计算逻辑、实际影响，以及创始人可以争取的例外情形。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,39 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">融资条款 FINANCING</div><h1>反稀释条款的三种算法与谈判空间</h1>
 <div class="sub">完全棘轮、广义加权与狭义加权，差别可能是创始人几个百分点的股比</div><div class="en">Anti-dilution provisions adjust the conversion price of earlier preferred shares when a company raises at a lower valuation. The three common methods — full ratchet, broad-based weighted average, and narrow-based weighted average — differ significantly in their impact on founder ownership.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-26">2026年7月26日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">反稀释条款，是指当公司以低于前轮价格发行新股时，按约定方法下调前轮优先股的转换价格，使前轮投资人在转换为普通股时获得更多股数，从而减轻其持股被稀释的影响。它的代价由普通股股东承担，主要是创始人与员工。三种常见算法的强度依次递减：完全棘轮把前轮转换价格直接调到新一轮价格，对创始人影响最大；广义加权平均按新旧股数加权计算，且分母包含期权等已发行在外的股份，影响最小；狭义加权平均分母范围较窄，影响介于两者之间。关键在于算法选择与例外情形的约定，往往比条款是否存在更重要。相关投资事项仅面向符合条件的合格投资者，且需充分揭示风险，不构成任何投资建议或收益承诺。</div>
-<h2>一、完全棘轮：强度最高的保护</h2>
-<p><strong>结论先行：无论新一轮发行多少股，前轮转换价格一律调至新价。</strong></p>
-<p>完全棘轮下，若前轮每股价格为较高水平、新一轮价格下降，则前轮的转换价格直接下调到新一轮价格。这意味着即使新一轮只发行很少股份，前轮投资人也获得按新价格全额重算的待遇。</p>
-<p>对创始人的影响是稀释被集中转移。前轮投资人的转换后股数可能显著增加，普通股占比相应下降，且这一调整与新融资规模无关。</p>
-<p>因此，本质上完全棘轮把估值下调的全部后果转移给了普通股股东。这一算法在市场环境紧张或企业议价能力较弱时更常出现，创始人应把它作为首要争取的让步项。</p>
-<h2>二、加权平均：按规模摊薄影响</h2>
-<p><strong>结论先行：加权平均按新一轮发行规模调整，规模越小影响越小。</strong></p>
-<p>加权平均的基本逻辑是把新一轮的低价发行与既有股份做加权，得出一个介于原价与新价之间的调整后转换价格。若新一轮发行股数很少，调整幅度也很小；若发行规模很大，调整则接近新价。</p>
-<p>与完全棘轮相比，加权平均的合理性在于让保护程度与实际稀释程度相匹配，而不是一律按最不利情形处理。这也是市场上更为常见的安排。</p>
-<p>需要理解的是加权平均仍会稀释创始人，只是幅度可控。因此，关键在于争取加权平均之后，还要继续争取分母的口径。</p>
-<h2>三、广义与狭义的差别在分母</h2>
-<p><strong>结论先行：分母包含的股份范围越宽，调整幅度越小，对创始人越有利。</strong></p>
-<p>广义加权平均的分母通常包含全部已发行普通股、全部优先股转换后股数，以及期权池中已授予甚至已预留的股份。分母大，则低价发行对整体加权价格的拉低作用被摊薄。</p>
-<p>狭义加权平均的分母范围较窄，通常只计入已发行的普通股与已转换的优先股，不包含期权池等未行权部分。分母小，调整幅度相应更大。</p>
-<p>这一处差别在条款文本中往往只是一句定义，但对结果的影响可能是创始人几个百分点的股比。因此，本质上这是条款清单中性价比最高的谈判点之一——争取成本低，收益明确。</p>
-<h2>四、例外情形：哪些发行不触发调整</h2>
-<p><strong>结论先行：应明确排除期权授予、并购对价与特定战略发行。</strong></p>
-<p>标准做法是在条款中列出&quot;豁免发行&quot;清单：按员工股权激励计划授予或行权的股份、因并购交易向标的方发行的对价股份、因债转股或行使既有认股权证产生的股份、以及经优先股股东同意的特定发行。</p>
-<p>若豁免清单过窄，日常的期权授予或小额战略引资都可能触发反稀释调整，管理成本与股比损失都会累积。相关期权安排见 <a href="option-pool.html">期权池设计完整指南</a>。</p>
-<p>因此，关键在于豁免清单要覆盖可预见的常规发行。这一项通常争取难度不大，但容易被忽略。</p>
-<h2>五、与其他条款的叠加效应</h2>
-<p><strong>结论先行：反稀释与优先清算权叠加，会显著压缩创始人在退出时的所得。</strong></p>
-<p>反稀释调整增加前轮优先股转换后的股数，而优先清算权决定分配顺序。两者叠加时，前轮投资人既在分配序列中靠前，又持有更多股数，创始人在剩余分配中的份额被双重压缩。</p>
-<p>另一个常被忽略的叠加是与赎回权。若公司在低价融资后仍面临赎回压力，现金压力与股比损失同时发生，谈判空间会进一步收窄。因此，本质上这些条款必须放在一起做压力测试。</p>
-<p>实用做法是把两到三种不利情形代入计算：低价融资叠加中等价格退出时，各方各拿多少。分配顺序的机制见 <a href="liquidation-preference.html">优先清算权怎么谈</a>。</p>
-<h2>六、创始人可争取的四个方向</h2>
-<p><strong>结论先行：按影响大小排序为算法、分母、豁免清单、以及失效条件。</strong></p>
-<p>第一争取加权平均而非完全棘轮，这是影响最大的一项。第二争取广义分母，把期权池纳入计算范围。第三扩大豁免发行清单，覆盖员工激励与并购对价。</p>
-<p>第四是争取失效条件：约定在企业完成合格上市、或在投资人未按约定参与后续轮次时，反稀释权利终止或按比例削减。后者即所谓的&quot;参与或失权&quot;安排，可为后续融资减少阻力。</p>
-<p>需要提醒的是，反稀释条款本身在机构融资中属于常规安排，目标不是删除而是控制强度。关键在于把条款的触发条件与计算方法都写清楚，避免日后就口径产生争议。整体条款底线设置见 <a href="vam-five-lines.html">对赌协议五条保命线</a>。华尔街彤鼎俱乐部的融资主题讨论中，分母口径是最常被低估的细节。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>反稀释条款，是指当公司以低于前轮价格发行新股时，按约定方法下调前轮优先股的转换价格，使前轮投资人在转换为普通股时获得更多股数，从而减轻其持股被稀释的影响。它的代价由普通股股东承担，主要是创始人与员工。三种常见算法的强度依次递减：完全棘轮把前轮转换价格直接调到新一轮价格，对创始人影响最大；广义加权平均按新旧股数加权计算，且分母包含期权等已发行在外的股份，影响最小；狭义加权平均分母范围较窄，影响介于两者之间。</p><p>关键在于算法选择与例外情形的约定，往往比条款是否存在更重要。相关投资事项仅面向符合条件的合格投资者，且需充分揭示风险，不构成任何投资建议或收益承诺。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">完全棘轮：强度最高的保护</a></li><li><a href="#sec-02">加权平均：按规模摊薄影响</a></li><li><a href="#sec-03">广义与狭义的差别在分母</a></li><li><a href="#sec-04">例外情形：哪些发行不触发调整</a></li><li><a href="#sec-05">与其他条款的叠加效应</a></li><li><a href="#sec-06">创始人可争取的四个方向</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、完全棘轮：强度最高的保护</h2><div class="ts-lead"><span class="tag">结论先行</span><p>无论新一轮发行多少股，前轮转换价格一律调至新价。</p></div><p>完全棘轮下，若前轮每股价格为较高水平、新一轮价格下降，则前轮的转换价格直接下调到新一轮价格。这意味着即使新一轮只发行很少股份，前轮投资人也获得按新价格全额重算的待遇。</p><p>对创始人的影响是稀释被集中转移。前轮投资人的转换后股数可能显著增加，普通股占比相应下降，且这一调整与新融资规模无关。</p><p>因此，本质上完全棘轮把估值下调的全部后果转移给了普通股股东。这一算法在市场环境紧张或企业议价能力较弱时更常出现，创始人应把它作为首要争取的让步项。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、加权平均：按规模摊薄影响</h2><div class="ts-lead"><span class="tag">结论先行</span><p>加权平均按新一轮发行规模调整，规模越小影响越小。</p></div><p>加权平均的基本逻辑是把新一轮的低价发行与既有股份做加权，得出一个介于原价与新价之间的调整后转换价格。若新一轮发行股数很少，调整幅度也很小；若发行规模很大，调整则接近新价。</p><p>与完全棘轮相比，加权平均的合理性在于让保护程度与实际稀释程度相匹配，而不是一律按最不利情形处理。这也是市场上更为常见的安排。</p><p>需要理解的是加权平均仍会稀释创始人，只是幅度可控。因此，关键在于争取加权平均之后，还要继续争取分母的口径。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、广义与狭义的差别在分母</h2><div class="ts-lead"><span class="tag">结论先行</span><p>分母包含的股份范围越宽，调整幅度越小，对创始人越有利。</p></div><p>广义加权平均的分母通常包含全部已发行普通股、全部优先股转换后股数，以及期权池中已授予甚至已预留的股份。分母大，则低价发行对整体加权价格的拉低作用被摊薄。</p><p>狭义加权平均的分母范围较窄，通常只计入已发行的普通股与已转换的优先股，不包含期权池等未行权部分。分母小，调整幅度相应更大。</p><p>这一处差别在条款文本中往往只是一句定义，但对结果的影响可能是创始人几个百分点的股比。因此，本质上这是条款清单中性价比最高的谈判点之一——争取成本低，收益明确。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、例外情形：哪些发行不触发调整</h2><div class="ts-lead"><span class="tag">结论先行</span><p>应明确排除期权授予、并购对价与特定战略发行。</p></div><p>标准做法是在条款中列出&quot;豁免发行&quot;清单：按员工股权激励计划授予或行权的股份、因并购交易向标的方发行的对价股份、因债转股或行使既有认股权证产生的股份、以及经优先股股东同意的特定发行。</p><p>若豁免清单过窄，日常的期权授予或小额战略引资都可能触发反稀释调整，管理成本与股比损失都会累积。相关期权安排见 <a href="option-pool.html">期权池设计完整指南</a>。</p><p>因此，关键在于豁免清单要覆盖可预见的常规发行。这一项通常争取难度不大，但容易被忽略。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、与其他条款的叠加效应</h2><div class="ts-lead"><span class="tag">结论先行</span><p>反稀释与优先清算权叠加，会显著压缩创始人在退出时的所得。</p></div><p>反稀释调整增加前轮优先股转换后的股数，而优先清算权决定分配顺序。两者叠加时，前轮投资人既在分配序列中靠前，又持有更多股数，创始人在剩余分配中的份额被双重压缩。</p><p>另一个常被忽略的叠加是与赎回权。若公司在低价融资后仍面临赎回压力，现金压力与股比损失同时发生，谈判空间会进一步收窄。因此，本质上这些条款必须放在一起做压力测试。</p><p>实用做法是把两到三种不利情形代入计算：低价融资叠加中等价格退出时，各方各拿多少。分配顺序的机制见 <a href="liquidation-preference.html">优先清算权怎么谈</a>。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、创始人可争取的四个方向</h2><div class="ts-lead"><span class="tag">结论先行</span><p>按影响大小排序为算法、分母、豁免清单、以及失效条件。</p></div><p>第一争取加权平均而非完全棘轮，这是影响最大的一项。第二争取广义分母，把期权池纳入计算范围。第三扩大豁免发行清单，覆盖员工激励与并购对价。</p><p>第四是争取失效条件：约定在企业完成合格上市、或在投资人未按约定参与后续轮次时，反稀释权利终止或按比例削减。后者即所谓的&quot;参与或失权&quot;安排，可为后续融资减少阻力。</p><p>需要提醒的是，反稀释条款本身在机构融资中属于常规安排，目标不是删除而是控制强度。关键在于把条款的触发条件与计算方法都写清楚，避免日后就口径产生争议。整体条款底线设置见 <a href="vam-five-lines.html">对赌协议五条保命线</a>。华尔街彤鼎俱乐部的融资主题讨论中，分母口径是最常被低估的细节。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="liquidation-preference.html" style="color:#6b5426;font-weight:700;">优先清算权怎么谈：条款清单里最容易被忽略的一条</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="founder-control.html" style="color:#6b5426;font-weight:700;">创始人控制权保护</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pre-ipo-negotiation.html" style="color:#6b5426;font-weight:700;">Pre-IPO融资谈判策略</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="vam-triggered.html" style="color:#6b5426;font-weight:700;">对赌回购触发之后：别急着找钱，先算账</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="vam-clause-risk.html" style="color:#6b5426;font-weight:700;">融资对赌条款风险</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

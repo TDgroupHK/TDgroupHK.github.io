@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"做空机构盯上之前","inLanguage":"zh-CN","abstract":"The disclosure, related-party and cash-verification weaknesses short sellers look for, and how to close them in advance.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/before-short-sellers.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"做空机构在发布报告之前通常已经调查了公司3至12个月。他们的调查方法包括：分析财务报表中的异常数据、实地走访公司门店和客户、访谈前员工、核查工商注册信息、分析供应链关系。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,42 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">挂牌之后 POST-LISTING</div><h1>做空机构盯上之前</h1>
 <div class="sub"></div><div class="en">The disclosure, related-party and cash-verification weaknesses short sellers look for, and how to close them in advance.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">做空机构在发布报告之前通常已经调查了公司3至12个月。他们的调查方法包括：分析财务报表中的异常数据、实地走访公司门店和客户、访谈前员工、核查工商注册信息、分析供应链关系。如果这些调查发现了大量可以做文章的漏洞，做空报告就会产生；如果公司的财务和运营信息高度透明、数据前后一致、没有明显的异常，做空机构通常会转向其他目标。主动防御的核心是：让公司所有公开信息高度一致、无法被曲解；建立与市场的信任关系；消除一切可能被误解或曲解的信息盲区。</div>
-<h2>一、做空机构的调查方法与重点</h2>
-<h3>财务数据分析</h3>
-<p>做空机构会系统分析公司的历史财务报表，重点寻找以下异常：营业收入与实际应税收入或社会保险缴纳数据的不匹配、应收账款增速显著超过收入增速（可能意味着虚增收入）、毛利率与行业平均水平的异常差距（过高可能意味着成本被低估）、现金流量表与利润表的背离（有利润但没有现金流入是常见的财务造假信号）。</p>
-<h3>实地调查</h3>
-<p>专业做空机构通常会派人实地考察公司的生产设施、门店、办公室等，核实公司在招股书中描述的规模是否属实。他们会统计实际的员工人数、顾客流量、库存情况等可以直接观察到的运营数据，并与公司的财务报告进行比对。</p>
-<h3>工商和监管数据核查</h3>
-<p>中国大陆的工商局、税务局、社保部门等有大量可公开查询的数据（尽管部分需要通过特定渠道获取）。做空机构会比对上市公司的报告数据与这些政府来源数据，寻找不一致之处。</p>
-<h3>前员工和业务伙伴访谈</h3>
-<p>离职员工往往是做空机构最重要的信息来源。前员工的亲身陈述如果与公司披露的情况相矛盾，是做空报告中最有杀伤力的证据。</p>
-<h2>二、主动防御的7个核心措施</h2>
-<h3>措施1：确保财务数据的高度一致性</h3>
-<p>上市公司在SEC的所有披露文件（F-1、20-F、6-K）中的财务数据，必须与以下数据高度一致：公司在中国大陆或其他境内市场的税务申报数据、工商登记信息中的注册资本和股权结构、社会保险缴纳记录（与员工人数的匹配）。任何可能引起误解的差异，必须在SEC文件中主动说明和解释。</p>
-<h3>措施2：主动提供超越最低披露要求的运营数据</h3>
-<p>做空机构攻击的往往是信息真空地带——公司没有披露的数据，他们可以用不利于公司的方式进行推断。主动披露更多真实的运营数据（门店数量、客户数量、员工人数、实际采购量等），可以有效消除信息真空，减少被曲解的空间。</p>
-<h3>措施3：建立与分析师的深度关系</h3>
-<p>如果已经有多家可信赖的卖方分析师深度了解并跟踪你的公司，他们在做空报告出现后往往会第一时间对报告中的指控进行独立评估，为公司提供有力的第三方辩护。没有任何分析师覆盖的公司，在做空报告出现时只能孤立无援地应对市场恐慌。</p>
-<h3>措施4：控制前员工的离职风险</h3>
-<p>核心员工离职时，确保双方以体面、有尊严的方式结束合作关系，避免产生有强烈不满情绪的前员工。提供合理的离职条件（如期权的加速归属安排）、签署详细的保密协议和竞业限制协议，都有助于降低前员工成为做空信息来源的风险。</p>
-<h3>措施5：及时处理已知的信息披露问题</h3>
-<p>如果公司在历史上存在某些信息披露不完整的问题（如未充分披露的关联交易、某些合同的特殊安排等），应该在下一个可能的披露窗口（季报或年报）中主动补充完整，而不是等待做空机构发现。主动修正总比被动应对好。</p>
-<h3>措施6：投资关系的广度与深度</h3>
-<p>机构投资人基础越广、持股越分散，做空机构做空的市场影响就越有限。如果公司的流通股高度集中在少数几家机构手中，一旦做空报告发布，这些机构的任何减持动作都会对股价产生巨大冲击。通过持续的IR工作扩大机构持股基础，是分散做空风险的重要手段。</p>
-<h3>措施7：建立做空预警机制</h3>
-<p>通过持续监控市场异常信号来提前发现做空迹象：异常的期权市场活动（大量外购看跌期权可能意味着有人在为做空布局）、异常的股票借出量增加（做空需要借股票）、行业媒体或社交媒体上异常的负面舆论集中出现。一旦发现异常信号，提前启动内部自查和应急预案。</p>
-<h2>三、哪类公司最容易成为做空目标</h2>
-<p>了解做空机构的目标偏好，有助于针对性地加强防御。以下类型的公司最容易被盯上：收入增速极高但现金流与收入严重背离的公司（高增长高应收低现金流是最强的财务异常信号）；在招股书中对业务规模有夸大性描述的公司（如号称市场第一但工商数据显示远不足此）；管理层有历史负面记录的公司（包括其他公司任职期间的争议）；审计师频繁更换的公司（审计师主动辞职通常意味着重大财务问题）；关联交易大量且不透明的公司。</p>
-<h2>四、已经被做空机构盯上了怎么办</h2>
-<p>如果已经发现做空机构在调查公司（通过实地走访、前员工接触等迹象），不要惊慌，也不要试图阻止调查。正确的应对是立即联系公司律师和IR顾问，启动内部自查（找出可能被攻击的薄弱点，提前做好解释准备）；保持正常的IR工作节奏，不要因为担心做空而突然停止与投资人的沟通（停止沟通反而会引发市场猜测）；与D&amp;O保险公司保持沟通，确保在做空报告发布后能快速激活保险支持。</p>
-<h3>结语：透明度是最好的盾</h3>
-<p>做空机构的商业模式是发现信息不透明带来的价值误判并从中获利。一家财务完全干净、信息高度透明、管理层诚信无瑕疵的公司，在做空机构眼中是没有价值的目标。把透明度当作公司文化来建设，而不只是合规义务来对待，是最根本的做空防御策略。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p>
-<p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>做空机构在发布报告之前通常已经调查了公司3至12个月。他们的调查方法包括：分析财务报表中的异常数据、实地走访公司门店和客户、访谈前员工、核查工商注册信息、分析供应链关系。如果这些调查发现了大量可以做文章的漏洞，做空报告就会产生；如果公司的财务和运营信息高度透明、数据前后一致、没有明显的异常，做空机构通常会转向其他目标。</p><p>主动防御的核心是：让公司所有公开信息高度一致、无法被曲解；建立与市场的信任关系；消除一切可能被误解或曲解的信息盲区。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">做空机构的调查方法与重点</a></li><li><a href="#sec-02">主动防御的7个核心措施</a></li><li><a href="#sec-03">哪类公司最容易成为做空目标</a></li><li><a href="#sec-04">已经被做空机构盯上了怎么办</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、做空机构的调查方法与重点</h2><p><h3>财务数据分析</h3></p><p>做空机构会系统分析公司的历史财务报表，重点寻找以下异常：营业收入与实际应税收入或社会保险缴纳数据的不匹配、应收账款增速显著超过收入增速（可能意味着虚增收入）、毛利率与行业平均水平的异常差距（过高可能意味着成本被低估）、现金流量表与利润表的背离（有利润但没有现金流入是常见的财务造假信号）。</p><p><h3>实地调查</h3></p><p>专业做空机构通常会派人实地考察公司的生产设施、门店、办公室等，核实公司在招股书中描述的规模是否属实。他们会统计实际的员工人数、顾客流量、库存情况等可以直接观察到的运营数据，并与公司的财务报告进行比对。</p><p><h3>工商和监管数据核查</h3></p><p>中国大陆的工商局、税务局、社保部门等有大量可公开查询的数据（尽管部分需要通过特定渠道获取）。做空机构会比对上市公司的报告数据与这些政府来源数据，寻找不一致之处。</p><p><h3>前员工和业务伙伴访谈</h3></p><p>离职员工往往是做空机构最重要的信息来源。前员工的亲身陈述如果与公司披露的情况相矛盾，是做空报告中最有杀伤力的证据。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、主动防御的7个核心措施</h2><p><h3>措施1：确保财务数据的高度一致性</h3></p><p>上市公司在SEC的所有披露文件（F-1、20-F、6-K）中的财务数据，必须与以下数据高度一致：公司在中国大陆或其他境内市场的税务申报数据、工商登记信息中的注册资本和股权结构、社会保险缴纳记录（与员工人数的匹配）。任何可能引起误解的差异，必须在SEC文件中主动说明和解释。</p><p><h3>措施2：主动提供超越最低披露要求的运营数据</h3></p><p>做空机构攻击的往往是信息真空地带——公司没有披露的数据，他们可以用不利于公司的方式进行推断。主动披露更多真实的运营数据（门店数量、客户数量、员工人数、实际采购量等），可以有效消除信息真空，减少被曲解的空间。</p><p><h3>措施3：建立与分析师的深度关系</h3></p><p>如果已经有多家可信赖的卖方分析师深度了解并跟踪你的公司，他们在做空报告出现后往往会第一时间对报告中的指控进行独立评估，为公司提供有力的第三方辩护。没有任何分析师覆盖的公司，在做空报告出现时只能孤立无援地应对市场恐慌。</p><p><h3>措施4：控制前员工的离职风险</h3></p><p>核心员工离职时，确保双方以体面、有尊严的方式结束合作关系，避免产生有强烈不满情绪的前员工。提供合理的离职条件（如期权的加速归属安排）、签署详细的保密协议和竞业限制协议，都有助于降低前员工成为做空信息来源的风险。</p><p><h3>措施5：及时处理已知的信息披露问题</h3></p><p>如果公司在历史上存在某些信息披露不完整的问题（如未充分披露的关联交易、某些合同的特殊安排等），应该在下一个可能的披露窗口（季报或年报）中主动补充完整，而不是等待做空机构发现。主动修正总比被动应对好。</p><p><h3>措施6：投资关系的广度与深度</h3></p><p>机构投资人基础越广、持股越分散，做空机构做空的市场影响就越有限。如果公司的流通股高度集中在少数几家机构手中，一旦做空报告发布，这些机构的任何减持动作都会对股价产生巨大冲击。通过持续的IR工作扩大机构持股基础，是分散做空风险的重要手段。</p><p><h3>措施7：建立做空预警机制</h3></p><p>通过持续监控市场异常信号来提前发现做空迹象：异常的期权市场活动（大量外购看跌期权可能意味着有人在为做空布局）、异常的股票借出量增加（做空需要借股票）、行业媒体或社交媒体上异常的负面舆论集中出现。一旦发现异常信号，提前启动内部自查和应急预案。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、哪类公司最容易成为做空目标</h2><p>了解做空机构的目标偏好，有助于针对性地加强防御。以下类型的公司最容易被盯上：收入增速极高但现金流与收入严重背离的公司（高增长高应收低现金流是最强的财务异常信号）；在招股书中对业务规模有夸大性描述的公司（如号称市场第一但工商数据显示远不足此）；管理层有历史负面记录的公司（包括其他公司任职期间的争议）；审计师频繁更换的公司（审计师主动辞职通常意味着重大财务问题）；关联交易大量且不透明的公司。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、已经被做空机构盯上了怎么办</h2><p>如果已经发现做空机构在调查公司（通过实地走访、前员工接触等迹象），不要惊慌，也不要试图阻止调查。正确的应对是立即联系公司律师和IR顾问，启动内部自查（找出可能被攻击的薄弱点，提前做好解释准备）；保持正常的IR工作节奏，不要因为担心做空而突然停止与投资人的沟通（停止沟通反而会引发市场猜测）；与D&amp;O保险公司保持沟通，确保在做空报告发布后能快速激活保险支持。</p><p><h3>结语：透明度是最好的盾</h3></p><p>做空机构的商业模式是发现信息不透明带来的价值误判并从中获利。一家财务完全干净、信息高度透明、管理层诚信无瑕疵的公司，在做空机构眼中是没有价值的目标。把透明度当作公司文化来建设，而不只是合规义务来对待，是最根本的做空防御策略。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p><p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="short-attack-defense.html" style="color:#6b5426;font-weight:700;">做空攻击防御</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="first-year-listed.html" style="color:#6b5426;font-weight:700;">上市第一年十个坑</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="fpi-status-test.html" style="color:#6b5426;font-weight:700;">外国私人发行人身份认定：两步测试与丧失后的合规升级</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ir-fundamentals.html" style="color:#6b5426;font-weight:700;">上市公司IR体系搭建</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="liquidity-management.html" style="color:#6b5426;font-weight:700;">做市商与流动性管理</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

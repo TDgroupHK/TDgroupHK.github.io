@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"家族宪章：一份没有强制力的文件，为什么能管住三代人","inLanguage":"zh-CN","abstract":"A family charter sets out how a family and its business relate to each other - membership, employment rules, share transfers, dividends, family council and dispute resolution. The document itself is not directly enforceable; its force comes from translating its clauses into the articles of association, the shareholders agreement and trust deeds. The right time to draft one is while the founder still holds unquestioned authority.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/family-charter.html"},"datePublished":"2026-07-28","dateModified":"2026-07-28","description":"家族宪章是指家族成员共同订立、约定家族与家族企业之间关系的纲领性文件，内容通常涵盖成员范围、任职规则、股权转让与退出、分红政策、家族会议与争议解决。它本身不是具有强制执行力的合同，真正的效力来自把宪章条款翻译进公司章程、股东协议与信托文件这三份有法律约束力的文件。起草时点的判断标准只有一条：在创始人仍拥有无可争议的权威、家族尚未出现实质争议之前。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,52 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">财富与传承 WEALTH &amp; LEGACY</div><h1>家族宪章：一份没有强制力的文件，为什么能管住三代人</h1>
 <div class="sub">共识写在纸上，效力落在章程、协议和信托里</div><div class="en">A family charter sets out how a family and its business relate to each other - membership, employment rules, share transfers, dividends, family council and dispute resolution. The document itself is not directly enforceable; its force comes from translating its clauses into the articles of association, the shareholders agreement and trust deeds. The right time to draft one is while the founder still holds unquestioned authority.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-28">2026年7月28日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">家族宪章，是指家族成员共同订立的、约定家族与家族企业之间关系的纲领性文件，内容通常涵盖家族成员的范围界定、进入企业任职的规则、股权转让与退出机制、分红政策、家族会议的议事规则、争议解决与修订程序。它与公司章程、股东协议的分工是清晰的：章程管公司怎么运转，股东协议管股权怎么处置，家族宪章管人怎么进出前面这两者。宪章本身通常不被设计成可直接强制执行的合同，它的约束力有两个来源——家族内部的共识与声誉压力，以及把宪章条款逐条翻译进公司章程、股东协议和信托文件之后所获得的法律效力。后者才是它真正管用的原因。至于起草时点，判断标准只有一条：在创始人仍然拥有无可争议的权威、家族尚未出现实质争议之前。</div>
-<h2>一、家族宪章是什么，不是什么</h2>
-<p>家族宪章，是指一份由家族成员共同讨论并认可的纲领性文件，用来回答一个问题：这个家族和这家企业之间，按什么规则相处。</p>
-<p>先说它不是什么。它不是公司章程——章程是登记机关备案的法定文件，管的是股东会怎么开、董事怎么选、决议怎么通过。它也不是股东协议——股东协议是股东之间有约束力的合同，管的是股权怎么转让、优先权怎么行使、违约怎么办。这两份文件都只处理&quot;股权&quot;这一层，而家族的真实问题从来不止于股权：儿子能不能进公司、进来从什么岗位做起、女婿算不算家族成员、分红是按持股比例分还是留一部分做家族共同基金、兄弟之间吵翻了找谁裁决——这些问题在章程和股东协议里都没有位置。</p>
-<p>家族宪章填的就是这块空白。它管的是人：谁属于这个家族、家族成员以什么身份和企业发生关系、这种关系怎么开始和结束。因此，本质上它是一份关于&quot;进出规则&quot;的文件，而不是一份关于&quot;财产分配&quot;的文件。</p>
-<p>一种在咨询中反复出现的误解是，把家族宪章当成遗嘱的替代品或者补充版本。这是两回事：遗嘱处理的是身故之后财产归谁，家族宪章处理的是活着的时候大家怎么共处。一个家族完全可能既有清晰的遗嘱安排，又因为没有宪章而在创始人尚在时就爆发内耗。</p>
-<h2>二、没有强制力，凭什么管得住</h2>
-<p>结论先说：家族宪章的效力有两层，浅的那层是共识与声誉，深的那层是把条款翻译进有强制力的文件。真正管住三代人的，是深的那层。</p>
-<p>浅的那层是软的。宪章的订立过程本身有价值——把过去从来没被摆到台面上的问题（谁能进公司、按什么标准提拔、分红留多少）拿出来公开讨论并达成一致，这个过程会消解掉大量潜在的误解。文件签署之后，成员违背它虽然通常不会被起诉，但会在家族内部承受声誉成本。对于一个仍然重视家族关系的群体，这层约束是真实存在的。</p>
-<p>但只靠这一层，宪章就是一份道德倡议书。真正的效力来自深的那层：把宪章里的每一条实质性安排，落到三份有法律约束力的文件里去。</p>
-<p>其一，进公司章程。比如&quot;家族成员担任董事需经家族会议提名&quot;这条，翻译成章程里的董事提名程序条款。其二，进股东协议。比如&quot;股权不得转让给家族外第三方，其他家族股东享有优先购买权&quot;这条，翻译成股东协议的转让限制与优先购买权条款，并配置违约救济。其三，进信托文件。比如&quot;第三代年满二十八岁且完成三年外部工作经历后方可支配收益&quot;这条，写进家族信托的分配条款，由受托人执行。信托、保险等持牌业务由持牌合作机构承做，家族宪章负责给出规则，法律文件负责给出牙齿。相关的股权持有结构可以进一步参阅<a href="trust-structures-listing.html">家族信托与上市公司股权</a>。</p>
-<p>关键在于：一条写在宪章里却没有落到任何法律文件的规则，在真正的冲突面前基本没有作用。所以起草宪章从来不是写作任务，是法律工程。</p>
-<h2>三、一份宪章通常写些什么</h2>
-<p>一份完整的家族宪章，通常覆盖七个方面。</p>
-<p>其一，家族成员的定义与代际范围。谁算家族成员——血亲、配偶、领养子女、离婚后的前配偶，各自是什么地位。这一条看似最基础，实际最容易引发争议，因为它直接决定后面所有权利的适用对象。</p>
-<p>其二，家族成员进入企业任职的规则。是否允许、需要什么前置条件（常见的做法是要求先在家族企业之外工作若干年并取得可验证的业绩）、从什么层级起步、由谁考核、能否越级提拔。这一条的功能是把&quot;因为你姓这个姓所以你能当副总&quot;这种安排提前挡掉。</p>
-<p>其三，股权转让与退出机制。家族成员想退出怎么办、估值怎么定、支付怎么分期、优先购买权怎么行使、能不能质押。缺了退出机制的宪章是不完整的——一个想走却走不掉的股东，是所有家族纠纷里最不稳定的因素。</p>
-<p>其四，分红政策。利润按什么比例分配、多少留存再投资、是否设立家族共同基金用于教育医疗与创业支持。把分红政策写清楚，能显著减少每年一次的争吵。</p>
-<p>其五，家族会议与议事规则。家族会议由谁组成、多久开一次、决议门槛是简单多数还是特别多数、创始人是否保留否决权及保留到什么时候。</p>
-<p>其六，争议解决。内部调解程序、外部中立第三方的选任、什么情况下才允许诉诸法律程序。</p>
-<p>其七，修订程序。宪章必须可修订，且修订门槛要高于普通决议。因此，一份没有写修订条款的宪章，要么很快被架空，要么在环境变化时把整个家族锁死。</p>
-<h2>四、谁来起草，怎么通过</h2>
-<p>结论先说：起草不能由创始人一个人完成，通过必须有仪式感。</p>
-<p>起草的常见做法是设立一个临时的起草小组，成员包括创始人、下一代代表、以及外部顾问。外部顾问的价值不在于提供模板，而在于两点：一是问出家族内部不好意思互相问的问题；二是把家族语言翻译成法律语言，判断哪一条能落进章程、哪一条只能停留在共识层面。彤鼎在这类项目中的角色是规划与统筹，具体的法律文件起草由持牌律师承做。</p>
-<p>通过环节值得认真对待。一份由创始人单方面颁布的宪章，在他不在之后几乎必然被挑战；而一份经过充分讨论、逐条表决、全体签署的宪章，即便法律上不可强制执行，也会因为&quot;每个人都参与过&quot;而获得相当强的正当性。在华尔街彤鼎传承俱乐部的闭门交流里，走完这个流程的家族反馈最多的一句话是：讨论过程本身的价值，超过了最终那份文件。</p>
-<p>本质上，通过程序的严肃性，决定了宪章将来被援引时的分量。</p>
-<h2>五、上市公司家族的特殊考量</h2>
-<p>对于企业已经上市或正在筹备上市的家族，宪章需要额外处理四件事。</p>
-<p>其一，与信息披露的边界。家族宪章通常不属于必须公开披露的文件，但其中涉及控制权安排、一致行动关系、董事提名机制的条款，可能构成需要披露的信息。哪些进披露、哪些不进，需要在起草阶段就与申报中介确认，避免上市后被追问。</p>
-<p>其二，关联交易的约束。家族成员及其控制的企业与上市公司之间的交易，在宪章层面就应当设定比法定要求更严的内部标准，包括回避表决、事前报备、定价公允性证明。这既是合规要求，也是对家族自身的保护。</p>
-<p>其三，董事提名与控制权稳定性。二级市场对控制权的稳定性有定价，家族内部的提名规则如果频繁变动或出现公开分歧，会直接传导到公司治理评价上。宪章在这里的作用是把提名规则固定下来，减少不确定性。</p>
-<p>其四，减持与股权变动的家族内部纪律。家族成员各自减持还是统一安排、减持前是否需要家族会议知会、所得资金是否有再投资约定。相关的代际转移路径可参阅<a href="equity-generational-transfer.html">股权代际转移的三种路径与税务考量</a>。</p>
-<p>因此，上市家族的宪章不只是家事文件，它同时是公司治理文件的上游。</p>
-<h2>六、四种常见的失败模式</h2>
-<p>其一，写成道德倡议书。通篇是&quot;家族成员应当团结互助、勤勉尽责&quot;这类无法执行的表述，没有一条能落进法律文件。这类宪章签完就进抽屉。</p>
-<p>其二，没有退出机制。只写了怎么进、怎么分，没写怎么退。等到某一代出现一个既不参与经营又想变现的成员，整个体系立刻卡死。</p>
-<p>其三，没有修订条款。宪章订立时家族只有五个人，二十年后有二十五个人，环境和结构都变了，却没有合法的修改路径——最后只能整体作废，前面的共识白做。</p>
-<p>其四，只有创始人一个人的意志。条款全部围绕&quot;我希望你们怎样&quot;展开，没有下一代的真实诉求。这类宪章在创始人在世时无人反对，在他离开后很快被推翻。一种反复出现的情形是：家族在创始人身故后才发现，那份被郑重签署过的文件，从来没有被翻译进任何一份有约束力的法律文件，于是法定继承规则直接覆盖了它的全部安排。企业接班的整体安排可进一步参阅<a href="family-succession.html">家族接班与资本安排</a>。</p>
-<p>关键在于：这四种失败都不是执行问题，是起草阶段就已经注定的问题。</p>
-<h2>七、什么时候开始写</h2>
-<p>结论很直接：在创始人仍然拥有无可争议的权威、家族尚未出现实质争议的时候。</p>
-<p>理由有三点。其一，宪章的核心是分配规则，而分配规则只有在没有具体争议标的的时候才谈得拢——一旦某个具体的位置或某笔具体的钱摆在桌上，任何规则讨论都会变成立场之争。其二，创始人的权威是订立宪章最稀缺的资源，它随时间递减，用在订规则上比用在做裁判上效率高得多。其三，宪章条款要翻译进章程、股东协议和信托文件，这些文件的修改本身需要时间和程序，通常以年计。</p>
-<p>从家族办公室的整体安排来看，宪章是治理层的起点，财富架构的持有安排则是它的下游，两者通常同步规划，具体可参阅<a href="family-office.html">家族办公室设立与运作</a>。</p>
-<p>本质上，家族宪章解决的不是&quot;财产给谁&quot;，而是&quot;这个家族用什么规则做决定&quot;。前者迟早会有答案，后者如果没有答案，前者给出的每一个答案都会被反复推翻。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>家族宪章，是指家族成员共同订立的、约定家族与家族企业之间关系的纲领性文件，内容通常涵盖家族成员的范围界定、进入企业任职的规则、股权转让与退出机制、分红政策、家族会议的议事规则、争议解决与修订程序。它与公司章程、股东协议的分工是清晰的：章程管公司怎么运转，股东协议管股权怎么处置，家族宪章管人怎么进出前面这两者。</p><p>宪章本身通常不被设计成可直接强制执行的合同，它的约束力有两个来源——家族内部的共识与声誉压力，以及把宪章条款逐条翻译进公司章程、股东协议和信托文件之后所获得的法律效力。后者才是它真正管用的原因。至于起草时点，判断标准只有一条：在创始人仍然拥有无可争议的权威、家族尚未出现实质争议之前。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">家族宪章是什么，不是什么</a></li><li><a href="#sec-02">没有强制力，凭什么管得住</a></li><li><a href="#sec-03">一份宪章通常写些什么</a></li><li><a href="#sec-04">谁来起草，怎么通过</a></li><li><a href="#sec-05">上市公司家族的特殊考量</a></li><li><a href="#sec-06">四种常见的失败模式</a></li><li><a href="#sec-07">什么时候开始写</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、家族宪章是什么，不是什么</h2><p>家族宪章，是指一份由家族成员共同讨论并认可的纲领性文件，用来回答一个问题：这个家族和这家企业之间，按什么规则相处。</p><p>先说它不是什么。它不是公司章程——章程是登记机关备案的法定文件，管的是股东会怎么开、董事怎么选、决议怎么通过。它也不是股东协议——股东协议是股东之间有约束力的合同，管的是股权怎么转让、优先权怎么行使、违约怎么办。</p><p data-ts="1">这两份文件都只处理&quot;股权&quot;这一层，而家族的真实问题从来不止于股权：儿子能不能进公司、进来从什么岗位做起、女婿算不算家族成员、分红是按持股比例分还是留一部分做家族共同基金、兄弟之间吵翻了找谁裁决——这些问题在章程和股东协议里都没有位置。</p><p>家族宪章填的就是这块空白。它管的是人：谁属于这个家族、家族成员以什么身份和企业发生关系、这种关系怎么开始和结束。因此，本质上它是一份关于&quot;进出规则&quot;的文件，而不是一份关于&quot;财产分配&quot;的文件。</p><p>一种在咨询中反复出现的误解是，把家族宪章当成遗嘱的替代品或者补充版本。这是两回事：遗嘱处理的是身故之后财产归谁，家族宪章处理的是活着的时候大家怎么共处。一个家族完全可能既有清晰的遗嘱安排，又因为没有宪章而在创始人尚在时就爆发内耗。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、没有强制力，凭什么管得住</h2><p>结论先说：家族宪章的效力有两层，浅的那层是共识与声誉，深的那层是把条款翻译进有强制力的文件。真正管住三代人的，是深的那层。</p><p>浅的那层是软的。宪章的订立过程本身有价值——把过去从来没被摆到台面上的问题（谁能进公司、按什么标准提拔、分红留多少）拿出来公开讨论并达成一致，这个过程会消解掉大量潜在的误解。文件签署之后，成员违背它虽然通常不会被起诉，但会在家族内部承受声誉成本。对于一个仍然重视家族关系的群体，这层约束是真实存在的。</p><p>但只靠这一层，宪章就是一份道德倡议书。真正的效力来自深的那层：把宪章里的每一条实质性安排，落到三份有法律约束力的文件里去。</p><ol class="ts-pts"><li><b>其一</b>，进公司章程。比如&quot;家族成员担任董事需经家族会议提名&quot;这条，翻译成章程里的董事提名程序条款。</li><li><b>其二</b>，进股东协议。比如&quot;股权不得转让给家族外第三方，其他家族股东享有优先购买权&quot;这条，翻译成股东协议的转让限制与优先购买权条款，并配置违约救济。</li><li><b>其三</b>，进信托文件。比如&quot;第三代年满二十八岁且完成三年外部工作经历后方可支配收益&quot;这条，写进家族信托的分配条款，由受托人执行。信托、保险等持牌业务由持牌合作机构承做，家族宪章负责给出规则，法律文件负责给出牙齿。相关的股权持有结构可以进一步参阅<a href="trust-structures-listing.html">家族信托与上市公司股权</a>。</li></ol><p>关键在于：一条写在宪章里却没有落到任何法律文件的规则，在真正的冲突面前基本没有作用。所以起草宪章从来不是写作任务，是法律工程。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、一份宪章通常写些什么</h2><p>一份完整的家族宪章，通常覆盖七个方面。</p><p>其一，家族成员的定义与代际范围。谁算家族成员——血亲、配偶、领养子女、离婚后的前配偶，各自是什么地位。这一条看似最基础，实际最容易引发争议，因为它直接决定后面所有权利的适用对象。</p><p>其二，家族成员进入企业任职的规则。是否允许、需要什么前置条件（常见的做法是要求先在家族企业之外工作若干年并取得可验证的业绩）、从什么层级起步、由谁考核、能否越级提拔。这一条的功能是把&quot;因为你姓这个姓所以你能当副总&quot;这种安排提前挡掉。</p><p>其三，股权转让与退出机制。家族成员想退出怎么办、估值怎么定、支付怎么分期、优先购买权怎么行使、能不能质押。缺了退出机制的宪章是不完整的——一个想走却走不掉的股东，是所有家族纠纷里最不稳定的因素。</p><p>其四，分红政策。利润按什么比例分配、多少留存再投资、是否设立家族共同基金用于教育医疗与创业支持。把分红政策写清楚，能显著减少每年一次的争吵。</p><p>其五，家族会议与议事规则。家族会议由谁组成、多久开一次、决议门槛是简单多数还是特别多数、创始人是否保留否决权及保留到什么时候。</p><p>其六，争议解决。内部调解程序、外部中立第三方的选任、什么情况下才允许诉诸法律程序。</p><p>其七，修订程序。宪章必须可修订，且修订门槛要高于普通决议。因此，一份没有写修订条款的宪章，要么很快被架空，要么在环境变化时把整个家族锁死。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、谁来起草，怎么通过</h2><p>结论先说：起草不能由创始人一个人完成，通过必须有仪式感。</p><p>起草的常见做法是设立一个临时的起草小组，成员包括创始人、下一代代表、以及外部顾问。外部顾问的价值不在于提供模板，而在于两点：一是问出家族内部不好意思互相问的问题；二是把家族语言翻译成法律语言，判断哪一条能落进章程、哪一条只能停留在共识层面。彤鼎在这类项目中的角色是规划与统筹，具体的法律文件起草由持牌律师承做。</p><p>通过环节值得认真对待。一份由创始人单方面颁布的宪章，在他不在之后几乎必然被挑战；而一份经过充分讨论、逐条表决、全体签署的宪章，即便法律上不可强制执行，也会因为&quot;每个人都参与过&quot;而获得相当强的正当性。</p><p data-ts="1">在华尔街彤鼎传承俱乐部的闭门交流里，走完这个流程的家族反馈最多的一句话是：讨论过程本身的价值，超过了最终那份文件。</p><p>本质上，通过程序的严肃性，决定了宪章将来被援引时的分量。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、上市公司家族的特殊考量</h2><p>对于企业已经上市或正在筹备上市的家族，宪章需要额外处理四件事。</p><p>其一，与信息披露的边界。家族宪章通常不属于必须公开披露的文件，但其中涉及控制权安排、一致行动关系、董事提名机制的条款，可能构成需要披露的信息。哪些进披露、哪些不进，需要在起草阶段就与申报中介确认，避免上市后被追问。</p><p>其二，关联交易的约束。家族成员及其控制的企业与上市公司之间的交易，在宪章层面就应当设定比法定要求更严的内部标准，包括回避表决、事前报备、定价公允性证明。这既是合规要求，也是对家族自身的保护。</p><p>其三，董事提名与控制权稳定性。二级市场对控制权的稳定性有定价，家族内部的提名规则如果频繁变动或出现公开分歧，会直接传导到公司治理评价上。宪章在这里的作用是把提名规则固定下来，减少不确定性。</p><p>其四，减持与股权变动的家族内部纪律。家族成员各自减持还是统一安排、减持前是否需要家族会议知会、所得资金是否有再投资约定。相关的代际转移路径可参阅<a href="equity-generational-transfer.html">股权代际转移的三种路径与税务考量</a>。</p><p>因此，上市家族的宪章不只是家事文件，它同时是公司治理文件的上游。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、四种常见的失败模式</h2><p>其一，写成道德倡议书。通篇是&quot;家族成员应当团结互助、勤勉尽责&quot;这类无法执行的表述，没有一条能落进法律文件。这类宪章签完就进抽屉。</p><p>其二，没有退出机制。只写了怎么进、怎么分，没写怎么退。等到某一代出现一个既不参与经营又想变现的成员，整个体系立刻卡死。</p><p>其三，没有修订条款。宪章订立时家族只有五个人，二十年后有二十五个人，环境和结构都变了，却没有合法的修改路径——最后只能整体作废，前面的共识白做。</p><p>其四，只有创始人一个人的意志。条款全部围绕&quot;我希望你们怎样&quot;展开，没有下一代的真实诉求。这类宪章在创始人在世时无人反对，在他离开后很快被推翻。一种反复出现的情形是：家族在创始人身故后才发现，那份被郑重签署过的文件，从来没有被翻译进任何一份有约束力的法律文件，于是法定继承规则直接覆盖了它的全部安排。企业接班的整体安排可进一步参阅<a href="family-succession.html">家族接班与资本安排</a>。</p><p>关键在于：这四种失败都不是执行问题，是起草阶段就已经注定的问题。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、什么时候开始写</h2><p>结论很直接：在创始人仍然拥有无可争议的权威、家族尚未出现实质争议的时候。</p><p>理由有三点。</p><ol class="ts-pts"><li><b>其一，宪章的核心是分配规则</b>，而分配规则只有在没有具体争议标的的时候才谈得拢——一旦某个具体的位置或某笔具体的钱摆在桌上，任何规则讨论都会变成立场之争。</li><li><b>其二</b>，创始人的权威是订立宪章最稀缺的资源，它随时间递减，用在订规则上比用在做裁判上效率高得多。</li><li><b>其三</b>，宪章条款要翻译进章程、股东协议和信托文件，这些文件的修改本身需要时间和程序，通常以年计。</li></ol><p>从家族办公室的整体安排来看，宪章是治理层的起点，财富架构的持有安排则是它的下游，两者通常同步规划，具体可参阅<a href="family-office.html">家族办公室设立与运作</a>。</p><p>本质上，家族宪章解决的不是&quot;财产给谁&quot;，而是&quot;这个家族用什么规则做决定&quot;。前者迟早会有答案，后者如果没有答案，前者给出的每一个答案都会被反复推翻。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="family-succession.html" style="color:#6b5426;font-weight:700;">家族接班与资本安排</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="sfo-vs-mfo.html" style="color:#6b5426;font-weight:700;">单一家办还是联合家办：一道关于成本、控制权和边界的选择题</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="equity-generational-transfer.html" style="color:#6b5426;font-weight:700;">股权代际转移的三种路径与税务考量</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="post-ipo-wealth-framework.html" style="color:#6b5426;font-weight:700;">上市之后：创始人财富的合规管理框架</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="trust-structures-listing.html" style="color:#6b5426;font-weight:700;">家族信托与上市公司股权</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

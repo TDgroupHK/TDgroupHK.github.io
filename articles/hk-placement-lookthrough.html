@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"港股IPO配售穿透核查：交易所要看清谁在接货","inLanguage":"zh-CN","abstract":"A placement look-through review in a Hong Kong IPO is the process by which the exchange and the sponsor unpick every placee in the placing tranche — identity, connected-party relationships and the source of subscription funds — until the ultimate beneficial owner of each block is identified, so as to confirm that the offering meets the minimum public float (generally not less than 25% of issued shares on the Main Board) and has not been diluted by connected persons or nominee arrangements. This article sets out the public-float starting point, the unwinding of connected-party links, the chain from nominee subscriber to ultimate beneficial owner, the scrutiny of funding sources, and the two red lines the review exists to stop: sham placings and placing collusion.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/hk-placement-lookthrough.html","datePublished":"2026-07-24","dateModified":"2026-07-24","image":"https://tdgroup.hk/img/og-card.jpg","description":"港股IPO配售穿透式核查，是交易所与保荐人在配售环节对每一名配售对象的身份、关联关系与认购资金来源逐层还原，直至识别最终实益拥有人，以确认满足最低公众持股量（主板一般不低于25%）、且未被关联人士或代持稀释的一整套审查程序。本文拆解公众持股量起点、关联人士还原、最终实益穿透链条、资金来源核查，以及虚假配售与围标两条红线。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,36 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">港股配售 PLACEMENT SCRUTINY</div><h1>港股IPO配售穿透核查：交易所要看清谁在接货</h1>
 <div class="sub">公众持股量红线、关联配售限制与最终实益拥有人的穿透逻辑</div><div class="en">A placement look-through review in a Hong Kong IPO is the process by which the exchange and the sponsor unpick every placee in the placing tranche — identity, connected-party relationships and the source of subscription funds — until the ultimate beneficial owner of each block is identified, so as to confirm that the offering meets the minimum public float (generally not less than 25% of issued shares on the Main Board) and has not been diluted by connected persons or nominee arrangements. This article sets out the public-float starting point, the unwinding of connected-party links, the chain from nominee subscriber to ultimate beneficial owner, the scrutiny of funding sources, and the two red lines the review exists to stop: sham placings and placing collusion.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-24">2026年7月24日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">港股IPO的配售穿透式核查，是指交易所与保荐人在新股发行的配售环节，对每一名配售对象的身份、关联关系与认购资金来源逐层还原，直至识别出股份的最终实益拥有人，以确认发行满足最低公众持股量、且未被关联人士或代持安排稀释的一整套审查程序。它的制度起点是两条硬性规则：其一，香港主板要求上市时公众持股量一般不低于25%，仅在预期市值很高时交易所才可酌情批准更低比例；其二，发行人的关联人士原则上不得参与配售来充当公众股东。核查要回答的核心问题只有一个——名单上这些看似独立的认购人，是不是真正独立、资金是不是真正来自本人。因此，配售能不能过关，不取决于名单排得多漂亮，而取决于穿透之后是否仍然干净。</div>
-<h2>一、配售穿透式核查，到底在核查什么</h2>
-<p><strong>结论先说：穿透核查审查的不是认购价格，也不是配售比例本身，而是每一份认购背后的真实身份与真实出资。</strong></p>
-<p>港股新股发行通常分为面向公众的公开发售，与面向机构及专业投资者的配售（国际配售）两部分。配售部分由发行人与整体协调人主导分配，灵活度高，也正因如此成为监管关注的重点。所谓穿透式核查，就是把配售名单上每一个认购主体逐层拆开：如果认购人是一家公司或一只基金，要看它的股东、管理人、实际控制人；如果是通过资产管理计划或信托认购，要看谁是委托人、谁是最终受益人；如果出现层层嵌套，则要一直追到最末端的自然人或独立机构为止。</p>
-<p>穿透的目的，是把三件事查清楚：这名认购人与发行人及其关联方是否存在关联关系，认购资金是否真正来自认购人自身，以及在最终实益层面这笔股份是否仍然计入公众持股。三个问题任何一个答不清楚，这份配售就存在被剔除出公众持股、甚至影响整体发行成立的可能。<strong>本质上，穿透核查是把配售环节从"分给谁"的商业问题，还原成"谁在真正持有"的合规问题。</strong></p>
-<h2>二、为什么公众持股量是穿透核查的起点</h2>
-<p><strong>结论先说：所有穿透动作的原点，是上市时必须满足的最低公众持股量，这是一条不能靠名单技巧绕过的硬规则。</strong></p>
-<p>香港主板要求，发行人上市时由公众人士持有的股份一般不低于已发行股本的25%。这里的"公众"是一个受严格定义的概念——发行人的关联人士，以及虽在名义上独立、实则受关联人士资助或按其指示行事的人，都不计入公众。只有当独立第三方真实持有的股份达到门槛，发行才被认为具备了必要的市场流通基础。对于预期市值很高的超大型发行人，交易所可行使酌情权批准低于25%的比例，但这属于个案审批，且下限本身也有约束，绝非发行人可自行选择。</p>
-<p>正因为门槛卡在"公众"二字上，配售名单里到底有多少是真正的公众，就成了必须核实的事实。如果一部分配售股份表面配给了独立投资者，穿透之后却发现其资金或指令来自发行人一方，那么这部分就要从公众持股中扣除，扣除后一旦跌破门槛，发行的合规基础即被动摇。<strong>关键在于，公众持股量考核的是实质而非名义，穿透核查正是把名义拉回实质的工具。</strong></p>
-<h2>三、关联人士：穿透要还原的首层关系</h2>
-<p><strong>结论先说：穿透的首刀，切的是关联关系——认购人与发行人之间有没有不该有的联系。</strong></p>
-<p>关联人士在上市规则中有明确外延，通常涵盖发行人的董事、最高行政人员、控股股东及其各自的紧密联系人，以及这些主体控制的公司。原则上，关联人士不得在配售中认购股份来充当公众股东；个别情形下现有股东参与认购需要事先申请并获得豁免，且相关股份的公众属性仍要单独判断。核查要防的，是关联关系被刻意隐藏——例如以控股股东亲属的名义、以高管配偶控制的公司名义、或以与发行人有长期资金往来的"朋友圈"名义参与配售，从而在账面上制造出并不存在的独立性。</p>
-<p>还原关联关系，靠的不是认购人的一纸声明，而是交叉验证：股东名册、董事及高管的关联方清单、认购主体的工商与受益人信息、历史交易与资金往来记录，彼此比对，找出名义独立、实质关联的节点。华尔街彤鼎俱乐部在与企业主的闭门交流中反复提示：配售名单的干净程度，往往比认购价格更早决定发行能否顺利推进。<strong>因此，关联关系不是靠回避就能消失的问题，只有主动、完整地披露与还原，才能把它从风险变成可控项。</strong></p>
-<h2>四、从名义认购人到最终实益拥有人：穿透的链条</h2>
-<p><strong>结论先说：穿透之所以叫穿透，是因为它要求追到链条最末端的最终实益拥有人，而不是停在最表层的名义持有人。</strong></p>
-<p>最终实益拥有人，是指最终享有股份经济利益、或对持股主体拥有最终控制权的自然人或独立机构。现实中的配售结构常常是多层的：一只基金背后可能站着若干出资人，一个资产管理计划背后可能是若干委托人，一家离岸公司背后可能还有一层控股安排。穿透核查要沿着这条链条一节一节往下走，直到能够确认每一份股份最终由谁享有、由谁支配为止。</p>
-<p>这条链条上最容易出问题的，是代持与嵌套。代持是指名义持有人并非真正的权利人，而是替他人持有股份；嵌套则是通过多层主体把真实持有人藏在结构深处。两者都会让配售名单在表面上显得分散而独立，穿透之后却可能收敛到少数几个真实主体，甚至收敛回发行人一方。核查一旦还原出这种收敛，相关股份的公众属性即被否定。<strong>本质上，穿透追问的不是"名字写的是谁"，而是"利益归了谁、决定权在谁手里"。</strong></p>
-<h2>五、资金来源核查：钱从哪来，比名字更能说明问题</h2>
-<p><strong>结论先说：身份可以安排，名单可以设计，但资金流向很难伪装，因此资金来源核查是穿透中最有力的一环。</strong></p>
-<p>配售资金来源核查，要求认购人说明并证明认购款项的真实出处，核心是排除三种情形：认购资金直接或间接来自发行人及其关联方，认购人以发行人一方提供的融资或担保来完成认购，以及认购人代他人出资而由他人享有实际利益。这些情形一旦成立，意味着所谓的"独立认购"只是资金在体系内绕了一圈，最终风险与收益并未真正转移给外部投资者，公众持股的实质因此不成立。</p>
-<p>核查的手段是把资金链与身份链并置比对：认购款的银行流水、出资主体与认购主体是否一致、大额款项在认购前的划转路径、是否存在与发行人关联方的过桥安排。当名单显示的独立性与资金显示的关联性发生矛盾时，监管与保荐人采信的是资金。港交所近年持续收紧对配售资金的穿透式核查，把资金来源作为判断配售真实性的关键证据，正是基于这一逻辑（具体要求以港交所正式规则文本为准）。<strong>关键在于，能说清资金从哪来，独立性才立得住；说不清，再独立的名单也站不住脚。</strong></p>
-<h2>六、虚假配售与围标：核查真正要拦截的红线</h2>
-<p><strong>结论先说：穿透核查的终极目标，是拦下两类违规安排——虚假配售与配售围标，它们都属于监管明令禁止、发行人绝不应触碰的行为。</strong></p>
-<p>虚假配售，是指以表面独立的第三方名义认购，实则由发行人一方出资或控制，用来虚增公众持股、制造发行成功的假象。配售围标，则是指发行人一方通过关联或受控主体协同认购，操纵配售的分布与定价。这两种做法违反公众持股与配售独立性的基本要求，一经查实，轻则相关股份被剔除、发行被要求整改，重则触发对发行人及中介机构的问责，并在其后续的资本运作中长期留痕。此处将其列出，是作为合规科普中的反面警示，提醒企业这些是被明确禁止的违规操作，而非可选的技术手段。</p>
-<p>穿透核查之所以要一路查到资金与最终受益，正是为了让这两类安排无处藏身。对企业而言，与其在名单上做文章，不如从一开始就确保配售对象真实独立、资金来源清白。华尔街彤鼎俱乐部亦会围绕发行结构、配售纪律与合规披露等主题，为有资本化规划的企业主提供系统的资本认知与资源对接。<strong>本质上，配售是发行人向市场展示"有多少真实资金愿意进来"的窗口，任何注水都是在透支这个窗口的可信度。</strong></p>
-<h2>七、企业与保荐团队应如何提前准备</h2>
-<p><strong>结论先说：配售穿透核查不是发行日前的临门冲刺，而是从筹备之初就要嵌入的合规纪律。</strong></p>
-<p>准备工作可以概括为三条。其一，尽早建立配售对象的独立性判断标准与尽职调查清单，对每一名拟引入的投资者，事先核实其与发行人及关联方的关系、其认购主体结构与最终实益拥有人，把不符合独立性要求的对象在名单形成阶段就排除，而不是等到核查时被动剔除。其二，管好资金来源的证据链，要求认购人以自有资金认购并留存可追溯的出资凭证，杜绝任何来自发行人一方的过桥、垫资或融资安排。其三，把配售安排纳入整体信息披露，对现有股东参与认购、关联方豁免、公众持股比例的计算口径等事项，在招股文件中如实、充分地说明。</p>
-<p>这三条的共同点，是把"能不能通过核查"提前变成"经得起穿透"。配售名单一旦形成再回头补救，往往牵一发而动全身——剔除一名认购人可能连带影响公众持股比例、发行规模与定价安排，成本远高于事前把关。因此，对配售独立性的把控，应当与架构设计、财务规范、备案准备放在同一个筹备时间表里统筹推进。华尔街彤鼎俱乐部在与企业家的交流中经常强调一个判断：发行的可信度，是从最初一份配售意向就开始积累的。<strong>关键在于，穿透核查考验的从来不是应对技巧，而是发行本身有多真实。</strong></p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>港股IPO的配售穿透式核查，是指交易所与保荐人在新股发行的配售环节，对每一名配售对象的身份、关联关系与认购资金来源逐层还原，直至识别出股份的最终实益拥有人，以确认发行满足最低公众持股量、且未被关联人士或代持安排稀释的一整套审查程序。</p><p>它的制度起点是两条硬性规则：其一，香港主板要求上市时公众持股量一般不低于25%，仅在预期市值很高时交易所才可酌情批准更低比例；其二，发行人的关联人士原则上不得参与配售来充当公众股东。核查要回答的核心问题只有一个——名单上这些看似独立的认购人，是不是真正独立、资金是不是真正来自本人。因此，配售能不能过关，不取决于名单排得多漂亮，而取决于穿透之后是否仍然干净。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">配售穿透式核查，到底在核查什么</a></li><li><a href="#sec-02">为什么公众持股量是穿透核查的起点</a></li><li><a href="#sec-03">关联人士：穿透要还原的首层关系</a></li><li><a href="#sec-04">从名义认购人到最终实益拥有人：穿透的链条</a></li><li><a href="#sec-05">资金来源核查：钱从哪来，比名字更能说明问题</a></li><li><a href="#sec-06">虚假配售与围标：核查真正要拦截的红线</a></li><li><a href="#sec-07">企业与保荐团队应如何提前准备</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、配售穿透式核查，到底在核查什么</h2><p><strong>结论先说：穿透核查审查的不是认购价格，也不是配售比例本身，而是每一份认购背后的真实身份与真实出资。</strong></p><p>港股新股发行通常分为面向公众的公开发售，与面向机构及专业投资者的配售（国际配售）两部分。配售部分由发行人与整体协调人主导分配，灵活度高，也正因如此成为监管关注的重点。所谓穿透式核查，就是把配售名单上每一个认购主体逐层拆开：如果认购人是一家公司或一只基金，要看它的股东、管理人、实际控制人；如果是通过资产管理计划或信托认购，要看谁是委托人、谁是最终受益人；如果出现层层嵌套，则要一直追到最末端的自然人或独立机构为止。</p><p>穿透的目的，是把三件事查清楚：这名认购人与发行人及其关联方是否存在关联关系，认购资金是否真正来自认购人自身，以及在最终实益层面这笔股份是否仍然计入公众持股。三个问题任何一个答不清楚，这份配售就存在被剔除出公众持股、甚至影响整体发行成立的可能。</p><p data-ts="1"><strong>本质上，穿透核查是把配售环节从"分给谁"的商业问题，还原成"谁在真正持有"的合规问题。</strong></p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、为什么公众持股量是穿透核查的起点</h2><p><strong>结论先说：所有穿透动作的原点，是上市时必须满足的最低公众持股量，这是一条不能靠名单技巧绕过的硬规则。</strong></p><p>香港主板要求，发行人上市时由公众人士持有的股份一般不低于已发行股本的25%。这里的"公众"是一个受严格定义的概念——发行人的关联人士，以及虽在名义上独立、实则受关联人士资助或按其指示行事的人，都不计入公众。</p><p data-ts="1">只有当独立第三方真实持有的股份达到门槛，发行才被认为具备了必要的市场流通基础。对于预期市值很高的超大型发行人，交易所可行使酌情权批准低于25%的比例，但这属于个案审批，且下限本身也有约束，绝非发行人可自行选择。</p><p>正因为门槛卡在"公众"二字上，配售名单里到底有多少是真正的公众，就成了必须核实的事实。如果一部分配售股份表面配给了独立投资者，穿透之后却发现其资金或指令来自发行人一方，那么这部分就要从公众持股中扣除，扣除后一旦跌破门槛，发行的合规基础即被动摇。<strong>关键在于，公众持股量考核的是实质而非名义，穿透核查正是把名义拉回实质的工具。</strong></p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、关联人士：穿透要还原的首层关系</h2><p><strong>结论先说：穿透的首刀，切的是关联关系——认购人与发行人之间有没有不该有的联系。</strong></p><p>关联人士在上市规则中有明确外延，通常涵盖发行人的董事、最高行政人员、控股股东及其各自的紧密联系人，以及这些主体控制的公司。原则上，关联人士不得在配售中认购股份来充当公众股东；个别情形下现有股东参与认购需要事先申请并获得豁免，且相关股份的公众属性仍要单独判断。</p><p data-ts="1">核查要防的，是关联关系被刻意隐藏——例如以控股股东亲属的名义、以高管配偶控制的公司名义、或以与发行人有长期资金往来的"朋友圈"名义参与配售，从而在账面上制造出并不存在的独立性。</p><p>还原关联关系，靠的不是认购人的一纸声明，而是交叉验证：股东名册、董事及高管的关联方清单、认购主体的工商与受益人信息、历史交易与资金往来记录，彼此比对，找出名义独立、实质关联的节点。</p><p data-ts="1">华尔街彤鼎俱乐部在与企业主的闭门交流中反复提示：配售名单的干净程度，往往比认购价格更早决定发行能否顺利推进。<strong>因此，关联关系不是靠回避就能消失的问题，只有主动、完整地披露与还原，才能把它从风险变成可控项。</strong></p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、从名义认购人到最终实益拥有人：穿透的链条</h2><p><strong>结论先说：穿透之所以叫穿透，是因为它要求追到链条最末端的最终实益拥有人，而不是停在最表层的名义持有人。</strong></p><p>最终实益拥有人，是指最终享有股份经济利益、或对持股主体拥有最终控制权的自然人或独立机构。现实中的配售结构常常是多层的：一只基金背后可能站着若干出资人，一个资产管理计划背后可能是若干委托人，一家离岸公司背后可能还有一层控股安排。</p><p data-ts="1">穿透核查要沿着这条链条一节一节往下走，直到能够确认每一份股份最终由谁享有、由谁支配为止。</p><p>这条链条上最容易出问题的，是代持与嵌套。代持是指名义持有人并非真正的权利人，而是替他人持有股份；嵌套则是通过多层主体把真实持有人藏在结构深处。两者都会让配售名单在表面上显得分散而独立，穿透之后却可能收敛到少数几个真实主体，甚至收敛回发行人一方。</p><p data-ts="1">核查一旦还原出这种收敛，相关股份的公众属性即被否定。<strong>本质上，穿透追问的不是"名字写的是谁"，而是"利益归了谁、决定权在谁手里"。</strong></p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、资金来源核查：钱从哪来，比名字更能说明问题</h2><p><strong>结论先说：身份可以安排，名单可以设计，但资金流向很难伪装，因此资金来源核查是穿透中最有力的一环。</strong></p><p>配售资金来源核查，要求认购人说明并证明认购款项的真实出处，核心是排除三种情形：认购资金直接或间接来自发行人及其关联方，认购人以发行人一方提供的融资或担保来完成认购，以及认购人代他人出资而由他人享有实际利益。</p><p data-ts="1">这些情形一旦成立，意味着所谓的"独立认购"只是资金在体系内绕了一圈，最终风险与收益并未真正转移给外部投资者，公众持股的实质因此不成立。</p><p>核查的手段是把资金链与身份链并置比对：认购款的银行流水、出资主体与认购主体是否一致、大额款项在认购前的划转路径、是否存在与发行人关联方的过桥安排。当名单显示的独立性与资金显示的关联性发生矛盾时，监管与保荐人采信的是资金。</p><p data-ts="1">港交所近年持续收紧对配售资金的穿透式核查，把资金来源作为判断配售真实性的关键证据，正是基于这一逻辑（具体要求以港交所正式规则文本为准）。<strong>关键在于，能说清资金从哪来，独立性才立得住；说不清，再独立的名单也站不住脚。</strong></p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、虚假配售与围标：核查真正要拦截的红线</h2><p><strong>结论先说：穿透核查的终极目标，是拦下两类违规安排——虚假配售与配售围标，它们都属于监管明令禁止、发行人绝不应触碰的行为。</strong></p><p>虚假配售，是指以表面独立的第三方名义认购，实则由发行人一方出资或控制，用来虚增公众持股、制造发行成功的假象。配售围标，则是指发行人一方通过关联或受控主体协同认购，操纵配售的分布与定价。</p><p data-ts="1">这两种做法违反公众持股与配售独立性的基本要求，一经查实，轻则相关股份被剔除、发行被要求整改，重则触发对发行人及中介机构的问责，并在其后续的资本运作中长期留痕。此处将其列出，是作为合规科普中的反面警示，提醒企业这些是被明确禁止的违规操作，而非可选的技术手段。</p><p>穿透核查之所以要一路查到资金与最终受益，正是为了让这两类安排无处藏身。对企业而言，与其在名单上做文章，不如从一开始就确保配售对象真实独立、资金来源清白。华尔街彤鼎俱乐部亦会围绕发行结构、配售纪律与合规披露等主题，为有资本化规划的企业主提供系统的资本认知与资源对接。</p><p data-ts="1"><strong>本质上，配售是发行人向市场展示"有多少真实资金愿意进来"的窗口，任何注水都是在透支这个窗口的可信度。</strong></p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、企业与保荐团队应如何提前准备</h2><p><strong>结论先说：配售穿透核查不是发行日前的临门冲刺，而是从筹备之初就要嵌入的合规纪律。</strong></p><p>准备工作可以概括为三条。</p><ol class="ts-pts"><li><b>其一</b>，尽早建立配售对象的独立性判断标准与尽职调查清单，对每一名拟引入的投资者，事先核实其与发行人及关联方的关系、其认购主体结构与最终实益拥有人，把不符合独立性要求的对象在名单形成阶段就排除，而不是等到核查时被动剔除。</li><li><b>其二，管好资金来源的证据链</b>，要求认购人以自有资金认购并留存可追溯的出资凭证，杜绝任何来自发行人一方的过桥、垫资或融资安排。</li><li><b>其三，把配售安排纳入整体信息披露</b>，对现有股东参与认购、关联方豁免、公众持股比例的计算口径等事项，在招股文件中如实、充分地说明。</li></ol><p>这三条的共同点，是把"能不能通过核查"提前变成"经得起穿透"。配售名单一旦形成再回头补救，往往牵一发而动全身——剔除一名认购人可能连带影响公众持股比例、发行规模与定价安排，成本远高于事前把关。</p><p data-ts="1">因此，对配售独立性的把控，应当与架构设计、财务规范、备案准备放在同一个筹备时间表里统筹推进。华尔街彤鼎俱乐部在与企业家的交流中经常强调一个判断：发行的可信度，是从最初一份配售意向就开始积累的。<strong>关键在于，穿透核查考验的从来不是应对技巧，而是发行本身有多真实。</strong></p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-board-lot-reform-2026.html" style="color:#6b5426;font-weight:700;">港股每手买卖单位改革：八种标准股数与每手价值区间</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="capital-contribution-defects.html" style="color:#6b5426;font-weight:700;">出资瑕疵：十几年前的一笔注册资本，为什么能拖住整个上市进程</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="sec-comment-letters.html" style="color:#6b5426;font-weight:700;">SEC问询函应对实务</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ip-cleanup.html" style="color:#6b5426;font-weight:700;">商标、专利、域名：上市前无形资产梳理最容易漏的三件事</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="related-party-funds.html" style="color:#6b5426;font-weight:700;">关联方资金占用：上市前必须清到零的一笔账</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

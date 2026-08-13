@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"领售权：公司被卖掉那天，创始人只能签字","inLanguage":"zh-CN","abstract":"A drag-along right lets a defined group of shareholders sell the whole company to a third party and compel the remaining holders, founders included, to sell on identical terms. Those dragged must vote in favour, sign the transaction documents, give representations and warranties, bear indemnity exposure and waive dissenters' remedies. This article takes the company's side: how drag-along differs from tag-along and rights of first refusal, which words in the trigger clause actually matter, how liquidation preference stacked on top can leave founders with very little in a mid-priced exit, what protections founders can realistically negotiate, and how the right is usually handled before a listing application.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/drag-along-rights.html"},"datePublished":"2026-08-05","dateModified":"2026-08-05","description":"融资协议里有一条不起眼的安排，允许达到约定条件的股东决定把整家公司卖掉，并要求其余股东按同等条件一并出售。本文从企业方视角拆解领售权：它与随售权、优先购买权的区别，触发要件里谁同意、要不要创始人点头、有没有价格线与回报倍数门槛，被拖走的一方要投赞成票、签文件、作陈述与保证、担赔偿责任，清算优先权叠加后中等价格出售里创始人的实际所得，以及谈判阶段能争到的几项保护和拟上市路径下的处理方式。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,49 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">融资条款 FINANCING</div><h1>领售权：公司被卖掉那天，创始人只能签字</h1>
 <div class="sub">触发要件写在哪几个字上，被拖走的一方要背哪些义务，清算优先权叠加之后创始人还剩多少，以及这条条款能谈到什么位置</div><div class="en">A drag-along right lets a defined group of shareholders sell the whole company to a third party and compel the remaining holders, founders included, to sell on identical terms. Those dragged must vote in favour, sign the transaction documents, give representations and warranties, bear indemnity exposure and waive dissenters' remedies. This article takes the company's side: how drag-along differs from tag-along and rights of first refusal, which words in the trigger clause actually matter, how liquidation preference stacked on top can leave founders with very little in a mid-priced exit, what protections founders can realistically negotiate, and how the right is usually handled before a listing application.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">领售权，又称拖售权或强制随售权，是指投资协议与公司章程中约定的一项安排：当达到约定条件的股东决定向第三方出售公司时，有权要求其余股东按同等价格与同等条件一并出售所持股权。被要求的一方通常须投赞成票、签署交易文件、作出约定范围内的陈述与保证、承担相应赔偿责任并放弃异议股东救济。它与随售权、优先购买权是三件不同的安排：随售权是小股东要求搭车一并出售的权利，优先购买权是既有股东在同等条件下先买的权利，而领售权是把不愿卖的一方一并带走的权利。触发要件通常写明需哪一类股东的多数同意、是否需董事会或创始人同意、是否设定最低价格或回报倍数门槛、以及自交割日起的时间起算点。拟上市路径下，这项特别权利一般需在申报前终止或约定为上市时自动失效，具体以各上市地监管机构现行正式文本为准。</div>
-<h2>一、公司卖了，创始人是最后一个被通知价格的人</h2>
-<p><strong>结论先行：领售权的实质，是把&quot;卖不卖公司&quot;这个决定从创始人手里挪走了一部分。一家做工业视觉检测的企业，创始人团队合计持股三成多，两轮融资后机构股东合计持股接近四成。行业出现整合窗口，一家产业方给出报价，几家机构股东认为这是合适的退出时点，创始人却认为公司刚过盈亏平衡、再走两年估值不是这个数。他在谈判桌上说了&quot;我不同意&quot;，对方律师翻到股东协议的一条读出来：经持有过半数优先股的股东书面要求，其余股东应按相同价格与条件出售其全部股权，并签署为完成该交易所必需的一切文件。他后来说，那一刻才明白，自己签的不是&quot;投资人可以卖自己股份&quot;，而是&quot;投资人可以卖掉我的公司&quot;。</strong></p>
-<p>这就是领售权在真实世界里的样子。它在条款清单阶段几乎不引发讨论，通常只有两三行字，夹在优先购买权和共同出售权中间，签完之后可能五年没人提起。但它一旦被触发，就是整份交易文件里约束最直接的一条：其他条款约束的是公司能做什么，这一条约束的是股东本人必须做什么。</p>
-<p>可以把它想成合租房里的一条约定：多数室友决定退租，剩下那位不管愿不愿意都得签字搬走。区别在于，房子退掉只是搬家，公司卖掉是创始人十年的东西换了主人。因此，看条款清单不能只盯着估值和否决事项清单——真正决定&quot;这家公司以什么方式、在什么时点离开你手里&quot;的，往往是这两三行字。</p>
-<h2>二、领售、随售、优先购买：三件常被当成一件的事</h2>
-<p><strong>结论先行：这三项权利常写在相邻条款里，方向却完全相反，混淆的代价是签下了自己以为没签的东西。一家做冷链配送的企业，创始人在新一轮谈判中被告知&quot;这条和上一轮那条一样，就是让小股东有机会一起卖&quot;，他没请律师逐条对照就签了。上一轮那条确实是共同出售权，写的是投资人有权按比例搭车；这一轮多出来的一句是&quot;创始股东应当按投资人要求一并出售&quot;，方向正好反过来。两年后这句话被用上了。</strong></p>
-<p>优先购买权，指股东拟对外转让股权时，既有股东有权在同等条件下优先受让，护的是股东名册的纯洁性，是一项买的权利。随售权，也叫共同出售权，指控股股东或创始股东对外转让股权时，其他股东有权按持股比例参与同一笔交易、按同等条件一并转让，防的是创始人套现走人、留下小股东面对陌生的新控股方，是一项跟着卖的权利。</p>
-<p>领售权的方向与随售权相反：随售权是小股东说&quot;你卖我也要卖&quot;，领售权是达到条件的股东说&quot;我要卖，你也必须卖&quot;。它保护的是交易的可执行性——产业买方与并购基金几乎都要求拿到全部股权，只要有一小群股东能拒绝，交易结构就会变复杂甚至谈不下去。从投资人角度，它是退出通道的保险；从企业方角度，它是一份提前签好的、日期空白的出售授权。</p>
-<p>三者的区别一句话可以记住：优先购买权管谁能进来，随售权管我能不能跟着走，领售权管我能不能不走。关键在于，谈判时要把这三条分开逐句读，尤其看清每一条的义务方是谁——&quot;股东应当&quot;这四个字里，是不是包含了创始人自己。</p>
-<h2>三、触发要件：全部分量都压在几个字上</h2>
-<p><strong>结论先行：领售权是否公平，不取决于有没有这一条，而取决于触发要件怎么写。一家做特种材料的企业，条款只写了&quot;经持有多数优先股的股东同意，可要求全体股东出售公司&quot;，没写需要董事会同意，没写需要创始人同意，也没写价格下限。三年后行业景气度下行，两家基金临近存续期到期，接受了一个仅略高于其出资额的报价并触发了这一条。这个价格对基金而言是拿回本金，对创始人而言是十年归零。条款没有被违反，问题出在当初那句话里少了三样东西。</strong></p>
-<p>变量之一是同意主体的口径，常见有三档：仅需持有多数优先股的股东同意；需优先股与普通股股东分别以约定比例同意；需包含创始人在内的特定股东同意。三档之间的差别，就是创始人在这件事上有没有发言权。</p>
-<p>变量之二是要不要经董事会同意。加上这一句，等于把交易拉回公司治理的正常轨道，董事对全体股东负有忠实与勤勉义务；缺了这一句，出售公司就成了纯粹的股东间私约。</p>
-<p>变量之三是价格门槛，可写成固定金额下限、不低于最近一次融资的投后估值，或对某一轮出资价格的回报倍数下限。没有价格门槛的领售权在下行周期里最危险——清算优先权保证了投资人在低价出售中仍能拿回本金，创始人的普通股却排在最后一位，两者对&quot;这个价格能不能接受&quot;的判断天然不同。</p>
-<p>变量之四是时间起算点与买方限制。前者常写成自本轮交割日起满若干年后方可行使，给公司留一段不受打扰的经营期；后者指是否排除竞争对手与关联方——投资人把公司卖给自己另一支基金投的企业，价格是否公允会立刻成为问题，因此还应写明须为善意第三方之间的市场化交易。</p>
-<p>本质上，&quot;有没有领售权&quot;是一道是非题，&quot;它在什么条件下能被按下&quot;才是一道有很多空格要填的题。华尔街彤鼎俱乐部被企业主反复问到的，也正是这几个空格该怎么填。</p>
-<h2>四、被拖走的一方，要背的不只是卖股权</h2>
-<p><strong>结论先行：领售权条款真正的重量不在&quot;必须卖&quot;，而在附随的那一串义务。一家消费电子代工企业被触发领售权后，创始人以为签一份股权转让协议就完事，实际拿到的是一叠文件：股东会决议、股权转让协议、陈述与保证、赔偿条款、竞业限制与不招揽承诺、过渡期任职安排。赔偿条款约定，交割后若发现历史期间存在未披露的税务或劳动争议事项，卖方须在约定期限内向买方赔偿。历史期间实际经营公司的是创始人，这些事他知道、机构股东不知道，但赔偿按各卖方所得比例分摊，甚至可能被要求承担更高比例。他等于用自己的钱，为整个卖方群体的历史合规问题兜了底。</strong></p>
-<p>被拖走的一方通常承担五类义务。其一是表决义务：在股东会上投赞成票，并放弃可能存在的异议股东回购请求权与评估权。其二是签署义务：签署交易文件及全部配套文件，通常还伴随一份不可撤销授权委托书，授权代表人可在其拒签时代为签署——这使得&quot;我就是不签&quot;在实操中不成立。其三是陈述与保证义务：对自己所持股权的权属、无质押无争议作保证属于合理范围，但交易文件常把公司业务、财务、税务、知识产权、诉讼层面的保证也加到全体卖方头上。其四是赔偿义务：赔偿上限、免赔额、存续期间、是否托管扣留部分对价。其五是交易后的束缚：竞业限制、不招揽、保密，有时还有留任期与业绩对赌。</p>
-<p>经验规律是：领售条款写得越简略，附随义务的谈判权越不在企业方手里。条款若只写&quot;其余股东应按同等条件出售并签署必需文件&quot;，那&quot;必需文件&quot;里有什么，到时候由主导交易的一方和买方律师去定。因此，被动接受这一条，等于把自己未来的赔偿风险敞口交给别人去谈。</p>
-<h2>五、清算优先权叠加之后：卖了一笔不小的钱，创始人可能拿得很少</h2>
-<p><strong>结论先行：领售权本身不分钱，分钱的是清算优先权，两者叠在一起才有真正的杀伤力。假设有家企业前后完成三轮融资，各轮均约定一倍不参与分配的清算优先权，即出售或清算时优先股股东先取回出资额、再由普通股股东分配剩余部分；创始人团队持普通股，持股比例约三成。现在触发领售权，出售总对价恰好接近机构股东出资总额的一点几倍。</strong></p>
-<p>分配顺序是：先按优先顺位把各轮出资额返还给优先股股东，扣除交易费用、托管扣留款与赔偿准备金，剩下的才是普通股可分的部分。当售价只略高于累计出资额时，扣完之后留给普通股的池子可能小到接近象征意义——名义持股三成，实际拿到的远不是总价的三成。若某一轮约定的是参与分配的优先权、或倍数高于一倍，普通股的处境还会更靠后。以上仅为条款结构的推演，具体分配取决于各轮实际约定的优先顺位、倍数、是否参与分配以及费用承担方式。</p>
-<p>这也解释了投资人为什么会同意一个创始人认为明显偏低的价格：双方根本不在同一个位置上，对持优先权的一方这是拿回本金，对持普通股的一方是多年工作换回一个零头。基金存续期还会把分歧放大——临近到期需要清算退出的基金，和还在投资期的基金，对&quot;现在卖还是再等两年&quot;的判断天然相反。</p>
-<p>打个比方：几个人合伙买了一条船，约定散伙时先还本金再分利润。船现在能卖的钱刚够还本金，出资多的人愿意卖，因为他能全身而退；出力最多但只占分红的人反对，因为他分到的是还完本金后的零头。领售权决定这条船卖不卖，清算优先权决定卖完钱怎么分——只看前者不看后者，永远算不清这笔账。本质上，谈判阶段要算的不是&quot;公司能卖多少钱&quot;，而是&quot;卖到什么价位，我这一部分才不至于归零&quot;。</p>
-<h2>六、把这条谈到安全位置：企业方可以争的几项</h2>
-<p><strong>结论先行：领售权极少能被彻底删掉，能谈的是它在什么条件下生效、生效后的义务有多重——而能谈的时点只有条款清单阶段。</strong></p>
-<p>步骤一，设价格线与回报倍数门槛，这是性价比最高的一项。可写成不低于某一固定金额、不低于最近一轮投后估值，或不低于本轮出资价格的约定倍数。它把领售权从&quot;随时能按下的开关&quot;变成&quot;只有在结果尚可时才能按下的开关&quot;。若投资人不接受硬性价格线，退一步可约定：低于该线时，行使领售权须另行取得创始人同意。</p>
-<p>步骤二，把创始人同意写进触发要件。至少应争取到：出售总对价低于约定门槛的、买方为竞争对手及其关联方的、对价中非现金部分超过一定比例的，须经创始股东书面同意。这并不否定投资人的退出诉求，只是把极端情形排除在自动触发之外。</p>
-<p>步骤三，限定赔偿责任的范围与比例。核心三点：公司业务与财务层面的陈述与保证由公司或实际负责经营的一方承担，不由所有卖方连带；每一卖方的赔偿上限不超过其实际取得的对价，并按各自所得比例分摊；设定合理的存续期间与免赔额。这一条常被忽略，却是创始人在交割之后仍可能亏钱的那个口子。</p>
-<p>步骤四，把同等条件写实：每股对价、对价形式、支付节奏、扣留比例都相同。若主导交易的一方另行获得费用补偿、顾问费、优先受偿安排或与买方的额外协议，实质上就不是同等条件；可加一句：任何一方就本次交易取得的额外利益，应计入对价并由全体卖方按比例分享。</p>
-<p>步骤五，不让领售条款自动强加人身束缚。竞业限制、不招揽、留任义务应另行协商，不构成履行出售义务的条件——这关系到创始人卖掉公司之后还能不能继续做这一行。</p>
-<p>步骤六，设时间窗口与落日安排：自本轮交割日起满若干年后方可行使；投资人持股比例低于一定水平后该权利自动失效；该权利在提交上市申请时中止、上市完成时终止。三者可叠加。</p>
-<p>步骤七，写清程序与通知时限：提前多少个工作日发出书面通知、通知应载明哪些交易要素、创始人有没有一段撮合替代买方的窗口期。给企业方留一个&quot;我来找出价更高的买方&quot;的机会，往往比单纯反对更有说服力——他要的是退出，不是要谁输。</p>
-<p>以上均为市场经验性表述，可行性受交易结构、投资人类型与适用法域影响，不构成固定标准。华尔街彤鼎俱乐部长期沉淀的，正是这类条款在不同交易结构下的落地写法。</p>
-<h2>七、拟上市路径下，这条通常怎么处理</h2>
-<p><strong>结论先行：主流上市地一般不接受上市后仍有股东能强制其他股东出售股权的安排，因此领售权通常需在申报前终止，或在投资协议中约定为上市时自动失效——麻烦在于，终止本身往往还需要那些股东签字。一家计划赴境外上市的企业在申报前梳理股东特别权利时发现，领售条款、回购权、共同出售权分散在三轮不同的交易文件里，其中一轮的终止条款只写了回购权、没有涵盖领售权，只能单独去取得该轮股东的书面豁免，签字过程中对方又提出了新条件。</strong></p>
-<p>关键在签署时点，而不在签署内容。事后签终止协议是被动做法：等于在最需要顺利的时候，给每一位持有特别权利的股东单独提供一次谈判机会，而那时企业方几乎没有筹码。事前在投资协议里写自动终止条款是主动做法：约定自公司提交上市申请之日起，本节项下的特别股东权利（应逐项列明，包括但不限于领售权、回购权、优先购买权、共同出售权、反稀释安排、保护性条款）自动中止，自股票上市交易之日起自动终止，无需另行签署文件；并约定申请被撤回、被否或逾期未完成上市的，相关条款自动恢复。逐项列明这四个字是重点——上面那家企业，就出在列举时漏了一项。</p>
-<p>另有两点值得在谈判阶段想清楚。其一，不同上市地对上市前特别权利的清理要求并不一致，有的要求彻底终止，有的允许部分权利保留至上市后按公司治理规则重新安排，具体以各上市地监管机构现行正式文本为准，应在启动申报前请中介机构逐条出具意见。其二，若上市路径已定，投资人往往更容易接受时间窗口安排，因为上市本身就是他要的退出通道，此时用&quot;我们走上市&quot;去换&quot;领售权设门槛&quot;，是成本较低的一次交换。</p>
-<p>彤鼎集团（香港）有限公司在这类事情上承担的是统筹与协调角色：与企业方一起把历史各轮交易文件中的领售、随售、优先购买、回购等条款做一次穿透梳理，核对触发要件与终止安排有没有遗漏，在新一轮谈判中协助设计价格门槛、赔偿分摊与自动终止的写法，并在启动申报前排定特别权利清理的时间表。涉及证券发行、承销、信托受托等持牌业务的，一律由具备相应牌照的合作机构承做。因此，判断一份条款清单是否安全，标准不是里面有没有领售权，而是有没有把按下它的条件写清楚——写清楚了，它是退出机制；没写清楚，它是一张日期留空的授权书。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>领售权，又称拖售权或强制随售权，是指投资协议与公司章程中约定的一项安排：当达到约定条件的股东决定向第三方出售公司时，有权要求其余股东按同等价格与同等条件一并出售所持股权。被要求的一方通常须投赞成票、签署交易文件、作出约定范围内的陈述与保证、承担相应赔偿责任并放弃异议股东救济。</p><p>它与随售权、优先购买权是三件不同的安排：随售权是小股东要求搭车一并出售的权利，优先购买权是既有股东在同等条件下先买的权利，而领售权是把不愿卖的一方一并带走的权利。触发要件通常写明需哪一类股东的多数同意、是否需董事会或创始人同意、是否设定最低价格或回报倍数门槛、以及自交割日起的时间起算点。</p><p>拟上市路径下，这项特别权利一般需在申报前终止或约定为上市时自动失效，具体以各上市地监管机构现行正式文本为准。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">公司卖了，创始人是最后一个被通知价格的人</a></li><li><a href="#sec-02">领售、随售、优先购买：三件常被当成一件的事</a></li><li><a href="#sec-03">触发要件：全部分量都压在几个字上</a></li><li><a href="#sec-04">被拖走的一方，要背的不只是卖股权</a></li><li><a href="#sec-05">清算优先权叠加之后：卖了一笔不小的钱，创始人可能拿得很少</a></li><li><a href="#sec-06">把这条谈到安全位置：企业方可以争的几项</a></li><li><a href="#sec-07">拟上市路径下，这条通常怎么处理</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、公司卖了，创始人是最后一个被通知价格的人</h2><div class="ts-lead"><span class="tag">结论先行</span><p>领售权的实质，是把&quot;卖不卖公司&quot;这个决定从创始人手里挪走了一部分。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家做工业视觉检测的企业，创始人团队合计持股三成多，两轮融资后机构股东合计持股接近四成。行业出现整合窗口，一家产业方给出报价，几家机构股东认为这是合适的退出时点，创始人却认为公司刚过盈亏平衡、再走两年估值不是这个数。</p><p>他在谈判桌上说了&quot;我不同意&quot;，对方律师翻到股东协议的一条读出来：经持有过半数优先股的股东书面要求，其余股东应按相同价格与条件出售其全部股权，并签署为完成该交易所必需的一切文件。他后来说，那一刻才明白，自己签的不是&quot;投资人可以卖自己股份&quot;，而是&quot;投资人可以卖掉我的公司&quot;。</p></div><p>这就是领售权在真实世界里的样子。它在条款清单阶段几乎不引发讨论，通常只有两三行字，夹在优先购买权和共同出售权中间，签完之后可能五年没人提起。但它一旦被触发，就是整份交易文件里约束最直接的一条：其他条款约束的是公司能做什么，这一条约束的是股东本人必须做什么。</p><p>可以把它想成合租房里的一条约定：多数室友决定退租，剩下那位不管愿不愿意都得签字搬走。区别在于，房子退掉只是搬家，公司卖掉是创始人十年的东西换了主人。因此，看条款清单不能只盯着估值和否决事项清单——真正决定&quot;这家公司以什么方式、在什么时点离开你手里&quot;的，往往是这两三行字。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、领售、随售、优先购买：三件常被当成一件的事</h2><div class="ts-lead"><span class="tag">结论先行</span><p>这三项权利常写在相邻条款里，方向却完全相反，混淆的代价是签下了自己以为没签的东西。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家做冷链配送的企业，创始人在新一轮谈判中被告知&quot;这条和上一轮那条一样，就是让小股东有机会一起卖&quot;，他没请律师逐条对照就签了。上一轮那条确实是共同出售权，写的是投资人有权按比例搭车；这一轮多出来的一句是&quot;创始股东应当按投资人要求一并出售&quot;，方向正好反过来。两年后这句话被用上了。</p></div><p>优先购买权，指股东拟对外转让股权时，既有股东有权在同等条件下优先受让，护的是股东名册的纯洁性，是一项买的权利。随售权，也叫共同出售权，指控股股东或创始股东对外转让股权时，其他股东有权按持股比例参与同一笔交易、按同等条件一并转让，防的是创始人套现走人、留下小股东面对陌生的新控股方，是一项跟着卖的权利。</p><p>领售权的方向与随售权相反：随售权是小股东说&quot;你卖我也要卖&quot;，领售权是达到条件的股东说&quot;我要卖，你也必须卖&quot;。它保护的是交易的可执行性——产业买方与并购基金几乎都要求拿到全部股权，只要有一小群股东能拒绝，交易结构就会变复杂甚至谈不下去。</p><p data-ts="1">从投资人角度，它是退出通道的保险；从企业方角度，它是一份提前签好的、日期空白的出售授权。</p><p>三者的区别一句话可以记住：优先购买权管谁能进来，随售权管我能不能跟着走，领售权管我能不能不走。关键在于，谈判时要把这三条分开逐句读，尤其看清每一条的义务方是谁——&quot;股东应当&quot;这四个字里，是不是包含了创始人自己。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、触发要件：全部分量都压在几个字上</h2><div class="ts-lead"><span class="tag">结论先行</span><p>领售权是否公平，不取决于有没有这一条，而取决于触发要件怎么写。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家做特种材料的企业，条款只写了&quot;经持有多数优先股的股东同意，可要求全体股东出售公司&quot;，没写需要董事会同意，没写需要创始人同意，也没写价格下限。三年后行业景气度下行，两家基金临近存续期到期，接受了一个仅略高于其出资额的报价并触发了这一条。</p><p>这个价格对基金而言是拿回本金，对创始人而言是十年归零。条款没有被违反，问题出在当初那句话里少了三样东西。</p></div><p>变量之一是同意主体的口径，常见有三档：仅需持有多数优先股的股东同意；需优先股与普通股股东分别以约定比例同意；需包含创始人在内的特定股东同意。三档之间的差别，就是创始人在这件事上有没有发言权。</p><p>变量之二是要不要经董事会同意。加上这一句，等于把交易拉回公司治理的正常轨道，董事对全体股东负有忠实与勤勉义务；缺了这一句，出售公司就成了纯粹的股东间私约。</p><p>变量之三是价格门槛，可写成固定金额下限、不低于最近一次融资的投后估值，或对某一轮出资价格的回报倍数下限。没有价格门槛的领售权在下行周期里最危险——清算优先权保证了投资人在低价出售中仍能拿回本金，创始人的普通股却排在最后一位，两者对&quot;这个价格能不能接受&quot;的判断天然不同。</p><p>变量之四是时间起算点与买方限制。前者常写成自本轮交割日起满若干年后方可行使，给公司留一段不受打扰的经营期；后者指是否排除竞争对手与关联方——投资人把公司卖给自己另一支基金投的企业，价格是否公允会立刻成为问题，因此还应写明须为善意第三方之间的市场化交易。</p><p>本质上，&quot;有没有领售权&quot;是一道是非题，&quot;它在什么条件下能被按下&quot;才是一道有很多空格要填的题。华尔街彤鼎俱乐部被企业主反复问到的，也正是这几个空格该怎么填。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、被拖走的一方，要背的不只是卖股权</h2><div class="ts-lead"><span class="tag">结论先行</span><p>领售权条款真正的重量不在&quot;必须卖&quot;，而在附随的那一串义务。一家消费电子代工企业被触发领售权后，创始人以为签一份股权转让协议就完事，实际拿到的是一叠文件：股东会决议、股权转让协议、陈述与保证、赔偿条款、竞业限制与不招揽承诺、过渡期任职安排。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>赔偿条款约定，交割后若发现历史期间存在未披露的税务或劳动争议事项，卖方须在约定期限内向买方赔偿。历史期间实际经营公司的是创始人，这些事他知道、机构股东不知道，但赔偿按各卖方所得比例分摊，甚至可能被要求承担更高比例。他等于用自己的钱，为整个卖方群体的历史合规问题兜了底。</p></div><p>被拖走的一方通常承担五类义务。</p><ol class="ts-pts"><li><b>其一是表决义务：</b>在股东会上投赞成票，并放弃可能存在的异议股东回购请求权与评估权。</li><li><b>其二是签署义务：</b>签署交易文件及全部配套文件，通常还伴随一份不可撤销授权委托书，授权代表人可在其拒签时代为签署——这使得&quot;我就是不签&quot;在实操中不成立。</li><li><b>其三是陈述与保证义务：</b>对自己所持股权的权属、无质押无争议作保证属于合理范围，但交易文件常把公司业务、财务、税务、知识产权、诉讼层面的保证也加到全体卖方头上。</li><li><b>其四是赔偿义务：</b>赔偿上限、免赔额、存续期间、是否托管扣留部分对价。</li><li><b>其五是交易后的束缚：</b>竞业限制、不招揽、保密，有时还有留任期与业绩对赌。</li></ol><p>经验规律是：领售条款写得越简略，附随义务的谈判权越不在企业方手里。条款若只写&quot;其余股东应按同等条件出售并签署必需文件&quot;，那&quot;必需文件&quot;里有什么，到时候由主导交易的一方和买方律师去定。因此，被动接受这一条，等于把自己未来的赔偿风险敞口交给别人去谈。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、清算优先权叠加之后：卖了一笔不小的钱，创始人可能拿得很少</h2><div class="ts-lead"><span class="tag">结论先行</span><p>领售权本身不分钱，分钱的是清算优先权，两者叠在一起才有真正的杀伤力。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>假设有家企业前后完成三轮融资，各轮均约定一倍不参与分配的清算优先权，即出售或清算时优先股股东先取回出资额、再由普通股股东分配剩余部分；创始人团队持普通股，持股比例约三成。现在触发领售权，出售总对价恰好接近机构股东出资总额的一点几倍。</p></div><p>分配顺序是：先按优先顺位把各轮出资额返还给优先股股东，扣除交易费用、托管扣留款与赔偿准备金，剩下的才是普通股可分的部分。当售价只略高于累计出资额时，扣完之后留给普通股的池子可能小到接近象征意义——名义持股三成，实际拿到的远不是总价的三成。</p><p data-ts="1">若某一轮约定的是参与分配的优先权、或倍数高于一倍，普通股的处境还会更靠后。以上仅为条款结构的推演，具体分配取决于各轮实际约定的优先顺位、倍数、是否参与分配以及费用承担方式。</p><p>这也解释了投资人为什么会同意一个创始人认为明显偏低的价格：双方根本不在同一个位置上，对持优先权的一方这是拿回本金，对持普通股的一方是多年工作换回一个零头。基金存续期还会把分歧放大——临近到期需要清算退出的基金，和还在投资期的基金，对&quot;现在卖还是再等两年&quot;的判断天然相反。</p><p>打个比方：几个人合伙买了一条船，约定散伙时先还本金再分利润。船现在能卖的钱刚够还本金，出资多的人愿意卖，因为他能全身而退；出力最多但只占分红的人反对，因为他分到的是还完本金后的零头。</p><p data-ts="1">领售权决定这条船卖不卖，清算优先权决定卖完钱怎么分——只看前者不看后者，永远算不清这笔账。本质上，谈判阶段要算的不是&quot;公司能卖多少钱&quot;，而是&quot;卖到什么价位，我这一部分才不至于归零&quot;。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、把这条谈到安全位置：企业方可以争的几项</h2><div class="ts-lead"><span class="tag">结论先行</span><p>领售权极少能被彻底删掉，能谈的是它在什么条件下生效、生效后的义务有多重——而能谈的时点只有条款清单阶段。</p></div><p>步骤一，设价格线与回报倍数门槛，这是性价比最高的一项。可写成不低于某一固定金额、不低于最近一轮投后估值，或不低于本轮出资价格的约定倍数。它把领售权从&quot;随时能按下的开关&quot;变成&quot;只有在结果尚可时才能按下的开关&quot;。</p><p data-ts="1">若投资人不接受硬性价格线，退一步可约定：低于该线时，行使领售权须另行取得创始人同意。</p><p>步骤二，把创始人同意写进触发要件。至少应争取到：出售总对价低于约定门槛的、买方为竞争对手及其关联方的、对价中非现金部分超过一定比例的，须经创始股东书面同意。这并不否定投资人的退出诉求，只是把极端情形排除在自动触发之外。</p><p>步骤三，限定赔偿责任的范围与比例。核心三点：公司业务与财务层面的陈述与保证由公司或实际负责经营的一方承担，不由所有卖方连带；每一卖方的赔偿上限不超过其实际取得的对价，并按各自所得比例分摊；设定合理的存续期间与免赔额。这一条常被忽略，却是创始人在交割之后仍可能亏钱的那个口子。</p><p>步骤四，把同等条件写实：每股对价、对价形式、支付节奏、扣留比例都相同。若主导交易的一方另行获得费用补偿、顾问费、优先受偿安排或与买方的额外协议，实质上就不是同等条件；可加一句：任何一方就本次交易取得的额外利益，应计入对价并由全体卖方按比例分享。</p><p>步骤五，不让领售条款自动强加人身束缚。竞业限制、不招揽、留任义务应另行协商，不构成履行出售义务的条件——这关系到创始人卖掉公司之后还能不能继续做这一行。</p><p>步骤六，设时间窗口与落日安排：自本轮交割日起满若干年后方可行使；投资人持股比例低于一定水平后该权利自动失效；该权利在提交上市申请时中止、上市完成时终止。三者可叠加。</p><p>步骤七，写清程序与通知时限：提前多少个工作日发出书面通知、通知应载明哪些交易要素、创始人有没有一段撮合替代买方的窗口期。给企业方留一个&quot;我来找出价更高的买方&quot;的机会，往往比单纯反对更有说服力——他要的是退出，不是要谁输。</p><p>以上均为市场经验性表述，可行性受交易结构、投资人类型与适用法域影响，不构成固定标准。华尔街彤鼎俱乐部长期沉淀的，正是这类条款在不同交易结构下的落地写法。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、拟上市路径下，这条通常怎么处理</h2><div class="ts-lead"><span class="tag">结论先行</span><p>主流上市地一般不接受上市后仍有股东能强制其他股东出售股权的安排，因此领售权通常需在申报前终止，或在投资协议中约定为上市时自动失效——麻烦在于，终止本身往往还需要那些股东签字。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家计划赴境外上市的企业在申报前梳理股东特别权利时发现，领售条款、回购权、共同出售权分散在三轮不同的交易文件里，其中一轮的终止条款只写了回购权、没有涵盖领售权，只能单独去取得该轮股东的书面豁免，签字过程中对方又提出了新条件。</p></div><p>关键在签署时点，而不在签署内容。事后签终止协议是被动做法：等于在最需要顺利的时候，给每一位持有特别权利的股东单独提供一次谈判机会，而那时企业方几乎没有筹码。事前在投资协议里写自动终止条款是主动做法：约定自公司提交上市申请之日起，本节项下的特别股东权利（应逐项列明，包括但不限于领售权、回购权、优先购买权、共同出售权、反稀释安排、保护性条款）自动中止，自股票上市交易之日起自动终止，无需另行签署文件；并约定申请被撤回、被否或逾期未完成上市的，相关条款自动恢复。逐项列明这四个字是重点——上面那家企业，就出在列举时漏了一项。</p><p>另有两点值得在谈判阶段想清楚。其一，不同上市地对上市前特别权利的清理要求并不一致，有的要求彻底终止，有的允许部分权利保留至上市后按公司治理规则重新安排，具体以各上市地监管机构现行正式文本为准，应在启动申报前请中介机构逐条出具意见。</p><p data-ts="1">其二，若上市路径已定，投资人往往更容易接受时间窗口安排，因为上市本身就是他要的退出通道，此时用&quot;我们走上市&quot;去换&quot;领售权设门槛&quot;，是成本较低的一次交换。</p><p>彤鼎集团（香港）有限公司在这类事情上承担的是统筹与协调角色：与企业方一起把历史各轮交易文件中的领售、随售、优先购买、回购等条款做一次穿透梳理，核对触发要件与终止安排有没有遗漏，在新一轮谈判中协助设计价格门槛、赔偿分摊与自动终止的写法，并在启动申报前排定特别权利清理的时间表。</p><p data-ts="1">涉及证券发行、承销、信托受托等持牌业务的，一律由具备相应牌照的合作机构承做。因此，判断一份条款清单是否安全，标准不是里面有没有领售权，而是有没有把按下它的条件写清楚——写清楚了，它是退出机制；没写清楚，它是一张日期留空的授权书。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="convertible-note-financing.html" style="color:#6b5426;font-weight:700;">可转换票据，签的时候最省事，到期那天最难办</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="investor-veto-rights.html" style="color:#6b5426;font-weight:700;">一票否决权，能把一家公司卡到动不了</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="term-sheet-to-closing.html" style="color:#6b5426;font-weight:700;">融资死在交割前，通常经历六个阶段</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

@@ -74,14 +74,24 @@ def say(msg):
 
 def body_text(s):
     """取正文可见文字。剥掉 head、schema、脚本样式，以及 pubmeta（它本身含日期，
-    会让「内容有没有变」这个判断被日期自己污染）。"""
+    会让「内容有没有变」这个判断被日期自己污染）。
+
+    也剥掉 tools/typeset.py 注入的版式元素——本文要点导览、章节序号、
+    「核心结论 / 结论先行 / 实操案例」这类标签。它们是版面不是内容：
+    留着的话，2026-08-13 那次全库重排会让 199 篇的哈希同时变化，
+    下一次 weekly-review 就会把纯排版改动当成实质更新、集体刷新 dateModified，
+    正是本仓库明令禁止的 content refresh spam。"""
     s = s.split('</head>', 1)[-1]
     s = LD_RE.sub('', s)
     s = re.sub(r'<script.*?</script>', '', s, flags=re.S)
     s = re.sub(r'<style.*?</style>', '', s, flags=re.S)
     s = re.sub(r'<div class="pubmeta".*?</div>', '', s, flags=re.S)
+    s = re.sub(r'<div class="ts-toc">.*?</ol></div>', '', s, flags=re.S)
+    s = re.sub(r'<span class="(?:tag|no)">.*?</span>', '', s, flags=re.S)
     s = re.sub(r'<[^>]+>', ' ', s)
-    return re.sub(r'\s+', '', s)
+    s = re.sub(r'\s+', '', s)
+    # 重排把「结论先行：」从正文提成了标签，两种写法要归一到同一个哈希
+    return re.sub(r'结论先行[：:]?', '', s)
 
 
 def body_hash(s):

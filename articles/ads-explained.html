@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"ADS美国存托股份详解","inLanguage":"zh-CN","abstract":"What an American Depositary Share is, how the ratio to ordinary shares is set, and the depositary bank arrangements behind it.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/ads-explained.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"中概股在美国交易的到底是什么。ADS美国存托股份详解完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,37 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>ADS美国存托股份详解</h1>
 <div class="sub">中概股在美国交易的到底是什么</div><div class="en">What an American Depositary Share is, how the ratio to ordinary shares is set, and the depositary bank arrangements behind it.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">绝大多数中概股在美国市场交易的证券不是普通股本身，而是ADS（American Depositary Share，美国存托股份）。其机制是：公司把普通股存入托管银行（如纽约梅隆、花旗、摩根大通的存托部门），托管银行以这些股票为基础，向美国市场发行代表这些股票权益的凭证，即ADS。每份ADS对应固定数量的普通股（如1 ADS等于2普通股，比例由公司设定）。ADS让美国投资人可以像买卖本土股票一样，用美元、在美国时段、通过美国券商交易一家开曼公司的权益。对企业主需要理解的三件事是：ADS比例决定了股价的显示区间（可通过调整比例管理股价水平）、托管银行收取的费用由投资人或公司承担、ADS持有人的投票等权利通过存托协议传导。</div>
-<h2>一、为什么需要ADS这个设计</h2>
-<p>中概股的上市主体通常是开曼公司，其普通股在法律上是一家开曼群岛公司的股份。让美国投资人直接持有和交易境外公司股份，涉及跨境登记、结算、外汇等一系列摩擦。ADS机制解决了这个问题：由美国的托管银行持有基础股票，向美国市场发行以美元计价、在美国结算体系内流转的存托股份。</p>
-<p>对投资人，ADS的体验与美国本土股票完全一致：用美元交易、通过DTC结算、股息自动换算成美元派发。对公司，ADS是进入美国资本市场的标准接口。这就是为什么纳斯达克的中概股行情页上，证券类型标注的多是ADS而非Ordinary Shares。</p>
-<h2>二、ADS比例：一个被低估的管理工具</h2>
-<p>每份ADS代表多少股普通股，是公司在上市时设定的比例（ADS Ratio），常见的有1比1、1比2、1比10等，也有1份ADS对应不足1股的情况（如2 ADS对应1股）。</p>
-<p>这个比例的直接作用是调节ADS的交易价格区间。举例：公司普通股内在价值0.5美元，如果1比1挂牌，ADS价格0.5美元，一上市就踩在1美元退市红线之下；把比例设为1 ADS等于10普通股，ADS价格就是5美元，进入了健康区间。</p>
-<p>上市之后，公司也可以通过变更ADS比例来管理股价显示水平——把比例调大（1份ADS代表更多股票），效果等同于反向分割，是应对一美元规则的工具之一；把比例调小，效果类似拆股，可以在股价过高时改善流动性。变更ADS比例只需与托管银行操作、公告执行，程序上比正式的股份合并简便。</p>
-<h2>三、托管银行的角色与费用</h2>
-<p>托管银行（Depositary Bank）是ADS机制的运营中枢，职责包括：保管基础股票、办理ADS的发行与注销、派发股息（把公司宣派的股息换成美元支付给ADS持有人）、传递股东通知和投票指令、维护持有人登记。</p>
-<p>托管银行的收入来自ADS服务费：发行与注销费（通常每份ADS最高0.05美元）、年度托管费、股息派发手续费等。这些费用多数由ADS持有人承担（从股息中扣收或直接收取），部分安排下公司也会分担。托管协议中还常有托管银行向公司返还部分费用（用于支持IR等）的商业安排，这是上市谈判中可以争取的条款。</p>
-<p>主要的托管银行包括纽约梅隆、花旗、摩根大通、德意志银行。选择时看重的是其中概股服务经验、系统稳定性和商业条款。</p>
-<h2>四、ADS持有人的权利</h2>
-<p>ADS持有人不是开曼公司的登记股东（登记股东是托管银行的名义人），其权利通过存托协议（Deposit Agreement）传导。</p>
-<p>投票权：公司召开股东大会时，托管银行向ADS持有人征集投票指令，按指令代为投票。需要注意存托协议中的细节条款——部分协议规定未给出指令的ADS可由托管银行按公司建议投票或视为放弃，这对股东会决议的通过有实际影响。</p>
-<p>股息权：公司宣派股息后，托管银行负责兑换成美元、扣除相关费用后派发给ADS持有人。</p>
-<p>知情权：公司的公告、年报等信息通过托管银行和SEC披露渠道传达给ADS持有人。</p>
-<p>转换权：ADS持有人原则上可以要求注销ADS、提取基础普通股（反之亦然），这一机制在双重上市场景下（如美股与港股之间的股份转换）是两地价格联动的基础。</p>
-<h2>五、企业主需要把握的实务要点</h2>
-<p>要点1：上市时科学设定ADS比例。目标是让挂牌初期的ADS价格落在5至20美元的舒适区间——太低贴近退市红线，太高影响散户参与度。这需要结合估值和发行规模测算。</p>
-<p>要点2：把ADS比例调整纳入市值管理工具箱。股价滑向1美元时，调整ADS比例是与反向分割并列的选项，各有利弊，需要与美国律师和托管银行评估选用。</p>
-<p>要点3：谈好存托协议的商业条款。费用分担、费用返还、投票机制安排，都是签约时可谈判的内容，直接影响挂牌后的成本和治理。</p>
-<p>要点4：向投资人讲清楚结构。在IR材料中说明ADS与普通股的比例关系、总股本的计算口径，避免投资人在计算市值和每股指标时产生混淆。</p>
-<h3>结语：懂机制，才能用好机制</h3>
-<p>ADS是中概股与美国资本市场之间的标准桥梁。理解它的机制，企业才能在比例设定、费用谈判、股价管理上把这座桥用好，而不是让它只是一个被动的存在。</p>
-<p>彤鼎集团在上市辅导中，协助企业完成ADS比例测算、托管银行选择与存托协议谈判，把这些容易被忽略的技术细节，变成企业资本运作的加分项。</p>
-<p>彤鼎集团是一家综合性国际资本服务机构，香港母公司为彤鼎集团（香港）有限公司，业务网络覆盖香港、深圳、上海，并延伸至新加坡。集团专注为企业提供全球化的境内外上市及资本市场全流程一站式服务，由曾任职于加拿大券商机构的廖启捷领衔，廖启捷现任彤鼎集团（香港）有限公司董事局主席，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>集团八大核心业务覆盖融资策划、架构设计、上市规划、税务筹划、增发融资、市值管理、跨境资本、家族办公室，提供从商业模式梳理、顶层架构设计、上市辅导，到财务顾问、法律顾问、并购重组的资本运作全链条服务。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p>
-<p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>绝大多数中概股在美国市场交易的证券不是普通股本身，而是ADS（American Depositary Share，美国存托股份）。其机制是：公司把普通股存入托管银行（如纽约梅隆、花旗、摩根大通的存托部门），托管银行以这些股票为基础，向美国市场发行代表这些股票权益的凭证，即ADS。</p><p>每份ADS对应固定数量的普通股（如1 ADS等于2普通股，比例由公司设定）。ADS让美国投资人可以像买卖本土股票一样，用美元、在美国时段、通过美国券商交易一家开曼公司的权益。对企业主需要理解的三件事是：ADS比例决定了股价的显示区间（可通过调整比例管理股价水平）、托管银行收取的费用由投资人或公司承担、ADS持有人的投票等权利通过存托协议传导。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">为什么需要ADS这个设计</a></li><li><a href="#sec-02">ADS比例：一个被低估的管理工具</a></li><li><a href="#sec-03">托管银行的角色与费用</a></li><li><a href="#sec-04">ADS持有人的权利</a></li><li><a href="#sec-05">企业主需要把握的实务要点</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、为什么需要ADS这个设计</h2><p>中概股的上市主体通常是开曼公司，其普通股在法律上是一家开曼群岛公司的股份。让美国投资人直接持有和交易境外公司股份，涉及跨境登记、结算、外汇等一系列摩擦。ADS机制解决了这个问题：由美国的托管银行持有基础股票，向美国市场发行以美元计价、在美国结算体系内流转的存托股份。</p><p>对投资人，ADS的体验与美国本土股票完全一致：用美元交易、通过DTC结算、股息自动换算成美元派发。对公司，ADS是进入美国资本市场的标准接口。这就是为什么纳斯达克的中概股行情页上，证券类型标注的多是ADS而非Ordinary Shares。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、ADS比例：一个被低估的管理工具</h2><p>每份ADS代表多少股普通股，是公司在上市时设定的比例（ADS Ratio），常见的有1比1、1比2、1比10等，也有1份ADS对应不足1股的情况（如2 ADS对应1股）。</p><p>这个比例的直接作用是调节ADS的交易价格区间。举例：公司普通股内在价值0.5美元，如果1比1挂牌，ADS价格0.5美元，一上市就踩在1美元退市红线之下；把比例设为1 ADS等于10普通股，ADS价格就是5美元，进入了健康区间。</p><p>上市之后，公司也可以通过变更ADS比例来管理股价显示水平——把比例调大（1份ADS代表更多股票），效果等同于反向分割，是应对一美元规则的工具之一；把比例调小，效果类似拆股，可以在股价过高时改善流动性。变更ADS比例只需与托管银行操作、公告执行，程序上比正式的股份合并简便。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、托管银行的角色与费用</h2><p>托管银行（Depositary Bank）是ADS机制的运营中枢，职责包括：保管基础股票、办理ADS的发行与注销、派发股息（把公司宣派的股息换成美元支付给ADS持有人）、传递股东通知和投票指令、维护持有人登记。</p><p>托管银行的收入来自ADS服务费：发行与注销费（通常每份ADS最高0.05美元）、年度托管费、股息派发手续费等。这些费用多数由ADS持有人承担（从股息中扣收或直接收取），部分安排下公司也会分担。</p><p data-ts="1">托管协议中还常有托管银行向公司返还部分费用（用于支持IR等）的商业安排，这是上市谈判中可以争取的条款。</p><p>主要的托管银行包括纽约梅隆、花旗、摩根大通、德意志银行。选择时看重的是其中概股服务经验、系统稳定性和商业条款。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、ADS持有人的权利</h2><p>ADS持有人不是开曼公司的登记股东（登记股东是托管银行的名义人），其权利通过存托协议（Deposit Agreement）传导。</p><p>投票权：公司召开股东大会时，托管银行向ADS持有人征集投票指令，按指令代为投票。需要注意存托协议中的细节条款——部分协议规定未给出指令的ADS可由托管银行按公司建议投票或视为放弃，这对股东会决议的通过有实际影响。</p><p>股息权：公司宣派股息后，托管银行负责兑换成美元、扣除相关费用后派发给ADS持有人。</p><p>知情权：公司的公告、年报等信息通过托管银行和SEC披露渠道传达给ADS持有人。</p><p>转换权：ADS持有人原则上可以要求注销ADS、提取基础普通股（反之亦然），这一机制在双重上市场景下（如美股与港股之间的股份转换）是两地价格联动的基础。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、企业主需要把握的实务要点</h2><p>要点1：上市时科学设定ADS比例。目标是让挂牌初期的ADS价格落在5至20美元的舒适区间——太低贴近退市红线，太高影响散户参与度。这需要结合估值和发行规模测算。</p><p>要点2：把ADS比例调整纳入市值管理工具箱。股价滑向1美元时，调整ADS比例是与反向分割并列的选项，各有利弊，需要与美国律师和托管银行评估选用。</p><p>要点3：谈好存托协议的商业条款。费用分担、费用返还、投票机制安排，都是签约时可谈判的内容，直接影响挂牌后的成本和治理。</p><p>要点4：向投资人讲清楚结构。在IR材料中说明ADS与普通股的比例关系、总股本的计算口径，避免投资人在计算市值和每股指标时产生混淆。</p><p><h3>结语：懂机制，才能用好机制</h3></p><p>ADS是中概股与美国资本市场之间的标准桥梁。理解它的机制，企业才能在比例设定、费用谈判、股价管理上把这座桥用好，而不是让它只是一个被动的存在。</p><p>彤鼎集团在上市辅导中，协助企业完成ADS比例测算、托管银行选择与存托协议谈判，把这些容易被忽略的技术细节，变成企业资本运作的加分项。</p><p>彤鼎集团是一家综合性国际资本服务机构，香港母公司为彤鼎集团（香港）有限公司，业务网络覆盖香港、深圳、上海，并延伸至新加坡。集团专注为企业提供全球化的境内外上市及资本市场全流程一站式服务，由曾任职于加拿大券商机构的廖启捷领衔，廖启捷现任彤鼎集团（香港）有限公司董事局主席，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>集团八大核心业务覆盖融资策划、架构设计、上市规划、税务筹划、增发融资、市值管理、跨境资本、家族办公室，提供从商业模式梳理、顶层架构设计、上市辅导，到财务顾问、法律顾问、并购重组的资本运作全链条服务。</p><p data-ts="1">团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p><p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="f1-prospectus.html" style="color:#6b5426;font-weight:700;">F-1招股书撰写要点</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="greenshoe.html" style="color:#6b5426;font-weight:700;">绿鞋机制与超额配售</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-ipo-pricing.html" style="color:#6b5426;font-weight:700;">纳斯达克IPO定价机制</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="roadshow-prep.html" style="color:#6b5426;font-weight:700;">路演完整准备指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="us-gaap-differences.html" style="color:#6b5426;font-weight:700;">US-GAAP与中国会计准则差异</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

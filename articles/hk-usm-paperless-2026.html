@@ -73,6 +73,73 @@ footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;c
 .f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
 body.paper nav{background:rgba(10,9,8,.96);}
 @media(max-width:960px){.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"香港无纸证券市场（USM）来了：2026年11月落地，拟上市与已上市企业要做什么","inLanguage":"zh-CN","abstract":"The Uncertificated Securities Market (USM) regime lets securities be held, transferred and registered electronically without paper certificates, and is expected to take effect in Hong Kong on 16 November 2026. Newly listed securities must be issued in uncertificated form from listing, while already-listed securities have a five-year transition window. Issuers must appoint an SFC-approved Approved Securities Registrar, amend their articles, and observe corporate-action blackout periods around their participation date. This article explains the definition, timeline, obligations for new applicants and existing issuers, and a backward-planned readiness checklist.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/hk-usm-paperless-2026.html","datePublished":"2026-07-23","dateModified":"2026-07-23","image":"https://tdgroup.hk/img/og-card.jpg","description":"无纸证券市场（USM）是指以电子方式持有、转让与登记证券、不再依赖纸本股票的制度安排，拟于2026年11月16日在香港实施。新上市证券须自上市起以无纸形式发行，既有上市证券设五年过渡期，发行人须委任认可证券登记机构、修订章程细则并遵守企业行动禁制期。本文拆解USM的定义、时间表、对新申请人与已上市公司的义务，以及一张倒推的准备清单。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -90,52 +157,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">市场基础设施 MARKET INFRASTRUCTURE</div><h1>香港无纸证券市场（USM）来了：2026年11月落地，拟上市与已上市企业要做什么</h1>
 <div class="sub">从纸本股票到全电子持有，一场影响每一家港股发行人的底层制度切换</div><div class="en">The Uncertificated Securities Market (USM) regime lets securities be held, transferred and registered electronically without paper certificates, and is expected to take effect in Hong Kong on 16 November 2026. Newly listed securities must be issued in uncertificated form from listing, while already-listed securities have a five-year transition window. This article explains the definition, timeline, obligations for new applicants and existing issuers, and a backward-planned readiness checklist.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-23">2026年7月23日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">无纸证券市场（Uncertificated Securities Market，简称USM）是指投资者以电子方式直接持有、转让与登记证券，不再依赖实物股票的制度安排。根据香港监管机构公布的安排，该制度拟于2026年11月16日起分阶段实施：自实施日起新上市的证券须以无纸形式发行，不再印发纸本股票；实施日前已上市的证券则设有五年过渡期，须在指定日期前完成无纸化转换。对发行人而言，核心义务有三：委任一家证监会批准的认可证券登记机构（ASR）、修订公司章程细则以承认无纸持有与电子登记转让、并在参与日期前后一段禁制窗口内暂缓派息与供股等企业行动。这不是一次可选的技术升级，而是一项对所有港股发行人具有强制性的底层切换。相关时点与细则以证监会、联交所及香港结算公布的正式文本为准。</div>
-
-<h2>一、什么是无纸证券市场：制度换的是"持有方式"而不是"证券本身"</h2>
-<p><strong>结论先说：USM改变的不是你持有什么，而是你以什么形式持有、如何转让、以及谁来记录归属。</strong></p>
-<p>长期以来，香港证券以"纸本证书＋过户登记"为法律确权的基础。投资者透过券商在中央结算系统（CCASS）内买卖时，实际持有的是一种间接权益，真正记名在股东名册上的往往是香港结算代理人（HKSCC Nominees），而不是投资者本人。这种"纸面所有权与实际持有分离"的结构，长期存在权益归属不透明、企业行动指令传递链条冗长、以及纸本证书遗失或伪造等隐患。</p>
-<p>无纸证券市场是指以电子记录取代实物证书，让证券的发行、持有、转让与登记全程数字化的制度。在USM下，投资者可以选择在证券登记机构处以自己的名义直接持有证券，成为记名股东，从而直接行使投票、收息等权利，而不必再穿透代理人层层确认。<strong>本质上，USM要解决的是"谁真正拥有这只股票"这个问题，把答案从一叠纸和一串代理关系，变成一条可即时查询的电子记录。</strong></p>
-<p>需要厘清一个常见误解：无纸化不等于证券代币化（tokenization），也不等于区块链上链。USM是在现行法律框架内，用中央登记系统实现的电子化确权，其法律性质仍是传统证券，与以分布式账本为基础的数字资产是两条不同的技术与监管路径。企业在理解这项制度时，不应把它与近年热度较高的资产上链概念混为一谈。</p>
-
-<h2>二、时间表：2026年11月16日启动，既有证券五年过渡</h2>
-<p><strong>结论先说：制度是"新老划断＋分阶段过渡"，新上市证券一步到位，既有上市证券有五年时间逐批完成转换。</strong></p>
-<p>根据已公布的安排，USM制度拟于2026年11月16日正式实施。这一时点对不同类型的发行人意义不同。对在实施日当天或之后首次上市的证券，须自上市起即以无纸形式发行，不再印发纸本证书——也就是说，任何计划在2026年11月中旬之后登陆港股的企业，其发行安排从一开始就要按无纸框架设计。</p>
-<p>对实施日之前已经上市的证券，制度给出了五年的过渡窗口，既有证券须在这一窗口内的指定日期前完成向无纸形式的转换。过渡采取分批推进的方式，不同发行人会被安排在不同的"参与日期"进入制度，而不是所有公司在同一天同时切换。这种安排是为了让登记机构、结算系统与发行人有序衔接，避免集中转换带来的操作风险。</p>
-<p>过渡期内有一个容易被忽视的细节：在发行人被安排的参与日期前后，会存在一段企业行动禁制窗口。根据公布的安排，这一窗口大致覆盖参与日期之前若干个营业日至之后若干个营业日，期间发行人应避免安排除息、除权等需要以特定日期确定股东名册的企业行动。<strong>关键在于，五年过渡不是"五年后再管"，而是每一家公司都会在这五年内的某个确定时点被要求完成切换，越早了解自己的参与安排，越能把它与既有的分红、增发计划错开。</strong>具体时点以监管机构与香港结算的正式通知为准。</p>
-
-<h2>三、对新申请上市企业：上市即无纸，发行文件与章程要同步调整</h2>
-<p><strong>结论先说：2026年11月之后申请港股上市的企业，无纸化不是上市后要处理的事，而是招股与架构设计阶段就要嵌入的前提。</strong></p>
-<p>对拟在实施日之后上市的企业而言，最直接的影响是发行形态：新股必须以无纸形式发行，招股章程、公司章程细则与各项发行文件都要据此表述，不能再沿用旧版以纸本证书为默认的模板。这意味着上市文件的准备工作在起草阶段就要引入无纸框架，而不是等挂牌后再补充。</p>
-<p>其一是章程细则。公司的组织章程大纲及细则需要包含承认无纸持有、允许证券主要透过"指定要求"（而非纸本过户）进行转让、以及承认电子通讯与股东查阅电子登记册权利的条款。对采用开曼、英属维尔京群岛等境外注册地的上市主体，还需确保注册地公司法允许无纸持有安排，并在章程中做相应衔接，这一点在架构设计阶段就应与开曼律师确认。</p>
-<p>其二是登记安排。发行人须委任一家获证监会批准的认可证券登记机构（Approved Securities Registrar，ASR）来运营无纸登记。选择ASR、明确其与主承销商、结算系统之间的数据接口，是发行准备工作的一部分。其三是投资者沟通材料，需要向拟认购的投资者说明无纸持有的方式、以自己名义直接持有与通过券商持有的差别，以及相应的权利行使路径。<strong>因此，对新申请人来说，USM把一部分原本属于"挂牌之后"的登记事务，前移到了上市执行阶段，路径规划时就应把它列为一条独立的工作线。</strong></p>
-
-<h2>四、对已上市企业：三项强制义务与一段禁制窗口</h2>
-<p><strong>结论先说：已上市公司不是被动等待，而是要在自己的参与日期之前，主动完成登记机构委任、章程修订与股东沟通三件事。</strong></p>
-<p>第一项义务是委任认可证券登记机构。所有须纳入制度的证券都要成为"参与证券"，发行人须委任一家证监会批准的ASR承担无纸登记职能。对多数已上市公司而言，现有的股份过户登记处需要升级为具备无纸登记资格的机构，或者更换登记服务商，这涉及服务合同的重新谈判与数据迁移，通常不是短期内可以完成的。</p>
-<p>第二项义务是修订公司章程细则。既有章程若以纸本证书和实物过户为默认，需要提请股东大会审议通过修订，加入承认无纸持有、电子转让与电子通讯的条款。由于章程修订通常需要股东特别决议，发行人应把它纳入股东周年大会或专门的股东特别大会议程，预留召集与表决的时间。这一步没有捷径，是一项需要走完公司治理程序的正式动作。</p>
-<p>第三项义务是股东沟通与操作衔接。发行人需要向现有股东说明转换安排、时间节点，以及股东可以选择的持有方式。与此同时，前文提到的企业行动禁制窗口在此环节尤为关键：如果一家公司习惯在固定月份派息，而它被安排的参与日期恰好与派息除息日临近，就需要提前调整企业行动日程，避免两者相撞。<strong>本质上，已上市公司面对的不是一次性的合规动作，而是一段需要与自身分红、增发、股东大会节奏协调的项目管理工作。</strong></p>
-
-<h2>五、投资者层面的变化：从"代理人持有"到"可选择实名直接持有"</h2>
-<p><strong>结论先说：USM给投资者的最大改变，是提供了以自己名义直接持有证券、直接行使股东权利的选项。</strong></p>
-<p>在现行结构下，绝大多数散户投资者的证券由香港结算代理人记名持有，投资者与发行人之间隔着券商和代理人两层。这带来两个后果：一是投资者难以直接出现在股东名册上，行使投票权往往要通过券商层层转达；二是企业行动（如供股、要约收购）的信息传递链条长，指令回传容易延迟。</p>
-<p>USM为投资者提供了新的选项。投资者可以选择在ASR开立以自己名义登记的账户，直接成为记名股东，从而直接接收公司通讯、直接投票、直接收取股息。当然，投资者也可以继续沿用通过券商持有的方式，制度并不强制个人改变习惯。对发行人而言，这一变化意味着股东名册的结构可能变得更"实名化"，与投资者的直接沟通渠道增多，这对投资者关系（IR）工作既是机会也是新的管理要求。</p>
-<p>对拟上市企业规划股东基础的工作而言，这一点值得纳入考量。更透明的实名持有环境，客观上有利于企业识别真实股东结构、也对信息披露的准确性提出更高要求。企业在设计发行与配售策略时，可以把无纸环境下股东可直接实名持有这一特征，纳入对股东分布和后续沟通成本的评估。<strong>关键在于，USM让"谁是我的股东"这个问题第一次有机会得到更直接的答案，而这既是治理的便利，也是披露的责任。</strong></p>
-
-<h2>六、为什么这不只是技术升级：与市场现代化的整体关系</h2>
-<p><strong>结论先说：无纸化是香港市场一系列现代化措施的底座，它铺平的是每手买卖单位改革、结算效率提升等后续变化的道路。</strong></p>
-<p>2026年下半年，香港市场正在推进一揽子现代化措施，除USM外，还包括简化每手买卖单位（board lot）框架、优化市场基础设施、以及推出面向发行人的电子化沟通平台等。这些措施之间并非孤立：无纸化提供了以单股为单位精确登记与转让的技术基础，而这正是简化每手买卖单位、乃至未来推动碎股交易的前提。可以说，USM是许多后续改革能够落地的底层条件。</p>
-<p>从市场竞争的角度看，全电子化的持有与结算环境，是国际主要交易所长期演进的方向。香港推进USM，一方面是补齐与国际接轨的制度短板，另一方面也是在IPO活跃度回升的窗口期，提升市场对发行人与国际投资者的吸引力。2026年上半年，香港新股市场的募资规模与上市数量都处于近年同期的高位，制度层面的现代化与一级市场的活跃互为支撑。</p>
-<p>对企业决策者而言，理解这层关系的意义在于：不要把USM当成一件孤立的合规杂务来应付，而应把它放在"香港市场整体在往哪走"的框架里看。一家计划长期在香港资本市场运作的企业，越早适应无纸化环境，越能顺势用上后续的效率红利。<strong>因此，USM的价值不止于消除纸本证书的隐患，更在于它是通向一个更高效、更透明市场的第一块基石。</strong></p>
-
-<h2>七、企业该如何准备：一张倒推的行动清单</h2>
-<p><strong>结论先说：无论是新申请人还是已上市公司，准备USM的核心都是"提前确认自己的时点，再把三件强制动作排进日程"。</strong></p>
-<p>对已上市公司，一个务实的倒推清单大致如下。第一步，向自己的股份登记服务商与联交所确认本公司被安排的参与日期，这是所有后续工作排期的锚点。第二步，评估现有登记处是否具备无纸登记资格，若否，启动ASR的选择或升级谈判，预留数据迁移周期。第三步，把章程细则修订列入下一次股东大会议程，预留召集与特别决议的时间。第四步，梳理未来两年的分红、增发、股东大会计划，与参与日期前后的企业行动禁制窗口做错峰安排。第五步，准备股东沟通材料，说明转换安排与持有选择。</p>
-<p>对拟上市企业，准备工作要更早嵌入路径设计。如果上市时点落在2026年11月之后，那么在架构搭建阶段就要确认境外注册地公司法与无纸持有的衔接，在起草招股与章程文件时直接采用无纸框架，在选择中介机构时把ASR的委任纳入清单，并在发行与配售策略中考虑实名直接持有对股东分布的影响。这些工作与传统的上市准备并行，不构成额外的时间成本，但如果遗漏，可能在临近聆讯时被要求返工。</p>
-<p>华尔街彤鼎俱乐部在与拟上市企业家交流香港路径时，通常会把市场基础设施的这类变化纳入前期讨论——因为路径选择从来不只是比较门槛数字，也包括对目标市场制度演进方向的判断。一家企业若在USM落地前后登陆港股，提前把无纸化的要求想清楚，远比挂牌后被动应对更从容。<strong>本质上，制度切换对准备充分的企业是顺水推舟，对临时抱佛脚的企业才是额外负担。</strong></p>
-
-<p style="margin-top:34px;color:#6b6350;font-size:14.5px;">本文所述USM实施时点、过渡安排、发行人义务及禁制窗口等具体细节，以香港证券及期货事务监察委员会、香港联合交易所及香港中央结算有限公司公布的正式规则文本与实施通知为准；监管安排可能调整，实际适用请以生效时点的有效版本并咨询专业机构为准。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>无纸证券市场（Uncertificated Securities Market，简称USM）是指投资者以电子方式直接持有、转让与登记证券，不再依赖实物股票的制度安排。根据香港监管机构公布的安排，该制度拟于2026年11月16日起分阶段实施：自实施日起新上市的证券须以无纸形式发行，不再印发纸本股票；实施日前已上市的证券则设有五年过渡期，须在指定日期前完成无纸化转换。</p><p>对发行人而言，核心义务有三：委任一家证监会批准的认可证券登记机构（ASR）、修订公司章程细则以承认无纸持有与电子登记转让、并在参与日期前后一段禁制窗口内暂缓派息与供股等企业行动。这不是一次可选的技术升级，而是一项对所有港股发行人具有强制性的底层切换。相关时点与细则以证监会、联交所及香港结算公布的正式文本为准。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">什么是无纸证券市场：制度换的是"持有方式"而不是"证券本身"</a></li><li><a href="#sec-02">时间表：2026年11月16日启动，既有证券五年过渡</a></li><li><a href="#sec-03">对新申请上市企业：上市即无纸，发行文件与章程要同步调整</a></li><li><a href="#sec-04">对已上市企业：三项强制义务与一段禁制窗口</a></li><li><a href="#sec-05">投资者层面的变化：从"代理人持有"到"可选择实名直接持有"</a></li><li><a href="#sec-06">为什么这不只是技术升级：与市场现代化的整体关系</a></li><li><a href="#sec-07">企业该如何准备：一张倒推的行动清单</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、什么是无纸证券市场：制度换的是"持有方式"而不是"证券本身"</h2><p><strong>结论先说：USM改变的不是你持有什么，而是你以什么形式持有、如何转让、以及谁来记录归属。</strong></p><p>长期以来，香港证券以"纸本证书＋过户登记"为法律确权的基础。投资者透过券商在中央结算系统（CCASS）内买卖时，实际持有的是一种间接权益，真正记名在股东名册上的往往是香港结算代理人（HKSCC Nominees），而不是投资者本人。</p><p data-ts="1">这种"纸面所有权与实际持有分离"的结构，长期存在权益归属不透明、企业行动指令传递链条冗长、以及纸本证书遗失或伪造等隐患。</p><p>无纸证券市场是指以电子记录取代实物证书，让证券的发行、持有、转让与登记全程数字化的制度。在USM下，投资者可以选择在证券登记机构处以自己的名义直接持有证券，成为记名股东，从而直接行使投票、收息等权利，而不必再穿透代理人层层确认。</p><p data-ts="1"><strong>本质上，USM要解决的是"谁真正拥有这只股票"这个问题，把答案从一叠纸和一串代理关系，变成一条可即时查询的电子记录。</strong></p><p>需要厘清一个常见误解：无纸化不等于证券代币化（tokenization），也不等于区块链上链。USM是在现行法律框架内，用中央登记系统实现的电子化确权，其法律性质仍是传统证券，与以分布式账本为基础的数字资产是两条不同的技术与监管路径。企业在理解这项制度时，不应把它与近年热度较高的资产上链概念混为一谈。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、时间表：2026年11月16日启动，既有证券五年过渡</h2><p><strong>结论先说：制度是"新老划断＋分阶段过渡"，新上市证券一步到位，既有上市证券有五年时间逐批完成转换。</strong></p><p>根据已公布的安排，USM制度拟于2026年11月16日正式实施。这一时点对不同类型的发行人意义不同。对在实施日当天或之后首次上市的证券，须自上市起即以无纸形式发行，不再印发纸本证书——也就是说，任何计划在2026年11月中旬之后登陆港股的企业，其发行安排从一开始就要按无纸框架设计。</p><p>对实施日之前已经上市的证券，制度给出了五年的过渡窗口，既有证券须在这一窗口内的指定日期前完成向无纸形式的转换。过渡采取分批推进的方式，不同发行人会被安排在不同的"参与日期"进入制度，而不是所有公司在同一天同时切换。</p><p data-ts="1">这种安排是为了让登记机构、结算系统与发行人有序衔接，避免集中转换带来的操作风险。</p><p>过渡期内有一个容易被忽视的细节：在发行人被安排的参与日期前后，会存在一段企业行动禁制窗口。根据公布的安排，这一窗口大致覆盖参与日期之前若干个营业日至之后若干个营业日，期间发行人应避免安排除息、除权等需要以特定日期确定股东名册的企业行动。</p><p data-ts="1"><strong>关键在于，五年过渡不是"五年后再管"，而是每一家公司都会在这五年内的某个确定时点被要求完成切换，越早了解自己的参与安排，越能把它与既有的分红、增发计划错开。</strong>具体时点以监管机构与香港结算的正式通知为准。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、对新申请上市企业：上市即无纸，发行文件与章程要同步调整</h2><p><strong>结论先说：2026年11月之后申请港股上市的企业，无纸化不是上市后要处理的事，而是招股与架构设计阶段就要嵌入的前提。</strong></p><p>对拟在实施日之后上市的企业而言，最直接的影响是发行形态：新股必须以无纸形式发行，招股章程、公司章程细则与各项发行文件都要据此表述，不能再沿用旧版以纸本证书为默认的模板。这意味着上市文件的准备工作在起草阶段就要引入无纸框架，而不是等挂牌后再补充。</p><p>其一是章程细则。公司的组织章程大纲及细则需要包含承认无纸持有、允许证券主要透过"指定要求"（而非纸本过户）进行转让、以及承认电子通讯与股东查阅电子登记册权利的条款。对采用开曼、英属维尔京群岛等境外注册地的上市主体，还需确保注册地公司法允许无纸持有安排，并在章程中做相应衔接，这一点在架构设计阶段就应与开曼律师确认。</p><p>其二是登记安排。发行人须委任一家获证监会批准的认可证券登记机构（Approved Securities Registrar，ASR）来运营无纸登记。选择ASR、明确其与主承销商、结算系统之间的数据接口，是发行准备工作的一部分。</p><p data-ts="1">其三是投资者沟通材料，需要向拟认购的投资者说明无纸持有的方式、以自己名义直接持有与通过券商持有的差别，以及相应的权利行使路径。<strong>因此，对新申请人来说，USM把一部分原本属于"挂牌之后"的登记事务，前移到了上市执行阶段，路径规划时就应把它列为一条独立的工作线。</strong></p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、对已上市企业：三项强制义务与一段禁制窗口</h2><p><strong>结论先说：已上市公司不是被动等待，而是要在自己的参与日期之前，主动完成登记机构委任、章程修订与股东沟通三件事。</strong></p><p>第一项义务是委任认可证券登记机构。所有须纳入制度的证券都要成为"参与证券"，发行人须委任一家证监会批准的ASR承担无纸登记职能。对多数已上市公司而言，现有的股份过户登记处需要升级为具备无纸登记资格的机构，或者更换登记服务商，这涉及服务合同的重新谈判与数据迁移，通常不是短期内可以完成的。</p><p>第二项义务是修订公司章程细则。既有章程若以纸本证书和实物过户为默认，需要提请股东大会审议通过修订，加入承认无纸持有、电子转让与电子通讯的条款。由于章程修订通常需要股东特别决议，发行人应把它纳入股东周年大会或专门的股东特别大会议程，预留召集与表决的时间。这一步没有捷径，是一项需要走完公司治理程序的正式动作。</p><p>第三项义务是股东沟通与操作衔接。发行人需要向现有股东说明转换安排、时间节点，以及股东可以选择的持有方式。与此同时，前文提到的企业行动禁制窗口在此环节尤为关键：如果一家公司习惯在固定月份派息，而它被安排的参与日期恰好与派息除息日临近，就需要提前调整企业行动日程，避免两者相撞。</p><p data-ts="1"><strong>本质上，已上市公司面对的不是一次性的合规动作，而是一段需要与自身分红、增发、股东大会节奏协调的项目管理工作。</strong></p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、投资者层面的变化：从"代理人持有"到"可选择实名直接持有"</h2><p><strong>结论先说：USM给投资者的最大改变，是提供了以自己名义直接持有证券、直接行使股东权利的选项。</strong></p><p>在现行结构下，绝大多数散户投资者的证券由香港结算代理人记名持有，投资者与发行人之间隔着券商和代理人两层。这带来两个后果：一是投资者难以直接出现在股东名册上，行使投票权往往要通过券商层层转达；二是企业行动（如供股、要约收购）的信息传递链条长，指令回传容易延迟。</p><p>USM为投资者提供了新的选项。投资者可以选择在ASR开立以自己名义登记的账户，直接成为记名股东，从而直接接收公司通讯、直接投票、直接收取股息。当然，投资者也可以继续沿用通过券商持有的方式，制度并不强制个人改变习惯。</p><p data-ts="1">对发行人而言，这一变化意味着股东名册的结构可能变得更"实名化"，与投资者的直接沟通渠道增多，这对投资者关系（IR）工作既是机会也是新的管理要求。</p><p>对拟上市企业规划股东基础的工作而言，这一点值得纳入考量。更透明的实名持有环境，客观上有利于企业识别真实股东结构、也对信息披露的准确性提出更高要求。企业在设计发行与配售策略时，可以把无纸环境下股东可直接实名持有这一特征，纳入对股东分布和后续沟通成本的评估。</p><p data-ts="1"><strong>关键在于，USM让"谁是我的股东"这个问题第一次有机会得到更直接的答案，而这既是治理的便利，也是披露的责任。</strong></p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、为什么这不只是技术升级：与市场现代化的整体关系</h2><p><strong>结论先说：无纸化是香港市场一系列现代化措施的底座，它铺平的是每手买卖单位改革、结算效率提升等后续变化的道路。</strong></p><p>2026年下半年，香港市场正在推进一揽子现代化措施，除USM外，还包括简化每手买卖单位（board lot）框架、优化市场基础设施、以及推出面向发行人的电子化沟通平台等。这些措施之间并非孤立：无纸化提供了以单股为单位精确登记与转让的技术基础，而这正是简化每手买卖单位、乃至未来推动碎股交易的前提。可以说，USM是许多后续改革能够落地的底层条件。</p><p>从市场竞争的角度看，全电子化的持有与结算环境，是国际主要交易所长期演进的方向。香港推进USM，一方面是补齐与国际接轨的制度短板，另一方面也是在IPO活跃度回升的窗口期，提升市场对发行人与国际投资者的吸引力。</p><p data-ts="1">2026年上半年，香港新股市场的募资规模与上市数量都处于近年同期的高位，制度层面的现代化与一级市场的活跃互为支撑。</p><p>对企业决策者而言，理解这层关系的意义在于：不要把USM当成一件孤立的合规杂务来应付，而应把它放在"香港市场整体在往哪走"的框架里看。一家计划长期在香港资本市场运作的企业，越早适应无纸化环境，越能顺势用上后续的效率红利。</p><p data-ts="1"><strong>因此，USM的价值不止于消除纸本证书的隐患，更在于它是通向一个更高效、更透明市场的第一块基石。</strong></p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、企业该如何准备：一张倒推的行动清单</h2><p><strong>结论先说：无论是新申请人还是已上市公司，准备USM的核心都是"提前确认自己的时点，再把三件强制动作排进日程"。</strong></p><p>对已上市公司，一个务实的倒推清单大致如下。</p><ol class="ts-pts"><li><b>第一步</b>，向自己的股份登记服务商与联交所确认本公司被安排的参与日期，这是所有后续工作排期的锚点。</li><li><b>第二步</b>，评估现有登记处是否具备无纸登记资格，若否，启动ASR的选择或升级谈判，预留数据迁移周期。</li><li><b>第三步</b>，把章程细则修订列入下一次股东大会议程，预留召集与特别决议的时间。</li><li><b>第四步</b>，梳理未来两年的分红、增发、股东大会计划，与参与日期前后的企业行动禁制窗口做错峰安排。</li><li><b>第五步，准备股东沟通材料</b>，说明转换安排与持有选择。</li></ol><p>对拟上市企业，准备工作要更早嵌入路径设计。如果上市时点落在2026年11月之后，那么在架构搭建阶段就要确认境外注册地公司法与无纸持有的衔接，在起草招股与章程文件时直接采用无纸框架，在选择中介机构时把ASR的委任纳入清单，并在发行与配售策略中考虑实名直接持有对股东分布的影响。</p><p data-ts="1">这些工作与传统的上市准备并行，不构成额外的时间成本，但如果遗漏，可能在临近聆讯时被要求返工。</p><p>华尔街彤鼎俱乐部在与拟上市企业家交流香港路径时，通常会把市场基础设施的这类变化纳入前期讨论——因为路径选择从来不只是比较门槛数字，也包括对目标市场制度演进方向的判断。一家企业若在USM落地前后登陆港股，提前把无纸化的要求想清楚，远比挂牌后被动应对更从容。<strong>本质上，制度切换对准备充分的企业是顺水推舟，对临时抱佛脚的企业才是额外负担。</strong></p><p>本文所述USM实施时点、过渡安排、发行人义务及禁制窗口等具体细节，以香港证券及期货事务监察委员会、香港联合交易所及香港中央结算有限公司公布的正式规则文本与实施通知为准；监管安排可能调整，实际适用请以生效时点的有效版本并咨询专业机构为准。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="lawyer-selection.html" style="color:#6b5426;font-weight:700;">律师团队选择</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pcaob-audit.html" style="color:#6b5426;font-weight:700;">PCAOB审计与审计底稿检查</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="us-gaap-differences.html" style="color:#6b5426;font-weight:700;">US-GAAP与中国会计准则差异</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="underwriter-selection.html" style="color:#6b5426;font-weight:700;">承销商选择指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cfo-team.html" style="color:#6b5426;font-weight:700;">CFO选聘与财务团队建设</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

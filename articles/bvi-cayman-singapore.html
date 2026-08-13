@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"BVI开曼新加坡公司区别","inLanguage":"zh-CN","abstract":"What BVI, Cayman and Singapore entities each do in an offshore listing structure, and why the three are combined rather than substituted.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/bvi-cayman-singapore.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"一篇讲清楚离岸架构的基础常识。BVI开曼新加坡公司区别完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,93 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">跨境架构 STRUCTURING</div><h1>BVI开曼新加坡公司区别</h1>
 <div class="sub">一篇讲清楚离岸架构的基础常识</div><div class="en">What BVI, Cayman and Singapore entities each do in an offshore listing structure, and why the three are combined rather than substituted.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">这些名词听起来很遥远、很复杂，但其实背后的逻辑并不难懂。如果企业有国际业务、有海外客户、或者未来想走向国际资本市场，了解这几种离岸公司的基本差异，是非常有必要的一课。</div>
-<h3>为什么要聊这个话题</h3>
-<p>做企业的朋友，或多或少都听过BVI、开曼、新加坡这些名字。新闻里常说某家公司“注册在开曼”，朋友圈里也偶尔看到“在BVI开了一家控股公司”。</p>
-<p>这篇文章用最平实的语言，把这几种公司的特点、用途、差异讲清楚，帮助大家建立一个基础认知。</p>
-<h2>一、什么是离岸公司</h2>
-<p>所谓离岸公司，简单说就是企业或个人在注册地以外的国家或地区设立的公司。常见的离岸注册地包括英属维尔京群岛（BVI）、开曼群岛、百慕大、塞舌尔、新加坡、中国香港等。</p>
-<p>这些地方之所以成为注册热门地，有几个共同原因。第一是注册手续相对简便，从提交资料到完成注册，通常几周就能搞定。第二是维护成本可控，每年只需要支付一定的年费和政府规费。第三是税务体系相对清晰，有些地区对境外收入不征税或税率很低。第四是保密性较好，股东和董事信息不一定全部公开。</p>
-<p>需要强调的是，离岸公司本身是合法的商业工具，被全球大量跨国企业使用。关键在于用它来做什么——合规合法的用途完全没有问题。</p>
-<h2>二、BVI公司的特点</h2>
-<p>BVI是英属维尔京群岛的缩写，位于加勒比海地区，是全球最早发展离岸金融业务的地方之一。</p>
-<h3>为什么很多人用BVI</h3>
-<p>BVI公司最大的特点是注册简单、维护成本低。一家BVI公司的注册流程通常1到2周就能完成，每年的维护费用相对较低。股东和董事可以是任何国籍的自然人或法人，没有本地居民要求。</p>
-<p>BVI对公司信息的披露要求相对宽松，股东和董事信息不需要向公众披露（监管机构依然可以查询），对商业信息的保密性比较好。</p>
-<h3>BVI公司通常用来做什么</h3>
-<p>从实际用途看，BVI公司常见于以下场景。一是作为个人或家族的控股平台，持有其他公司的股权。二是作为国际贸易的中间主体，处理跨境结算。三是作为投资控股工具，持有境外资产。四是在多层架构中作为顶层或中间层主体。</p>
-<p>BVI公司有一个特点：它本身通常不会作为在交易所挂牌的上市主体。原因是BVI公司的治理结构相对简单，不完全符合成熟资本市场对上市公司的治理透明度要求。所以你会看到，很多架构中BVI公司处于“控股层”，而不是“发行层”。</p>
-<h2>三、开曼公司的特点</h2>
-<p>开曼群岛同样位于加勒比海，是全球最重要的离岸金融中心之一。开曼公司的地位比BVI公司更高一些，应用场景也更广。</p>
-<h3>开曼公司的核心优势</h3>
-<p>开曼公司最大的特点是被全球主要交易所广泛接受作为上市主体。香港联交所、纽约证券交易所、纳斯达克等都允许开曼公司作为发行主体挂牌上市。</p>
-<p>开曼公司的公司法相对完善，治理结构灵活，可以设计A/B股双重股权结构、优先股、可转债等复杂的股权安排，这对于成长型企业和希望保护创始人控制权的企业非常重要。</p>
-<p>开曼公司对境外收入不征收公司所得税、资本利得税和股息税，税务处理清晰。这一点对国际投资人来说非常有吸引力。</p>
-<h3>开曼公司的主要用途</h3>
-<p>开曼公司最常见的用途是作为跨境架构中的“发行主体”，即直接在交易所挂牌的那家公司。全球知名的很多企业，最顶层的上市主体都是开曼公司。</p>
-<p>开曼公司也常被用作私募股权基金的主体、家族信托的载体、大型跨境并购的交易主体。</p>
-<p>相比BVI公司，开曼公司的注册和维护成本略高，但提供的功能和可信度更强。所以在企业架构中，常见的逻辑是：个人或家族通过BVI公司持股，BVI公司持有开曼公司，开曼公司作为发行主体挂牌或做进一步投资。</p>
-<h2>四、新加坡公司的特点</h2>
-<p>新加坡公司和BVI、开曼有本质区别。新加坡是一个主权国家，不是单纯的离岸注册地。新加坡公司在法律地位、税务体系、商业声誉上都是完整的、国际认可度高的独立主体。</p>
-<h3>新加坡公司的独特优势</h3>
-<p>新加坡公司的第一个优势是国际声誉好。作为亚洲重要的金融中心，新加坡的法律体系、监管环境、商业信用都达到国际一流水准。一家新加坡公司，在和国际客户、国际银行、国际投资人打交道时，获得的信任度远超纯离岸公司。</p>
-<p>第二个优势是税务体系合理。新加坡企业所得税率17%，但有各种优惠政策。新加坡与全球80多个国家和地区签订了避免双重征税协定，这对做国际业务的企业来说有实际价值。</p>
-<p>第三个优势是新加坡公司可以作为真正的业务运营主体。你可以在新加坡开设实际办公室、聘用员工、开展实际业务，这在BVI和开曼这些地方基本做不到。</p>
-<p>第四个优势是银行开户便利。新加坡的银行对新加坡本地公司的开户申请接受度较高，这对需要处理跨境资金的企业非常关键。</p>
-<h3>新加坡公司的用途</h3>
-<p>新加坡公司的典型用途包括：作为东南亚区域总部、作为国际业务的运营实体、作为跨境供应链的枢纽、作为投资控股平台、作为科技产品的国际服务主体等。</p>
-<p>近几年，越来越多有国际化需求的中国企业选择在新加坡设立运营公司，目的是把国际业务和境内业务相对分开，让国际业务有一个独立的、国际认可度高的法律主体。</p>
-<h2>五、三种公司的对比与组合逻辑</h2>
-<h3>三者的基本差异</h3>
-<p>先从法律属性看。BVI和开曼都是典型的离岸司法管辖区，主要用于控股和投资；新加坡是主权国家，可以作为完整的业务运营主体。</p>
-<p>再从注册成本看。BVI最低，开曼中等，新加坡相对较高但也并不昂贵。</p>
-<p>从税务情况看。BVI和开曼对境外收入基本不征税；新加坡有17%的企业所得税，但有多项减免政策和双税协定可以使用。</p>
-<p>从业务实质看。BVI和开曼通常不具备实际经营能力；新加坡可以真正开展实际业务。</p>
-<p>从信息透明度看。BVI和开曼对股东信息披露要求较低；新加坡对公司信息的披露要求较高。</p>
-<p>从资本市场认可度看。BVI一般作为控股层，不直接上市；开曼是全球主要交易所认可的发行主体；新加坡既可以作为运营实体，也可以在新加坡交易所上市。</p>
-<h3>为什么会同时用到三种公司</h3>
-<p>了解了各自特点之后，很多朋友会问：为什么经常看到一个架构里同时有BVI、开曼、新加坡三种公司？这不是很复杂吗？</p>
-<p>其实原理很简单：每一种公司都有自己的长处和短处，组合起来可以发挥各自最大的价值。</p>
-<p>以一个典型的跨境业务架构为例。创始人或实控人通过几家BVI公司作为顶层持股工具，利用BVI注册简单、维护成本低、保密性好的特点。BVI公司往下持有一家开曼公司，开曼公司作为整个架构的“发行主体”，具备上市可能性和灵活的股权设计空间。开曼公司再往下持有一家新加坡公司，新加坡公司作为实际业务运营主体，处理国际业务、对接国际客户、管理国际资金。</p>
-<p>这样一个架构的好处是：顶层有灵活的持股安排，中间层有成熟的资本运作能力，底层有真实的业务运营实体。每一层各司其职，整体结构清晰、合规、高效。</p>
-<h2>六、普通企业需要了解离岸架构吗</h2>
-<p>很多经营境内业务的中小企业主会觉得：这些离岸公司的事跟我没关系。其实不然。</p>
-<p>如果企业有以下任何一种情况，了解离岸架构都是有意义的。</p>
-<p>第一种，企业已经有海外客户或正在拓展国际业务。有一个独立的国际业务主体，可以让客户更放心、结算更便利、业务更清晰。</p>
-<p>第二种，企业正在考虑引入外部投资人，尤其是美元基金。美元基金一般需要通过离岸架构进行投资和退出，理解这套架构有助于更高效地与投资人对话。</p>
-<p>第三种，企业未来有国际化上市的想法。无论是在港交所、新加坡交易所还是美国的纳斯达克，都需要设计离岸架构作为申报主体。越早了解越早规划，成本越低。</p>
-<p>第四种，企业需要做国际品牌布局或海外投资。一个国际化的法律主体可以大幅提升在境外的商业信任度。</p>
-<p>第五种，创始人希望做家族财富的长期规划。合理的离岸控股架构可以帮助实现资产的分散配置和代际传承。</p>
-<h2>七、搭建离岸架构需要注意什么</h2>
-<p>离岸架构看似简单，实际上涉及法律、税务、外汇等多个专业领域，需要提前做好规划和准备。</p>
-<h3>合规是第一位的</h3>
-<p>任何离岸架构的搭建，都必须建立在合规的基础上。涉及中国居民个人或企业设立境外公司、进行境外投资，需要按照中国外汇管理规定办理相应的登记手续。常见的包括个人外汇登记（也叫37号文登记）、企业境外直接投资备案（ODI备案）等。</p>
-<p>跳过这些合规程序私自搭建境外架构，可能带来外汇管制风险、税务风险甚至法律风险。这是一定要提前了解清楚的。</p>
-<h3>架构设计要匹配实际需求</h3>
-<p>离岸架构不是越复杂越好。很多企业看别人用三层四层的架构，就觉得自己也需要同样的设计，结果反而把问题复杂化。</p>
-<p>正确的做法是从企业的实际业务需求、发展阶段、未来规划出发，设计最匹配的架构。简单的业务用简单的架构，复杂的跨境业务才需要多层设计。</p>
-<h3>税务规划要同步考虑</h3>
-<p>离岸架构的一个重要功能是税务优化，但这不是“避税”。合法的税务规划是通过合理利用各司法管辖区的税收协定和优惠政策，降低整体税负，但所有操作都必须符合各地法律。</p>
-<p>税务规划需要在架构搭建的同时完成，后期补救空间非常有限。这一点经常被企业忽略。</p>
-<h3>选择合适的专业机构</h3>
-<p>离岸架构的搭建涉及注册、开户、合规、税务等多个环节，涉及BVI律师、开曼律师、新加坡律师、银行、会计师等多方专业人士。</p>
-<p>对大多数企业来说，独立处理这些事情几乎不现实。比较可行的方式是找一家有跨境业务经验的咨询团队进行整体统筹，由其协调各方专业资源，确保整个架构合法合规、运转顺畅。</p>
-<h2>八、几个常见的误解</h2>
-<h3>误解一：离岸架构就是为了避税</h3>
-<p>这是最常见也最严重的误解。现代离岸架构的核心价值远不止税务，更多的是跨境业务的便利性、资本运作的灵活性、股权结构的清晰性、资产隔离的安全性等。单纯从“避税”角度理解离岸架构，既低估了它的价值，也容易把握不好合规边界。</p>
-<h3>误解二：离岸架构风险很大</h3>
-<p>只要依法依规搭建和运营，离岸架构完全是合法的商业工具。全球绝大多数跨国企业和国际化企业都在使用类似架构。所谓“风险大”，通常是指那些绕过合规程序、违规操作的做法，这不是离岸架构本身的问题。</p>
-<h3>误解三：离岸公司很神秘</h3>
-<p>离岸公司听起来很神秘，其实它的本质就是在另一个地方注册的一家公司。它的运营、治理、财务、税务都有清晰的规则，只要按规则来，就是一个很普通的商业工具。</p>
-<h3>误解四：只有大企业才需要用</h3>
-<p>很多中小企业认为离岸架构是大公司的事。实际上，对于有明确国际化需求的中小企业，越早规划离岸架构，后续成本越低、灵活性越高。</p>
-<h3>结语</h3>
-<p>BVI、开曼、新加坡这三种公司，各有所长，各有用途。BVI适合做灵活的控股工具，开曼适合做成熟的发行主体，新加坡适合做国际化的业务运营实体。三者组合起来，构成了现代跨境商业架构的基本骨架。</p>
-<p>对企业主来说，不一定要成为这方面的专家，但建立基础认知是很有价值的。当企业发展到一定阶段，有国际化需求的时候，这套知识会帮助你更快地理解专业建议，做出更好的决策。</p>
-<p>在规划具体架构时，建议寻求有跨境经验的专业团队协助。离岸架构的设计不是一件独立的事情，它和企业的业务规划、税务安排、未来资本运作都紧密相关，需要系统性思考。越早规划，越有余地；越晚启动，越多约束。</p>
-<p>*本文为基础知识科普，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。*</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>这些名词听起来很遥远、很复杂，但其实背后的逻辑并不难懂。如果企业有国际业务、有海外客户、或者未来想走向国际资本市场，了解这几种离岸公司的基本差异，是非常有必要的一课。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">什么是离岸公司</a></li><li><a href="#sec-02">BVI公司的特点</a></li><li><a href="#sec-03">开曼公司的特点</a></li><li><a href="#sec-04">新加坡公司的特点</a></li><li><a href="#sec-05">三种公司的对比与组合逻辑</a></li><li><a href="#sec-06">普通企业需要了解离岸架构吗</a></li><li><a href="#sec-07">搭建离岸架构需要注意什么</a></li><li><a href="#sec-08">几个常见的误解</a></li></ol></div><p><h3>为什么要聊这个话题</h3></p><p>做企业的朋友，或多或少都听过BVI、开曼、新加坡这些名字。新闻里常说某家公司“注册在开曼”，朋友圈里也偶尔看到“在BVI开了一家控股公司”。</p><p>这篇文章用最平实的语言，把这几种公司的特点、用途、差异讲清楚，帮助大家建立一个基础认知。</p><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、什么是离岸公司</h2><p>所谓离岸公司，简单说就是企业或个人在注册地以外的国家或地区设立的公司。常见的离岸注册地包括英属维尔京群岛（BVI）、开曼群岛、百慕大、塞舌尔、新加坡、中国香港等。</p><p>这些地方之所以成为注册热门地，有几个共同原因。第一是注册手续相对简便，从提交资料到完成注册，通常几周就能搞定。第二是维护成本可控，每年只需要支付一定的年费和政府规费。第三是税务体系相对清晰，有些地区对境外收入不征税或税率很低。第四是保密性较好，股东和董事信息不一定全部公开。</p><p>需要强调的是，离岸公司本身是合法的商业工具，被全球大量跨国企业使用。关键在于用它来做什么——合规合法的用途完全没有问题。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、BVI公司的特点</h2><p>BVI是英属维尔京群岛的缩写，位于加勒比海地区，是全球最早发展离岸金融业务的地方之一。</p><p><h3>为什么很多人用BVI</h3></p><p>BVI公司最大的特点是注册简单、维护成本低。一家BVI公司的注册流程通常1到2周就能完成，每年的维护费用相对较低。股东和董事可以是任何国籍的自然人或法人，没有本地居民要求。</p><p>BVI对公司信息的披露要求相对宽松，股东和董事信息不需要向公众披露（监管机构依然可以查询），对商业信息的保密性比较好。</p><p><h3>BVI公司通常用来做什么</h3></p><p>从实际用途看，BVI公司常见于以下场景。一是作为个人或家族的控股平台，持有其他公司的股权。二是作为国际贸易的中间主体，处理跨境结算。三是作为投资控股工具，持有境外资产。四是在多层架构中作为顶层或中间层主体。</p><p>BVI公司有一个特点：它本身通常不会作为在交易所挂牌的上市主体。原因是BVI公司的治理结构相对简单，不完全符合成熟资本市场对上市公司的治理透明度要求。所以你会看到，很多架构中BVI公司处于“控股层”，而不是“发行层”。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、开曼公司的特点</h2><p>开曼群岛同样位于加勒比海，是全球最重要的离岸金融中心之一。开曼公司的地位比BVI公司更高一些，应用场景也更广。</p><p><h3>开曼公司的核心优势</h3></p><p>开曼公司最大的特点是被全球主要交易所广泛接受作为上市主体。香港联交所、纽约证券交易所、纳斯达克等都允许开曼公司作为发行主体挂牌上市。</p><p>开曼公司的公司法相对完善，治理结构灵活，可以设计A/B股双重股权结构、优先股、可转债等复杂的股权安排，这对于成长型企业和希望保护创始人控制权的企业非常重要。</p><p>开曼公司对境外收入不征收公司所得税、资本利得税和股息税，税务处理清晰。这一点对国际投资人来说非常有吸引力。</p><p><h3>开曼公司的主要用途</h3></p><p>开曼公司最常见的用途是作为跨境架构中的“发行主体”，即直接在交易所挂牌的那家公司。全球知名的很多企业，最顶层的上市主体都是开曼公司。</p><p>开曼公司也常被用作私募股权基金的主体、家族信托的载体、大型跨境并购的交易主体。</p><p>相比BVI公司，开曼公司的注册和维护成本略高，但提供的功能和可信度更强。所以在企业架构中，常见的逻辑是：个人或家族通过BVI公司持股，BVI公司持有开曼公司，开曼公司作为发行主体挂牌或做进一步投资。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、新加坡公司的特点</h2><p>新加坡公司和BVI、开曼有本质区别。新加坡是一个主权国家，不是单纯的离岸注册地。新加坡公司在法律地位、税务体系、商业声誉上都是完整的、国际认可度高的独立主体。</p><p><h3>新加坡公司的独特优势</h3></p><p>新加坡公司的第一个优势是国际声誉好。作为亚洲重要的金融中心，新加坡的法律体系、监管环境、商业信用都达到国际一流水准。一家新加坡公司，在和国际客户、国际银行、国际投资人打交道时，获得的信任度远超纯离岸公司。</p><p>第二个优势是税务体系合理。新加坡企业所得税率17%，但有各种优惠政策。新加坡与全球80多个国家和地区签订了避免双重征税协定，这对做国际业务的企业来说有实际价值。</p><p>第三个优势是新加坡公司可以作为真正的业务运营主体。你可以在新加坡开设实际办公室、聘用员工、开展实际业务，这在BVI和开曼这些地方基本做不到。</p><p>第四个优势是银行开户便利。新加坡的银行对新加坡本地公司的开户申请接受度较高，这对需要处理跨境资金的企业非常关键。</p><p><h3>新加坡公司的用途</h3></p><p>新加坡公司的典型用途包括：作为东南亚区域总部、作为国际业务的运营实体、作为跨境供应链的枢纽、作为投资控股平台、作为科技产品的国际服务主体等。</p><p>近几年，越来越多有国际化需求的中国企业选择在新加坡设立运营公司，目的是把国际业务和境内业务相对分开，让国际业务有一个独立的、国际认可度高的法律主体。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、三种公司的对比与组合逻辑</h2><p><h3>三者的基本差异</h3></p><p>先从法律属性看。BVI和开曼都是典型的离岸司法管辖区，主要用于控股和投资；新加坡是主权国家，可以作为完整的业务运营主体。</p><p>再从注册成本看。BVI最低，开曼中等，新加坡相对较高但也并不昂贵。</p><p>从税务情况看。BVI和开曼对境外收入基本不征税；新加坡有17%的企业所得税，但有多项减免政策和双税协定可以使用。</p><p>从业务实质看。BVI和开曼通常不具备实际经营能力；新加坡可以真正开展实际业务。</p><p>从信息透明度看。BVI和开曼对股东信息披露要求较低；新加坡对公司信息的披露要求较高。</p><p>从资本市场认可度看。BVI一般作为控股层，不直接上市；开曼是全球主要交易所认可的发行主体；新加坡既可以作为运营实体，也可以在新加坡交易所上市。</p><p><h3>为什么会同时用到三种公司</h3></p><p>了解了各自特点之后，很多朋友会问：为什么经常看到一个架构里同时有BVI、开曼、新加坡三种公司？这不是很复杂吗？</p><p>其实原理很简单：每一种公司都有自己的长处和短处，组合起来可以发挥各自最大的价值。</p><p>以一个典型的跨境业务架构为例。创始人或实控人通过几家BVI公司作为顶层持股工具，利用BVI注册简单、维护成本低、保密性好的特点。BVI公司往下持有一家开曼公司，开曼公司作为整个架构的“发行主体”，具备上市可能性和灵活的股权设计空间。</p><p data-ts="1">开曼公司再往下持有一家新加坡公司，新加坡公司作为实际业务运营主体，处理国际业务、对接国际客户、管理国际资金。</p><p>这样一个架构的好处是：顶层有灵活的持股安排，中间层有成熟的资本运作能力，底层有真实的业务运营实体。每一层各司其职，整体结构清晰、合规、高效。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、普通企业需要了解离岸架构吗</h2><p>很多经营境内业务的中小企业主会觉得：这些离岸公司的事跟我没关系。其实不然。</p><p>如果企业有以下任何一种情况，了解离岸架构都是有意义的。</p><p>第一种，企业已经有海外客户或正在拓展国际业务。有一个独立的国际业务主体，可以让客户更放心、结算更便利、业务更清晰。</p><p>第二种，企业正在考虑引入外部投资人，尤其是美元基金。美元基金一般需要通过离岸架构进行投资和退出，理解这套架构有助于更高效地与投资人对话。</p><p>第三种，企业未来有国际化上市的想法。无论是在港交所、新加坡交易所还是美国的纳斯达克，都需要设计离岸架构作为申报主体。越早了解越早规划，成本越低。</p><p>第四种，企业需要做国际品牌布局或海外投资。一个国际化的法律主体可以大幅提升在境外的商业信任度。</p><p>第五种，创始人希望做家族财富的长期规划。合理的离岸控股架构可以帮助实现资产的分散配置和代际传承。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、搭建离岸架构需要注意什么</h2><p>离岸架构看似简单，实际上涉及法律、税务、外汇等多个专业领域，需要提前做好规划和准备。</p><p><h3>合规是第一位的</h3></p><p>任何离岸架构的搭建，都必须建立在合规的基础上。涉及中国居民个人或企业设立境外公司、进行境外投资，需要按照中国外汇管理规定办理相应的登记手续。常见的包括个人外汇登记（也叫37号文登记）、企业境外直接投资备案（ODI备案）等。</p><p>跳过这些合规程序私自搭建境外架构，可能带来外汇管制风险、税务风险甚至法律风险。这是一定要提前了解清楚的。</p><p><h3>架构设计要匹配实际需求</h3></p><p>离岸架构不是越复杂越好。很多企业看别人用三层四层的架构，就觉得自己也需要同样的设计，结果反而把问题复杂化。</p><p>正确的做法是从企业的实际业务需求、发展阶段、未来规划出发，设计最匹配的架构。简单的业务用简单的架构，复杂的跨境业务才需要多层设计。</p><p><h3>税务规划要同步考虑</h3></p><p>离岸架构的一个重要功能是税务优化，但这不是“避税”。合法的税务规划是通过合理利用各司法管辖区的税收协定和优惠政策，降低整体税负，但所有操作都必须符合各地法律。</p><p>税务规划需要在架构搭建的同时完成，后期补救空间非常有限。这一点经常被企业忽略。</p><p><h3>选择合适的专业机构</h3></p><p>离岸架构的搭建涉及注册、开户、合规、税务等多个环节，涉及BVI律师、开曼律师、新加坡律师、银行、会计师等多方专业人士。</p><p>对大多数企业来说，独立处理这些事情几乎不现实。比较可行的方式是找一家有跨境业务经验的咨询团队进行整体统筹，由其协调各方专业资源，确保整个架构合法合规、运转顺畅。</p><hr class="ts-hr"><h2 id="sec-08"><span class="no">CHAPTER 08</span>八、几个常见的误解</h2><p><h3>误解一：离岸架构就是为了避税</h3></p><p>这是最常见也最严重的误解。现代离岸架构的核心价值远不止税务，更多的是跨境业务的便利性、资本运作的灵活性、股权结构的清晰性、资产隔离的安全性等。单纯从“避税”角度理解离岸架构，既低估了它的价值，也容易把握不好合规边界。</p><p><h3>误解二：离岸架构风险很大</h3></p><p>只要依法依规搭建和运营，离岸架构完全是合法的商业工具。全球绝大多数跨国企业和国际化企业都在使用类似架构。所谓“风险大”，通常是指那些绕过合规程序、违规操作的做法，这不是离岸架构本身的问题。</p><p><h3>误解三：离岸公司很神秘</h3></p><p>离岸公司听起来很神秘，其实它的本质就是在另一个地方注册的一家公司。它的运营、治理、财务、税务都有清晰的规则，只要按规则来，就是一个很普通的商业工具。</p><p><h3>误解四：只有大企业才需要用</h3></p><p>很多中小企业认为离岸架构是大公司的事。实际上，对于有明确国际化需求的中小企业，越早规划离岸架构，后续成本越低、灵活性越高。</p><p><h3>结语</h3></p><p>BVI、开曼、新加坡这三种公司，各有所长，各有用途。BVI适合做灵活的控股工具，开曼适合做成熟的发行主体，新加坡适合做国际化的业务运营实体。三者组合起来，构成了现代跨境商业架构的基本骨架。</p><p>对企业主来说，不一定要成为这方面的专家，但建立基础认知是很有价值的。当企业发展到一定阶段，有国际化需求的时候，这套知识会帮助你更快地理解专业建议，做出更好的决策。</p><p>在规划具体架构时，建议寻求有跨境经验的专业团队协助。离岸架构的设计不是一件独立的事情，它和企业的业务规划、税务安排、未来资本运作都紧密相关，需要系统性思考。越早规划，越有余地；越晚启动，越多约束。</p><p>*本文为基础知识科普，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。*</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="bvi-cayman-spv.html" style="color:#6b5426;font-weight:700;">BVI与开曼SPV设立运用</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hainan-ftp.html" style="color:#6b5426;font-weight:700;">海南自贸港企业上市与税收优惠</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="singapore-substance.html" style="color:#6b5426;font-weight:700;">新加坡公司实质要求与税务优惠</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="vie-deep-dive.html" style="color:#6b5426;font-weight:700;">VIE架构深度解读</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cross-border-funds.html" style="color:#6b5426;font-weight:700;">跨境资金出境合规</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

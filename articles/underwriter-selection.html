@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"承销商选择指南","inLanguage":"zh-CN","abstract":"Choosing an underwriter: firm-commitment versus best-efforts, distribution capability, research coverage and fee structure.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/underwriter-selection.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"承销商（Underwriter，即投行）是IPO流程中除公司本身之外最关键的参与方。承销商的3大核心职能是：主导定价和配售（决定公司能融多少钱、卖给谁）、提供研究覆盖（挂牌后持续影响机构投资人对公司的认知）、维护二级市场稳定（挂牌初期的市场做市）。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,72 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>承销商选择指南</h1>
 <div class="sub">选对投行是IPO成功的一半</div><div class="en">Choosing an underwriter: firm-commitment versus best-efforts, distribution capability, research coverage and fee structure.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">承销商（Underwriter，即投行）是IPO流程中除公司本身之外最关键的参与方。承销商的3大核心职能是：主导定价和配售（决定公司能融多少钱、卖给谁）、提供研究覆盖（挂牌后持续影响机构投资人对公司的认知）、维护二级市场稳定（挂牌初期的市场做市）。选错承销商的代价极大：发行价偏低（少融数千万美元）、配售给质量差的投资人（挂牌后股价波动剧烈）、研究覆盖质量差（机构关注度低）。正确的承销商选择应该在正式启动上市辅导的同时就开始，而不是等到F-1完成才临时选。</div>
-<h2>一、承销商的角色与职责</h2>
-<p>承销商是公司与资本市场之间的桥梁。它的核心职责贯穿整个IPO流程。</p>
-<h3>职责1：尽职调查与承销风险评估</h3>
-<p>承销商在决定是否承销之前，会对公司进行独立的尽职调查，评估业务真实性、财务健康度、管理层质量、法律合规性。这一调查独立于公司自行准备的材料，承销商有义务独立验证所有重要信息。</p>
-<p>通过尽调后，承销商决定是否接受承销任务，以及愿意支持的发行价格区间。承销商的承销本质上是一种信誉背书——承销商愿意承销一家公司，本身就向市场传递了正面信号。</p>
-<h3>职责2：定价与配售</h3>
-<p>路演期间，承销商主导书册建立（Book Building）过程，收集机构投资人认购意向。定价日，承销商与公司管理层共同确定最终发行价。配售阶段，承销商决定把股票分给哪些投资人、分多少——这是承销商最重要的专业判断能力所在。</p>
-<p>承销商的配售网络覆盖全球数百家长线机构基金，这些长线基金是股价长期稳定的基础。差的承销商配售主要给对冲基金，挂牌后短期内大量抛售，股价剧烈波动。</p>
-<h3>职责3：稳定机制</h3>
-<p>在IPO后的30天内，主承销商通常有权在二级市场买入股票以稳定股价（Stabilization）。如果发行时超额配售了15%的股票（Greenshoe Option，超额配股权），主承销商可以在市场上回购这15%，防止股价大幅破发。</p>
-<h3>职责4：研究覆盖</h3>
-<p>承销商内部的研究部门在锁定期结束后（通常挂牌后25天，新规下有所调整）会发布研究报告，对公司的业务和股价给出评级和目标价。这是机构投资人了解公司的重要渠道。研究报告的质量和分析师的声誉，直接影响机构投资人对公司的关注度。</p>
-<h2>二、承销商的分类与市场地位</h2>
-<h3>第一梯队：美国投行（Bulge Bracket）</h3>
-<p>高盛（Goldman Sachs）、摩根士丹利（Morgan Stanley）、摩根大通（JPMorgan）、花旗（Citi）、瑞银（UBS）等。这些投行的机构投资人网络覆盖最广、品牌背书效应最强、研究团队实力最雄厚。但费用最高（承销佣金通常占融资额的5%至7%），且对承销项目的门槛较高，通常要求公司有足够的体量和质量。</p>
-<h3>第二梯队：中型美国投行</h3>
-<p>杰富瑞（Jefferies）、派杰（Piper Sandler）、威廉布莱尔（William Blair）、罗仕证券（Roth Capital）等。这些投行对中小型中概股更友好，愿意承销融资规模在3000万至2亿美元的项目。研究覆盖能力和机构网络虽不及投行，但对特定行业（如科技、医疗、消费）有专业深度。</p>
-<h3>第三梯队：专注中概股的中型投行</h3>
-<p>包括中泰国际、国泰君安国际、海通国际、申万宏源香港等中资投行，以及新兴互联网券商平台。这些机构对中国企业的理解更深，合规和文化沟通摩擦更小，费用通常也更低。但其机构投资人网络以亚洲为主，在美国本土机构中的影响力有限。</p>
-<h2>三、主承销商与联席承销商的区别</h2>
-<p>大多数IPO会有一个主承销商（Bookrunner）和1至3个联席承销商（Co-Manager）。</p>
-<p>主承销商是整个IPO的核心协调方，负责主导定价、配售、稳定机制等最关键的工作，承担最大的法律责任，也收取最大比例的承销佣金（通常占总佣金的60%至80%）。</p>
-<p>联席承销商负责协助路演、扩大机构接触面、为特定区域或特定类型的投资人提供覆盖。对于中概股，通常会安排一家中资投行作为联席承销商，负责亚洲投资人的路演和联系。</p>
-<h2>四、如何评估和选择承销商</h2>
-<h3>评估维度1：可比项目经验</h3>
-<p>过去两年内，该承销商承销过多少家同类型中概股（行业相近、规模相近）？这些项目的定价结果和上市后表现如何？有丰富中概股经验的承销商，对整个流程的把握更有把握，对SEC问询的应对也更熟练。</p>
-<h3>评估维度2：分析师质量</h3>
-<p>承销商内部跟踪你所在行业的分析师是谁？他的研究报告在机构投资人中有多大影响力？是否被机构投资人选为该行业的首选分析师（Institutional Investor All-Star）？分析师的质量直接决定挂牌后研究覆盖的价值。</p>
-<h3>评估维度3：机构投资人网络质量</h3>
-<p>该承销商能接触到哪些机构投资人？长线基金（Fidelity、Wellington、Vanguard等）的关系如何？这些长线基金是上市后稳定股价和长期持有的核心基础。</p>
-<h3>评估维度4：团队稳定性</h3>
-<p>承销商分配给项目的核心团队成员是谁？这些人是否会全程参与？投行团队频繁变动是影响项目质量的重要风险，必须在签约前确认核心团队的稳定承诺。</p>
-<h3>评估维度5：费用与条款</h3>
-<p>标准承销佣金通常是融资总额的5%至7%。投行通常要求7%，中型投行通常接受5%至6%。除佣金外，还需要关注：是否有锁定期要求（承销商要求公司不得在一定时间内更换承销商）、稳定机制的具体安排、超额配股权（Greenshoe）的条款。</p>
-<h2>五、选择承销商的流程</h2>
-<h3>第一步：发出询价邀请（Bake-off）</h3>
-<p>公司向多家目标承销商（通常5至8家）发出询价邀请，说明公司基本情况、拟发行规模和时间窗口，邀请其提交承销提案。这一过程俗称Bake-off或Beauty Contest（选美比赛）。</p>
-<h3>第二步：评估提案并安排演讲</h3>
-<p>每家候选承销商准备一份详细的承销提案，通常包括：对公司业务和估值的独立分析、对比较公司和估值区间的建议、拟配置的团队阵容、分析师覆盖计划、机构投资人接触策略、费用方案。公司邀请各候选承销商进行面对面的提案演讲（通常每家1至2小时）。</p>
-<h3>第三步：综合评分并做出选择</h3>
-<p>根据上述5个评估维度，对各候选承销商进行综合评分。最终选定1家主承销商和1至2家联席承销商。</p>
-<p>彤鼎团队在辅导项目的承销商选择阶段，会协助管理层设计评估框架、解读各家提案的实质差异，并提供基于过往项目经验的承销商推荐。</p>
-<h2>六、与承销商合作的关键注意事项</h2>
-<h3>注意1：与承销商保持信息同步</h3>
-<p>承销商需要充分了解公司的最新情况，才能在路演中有效回答机构投资人的问题。定期向承销商更新公司的业务进展、财务情况、重大变化，确保双方信息完全同步。</p>
-<h3>注意2：尊重承销商的市场判断</h3>
-<p>在定价阶段，承销商的市场判断是最专业的参考依据。管理层对高价格的追求和承销商对市场实际需求的判断之间，有时候存在张力。理解并尊重承销商的专业意见，是达成双方都满意的定价结果的关键。</p>
-<h3>注意3：不要试图干预配售</h3>
-<p>配售决策属于承销商的专业判断范畴。管理层可以表达希望引入特定类型投资人（如长线基金）的意愿，但不应试图指定具体配售对象或比例。干预配售是严重的合规风险，可能导致SEC调查。</p>
-<h3>注意4：维护挂牌后的长期关系</h3>
-<p>承销商的价值不只在IPO阶段，挂牌后的研究覆盖、后续融资（Follow-on Offering）、债券发行、并购融资等都可能需要与承销商的持续合作。把承销商当成长期合作伙伴而不是一次性服务提供商，是更好的战略定位。</p>
-<h2>七、中概股常见的承销商选择误区</h2>
-<h3>误区1：只看品牌，不看适配性</h3>
-<p>投行的品牌确实有价值，但如果一家公司的体量和行业不在该投行的优先服务范围内，实际分配到的团队质量和关注度可能远不如一家专注该细分领域的中型投行。</p>
-<h3>误区2：选费用最低的承销商</h3>
-<p>承销佣金占融资总额的差异可能只有1至2个百分点，但承销商的定价能力差异可能导致发行价相差10至30%。少付1%的佣金，但因为定价能力不足导致发行价低20%，是典型的因小失大。</p>
-<h3>误区3：忽视研究分析师的重要性</h3>
-<p>很多公司在选择承销商时主要关注投行本身的品牌和销售能力，而忽视了分析师的质量。但挂牌后6至12个月，机构投资人对公司的认知很大程度上由研究报告塑造，分析师的质量是决定机构持续关注度的关键因素。</p>
-<h3>结语：承销商是IPO最重要的合作伙伴</h3>
-<p>IPO是创始人和公司迈入公众资本市场的关键一步，而承销商是这一步最重要的引路人。选对承销商，可以让公司以更高的价格融到更多的钱，并让股票在挂牌后获得更稳定的机构持有基础。</p>
-<p>选择承销商不应该只看谁的PPT做得最漂亮，而应该深度评估其实际的执行能力、机构网络质量和对公司所在行业的专业理解。这是IPO成功的关键前提之一。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>承销商（Underwriter，即投行）是IPO流程中除公司本身之外最关键的参与方。承销商的3大核心职能是：主导定价和配售（决定公司能融多少钱、卖给谁）、提供研究覆盖（挂牌后持续影响机构投资人对公司的认知）、维护二级市场稳定（挂牌初期的市场做市）。</p><p>选错承销商的代价极大：发行价偏低（少融数千万美元）、配售给质量差的投资人（挂牌后股价波动剧烈）、研究覆盖质量差（机构关注度低）。正确的承销商选择应该在正式启动上市辅导的同时就开始，而不是等到F-1完成才临时选。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">承销商的角色与职责</a></li><li><a href="#sec-02">承销商的分类与市场地位</a></li><li><a href="#sec-03">主承销商与联席承销商的区别</a></li><li><a href="#sec-04">如何评估和选择承销商</a></li><li><a href="#sec-05">选择承销商的流程</a></li><li><a href="#sec-06">与承销商合作的关键注意事项</a></li><li><a href="#sec-07">中概股常见的承销商选择误区</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、承销商的角色与职责</h2><p>承销商是公司与资本市场之间的桥梁。它的核心职责贯穿整个IPO流程。</p><p><h3>职责1：尽职调查与承销风险评估</h3></p><p>承销商在决定是否承销之前，会对公司进行独立的尽职调查，评估业务真实性、财务健康度、管理层质量、法律合规性。这一调查独立于公司自行准备的材料，承销商有义务独立验证所有重要信息。</p><p>通过尽调后，承销商决定是否接受承销任务，以及愿意支持的发行价格区间。承销商的承销本质上是一种信誉背书——承销商愿意承销一家公司，本身就向市场传递了正面信号。</p><p><h3>职责2：定价与配售</h3></p><p>路演期间，承销商主导书册建立（Book Building）过程，收集机构投资人认购意向。定价日，承销商与公司管理层共同确定最终发行价。配售阶段，承销商决定把股票分给哪些投资人、分多少——这是承销商最重要的专业判断能力所在。</p><p>承销商的配售网络覆盖全球数百家长线机构基金，这些长线基金是股价长期稳定的基础。差的承销商配售主要给对冲基金，挂牌后短期内大量抛售，股价剧烈波动。</p><p><h3>职责3：稳定机制</h3></p><p>在IPO后的30天内，主承销商通常有权在二级市场买入股票以稳定股价（Stabilization）。如果发行时超额配售了15%的股票（Greenshoe Option，超额配股权），主承销商可以在市场上回购这15%，防止股价大幅破发。</p><p><h3>职责4：研究覆盖</h3></p><p>承销商内部的研究部门在锁定期结束后（通常挂牌后25天，新规下有所调整）会发布研究报告，对公司的业务和股价给出评级和目标价。这是机构投资人了解公司的重要渠道。研究报告的质量和分析师的声誉，直接影响机构投资人对公司的关注度。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、承销商的分类与市场地位</h2><p><h3>第一梯队：美国投行（Bulge Bracket）</h3></p><p>高盛（Goldman Sachs）、摩根士丹利（Morgan Stanley）、摩根大通（JPMorgan）、花旗（Citi）、瑞银（UBS）等。这些投行的机构投资人网络覆盖最广、品牌背书效应最强、研究团队实力最雄厚。</p><p data-ts="1">但费用最高（承销佣金通常占融资额的5%至7%），且对承销项目的门槛较高，通常要求公司有足够的体量和质量。</p><p><h3>第二梯队：中型美国投行</h3></p><p>杰富瑞（Jefferies）、派杰（Piper Sandler）、威廉布莱尔（William Blair）、罗仕证券（Roth Capital）等。这些投行对中小型中概股更友好，愿意承销融资规模在3000万至2亿美元的项目。</p><p data-ts="1">研究覆盖能力和机构网络虽不及投行，但对特定行业（如科技、医疗、消费）有专业深度。</p><p><h3>第三梯队：专注中概股的中型投行</h3></p><p>包括中泰国际、国泰君安国际、海通国际、申万宏源香港等中资投行，以及新兴互联网券商平台。这些机构对中国企业的理解更深，合规和文化沟通摩擦更小，费用通常也更低。但其机构投资人网络以亚洲为主，在美国本土机构中的影响力有限。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、主承销商与联席承销商的区别</h2><p>大多数IPO会有一个主承销商（Bookrunner）和1至3个联席承销商（Co-Manager）。</p><p>主承销商是整个IPO的核心协调方，负责主导定价、配售、稳定机制等最关键的工作，承担最大的法律责任，也收取最大比例的承销佣金（通常占总佣金的60%至80%）。</p><p>联席承销商负责协助路演、扩大机构接触面、为特定区域或特定类型的投资人提供覆盖。对于中概股，通常会安排一家中资投行作为联席承销商，负责亚洲投资人的路演和联系。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、如何评估和选择承销商</h2><p><h3>评估维度1：可比项目经验</h3></p><p>过去两年内，该承销商承销过多少家同类型中概股（行业相近、规模相近）？这些项目的定价结果和上市后表现如何？有丰富中概股经验的承销商，对整个流程的把握更有把握，对SEC问询的应对也更熟练。</p><p><h3>评估维度2：分析师质量</h3></p><p>承销商内部跟踪你所在行业的分析师是谁？他的研究报告在机构投资人中有多大影响力？是否被机构投资人选为该行业的首选分析师（Institutional Investor All-Star）？分析师的质量直接决定挂牌后研究覆盖的价值。</p><p><h3>评估维度3：机构投资人网络质量</h3></p><p>该承销商能接触到哪些机构投资人？长线基金（Fidelity、Wellington、Vanguard等）的关系如何？这些长线基金是上市后稳定股价和长期持有的核心基础。</p><p><h3>评估维度4：团队稳定性</h3></p><p>承销商分配给项目的核心团队成员是谁？这些人是否会全程参与？投行团队频繁变动是影响项目质量的重要风险，必须在签约前确认核心团队的稳定承诺。</p><p><h3>评估维度5：费用与条款</h3></p><p>标准承销佣金通常是融资总额的5%至7%。投行通常要求7%，中型投行通常接受5%至6%。除佣金外，还需要关注：是否有锁定期要求（承销商要求公司不得在一定时间内更换承销商）、稳定机制的具体安排、超额配股权（Greenshoe）的条款。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、选择承销商的流程</h2><p><h3>第一步：发出询价邀请（Bake-off）</h3></p><p>公司向多家目标承销商（通常5至8家）发出询价邀请，说明公司基本情况、拟发行规模和时间窗口，邀请其提交承销提案。这一过程俗称Bake-off或Beauty Contest（选美比赛）。</p><p><h3>第二步：评估提案并安排演讲</h3></p><p>每家候选承销商准备一份详细的承销提案，通常包括：对公司业务和估值的独立分析、对比较公司和估值区间的建议、拟配置的团队阵容、分析师覆盖计划、机构投资人接触策略、费用方案。公司邀请各候选承销商进行面对面的提案演讲（通常每家1至2小时）。</p><p><h3>第三步：综合评分并做出选择</h3></p><p>根据上述5个评估维度，对各候选承销商进行综合评分。最终选定1家主承销商和1至2家联席承销商。</p><p>彤鼎团队在辅导项目的承销商选择阶段，会协助管理层设计评估框架、解读各家提案的实质差异，并提供基于过往项目经验的承销商推荐。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、与承销商合作的关键注意事项</h2><p><h3>注意1：与承销商保持信息同步</h3></p><p>承销商需要充分了解公司的最新情况，才能在路演中有效回答机构投资人的问题。定期向承销商更新公司的业务进展、财务情况、重大变化，确保双方信息完全同步。</p><p><h3>注意2：尊重承销商的市场判断</h3></p><p>在定价阶段，承销商的市场判断是最专业的参考依据。管理层对高价格的追求和承销商对市场实际需求的判断之间，有时候存在张力。理解并尊重承销商的专业意见，是达成双方都满意的定价结果的关键。</p><p><h3>注意3：不要试图干预配售</h3></p><p>配售决策属于承销商的专业判断范畴。管理层可以表达希望引入特定类型投资人（如长线基金）的意愿，但不应试图指定具体配售对象或比例。干预配售是严重的合规风险，可能导致SEC调查。</p><p><h3>注意4：维护挂牌后的长期关系</h3></p><p>承销商的价值不只在IPO阶段，挂牌后的研究覆盖、后续融资（Follow-on Offering）、债券发行、并购融资等都可能需要与承销商的持续合作。把承销商当成长期合作伙伴而不是一次性服务提供商，是更好的战略定位。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、中概股常见的承销商选择误区</h2><p><h3>误区1：只看品牌，不看适配性</h3></p><p>投行的品牌确实有价值，但如果一家公司的体量和行业不在该投行的优先服务范围内，实际分配到的团队质量和关注度可能远不如一家专注该细分领域的中型投行。</p><p><h3>误区2：选费用最低的承销商</h3></p><p>承销佣金占融资总额的差异可能只有1至2个百分点，但承销商的定价能力差异可能导致发行价相差10至30%。少付1%的佣金，但因为定价能力不足导致发行价低20%，是典型的因小失大。</p><p><h3>误区3：忽视研究分析师的重要性</h3></p><p>很多公司在选择承销商时主要关注投行本身的品牌和销售能力，而忽视了分析师的质量。但挂牌后6至12个月，机构投资人对公司的认知很大程度上由研究报告塑造，分析师的质量是决定机构持续关注度的关键因素。</p><p><h3>结语：承销商是IPO最重要的合作伙伴</h3></p><p>IPO是创始人和公司迈入公众资本市场的关键一步，而承销商是这一步最重要的引路人。选对承销商，可以让公司以更高的价格融到更多的钱，并让股票在挂牌后获得更稳定的机构持有基础。</p><p>选择承销商不应该只看谁的PPT做得最漂亮，而应该深度评估其实际的执行能力、机构网络质量和对公司所在行业的专业理解。这是IPO成功的关键前提之一。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="underwriter-guide.html" style="color:#6b5426;font-weight:700;">承销商选择与合作</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="listing-timetable.html" style="color:#6b5426;font-weight:700;">赴美上市完整时间表</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="listing-window.html" style="color:#6b5426;font-weight:700;">上市时机与市场窗口</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pcaob-audit.html" style="color:#6b5426;font-weight:700;">PCAOB审计与审计底稿检查</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-placement-lookthrough.html" style="color:#6b5426;font-weight:700;">港股IPO配售穿透核查：交易所在核查什么</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

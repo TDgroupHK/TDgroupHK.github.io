@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"港股IPO定价与簿记建档机制","inLanguage":"zh-CN","abstract":"Bookbuilding is the mechanism by which underwriters collect institutional orders within an indicative price range and read the final offer price off the resulting demand curve. A Hong Kong IPO is split into an international placing tranche and a Hong Kong public offer, linked by a clawback mechanism that reallocates shares when retail subscription runs hot; the exchange reformed the pricing and allocation regime in 2025, so current percentages should be checked against the Listing Rules. The over-allotment option is typically 15 percent of the deal with a 30-day stabilisation window, and the FINI platform launched in November 2023 cut settlement from T+5 to T+2. This article also dissects pricing-day dynamics and the structural causes of first-day breaks.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/hk-ipo-pricing.html","datePublished":"2026-07-20","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"簿记建档是指承销商在价格区间内向机构投资者征集订单、依据需求曲线确定发行价的定价机制。本文解析港股IPO的国际配售与公开发售结构、回拨机制的运作逻辑、定价日的多方博弈、15%绿鞋与上市后30日稳定期的稳市安排，以及新股破发背后的四类结构性原因，供筹备港股上市的企业参考。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,44 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>港股IPO定价与簿记建档机制</h1>
 <div class="sub">簿记建档、回拨机制与定价日博弈的运作逻辑</div><div class="en">Bookbuilding is the mechanism by which underwriters collect institutional orders within an indicative price range and read the final offer price off the resulting demand curve. A Hong Kong IPO is split into an international placing tranche and a Hong Kong public offer, linked by a clawback mechanism that reallocates shares when retail subscription runs hot; the exchange reformed the pricing and allocation regime in 2025, so current percentages should be checked against the Listing Rules. The over-allotment option is typically 15 percent of the deal with a 30-day stabilisation window, and the FINI platform launched in November 2023 cut settlement from T+5 to T+2. This article also dissects pricing-day dynamics and the structural causes of first-day breaks.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">簿记建档（Bookbuilding）是指承销商在既定价格区间内向机构投资者征集认购订单，将订单按价格与数量汇总成需求曲线，并据此确定最终发行价的定价机制。港股IPO的发行结构分为国际配售与香港公开发售两部分，长期以来公开发售初始占比约一成，并按超额认购倍数触发回拨；2025年港交所改革了定价与配售机制，允许发行人在不同机制间选择，现行具体比例以《上市规则》最新文本为准。稳市安排方面，超额配股权（绿鞋）通常为发行规模的15%，稳定价格期为上市后30日内；2023年11月启用的FINI平台将定价与挂牌之间的结算周期由T+5缩短至T+2。关键在于：发行价是需求曲线的读数，而不是谈判桌上的要价——定价机制理解得越透，发行策略犯错的空间越小。</div>
-<h2>一、簿记建档：发行价是需求曲线的读数</h2>
-<p><strong>结论先行：簿记建档的本质是price discovery（价格发现），承销商的角色是组织需求、读出价格，而不是替发行人喊价。</strong></p>
-<p>簿记建档是指主承销商（簿记管理人）在管理层路演期间，向机构投资者征集认购意向，每笔订单包含认购数量与价格条件——或按区间内任意价格接受（不限价订单），或设定可接受的价格上限（限价订单）。簿记团队将全部订单按价格档位累计，形成一条需求曲线：每一个价格水平上，能卖出多少股、由哪些类型的投资者持有，一目了然。</p>
-<p>价格区间的确定发生在簿记之前，依据三层输入：可比公司的交易估值、承销商分析师在预路演（投资者教育）阶段收集的机构反馈、发行人的融资底线。区间不是拍出来的，而是把这三层输入拟合后的一个可测试假设——簿记过程就是对这个假设的市场检验。</p>
-<p>理解了这一点，就能理解发行人在定价问题上的合理姿态：发行人能够决定的是发行规模、发行窗口与可接受的底价，而价格本身由订单结构决定。试图脱离订单结构强行要价的发行，要么发不出去，要么把破发风险全部留给了上市之后。本质上，簿记建档把定价从谈判问题转化为统计问题。</p>
-<h2>二、港股发行结构：国际配售与公开发售</h2>
-<p><strong>结论先行：港股IPO是一场双轨发行——国际配售定价格，公开发售定情绪，两条轨道由回拨机制连接。</strong></p>
-<p>港股IPO的发行分为两个部分。国际配售面向机构与专业投资者，通过簿记建档进行，通常占发行规模的绝大部分，发行价即在这一部分的订单基础上确定。香港公开发售面向本地公众投资者，按申购倍数以既定规则分配，散户不参与定价、只按最终定价认购。</p>
-<p>长期以来，公开发售的初始占比约为发行规模的一成，其余归入国际配售；当公开发售出现高倍数超额认购时，通过回拨机制从国际配售向公开发售调拨股份。2025年，港交所对定价与配售机制进行了改革，调整了公开发售的初始比例与回拨安排，并允许发行人在不同机制之间作出选择，现行的具体比例与档位以《上市规则》及交易所指引的最新文本为准。</p>
-<p>基础设施层面，2023年11月启用的FINI平台重构了新股结算流程，将定价日与挂牌日之间的周期由T+5缩短至T+2。这一变化的意义不止于效率：定价与挂牌之间的间隔越长，市场变盘的敞口越大，缩短结算周期实质上压缩了发行的市场风险。因此，理解港股发行结构的关键是两条轨道的分工——机构轨道贡献价格信息，公众轨道贡献认购热度信号，而热度会通过回拨反过来改变股份的最终分布。</p>
-<h2>三、回拨机制：认购热度如何改写配售结构</h2>
-<p><strong>结论先行：回拨机制把散户热度直接转化为配售结构的变化，热度越高，上市初期的流通结构越散户化。</strong></p>
-<p>回拨机制（clawback）是指当香港公开发售的超额认购达到设定倍数时，按规则将股份从国际配售调拨至公开发售，提高公众投资者的分配比例。长期实行的经典阶梯是：公开发售超额认购15倍以上时回拨至发行总量的30%，50倍以上回拨至40%，100倍以上回拨至50%。2025年机制改革后，回拨的触发档位与上限已作调整，并新增了发行人可选的配售机制，现行数值以《上市规则》最新文本为准——但回拨的逻辑没有变：散户认购越热，散户最终拿到的份额越多。</p>
-<p>回拨对发行结果有两层影响。第一层是配售结构：高倍数超购触发大比例回拨后，原本分配给机构的股份被调出，机构获配缩水，上市初期的股东结构向散户倾斜。第二层是交易行为：散户持股以短线参与为主，获配比例越高，挂牌初期的换手与波动通常越大；机构被回拨挤出的部分，还可能转化为上市后的场内买盘或观望资金。</p>
-<p>对发行人而言，回拨是一个不可控但可预判的变量：定价越贴近区间下限、市场情绪越热，超购倍数越高，回拨概率越大。因此，发行策略需要把回拨后的股东结构纳入定价讨论，而不是只盯着超购倍数的宣传价值。</p>
-<h2>四、定价流程：从价格区间到定价日</h2>
-<p><strong>结论先行：定价是一条信息逐步收敛的流水线——区间是假设，簿记是检验，定价日是读数。</strong></p>
-<p>标准的定价流程分五步。第一步，预路演：承销商分析师向机构投资者介绍公司框架，收集估值反馈，据此与发行人商定价格区间。第二步，路演与簿记启动：管理层路演与订单征集同步进行，簿记通常持续数个交易日，订单随路演推进逐日累积。第三步，簿记中期研判：观察订单覆盖倍数、订单质量与价格分布，若需求显著强于或弱于预期，可依规则程序调整价格区间或发行规模。第四步，定价日：簿记截止后，承销商与发行人依据最终订单簿确定发行价与配售方案。第五步，分配与结算：按FINI流程完成配售确认与结算，T+2挂牌。</p>
-<p>这里需要拆穿一个常见的数字幻觉：簿记覆盖倍数。订单簿显示的认购倍数存在结构性水分——机构预期获配会被削减，普遍会放大订单（俗称膨胀订单），以求削减后仍拿到目标仓位；限价订单在高价位会自动失效；亲友性质的支持性订单在上市后往往迅速离场。因此专业的簿记研判从不只看倍数，而看三样东西：不限价订单的占比、长线机构在簿中的权重、订单在价格档位上的分布形状。倍数是宣传口径，结构才是决策依据。</p>
-<h2>五、定价日的博弈：三方利益的交点</h2>
-<p><strong>结论先行：定价日的最优解不是最高价，而是让三方都留有余地的价格——发行人拿到融资，投资者拿到折价空间，承销商拿到后市秩序。</strong></p>
-<p>定价日的谈判桌上有三方利益。发行人希望价格尽量高，融资额与老股东摊薄直接取决于此。机构投资者要求新股折价——相对可比公司的估值折让，这是对新股信息不对称与流动性不确定的补偿，是全球市场的普遍现象而非港股特色。承销商居中，既要对发行人负责，也要维护自己在机构客户处的长期信用，还要为上市后的稳市留出安全边际。</p>
-<p>博弈的关键变量是订单簿的价格敏感度。若订单集中在区间下半部、限价订单占比高，强行按上限定价意味着定价瞬间蒸发一部分需求，上市后接盘力量薄弱；若不限价订单充足、长线机构给出明确的价格支持，靠近上限定价才有基础。基石投资者的存在也改变博弈结构：基石按最终价认购，占比越高，发行对市场化订单的依赖越低，但同时也削弱了价格发现的信息含量。</p>
-<p>华尔街彤鼎俱乐部在与企业主复盘发行案例时，反复强调一个反直觉的结论：定价日赢得太彻底，往往是输的开始——把订单簿压到极限的定价，等于把全部安全边际转移给了上市首日。给市场留一口气的定价，才买得到上市后的秩序。</p>
-<h2>六、绿鞋与稳市机制</h2>
-<p><strong>结论先行：绿鞋是发行自带的减震器，但它只能平滑波动，不能逆转定价错误。</strong></p>
-<p>超额配股权，俗称绿鞋（Greenshoe），是指发行人授予承销商的一项选择权：承销商可在发行规模之外超额配售一定股份，通常为发行规模的15%，并在上市后30日的稳定价格期内决定是否行使。</p>
-<p>其运作机制是对称的。承销商在发行时按发行规模的115%配售股份，超出的15%通过向股东借券交付，形成一个空头头寸。若上市后股价跌破发行价，稳市商在市场买入股份归还借券——这部分买盘即为托底力量；若股价高于发行价，稳市商行使绿鞋，要求发行人按发行价增发15%的股份用于归还借券，发行人实际多融了15%的资金。换言之：跌，则市场上多了一笔限价买盘；涨，则发行规模扩大——两种结果都是秩序的改善。</p>
-<p>但绿鞋的能力边界必须讲清楚。稳定期只有30日，托底资金上限就是那15%的超配部分；面对基本面质疑或系统性下跌，绿鞋买盘只能延缓破发、无法改变趋势。稳定期结束、绿鞋弹药用尽之后，股价回到基本面与筹码结构决定的轨道。因此，绿鞋是定价合理性的保险，而不是定价激进的许可——把绿鞋当作高定价托底工具的发行，几乎都在稳定期结束后付出代价。</p>
-<h2>七、破发的结构性原因</h2>
-<p><strong>结论先行：破发很少是运气问题，多数破发在定价日之前就已经写进了发行结构里。</strong></p>
-<p>第一类原因，定价透支。按可比估值顶格定价、叠加乐观的盈利预测，上市时估值已经把未来两三年的增长预支完毕，二级市场没有赚钱空间，自然没有承接买盘。这是最常见也最可避免的一类。</p>
-<p>第二类原因，流通盘过小。控股股东锁定、基石投资者锁定6个月之后，实际自由流通的股份可能只占总股本的一成上下，少量卖压即可击穿发行价；而过小的流通盘同样意味着少量买盘即可拉高股价——上市初期的暴涨暴跌，很多时候是同一个结构问题的两面。</p>
-<p>第三类原因，需求虚胖。簿记倍数依靠膨胀订单与短线资金堆砌，高倍数超购触发大比例回拨，散户获配集中，挂牌即抛；订单簿里缺少真正打算持有的长线资金，首日卖压没有对手盘。</p>
-<p>第四类原因，周期错配。定价日与挂牌日之间市场转向，或同期密集发行分流资金。FINI将结算周期缩短至T+2后，这一敞口已明显收窄，但并未消除。</p>
-<p>彤鼎集团在上市规划与发行执行辅导中，把定价结构的推演前置到路演之前完成——流通盘结构、基石占比、订单质量目标都在启动簿记前设定底线；华尔街彤鼎俱乐部也围绕发行定价、簿记机制等主题为企业主提供系统的资本认知。本质上，好的发行价不是簿记的终点读数，而是发行结构设计的起点约束。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>簿记建档（Bookbuilding）是指承销商在既定价格区间内向机构投资者征集认购订单，将订单按价格与数量汇总成需求曲线，并据此确定最终发行价的定价机制。港股IPO的发行结构分为国际配售与香港公开发售两部分，长期以来公开发售初始占比约一成，并按超额认购倍数触发回拨；2025年港交所改革了定价与配售机制，允许发行人在不同机制间选择，现行具体比例以《上市规则》最新文本为准。</p><p>稳市安排方面，超额配股权（绿鞋）通常为发行规模的15%，稳定价格期为上市后30日内；2023年11月启用的FINI平台将定价与挂牌之间的结算周期由T+5缩短至T+2。关键在于：发行价是需求曲线的读数，而不是谈判桌上的要价——定价机制理解得越透，发行策略犯错的空间越小。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">簿记建档：发行价是需求曲线的读数</a></li><li><a href="#sec-02">港股发行结构：国际配售与公开发售</a></li><li><a href="#sec-03">回拨机制：认购热度如何改写配售结构</a></li><li><a href="#sec-04">定价流程：从价格区间到定价日</a></li><li><a href="#sec-05">定价日的博弈：三方利益的交点</a></li><li><a href="#sec-06">绿鞋与稳市机制</a></li><li><a href="#sec-07">破发的结构性原因</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、簿记建档：发行价是需求曲线的读数</h2><div class="ts-lead"><span class="tag">结论先行</span><p>簿记建档的本质是price discovery（价格发现），承销商的角色是组织需求、读出价格，而不是替发行人喊价。</p></div><p>簿记建档是指主承销商（簿记管理人）在管理层路演期间，向机构投资者征集认购意向，每笔订单包含认购数量与价格条件——或按区间内任意价格接受（不限价订单），或设定可接受的价格上限（限价订单）。</p><p data-ts="1">簿记团队将全部订单按价格档位累计，形成一条需求曲线：每一个价格水平上，能卖出多少股、由哪些类型的投资者持有，一目了然。</p><p>价格区间的确定发生在簿记之前，依据三层输入：可比公司的交易估值、承销商分析师在预路演（投资者教育）阶段收集的机构反馈、发行人的融资底线。区间不是拍出来的，而是把这三层输入拟合后的一个可测试假设——簿记过程就是对这个假设的市场检验。</p><p>理解了这一点，就能理解发行人在定价问题上的合理姿态：发行人能够决定的是发行规模、发行窗口与可接受的底价，而价格本身由订单结构决定。试图脱离订单结构强行要价的发行，要么发不出去，要么把破发风险全部留给了上市之后。本质上，簿记建档把定价从谈判问题转化为统计问题。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、港股发行结构：国际配售与公开发售</h2><div class="ts-lead"><span class="tag">结论先行</span><p>港股IPO是一场双轨发行——国际配售定价格，公开发售定情绪，两条轨道由回拨机制连接。</p></div><p>港股IPO的发行分为两个部分。国际配售面向机构与专业投资者，通过簿记建档进行，通常占发行规模的绝大部分，发行价即在这一部分的订单基础上确定。香港公开发售面向本地公众投资者，按申购倍数以既定规则分配，散户不参与定价、只按最终定价认购。</p><p>长期以来，公开发售的初始占比约为发行规模的一成，其余归入国际配售；当公开发售出现高倍数超额认购时，通过回拨机制从国际配售向公开发售调拨股份。2025年，港交所对定价与配售机制进行了改革，调整了公开发售的初始比例与回拨安排，并允许发行人在不同机制之间作出选择，现行的具体比例与档位以《上市规则》及交易所指引的最新文本为准。</p><p>基础设施层面，2023年11月启用的FINI平台重构了新股结算流程，将定价日与挂牌日之间的周期由T+5缩短至T+2。这一变化的意义不止于效率：定价与挂牌之间的间隔越长，市场变盘的敞口越大，缩短结算周期实质上压缩了发行的市场风险。</p><p data-ts="1">因此，理解港股发行结构的关键是两条轨道的分工——机构轨道贡献价格信息，公众轨道贡献认购热度信号，而热度会通过回拨反过来改变股份的最终分布。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、回拨机制：认购热度如何改写配售结构</h2><div class="ts-lead"><span class="tag">结论先行</span><p>回拨机制把散户热度直接转化为配售结构的变化，热度越高，上市初期的流通结构越散户化。</p></div><p>回拨机制（clawback）是指当香港公开发售的超额认购达到设定倍数时，按规则将股份从国际配售调拨至公开发售，提高公众投资者的分配比例。长期实行的经典阶梯是：公开发售超额认购15倍以上时回拨至发行总量的30%，50倍以上回拨至40%，100倍以上回拨至50%。</p><p data-ts="1">2025年机制改革后，回拨的触发档位与上限已作调整，并新增了发行人可选的配售机制，现行数值以《上市规则》最新文本为准——但回拨的逻辑没有变：散户认购越热，散户最终拿到的份额越多。</p><p>回拨对发行结果有两层影响。第一层是配售结构：高倍数超购触发大比例回拨后，原本分配给机构的股份被调出，机构获配缩水，上市初期的股东结构向散户倾斜。第二层是交易行为：散户持股以短线参与为主，获配比例越高，挂牌初期的换手与波动通常越大；机构被回拨挤出的部分，还可能转化为上市后的场内买盘或观望资金。</p><p>对发行人而言，回拨是一个不可控但可预判的变量：定价越贴近区间下限、市场情绪越热，超购倍数越高，回拨概率越大。因此，发行策略需要把回拨后的股东结构纳入定价讨论，而不是只盯着超购倍数的宣传价值。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、定价流程：从价格区间到定价日</h2><div class="ts-lead"><span class="tag">结论先行</span><p>定价是一条信息逐步收敛的流水线——区间是假设，簿记是检验，定价日是读数。</p></div><p>标准的定价流程分五步。</p><ol class="ts-pts"><li><b>第一步，预路演：</b>承销商分析师向机构投资者介绍公司框架，收集估值反馈，据此与发行人商定价格区间。</li><li><b>第二步，路演与簿记启动：</b>管理层路演与订单征集同步进行，簿记通常持续数个交易日，订单随路演推进逐日累积。</li><li><b>第三步，簿记中期研判：</b>观察订单覆盖倍数、订单质量与价格分布，若需求显著强于或弱于预期，可依规则程序调整价格区间或发行规模。</li><li><b>第四步，定价日：</b>簿记截止后，承销商与发行人依据最终订单簿确定发行价与配售方案。</li><li><b>第五步，分配与结算：</b>按FINI流程完成配售确认与结算，T+2挂牌。</li></ol><p>这里需要拆穿一个常见的数字幻觉：簿记覆盖倍数。订单簿显示的认购倍数存在结构性水分——机构预期获配会被削减，普遍会放大订单（俗称膨胀订单），以求削减后仍拿到目标仓位；限价订单在高价位会自动失效；亲友性质的支持性订单在上市后往往迅速离场。</p><p data-ts="1">因此专业的簿记研判从不只看倍数，而看三样东西：不限价订单的占比、长线机构在簿中的权重、订单在价格档位上的分布形状。倍数是宣传口径，结构才是决策依据。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、定价日的博弈：三方利益的交点</h2><div class="ts-lead"><span class="tag">结论先行</span><p>定价日的最优解不是最高价，而是让三方都留有余地的价格——发行人拿到融资，投资者拿到折价空间，承销商拿到后市秩序。</p></div><p>定价日的谈判桌上有三方利益。发行人希望价格尽量高，融资额与老股东摊薄直接取决于此。机构投资者要求新股折价——相对可比公司的估值折让，这是对新股信息不对称与流动性不确定的补偿，是全球市场的普遍现象而非港股特色。</p><p data-ts="1">承销商居中，既要对发行人负责，也要维护自己在机构客户处的长期信用，还要为上市后的稳市留出安全边际。</p><p>博弈的关键变量是订单簿的价格敏感度。若订单集中在区间下半部、限价订单占比高，强行按上限定价意味着定价瞬间蒸发一部分需求，上市后接盘力量薄弱；若不限价订单充足、长线机构给出明确的价格支持，靠近上限定价才有基础。</p><p data-ts="1">基石投资者的存在也改变博弈结构：基石按最终价认购，占比越高，发行对市场化订单的依赖越低，但同时也削弱了价格发现的信息含量。</p><p>华尔街彤鼎俱乐部在与企业主复盘发行案例时，反复强调一个反直觉的结论：定价日赢得太彻底，往往是输的开始——把订单簿压到极限的定价，等于把全部安全边际转移给了上市首日。给市场留一口气的定价，才买得到上市后的秩序。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、绿鞋与稳市机制</h2><div class="ts-lead"><span class="tag">结论先行</span><p>绿鞋是发行自带的减震器，但它只能平滑波动，不能逆转定价错误。</p></div><p>超额配股权，俗称绿鞋（Greenshoe），是指发行人授予承销商的一项选择权：承销商可在发行规模之外超额配售一定股份，通常为发行规模的15%，并在上市后30日的稳定价格期内决定是否行使。</p><p>其运作机制是对称的。承销商在发行时按发行规模的115%配售股份，超出的15%通过向股东借券交付，形成一个空头头寸。若上市后股价跌破发行价，稳市商在市场买入股份归还借券——这部分买盘即为托底力量；若股价高于发行价，稳市商行使绿鞋，要求发行人按发行价增发15%的股份用于归还借券，发行人实际多融了15%的资金。</p><p data-ts="1">换言之：跌，则市场上多了一笔限价买盘；涨，则发行规模扩大——两种结果都是秩序的改善。</p><p>但绿鞋的能力边界必须讲清楚。稳定期只有30日，托底资金上限就是那15%的超配部分；面对基本面质疑或系统性下跌，绿鞋买盘只能延缓破发、无法改变趋势。稳定期结束、绿鞋弹药用尽之后，股价回到基本面与筹码结构决定的轨道。</p><p data-ts="1">因此，绿鞋是定价合理性的保险，而不是定价激进的许可——把绿鞋当作高定价托底工具的发行，几乎都在稳定期结束后付出代价。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、破发的结构性原因</h2><div class="ts-lead"><span class="tag">结论先行</span><p>破发很少是运气问题，多数破发在定价日之前就已经写进了发行结构里。</p></div><p>第一类原因，定价透支。按可比估值顶格定价、叠加乐观的盈利预测，上市时估值已经把未来两三年的增长预支完毕，二级市场没有赚钱空间，自然没有承接买盘。这是最常见也最可避免的一类。</p><p>第二类原因，流通盘过小。控股股东锁定、基石投资者锁定6个月之后，实际自由流通的股份可能只占总股本的一成上下，少量卖压即可击穿发行价；而过小的流通盘同样意味着少量买盘即可拉高股价——上市初期的暴涨暴跌，很多时候是同一个结构问题的两面。</p><p>第三类原因，需求虚胖。簿记倍数依靠膨胀订单与短线资金堆砌，高倍数超购触发大比例回拨，散户获配集中，挂牌即抛；订单簿里缺少真正打算持有的长线资金，首日卖压没有对手盘。</p><p>第四类原因，周期错配。定价日与挂牌日之间市场转向，或同期密集发行分流资金。FINI将结算周期缩短至T+2后，这一敞口已明显收窄，但并未消除。</p><p>彤鼎集团在上市规划与发行执行辅导中，把定价结构的推演前置到路演之前完成——流通盘结构、基石占比、订单质量目标都在启动簿记前设定底线；华尔街彤鼎俱乐部也围绕发行定价、簿记机制等主题为企业主提供系统的资本认知。本质上，好的发行价不是簿记的终点读数，而是发行结构设计的起点约束。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="greenshoe.html" style="color:#6b5426;font-weight:700;">绿鞋机制与超额配售</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cornerstone-investors.html" style="color:#6b5426;font-weight:700;">港股基石投资者机制</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="roadshow-investor-comms.html" style="color:#6b5426;font-weight:700;">路演与投资者沟通</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="underwriter-guide.html" style="color:#6b5426;font-weight:700;">承销商选择与合作</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ipo-restart.html" style="color:#6b5426;font-weight:700;">IPO中止后的重启路径</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

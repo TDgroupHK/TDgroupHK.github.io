@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"关联方资金占用：上市前必须清到零的一笔账","inLanguage":"zh-CN","abstract":"Related-party fund occupation refers to a controlling shareholder or its affiliates using the listing applicant's funds through loans, advances or transactions lacking commercial substance. Reviewers treat it as a governance red line rather than an ordinary receivable. Clearing the balance is not enough - the channel must be closed and a clean period demonstrated.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/related-party-funds.html"},"datePublished":"2026-07-30","dateModified":"2026-07-30","description":"关联方资金占用，是指控股股东、实际控制人及其控制的其他企业，以借款、代垫、无商业实质的往来等方式占用拟上市公司资金的情形。它在审核中被视为公司治理与内控的红线问题，而不是普通的往来款项。清理的标准不是把余额还成零就完事，而是要同时做到三件事：本金与资金占用费全额归还、形成占用的通道被制度性关闭、并且在报告期内有足够长的干净期间来证明它不会复发。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,49 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>关联方资金占用：上市前必须清到零的一笔账</h1>
 <div class="sub">它不只是把钱还回去，是要证明这条通道已经关上</div><div class="en">Related-party fund occupation refers to a controlling shareholder or its affiliates using the listing applicant's funds through loans, advances or transactions lacking commercial substance. Reviewers treat it as a governance red line rather than an ordinary receivable. Clearing the balance is not enough - the channel must be closed and a clean period demonstrated.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-30">2026年7月30日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">关联方资金占用，是指控股股东、实际控制人及其控制的其他企业，以借款、代垫费用、无商业实质的采购或销售往来等方式，占用拟上市公司资金的情形。它在上市审核中的定性与普通往来款项完全不同：普通往来是财务科目问题，资金占用是公司治理与内控的红线问题，因为它直接说明公司的资金没有被独立管理。清理的标准也因此不是&quot;把余额还成零&quot;这么简单，而是要同时做到三件事——本金与相应的资金占用费全额归还、形成占用的制度通道被关闭并有可验证的控制措施、以及在报告期内留出足够长的干净期间证明它不会复发。因此，发现得越晚，代价越大：不是钱的代价，是时间的代价。</div>
-<h2>一、什么情况会被认定为资金占用</h2>
-<p>资金占用的认定看实质，不看科目名称。以下几类是实务中最常见的形态。</p>
-<p>类型一，直接借款。公司把钱借给控股股东、实控人或其控制的其他企业，无论是否签了借款协议、是否约定利息。即便签了完整协议并按市场利率计息，仍然属于资金占用，只是性质上略轻。</p>
-<p>类型二，代垫费用。公司替关联方支付工资、租金、税费、差旅或其他开支，事后长期未结清。这一类最容易被当成&quot;顺手的事&quot;，也最容易累积。</p>
-<p>类型三，无商业实质的往来。通过采购或销售的形式在关联方之间划转资金，但交易本身缺乏真实的货物或服务对价，或者定价明显偏离公允水平。这一类的定性最严重，因为它同时触及资金占用和财务真实性两个问题。</p>
-<p>类型四，票据与担保衍生的占用。公司为关联方开具无真实交易背景的商业票据，或提供担保后实际承担了还款责任。</p>
-<p>类型五，容易被忽略的——预付款长期挂账。以预付货款名义支付给关联方，长期不交付也不退款。</p>
-<p>关键在于：判断标准是资金的实际使用人是谁、有没有真实的商业理由，而不是账上挂在哪个科目。</p>
-<h2>二、为什么它被当作红线</h2>
-<p>审核方对资金占用的容忍度显著低于其他财务瑕疵，原因有三层。</p>
-<p>其一，它直接否定资金独立性。上市审核要求发行人在资产、人员、财务、机构、业务五个方面独立于控股股东。资金被占用，意味着财务独立这一条不成立——公司的钱事实上由大股东调度。</p>
-<p>其二，它反映内控失效。一笔资金能够流出公司，说明审批流程、资金管理制度、内部审计中至少有一环没有起作用。而且资金占用往往不是一次性的，是长期存在的习惯，这说明的是系统性问题。</p>
-<p>其三，它损害其他股东与债权人利益。这一层在上市之后风险更大：上市公司的资金占用属于监管重点打击的行为，可能引发监管措施、行政处罚乃至更严重的后果。因此审核阶段就会从严把关，避免带病上市。</p>
-<p>正因为如此，资金占用不属于&quot;披露了就可以&quot;的事项，它必须先清理干净，再谈披露。相关的整体规范化路径可参阅<a href="pre-ipo-financial-cleanup.html">上市前财务规范化整改</a>。</p>
-<h2>三、清理的三个动作，缺一不可</h2>
-<p>头一个动作，全额归还本金与资金占用费。本金好理解，资金占用费常被漏掉——占用期间公司损失了资金的时间价值，通常需要按同期银行贷款利率或双方约定的合理利率计算并一并归还。只还本金不还占用费的清理，是不完整的。</p>
-<p>第二个动作，关闭通道。这一步最容易被跳过，也最重要。要做的包括：修订资金管理制度，明确对外资金往来的审批权限与流程；把大额付款的审批权收归董事会或专门委员会；建立关联方清单并在系统中做付款拦截；由内审对资金流向做定期检查。审核方会要求说明&quot;整改后如何保证不再发生&quot;，回答这个问题靠的是制度，不是承诺。</p>
-<p>第三个动作，留出干净期间。归还完成之后，需要有一段没有新增占用的期间来证明整改有效。这段期间越长越有说服力。这也是为什么资金占用必须尽早发现——发现得晚，干净期间不够，就只能推迟申报。</p>
-<p>因此，正确的处理顺序是：先查清全部占用、一次性归还到位、同步修制度、然后等时间。三件事并行做，时间才不会被浪费。</p>
-<h2>四、常见的错误做法</h2>
-<p>其一，年末突击还款、年初重新占用。为了让资产负债表日的余额显示为零，在年末归还、次年初再次拆出。这种做法在尽调中一查银行流水就会暴露，且性质比持续占用更严重——它说明企业知道这件事不对，选择的是掩饰而不是整改。</p>
-<p>其二，用应收账款科目掩盖。把资金占用挂在应收账款或其他应收款下，配上一份形式上的交易合同。这需要伪造或美化交易的真实性，一旦被认定，问题会从资金占用升级为财务真实性问题。</p>
-<p>其三，通过第三方过桥。资金先转给无关联的第三方，再由第三方转给关联方。资金流向的追查是尽调的常规动作，多转一手通常只是延长了被发现的时间。</p>
-<p>其四，只让实控人出承诺函。承诺函有价值，但它只能作为整改的补充，不能替代实际归还和制度修订。一种反复出现的情形是：企业提交了一份措辞完备的承诺函，却在被追问&quot;制度上如何防止再次发生&quot;时答不上来。</p>
-<p>关键在于：这四种做法的共同点是把审核当成需要应付的检查，而审核方恰恰在评估管理层的诚信态度。相关的公司治理建设可参阅<a href="board-building.html">独立董事与董事会建设</a>。</p>
-<h2>五、老板拿钱的正当渠道</h2>
-<p>资金占用之所以长期存在，很多时候不是恶意，而是企业主没有区分&quot;公司的钱&quot;和&quot;自己的钱&quot;。解决问题的一部分，是把正当渠道讲清楚。</p>
-<p>其一，分红。这是最正当的路径，按持股比例分配税后利润，需要履行相应的决策程序并承担相应税负。</p>
-<p>其二，薪酬。在公司任职并领取合理的工资薪金与奖金，需要与岗位职责匹配，并正常代扣代缴个人所得税。</p>
-<p>其三，真实的关联交易。如果关联方与公司之间确实存在真实的业务往来，那么在定价公允、程序合规、充分披露的前提下，这是被允许的，只是要接受更严格的审视。</p>
-<p>其四，正规的借贷关系。公司向股东借款（而非股东占用公司资金）在符合条件时是可行的；反向的公司借给股东，则应当尽量避免。</p>
-<p>这几条路径的具体税负比较与操作边界，可参阅<a href="owner-cash.html">老板从公司拿钱的合规方式</a>。本质上，把正当渠道打通，是杜绝资金占用最有效的办法——堵不如疏。</p>
-<h2>六、什么时候查、怎么查</h2>
-<p>时点上，资金占用的排查应当排在上市准备最前面的一批工作里，与财务规范化同步启动，理由在第三节已经说过：整改需要留出干净期间，而干净期间只能靠时间积累。</p>
-<p>排查方法上，有三个层次。</p>
-<p>其一，看账。调取其他应收款、预付账款、其他应付款等科目的明细，按往来对象逐一识别是否为关联方。这一层能查出显性的占用。</p>
-<p>其二，看流水。调取公司主要银行账户的完整流水，按对手方筛查与关联方及其相关人员的资金往来。这一层能查出被科目掩盖的占用。</p>
-<p>其三，看关系。先把关联方清单做全——不只是股东和董监高，还包括他们的近亲属、以及由这些人控制或施加重大影响的企业。清单不全，前两层的筛查就会漏。一种常见的情形是：企业提供的关联方清单只有五六家，中介机构通过工商信息穿透后列出了几十家，其中就有资金往来。</p>
-<p>在华尔街彤鼎俱乐部的闭门交流中，走过这一关的企业家给出的共识是：这件事最稳妥的做法是在还没有请中介之前，自己先查一遍——自己查出来是可以从容整改的历史问题，被中介查出来就变成了需要解释的诚信问题。</p>
-<p>彤鼎在这类项目中的角色是规划与统筹，具体的审计意见由持牌会计师事务所出具、法律意见由持牌律师出具。本质上，清理资金占用清的不是一笔账，是&quot;公司是公司、股东是股东&quot;这条边界——这条边界画不清楚，上市之后还会以别的形式再次出问题。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>关联方资金占用，是指控股股东、实际控制人及其控制的其他企业，以借款、代垫费用、无商业实质的采购或销售往来等方式，占用拟上市公司资金的情形。它在上市审核中的定性与普通往来款项完全不同：普通往来是财务科目问题，资金占用是公司治理与内控的红线问题，因为它直接说明公司的资金没有被独立管理。</p><p>清理的标准也因此不是&quot;把余额还成零&quot;这么简单，而是要同时做到三件事——本金与相应的资金占用费全额归还、形成占用的制度通道被关闭并有可验证的控制措施、以及在报告期内留出足够长的干净期间证明它不会复发。因此，发现得越晚，代价越大：不是钱的代价，是时间的代价。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">什么情况会被认定为资金占用</a></li><li><a href="#sec-02">为什么它被当作红线</a></li><li><a href="#sec-03">清理的三个动作，缺一不可</a></li><li><a href="#sec-04">常见的错误做法</a></li><li><a href="#sec-05">老板拿钱的正当渠道</a></li><li><a href="#sec-06">什么时候查、怎么查</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、什么情况会被认定为资金占用</h2><p>资金占用的认定看实质，不看科目名称。以下几类是实务中最常见的形态。</p><p>类型一，直接借款。公司把钱借给控股股东、实控人或其控制的其他企业，无论是否签了借款协议、是否约定利息。即便签了完整协议并按市场利率计息，仍然属于资金占用，只是性质上略轻。</p><p>类型二，代垫费用。公司替关联方支付工资、租金、税费、差旅或其他开支，事后长期未结清。这一类最容易被当成&quot;顺手的事&quot;，也最容易累积。</p><p>类型三，无商业实质的往来。通过采购或销售的形式在关联方之间划转资金，但交易本身缺乏真实的货物或服务对价，或者定价明显偏离公允水平。这一类的定性最严重，因为它同时触及资金占用和财务真实性两个问题。</p><p>类型四，票据与担保衍生的占用。公司为关联方开具无真实交易背景的商业票据，或提供担保后实际承担了还款责任。</p><p>类型五，容易被忽略的——预付款长期挂账。以预付货款名义支付给关联方，长期不交付也不退款。</p><p>关键在于：判断标准是资金的实际使用人是谁、有没有真实的商业理由，而不是账上挂在哪个科目。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、为什么它被当作红线</h2><p>审核方对资金占用的容忍度显著低于其他财务瑕疵，原因有三层。</p><p>其一，它直接否定资金独立性。上市审核要求发行人在资产、人员、财务、机构、业务五个方面独立于控股股东。资金被占用，意味着财务独立这一条不成立——公司的钱事实上由大股东调度。</p><p>其二，它反映内控失效。一笔资金能够流出公司，说明审批流程、资金管理制度、内部审计中至少有一环没有起作用。而且资金占用往往不是一次性的，是长期存在的习惯，这说明的是系统性问题。</p><p>其三，它损害其他股东与债权人利益。这一层在上市之后风险更大：上市公司的资金占用属于监管重点打击的行为，可能引发监管措施、行政处罚乃至更严重的后果。因此审核阶段就会从严把关，避免带病上市。</p><p>正因为如此，资金占用不属于&quot;披露了就可以&quot;的事项，它必须先清理干净，再谈披露。相关的整体规范化路径可参阅<a href="pre-ipo-financial-cleanup.html">上市前财务规范化整改</a>。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、清理的三个动作，缺一不可</h2><p>头一个动作，全额归还本金与资金占用费。本金好理解，资金占用费常被漏掉——占用期间公司损失了资金的时间价值，通常需要按同期银行贷款利率或双方约定的合理利率计算并一并归还。只还本金不还占用费的清理，是不完整的。</p><p>第二个动作，关闭通道。这一步最容易被跳过，也最重要。要做的包括：修订资金管理制度，明确对外资金往来的审批权限与流程；把大额付款的审批权收归董事会或专门委员会；建立关联方清单并在系统中做付款拦截；由内审对资金流向做定期检查。审核方会要求说明&quot;整改后如何保证不再发生&quot;，回答这个问题靠的是制度，不是承诺。</p><p>第三个动作，留出干净期间。归还完成之后，需要有一段没有新增占用的期间来证明整改有效。这段期间越长越有说服力。这也是为什么资金占用必须尽早发现——发现得晚，干净期间不够，就只能推迟申报。</p><p>因此，正确的处理顺序是：先查清全部占用、一次性归还到位、同步修制度、然后等时间。三件事并行做，时间才不会被浪费。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、常见的错误做法</h2><p>其一，年末突击还款、年初重新占用。为了让资产负债表日的余额显示为零，在年末归还、次年初再次拆出。这种做法在尽调中一查银行流水就会暴露，且性质比持续占用更严重——它说明企业知道这件事不对，选择的是掩饰而不是整改。</p><p>其二，用应收账款科目掩盖。把资金占用挂在应收账款或其他应收款下，配上一份形式上的交易合同。这需要伪造或美化交易的真实性，一旦被认定，问题会从资金占用升级为财务真实性问题。</p><p>其三，通过第三方过桥。资金先转给无关联的第三方，再由第三方转给关联方。资金流向的追查是尽调的常规动作，多转一手通常只是延长了被发现的时间。</p><p>其四，只让实控人出承诺函。承诺函有价值，但它只能作为整改的补充，不能替代实际归还和制度修订。一种反复出现的情形是：企业提交了一份措辞完备的承诺函，却在被追问&quot;制度上如何防止再次发生&quot;时答不上来。</p><p>关键在于：这四种做法的共同点是把审核当成需要应付的检查，而审核方恰恰在评估管理层的诚信态度。相关的公司治理建设可参阅<a href="board-building.html">独立董事与董事会建设</a>。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、老板拿钱的正当渠道</h2><p>资金占用之所以长期存在，很多时候不是恶意，而是企业主没有区分&quot;公司的钱&quot;和&quot;自己的钱&quot;。解决问题的一部分，是把正当渠道讲清楚。</p><p>其一，分红。这是最正当的路径，按持股比例分配税后利润，需要履行相应的决策程序并承担相应税负。</p><p>其二，薪酬。在公司任职并领取合理的工资薪金与奖金，需要与岗位职责匹配，并正常代扣代缴个人所得税。</p><p>其三，真实的关联交易。如果关联方与公司之间确实存在真实的业务往来，那么在定价公允、程序合规、充分披露的前提下，这是被允许的，只是要接受更严格的审视。</p><p>其四，正规的借贷关系。公司向股东借款（而非股东占用公司资金）在符合条件时是可行的；反向的公司借给股东，则应当尽量避免。</p><p>这几条路径的具体税负比较与操作边界，可参阅<a href="owner-cash.html">老板从公司拿钱的合规方式</a>。本质上，把正当渠道打通，是杜绝资金占用最有效的办法——堵不如疏。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、什么时候查、怎么查</h2><p>时点上，资金占用的排查应当排在上市准备最前面的一批工作里，与财务规范化同步启动，理由在第三节已经说过：整改需要留出干净期间，而干净期间只能靠时间积累。</p><p>排查方法上，有三个层次。</p><p>其一，看账。调取其他应收款、预付账款、其他应付款等科目的明细，按往来对象逐一识别是否为关联方。这一层能查出显性的占用。</p><p>其二，看流水。调取公司主要银行账户的完整流水，按对手方筛查与关联方及其相关人员的资金往来。这一层能查出被科目掩盖的占用。</p><p>其三，看关系。先把关联方清单做全——不只是股东和董监高，还包括他们的近亲属、以及由这些人控制或施加重大影响的企业。清单不全，前两层的筛查就会漏。一种常见的情形是：企业提供的关联方清单只有五六家，中介机构通过工商信息穿透后列出了几十家，其中就有资金往来。</p><p>在华尔街彤鼎俱乐部的闭门交流中，走过这一关的企业家给出的共识是：这件事最稳妥的做法是在还没有请中介之前，自己先查一遍——自己查出来是可以从容整改的历史问题，被中介查出来就变成了需要解释的诚信问题。</p><p>彤鼎在这类项目中的角色是规划与统筹，具体的审计意见由持牌会计师事务所出具、法律意见由持牌律师出具。本质上，清理资金占用清的不是一笔账，是&quot;公司是公司、股东是股东&quot;这条边界——这条边界画不清楚，上市之后还会以别的形式再次出问题。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="horizontal-competition.html" style="color:#6b5426;font-weight:700;">同业竞争：老板名下另一家公司，为什么能挡住整个上市进程</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="capital-contribution-defects.html" style="color:#6b5426;font-weight:700;">出资瑕疵：十几年前的一笔注册资本，为什么能拖住整个上市进程</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ip-cleanup.html" style="color:#6b5426;font-weight:700;">商标、专利、域名：上市前无形资产梳理最容易漏的三件事</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-placement-lookthrough.html" style="color:#6b5426;font-weight:700;">港股IPO配售穿透核查：交易所在核查什么</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cornerstone-investors.html" style="color:#6b5426;font-weight:700;">港股基石投资者机制</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

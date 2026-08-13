@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"优先清算权怎么谈：条款清单里最容易被忽略的一条","inLanguage":"zh-CN","abstract":"Liquidation preference determines the order of distribution between investors and founders in a sale or liquidation. It is the term with the greatest impact on exit outcomes yet most often overlooked by founders. This article covers participating versus non-participating structures, multiples, and stacking order.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/liquidation-preference.html"},"datePublished":"2026-07-26","dateModified":"2026-07-26","description":"优先清算权决定公司出售或清算时投资人与创始人的分配顺序，是条款清单中对退出结果影响最大、却最常被创始人忽略的条款。本文说明非参与型与参与型的差异、倍数的实际影响、多轮叠加的两种顺序，以及在什么情况下创始人可能在高估值退出中拿不到预期金额。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,39 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">融资条款 FINANCING</div><h1>优先清算权怎么谈：条款清单里最容易被忽略的一条</h1>
 <div class="sub">参与型与非参与型、倍数与叠加顺序，决定退出时谁先拿钱</div><div class="en">Liquidation preference determines the order of distribution between investors and founders in a sale or liquidation. It is the term with the greatest impact on exit outcomes yet most often overlooked by founders. This article covers participating versus non-participating structures, multiples, and stacking order.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-26">2026年7月26日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">优先清算权，是指在公司发生清算、出售或其他视为清算的事件时，优先股股东先于普通股股东取得约定金额的权利。它决定的不是公司值多少钱，而是钱到手后按什么顺序分。核心变量有三个：类型（非参与型还是参与型）、倍数（1倍还是更高）、以及多轮融资时的叠加顺序（分层还是同顺位）。实践中的关键风险是：在中等价格的退出中，创始人实际所得可能远低于按持股比例计算的金额，甚至在账面看来不错的交易中所得有限。因此，关键在于谈判时把几个可能的退出价格代入算一遍，而不是只看估值数字。相关投资事项仅面向符合条件的合格投资者，且需充分揭示风险，不构成任何投资建议或收益承诺。</div>
-<h2>一、非参与型与参与型的根本差异</h2>
-<p><strong>结论先行：非参与型是二选一，参与型是先拿本金再按比例分。</strong></p>
-<p>非参与型优先清算权下，投资人可在两者中择优：一是取得约定的优先金额（通常为投资额的1倍），二是放弃优先权、按转换后的持股比例参与分配。这是市场上较为常见的结构，对创始人相对友好。</p>
-<p>参与型优先清算权下，投资人先取得优先金额，剩余部分再与普通股按比例分配，相当于两次分配都参与。同样的持股比例与投资额，参与型对创始人的挤压明显更强，尤其在中等价格退出时。</p>
-<p>中间形态是设上限的参与型：投资人参与剩余分配，但总所得不超过投资额的某个倍数，达到上限后转为按比例。因此，本质上这三种结构是在划定投资人的下行保护与上行分享之间的平衡点。</p>
-<h2>二、倍数的实际影响</h2>
-<p><strong>结论先行：倍数直接放大优先金额，1倍与2倍的差别在中等退出价格下极为显著。</strong></p>
-<p>优先金额通常表述为投资额的若干倍。1倍意味着投资人先收回本金，2倍意味着先取得本金的两倍。在退出金额远高于优先金额总额时，倍数的影响被稀释；但在退出金额与优先金额接近时，倍数几乎决定了创始人是否有所得。</p>
-<p>需要警惕的组合是高倍数叠加参与型。这种结构下，投资人先拿走数倍本金，再参与剩余分配，创始人在相当宽的价格区间内所得都很有限。</p>
-<p>谈判时的实用做法是要求对方明确：在三个不同退出价格下，各方各拿多少。把抽象条款转成具体数字，分歧才能被看见。因此，关键在于算，而不是读条款文字。</p>
-<h2>三、多轮融资的叠加顺序</h2>
-<p><strong>结论先行：分层优先与同顺位是两种不同结果，后轮投资人通常要求分层。</strong></p>
-<p>分层优先指后轮优先于前轮清偿：最新一轮先拿满优先金额，然后是上一轮，依次向前，最后才到普通股。多轮融资后，前面轮次与创始人都被推到分配序列末端。</p>
-<p>同顺位指各轮优先股按各自优先金额的比例同时分配，不区分先后。对早期投资人与创始人相对有利，但后轮投资人通常缺乏接受动力，除非其议价能力有限。</p>
-<p>实践中的折中是部分分层：例如最新一轮优先，其余轮次同顺位。因此，本质上叠加顺序是历轮投资人之间的排序谈判，创始人的位置由所有轮次的安排共同决定。多轮条款的累积效应见 <a href="vam-clause-risk.html">融资对赌条款风险</a>。</p>
-<h2>四、什么情况下创始人所得会远低于预期</h2>
-<p><strong>结论先行：退出价格落在优先金额总额附近的区间时，创始人所得可能接近于零。</strong></p>
-<p>假设一家公司累计融资金额较大、条款为参与型且部分轮次有倍数安排，那么在退出价格低于或接近优先金额总额时，全部对价会先满足优先股，普通股所得极少。这一区间的宽度随融资总额与倍数上升而扩大。</p>
-<p>容易被忽略的是&quot;视为清算事件&quot;的定义范围。若定义过宽，把控制权变更、主要资产出售甚至部分重组都纳入，则触发优先分配的情形远多于创始人预期。</p>
-<p>因此，关键在于两件事：控制优先金额总额相对于合理退出价格的比例，以及收窄视为清算事件的定义。前者靠融资节奏，后者靠条款谈判。</p>
-<h2>五、与其他条款的交互</h2>
-<p><strong>结论先行：优先清算权常与反稀释、赎回权、拖售权组合，需整体评估。</strong></p>
-<p>反稀释条款在后续以更低价格融资时调整前轮转换价格，从而增加前轮优先股转换后的股数，间接放大其在剩余分配中的份额。两者叠加会进一步压缩普通股所得。</p>
-<p>赎回权允许投资人在约定期限后要求公司回购，若公司现金不足则可能触发违约或被迫出售，此时优先清算权决定出售所得的分配。拖售权则可能使创始人在不愿意的价格上被迫出售。</p>
-<p>因此，本质上这些条款需要作为一个整体来评估。只盯估值而忽略条款组合，是融资谈判中最常见的失误。底线设置可参考 <a href="vam-five-lines.html">对赌协议五条保命线</a>。</p>
-<h2>六、创始人可以争取的空间</h2>
-<p><strong>结论先行：可从类型、倍数、事件定义与信息权四处争取，优先级依次递减。</strong></p>
-<p>第一优先争取非参与型。这一项对退出结果的影响最大，且在多数市场条件下属于可谈范围。若对方坚持参与型，退而争取设置上限。</p>
-<p>第二争取倍数不超过1倍。超过1倍的安排通常出现在市场环境紧张或企业议价能力较弱时，若不得不接受，应同时收窄适用情形。</p>
-<p>第三收窄视为清算事件的定义，把日常性重组与非控制权变更排除在外。第四是要求同顺位或部分分层，减少序列末端的挤压。关键在于按影响大小排序让步，而不是逐条平均妥协。控制权层面的配套安排见 <a href="founder-control.html">创始人控制权保护</a>。华尔街彤鼎俱乐部在融资条款主题的讨论中，优先清算权是被提及频率最高的条款之一。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>优先清算权，是指在公司发生清算、出售或其他视为清算的事件时，优先股股东先于普通股股东取得约定金额的权利。它决定的不是公司值多少钱，而是钱到手后按什么顺序分。核心变量有三个：类型（非参与型还是参与型）、倍数（1倍还是更高）、以及多轮融资时的叠加顺序（分层还是同顺位）。</p><p>实践中的关键风险是：在中等价格的退出中，创始人实际所得可能远低于按持股比例计算的金额，甚至在账面看来不错的交易中所得有限。因此，关键在于谈判时把几个可能的退出价格代入算一遍，而不是只看估值数字。相关投资事项仅面向符合条件的合格投资者，且需充分揭示风险，不构成任何投资建议或收益承诺。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">非参与型与参与型的根本差异</a></li><li><a href="#sec-02">倍数的实际影响</a></li><li><a href="#sec-03">多轮融资的叠加顺序</a></li><li><a href="#sec-04">什么情况下创始人所得会远低于预期</a></li><li><a href="#sec-05">与其他条款的交互</a></li><li><a href="#sec-06">创始人可以争取的空间</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、非参与型与参与型的根本差异</h2><div class="ts-lead"><span class="tag">结论先行</span><p>非参与型是二选一，参与型是先拿本金再按比例分。</p></div><p>非参与型优先清算权下，投资人可在两者中择优：一是取得约定的优先金额（通常为投资额的1倍），二是放弃优先权、按转换后的持股比例参与分配。这是市场上较为常见的结构，对创始人相对友好。</p><p>参与型优先清算权下，投资人先取得优先金额，剩余部分再与普通股按比例分配，相当于两次分配都参与。同样的持股比例与投资额，参与型对创始人的挤压明显更强，尤其在中等价格退出时。</p><p>中间形态是设上限的参与型：投资人参与剩余分配，但总所得不超过投资额的某个倍数，达到上限后转为按比例。因此，本质上这三种结构是在划定投资人的下行保护与上行分享之间的平衡点。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、倍数的实际影响</h2><div class="ts-lead"><span class="tag">结论先行</span><p>倍数直接放大优先金额，1倍与2倍的差别在中等退出价格下极为显著。</p></div><p>优先金额通常表述为投资额的若干倍。1倍意味着投资人先收回本金，2倍意味着先取得本金的两倍。在退出金额远高于优先金额总额时，倍数的影响被稀释；但在退出金额与优先金额接近时，倍数几乎决定了创始人是否有所得。</p><p>需要警惕的组合是高倍数叠加参与型。这种结构下，投资人先拿走数倍本金，再参与剩余分配，创始人在相当宽的价格区间内所得都很有限。</p><p>谈判时的实用做法是要求对方明确：在三个不同退出价格下，各方各拿多少。把抽象条款转成具体数字，分歧才能被看见。因此，关键在于算，而不是读条款文字。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、多轮融资的叠加顺序</h2><div class="ts-lead"><span class="tag">结论先行</span><p>分层优先与同顺位是两种不同结果，后轮投资人通常要求分层。</p></div><p>分层优先指后轮优先于前轮清偿：最新一轮先拿满优先金额，然后是上一轮，依次向前，最后才到普通股。多轮融资后，前面轮次与创始人都被推到分配序列末端。</p><p>同顺位指各轮优先股按各自优先金额的比例同时分配，不区分先后。对早期投资人与创始人相对有利，但后轮投资人通常缺乏接受动力，除非其议价能力有限。</p><p>实践中的折中是部分分层：例如最新一轮优先，其余轮次同顺位。因此，本质上叠加顺序是历轮投资人之间的排序谈判，创始人的位置由所有轮次的安排共同决定。多轮条款的累积效应见 <a href="vam-clause-risk.html">融资对赌条款风险</a>。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、什么情况下创始人所得会远低于预期</h2><div class="ts-lead"><span class="tag">结论先行</span><p>退出价格落在优先金额总额附近的区间时，创始人所得可能接近于零。</p></div><p>假设一家公司累计融资金额较大、条款为参与型且部分轮次有倍数安排，那么在退出价格低于或接近优先金额总额时，全部对价会先满足优先股，普通股所得极少。这一区间的宽度随融资总额与倍数上升而扩大。</p><p>容易被忽略的是&quot;视为清算事件&quot;的定义范围。若定义过宽，把控制权变更、主要资产出售甚至部分重组都纳入，则触发优先分配的情形远多于创始人预期。</p><p>因此，关键在于两件事：控制优先金额总额相对于合理退出价格的比例，以及收窄视为清算事件的定义。前者靠融资节奏，后者靠条款谈判。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、与其他条款的交互</h2><div class="ts-lead"><span class="tag">结论先行</span><p>优先清算权常与反稀释、赎回权、拖售权组合，需整体评估。</p></div><p>反稀释条款在后续以更低价格融资时调整前轮转换价格，从而增加前轮优先股转换后的股数，间接放大其在剩余分配中的份额。两者叠加会进一步压缩普通股所得。</p><p>赎回权允许投资人在约定期限后要求公司回购，若公司现金不足则可能触发违约或被迫出售，此时优先清算权决定出售所得的分配。拖售权则可能使创始人在不愿意的价格上被迫出售。</p><p>因此，本质上这些条款需要作为一个整体来评估。只盯估值而忽略条款组合，是融资谈判中最常见的失误。底线设置可参考 <a href="vam-five-lines.html">对赌协议五条保命线</a>。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、创始人可以争取的空间</h2><div class="ts-lead"><span class="tag">结论先行</span><p>可从类型、倍数、事件定义与信息权四处争取，优先级依次递减。</p></div><p>第一优先争取非参与型。这一项对退出结果的影响最大，且在多数市场条件下属于可谈范围。若对方坚持参与型，退而争取设置上限。</p><p>第二争取倍数不超过1倍。超过1倍的安排通常出现在市场环境紧张或企业议价能力较弱时，若不得不接受，应同时收窄适用情形。</p><p>第三收窄视为清算事件的定义，把日常性重组与非控制权变更排除在外。第四是要求同顺位或部分分层，减少序列末端的挤压。关键在于按影响大小排序让步，而不是逐条平均妥协。控制权层面的配套安排见 <a href="founder-control.html">创始人控制权保护</a>。华尔街彤鼎俱乐部在融资条款主题的讨论中，优先清算权是被提及频率最高的条款之一。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="founder-control.html" style="color:#6b5426;font-weight:700;">创始人控制权保护</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pre-ipo-negotiation.html" style="color:#6b5426;font-weight:700;">Pre-IPO融资谈判策略</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="anti-dilution-clauses.html" style="color:#6b5426;font-weight:700;">反稀释条款的三种算法与谈判空间</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="fake-investors.html" style="color:#6b5426;font-weight:700;">识别假投资人与收购骗局</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="bp-writing.html" style="color:#6b5426;font-weight:700;">商业计划书BP写作</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

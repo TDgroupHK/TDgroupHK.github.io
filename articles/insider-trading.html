@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"内幕交易合规红线","inLanguage":"zh-CN","abstract":"Insider trading rules for a listed issuer, the trading window and blackout regime, and how 10b5-1 plans are used properly.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/insider-trading.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"内幕交易（Insider Trading）是指掌握重大未公开信息（MNPI，Material Non-Public Information）的人，利用该信息买卖证券或泄露给他人交易的行为。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,41 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">挂牌之后 POST-LISTING</div><h1>内幕交易合规红线</h1>
 <div class="sub">上市公司高管必须知道的交易禁区</div><div class="en">Insider trading rules for a listed issuer, the trading window and blackout regime, and how 10b5-1 plans are used properly.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">内幕交易（Insider Trading）是指掌握重大未公开信息（MNPI，Material Non-Public Information）的人，利用该信息买卖证券或泄露给他人交易的行为。这是美国证券执法打击最严厉的违法行为之一——SEC民事追责加司法部刑事起诉，罚款可达获利的三倍，刑期最高可达20年，且执法覆盖境外人员（在美上市公司的中国高管同样适用）。中概股高管最容易踩的坑不是恶意犯罪，而是无知违规：财报发布前顺手买了点自家股票、把公司还没公告的大合同透露给亲友、在静默期让配偶账户交易。本文把内幕交易的红线、窗口期制度和合规工具讲透，这是每一位上市公司董事、高管及其家属的必修课。</div>
-<h2>一、什么构成内幕交易</h2>
-<p>内幕交易的构成有两个核心要件：一是重大未公开信息——该信息尚未对外公开，且理性投资人会认为它对买卖决策重要（业绩数据、重大合同、并购谈判、高管变动、监管调查等都属于此类）；二是利用该信息交易或泄露——本人交易、让亲友交易、把信息透露给会去交易的人（Tipping），都在打击范围内。</p>
-<p>需要特别澄清的误区：不只是买卖赚了钱才算——利用内幕信息避损（比如知道坏消息提前卖出）同样构成违规；不只是本人账户——配偶、子女、由你实际控制的任何账户的交易都会被追溯到你；不只是明说——暗示朋友现在是好时机，同样构成泄露。</p>
-<h2>二、SEC如何发现内幕交易</h2>
-<p>很多人心存侥幸，认为小额交易查不到。现实是：SEC和FINRA运行着强大的市场监控系统，对重大公告前的异常交易（成交量突增、精准的时点买卖）自动扫描；一旦公司发布重大消息，公告前所有异常交易账户都会被回溯核查，账户与内部人的关联关系（亲属、同学、通话记录）都在调查手段之内。</p>
-<p>对中概股而言还有一个现实：做空机构和集体诉讼律师同样盯着内部人的交易记录（内部人交易需公开申报），公告前的可疑减持会成为诉讼和做空报告的弹药。</p>
-<h2>三、交易窗口期制度</h2>
-<p>上市公司防范内幕交易的核心制度是交易窗口期（Trading Window）：公司规定内部人只能在特定的开放窗口内交易公司股票。</p>
-<p>标准安排是：每季度财报公告后的第2个交易日窗口开启，至下一季度结束前若干周窗口关闭（进入静默期，Blackout Period）。这样内部人交易的时段，正是市场信息最对称的时段。</p>
-<p>除了例行静默期，公司在酝酿重大事项（并购、大额融资、重大诉讼）期间，会对知情人员施加事件性禁买令（Event-specific Blackout），这些人在事项公告前不得交易，且往往不被告知具体原因——收到通知就照办，不要打听。</p>
-<h2>四、10b5-1计划：内部人合规交易的标准工具</h2>
-<p>持续持有内幕信息的高管和大股东，几乎没有干净的交易时点，10b5-1计划就是为此设计的合规工具：在不持有重大未公开信息的时点，预先设定好未来的自动交易计划（数量、价格条件、时间安排），之后由券商机械执行，本人不再干预。</p>
-<p>2023年SEC新规的要点：计划设立后有冷却期（高管为90天或财报公告后2个交易日中较晚者）才能开始首笔交易；设立计划时需书面声明不持有内幕信息；不得同时运行多个重叠计划。计划的设立和修改都需要经过公司法务审批并披露。</p>
-<p>给创始人的实操建议：任何减持需求，一律通过10b5-1计划提前安排，不做临时起意的交易。这不仅是合规保护，也是对市场情绪的保护——有计划的减持公告，远比突然的减持公告温和。</p>
-<h2>五、Section 16：短线交易利润归入</h2>
-<p>除了内幕交易规则，公司董事、高管和持股10%以上的股东还受Section 16约束：同一人在6个月内对公司股票既有买入又有卖出的，其中的差价利润必须上交公司（Short-Swing Profit Rule）——无论是否利用了内幕信息，机械适用。</p>
-<p>这意味着：高管3月份卖了股票，8月份看到股价低想买回来，买卖间隔不足6个月，产生的利润要全部归公司。这条规则经常被不了解的高管误触，任何买卖前先数一数6个月，是最简单的自保动作。</p>
-<h2>六、公司层面的合规体系建设</h2>
-<p>动作1：制定内幕交易政策（Insider Trading Policy），明确窗口期安排、涵盖人员范围（含家属账户）、预审批流程，作为上市公司治理的标准文件。</p>
-<p>动作2：交易预审批（Pre-clearance）。所有董事、高管的公司股票交易，执行前必须向公司法务或合规官报备并获得批准，由公司把最后一道关。</p>
-<p>动作3：知情人名单管理。对每一个重大未公开事项，建立知情人清单，控制信息扩散范围，事项公告前对名单内人员施加禁买令。</p>
-<p>动作4：全员年度培训。特别是新上市公司，很多员工第一次成为内部人，不知道自己聊天群里的一句话可能构成泄露。每年一次的内幕交易合规培训是必要投入。</p>
-<h2>七、中国高管的特别提醒</h2>
-<p>提醒1：SEC执法不因人在境外而止步。中概股高管的违规交易同样被追诉，且会连累公司本身成为调查对象。</p>
-<p>提醒2：微信群是重灾区。把公司未公告的业绩、合同消息发到亲友群、老乡群，哪怕只是炫耀，一旦有人据此交易，你就是泄露源头。</p>
-<p>提醒3：管好身边人。配偶、子女、司机、助理——你身边能接触到信息的人，都在你的合规责任半径内。家属的证券账户在敏感期的交易，最终追责到你头上。</p>
-<h3>结语：合规是上市成果的保险丝</h3>
-<p>企业家用几年时间、数百万美元成本把公司送上市，而一次内幕交易违规就足以引发SEC调查、集体诉讼、声誉崩塌，把全部成果付之一炬。这根保险丝，值得每一位内部人认真对待。</p>
-<p>彤鼎集团在挂牌后辅导中，协助企业建立内幕交易合规体系、窗口期制度和高管培训机制，帮助管理层守住这条不能碰的红线。</p>
-<p>彤鼎集团是一家综合性国际资本服务机构，香港母公司为彤鼎集团（香港）有限公司，业务网络覆盖香港、深圳、上海，并延伸至新加坡。集团专注为企业提供全球化的境内外上市及资本市场全流程一站式服务，由曾任职于加拿大券商机构的廖启捷领衔，廖启捷现任彤鼎集团（香港）有限公司董事局主席，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>集团八大核心业务覆盖融资策划、架构设计、上市规划、税务筹划、增发融资、市值管理、跨境资本、家族办公室，提供从商业模式梳理、顶层架构设计、上市辅导，到财务顾问、法律顾问、并购重组的资本运作全链条服务。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p>
-<p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>内幕交易（Insider Trading）是指掌握重大未公开信息（MNPI，Material Non-Public Information）的人，利用该信息买卖证券或泄露给他人交易的行为。这是美国证券执法打击最严厉的违法行为之一——SEC民事追责加司法部刑事起诉，罚款可达获利的三倍，刑期最高可达20年，且执法覆盖境外人员（在美上市公司的中国高管同样适用）。</p><p>中概股高管最容易踩的坑不是恶意犯罪，而是无知违规：财报发布前顺手买了点自家股票、把公司还没公告的大合同透露给亲友、在静默期让配偶账户交易。本文把内幕交易的红线、窗口期制度和合规工具讲透，这是每一位上市公司董事、高管及其家属的必修课。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">什么构成内幕交易</a></li><li><a href="#sec-02">SEC如何发现内幕交易</a></li><li><a href="#sec-03">交易窗口期制度</a></li><li><a href="#sec-04">10b5-1计划：内部人合规交易的标准工具</a></li><li><a href="#sec-05">Section 16：短线交易利润归入</a></li><li><a href="#sec-06">公司层面的合规体系建设</a></li><li><a href="#sec-07">中国高管的特别提醒</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、什么构成内幕交易</h2><p>内幕交易的构成有两个核心要件：一是重大未公开信息——该信息尚未对外公开，且理性投资人会认为它对买卖决策重要（业绩数据、重大合同、并购谈判、高管变动、监管调查等都属于此类）；二是利用该信息交易或泄露——本人交易、让亲友交易、把信息透露给会去交易的人（Tipping），都在打击范围内。</p><p>需要特别澄清的误区：不只是买卖赚了钱才算——利用内幕信息避损（比如知道坏消息提前卖出）同样构成违规；不只是本人账户——配偶、子女、由你实际控制的任何账户的交易都会被追溯到你；不只是明说——暗示朋友现在是好时机，同样构成泄露。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、SEC如何发现内幕交易</h2><p>很多人心存侥幸，认为小额交易查不到。现实是：SEC和FINRA运行着强大的市场监控系统，对重大公告前的异常交易（成交量突增、精准的时点买卖）自动扫描；一旦公司发布重大消息，公告前所有异常交易账户都会被回溯核查，账户与内部人的关联关系（亲属、同学、通话记录）都在调查手段之内。</p><p>对中概股而言还有一个现实：做空机构和集体诉讼律师同样盯着内部人的交易记录（内部人交易需公开申报），公告前的可疑减持会成为诉讼和做空报告的弹药。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、交易窗口期制度</h2><p>上市公司防范内幕交易的核心制度是交易窗口期（Trading Window）：公司规定内部人只能在特定的开放窗口内交易公司股票。</p><p>标准安排是：每季度财报公告后的第2个交易日窗口开启，至下一季度结束前若干周窗口关闭（进入静默期，Blackout Period）。这样内部人交易的时段，正是市场信息最对称的时段。</p><p>除了例行静默期，公司在酝酿重大事项（并购、大额融资、重大诉讼）期间，会对知情人员施加事件性禁买令（Event-specific Blackout），这些人在事项公告前不得交易，且往往不被告知具体原因——收到通知就照办，不要打听。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、10b5-1计划：内部人合规交易的标准工具</h2><p>持续持有内幕信息的高管和大股东，几乎没有干净的交易时点，10b5-1计划就是为此设计的合规工具：在不持有重大未公开信息的时点，预先设定好未来的自动交易计划（数量、价格条件、时间安排），之后由券商机械执行，本人不再干预。</p><p>2023年SEC新规的要点：计划设立后有冷却期（高管为90天或财报公告后2个交易日中较晚者）才能开始首笔交易；设立计划时需书面声明不持有内幕信息；不得同时运行多个重叠计划。计划的设立和修改都需要经过公司法务审批并披露。</p><p>给创始人的实操建议：任何减持需求，一律通过10b5-1计划提前安排，不做临时起意的交易。这不仅是合规保护，也是对市场情绪的保护——有计划的减持公告，远比突然的减持公告温和。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、Section 16：短线交易利润归入</h2><p>除了内幕交易规则，公司董事、高管和持股10%以上的股东还受Section 16约束：同一人在6个月内对公司股票既有买入又有卖出的，其中的差价利润必须上交公司（Short-Swing Profit Rule）——无论是否利用了内幕信息，机械适用。</p><p>这意味着：高管3月份卖了股票，8月份看到股价低想买回来，买卖间隔不足6个月，产生的利润要全部归公司。这条规则经常被不了解的高管误触，任何买卖前先数一数6个月，是最简单的自保动作。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、公司层面的合规体系建设</h2><p>动作1：制定内幕交易政策（Insider Trading Policy），明确窗口期安排、涵盖人员范围（含家属账户）、预审批流程，作为上市公司治理的标准文件。</p><p>动作2：交易预审批（Pre-clearance）。所有董事、高管的公司股票交易，执行前必须向公司法务或合规官报备并获得批准，由公司把最后一道关。</p><p>动作3：知情人名单管理。对每一个重大未公开事项，建立知情人清单，控制信息扩散范围，事项公告前对名单内人员施加禁买令。</p><p>动作4：全员年度培训。特别是新上市公司，很多员工第一次成为内部人，不知道自己聊天群里的一句话可能构成泄露。每年一次的内幕交易合规培训是必要投入。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、中国高管的特别提醒</h2><p>提醒1：SEC执法不因人在境外而止步。中概股高管的违规交易同样被追诉，且会连累公司本身成为调查对象。</p><p>提醒2：微信群是重灾区。把公司未公告的业绩、合同消息发到亲友群、老乡群，哪怕只是炫耀，一旦有人据此交易，你就是泄露源头。</p><p>提醒3：管好身边人。配偶、子女、司机、助理——你身边能接触到信息的人，都在你的合规责任半径内。家属的证券账户在敏感期的交易，最终追责到你头上。</p><p><h3>结语：合规是上市成果的保险丝</h3></p><p>企业家用几年时间、数百万美元成本把公司送上市，而一次内幕交易违规就足以引发SEC调查、集体诉讼、声誉崩塌，把全部成果付之一炬。这根保险丝，值得每一位内部人认真对待。</p><p>彤鼎集团在挂牌后辅导中，协助企业建立内幕交易合规体系、窗口期制度和高管培训机制，帮助管理层守住这条不能碰的红线。</p><p>彤鼎集团是一家综合性国际资本服务机构，香港母公司为彤鼎集团（香港）有限公司，业务网络覆盖香港、深圳、上海，并延伸至新加坡。集团专注为企业提供全球化的境内外上市及资本市场全流程一站式服务，由曾任职于加拿大券商机构的廖启捷领衔，廖启捷现任彤鼎集团（香港）有限公司董事局主席，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>集团八大核心业务覆盖融资策划、架构设计、上市规划、税务筹划、增发融资、市值管理、跨境资本、家族办公室，提供从商业模式梳理、顶层架构设计、上市辅导，到财务顾问、法律顾问、并购重组的资本运作全链条服务。</p><p data-ts="1">团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p><p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pipe-financing.html" style="color:#6b5426;font-weight:700;">上市公司PIPE融资</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="follow-on-offering.html" style="color:#6b5426;font-weight:700;">上市公司增发配股指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="refinancing-tools.html" style="color:#6b5426;font-weight:700;">再融资工具ATM与增发</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="us-market-cap-toolkit.html" style="color:#6b5426;font-weight:700;">美股没有「市值管理」这个概念：中概股公司的对应工具箱</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="rule144-10b5-1.html" style="color:#6b5426;font-weight:700;">中概股高管减持：Rule 144 与 10b5-1 计划怎么配合</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"海南自贸港企业上市与税收优惠","inLanguage":"zh-CN","abstract":"Hainan Free Trade Port incentives, the substance tests attached to them, and how they interact with an offshore listing structure.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/hainan-ftp.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"海南自贸港企业上市与税收优惠。海南自贸港企业上市与税收优惠完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,56 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">跨境架构 STRUCTURING</div><h1>海南自贸港企业上市与税收优惠</h1>
 <div class="sub"></div><div class="en">Hainan Free Trade Port incentives, the substance tests attached to them, and how they interact with an offshore listing structure.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">海南自由贸易港是中国目前开放程度最高的特殊经济区域，享有一系列独特的税收优惠和跨境便利政策，这些政策对企业的跨境上市和资本运作有重要价值。海南自贸港的3大核心优惠是：企业所得税优惠（符合条件的鼓励类产业企业减按15%征收，远低于内地标准的25%）、个人所得税优惠（高端人才和紧缺人才个人所得税负超过15%的部分予以免征）、跨境资金流动便利（贸易投资自由化便利化政策）。对计划赴境外上市的企业而言，在海南自贸港布局运营主体，既可以享受税收优惠，又可以利用其跨境便利政策更顺畅地搭建境外上市架构。但需要注意：海南的优惠政策有明确的实质经营要求，不能仅注册一个空壳公司就想享受政策红利。</div>
-<h2>一、海南自贸港的政策背景</h2>
-<p>海南自由贸易港是根据国家战略设立的、对标全球最高水平开放形态的特殊经济区域。其政策框架的核心是贸易自由便利、投资自由便利、跨境资金流动自由便利、人员进出自由便利、运输来往自由便利，以及一套有竞争力的税收制度。</p>
-<p>对于资本运作和跨境上市而言，海南自贸港最有价值的是其税收优惠政策和跨境资金流动的便利化安排，这两者直接关系到企业的运营成本和境外上市架构的搭建效率。</p>
-<h2>二、海南自贸港的核心税收优惠</h2>
-<h3>优惠1：企业所得税减按15%</h3>
-<p>注册在海南自贸港并实质性运营的鼓励类产业企业，企业所得税减按15%的税率征收，相比内地标准的25%，税负大幅降低。鼓励类产业包括旅游业、现代服务业、高新技术产业等多个领域，具体以海南自贸港鼓励类产业目录为准。</p>
-<p>对比意义：同样的利润，在内地缴25%企业所得税，在海南符合条件可以只缴15%，相当于税后利润多出约13%。对于盈利规模较大的企业，这个差异每年可以节省可观的税款。</p>
-<h3>优惠2：高端人才个税优惠</h3>
-<p>在海南自贸港工作的高端人才和紧缺人才，其个人所得税实际税负超过15%的部分予以免征。这意味着高收入的核心人才在海南的个税负担可以大幅降低（内地个税最高边际税率为45%，海南符合条件的人才实际税负可降至15%）。</p>
-<p>这对于需要吸引和留住高端人才的企业（特别是科技、金融、专业服务类企业）有显著的吸引力，也降低了企业的人才成本。</p>
-<h3>优惠3：部分进口商品零关税</h3>
-<p>海南自贸港对部分进口商品实行零关税政策（如生产设备、原辅料、交通工具等），降低了企业的采购成本。对于有进口需求的企业，这是一项实际的成本节约。</p>
-<h3>优惠4：境外直接投资的便利</h3>
-<p>海南自贸港在跨境资金流动方面有便利化安排，企业在海南进行境外投资（如搭建境外上市架构所需的对外投资）时，可以享受相对便利的外汇和审批流程。</p>
-<h2>三、海南自贸港对跨境上市的价值</h2>
-<h3>价值1：境外上市架构的境内运营平台</h3>
-<p>赴境外上市（如新加坡路径的纳斯达克上市）需要在境内有规范的运营主体。把这个运营主体设在海南自贸港，可以同时享受税收优惠和跨境便利，是一个有政策红利的选择。</p>
-<h3>价值2：跨境资金流动的便利</h3>
-<p>搭建境外上市架构需要进行对外投资（ODI）、资金出境等操作。海南自贸港的跨境资金流动便利化政策，可以让这些操作相对更顺畅。但需要强调，再便利的政策也必须在合规框架内操作，不能绕过外汇管理和ODI备案的基本要求。</p>
-<h3>价值3：税务优化的合规空间</h3>
-<p>通过在海南布局符合条件的运营主体，企业可以在合规框架内优化整体税负。结合境外架构的税务规划（参考新加坡公司的税务优惠），可以形成一个境内海南加境外新加坡的税务优化组合。</p>
-<h2>四、享受海南政策的关键：实质经营</h2>
-<p>海南自贸港的所有优惠政策都有一个共同的前提：实质性经营。这是企业能否真正享受政策红利的关键，也是最容易被误解的地方。</p>
-<h3>什么是实质性经营</h3>
-<p>享受海南企业所得税优惠的企业，必须在海南有实质性的生产经营活动，包括：有真实的办公场所、有实际的员工在海南工作、有真实的业务在海南开展、主要的经营决策和管理在海南进行。</p>
-<h3>空壳公司无法享受优惠</h3>
-<p>仅在海南注册一个公司、挂一个地址，而没有真实的人员、办公、业务，是无法享受海南税收优惠的。税务机关对实质经营有明确的判定标准，空壳公司会被认定为不符合优惠条件，不仅享受不到优惠，还可能面临补税和处罚。</p>
-<h3>实质经营的判定要素</h3>
-<p>税务机关通常从以下要素判断是否构成实质经营：在海南的员工人数和薪酬支出、在海南的办公场所（租赁或自有）、在海南实际开展的业务和产生的收入、主要管理人员是否在海南工作和决策、企业的核心资产和业务是否真实落地海南。</p>
-<h2>五、企业在海南布局的实操建议</h2>
-<p>建议1：先评估业务匹配度。海南的优惠主要面向鼓励类产业。企业应先确认自己的业务是否属于鼓励类目录，以及是否适合在海南实质落地运营，而不是盲目跟风注册。</p>
-<p>建议2：做好实质经营的安排。如果决定在海南布局，必须做好实质经营的配套：真实的办公场所、实际的团队、真实的业务落地。这是享受政策红利的前提，也是规避税务风险的基础。</p>
-<p>建议3：与整体架构协同设计。海南运营主体应该纳入企业整体的上市架构和税务规划中协同设计，与境外架构（如新加坡公司）形成合理的税务和业务协同，而不是孤立地设立。</p>
-<p>建议4：持续跟踪政策变化。海南自贸港的政策仍在不断完善和调整中，企业应持续关注最新的政策动向（如鼓励类产业目录的更新、优惠政策的具体执行细则等），确保始终在政策框架内合规运营。</p>
-<h2>六、海南布局的常见误区</h2>
-<h3>误区1：只注册不运营</h3>
-<p>最常见的误区是以为在海南注册个公司就能享受优惠。如前所述，没有实质经营的空壳公司无法享受任何优惠，反而增加了维护成本和合规风险。</p>
-<h3>误区2：夸大政策红利</h3>
-<p>海南的优惠政策确实有吸引力，但不应被夸大。优惠政策有明确的适用条件和范围，企业应该基于真实的业务需求和政策匹配度做决策，而不是被夸大的政策宣传误导。</p>
-<h3>误区3：忽视合规要求</h3>
-<p>海南的跨境便利政策不等于可以绕过国家的外汇管理、ODI备案、税务申报等基本合规要求。所有的跨境资金流动和对外投资，仍然必须在国家的合规框架内进行。</p>
-<h3>结语：政策红利要用在实处</h3>
-<p>海南自贸港为企业的跨境资本运作提供了有价值的政策环境，但这些政策红利只有在实质经营的基础上才能真正实现。对于计划赴境外上市的企业，在海南布局符合条件的运营主体，是一个值得认真评估的选项。</p>
-<p>关键是要基于真实的业务需求、做好实质经营的安排、在合规框架内运作。彤鼎集团（香港）有限公司在为企业设计上市架构和税务规划时，会综合考虑海南自贸港等区域政策红利，结合企业的实际情况，设计既能享受政策优惠、又完全合规的资本架构方案。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p>
-<p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>海南自由贸易港是中国目前开放程度最高的特殊经济区域，享有一系列独特的税收优惠和跨境便利政策，这些政策对企业的跨境上市和资本运作有重要价值。海南自贸港的3大核心优惠是：企业所得税优惠（符合条件的鼓励类产业企业减按15%征收，远低于内地标准的25%）、个人所得税优惠（高端人才和紧缺人才个人所得税负超过15%的部分予以免征）、跨境资金流动便利（贸易投资自由化便利化政策）。</p><p>对计划赴境外上市的企业而言，在海南自贸港布局运营主体，既可以享受税收优惠，又可以利用其跨境便利政策更顺畅地搭建境外上市架构。但需要注意：海南的优惠政策有明确的实质经营要求，不能仅注册一个空壳公司就想享受政策红利。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">海南自贸港的政策背景</a></li><li><a href="#sec-02">海南自贸港的核心税收优惠</a></li><li><a href="#sec-03">海南自贸港对跨境上市的价值</a></li><li><a href="#sec-04">享受海南政策的关键：实质经营</a></li><li><a href="#sec-05">企业在海南布局的实操建议</a></li><li><a href="#sec-06">海南布局的常见误区</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、海南自贸港的政策背景</h2><p>海南自由贸易港是根据国家战略设立的、对标全球最高水平开放形态的特殊经济区域。其政策框架的核心是贸易自由便利、投资自由便利、跨境资金流动自由便利、人员进出自由便利、运输来往自由便利，以及一套有竞争力的税收制度。</p><p>对于资本运作和跨境上市而言，海南自贸港最有价值的是其税收优惠政策和跨境资金流动的便利化安排，这两者直接关系到企业的运营成本和境外上市架构的搭建效率。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、海南自贸港的核心税收优惠</h2><p><h3>优惠1：企业所得税减按15%</h3></p><p>注册在海南自贸港并实质性运营的鼓励类产业企业，企业所得税减按15%的税率征收，相比内地标准的25%，税负大幅降低。鼓励类产业包括旅游业、现代服务业、高新技术产业等多个领域，具体以海南自贸港鼓励类产业目录为准。</p><p>对比意义：同样的利润，在内地缴25%企业所得税，在海南符合条件可以只缴15%，相当于税后利润多出约13%。对于盈利规模较大的企业，这个差异每年可以节省可观的税款。</p><p><h3>优惠2：高端人才个税优惠</h3></p><p>在海南自贸港工作的高端人才和紧缺人才，其个人所得税实际税负超过15%的部分予以免征。这意味着高收入的核心人才在海南的个税负担可以大幅降低（内地个税最高边际税率为45%，海南符合条件的人才实际税负可降至15%）。</p><p>这对于需要吸引和留住高端人才的企业（特别是科技、金融、专业服务类企业）有显著的吸引力，也降低了企业的人才成本。</p><p><h3>优惠3：部分进口商品零关税</h3></p><p>海南自贸港对部分进口商品实行零关税政策（如生产设备、原辅料、交通工具等），降低了企业的采购成本。对于有进口需求的企业，这是一项实际的成本节约。</p><p><h3>优惠4：境外直接投资的便利</h3></p><p>海南自贸港在跨境资金流动方面有便利化安排，企业在海南进行境外投资（如搭建境外上市架构所需的对外投资）时，可以享受相对便利的外汇和审批流程。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、海南自贸港对跨境上市的价值</h2><p><h3>价值1：境外上市架构的境内运营平台</h3></p><p>赴境外上市（如新加坡路径的纳斯达克上市）需要在境内有规范的运营主体。把这个运营主体设在海南自贸港，可以同时享受税收优惠和跨境便利，是一个有政策红利的选择。</p><p><h3>价值2：跨境资金流动的便利</h3></p><p>搭建境外上市架构需要进行对外投资（ODI）、资金出境等操作。海南自贸港的跨境资金流动便利化政策，可以让这些操作相对更顺畅。但需要强调，再便利的政策也必须在合规框架内操作，不能绕过外汇管理和ODI备案的基本要求。</p><p><h3>价值3：税务优化的合规空间</h3></p><p>通过在海南布局符合条件的运营主体，企业可以在合规框架内优化整体税负。结合境外架构的税务规划（参考新加坡公司的税务优惠），可以形成一个境内海南加境外新加坡的税务优化组合。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、享受海南政策的关键：实质经营</h2><p>海南自贸港的所有优惠政策都有一个共同的前提：实质性经营。这是企业能否真正享受政策红利的关键，也是最容易被误解的地方。</p><p><h3>什么是实质性经营</h3></p><p>享受海南企业所得税优惠的企业，必须在海南有实质性的生产经营活动，包括：有真实的办公场所、有实际的员工在海南工作、有真实的业务在海南开展、主要的经营决策和管理在海南进行。</p><p><h3>空壳公司无法享受优惠</h3></p><p>仅在海南注册一个公司、挂一个地址，而没有真实的人员、办公、业务，是无法享受海南税收优惠的。税务机关对实质经营有明确的判定标准，空壳公司会被认定为不符合优惠条件，不仅享受不到优惠，还可能面临补税和处罚。</p><p><h3>实质经营的判定要素</h3></p><p>税务机关通常从以下要素判断是否构成实质经营：在海南的员工人数和薪酬支出、在海南的办公场所（租赁或自有）、在海南实际开展的业务和产生的收入、主要管理人员是否在海南工作和决策、企业的核心资产和业务是否真实落地海南。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、企业在海南布局的实操建议</h2><p>建议1：先评估业务匹配度。海南的优惠主要面向鼓励类产业。企业应先确认自己的业务是否属于鼓励类目录，以及是否适合在海南实质落地运营，而不是盲目跟风注册。</p><p>建议2：做好实质经营的安排。如果决定在海南布局，必须做好实质经营的配套：真实的办公场所、实际的团队、真实的业务落地。这是享受政策红利的前提，也是规避税务风险的基础。</p><p>建议3：与整体架构协同设计。海南运营主体应该纳入企业整体的上市架构和税务规划中协同设计，与境外架构（如新加坡公司）形成合理的税务和业务协同，而不是孤立地设立。</p><p>建议4：持续跟踪政策变化。海南自贸港的政策仍在不断完善和调整中，企业应持续关注最新的政策动向（如鼓励类产业目录的更新、优惠政策的具体执行细则等），确保始终在政策框架内合规运营。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、海南布局的常见误区</h2><p><h3>误区1：只注册不运营</h3></p><p>最常见的误区是以为在海南注册个公司就能享受优惠。如前所述，没有实质经营的空壳公司无法享受任何优惠，反而增加了维护成本和合规风险。</p><p><h3>误区2：夸大政策红利</h3></p><p>海南的优惠政策确实有吸引力，但不应被夸大。优惠政策有明确的适用条件和范围，企业应该基于真实的业务需求和政策匹配度做决策，而不是被夸大的政策宣传误导。</p><p><h3>误区3：忽视合规要求</h3></p><p>海南的跨境便利政策不等于可以绕过国家的外汇管理、ODI备案、税务申报等基本合规要求。所有的跨境资金流动和对外投资，仍然必须在国家的合规框架内进行。</p><p><h3>结语：政策红利要用在实处</h3></p><p>海南自贸港为企业的跨境资本运作提供了有价值的政策环境，但这些政策红利只有在实质经营的基础上才能真正实现。对于计划赴境外上市的企业，在海南布局符合条件的运营主体，是一个值得认真评估的选项。</p><p>关键是要基于真实的业务需求、做好实质经营的安排、在合规框架内运作。彤鼎集团（香港）有限公司在为企业设计上市架构和税务规划时，会综合考虑海南自贸港等区域政策红利，结合企业的实际情况，设计既能享受政策优惠、又完全合规的资本架构方案。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>服务覆盖境内外上市、企业投融资、商业模式梳理、顶层架构设计、上市辅导、财务顾问、法律顾问、并购重组、市值管理等资本运作全链条。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p><p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="bvi-cayman-spv.html" style="color:#6b5426;font-weight:700;">BVI与开曼SPV设立运用</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="vie-deep-dive.html" style="color:#6b5426;font-weight:700;">VIE架构深度解读</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="transfer-pricing.html" style="color:#6b5426;font-weight:700;">跨境转让定价与税务合规</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="csrc-filing-feedback.html" style="color:#6b5426;font-weight:700;">境外上市备案：证监会补充材料要求</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="h-share-full-circulation.html" style="color:#6b5426;font-weight:700;">H股全流通：境内未上市股份变成可流通H股的完整路径</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

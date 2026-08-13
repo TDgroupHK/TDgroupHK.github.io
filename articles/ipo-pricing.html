@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"IPO定价机制","inLanguage":"zh-CN","abstract":"How an IPO price gets set: bookbuilding is the core mechanism, in which underwriters collect institutional demand during the roadshow and fix the offer price against the order book. The article covers the five-step pricing process, the underwriting discount of roughly six to eight percent, the 15% over-allotment (greenshoe) option exercisable within 30 days, the customary 180-day lock-up, and why valuation discounts appear for non-U.S. issuers.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/ipo-pricing.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"IPO定价，是指发行人与承销商在发行前确定每股发行价的过程，它直接决定募资规模、上市后的股价基础以及原股东的稀释比例。现代美股IPO的定价主要通过询价簿记（Bookbuilding）完成：承销商先根据公司基本面与可比公司给出初步价格区间并写入F-1注册说明书，随后在路演期间向机构投资人收集认购意向与报价，依据订单簿的认购倍数与价格分布确定最终发行价。定价的本质是平衡——定得过高，募资多但可能上市后"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
@@ -196,54 +263,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>IPO定价机制</h1>
 <div class="sub">询价簿记、承销折扣与绿鞋机制的完整解析</div><div class="en">How an IPO price gets set: bookbuilding is the core mechanism, in which underwriters collect institutional demand during the roadshow and fix the offer price against the order book. The article covers the five-step pricing process, the underwriting discount of roughly six to eight percent, the 15% over-allotment (greenshoe) option exercisable within 30 days, the customary 180-day lock-up, and why valuation discounts appear for non-U.S. issuers.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">IPO定价，是指发行人与承销商在发行前确定每股发行价的过程，它直接决定募资规模、上市后的股价基础以及原股东的稀释比例。现代美股IPO的定价主要通过询价簿记（Bookbuilding）完成：承销商先根据公司基本面与可比公司给出初步价格区间并写入F-1注册说明书，随后在路演期间向机构投资人收集认购意向与报价，依据订单簿的认购倍数与价格分布确定最终发行价。定价的本质是平衡——定得过高，募资多但可能上市后跌破发行价；定得过低，首日涨幅好看但公司少募了本应属于自己的资金。美股IPO的承销折扣通常在募资总额的6%至8%之间，承销商另持有15%的超额配售权（绿鞋），可在上市后30天内行使，内部人锁定期通常为180天。关键在于，好的定价服务于上市后的长期稳定，而非首日的账面数字。</div>
-<h2>一、询价簿记：发行价是怎么被问出来的</h2>
-<p><strong>结论先行：美股IPO的价格不是算出来的，是在路演中向机构投资人问出来的——由真实订单决定的供需平衡价。</strong></p>
-<p>询价簿记（Bookbuilding，也称累计投标询价）是现代IPO定价的主流机制。基本逻辑是：承销商不预设一个固定价格向公众发售，而是先给出一个价格区间，再用路演期间收集到的真实机构需求来发现价格。</p>
-<p>具体运作上，承销商在路演期间逐一拜访机构投资人，推介公司的商业模式、财务表现与增长逻辑，并请对方给出认购意向：愿意认购多少股、愿意支付的价格上限是多少、是否设定价格条件。这些意向被逐笔录入订单簿（book）。订单簿最终呈现两个关键信息：认购倍数（总认购需求相对于发行规模的倍数）与价格分布（不同价格档位上的需求厚度）。发行价通常定在需求足以覆盖发行规模、且仍留有一定超额认购的价位上。</p>
-<p>需要注意的是，投资人在簿记阶段提交的意向在法律上通常不构成不可撤销的承诺，因此订单簿的质量——即下单机构的真实持有意愿——比订单簿的绝对规模更重要。这也是承销商在配售时会主动做选择的原因。</p>
-
-<h2>二、定价的本质是平衡：过高与过低各有代价</h2>
-<p><strong>结论先行：发行价不是越高越好，两个方向的偏离都会产生实实在在的损失。</strong></p>
-<p><strong>定价过高的代价。</strong>公司在发行当期募集到更多资金，但如果发行价超出了市场对其价值的共识，上市后股价可能跌破发行价。破发的后果是连锁的：参与认购的机构账面受损，对后续增发的参与意愿下降；二级市场对公司的定价锚被拉低，直接影响再融资价格与并购换股的谈判地位；分析师覆盖与做市意愿也可能受到影响。</p>
-<p><strong>定价过低的代价。</strong>上市首日股价大幅上涨，表面数字好看，但这意味着公司以低于市场愿意支付的价格发行了股票，同样数量的股份少募了资金，或者说为了募到同样的金额多稀释了股权。这部分价值转移给了在发行环节获配的投资人，属于发行人的隐性损失，业内称之为“留在桌上的钱”。</p>
-<p>因此，理想的发行价是在募资规模与上市后稳定表现之间取得平衡的价格。市场惯例上，承销商会为首日留出适度的上行空间，使发行获得成功并建立初始的交易动能，但不至于系统性低估公司价值。本质上，定价是在为上市后的十二个月做铺垫，而不是为首日的新闻标题做铺垫。</p>
-
-<h2>三、影响定价的五个变量</h2>
-<p><strong>结论先行：基本面决定定价的中枢，市场情绪与订单簿决定最终落点。</strong></p>
-<p><strong>变量一，公司基本面。</strong>盈利能力、收入增速、毛利结构、客户集中度、商业模式的可持续性与所处行业的成长空间，是估值的根本基础。基本面越扎实、财务记录越经得起穿透，越能支撑区间上沿的定价。</p>
-<p><strong>变量二，可比公司估值。</strong>承销商会选取业务模式与规模相近的已上市公司，参照其市盈率、市销率、EV/EBITDA等倍数，结合规模折价与流动性折价，推出发行人的估值区间。可比公司的选择本身就是谈判的一部分，发行人应参与讨论并提出依据。</p>
-<p><strong>变量三，市场情绪与发行窗口。</strong>发行时点的整体市场环境对定价影响很大。指数波动率上升、同板块近期新股表现不佳、宏观事件密集期，都会压缩机构的出价意愿；反之，窗口良好时区间上沿甚至上调都有可能。发行窗口的把握，往往和定价本身同等重要。</p>
-<p><strong>变量四，机构需求。</strong>订单簿的认购倍数与价格分布是定价的直接依据。认购踊跃时，可定在区间上限或上调区间并重新征询；需求平淡时，则可能需要定在下限、下调区间，或缩减发行规模以保住价格。</p>
-<p><strong>变量五，投资人结构。</strong>除价格外，承销商还会评估订单来源的性质。以长期持有为目标的基金，与以首日套利为目标的短线资金，对上市后价格稳定性的影响完全不同。因此在同等报价下，承销商通常会向前者倾斜配售份额。</p>
-
-<h2>四、从初步估值到配售的五步流程</h2>
-<p><strong>结论先行：定价是一条有固定节奏的流水线，企业能施加影响的窗口主要在前三步。</strong></p>
-<p><strong>第一步，初步估值。</strong>承销商在完成尽职调查后，基于财务模型与可比公司分析，给出初步估值区间，并与发行人管理层就关键假设进行对齐。</p>
-<p><strong>第二步，确定价格区间。</strong>结合发行规模、市场环境与预期需求，确定用于路演的价格区间，并写入F-1注册说明书的修订稿向SEC提交、向市场公开。</p>
-<p><strong>第三步，路演询价。</strong>管理层与承销团队在为期约一至两周的路演中集中拜访机构投资人，同步收集订单。这一阶段管理层的表达质量、对关键质疑的回应能力，会直接影响订单簿的厚度。</p>
-<p><strong>第四步，确定发行价。</strong>路演结束后，承销商与发行人依据订单簿协商确定最终发行价。若需求显著超出预期，可上调至区间之上；若显著不足，则可能下调价格或缩减规模。定价通常在挂牌交易前一个交易日的收盘后完成。</p>
-<p><strong>第五步，配售与交割。</strong>按最终发行价向获配投资人分配股份，承销商在此环节按投资人质量进行主动分配，随后进入交割（通常为定价后的第二个交易日）。</p>
-
-<h2>五、承销折扣、绿鞋与稳定操作</h2>
-<p><strong>结论先行：发行价不等于公司到手的金额，中间隔着承销折扣；而上市初期的价格并非完全自由波动，绿鞋机制在其中起作用。</strong></p>
-<p><strong>承销折扣（Underwriting Discount）。</strong>承销商的主要报酬来自按发行价的一定百分比计提的折扣，美股IPO通常在募资总额的6%至8%区间，中小型发行的实际水平常见于7%左右。这意味着以发行价乘以发行股数计算的募资总额，扣除承销折扣以及律师、审计师、印刷、交易所与SEC费用等发行成本后，才是公司实际到手的净额。企业在做资金用途规划时，应以净额而非总额为基础。</p>
-<p><strong>绿鞋机制（Greenshoe / 超额配售选择权）。</strong>承销协议通常授予承销商一项权利：在发行规模基础上额外配售最多15%的股份，并可在上市后30天内按发行价向发行人（或出售股东）行使购买权。其运作方式是，承销商在发行时先超额售出这部分股份，形成一个空头头寸；若上市后股价高于发行价，则行使绿鞋从发行人处购入平仓，公司因此多募一笔资金；若股价跌破发行价，承销商则在二级市场买入股票平仓，这一买盘在客观上对价格形成支撑。</p>
-<p><strong>稳定操作的边界。</strong>上述价格稳定活动受美国证券法关于发行期间市场行为的规则约束，必须在规定的方式、时间与披露要求内进行，且不得演变为对价格的操纵。任何试图以约定交易、对倒或其他人为手段影响价格的做法均属违规，企业应明确拒绝任何此类提议。关键在于，合规的稳定操作是有限度、有披露、有期限的，与操纵行为有清晰界线。</p>
-
-<h2>六、锁定期、静默期与上市后的价格管理</h2>
-<p><strong>结论先行：定价只是起点，上市后前两个季度的价格表现，很大程度上由锁定期结构与信息披露节奏决定。</strong></p>
-<p><strong>锁定期（Lock-up）。</strong>承销协议通常要求发行人的董事、高管与主要股东在上市后的一段期间内不得出售所持股份，市场惯例为180天。锁定期到期前后，市场会预期潜在的抛压，价格常出现波动。因此，实际控制人应提前规划减持节奏，避免在到期日形成集中冲击。上市公司内部人的后续交易，通常需要在符合条件的情形下依据事先设立的10b5-1交易计划执行，以管理内幕交易风险。</p>
-<p><strong>静默期与信息披露。</strong>发行前后存在关于宣传与研究报告发布的限制期，管理层的对外表述需在律师指导下进行。上市后，公司进入定期报告与重大事项及时披露的节奏，业绩指引的给出与兑现会成为市场评估管理层可信度的主要依据。首次给出的指引宜留有余地——上市后的第一个未达预期的季度，对估值的杀伤远大于一次保守的指引。</p>
-<p><strong>投资人关系的延续性。</strong>在发行中获配的长期机构，是上市后最重要的股东基础。定价环节保留合理的空间、上市后维持稳定的沟通频率，有助于这批投资人在后续增发中继续参与。华尔街彤鼎俱乐部在与企业家交流市值管理话题时，反复强调的正是把IPO视为投资人关系的起点而非终点。</p>
-
-<h2>七、非美国本土发行人的估值折扣如何缩小</h2>
-<p><strong>结论先行：折扣主要来自信息不对称与监管不确定性，两者都可以通过准备工作部分对冲。</strong></p>
-<p>相较基本面相近的美国本土公司，来自新兴市场的发行人在定价时往往面临一定的估值折扣。折扣的来源可以拆成三块：一是信息透明度，海外投资人对其终端市场、客户结构与竞争格局缺乏直观认知；二是监管环境的不确定性，包括跨境审计监管与所在地行业政策的变化；三是流动性预期，中小市值发行人上市后的日均成交量与分析师覆盖度通常较低。</p>
-<p>可以采取的对冲手段包括：在招股文件与路演材料中用可验证的第三方数据说明市场规模与自身份额，减少投资人的认知成本；把跨境审计监管的现状与自身审计安排讲清楚，主动消解监管疑虑；引入具备行业公信力的基石或长期投资人，为估值提供背书；以及在发行规模与流通股比例上做合理设计，兼顾流动性与稀释。</p>
-<p>同时，定价上应更审慎地对待上市后的稳定表现。发行人一旦破发，市场信心的修复通常需要更长时间，而中小市值公司修复的难度更大。因此，宁可在定价上留出更明确的空间，也不宜为了募资总额的账面数字而顶格定价。</p>
-<p>彤鼎集团在上市辅导中，帮助企业理解定价机制、准备路演材料、与承销商就估值假设与发行结构进行有效沟通，并统筹锁定期与上市后信息披露的安排；华尔街彤鼎俱乐部则为企业家提供资本市场规则与估值方法的系统性梳理。涉及Pre-IPO项目信息的部分，仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>IPO定价，是指发行人与承销商在发行前确定每股发行价的过程，它直接决定募资规模、上市后的股价基础以及原股东的稀释比例。现代美股IPO的定价主要通过询价簿记（Bookbuilding）完成：承销商先根据公司基本面与可比公司给出初步价格区间并写入F-1注册说明书，随后在路演期间向机构投资人收集认购意向与报价，依据订单簿的认购倍数与价格分布确定最终发行价。</p><p>定价的本质是平衡——定得过高，募资多但可能上市后跌破发行价；定得过低，首日涨幅好看但公司少募了本应属于自己的资金。美股IPO的承销折扣通常在募资总额的6%至8%之间，承销商另持有15%的超额配售权（绿鞋），可在上市后30天内行使，内部人锁定期通常为180天。关键在于，好的定价服务于上市后的长期稳定，而非首日的账面数字。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">询价簿记：发行价是怎么被问出来的</a></li><li><a href="#sec-02">定价的本质是平衡：过高与过低各有代价</a></li><li><a href="#sec-03">影响定价的五个变量</a></li><li><a href="#sec-04">从初步估值到配售的五步流程</a></li><li><a href="#sec-05">承销折扣、绿鞋与稳定操作</a></li><li><a href="#sec-06">锁定期、静默期与上市后的价格管理</a></li><li><a href="#sec-07">非美国本土发行人的估值折扣如何缩小</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、询价簿记：发行价是怎么被问出来的</h2><div class="ts-lead"><span class="tag">结论先行</span><p>美股IPO的价格不是算出来的，是在路演中向机构投资人问出来的——由真实订单决定的供需平衡价。</p></div><p>询价簿记（Bookbuilding，也称累计投标询价）是现代IPO定价的主流机制。基本逻辑是：承销商不预设一个固定价格向公众发售，而是先给出一个价格区间，再用路演期间收集到的真实机构需求来发现价格。</p><p>具体运作上，承销商在路演期间逐一拜访机构投资人，推介公司的商业模式、财务表现与增长逻辑，并请对方给出认购意向：愿意认购多少股、愿意支付的价格上限是多少、是否设定价格条件。这些意向被逐笔录入订单簿（book）。</p><p data-ts="1">订单簿最终呈现两个关键信息：认购倍数（总认购需求相对于发行规模的倍数）与价格分布（不同价格档位上的需求厚度）。发行价通常定在需求足以覆盖发行规模、且仍留有一定超额认购的价位上。</p><p>需要注意的是，投资人在簿记阶段提交的意向在法律上通常不构成不可撤销的承诺，因此订单簿的质量——即下单机构的真实持有意愿——比订单簿的绝对规模更重要。这也是承销商在配售时会主动做选择的原因。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、定价的本质是平衡：过高与过低各有代价</h2><div class="ts-lead"><span class="tag">结论先行</span><p>发行价不是越高越好，两个方向的偏离都会产生实实在在的损失。</p></div><p><strong>定价过高的代价。</strong>公司在发行当期募集到更多资金，但如果发行价超出了市场对其价值的共识，上市后股价可能跌破发行价。破发的后果是连锁的：参与认购的机构账面受损，对后续增发的参与意愿下降；二级市场对公司的定价锚被拉低，直接影响再融资价格与并购换股的谈判地位；分析师覆盖与做市意愿也可能受到影响。</p><p><strong>定价过低的代价。</strong>上市首日股价大幅上涨，表面数字好看，但这意味着公司以低于市场愿意支付的价格发行了股票，同样数量的股份少募了资金，或者说为了募到同样的金额多稀释了股权。这部分价值转移给了在发行环节获配的投资人，属于发行人的隐性损失，业内称之为“留在桌上的钱”。</p><p>因此，理想的发行价是在募资规模与上市后稳定表现之间取得平衡的价格。市场惯例上，承销商会为首日留出适度的上行空间，使发行获得成功并建立初始的交易动能，但不至于系统性低估公司价值。本质上，定价是在为上市后的十二个月做铺垫，而不是为首日的新闻标题做铺垫。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、影响定价的五个变量</h2><div class="ts-lead"><span class="tag">结论先行</span><p>基本面决定定价的中枢，市场情绪与订单簿决定最终落点。</p></div><p><strong>变量一，公司基本面。</strong>盈利能力、收入增速、毛利结构、客户集中度、商业模式的可持续性与所处行业的成长空间，是估值的根本基础。基本面越扎实、财务记录越经得起穿透，越能支撑区间上沿的定价。</p><p><strong>变量二，可比公司估值。</strong>承销商会选取业务模式与规模相近的已上市公司，参照其市盈率、市销率、EV/EBITDA等倍数，结合规模折价与流动性折价，推出发行人的估值区间。可比公司的选择本身就是谈判的一部分，发行人应参与讨论并提出依据。</p><p><strong>变量三，市场情绪与发行窗口。</strong>发行时点的整体市场环境对定价影响很大。指数波动率上升、同板块近期新股表现不佳、宏观事件密集期，都会压缩机构的出价意愿；反之，窗口良好时区间上沿甚至上调都有可能。发行窗口的把握，往往和定价本身同等重要。</p><p><strong>变量四，机构需求。</strong>订单簿的认购倍数与价格分布是定价的直接依据。认购踊跃时，可定在区间上限或上调区间并重新征询；需求平淡时，则可能需要定在下限、下调区间，或缩减发行规模以保住价格。</p><p><strong>变量五，投资人结构。</strong>除价格外，承销商还会评估订单来源的性质。以长期持有为目标的基金，与以首日套利为目标的短线资金，对上市后价格稳定性的影响完全不同。因此在同等报价下，承销商通常会向前者倾斜配售份额。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、从初步估值到配售的五步流程</h2><div class="ts-lead"><span class="tag">结论先行</span><p>定价是一条有固定节奏的流水线，企业能施加影响的窗口主要在前三步。</p></div><p><strong>第一步，初步估值。</strong>承销商在完成尽职调查后，基于财务模型与可比公司分析，给出初步估值区间，并与发行人管理层就关键假设进行对齐。</p><p><strong>第二步，确定价格区间。</strong>结合发行规模、市场环境与预期需求，确定用于路演的价格区间，并写入F-1注册说明书的修订稿向SEC提交、向市场公开。</p><p><strong>第三步，路演询价。</strong>管理层与承销团队在为期约一至两周的路演中集中拜访机构投资人，同步收集订单。这一阶段管理层的表达质量、对关键质疑的回应能力，会直接影响订单簿的厚度。</p><p><strong>第四步，确定发行价。</strong>路演结束后，承销商与发行人依据订单簿协商确定最终发行价。若需求显著超出预期，可上调至区间之上；若显著不足，则可能下调价格或缩减规模。定价通常在挂牌交易前一个交易日的收盘后完成。</p><p><strong>第五步，配售与交割。</strong>按最终发行价向获配投资人分配股份，承销商在此环节按投资人质量进行主动分配，随后进入交割（通常为定价后的第二个交易日）。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、承销折扣、绿鞋与稳定操作</h2><div class="ts-lead"><span class="tag">结论先行</span><p>发行价不等于公司到手的金额，中间隔着承销折扣；而上市初期的价格并非完全自由波动，绿鞋机制在其中起作用。</p></div><p><strong>承销折扣（Underwriting Discount）。</strong>承销商的主要报酬来自按发行价的一定百分比计提的折扣，美股IPO通常在募资总额的6%至8%区间，中小型发行的实际水平常见于7%左右。</p><p data-ts="1">这意味着以发行价乘以发行股数计算的募资总额，扣除承销折扣以及律师、审计师、印刷、交易所与SEC费用等发行成本后，才是公司实际到手的净额。企业在做资金用途规划时，应以净额而非总额为基础。</p><p><strong>绿鞋机制（Greenshoe / 超额配售选择权）。</strong>承销协议通常授予承销商一项权利：在发行规模基础上额外配售最多15%的股份，并可在上市后30天内按发行价向发行人（或出售股东）行使购买权。</p><p data-ts="1">其运作方式是，承销商在发行时先超额售出这部分股份，形成一个空头头寸；若上市后股价高于发行价，则行使绿鞋从发行人处购入平仓，公司因此多募一笔资金；若股价跌破发行价，承销商则在二级市场买入股票平仓，这一买盘在客观上对价格形成支撑。</p><p><strong>稳定操作的边界。</strong>上述价格稳定活动受美国证券法关于发行期间市场行为的规则约束，必须在规定的方式、时间与披露要求内进行，且不得演变为对价格的操纵。任何试图以约定交易、对倒或其他人为手段影响价格的做法均属违规，企业应明确拒绝任何此类提议。关键在于，合规的稳定操作是有限度、有披露、有期限的，与操纵行为有清晰界线。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、锁定期、静默期与上市后的价格管理</h2><div class="ts-lead"><span class="tag">结论先行</span><p>定价只是起点，上市后前两个季度的价格表现，很大程度上由锁定期结构与信息披露节奏决定。</p></div><p><strong>锁定期（Lock-up）。</strong>承销协议通常要求发行人的董事、高管与主要股东在上市后的一段期间内不得出售所持股份，市场惯例为180天。锁定期到期前后，市场会预期潜在的抛压，价格常出现波动。</p><p data-ts="1">因此，实际控制人应提前规划减持节奏，避免在到期日形成集中冲击。上市公司内部人的后续交易，通常需要在符合条件的情形下依据事先设立的10b5-1交易计划执行，以管理内幕交易风险。</p><p><strong>静默期与信息披露。</strong>发行前后存在关于宣传与研究报告发布的限制期，管理层的对外表述需在律师指导下进行。上市后，公司进入定期报告与重大事项及时披露的节奏，业绩指引的给出与兑现会成为市场评估管理层可信度的主要依据。</p><p data-ts="1">首次给出的指引宜留有余地——上市后的第一个未达预期的季度，对估值的杀伤远大于一次保守的指引。</p><p><strong>投资人关系的延续性。</strong>在发行中获配的长期机构，是上市后最重要的股东基础。定价环节保留合理的空间、上市后维持稳定的沟通频率，有助于这批投资人在后续增发中继续参与。华尔街彤鼎俱乐部在与企业家交流市值管理话题时，反复强调的正是把IPO视为投资人关系的起点而非终点。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、非美国本土发行人的估值折扣如何缩小</h2><div class="ts-lead"><span class="tag">结论先行</span><p>折扣主要来自信息不对称与监管不确定性，两者都可以通过准备工作部分对冲。</p></div><p>相较基本面相近的美国本土公司，来自新兴市场的发行人在定价时往往面临一定的估值折扣。折扣的来源可以拆成三块：一是信息透明度，海外投资人对其终端市场、客户结构与竞争格局缺乏直观认知；二是监管环境的不确定性，包括跨境审计监管与所在地行业政策的变化；三是流动性预期，中小市值发行人上市后的日均成交量与分析师覆盖度通常较低。</p><p>可以采取的对冲手段包括：在招股文件与路演材料中用可验证的第三方数据说明市场规模与自身份额，减少投资人的认知成本；把跨境审计监管的现状与自身审计安排讲清楚，主动消解监管疑虑；引入具备行业公信力的基石或长期投资人，为估值提供背书；以及在发行规模与流通股比例上做合理设计，兼顾流动性与稀释。</p><p>同时，定价上应更审慎地对待上市后的稳定表现。发行人一旦破发，市场信心的修复通常需要更长时间，而中小市值公司修复的难度更大。因此，宁可在定价上留出更明确的空间，也不宜为了募资总额的账面数字而顶格定价。</p><p>彤鼎集团在上市辅导中，帮助企业理解定价机制、准备路演材料、与承销商就估值假设与发行结构进行有效沟通，并统筹锁定期与上市后信息披露的安排；华尔街彤鼎俱乐部则为企业家提供资本市场规则与估值方法的系统性梳理。</p><p data-ts="1">涉及Pre-IPO项目信息的部分，仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-ipo-pricing.html" style="color:#6b5426;font-weight:700;">纳斯达克IPO定价机制</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="roadshow-investor-comms.html" style="color:#6b5426;font-weight:700;">路演与投资者沟通</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="underwriter-selection.html" style="color:#6b5426;font-weight:700;">承销商选择指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cornerstone-investors.html" style="color:#6b5426;font-weight:700;">港股基石投资者机制</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="greenshoe.html" style="color:#6b5426;font-weight:700;">绿鞋机制与超额配售</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

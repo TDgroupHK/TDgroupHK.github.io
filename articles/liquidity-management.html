@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"做市商与流动性管理","inLanguage":"zh-CN","abstract":"How market makers support liquidity for a newly listed issuer, and the compliant boundary between liquidity support and manipulation.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/liquidity-management.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"流动性（Liquidity）是上市公司市值管理的基础——一只每天成交量只有10万美元的股票，机构投资人根本无法建仓，分析师不会发研究报告，指数也不会纳入。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,42 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">挂牌之后 POST-LISTING</div><h1>做市商与流动性管理</h1>
 <div class="sub"></div><div class="en">How market makers support liquidity for a newly listed issuer, and the compliant boundary between liquidity support and manipulation.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">流动性（Liquidity）是上市公司市值管理的基础——一只每天成交量只有10万美元的股票，机构投资人根本无法建仓，分析师不会发研究报告，指数也不会纳入。这形成了一个死循环：流动性差→机构不关注→股价低迷→更难吸引机构→流动性更差。对大多数中小市值中概股而言，做市商（Market Maker）是提供基础流动性的关键参与者，但做市商的质量和数量同样参差不齐。提升流动性的5个核心手段：提高做市商数量和质量、扩大研究覆盖、增加IR活动频次、股票分拆（若股价过高导致流动性差）、并购或重大事件驱动关注度。</div>
-<h2>一、做市商的角色与机制</h2>
-<h3>做市商是什么</h3>
-<p>做市商（Market Maker）是在证券市场中为特定股票持续提供买卖报价、愿意以报出价格买入或卖出股票的证券自营商。在纳斯达克市场，每只股票通常有多个做市商同时报价，相互竞争提供最优的买卖价差（Bid-Ask Spread）。</p>
-<h3>做市商如何影响流动性</h3>
-<p>买卖价差（Bid-Ask Spread）是衡量流动性的直接指标。价差越小，交易成本越低，流动性越好。一只流动性好的股票（如大市值中概股），买卖价差可能只有0.01美元；一只流动性差的小市值股票，价差可能高达0.5至1美元，意味着买入后立即卖出就损失了1%至2%。</p>
-<p>做市商数量越多，竞争越激烈，价差越小，流动性越好。新上市的中小市值中概股通常只有5至15个做市商，而大市值中概股可能有60至100个做市商覆盖。</p>
-<h3>主做市商计划（Primary Market Making）</h3>
-<p>部分公司会与一家或多家做市商签订专属的主做市商协议，做市商承诺为该股票持续提供更高质量的报价（更小的价差、更大的报价深度），公司通常支付一定费用（通常每月5000至3万美元）作为报酬。</p>
-<p>主做市商协议特别适合日均成交量低于100万美元的中小市值中概股，可以有效改善基础流动性，吸引更多散户和中小机构投资人的参与。</p>
-<h2>二、流动性差的5个主要表现</h2>
-<p>每日成交量低于100万美元，大型机构无法在合理时间内建立或退出仓位；买卖价差超过0.5%，交易成本过高；买盘或卖盘深度（Order Book Depth）浅，小额交易就能引起较大价格波动；股价走势与公司基本面严重脱节（好消息股价不涨，因为没有人买入）；分析师不愿意覆盖（分析师报告的读者是机构投资人，机构买不进去就不值得写报告）。</p>
-<h2>三、提升流动性的5个系统化方法</h2>
-<h3>方法1：增加做市商数量</h3>
-<p>主动联系纳斯达克认可的做市商，邀请其为公司股票报价。可以通过IR团队主动联系，或委托专业的做市商推广机构协助。增加做市商数量可以直接缩小价差、提升市场深度。</p>
-<h3>方法2：扩大研究覆盖</h3>
-<p>机构投资人跟随研究报告做投资决策。每增加一家有影响力的分析师覆盖，通常带来数百万至数千万美元的机构资金关注。扩大研究覆盖的方法：参加承销商主办的行业投资者大会（分析师会在会上接触公司）；主动联系在同行业有深度研究的分析师；聘请IR顾问机构协助分析师推广工作。</p>
-<h3>方法3：增加IR活动频次</h3>
-<p>每多一次投资人大会、每多一次分析师实地调研、每多一次管理层公开露面，都会带来新的买盘关注。特别是参加主流投资银行主办的行业大会（如摩根士丹利、高盛、Jefferies等主办的科技/消费/医疗峰会），是接触新机构投资人最有效的方式。</p>
-<h3>方法4：股票分拆（若股价过高）</h3>
-<p>如果股价因为长期上涨导致绝对价格过高（如超过200美元每股），散户投资人可能因为单价过高而减少参与，影响流动性。股票分拆（如10送1，将股价降至1/10）可以降低单股价格，吸引更多散户参与，提升成交量。</p>
-<h3>方法5：重大事件驱动关注度</h3>
-<p>并购公告、重大合作签署、新产品发布等重大事件会短期大幅提升关注度和成交量。流动性改善需要系统性努力，但重大事件是提升知名度的重要催化剂。</p>
-<h2>四、做市商的选择与评估</h2>
-<h3>评估做市商的4个维度</h3>
-<p>做市记录：该做市商在类似规模中概股上的做市历史和口碑；报价质量：其为同类股票提供的价差水平；自营资金规模：自营资金越充足，在极端行情下的做市稳定性越好；与IR团队的配合度：好的做市商会与IR团队保持沟通，了解公司的重大事件安排，在关键时间点提供更积极的做市支持。</p>
-<h3>常见的做市商机构</h3>
-<p>在中概股市场活跃的做市商包括：Virtu Financial、Citadel Securities、Jane Street、G1 Execution Services等专业做市机构，以及部分中小型经纪商。这些机构对中概股市场的参与度不同，需要根据公司的具体情况选择合适的做市伙伴。</p>
-<h2>五、流动性提升的时间预期</h2>
-<p>流动性提升不是一夜之间发生的事情，而是需要12至24个月系统性努力的结果。一般规律：做市商数量提升后，价差缩小通常在1至3个月内体现；新研究覆盖带来的机构关注通常在报告发布后6至12个月内逐步体现为持续的成交量提升；IR活动的效果通常在6至18个月内逐步积累，形成机构持股基础。</p>
-<p>流动性提升最快的触发事件是被纳入主流指数（如Russell 2000、MSCI等）——被动资金的强制买入会在一两天内大幅提升成交量，并带来永久性的流动性改善。</p>
-<h3>结语：流动性是市值的根基</h3>
-<p>市值不只是股价乘以股数，更是股价在真实交易中能够实现的价值。一只流动性极差的股票，即使名义市值不小，真正想卖出时可能根本找不到买家，或者大量出售会把股价压垮。</p>
-<p>提升流动性是中小市值中概股在市值管理中应该投入最多精力的工作之一。从今天开始系统规划做市商、研究覆盖、IR活动，12至24个月后会看到实质性的改变。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>流动性（Liquidity）是上市公司市值管理的基础——一只每天成交量只有10万美元的股票，机构投资人根本无法建仓，分析师不会发研究报告，指数也不会纳入。这形成了一个死循环：流动性差→机构不关注→股价低迷→更难吸引机构→流动性更差。</p><p>对大多数中小市值中概股而言，做市商（Market Maker）是提供基础流动性的关键参与者，但做市商的质量和数量同样参差不齐。提升流动性的5个核心手段：提高做市商数量和质量、扩大研究覆盖、增加IR活动频次、股票分拆（若股价过高导致流动性差）、并购或重大事件驱动关注度。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">做市商的角色与机制</a></li><li><a href="#sec-02">流动性差的5个主要表现</a></li><li><a href="#sec-03">提升流动性的5个系统化方法</a></li><li><a href="#sec-04">做市商的选择与评估</a></li><li><a href="#sec-05">流动性提升的时间预期</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、做市商的角色与机制</h2><p><h3>做市商是什么</h3></p><p>做市商（Market Maker）是在证券市场中为特定股票持续提供买卖报价、愿意以报出价格买入或卖出股票的证券自营商。在纳斯达克市场，每只股票通常有多个做市商同时报价，相互竞争提供最优的买卖价差（Bid-Ask Spread）。</p><p><h3>做市商如何影响流动性</h3></p><p>买卖价差（Bid-Ask Spread）是衡量流动性的直接指标。价差越小，交易成本越低，流动性越好。一只流动性好的股票（如大市值中概股），买卖价差可能只有0.01美元；一只流动性差的小市值股票，价差可能高达0.5至1美元，意味着买入后立即卖出就损失了1%至2%。</p><p>做市商数量越多，竞争越激烈，价差越小，流动性越好。新上市的中小市值中概股通常只有5至15个做市商，而大市值中概股可能有60至100个做市商覆盖。</p><p><h3>主做市商计划（Primary Market Making）</h3></p><p>部分公司会与一家或多家做市商签订专属的主做市商协议，做市商承诺为该股票持续提供更高质量的报价（更小的价差、更大的报价深度），公司通常支付一定费用（通常每月5000至3万美元）作为报酬。</p><p>主做市商协议特别适合日均成交量低于100万美元的中小市值中概股，可以有效改善基础流动性，吸引更多散户和中小机构投资人的参与。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、流动性差的5个主要表现</h2><p>每日成交量低于100万美元，大型机构无法在合理时间内建立或退出仓位；买卖价差超过0.5%，交易成本过高；买盘或卖盘深度（Order Book Depth）浅，小额交易就能引起较大价格波动；股价走势与公司基本面严重脱节（好消息股价不涨，因为没有人买入）；分析师不愿意覆盖（分析师报告的读者是机构投资人，机构买不进去就不值得写报告）。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、提升流动性的5个系统化方法</h2><p><h3>方法1：增加做市商数量</h3></p><p>主动联系纳斯达克认可的做市商，邀请其为公司股票报价。可以通过IR团队主动联系，或委托专业的做市商推广机构协助。增加做市商数量可以直接缩小价差、提升市场深度。</p><p><h3>方法2：扩大研究覆盖</h3></p><p>机构投资人跟随研究报告做投资决策。每增加一家有影响力的分析师覆盖，通常带来数百万至数千万美元的机构资金关注。扩大研究覆盖的方法：参加承销商主办的行业投资者大会（分析师会在会上接触公司）；主动联系在同行业有深度研究的分析师；聘请IR顾问机构协助分析师推广工作。</p><p><h3>方法3：增加IR活动频次</h3></p><p>每多一次投资人大会、每多一次分析师实地调研、每多一次管理层公开露面，都会带来新的买盘关注。特别是参加主流投资银行主办的行业大会（如摩根士丹利、高盛、Jefferies等主办的科技/消费/医疗峰会），是接触新机构投资人最有效的方式。</p><p><h3>方法4：股票分拆（若股价过高）</h3></p><p>如果股价因为长期上涨导致绝对价格过高（如超过200美元每股），散户投资人可能因为单价过高而减少参与，影响流动性。股票分拆（如10送1，将股价降至1/10）可以降低单股价格，吸引更多散户参与，提升成交量。</p><p><h3>方法5：重大事件驱动关注度</h3></p><p>并购公告、重大合作签署、新产品发布等重大事件会短期大幅提升关注度和成交量。流动性改善需要系统性努力，但重大事件是提升知名度的重要催化剂。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、做市商的选择与评估</h2><p><h3>评估做市商的4个维度</h3></p><p>做市记录：该做市商在类似规模中概股上的做市历史和口碑；报价质量：其为同类股票提供的价差水平；自营资金规模：自营资金越充足，在极端行情下的做市稳定性越好；与IR团队的配合度：好的做市商会与IR团队保持沟通，了解公司的重大事件安排，在关键时间点提供更积极的做市支持。</p><p><h3>常见的做市商机构</h3></p><p>在中概股市场活跃的做市商包括：Virtu Financial、Citadel Securities、Jane Street、G1 Execution Services等专业做市机构，以及部分中小型经纪商。这些机构对中概股市场的参与度不同，需要根据公司的具体情况选择合适的做市伙伴。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、流动性提升的时间预期</h2><p>流动性提升不是一夜之间发生的事情，而是需要12至24个月系统性努力的结果。一般规律：做市商数量提升后，价差缩小通常在1至3个月内体现；新研究覆盖带来的机构关注通常在报告发布后6至12个月内逐步体现为持续的成交量提升；IR活动的效果通常在6至18个月内逐步积累，形成机构持股基础。</p><p>流动性提升最快的触发事件是被纳入主流指数（如Russell 2000、MSCI等）——被动资金的强制买入会在一两天内大幅提升成交量，并带来永久性的流动性改善。</p><p><h3>结语：流动性是市值的根基</h3></p><p>市值不只是股价乘以股数，更是股价在真实交易中能够实现的价值。一只流动性极差的股票，即使名义市值不小，真正想卖出时可能根本找不到买家，或者大量出售会把股价压垮。</p><p>提升流动性是中小市值中概股在市值管理中应该投入最多精力的工作之一。从今天开始系统规划做市商、研究覆盖、IR活动，12至24个月后会看到实质性的改变。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ir-fundamentals.html" style="color:#6b5426;font-weight:700;">上市公司IR体系搭建</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="index-inclusion.html" style="color:#6b5426;font-weight:700;">指数纳入路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="quarterly-compliance.html" style="color:#6b5426;font-weight:700;">上市公司季报合规指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="share-pledge-risk.html" style="color:#6b5426;font-weight:700;">上市公司实控人的股票质押：什么时候是融资工具，什么时候是暴雷前兆</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="esg-disclosure.html" style="color:#6b5426;font-weight:700;">ESG披露要求与实操</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

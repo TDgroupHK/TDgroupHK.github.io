@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"SEC问询函应对实务","inLanguage":"zh-CN","abstract":"An SEC comment letter is a written inquiry issued by the Division of Corporation Finance after reviewing a registration statement. The SEC conducts disclosure-based review rather than merit review: it does not judge whether a company is a good investment, only whether disclosure is complete, accurate and consistent. Initial comments typically arrive within about thirty days, an IPO commonly goes through several rounds, and all letters become public on EDGAR no earlier than twenty business days after the review ends. This article maps the recurring themes — revenue recognition, related-party transactions, going concern and China-specific risk disclosure — and sets out response strategy and timetable management for multi-round reviews.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/sec-comment-letters.html","datePublished":"2026-07-20","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"SEC问询函是美国证监会公司财务部在审阅注册文件后向发行人发出的书面披露质询，首轮意见通常在提交后约30日内发出，全部往来函件将在审核结束后不早于20个工作日公开。本文解析收入确认、关联交易、持续经营与中国相关风险披露四大高频主题，并给出回复节奏、多轮问询应对与时间表管理的实务要点。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,44 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>SEC问询函应对实务</h1>
 <div class="sub">高频问询主题、回复节奏与多轮问询的应对策略</div><div class="en">An SEC comment letter is a written inquiry issued by the Division of Corporation Finance after reviewing a registration statement. The SEC conducts disclosure-based review rather than merit review: it does not judge whether a company is a good investment, only whether disclosure is complete, accurate and consistent. Initial comments typically arrive within about thirty days, an IPO commonly goes through several rounds, and all letters become public on EDGAR no earlier than twenty business days after the review ends. This article maps the recurring themes — revenue recognition, related-party transactions, going concern and China-specific risk disclosure — and sets out response strategy and timetable management for multi-round reviews.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">SEC问询函（Comment Letter）是指美国证券交易委员会公司财务部（Division of Corporation Finance）在审阅发行人注册文件后，以书面形式发出的披露质询与修改要求。SEC实行披露审核而非实质审批：它不判断企业好坏，只判断披露是否充分、准确、一致。实务上，首轮问询意见通常在文件提交后约30日内发出；一个赴美IPO项目常见经历两到四轮问询，涉及中国业务的项目往往更多；全部问询函与回复函将在审核结束后不早于20个工作日在EDGAR系统对外公开。问询的高频主题集中于四类：收入确认、关联交易、持续经营与中国相关风险披露。关键在于：问询函不是障碍而是流程，回复的质量与节奏直接决定注册生效的时间表。</div>
-<h2>一、SEC审核机制：披露审核，而非价值判断</h2>
-<p><strong>结论先行：SEC不为企业质量背书，问询函的全部逻辑都围绕一个问题——投资者能否依据披露文件做出知情决策。</strong></p>
-<p>美国证券发行实行注册制。发行人提交S-1或F-1注册文件后，由SEC公司财务部按行业分组的审核团队进行审阅，审阅范围覆盖财务报表、管理层讨论与分析（MD&amp;A）、风险因素、业务描述与公司治理等全部章节。审核的法定目标是披露的充分性与准确性，而非发行的投资价值——这与实质审批型市场的逻辑有根本区别。理解了这一点，就能理解问询函的正确定位：它不是监管机构对企业的否定，而是披露走向合格的必经流程。</p>
-<p>依据JOBS法案，符合条件的新兴成长公司（EGC）可以保密递交注册文件草稿，问询在非公开状态下进行，直至正式公开递交。首轮问询意见通常在提交后约30日内发出，形式为编号列示的问题清单，每个问题对应文件的具体章节与页码，要求发行人书面回复并同步修订注册文件。</p>
-<p>需要特别提醒的是，问询过程并非永久保密：审核结束后不早于20个工作日，全部问询函与回复函将在EDGAR系统对外公开，任何人都可以查阅。这意味着回复函本身就是一份未来会公开的文件，措辞、承诺与事实陈述都要按公开标准把关。本质上，问询应对是一场书面的、留痕的、最终公开的对话，任何侥幸心理都会留下永久记录。</p>
-<h2>二、高频主题一：收入确认</h2>
-<p><strong>结论先行：收入确认是财务类问询中出现频率最高的主题，核心争点是收入准则五步法下的职业判断，尤其是总额法与净额法之争。</strong></p>
-<p>现行美国会计准则下的收入确认遵循五步法：识别合同、识别履约义务、确定交易价格、分摊交易价格、在履约义务完成时确认收入。SEC问询通常不质疑准则本身，而是质疑发行人应用准则时的判断依据是否披露充分、逻辑是否自洽。</p>
-<p>最常见的争点是总额与净额之争：企业作为主要责任人（Principal）应按交易总额确认收入，作为代理人（Agent）只能按净额确认佣金或服务费。平台类、贸易类、供应链类业务几乎必然收到这一问题，因为总额与净额的选择直接改变收入体量，进而影响整个估值叙事。判断的核心要素包括：谁控制商品或服务、谁承担存货风险、谁拥有定价权、谁对履约质量负最终责任。</p>
-<p>其他高频争点包括：收入按时点还是按时段确认、可变对价的估计方法与限制、合同负债与递延收入的口径、退货权与折让的处理、多要素安排下交易价格的分摊依据。回复此类问题的正确姿势是三段式：先引用准则条文，再陈述业务事实与判断依据，最后说明会计结论，必要时同步修订披露。只给结论、不展示判断过程的回复，几乎必然引来第二轮追问。因此，收入确认问题的应对功夫在递交之前——申报会计师与公司在申报前就应把判断备忘录做扎实。</p>
-<h2>三、高频主题二：关联交易与持续经营</h2>
-<p><strong>结论先行：关联交易问的是公允性与完整性，持续经营问的是未来十二个月的现金流——两者都是中小体量发行人的必答题。</strong></p>
-<p>关联交易方面，Regulation S-K第404项要求披露金额超过12万美元的关联人交易。SEC的关注通常有三层：第一，关联方识别是否完整，是否存在通过代持、近亲属或共同控制形成的未披露关联关系；第二，交易定价是否公允，与独立第三方可比交易相比是否存在利益输送；第三，历史上的资金拆借是否已经清理，实际控制人与公司之间的往来款是否结清、有无恢复迹象。民营企业在上市前阶段普遍存在股东与公司资金往来的历史，这类问题应当在递交前清理完毕并披露清理过程，而不是留到问询中被动解释。</p>
-<p>持续经营方面，若发行人存在累计亏损、经营现金流为负或营运资金不足的情形，管理层须评估自财务报表发布之日起未来十二个月内是否存在持续经营的重大疑虑，审计师亦可能在审计报告中加入持续经营相关段落。SEC会围绕三点追问：营运资金测算的关键假设是否合理；本次募集资金是否构成持续经营的前提；若发行推迟或失败，公司有无可执行的备选融资安排。</p>
-<p>关键在于，这两类问题的答案都不在措辞里，而在事实里：关联往来要真清理，资金缺口要真补上。问询函只是把事实翻出来而已，事实不改变，措辞再精巧也无法通过审核。</p>
-<h2>四、高频主题三：中国相关风险披露</h2>
-<p><strong>结论先行：涉及中国业务的发行人会收到一组高度标准化的专项问询，这组问题有公开范本，完全可以也应该提前准备。</strong></p>
-<p>2021年起，SEC先后发布了针对中国相关企业的示范问询函，将中国专项披露要求标准化。高频问题集中在四组。</p>
-<p>第一组，主体结构。要求在招股书显著位置说明上市主体是控股公司而非境内运营实体；若采用VIE架构，须明确投资者购买的是境外主体股份、并不直接持有境内运营公司权益，并披露协议控制的可执行性风险与现金流转路径。</p>
-<p>第二组，审计监管。依据《外国公司问责法》（HFCAA），上市公司的审计机构若连续两年无法接受PCAOB完整检查，其证券将被禁止在美国市场交易——该触发年限已由最初的连续三年缩短为连续两年。2022年12月，PCAOB确认取得了对中国内地及香港审计机构的检查与调查权限，但该状态每年重新评估，披露中须如实说明这一不确定性。</p>
-<p>第三组，境内监管程序。中国证监会境外上市备案制度自2023年3月31日施行，SEC会要求披露备案进展及其是否构成发行前提；同时，掌握超过100万用户个人信息的网络平台运营者赴国外上市须申报网络安全审查，涉及数据业务的发行人须说明自身是否落入该范围。</p>
-<p>第四组，资金与分红路径。要求披露境内利润汇出至上市主体的路径、外汇管理的限制，以及这些限制对偿付能力与分红能力的影响。这四组问题每一组都有成熟的披露框架。华尔街彤鼎俱乐部在与拟上市企业主交流时反复强调：中国专项披露不是能不能过的问题，而是有没有按公开范本提前准备的问题。</p>
-<h2>五、回复的节奏与策略</h2>
-<p><strong>结论先行：回复速度影响时间表，但一次回复的彻底程度比速度更重要——每一个没答透的问题，下一轮会变成两个问题。</strong></p>
-<p>收到问询函后的标准动作分四步。第一步，分工拆解：证券律师牵头统稿并负责法律与披露类问题，审计师负责会计与财务报表类问题，公司管理层提供业务事实与数据支持，投行协调整体时间表。第二步，逐条起草：回复函按问询编号逐条作答，每条采用重述问题、直接回答、指明修订位置的三段结构，并与修订版注册文件同时提交。第三步，交叉核对：回复函内容与修订后的披露必须完全一致——回复函承诺修改而正文未改，是低级但常见的失误。第四步，按既定节奏提交，一轮回复一般在两到四周内完成；拖得越久，财务数据过期的压力越大。</p>
-<p>策略层面有两条经验。其一，对事实类问题有问必答、答必彻底；对判断类与措辞类问题，先评估坚持立场与修改披露的成本收益——多数披露措辞之争不值得消耗一轮问询周期，直接按审核意见修订更经济。其二，对复杂会计判断或确有分歧的问题，可以主动请求与审核组电话沟通；书面往返三轮讲不清的问题，一次电话往往就能对齐口径。因此，回复策略的本质是把有限的博弈资源留给真正重要的分歧。</p>
-<h2>六、多轮问询的应对</h2>
-<p><strong>结论先行：健康的问询进程呈收敛形态——问题数量逐轮下降、问题颗粒度逐轮变细；若同一问题反复出现，需要检讨的是回复策略，而不是审核员。</strong></p>
-<p>首轮问询问题最多、覆盖面最广，出现几十个问题属于正常水平；第二轮通常聚焦首轮未答透的少数主题；此后各轮应当快速收窄。判断进程是否健康看两个信号：一看问题总数是否逐轮递减，二看问题是否从章节级下沉到数据核对与措辞级。问题层级下沉，说明大的分歧已经解决，审核在走向收尾。</p>
-<p>若某一问题连续多轮出现，通常意味着三种情况之一：回复始终答非所问；发行人坚持的会计处理确实站不住；或者问询期间事实基础发生了变化。此时正确的动作是内部重新评估立场、必要时调整会计处理或补强披露，而不是换一种措辞再提交一遍。对确有重大分歧的会计问题，审计师可以启动与SEC首席会计师办公室的咨询沟通程序，把问题升级到专业裁断层面解决，避免在审核层面反复消耗。</p>
-<p>当审核组确认没有进一步意见后，发行人即可着手请求注册文件宣布生效，进入路演与定价阶段。因此，问询轮次管理的实质是时间表管理：每省下一轮，就为发行窗口多留出两到四周的余地。</p>
-<h2>七、问询期的时间表管理与常见错误</h2>
-<p><strong>结论先行：问询期最大的隐形对手不是审核员，而是财务数据的有效期。</strong></p>
-<p>注册文件中的财务报表存在有效期约束（staleness）：中期财务数据通常以135天左右为常用的更新节点，逾期须补充新一期经审阅的中期数据，具体适用以SEC规则文本为准。问询每拖一轮，就离数据过期近一步；一旦跨过更新节点，补数据所需的时间反过来又拉长问询周期，形成恶性循环。因此项目管理的第一原则是：以数据有效期倒排回复时间表，而不是以回复进度顺排。</p>
-<p>常见错误有三类。第一，隐瞒或淡化不利事实：问询过程中被动暴露的事实，远比主动披露的同一事实伤害大，审核员对披露诚信问题的容忍度极低，个别情况下会将审核升级为更严格的核查。第二，团队协调失灵：律师、审计师与公司各答各的，回复口径互相矛盾，等于向审核组自证公司的披露体系不可靠。第三，抢跑动作：在未确认审核收尾的情况下提前启动路演安排，一旦追加问询被迫推迟，市场预期的反噬会伤害发行本身。</p>
-<p>彤鼎集团在赴美上市项目执行中，把问询应对作为整个上市时间表的中枢环节来管理；华尔街彤鼎俱乐部也会围绕注册审核、披露标准与发行窗口等主题，为有资本化规划的企业主提供系统的资本认知与资源对接。本质上，问询函应对没有玄学：事实干净、披露诚实、回复彻底、节奏可控，四者齐备，注册生效只是时间问题。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>SEC问询函（Comment Letter）是指美国证券交易委员会公司财务部（Division of Corporation Finance）在审阅发行人注册文件后，以书面形式发出的披露质询与修改要求。SEC实行披露审核而非实质审批：它不判断企业好坏，只判断披露是否充分、准确、一致。</p><p>实务上，首轮问询意见通常在文件提交后约30日内发出；一个赴美IPO项目常见经历两到四轮问询，涉及中国业务的项目往往更多；全部问询函与回复函将在审核结束后不早于20个工作日在EDGAR系统对外公开。问询的高频主题集中于四类：收入确认、关联交易、持续经营与中国相关风险披露。关键在于：问询函不是障碍而是流程，回复的质量与节奏直接决定注册生效的时间表。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">SEC审核机制：披露审核，而非价值判断</a></li><li><a href="#sec-02">高频主题一：收入确认</a></li><li><a href="#sec-03">高频主题二：关联交易与持续经营</a></li><li><a href="#sec-04">高频主题三：中国相关风险披露</a></li><li><a href="#sec-05">回复的节奏与策略</a></li><li><a href="#sec-06">多轮问询的应对</a></li><li><a href="#sec-07">问询期的时间表管理与常见错误</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、SEC审核机制：披露审核，而非价值判断</h2><div class="ts-lead"><span class="tag">结论先行</span><p>SEC不为企业质量背书，问询函的全部逻辑都围绕一个问题——投资者能否依据披露文件做出知情决策。</p></div><p>美国证券发行实行注册制。发行人提交S-1或F-1注册文件后，由SEC公司财务部按行业分组的审核团队进行审阅，审阅范围覆盖财务报表、管理层讨论与分析（MD&amp;A）、风险因素、业务描述与公司治理等全部章节。</p><p data-ts="1">审核的法定目标是披露的充分性与准确性，而非发行的投资价值——这与实质审批型市场的逻辑有根本区别。理解了这一点，就能理解问询函的正确定位：它不是监管机构对企业的否定，而是披露走向合格的必经流程。</p><p>依据JOBS法案，符合条件的新兴成长公司（EGC）可以保密递交注册文件草稿，问询在非公开状态下进行，直至正式公开递交。首轮问询意见通常在提交后约30日内发出，形式为编号列示的问题清单，每个问题对应文件的具体章节与页码，要求发行人书面回复并同步修订注册文件。</p><p>需要特别提醒的是，问询过程并非永久保密：审核结束后不早于20个工作日，全部问询函与回复函将在EDGAR系统对外公开，任何人都可以查阅。这意味着回复函本身就是一份未来会公开的文件，措辞、承诺与事实陈述都要按公开标准把关。</p><p data-ts="1">本质上，问询应对是一场书面的、留痕的、最终公开的对话，任何侥幸心理都会留下永久记录。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、高频主题一：收入确认</h2><div class="ts-lead"><span class="tag">结论先行</span><p>收入确认是财务类问询中出现频率最高的主题，核心争点是收入准则五步法下的职业判断，尤其是总额法与净额法之争。</p></div><p>现行美国会计准则下的收入确认遵循五步法：识别合同、识别履约义务、确定交易价格、分摊交易价格、在履约义务完成时确认收入。SEC问询通常不质疑准则本身，而是质疑发行人应用准则时的判断依据是否披露充分、逻辑是否自洽。</p><p>最常见的争点是总额与净额之争：企业作为主要责任人（Principal）应按交易总额确认收入，作为代理人（Agent）只能按净额确认佣金或服务费。平台类、贸易类、供应链类业务几乎必然收到这一问题，因为总额与净额的选择直接改变收入体量，进而影响整个估值叙事。</p><p data-ts="1">判断的核心要素包括：谁控制商品或服务、谁承担存货风险、谁拥有定价权、谁对履约质量负最终责任。</p><p>其他高频争点包括：收入按时点还是按时段确认、可变对价的估计方法与限制、合同负债与递延收入的口径、退货权与折让的处理、多要素安排下交易价格的分摊依据。回复此类问题的正确姿势是三段式：先引用准则条文，再陈述业务事实与判断依据，最后说明会计结论，必要时同步修订披露。</p><p data-ts="1">只给结论、不展示判断过程的回复，几乎必然引来第二轮追问。因此，收入确认问题的应对功夫在递交之前——申报会计师与公司在申报前就应把判断备忘录做扎实。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、高频主题二：关联交易与持续经营</h2><div class="ts-lead"><span class="tag">结论先行</span><p>关联交易问的是公允性与完整性，持续经营问的是未来十二个月的现金流——两者都是中小体量发行人的必答题。</p></div><p>关联交易方面，Regulation S-K第404项要求披露金额超过12万美元的关联人交易。SEC的关注通常有三层：第一，关联方识别是否完整，是否存在通过代持、近亲属或共同控制形成的未披露关联关系；第二，交易定价是否公允，与独立第三方可比交易相比是否存在利益输送；第三，历史上的资金拆借是否已经清理，实际控制人与公司之间的往来款是否结清、有无恢复迹象。</p><p data-ts="1">民营企业在上市前阶段普遍存在股东与公司资金往来的历史，这类问题应当在递交前清理完毕并披露清理过程，而不是留到问询中被动解释。</p><p>持续经营方面，若发行人存在累计亏损、经营现金流为负或营运资金不足的情形，管理层须评估自财务报表发布之日起未来十二个月内是否存在持续经营的重大疑虑，审计师亦可能在审计报告中加入持续经营相关段落。</p><p data-ts="1">SEC会围绕三点追问：营运资金测算的关键假设是否合理；本次募集资金是否构成持续经营的前提；若发行推迟或失败，公司有无可执行的备选融资安排。</p><p>关键在于，这两类问题的答案都不在措辞里，而在事实里：关联往来要真清理，资金缺口要真补上。问询函只是把事实翻出来而已，事实不改变，措辞再精巧也无法通过审核。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、高频主题三：中国相关风险披露</h2><div class="ts-lead"><span class="tag">结论先行</span><p>涉及中国业务的发行人会收到一组高度标准化的专项问询，这组问题有公开范本，完全可以也应该提前准备。</p></div><p>2021年起，SEC先后发布了针对中国相关企业的示范问询函，将中国专项披露要求标准化。高频问题集中在四组。</p><p>第一组，主体结构。要求在招股书显著位置说明上市主体是控股公司而非境内运营实体；若采用VIE架构，须明确投资者购买的是境外主体股份、并不直接持有境内运营公司权益，并披露协议控制的可执行性风险与现金流转路径。</p><p>第二组，审计监管。依据《外国公司问责法》（HFCAA），上市公司的审计机构若连续两年无法接受PCAOB完整检查，其证券将被禁止在美国市场交易——该触发年限已由最初的连续三年缩短为连续两年。</p><p data-ts="1">2022年12月，PCAOB确认取得了对中国内地及香港审计机构的检查与调查权限，但该状态每年重新评估，披露中须如实说明这一不确定性。</p><p>第三组，境内监管程序。中国证监会境外上市备案制度自2023年3月31日施行，SEC会要求披露备案进展及其是否构成发行前提；同时，掌握超过100万用户个人信息的网络平台运营者赴国外上市须申报网络安全审查，涉及数据业务的发行人须说明自身是否落入该范围。</p><p>第四组，资金与分红路径。要求披露境内利润汇出至上市主体的路径、外汇管理的限制，以及这些限制对偿付能力与分红能力的影响。这四组问题每一组都有成熟的披露框架。华尔街彤鼎俱乐部在与拟上市企业主交流时反复强调：中国专项披露不是能不能过的问题，而是有没有按公开范本提前准备的问题。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、回复的节奏与策略</h2><div class="ts-lead"><span class="tag">结论先行</span><p>回复速度影响时间表，但一次回复的彻底程度比速度更重要——每一个没答透的问题，下一轮会变成两个问题。</p></div><p>收到问询函后的标准动作分四步。</p><ol class="ts-pts"><li><b>第一步，分工拆解：</b>证券律师牵头统稿并负责法律与披露类问题，审计师负责会计与财务报表类问题，公司管理层提供业务事实与数据支持，投行协调整体时间表。</li><li><b>第二步，逐条起草：</b>回复函按问询编号逐条作答，每条采用重述问题、直接回答、指明修订位置的三段结构，并与修订版注册文件同时提交。</li><li><b>第三步，交叉核对：</b>回复函内容与修订后的披露必须完全一致——回复函承诺修改而正文未改，是低级但常见的失误。</li><li><b>第四步，按既定节奏提交</b>，一轮回复一般在两到四周内完成；拖得越久，财务数据过期的压力越大。</li></ol><p>策略层面有两条经验。其一，对事实类问题有问必答、答必彻底；对判断类与措辞类问题，先评估坚持立场与修改披露的成本收益——多数披露措辞之争不值得消耗一轮问询周期，直接按审核意见修订更经济。</p><p data-ts="1">其二，对复杂会计判断或确有分歧的问题，可以主动请求与审核组电话沟通；书面往返三轮讲不清的问题，一次电话往往就能对齐口径。因此，回复策略的本质是把有限的博弈资源留给真正重要的分歧。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、多轮问询的应对</h2><div class="ts-lead"><span class="tag">结论先行</span><p>健康的问询进程呈收敛形态——问题数量逐轮下降、问题颗粒度逐轮变细；若同一问题反复出现，需要检讨的是回复策略，而不是审核员。</p></div><p>首轮问询问题最多、覆盖面最广，出现几十个问题属于正常水平；第二轮通常聚焦首轮未答透的少数主题；此后各轮应当快速收窄。判断进程是否健康看两个信号：一看问题总数是否逐轮递减，二看问题是否从章节级下沉到数据核对与措辞级。问题层级下沉，说明大的分歧已经解决，审核在走向收尾。</p><p>若某一问题连续多轮出现，通常意味着三种情况之一：回复始终答非所问；发行人坚持的会计处理确实站不住；或者问询期间事实基础发生了变化。此时正确的动作是内部重新评估立场、必要时调整会计处理或补强披露，而不是换一种措辞再提交一遍。</p><p data-ts="1">对确有重大分歧的会计问题，审计师可以启动与SEC首席会计师办公室的咨询沟通程序，把问题升级到专业裁断层面解决，避免在审核层面反复消耗。</p><p>当审核组确认没有进一步意见后，发行人即可着手请求注册文件宣布生效，进入路演与定价阶段。因此，问询轮次管理的实质是时间表管理：每省下一轮，就为发行窗口多留出两到四周的余地。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、问询期的时间表管理与常见错误</h2><div class="ts-lead"><span class="tag">结论先行</span><p>问询期最大的隐形对手不是审核员，而是财务数据的有效期。</p></div><p>注册文件中的财务报表存在有效期约束（staleness）：中期财务数据通常以135天左右为常用的更新节点，逾期须补充新一期经审阅的中期数据，具体适用以SEC规则文本为准。问询每拖一轮，就离数据过期近一步；一旦跨过更新节点，补数据所需的时间反过来又拉长问询周期，形成恶性循环。因此项目管理的第一原则是：以数据有效期倒排回复时间表，而不是以回复进度顺排。</p><p>常见错误有三类。第一，隐瞒或淡化不利事实：问询过程中被动暴露的事实，远比主动披露的同一事实伤害大，审核员对披露诚信问题的容忍度极低，个别情况下会将审核升级为更严格的核查。第二，团队协调失灵：律师、审计师与公司各答各的，回复口径互相矛盾，等于向审核组自证公司的披露体系不可靠。</p><p data-ts="1">第三，抢跑动作：在未确认审核收尾的情况下提前启动路演安排，一旦追加问询被迫推迟，市场预期的反噬会伤害发行本身。</p><p>彤鼎集团在赴美上市项目执行中，把问询应对作为整个上市时间表的中枢环节来管理；华尔街彤鼎俱乐部也会围绕注册审核、披露标准与发行窗口等主题，为有资本化规划的企业主提供系统的资本认知与资源对接。</p><p data-ts="1">本质上，问询函应对没有玄学：事实干净、披露诚实、回复彻底、节奏可控，四者齐备，注册生效只是时间问题。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="lawyer-selection.html" style="color:#6b5426;font-weight:700;">律师团队选择</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pre-ipo-financial-cleanup.html" style="color:#6b5426;font-weight:700;">上市前财务规范化整改</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cfo-team.html" style="color:#6b5426;font-weight:700;">CFO选聘与财务团队建设</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="roadshow-prep.html" style="color:#6b5426;font-weight:700;">路演完整准备指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-usm-paperless-2026.html" style="color:#6b5426;font-weight:700;">香港无纸证券市场USM：2026年11月落地</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

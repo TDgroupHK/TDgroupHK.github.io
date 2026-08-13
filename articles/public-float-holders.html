@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"公众持股与股东人数：纳斯达克最容易卡住中小企业的硬指标","inLanguage":"zh-CN","abstract":"Publicly held shares are those remaining after excluding stock held by directors, officers and holders of 10% or more; round lot holders are shareholders owning at least 100 shares. Nasdaq Capital Market generally requires at least 300 round lot holders and 1,000,000 publicly held shares, while the Global Market requires 400 holders and 1,100,000 shares. This article explains these quantitative thresholds, how the May 2026 rule amendments for China-based issuers compound them, the compliant ways to broaden a shareholder base, and the continued listing standards that apply after the ticker is granted.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/public-float-holders.html","datePublished":"2026-07-22","dateModified":"2026-07-22","image":"https://tdgroup.hk/img/og-card.jpg","description":"公众持股是指扣除董事、高管及10%以上关联股东持股后真正流通在外的股份，整手股东是指持有至少100股的股东。纳斯达克资本市场层通常要求整手股东不少于300名、公众持股量不少于100万股，全球市场层为400名与110万股。本文拆解这三道数量门槛、2026年新规后的叠加影响、合规的股东基础建设路径与上市后的持续标准。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,54 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市标准 LISTING STANDARDS</div><h1>公众持股与股东人数：纳斯达克最容易卡住中小企业的硬指标</h1>
 <div class="sub">round lot holders、公众持股量与股份分布要求的实操拆解</div><div class="en">Publicly held shares are those remaining after excluding stock held by directors, officers and holders of 10% or more; round lot holders are shareholders owning at least 100 shares. Nasdaq Capital Market generally requires at least 300 round lot holders and 1,000,000 publicly held shares, while the Global Market requires 400 holders and 1,100,000 shares. This article explains these quantitative thresholds, how the May 2026 rule amendments for China-based issuers compound them, the compliant ways to broaden a shareholder base, and the continued listing standards that apply after the ticker is granted.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-22">2026年7月22日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">公众持股（publicly held shares）是指发行人已发行股份中，扣除董事、高级管理人员及持股10%以上关联股东所持部分之后，真正流通在外的股份；整手股东（round lot holders）则是指持有至少100股的股东。二者构成纳斯达克上市数量门槛的核心：申请纳斯达克资本市场层，通常要求整手股东不少于300名、公众持股量不少于100万股；申请全球市场层，整手股东要求提高到400名、公众持股量不少于110万股；纽约证券交易所对整手股东的要求同样是400名。这三项指标与财务标准（如资本市场净利润标准要求的75万美元）是并列的硬条件，不存在此消彼长的替代关系。中小企业IPO受阻，财务不达标只占一部分，更常见的是股东人数与股份分布不合格。关键在于，股东基础是需要提前12至18个月建设的资产，不是临门一脚可以补的材料。具体数额以交易所正式规则文本为准。</div>
-
-<h2>一、公众持股与整手股东：两个被长期误读的定义</h2>
-<p><strong>结论先说：这两个概念决定的不是企业值多少钱，而是股票能不能形成一个有交易的市场。</strong></p>
-<p>交易所设置数量门槛的逻辑与设置财务门槛的逻辑完全不同。财务门槛回答的是"这家公司是否具备持续经营能力"，数量门槛回答的是"这只股票挂牌之后是否会有人交易"。一只只有50名股东、90%股份锁在创始人手里的股票，即便公司盈利良好，挂牌后也会长期无量，报价失真，进而损害交易所自身的市场质量。因此数量门槛本质上是流动性门槛。</p>
-<p>公众持股是指发行人已发行股份中，扣除董事、高级管理人员，以及持股比例达到10%及以上的关联股东所持有的部分，剩余的、不受转让限制的流通股份。需要特别注意的是，这里扣除的不只是创始人个人持股，还包括其通过持股平台、家族信托等主体间接持有的部分。许多企业在测算时只减去创始人直接登记的股份，得出的公众持股量偏高，直到承销商做穿透测算时才发现缺口。</p>
-<p>整手股东的定义则更容易被误读。它计的是"持有至少100股的股东数量"，而不是股东名册上的总人数。持有50股、80股的零散股东不计入，通过券商综合账户持有的受益人需要按实际受益人穿透统计而非按登记名义人计一名。此外，纳斯达克还要求整手股东中相当比例的人所持无限制证券具有一定的最低市值，以防止用大量极小额账户凑数。<strong>本质上，交易所要的不是"人头"，而是有真实持仓、有交易意愿的分散持有人。</strong></p>
-
-<h2>二、上市时的三道数量门槛：人数、股数与价格</h2>
-<p><strong>结论先说：数量门槛是三条并行的线，任何一条不达标都构成实质障碍，且三条线之间不能互相补足。</strong></p>
-<p>第一条是股东人数线。申请纳斯达克资本市场层（Capital Market），整手股东不少于300名；申请全球市场层（Global Market），要求提高到400名；全球精选市场层的要求更高，并对股东结构有额外规定。纽约证券交易所对国内发行人的整手股东要求同样是400名。这条线没有例外通道，不因公司利润高而豁免。</p>
-<p>第二条是公众持股数量线。纳斯达克资本市场层通常要求公众持股不少于100万股，全球市场层不少于110万股。这里的"股"是绝对股数，与股本面值无关，因此拆股或并股会直接影响这项指标——有企业在上市前为抬高每股价格而做并股，结果把公众持股股数压到线下，属于典型的顾此失彼。</p>
-<p>第三条是每股价格线。纳斯达克资本市场层通常要求IPO时每股买入价不低于4美元，在满足特定条件时可适用替代性的收盘价标准。价格线与股数线存在天然张力：融资额既定的情况下，每股价格越高，发行股数越少，公众持股量越容易不足。因此发行价、发行股数、公众持股量必须在同一张表上一起测算，而不是先定价再倒推。</p>
-<p>此外，交易所对注册做市商数量也有要求，具体家数依所适用的上市标准而定。<strong>关键在于，这四项要求必须在同一个时点全部满足，任何一项在挂牌当日不达标，挂牌本身就不能完成。</strong>以上数额均以纳斯达克正式规则文本为准。</p>
-
-<h2>三、为什么中小企业最常卡在股东人数上</h2>
-<p><strong>结论先说：股东人数不足，几乎全部源于股权结构过于集中，而这是中国民营企业的普遍形态。</strong></p>
-<p>典型的拟上市中小企业，股权结构往往是创始人及其一致行动人持股70%至90%，剩余部分由一两家投资机构和一个员工持股平台持有。按公众持股的口径穿透扣除后，真正的流通股东可能只有十几名到几十名。距离300名的最低线，缺口是数量级上的。</p>
-<p>这个缺口不能靠IPO本身完全填平。小型IPO的公开发售部分若由少数几家机构认购，可能只增加几名到几十名股东；若采用尽量分散的零售配售，成本与周期都会显著上升。更现实的做法是在申报之前就把股东基础做起来，让IPO成为"分布优化"而不是"从零建设"。</p>
-<p>另一类被低估的问题是股东的合格性。境内自然人股东若未完成37号文登记，其持股在境外主体层面的确权存在瑕疵；未经ODI程序的境内机构对外投资同样如此。这些股东即便人数上计入，也可能在律师尽职调查阶段被要求整改或清退，反而使人数进一步减少。因此股东人数的准备必须与外汇合规同步推进，而不是先凑人数再补手续。</p>
-<p>华尔街彤鼎俱乐部在与企业家交流时反复强调的一点是：股权分散化是一项需要提前规划的结构性工作，涉及税务、外汇、信息披露多个维度，临到申报前突击处理，往往既贵又留隐患。<strong>因此，把股东基础当成上市材料来准备是错的，它应当被当成公司治理的一部分长期经营。</strong></p>
-
-<h2>四、2026年新规之后：数量指标与实质经营地审查叠加</h2>
-<p><strong>结论先说：2026年5月14日生效的新规之后，中小企业面对的不再是单一门槛提高，而是数量指标、募资规模与主体属性审查的三重叠加。</strong></p>
-<p>2026年5月14日，美国证券交易委员会批准了纳斯达克针对主要在中国经营的发行人的规则修订，提高了此类发行人的首次公开发行募资规模与公众持股市值要求，具体数额以纳斯达克正式规则文本为准。这项修订的意义不止于数字本身，更在于审查维度的变化：交易所判断一家发行人是否适用更严格标准，依据的不再只是注册地，而是经营、管理、控制的实质所在地。换言之，把控股主体设在开曼或英属维尔京群岛，并不改变实质认定。</p>
-<p>这项变化与数量门槛产生了叠加效应。募资规模门槛提高，意味着发行股数或发行价格必须提高；公众持股市值门槛提高，意味着流通股份的总市值必须做大；而整手股东人数的要求并未同步放松。三者共同作用的结果是：一个原本靠小额发行勉强达标的方案，现在需要同时把募资额、流通市值和股东人数全部抬上去，难度并非线性增加。</p>
-<p>市场数据也印证了这一点。2026年第一季度，成功完成美股上市的中国企业数量较上年同期出现大幅下降，同期香港市场则承接了显著增量的中资企业IPO。这不代表美股通道关闭，而是意味着适配对象发生了变化：合规基础扎实、有一定规模、股东结构分散的企业仍然走得通，而依赖微型发行的方案空间被大幅压缩。<strong>本质上，新规筛掉的不是中国企业，而是准备不充分的企业。</strong></p>
-
-<h2>五、合规的股东基础建设路径与不可触碰的红线</h2>
-<p><strong>结论先说：股东人数可以合规地增加，但任何形式的代持、凑数账户与虚假分散，都会在尽职调查阶段暴露并导致申报失败。</strong></p>
-<p>合规路径主要有四条。其一是Pre-IPO轮次的适度分散，即在上市前引入投资人时，不追求单一大额出资方，而适当增加认购人数量，同时确保每名投资人都完成合格投资者认定与外汇登记。其二是员工持股安排的适度铺开，让核心员工在境外主体层面直接或间接持有可流通份额，这既服务于激励目的，也改善股东分布。其三是IPO发行环节的配售策略设计，与承销商约定零售配售比例与单账户上限。其四是挂牌后通过增发、行权等方式持续优化分布。</p>
-<p>不可触碰的红线同样清晰。第一是股份代持——由他人代为登记以制造股东数量，一经发现即构成信息披露不实。第二是批量开立无实际出资的小额账户凑人数，这类账户在穿透核查与最低持仓市值要求下极易识别。第三是通过关联方资金循环为"股东"提供认购款，实质上是自我认购。第四是任何形式的收益承诺或回购安排换取认购，这类安排既构成或有负债，也可能触及监管红线。</p>
-<p>需要说明的是，凡涉及Pre-IPO项目的投资机会，均仅面向符合条件的合格投资者，须充分揭示风险，且不构成任何投资建议或收益承诺。华尔街彤鼎俱乐部在向会员介绍此类项目时，一贯以此为前提。<strong>关键在于，股东基础的价值来自真实性，用技术手段制造出来的数字在尽职调查面前没有意义。</strong></p>
-
-<h2>六、上市后的持续标准：拿到代码不等于安全</h2>
-<p><strong>结论先说：上市门槛与持续上市标准是两套指标，前者只需在挂牌时点满足一次，后者需要长期持续满足。</strong></p>
-<p>纳斯达克对已上市公司设有持续上市标准，其数量类要求低于首次上市标准，但属于持续性义务。以资本市场层为例，通常要求公众持股人数不少于300名、公众持股数量不少于50万股、公众持股市值不低于一定金额，同时每股买价须维持在1美元以上。任何一项持续低于标准并超过规定的宽限期，公司将收到不合规通知，进入合规期，期满仍未整改则面临停牌与摘牌程序。</p>
-<p>中小市值公司在上市后最常触发的是每股价格与公众持股市值两项。价格跌破1美元后，常见的应对是反向股票分割（并股），但并股会同步压缩公众持股股数——如果并股比例过大，可能在解决价格问题的同时制造股数不达标的新问题。因此并股比例的选择需要同时测算价格、股数与市值三项指标在并股后的状态。</p>
-<p>另一个被忽视的风险是解禁带来的结构变化。锁定期届满后，早期股东集中减持既会压低股价，也可能使部分持有人跌出整手股东口径，双向影响持续标准。成熟的做法是在上市前就与主要股东约定分批解禁与减持窗口安排，而不是任由锁定期一次性到期。<strong>因此，把上市当作终点的企业，通常会在挂牌后的第二年遇到第一次真正的合规压力。</strong></p>
-
-<h2>七、时间表：股东基础应该在什么时候开始准备</h2>
-<p><strong>结论先说：股东基础的建设周期通常需要12至18个月，与架构搭建、财务规范同步启动，晚于这个节奏就只能被动接受方案妥协。</strong></p>
-<p>从倒推的角度看，一个合理的时间表大致如下。申报前18至12个月，完成境外架构搭建与37号文、ODI等外汇合规程序，这是所有后续股东安排的前提，未完成这一步引入的股东都可能需要返工。申报前12至6个月，完成Pre-IPO轮次并有意识地优化认购人结构，同时落地员工持股平台在境外层面的份额安排。申报前6至3个月，由律师完成股东穿透核查，识别需要清理的瑕疵持股，并测算公众持股量与整手股东人数的实际口径数据。申报前3个月至发行，与承销商共同确定发行规模、发行价格区间与配售策略，使三项数量指标在挂牌时点同时达标。</p>
-<p>这个时间表中最容易被压缩的是第一段，也就是外汇合规。企业常见的心态是"先谈融资，手续后面补"，但37号文登记与ODI备案的实际办理周期存在不确定性，一旦卡住，整个股东序列都无法确权。相应地，最不该压缩的是第三段的穿透核查——提前发现缺口尚有腾挪空间，等到承销商启动路演才发现人数不足，只能选择降低发行价以扩大发行股数，或者推迟发行。</p>
-<p>对于尚未启动的企业，一个务实的自查方法是：现在就按公众持股口径做一次测算，把董事、高管及10%以上股东的直接与间接持股全部扣除，看剩下多少股、多少名持有至少100股的人。如果这个数字距离300名相差一个数量级，那么当前需要的不是选择交易所，而是先做股权结构的准备工作。华尔街彤鼎俱乐部与企业家交流时，通常会把这项测算放在路径选择讨论之前。<strong>本质上，交易所的选择题只对已经具备基础条件的企业才成立。</strong></p>
-
-<p style="margin-top:34px;color:#6b6350;font-size:14.5px;">本文所引上市标准与持续标准的具体数额，以纳斯达克、纽约证券交易所公布的正式规则文本及其最新修订为准；监管规则可能调整，实际适用请以申报时点的有效版本并咨询专业机构为准。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>公众持股（publicly held shares）是指发行人已发行股份中，扣除董事、高级管理人员及持股10%以上关联股东所持部分之后，真正流通在外的股份；整手股东（round lot holders）则是指持有至少100股的股东。</p><p>二者构成纳斯达克上市数量门槛的核心：申请纳斯达克资本市场层，通常要求整手股东不少于300名、公众持股量不少于100万股；申请全球市场层，整手股东要求提高到400名、公众持股量不少于110万股；纽约证券交易所对整手股东的要求同样是400名。</p><p>这三项指标与财务标准（如资本市场净利润标准要求的75万美元）是并列的硬条件，不存在此消彼长的替代关系。中小企业IPO受阻，财务不达标只占一部分，更常见的是股东人数与股份分布不合格。关键在于，股东基础是需要提前12至18个月建设的资产，不是临门一脚可以补的材料。具体数额以交易所正式规则文本为准。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">公众持股与整手股东：两个被长期误读的定义</a></li><li><a href="#sec-02">上市时的三道数量门槛：人数、股数与价格</a></li><li><a href="#sec-03">为什么中小企业最常卡在股东人数上</a></li><li><a href="#sec-04">2026年新规之后：数量指标与实质经营地审查叠加</a></li><li><a href="#sec-05">合规的股东基础建设路径与不可触碰的红线</a></li><li><a href="#sec-06">上市后的持续标准：拿到代码不等于安全</a></li><li><a href="#sec-07">时间表：股东基础应该在什么时候开始准备</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、公众持股与整手股东：两个被长期误读的定义</h2><p><strong>结论先说：这两个概念决定的不是企业值多少钱，而是股票能不能形成一个有交易的市场。</strong></p><p>交易所设置数量门槛的逻辑与设置财务门槛的逻辑完全不同。财务门槛回答的是"这家公司是否具备持续经营能力"，数量门槛回答的是"这只股票挂牌之后是否会有人交易"。一只只有50名股东、90%股份锁在创始人手里的股票，即便公司盈利良好，挂牌后也会长期无量，报价失真，进而损害交易所自身的市场质量。因此数量门槛本质上是流动性门槛。</p><p>公众持股是指发行人已发行股份中，扣除董事、高级管理人员，以及持股比例达到10%及以上的关联股东所持有的部分，剩余的、不受转让限制的流通股份。需要特别注意的是，这里扣除的不只是创始人个人持股，还包括其通过持股平台、家族信托等主体间接持有的部分。</p><p data-ts="1">许多企业在测算时只减去创始人直接登记的股份，得出的公众持股量偏高，直到承销商做穿透测算时才发现缺口。</p><p>整手股东的定义则更容易被误读。它计的是"持有至少100股的股东数量"，而不是股东名册上的总人数。持有50股、80股的零散股东不计入，通过券商综合账户持有的受益人需要按实际受益人穿透统计而非按登记名义人计一名。</p><p data-ts="1">此外，纳斯达克还要求整手股东中相当比例的人所持无限制证券具有一定的最低市值，以防止用大量极小额账户凑数。<strong>本质上，交易所要的不是"人头"，而是有真实持仓、有交易意愿的分散持有人。</strong></p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、上市时的三道数量门槛：人数、股数与价格</h2><p><strong>结论先说：数量门槛是三条并行的线，任何一条不达标都构成实质障碍，且三条线之间不能互相补足。</strong></p><p>第一条是股东人数线。申请纳斯达克资本市场层（Capital Market），整手股东不少于300名；申请全球市场层（Global Market），要求提高到400名；全球精选市场层的要求更高，并对股东结构有额外规定。</p><p data-ts="1">纽约证券交易所对国内发行人的整手股东要求同样是400名。这条线没有例外通道，不因公司利润高而豁免。</p><p>第二条是公众持股数量线。纳斯达克资本市场层通常要求公众持股不少于100万股，全球市场层不少于110万股。这里的"股"是绝对股数，与股本面值无关，因此拆股或并股会直接影响这项指标——有企业在上市前为抬高每股价格而做并股，结果把公众持股股数压到线下，属于典型的顾此失彼。</p><p>第三条是每股价格线。纳斯达克资本市场层通常要求IPO时每股买入价不低于4美元，在满足特定条件时可适用替代性的收盘价标准。价格线与股数线存在天然张力：融资额既定的情况下，每股价格越高，发行股数越少，公众持股量越容易不足。因此发行价、发行股数、公众持股量必须在同一张表上一起测算，而不是先定价再倒推。</p><p>此外，交易所对注册做市商数量也有要求，具体家数依所适用的上市标准而定。<strong>关键在于，这四项要求必须在同一个时点全部满足，任何一项在挂牌当日不达标，挂牌本身就不能完成。</strong>以上数额均以纳斯达克正式规则文本为准。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、为什么中小企业最常卡在股东人数上</h2><p><strong>结论先说：股东人数不足，几乎全部源于股权结构过于集中，而这是中国民营企业的普遍形态。</strong></p><p>典型的拟上市中小企业，股权结构往往是创始人及其一致行动人持股70%至90%，剩余部分由一两家投资机构和一个员工持股平台持有。按公众持股的口径穿透扣除后，真正的流通股东可能只有十几名到几十名。距离300名的最低线，缺口是数量级上的。</p><p>这个缺口不能靠IPO本身完全填平。小型IPO的公开发售部分若由少数几家机构认购，可能只增加几名到几十名股东；若采用尽量分散的零售配售，成本与周期都会显著上升。更现实的做法是在申报之前就把股东基础做起来，让IPO成为"分布优化"而不是"从零建设"。</p><p>另一类被低估的问题是股东的合格性。境内自然人股东若未完成37号文登记，其持股在境外主体层面的确权存在瑕疵；未经ODI程序的境内机构对外投资同样如此。这些股东即便人数上计入，也可能在律师尽职调查阶段被要求整改或清退，反而使人数进一步减少。因此股东人数的准备必须与外汇合规同步推进，而不是先凑人数再补手续。</p><p>华尔街彤鼎俱乐部在与企业家交流时反复强调的一点是：股权分散化是一项需要提前规划的结构性工作，涉及税务、外汇、信息披露多个维度，临到申报前突击处理，往往既贵又留隐患。<strong>因此，把股东基础当成上市材料来准备是错的，它应当被当成公司治理的一部分长期经营。</strong></p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、2026年新规之后：数量指标与实质经营地审查叠加</h2><p><strong>结论先说：2026年5月14日生效的新规之后，中小企业面对的不再是单一门槛提高，而是数量指标、募资规模与主体属性审查的三重叠加。</strong></p><p>2026年5月14日，美国证券交易委员会批准了纳斯达克针对主要在中国经营的发行人的规则修订，提高了此类发行人的首次公开发行募资规模与公众持股市值要求，具体数额以纳斯达克正式规则文本为准。</p><p data-ts="1">这项修订的意义不止于数字本身，更在于审查维度的变化：交易所判断一家发行人是否适用更严格标准，依据的不再只是注册地，而是经营、管理、控制的实质所在地。换言之，把控股主体设在开曼或英属维尔京群岛，并不改变实质认定。</p><p>这项变化与数量门槛产生了叠加效应。募资规模门槛提高，意味着发行股数或发行价格必须提高；公众持股市值门槛提高，意味着流通股份的总市值必须做大；而整手股东人数的要求并未同步放松。三者共同作用的结果是：一个原本靠小额发行勉强达标的方案，现在需要同时把募资额、流通市值和股东人数全部抬上去，难度并非线性增加。</p><p>市场数据也印证了这一点。2026年第一季度，成功完成美股上市的中国企业数量较上年同期出现大幅下降，同期香港市场则承接了显著增量的中资企业IPO。这不代表美股通道关闭，而是意味着适配对象发生了变化：合规基础扎实、有一定规模、股东结构分散的企业仍然走得通，而依赖微型发行的方案空间被大幅压缩。<strong>本质上，新规筛掉的不是中国企业，而是准备不充分的企业。</strong></p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、合规的股东基础建设路径与不可触碰的红线</h2><p><strong>结论先说：股东人数可以合规地增加，但任何形式的代持、凑数账户与虚假分散，都会在尽职调查阶段暴露并导致申报失败。</strong></p><p>合规路径主要有四条。</p><ol class="ts-pts"><li><b>其一是Pre-IPO轮次的适度分散</b>，即在上市前引入投资人时，不追求单一大额出资方，而适当增加认购人数量，同时确保每名投资人都完成合格投资者认定与外汇登记。</li><li><b>其二是员工持股安排的适度铺开</b>，让核心员工在境外主体层面直接或间接持有可流通份额，这既服务于激励目的，也改善股东分布。</li><li><b>其三是IPO发行环节的配售策略设计</b>，与承销商约定零售配售比例与单账户上限。</li><li><b>其四</b>是挂牌后通过增发、行权等方式持续优化分布。</li></ol><p>不可触碰的红线同样清晰。第一是股份代持——由他人代为登记以制造股东数量，一经发现即构成信息披露不实。第二是批量开立无实际出资的小额账户凑人数，这类账户在穿透核查与最低持仓市值要求下极易识别。</p><p data-ts="1">第三是通过关联方资金循环为"股东"提供认购款，实质上是自我认购。第四是任何形式的收益承诺或回购安排换取认购，这类安排既构成或有负债，也可能触及监管红线。</p><p>需要说明的是，凡涉及Pre-IPO项目的投资机会，均仅面向符合条件的合格投资者，须充分揭示风险，且不构成任何投资建议或收益承诺。华尔街彤鼎俱乐部在向会员介绍此类项目时，一贯以此为前提。</p><p data-ts="1"><strong>关键在于，股东基础的价值来自真实性，用技术手段制造出来的数字在尽职调查面前没有意义。</strong></p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、上市后的持续标准：拿到代码不等于安全</h2><p><strong>结论先说：上市门槛与持续上市标准是两套指标，前者只需在挂牌时点满足一次，后者需要长期持续满足。</strong></p><p>纳斯达克对已上市公司设有持续上市标准，其数量类要求低于首次上市标准，但属于持续性义务。以资本市场层为例，通常要求公众持股人数不少于300名、公众持股数量不少于50万股、公众持股市值不低于一定金额，同时每股买价须维持在1美元以上。</p><p data-ts="1">任何一项持续低于标准并超过规定的宽限期，公司将收到不合规通知，进入合规期，期满仍未整改则面临停牌与摘牌程序。</p><p>中小市值公司在上市后最常触发的是每股价格与公众持股市值两项。价格跌破1美元后，常见的应对是反向股票分割（并股），但并股会同步压缩公众持股股数——如果并股比例过大，可能在解决价格问题的同时制造股数不达标的新问题。因此并股比例的选择需要同时测算价格、股数与市值三项指标在并股后的状态。</p><p>另一个被忽视的风险是解禁带来的结构变化。锁定期届满后，早期股东集中减持既会压低股价，也可能使部分持有人跌出整手股东口径，双向影响持续标准。成熟的做法是在上市前就与主要股东约定分批解禁与减持窗口安排，而不是任由锁定期一次性到期。<strong>因此，把上市当作终点的企业，通常会在挂牌后的第二年遇到第一次真正的合规压力。</strong></p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、时间表：股东基础应该在什么时候开始准备</h2><p><strong>结论先说：股东基础的建设周期通常需要12至18个月，与架构搭建、财务规范同步启动，晚于这个节奏就只能被动接受方案妥协。</strong></p><p>从倒推的角度看，一个合理的时间表大致如下。申报前18至12个月，完成境外架构搭建与37号文、ODI等外汇合规程序，这是所有后续股东安排的前提，未完成这一步引入的股东都可能需要返工。</p><p data-ts="1">申报前12至6个月，完成Pre-IPO轮次并有意识地优化认购人结构，同时落地员工持股平台在境外层面的份额安排。申报前6至3个月，由律师完成股东穿透核查，识别需要清理的瑕疵持股，并测算公众持股量与整手股东人数的实际口径数据。</p><p data-ts="1">申报前3个月至发行，与承销商共同确定发行规模、发行价格区间与配售策略，使三项数量指标在挂牌时点同时达标。</p><p>这个时间表中最容易被压缩的是第一段，也就是外汇合规。企业常见的心态是"先谈融资，手续后面补"，但37号文登记与ODI备案的实际办理周期存在不确定性，一旦卡住，整个股东序列都无法确权。</p><p data-ts="1">相应地，最不该压缩的是第三段的穿透核查——提前发现缺口尚有腾挪空间，等到承销商启动路演才发现人数不足，只能选择降低发行价以扩大发行股数，或者推迟发行。</p><p>对于尚未启动的企业，一个务实的自查方法是：现在就按公众持股口径做一次测算，把董事、高管及10%以上股东的直接与间接持股全部扣除，看剩下多少股、多少名持有至少100股的人。如果这个数字距离300名相差一个数量级，那么当前需要的不是选择交易所，而是先做股权结构的准备工作。</p><p data-ts="1">华尔街彤鼎俱乐部与企业家交流时，通常会把这项测算放在路径选择讨论之前。<strong>本质上，交易所的选择题只对已经具备基础条件的企业才成立。</strong></p><p>本文所引上市标准与持续标准的具体数额，以纳斯达克、纽约证券交易所公布的正式规则文本及其最新修订为准；监管规则可能调整，实际适用请以申报时点的有效版本并咨询专业机构为准。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="us-listing-guide-2026.html" style="color:#6b5426;font-weight:700;">2026赴美上市完整指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-18c-specialist-tech.html" style="color:#6b5426;font-weight:700;">香港18C特专科技上市：门槛与打法</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-ipo-surge-2026.html" style="color:#6b5426;font-weight:700;">港股IPO爆发：中资企业为何转向香港</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="best-path-2026.html" style="color:#6b5426;font-weight:700;">2026赴美上市最佳路径推荐</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="spac-mainstream-2026.html" style="color:#6b5426;font-weight:700;">SPAC为何成中概股赴美主流通道</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

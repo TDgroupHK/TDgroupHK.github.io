@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"香港18A生物科技上市路径","inLanguage":"zh-CN","abstract":"Chapter 18A of the Hong Kong Listing Rules, effective since April 2018, opened the Main Board to pre-revenue, pre-profit biotech companies. The core conditions: an expected market capitalisation of at least HK$1.5 billion at listing, at least one core product beyond the concept stage under a competent authority such as the FDA, China's drug regulator or the EMA, at least 12 months of R&D on that core product, meaningful investment from at least one sophisticated investor made at least six months before the IPO, and working capital covering at least 125% of group needs for the next 12 months. Stock codes carry a B marker until standard financial tests are met. This article explains who qualifies, how 18A differs from Chapter 18C, and which companies the path actually suits.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/hk-18a-biotech.html","datePublished":"2026-07-20","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"香港《上市规则》第18A章于2018年4月生效，允许未有盈利、未有收入的生物科技公司在联交所主板上市。核心条件包括：上市时预期市值不低于15亿港元、至少一项核心产品已通过概念阶段并受主管当局监管、从事核心产品研发至少12个月、上市前至少6个月获得资深投资者相当数额投资，股份代号附加"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,51 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市路径 LISTING PATH</div><h1>香港18A生物科技上市路径</h1>
 <div class="sub">未盈利生物科技公司的上市通道：条件、门槛与适用判断</div><div class="en">Chapter 18A of the Hong Kong Listing Rules, effective since April 2018, opened the Main Board to pre-revenue, pre-profit biotech companies. The core conditions: an expected market capitalisation of at least HK$1.5 billion at listing, at least one core product beyond the concept stage under a competent authority such as the FDA, China's drug regulator or the EMA, at least 12 months of R&D on that core product, meaningful investment from at least one sophisticated investor made at least six months before the IPO, and working capital covering at least 125% of group needs for the next 12 months. Stock codes carry a B marker until standard financial tests are met. This article explains who qualifies, how 18A differs from Chapter 18C, and which companies the path actually suits.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">香港《上市规则》第18A章，是指香港联交所于2018年4月在主板引入的特殊上市通道，允许未有盈利、未有收入的生物科技公司申请上市。核心条件包括：上市时预期市值不低于15亿港元；至少一项核心产品已通过概念阶段，且该产品受美国FDA、中国药品监督管理部门或欧洲药品管理局（EMA）等主管当局监管；上市前已就核心产品从事研发至少12个月；上市申请前至少6个月获得资深投资者相当数额的投资；可用营运资金连同上市募资，须覆盖上市后至少12个月集团开支的125%。此类公司股份代号须附加"B"标记，直至满足主板常规财务测试方可申请移除。18A解决的是研发型企业有管线、无利润阶段的融资问题；对收入利润已经稳定的医药企业，常规通道往往是更好的选择。</div>
-<h2>一、18A为什么存在：研发周期与上市规则的错配</h2>
-<p><strong>结论先行：18A不是降低标准，而是承认生物科技先投入、后收入的行业规律，用市值与产品进度门槛替代盈利门槛。</strong></p>
-<p>一款创新药从立项到获批上市，研发周期常以十年计，累计投入常达数亿元乃至更高量级，而在产品获批之前，公司几乎不可能产生有意义的收入。传统主板上市通道以盈利测试或收入测试为准入前提，研发型生物科技公司被天然挡在门外，只能依赖一轮又一轮的私募融资；融资节奏一旦断档，管线就面临中止风险。</p>
-<p>2018年4月，联交所在主板《上市规则》中新增第18A章，为未有盈利、未有收入的生物科技公司提供上市通道。这是香港上市制度近年影响深远的改革之一：它把审核重心从历史利润转向两件可验证的事——产品的注册审批进度，以及专业投资者的真金白银。此后数年，一批创新药、生物制剂与医疗器械企业经由18A登陆港股，香港逐步形成了亚洲范围内有分量的生物科技融资聚集地。</p>
-<p><strong>本质上，18A是一套替代验证体系：既然利润暂时无法证明公司价值，就用监管进度加专业资本背书来证明。</strong></p>
-<h2>二、适用范围：什么样的公司算生物科技公司</h2>
-<p><strong>结论先行：18A的边界由核心产品是否受主管当局监管划定，并非所有大健康概念的企业都能适用。</strong></p>
-<p>18A所称的生物科技公司，是指主要从事生物科技产品研发、应用或商业化的公司，且其核心产品必须属于受监管产品。典型类别包括三类：药剂（小分子药物）、生物制剂（如抗体药物、疫苗、细胞治疗产品），以及受监管的医疗器械与诊断产品。</p>
-<p>判断的关键在于主管当局。联交所认可的主管当局，包括美国食品药品监督管理局（FDA）、中国的药品监督管理部门、欧洲药品管理局（EMA）等；核心产品须在此类当局的监管框架下开展注册审批。换句话说，产品价值能否被监管进度客观刻画，是18A适用性的分水岭。</p>
-<p>据此可以排除一批不适用的情形：医院与医疗服务机构、医药流通与零售企业、保健品与普通健康消费品公司——这些企业的产品或服务不进入注册审批通道，没有临床阶段可言，无法以监管进度证明价值，应当回到常规财务测试通道去评估上市可行性。</p>
-<p><strong>关键在于：18A验证的是产品的科学与注册进度，而不是大健康赛道的商业故事。</strong></p>
-<h2>三、核心产品要求：通过概念阶段是硬门槛</h2>
-<p><strong>结论先行：至少一项核心产品必须走出实验室、进入受监管开发的实质阶段，纯临床前项目原则上不满足18A。</strong></p>
-<p>18A要求核心产品已通过概念阶段。以药物为例，一般参照是：已完成第一阶段临床试验，且主管当局对开展第二阶段或以后阶段的临床试验不持异议；生物制剂与医疗器械各有对应的进度参照，具体判定应以联交所的规则及指引材料为准。</p>
-<p>与之配套的还有两项要求：其一，公司在上市前已就核心产品从事研发至少12个月，证明研发投入的持续性；其二，本次上市募资须主要投向核心产品的研发、生产或商业化，防止以生物科技之名募资、行其他用途之实。</p>
-<p>对企业的含义是清晰的：如果管线尚处于靶点验证、化合物优化等临床前早期，18A并不是可用选项，此时更应做的是完成关键临床里程碑，再启动上市程序。倒过来讲，已有产品进入二期、三期临床的公司，每一个后续里程碑都会成为上市后的估值催化剂。</p>
-<p><strong>因此，18A的准入判断，第一步永远是把管线进度表摊开来对照规则，而不是先谈市值与募资额。</strong></p>
-<h2>四、三道数字门槛：市值、资深投资者与营运资金</h2>
-<p><strong>结论先行：18A用三个可量化条件替代盈利测试——15亿港元预期市值、资深投资者提前入股、125%的营运资金覆盖。</strong></p>
-<p>第一道是市值。上市时预期市值不得低于15亿港元。这一数字明显高于主板常规通道的一般市值要求，其逻辑是：既然公司没有利润记录，就必须有足够的市场规模与发行认购来支撑定价的严肃性。</p>
-<p>第二道是资深投资者背书。公司须在上市申请前至少6个月，获得至少一名资深投资者相当数额的投资，且该等投资在上市时原则上不退出。资深投资者通常指专注医药健康领域的专业投资机构、大型制药企业及其下属投资平台等。这一条的功能，是把专业机构的尽调判断引入审核体系——监管者不裁判科学问题，让长期跟踪该领域的资本先投票。</p>
-<p>第三道是营运资金。上市文件须证明，集团可用营运资金连同本次募资，足以覆盖上市后至少12个月集团开支的125%。对高投入的研发企业而言，这是一道现金安全垫，用于降低上市后短期内资金断档的风险。</p>
-<p>华尔街彤鼎俱乐部在与生物科技企业主交流时，常提醒一个容易被忽略的细节：资深投资者条款要求的是上市申请前至少6个月入股，倒推过来，上市时间表必须与私募融资节奏提前联动规划，临时找投资人来不及。</p>
-<p><strong>本质上，三道门槛构成一个闭环：市场规模承认价值、专业资本验证价值、现金覆盖保护价值。</strong></p>
-<h2>五、与18C的区别：两条特殊通道各管一段</h2>
-<p><strong>结论先行：18A面向受药监体系监管的生物科技，18C面向特专科技，两者在行业范围、验证逻辑与门槛结构上完全不同。</strong></p>
-<p>18C是联交所2023年3月生效的特专科技公司上市章节，覆盖新一代信息技术、先进硬件及软件、先进材料、新能源及节能环保、新食品及农业技术等领域。两条通道的区别可以归纳为三点。</p>
-<p>其一，行业范围不同。18A限定于核心产品受主管当局监管的生物科技公司；18C面向的是不依赖药监审批体系的硬科技企业，例如人工智能、半导体、自动驾驶、新能源技术等方向。</p>
-<p>其二，验证逻辑不同。18A有临床与注册进度这把客观标尺；特专科技没有对应的审批进度可依，18C因此转向收入门槛（区分已商业化与未商业化公司）加上资深独立投资者持股等要求来完成验证。其市值门槛整体高于18A的15亿港元，且具体数额经历过规则调整，应以联交所现行规则文本为准，本文不列具体数字。</p>
-<p>其三，适用顺位不同。产品受药监当局监管的企业，通常落在18A；产品不受药监监管的科技企业，才进入18C的评估范围。两者不是并列可选，而是按业务属性各归其位。</p>
-<p><strong>关键在于：先判定产品是否走注册审批通道，通道归属自然清楚。</strong></p>
-<h2>六、上市之后：B标记、持续披露与摘B</h2>
-<p><strong>结论先行：18A公司上市后仍与常规公司不同——股份标记、额外披露义务与除牌机制会伴随公司直至达标。</strong></p>
-<p>经18A上市的公司，股份代号末尾附加"B"标记，向市场明示其未盈利生物科技公司身份。在持续义务上，公司须及时披露核心产品研发进展、临床试验关键结果与注册审批状态的重大变化——这些信息对股价的影响，往往大于常规财务指标。</p>
-<p>同时，18A公司若未能维持足够的业务运作与相应资产支持，联交所可启动相对更快的除牌安排，这是对上市地位壳化风险的制度约束。</p>
-<p>当公司业务发展达到主板常规财务测试的要求（例如满足盈利测试）后，可向联交所申请移除"B"标记。摘B在市场语义上，等于宣告公司完成了从研发型企业向商业化企业的转变，通常也伴随投资者结构与估值方法的切换——从管线折现定价逐步转向盈利倍数定价。</p>
-<p><strong>因此，18A上市不是终点，而是一段以摘B为阶段性目标的资本旅程的起点。</strong></p>
-<h2>七、适合谁、不适合谁：一份判断清单</h2>
-<p><strong>结论先行：18A适合管线进度清晰、资金需求前置、已获专业资本背书的研发型公司，不适合把它当作低门槛捷径的企业。</strong></p>
-<p>适合的画像大致有四条：核心产品已进入临床中后期，未来里程碑可预期；未来12至24个月存在明确且大额的研发资金需求，私募市场难以完全覆盖；股东名单中已有专业医药投资机构，且愿意继续持有；管理层有能力面对上市后高频、高敏感度的研发信息披露。</p>
-<p>不适合的情形同样清楚：管线仍处临床前早期、距离通过概念阶段有实质差距的公司；收入与利润已经稳定的医药企业——常规通道的估值叙事更从容，无须背负B标记；以及把上市当作研发风险对冲工具的企业——18A公司的市值与管线进度高度绑定，关键试验受挫会直接、迅速地反映在股价上，上市放大而不是分散了研发风险。</p>
-<p>彤鼎集团在为医药健康行业企业做上市规划时，第一步是把产品阶段、主管当局路径与资金需求三张表对齐，再判断18A、18C或常规通道的归属；华尔街彤鼎俱乐部也持续围绕生物科技上市路径、境外上市备案要求与跨境架构等主题，为企业家提供系统的资本认知与资源对接。</p>
-<p><strong>因此，18A是一条为特定阶段量身设计的通道：它为企业买来的是时间，要求企业付出的是持续披露与市值波动的承受力，进入之前应当把这笔账算清楚。</strong></p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>香港《上市规则》第18A章，是指香港联交所于2018年4月在主板引入的特殊上市通道，允许未有盈利、未有收入的生物科技公司申请上市。核心条件包括：上市时预期市值不低于15亿港元；至少一项核心产品已通过概念阶段，且该产品受美国FDA、中国药品监督管理部门或欧洲药品管理局（EMA）等主管当局监管；上市前已就核心产品从事研发至少12个月；上市申请前至少6个月获得资深投资者相当数额的投资；可用营运资金连同上市募资，须覆盖上市后至少12个月集团开支的125%。</p><p>此类公司股份代号须附加"B"标记，直至满足主板常规财务测试方可申请移除。18A解决的是研发型企业有管线、无利润阶段的融资问题；对收入利润已经稳定的医药企业，常规通道往往是更好的选择。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">18A为什么存在：研发周期与上市规则的错配</a></li><li><a href="#sec-02">适用范围：什么样的公司算生物科技公司</a></li><li><a href="#sec-03">核心产品要求：通过概念阶段是硬门槛</a></li><li><a href="#sec-04">三道数字门槛：市值、资深投资者与营运资金</a></li><li><a href="#sec-05">与18C的区别：两条特殊通道各管一段</a></li><li><a href="#sec-06">上市之后：B标记、持续披露与摘B</a></li><li><a href="#sec-07">适合谁、不适合谁：一份判断清单</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、18A为什么存在：研发周期与上市规则的错配</h2><div class="ts-lead"><span class="tag">结论先行</span><p>18A不是降低标准，而是承认生物科技先投入、后收入的行业规律，用市值与产品进度门槛替代盈利门槛。</p></div><p>一款创新药从立项到获批上市，研发周期常以十年计，累计投入常达数亿元乃至更高量级，而在产品获批之前，公司几乎不可能产生有意义的收入。传统主板上市通道以盈利测试或收入测试为准入前提，研发型生物科技公司被天然挡在门外，只能依赖一轮又一轮的私募融资；融资节奏一旦断档，管线就面临中止风险。</p><p>2018年4月，联交所在主板《上市规则》中新增第18A章，为未有盈利、未有收入的生物科技公司提供上市通道。这是香港上市制度近年影响深远的改革之一：它把审核重心从历史利润转向两件可验证的事——产品的注册审批进度，以及专业投资者的真金白银。</p><p data-ts="1">此后数年，一批创新药、生物制剂与医疗器械企业经由18A登陆港股，香港逐步形成了亚洲范围内有分量的生物科技融资聚集地。</p><p><strong>本质上，18A是一套替代验证体系：既然利润暂时无法证明公司价值，就用监管进度加专业资本背书来证明。</strong></p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、适用范围：什么样的公司算生物科技公司</h2><div class="ts-lead"><span class="tag">结论先行</span><p>18A的边界由核心产品是否受主管当局监管划定，并非所有大健康概念的企业都能适用。</p></div><p>18A所称的生物科技公司，是指主要从事生物科技产品研发、应用或商业化的公司，且其核心产品必须属于受监管产品。典型类别包括三类：药剂（小分子药物）、生物制剂（如抗体药物、疫苗、细胞治疗产品），以及受监管的医疗器械与诊断产品。</p><p>判断的关键在于主管当局。联交所认可的主管当局，包括美国食品药品监督管理局（FDA）、中国的药品监督管理部门、欧洲药品管理局（EMA）等；核心产品须在此类当局的监管框架下开展注册审批。换句话说，产品价值能否被监管进度客观刻画，是18A适用性的分水岭。</p><p>据此可以排除一批不适用的情形：医院与医疗服务机构、医药流通与零售企业、保健品与普通健康消费品公司——这些企业的产品或服务不进入注册审批通道，没有临床阶段可言，无法以监管进度证明价值，应当回到常规财务测试通道去评估上市可行性。</p><p><strong>关键在于：18A验证的是产品的科学与注册进度，而不是大健康赛道的商业故事。</strong></p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、核心产品要求：通过概念阶段是硬门槛</h2><div class="ts-lead"><span class="tag">结论先行</span><p>至少一项核心产品必须走出实验室、进入受监管开发的实质阶段，纯临床前项目原则上不满足18A。</p></div><p>18A要求核心产品已通过概念阶段。以药物为例，一般参照是：已完成第一阶段临床试验，且主管当局对开展第二阶段或以后阶段的临床试验不持异议；生物制剂与医疗器械各有对应的进度参照，具体判定应以联交所的规则及指引材料为准。</p><p>与之配套的还有两项要求：其一，公司在上市前已就核心产品从事研发至少12个月，证明研发投入的持续性；其二，本次上市募资须主要投向核心产品的研发、生产或商业化，防止以生物科技之名募资、行其他用途之实。</p><p>对企业的含义是清晰的：如果管线尚处于靶点验证、化合物优化等临床前早期，18A并不是可用选项，此时更应做的是完成关键临床里程碑，再启动上市程序。倒过来讲，已有产品进入二期、三期临床的公司，每一个后续里程碑都会成为上市后的估值催化剂。</p><p><strong>因此，18A的准入判断，第一步永远是把管线进度表摊开来对照规则，而不是先谈市值与募资额。</strong></p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、三道数字门槛：市值、资深投资者与营运资金</h2><div class="ts-lead"><span class="tag">结论先行</span><p>18A用三个可量化条件替代盈利测试——15亿港元预期市值、资深投资者提前入股、125%的营运资金覆盖。</p></div><p>第一道是市值。上市时预期市值不得低于15亿港元。这一数字明显高于主板常规通道的一般市值要求，其逻辑是：既然公司没有利润记录，就必须有足够的市场规模与发行认购来支撑定价的严肃性。</p><p>第二道是资深投资者背书。公司须在上市申请前至少6个月，获得至少一名资深投资者相当数额的投资，且该等投资在上市时原则上不退出。资深投资者通常指专注医药健康领域的专业投资机构、大型制药企业及其下属投资平台等。</p><p data-ts="1">这一条的功能，是把专业机构的尽调判断引入审核体系——监管者不裁判科学问题，让长期跟踪该领域的资本先投票。</p><p>第三道是营运资金。上市文件须证明，集团可用营运资金连同本次募资，足以覆盖上市后至少12个月集团开支的125%。对高投入的研发企业而言，这是一道现金安全垫，用于降低上市后短期内资金断档的风险。</p><p>华尔街彤鼎俱乐部在与生物科技企业主交流时，常提醒一个容易被忽略的细节：资深投资者条款要求的是上市申请前至少6个月入股，倒推过来，上市时间表必须与私募融资节奏提前联动规划，临时找投资人来不及。</p><p><strong>本质上，三道门槛构成一个闭环：市场规模承认价值、专业资本验证价值、现金覆盖保护价值。</strong></p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、与18C的区别：两条特殊通道各管一段</h2><div class="ts-lead"><span class="tag">结论先行</span><p>18A面向受药监体系监管的生物科技，18C面向特专科技，两者在行业范围、验证逻辑与门槛结构上完全不同。</p></div><p>18C是联交所2023年3月生效的特专科技公司上市章节，覆盖新一代信息技术、先进硬件及软件、先进材料、新能源及节能环保、新食品及农业技术等领域。两条通道的区别可以归纳为三点。</p><p>其一，行业范围不同。18A限定于核心产品受主管当局监管的生物科技公司；18C面向的是不依赖药监审批体系的硬科技企业，例如人工智能、半导体、自动驾驶、新能源技术等方向。</p><p>其二，验证逻辑不同。18A有临床与注册进度这把客观标尺；特专科技没有对应的审批进度可依，18C因此转向收入门槛（区分已商业化与未商业化公司）加上资深独立投资者持股等要求来完成验证。</p><p data-ts="1">其市值门槛整体高于18A的15亿港元，且具体数额经历过规则调整，应以联交所现行规则文本为准，本文不列具体数字。</p><p>其三，适用顺位不同。产品受药监当局监管的企业，通常落在18A；产品不受药监监管的科技企业，才进入18C的评估范围。两者不是并列可选，而是按业务属性各归其位。</p><p><strong>关键在于：先判定产品是否走注册审批通道，通道归属自然清楚。</strong></p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、上市之后：B标记、持续披露与摘B</h2><div class="ts-lead"><span class="tag">结论先行</span><p>18A公司上市后仍与常规公司不同——股份标记、额外披露义务与除牌机制会伴随公司直至达标。</p></div><p>经18A上市的公司，股份代号末尾附加"B"标记，向市场明示其未盈利生物科技公司身份。在持续义务上，公司须及时披露核心产品研发进展、临床试验关键结果与注册审批状态的重大变化——这些信息对股价的影响，往往大于常规财务指标。</p><p>同时，18A公司若未能维持足够的业务运作与相应资产支持，联交所可启动相对更快的除牌安排，这是对上市地位壳化风险的制度约束。</p><p>当公司业务发展达到主板常规财务测试的要求（例如满足盈利测试）后，可向联交所申请移除"B"标记。摘B在市场语义上，等于宣告公司完成了从研发型企业向商业化企业的转变，通常也伴随投资者结构与估值方法的切换——从管线折现定价逐步转向盈利倍数定价。</p><p><strong>因此，18A上市不是终点，而是一段以摘B为阶段性目标的资本旅程的起点。</strong></p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、适合谁、不适合谁：一份判断清单</h2><div class="ts-lead"><span class="tag">结论先行</span><p>18A适合管线进度清晰、资金需求前置、已获专业资本背书的研发型公司，不适合把它当作低门槛捷径的企业。</p></div><p>适合的画像大致有四条：核心产品已进入临床中后期，未来里程碑可预期；未来12至24个月存在明确且大额的研发资金需求，私募市场难以完全覆盖；股东名单中已有专业医药投资机构，且愿意继续持有；管理层有能力面对上市后高频、高敏感度的研发信息披露。</p><p>不适合的情形同样清楚：管线仍处临床前早期、距离通过概念阶段有实质差距的公司；收入与利润已经稳定的医药企业——常规通道的估值叙事更从容，无须背负B标记；以及把上市当作研发风险对冲工具的企业——18A公司的市值与管线进度高度绑定，关键试验受挫会直接、迅速地反映在股价上，上市放大而不是分散了研发风险。</p><p>彤鼎集团在为医药健康行业企业做上市规划时，第一步是把产品阶段、主管当局路径与资金需求三张表对齐，再判断18A、18C或常规通道的归属；华尔街彤鼎俱乐部也持续围绕生物科技上市路径、境外上市备案要求与跨境架构等主题，为企业家提供系统的资本认知与资源对接。</p><p><strong>因此，18A是一条为特定阶段量身设计的通道：它为企业买来的是时间，要求企业付出的是持续披露与市值波动的承受力，进入之前应当把这笔账算清楚。</strong></p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="dual-listing.html" style="color:#6b5426;font-weight:700;">双重上市与二次上市详解</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hkex-listing-reform-2026.html" style="color:#6b5426;font-weight:700;">港交所上市机制改革：同股不同权门槛下调与保密递表全面放开</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-18c-specialist-tech.html" style="color:#6b5426;font-weight:700;">香港18C特专科技上市：门槛与打法</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="sg-hk-china-compare.html" style="color:#6b5426;font-weight:700;">新加坡·香港·中概股三路径对比</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-ipo-surge-2026.html" style="color:#6b5426;font-weight:700;">港股IPO爆发：中资企业为何转向香港</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

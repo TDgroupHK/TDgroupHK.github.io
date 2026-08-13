@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"美股没有「市值管理」这个概念：中概股公司的对应工具箱","inLanguage":"zh-CN","abstract":"There is no concept of \"market value management\" in US securities law. What Chinese issuers call by that name maps onto four distinct tools, each governed by its own rule: disclosure under Regulation FD, buybacks under the Rule 10b-18 safe harbor, insider sales under Rule 10b5-1 plans, and investor relations. This article sets out the conditions attached to each, and where the A-share playbook breaks in a US listing.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/us-market-cap-toolkit.html"},"datePublished":"2026-08-01","dateModified":"2026-08-01","description":"美国证券法体系中不存在「市值管理」这一概念，与之对应的是信息披露、股份回购、内部人交易安排与投资者关系四类工具，各自受Regulation FD、Rule 10b-18、Rule 10b5-1与反欺诈条款约束。本文说明这四类工具的具体条件，以及照搬A股做法在美股会踩到哪些线。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,48 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">挂牌之后 AFTER LISTING</div><h1>美股没有「市值管理」这个概念：中概股公司的对应工具箱</h1>
 <div class="sub">在美国的法条里找不到这个词，能做什么由四条具体规则划定</div><div class="en">There is no concept of &quot;market value management&quot; in US securities law. What Chinese issuers call by that name maps onto four distinct tools, each governed by its own rule: disclosure under Regulation FD, buybacks under the Rule 10b-18 safe harbor, insider sales under Rule 10b5-1 plans, and investor relations. This article sets out the conditions attached to each, and where the A-share playbook breaks in a US listing.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">美股不存在「市值管理」这一概念，美国证券法里没有对应的词，也没有对应的成文规则。中文语境中的市值管理，在美国被拆成四类各有归属的工具：信息披露受Regulation FD约束、股份回购落在Rule 10b-18安全港内、内部人卖出通过Rule 10b5-1计划、投资者关系与研究覆盖属于市场沟通。它们的共同边界只有一条——全部作用于信息与基本面，没有一项作用于交易与价格；任何直接干预价格的安排，都会落到交易法第9(a)(2)条与Rule 10b-5的反操纵、反欺诈条款下。对中概股而言，其中有一条例外值得特别注意：外国私人发行人被明确豁免于Regulation FD，但这不等于可以选择性披露。</div>
-<h2>一、为什么美国的法条里找不到这个词</h2>
-<p><strong>结论先行：不是翻译问题，是分类方式不同——美国法只区分「信息与基本面」和「交易与价格」，没有把两者合起来的统称。</strong></p>
-<p>中文语境里的「市值管理」是一个复合概念，它同时装着业绩沟通、投资者关系、回购、并购，有时还被人偷偷装进对价格的直接干预。这个词之所以在美国找不到对应物，是因为美国证券法从一开始就不按「目的」分类，而按「手段」分类：一项动作是作用于信息，还是作用于交易，决定了它归哪条规则管。</p>
-<p>因此把「市值管理」直译过去，会得到一个在法律上没有落点的词。真正需要问的不是「美股怎么做市值管理」，而是「我想做的这件具体的事，归哪条规则管、有什么条件」。本质上，这是从一个模糊的中文概念，切换到四条边界清晰的美国规则。</p>
-<p>需要先说明的底层约束：交易法第9(a)(2)条规范操纵市场，Rule 10b-5规范证券交易中的欺诈。这两条覆盖一切，不因为动作叫什么名字而改变认定。以「市值管理」为名做出的价格干预，认定与处罚不因这个名义而减轻。</p>
-<h2>二、工具一：信息披露——中概股在这里有一个容易被误解的豁免</h2>
-<p><strong>结论先行：Regulation FD明确豁免外国私人发行人，但豁免的是这一条规则，不是选择性披露本身的风险。</strong></p>
-<p>Regulation FD（公平披露规则）要求发行人在向特定对象披露重大非公开信息时，同时或及时向公众披露。它的立法目的是消除分析师与机构投资者相对散户的信息优势。而这条规则**明确将外国私人发行人排除在适用范围之外**——多数中概股属于外国私人发行人身份，因此不受Regulation FD的强制约束。</p>
-<p>这个豁免常被误读为「可以对机构单独说」。实际情况是：Regulation FD不适用，但Rule 10b-5的反欺诈条款照常适用；SEC也明确表达过期望外国私人发行人按照Regulation FD背后的基本原则行事。实践中相当比例的外国私人发行人选择自愿遵守，作为一种最佳实践。</p>
-<p>关键在于风险的来源变了而不是消失了。在一对一路演里透露了尚未公开的经营数据，如果接收方据此交易，追责路径不是Regulation FD，而是内幕交易与反欺诈——后者的后果更重。因此，豁免带来的不是自由度，而是一个需要自己建立纪律的空白区。发行人身份的认定标准与丧失后果，另见本站《外国私人发行人身份认定：两步测试与丧失后的合规升级》。</p>
-<h2>三、工具二：股份回购与Rule 10b-18安全港</h2>
-<p><strong>结论先行：回购是唯一直接作用于股价、同时被明文允许的工具，代价是必须完整待在安全港的四个条件里。</strong></p>
-<p>Rule 10b-18为发行人回购自身普通股提供了一个安全港：只要回购同时满足方式、时间、价格、数量四项条件，就不会因该回购而被依据第9(a)(2)条或Rule 10b-5认定为操纵。</p>
-<p>四项条件各有具体要求。方式条件要求发行人每个交易日只能通过一家券商进行报价或买入。时间条件限制了开盘与收盘前后的特定时段。价格条件要求买入价不得高于当时的最高独立报价与最近一笔独立成交价中的较高者。数量条件把单日回购量限制在此前四个日历周日均成交量的25%以内，另有每周一次的大宗交易例外。</p>
-<p>最容易被低估的是这一条：**四项条件中只要有一项当日未满足，该发行人当日的全部回购都会失去安全港保护**，而不是仅仅超出的那部分失去保护。这意味着回购执行是一件需要逐日核对的操作事务，不是下达一个额度就完成的决策。</p>
-<p>还需要理解安全港的性质：它不是豁免，而是举证上的优势。落在安全港内，监管不因回购本身推定操纵；落在安全港外，回购并不自动违法，但发行人失去了这层保护，需要自己证明动机与手段的正当性。因此，本质上这是一个「要不要把自己置于需要自证的位置」的选择。</p>
-<h2>四、工具三：内部人卖出与Rule 10b5-1计划</h2>
-<p><strong>结论先行：这是董事、高管与大股东在持续掌握内幕信息的状态下，唯一能合规卖出的通道。</strong></p>
-<p>Rule 10b5-1允许内部人事先设立一份交易计划，约定未来卖出的数量、价格与时间，此后按计划自动执行。它的作用是把内部人交易从「逐笔自证当时不知情」变成「制度性地证明决策发生在知情之前」。</p>
-<p>SEC于2022年12月对该规则作出重大修订，2023年2月27日生效，核心是加入了冷静期。对董事与高管，冷静期是以下两者中较晚的一个：计划设立或修改后90天，或计划设立或修改所在财季的财务业绩提交后两个交易日，且总长不超过120天。对其他人，冷静期为设立或修改后30天。</p>
-<p>修订同时增加了三项约束：董事与高管须作出善意认证，声明设立计划时不掌握重大非公开信息且并非为规避内幕交易规则；原则上不得同时持有多份重叠的计划；单笔交易计划在任意12个月内限用一次。</p>
-<p>对中概股实控人而言，这套规则改变的是节奏而不是权利。计划必须提前设立并等待冷静期走完，临时决定卖出、当月执行的做法不再可行。内幕交易的整体红线另见本站《内幕交易合规红线》。</p>
-<h2>五、工具四：投资者关系与研究覆盖</h2>
-<p><strong>结论先行：这两件事解决的是「没人看」，不是「看好」——把它们理解成能影响结论，方向就错了。</strong></p>
-<p>中小市值中概股最常见的困境不是被看空，而是零覆盖：没有分析师跟踪，意味着机构投资者缺少进入所需的第一份材料。投资者关系体系与研究覆盖拓展，处理的正是这个问题。</p>
-<p>合规的路径是主动向分析师提供公开、对称的信息服务：定期财报电话会、管理层可及性、及时准确的披露。不合规的路径只有一条但很明确——付费换取指定的评级或目标价。这在美国属于对研究独立性的破坏，涉及的不只是发行人，也涉及出具报告的机构。</p>
-<p>因此，投资者关系的工作量集中在准备与纪律上：材料是否经得起核对、口径是否与已披露文件一致、不同场合说的是不是同一套数字。这些是可以逐项检查的过程指标，公司自己能判断做没做到。IR体系的搭建路径另见本站《上市公司IR体系从零搭建》。</p>
-<h2>六、照搬A股的做法会踩到什么</h2>
-<p><strong>结论先行：两地的合规动作不能互换——A股要求做的，美股没有对应要求；A股禁止的，美股同样禁止且执法更重。</strong></p>
-<p>中国证监会2024年11月发布的《上市公司监管指引第10号——市值管理》，要求主要指数成份股公司制定市值管理制度、长期破净公司披露估值提升计划。这是A股上市公司的强制动作，在美股没有对应要求。中概股照搬一套过去，既不构成合规加分，也不会被交易所认可，只是增加了一份需要与实际披露保持一致的文件。</p>
-<p>更需要警惕的是另一个方向。在内地，「找机构维护股价」这类安排本身已属违法；到了美股，同样的行为落在第9(a)(2)条与Rule 10b-5下，由SEC提起民事追究，情节严重的由司法部提起刑事诉讼。执法逻辑的重心是意图与欺骗性手段：是否人为制造了虚假的价格信号或交易表象。因此，本质上不存在「在A股不行、去美股可以」的空间，只存在后果更重的问题。</p>
-<p>两地口径的完整对照，另见本站《市值管理的合规边界》。</p>
-<h2>七、给已上市中概股的四个检查问题</h2>
-<p><strong>结论先行：不需要一份计划，需要先回答四个能查证的问题。</strong></p>
-<p>第一，公司是否确认了自己的外国私人发行人身份，以及这一身份对披露义务的实际影响是否已在内部沟通口径中体现。身份认定不是一次性的，需要按测试标准定期复核。</p>
-<p>第二，若已启动或计划启动回购，是否有人在逐日核对Rule 10b-18的四项条件，以及执行券商是否清楚每日单一券商的要求。</p>
-<p>第三，董事与高管的卖出安排，是否全部通过Rule 10b5-1计划进行，冷静期与善意认证是否已纳入公司的内部流程。</p>
-<p>第四，一对一沟通中使用的数字与口径，是否与最近一期已披露文件完全一致。外国私人发行人在这一点上没有Regulation FD托底，纪律只能靠自己建立。</p>
-<p>这四个问题的共同点是都有明确答案，不需要判断也不需要预测。彤鼎在挂牌后阶段提供的是投资者关系、信息披露与资本运作层面的企业管理咨询，不接触交易、不参与任何形式的市场操纵，也不对股价作任何承诺。华尔街彤鼎俱乐部的成员企业中已有相当比例完成境外挂牌，挂牌后的合规实务是圈层内讨论最集中的议题之一。如需了解俱乐部会员详情，可发送邮件至 liaoqijie@tdgroup.hk。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>美股不存在「市值管理」这一概念，美国证券法里没有对应的词，也没有对应的成文规则。中文语境中的市值管理，在美国被拆成四类各有归属的工具：信息披露受Regulation FD约束、股份回购落在Rule 10b-18安全港内、内部人卖出通过Rule 10b5-1计划、投资者关系与研究覆盖属于市场沟通。</p><p>它们的共同边界只有一条——全部作用于信息与基本面，没有一项作用于交易与价格；任何直接干预价格的安排，都会落到交易法第9(a)(2)条与Rule 10b-5的反操纵、反欺诈条款下。对中概股而言，其中有一条例外值得特别注意：外国私人发行人被明确豁免于Regulation FD，但这不等于可以选择性披露。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">为什么美国的法条里找不到这个词</a></li><li><a href="#sec-02">工具一：信息披露——中概股在这里有一个容易被误解的豁免</a></li><li><a href="#sec-03">工具二：股份回购与Rule 10b-18安全港</a></li><li><a href="#sec-04">工具三：内部人卖出与Rule 10b5-1计划</a></li><li><a href="#sec-05">工具四：投资者关系与研究覆盖</a></li><li><a href="#sec-06">照搬A股的做法会踩到什么</a></li><li><a href="#sec-07">给已上市中概股的四个检查问题</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、为什么美国的法条里找不到这个词</h2><div class="ts-lead"><span class="tag">结论先行</span><p>不是翻译问题，是分类方式不同——美国法只区分「信息与基本面」和「交易与价格」，没有把两者合起来的统称。</p></div><p>中文语境里的「市值管理」是一个复合概念，它同时装着业绩沟通、投资者关系、回购、并购，有时还被人偷偷装进对价格的直接干预。这个词之所以在美国找不到对应物，是因为美国证券法从一开始就不按「目的」分类，而按「手段」分类：一项动作是作用于信息，还是作用于交易，决定了它归哪条规则管。</p><p>因此把「市值管理」直译过去，会得到一个在法律上没有落点的词。真正需要问的不是「美股怎么做市值管理」，而是「我想做的这件具体的事，归哪条规则管、有什么条件」。本质上，这是从一个模糊的中文概念，切换到四条边界清晰的美国规则。</p><p>需要先说明的底层约束：交易法第9(a)(2)条规范操纵市场，Rule 10b-5规范证券交易中的欺诈。这两条覆盖一切，不因为动作叫什么名字而改变认定。以「市值管理」为名做出的价格干预，认定与处罚不因这个名义而减轻。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、工具一：信息披露——中概股在这里有一个容易被误解的豁免</h2><div class="ts-lead"><span class="tag">结论先行</span><p>Regulation FD明确豁免外国私人发行人，但豁免的是这一条规则，不是选择性披露本身的风险。</p></div><p>Regulation FD（公平披露规则）要求发行人在向特定对象披露重大非公开信息时，同时或及时向公众披露。它的立法目的是消除分析师与机构投资者相对散户的信息优势。而这条规则**明确将外国私人发行人排除在适用范围之外**——多数中概股属于外国私人发行人身份，因此不受Regulation FD的强制约束。</p><p>这个豁免常被误读为「可以对机构单独说」。实际情况是：Regulation FD不适用，但Rule 10b-5的反欺诈条款照常适用；SEC也明确表达过期望外国私人发行人按照Regulation FD背后的基本原则行事。实践中相当比例的外国私人发行人选择自愿遵守，作为一种最佳实践。</p><p>关键在于风险的来源变了而不是消失了。在一对一路演里透露了尚未公开的经营数据，如果接收方据此交易，追责路径不是Regulation FD，而是内幕交易与反欺诈——后者的后果更重。因此，豁免带来的不是自由度，而是一个需要自己建立纪律的空白区。</p><p data-ts="1">发行人身份的认定标准与丧失后果，另见本站《外国私人发行人身份认定：两步测试与丧失后的合规升级》。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、工具二：股份回购与Rule 10b-18安全港</h2><div class="ts-lead"><span class="tag">结论先行</span><p>回购是唯一直接作用于股价、同时被明文允许的工具，代价是必须完整待在安全港的四个条件里。</p></div><p>Rule 10b-18为发行人回购自身普通股提供了一个安全港：只要回购同时满足方式、时间、价格、数量四项条件，就不会因该回购而被依据第9(a)(2)条或Rule 10b-5认定为操纵。</p><p>四项条件各有具体要求。方式条件要求发行人每个交易日只能通过一家券商进行报价或买入。时间条件限制了开盘与收盘前后的特定时段。价格条件要求买入价不得高于当时的最高独立报价与最近一笔独立成交价中的较高者。</p><p data-ts="1">数量条件把单日回购量限制在此前四个日历周日均成交量的25%以内，另有每周一次的大宗交易例外。</p><p>最容易被低估的是这一条：**四项条件中只要有一项当日未满足，该发行人当日的全部回购都会失去安全港保护**，而不是仅仅超出的那部分失去保护。这意味着回购执行是一件需要逐日核对的操作事务，不是下达一个额度就完成的决策。</p><p>还需要理解安全港的性质：它不是豁免，而是举证上的优势。落在安全港内，监管不因回购本身推定操纵；落在安全港外，回购并不自动违法，但发行人失去了这层保护，需要自己证明动机与手段的正当性。因此，本质上这是一个「要不要把自己置于需要自证的位置」的选择。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、工具三：内部人卖出与Rule 10b5-1计划</h2><div class="ts-lead"><span class="tag">结论先行</span><p>这是董事、高管与大股东在持续掌握内幕信息的状态下，唯一能合规卖出的通道。</p></div><p>Rule 10b5-1允许内部人事先设立一份交易计划，约定未来卖出的数量、价格与时间，此后按计划自动执行。它的作用是把内部人交易从「逐笔自证当时不知情」变成「制度性地证明决策发生在知情之前」。</p><p>SEC于2022年12月对该规则作出重大修订，2023年2月27日生效，核心是加入了冷静期。对董事与高管，冷静期是以下两者中较晚的一个：计划设立或修改后90天，或计划设立或修改所在财季的财务业绩提交后两个交易日，且总长不超过120天。对其他人，冷静期为设立或修改后30天。</p><p>修订同时增加了三项约束：董事与高管须作出善意认证，声明设立计划时不掌握重大非公开信息且并非为规避内幕交易规则；原则上不得同时持有多份重叠的计划；单笔交易计划在任意12个月内限用一次。</p><p>对中概股实控人而言，这套规则改变的是节奏而不是权利。计划必须提前设立并等待冷静期走完，临时决定卖出、当月执行的做法不再可行。内幕交易的整体红线另见本站《内幕交易合规红线》。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、工具四：投资者关系与研究覆盖</h2><div class="ts-lead"><span class="tag">结论先行</span><p>这两件事解决的是「没人看」，不是「看好」——把它们理解成能影响结论，方向就错了。</p></div><p>中小市值中概股最常见的困境不是被看空，而是零覆盖：没有分析师跟踪，意味着机构投资者缺少进入所需的第一份材料。投资者关系体系与研究覆盖拓展，处理的正是这个问题。</p><p>合规的路径是主动向分析师提供公开、对称的信息服务：定期财报电话会、管理层可及性、及时准确的披露。不合规的路径只有一条但很明确——付费换取指定的评级或目标价。这在美国属于对研究独立性的破坏，涉及的不只是发行人，也涉及出具报告的机构。</p><p>因此，投资者关系的工作量集中在准备与纪律上：材料是否经得起核对、口径是否与已披露文件一致、不同场合说的是不是同一套数字。这些是可以逐项检查的过程指标，公司自己能判断做没做到。IR体系的搭建路径另见本站《上市公司IR体系从零搭建》。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、照搬A股的做法会踩到什么</h2><div class="ts-lead"><span class="tag">结论先行</span><p>两地的合规动作不能互换——A股要求做的，美股没有对应要求；A股禁止的，美股同样禁止且执法更重。</p></div><p>中国证监会2024年11月发布的《上市公司监管指引第10号——市值管理》，要求主要指数成份股公司制定市值管理制度、长期破净公司披露估值提升计划。这是A股上市公司的强制动作，在美股没有对应要求。</p><p data-ts="1">中概股照搬一套过去，既不构成合规加分，也不会被交易所认可，只是增加了一份需要与实际披露保持一致的文件。</p><p>更需要警惕的是另一个方向。在内地，「找机构维护股价」这类安排本身已属违法；到了美股，同样的行为落在第9(a)(2)条与Rule 10b-5下，由SEC提起民事追究，情节严重的由司法部提起刑事诉讼。</p><p data-ts="1">执法逻辑的重心是意图与欺骗性手段：是否人为制造了虚假的价格信号或交易表象。因此，本质上不存在「在A股不行、去美股可以」的空间，只存在后果更重的问题。</p><p>两地口径的完整对照，另见本站《市值管理的合规边界》。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、给已上市中概股的四个检查问题</h2><div class="ts-lead"><span class="tag">结论先行</span><p>不需要一份计划，需要先回答四个能查证的问题。</p></div><p>第一，公司是否确认了自己的外国私人发行人身份，以及这一身份对披露义务的实际影响是否已在内部沟通口径中体现。身份认定不是一次性的，需要按测试标准定期复核。</p><p>第二，若已启动或计划启动回购，是否有人在逐日核对Rule 10b-18的四项条件，以及执行券商是否清楚每日单一券商的要求。</p><p>第三，董事与高管的卖出安排，是否全部通过Rule 10b5-1计划进行，冷静期与善意认证是否已纳入公司的内部流程。</p><p>第四，一对一沟通中使用的数字与口径，是否与最近一期已披露文件完全一致。外国私人发行人在这一点上没有Regulation FD托底，纪律只能靠自己建立。</p><p>这四个问题的共同点是都有明确答案，不需要判断也不需要预测。彤鼎在挂牌后阶段提供的是投资者关系、信息披露与资本运作层面的企业管理咨询，不接触交易、不参与任何形式的市场操纵，也不对股价作任何承诺。</p><p data-ts="1">华尔街彤鼎俱乐部的成员企业中已有相当比例完成境外挂牌，挂牌后的合规实务是圈层内讨论最集中的议题之一。如需了解俱乐部会员详情，可发送邮件至 liaoqijie@tdgroup.hk。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="insider-trading.html" style="color:#6b5426;font-weight:700;">内幕交易合规红线</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="market-cap-compliance.html" style="color:#6b5426;font-weight:700;">市值管理的合规边界</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="first-year-listed.html" style="color:#6b5426;font-weight:700;">上市第一年十个坑</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="refinancing-tools.html" style="color:#6b5426;font-weight:700;">再融资工具ATM与增发</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="fpi-status-test.html" style="color:#6b5426;font-weight:700;">外国私人发行人身份认定：两步测试与丧失后的合规升级</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

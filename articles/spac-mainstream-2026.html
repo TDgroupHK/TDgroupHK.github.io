@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"新规之下，SPAC为什么成了中概股赴美的主流通道","inLanguage":"zh-CN","abstract":"In the first half of 2026, 15 of 17 China-concept listings in the United States were completed through SPACs, about 88.2 percent, raising roughly USD 1.556 billion in total. This article examines why, and sets out the real costs: promote dilution, redemption risk and post-merger liquidity. A SPAC route grants no exemption from PCAOB inspection, CSRC filing or ongoing disclosure obligations.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/spac-mainstream-2026.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"2026年上半年17只中概股新股中15家为SPAC IPO，占比约88.2%，总募资约15.56亿美元。本文分析SPAC成为主流通道的结构性原因，以及稀释、赎回、后市流动性等真实代价，并说明SPAC并不豁免监管。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,73 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市路径 LISTING PATH</div><h1>新规之下，SPAC为什么成了中概股赴美的主流通道</h1>
 <div class="sub">2026上半年17家中15家走SPAC的结构性原因</div><div class="en">In the first half of 2026, 15 of 17 China-concept listings in the United States were completed through SPACs, about 88.2 percent, raising roughly USD 1.556 billion in total. This article examines why, and sets out the real costs: promote dilution, redemption risk and post-merger liquidity. A SPAC route grants no exemption from PCAOB inspection, CSRC filing or ongoing disclosure obligations.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">SPAC（特殊目的收购公司）通道成为2026年上半年中概股赴美的主要选择，是发行门槛结构性抬高之后的被动结果，而非SPAC工具本身的优势提升。2026年上半年中概股赴美共17只新股完成上市，其中15家通过SPAC IPO路径，占比约88.2%，仅2家为传统IPO，合计募资规模约15.56亿美元，单只平均募资不足1亿美元。结构性原因在于：2026年5月14日SEC批准的纳斯达克新规，将在华企业IPO的最低公众募资额提高至2500万美元，同时规定以SPAC或业务合并方式上市的，其无限制流通公众股市值不低于2500万美元，并禁止直接上市登陆NGM与NCM。这一规则把中小规模发行人挡在传统IPO之外，而市值口径的可达性高于现金募资口径，通道因此向SPAC集中。关键在于，SPAC改变的是达标的计算方式与时间节奏，不豁免审计、披露与治理的任何实质要求。</div>
-<h2>一、先看结构：88.2%这个比例说明的不是偏好，而是筛选</h2>
-<p>结论先说：15比2的分布不是企业主动偏好SPAC的结果，而是传统IPO入口被规则收窄之后剩下的分布。</p>
-<p>2026年上半年，中概股赴美上市共17只新股完成挂牌，其中15家通过SPAC IPO路径，2家通过传统IPO，SPAC占比约88.2%，总募资规模约15.56亿美元。把这两个数字放在一起读，才能看出问题的实质：17只新股对应约15.56亿美元，单只平均募资规模不足1亿美元，说明这一批发行人整体属于中小市值区间，而中小市值发行人恰恰是新规提高门槛后受影响最直接的群体。</p>
-<p>过去几年，中概股赴美的典型形态是小额发行：募资规模集中在千万美元级别，公众持股比例低，流通盘小。这类发行在监管视角下存在明显问题——流通盘过小容易导致上市初期价格剧烈波动，公众投资者难以形成有效定价，后续也缺乏持续的机构关注。监管抬高最低募资门槛，正是针对这一形态。</p>
-<p><strong>为什么筛选会导向SPAC而不是导向不上市</strong></p>
-<p>当传统IPO要求实打实募到2500万美元现金时，中小发行人面临的是承销能力问题：能否在既定窗口内找到足额认购。而SPAC路径下的门槛以无限制流通公众股市值计量，市值由股份数量乘以价格得出，其达成路径比现金募资更多元。因此，企业并没有放弃赴美，而是从一条更难走通的门口，转向了另一条在计算口径上更具可行性的门口。</p>
-<p>本质上，88.2%这个比例是一个筛选结果的读数，不是一份偏好调查的结论。把它误读为SPAC工具变得更优，会导致企业在评估自身路径时高估SPAC的确定性、低估其代价。</p>
-<h2>二、2026年5月14日新规：三条规则如何重塑赴美路径</h2>
-<p>结论先说：新规不是提高了一个数字，而是同时封堵、抬高与保留了三条不同的入口，其组合效果才是路径迁移的直接原因。</p>
-<p><strong>第一条：在华企业IPO最低公众募资2500万美元</strong></p>
-<p>2026年5月14日，SEC批准纳斯达克新规，规定在华企业以IPO方式上市的，最低公众募资额不得低于2500万美元。这条规则针对的是现金募集金额本身，是硬性门槛。对于原本计划募资1000万至2000万美元的发行人，这意味着要么把发行规模提高至少一倍，要么放弃传统IPO路径。提高发行规模不是简单的数字调整，它同时改变了估值区间、稀释比例与承销难度，对很多中小发行人而言并不现实。</p>
-<p><strong>第二条：SPAC及业务合并方式，无限制流通公众股市值不低于2500万美元</strong></p>
-<p>对以SPAC合并或其他业务合并方式取得上市地位的，新规要求其无限制流通公众股（即不受锁定限制、可自由交易的公众持股部分）市值不低于2500万美元。注意口径差异：这是市值标准，不是现金募集标准。市值等于可流通股份数乘以每股价格，其达成不完全依赖于本次交易实际募到多少现金。这一口径差异，是SPAC通道相对可行的技术性原因。</p>
-<p><strong>第三条：禁止直接上市登陆NGM与NCM</strong></p>
-<p>新规禁止以直接上市（Direct Listing）方式登陆纳斯达克全球市场（NGM）与纳斯达克资本市场（NCM）。直接上市原本是不发行新股、仅让既有股份取得交易资格的一条低成本通道，此前被部分中小企业视为绕开发行难度的选项。这条路被封堵后，可选集合进一步缩小为传统IPO与SPAC两项。</p>
-<p>三条规则叠加的结果是清晰的：低成本入口被关闭，高现金门槛入口被抬高，只剩下一条以市值计量、且执行节奏可控的入口。因此，路径迁移不是市场情绪驱动的，而是规则结构直接塑造的。</p>
-<h2>三、SPAC通道的四项真实优势：说清楚它到底解决了什么</h2>
-<p>结论先说：SPAC真正解决的是四个具体问题——发行窗口风险、估值不确定性、交易执行周期、以及门槛计量口径，它不解决企业自身的准备问题。</p>
-<p><strong>其一，规避发行窗口风险</strong></p>
-<p>传统IPO的成败高度依赖定价与发行窗口。市场情绪转冷时，发行人可能被迫下调价格区间、缩减发行规模，甚至推迟发行。SPAC合并的对价与估值在合并协议中提前谈定，一经签署即锁定，不随交割时的市场情绪波动。对处于估值波动剧烈行业、或对时间点有明确要求的企业，这项确定性有实际价值。</p>
-<p><strong>其二，估值由谈判形成而非路演形成</strong></p>
-<p>SPAC路径下，企业面对的是一个明确的交易对手（SPAC发起人及其后续PIPE投资人），估值在谈判桌上确定。这意味着企业可以用相对可控的方式论证自身价值，而不必依赖路演期间机构投资人的短期情绪。代价是放弃了市场热度可能带来的溢价上限——这一点在后文的代价部分展开。</p>
-<p><strong>其三，交易执行周期3至6个月</strong></p>
-<p>由于SPAC本身已是上市主体，不需要重新完整走一遍发行审核与承销流程，De-SPAC交易的执行周期通常为3至6个月。必须强调，这个3至6个月指的是从签署合并意向到完成合并的交易执行周期，不包含标的公司自身的准备时间。如果企业的审计报表、内控制度、股权架构尚未就绪，这部分工作一样要做、一样要花时间，只是被前置到合并谈判之前或与之并行。</p>
-<p><strong>其四，门槛计量口径的可达性</strong></p>
-<p>如前所述，SPAC路径下适用的是无限制流通公众股市值不低于2500万美元的标准，而非现金募资2500万美元的标准。在实务中，市值口径的达成路径更多元。这是当前通道向SPAC集中最直接的技术性原因，也是企业最需要冷静看待的一点——计量口径更容易达成，不等于交易本身更容易成功，更不等于上市之后的日子更好过。</p>
-<p>因此，SPAC的优势是具体的、可枚举的，也是有边界的。它优化的是路径与节奏，不改变企业需要具备的实质条件。</p>
-<h2>四、必须写明的一点：SPAC不豁免监管</h2>
-<p>结论先说：SPAC合并在信息披露、审计标准、公司治理与后续持续义务上，与传统IPO没有实质性豁免差别。</p>
-<p>把SPAC理解为绕开监管的通道，是实务中最常见也最危险的误解。De-SPAC交易需要向SEC提交合并相关文件并履行披露义务，标的公司的业务、财务、关联交易、风险因素等信息，都要按照上市公司标准完整披露，并接受监管审阅与问询。</p>
-<p><strong>审计要求不变</strong></p>
-<p>标的公司的财务报表必须由在PCAOB（美国公众公司会计监督委员会）注册的会计师事务所审计。根据《外国公司问责法》（HFCAA）框架，PCAOB对审计底稿的检查权是持续性要求，涉及中国内地及香港经营主体的审计安排必须符合该框架。这一条不因上市方式是SPAC还是传统IPO而改变。</p>
-<p><strong>境内备案要求不变</strong></p>
-<p>中国证监会境外上市备案管理制度自2023年3月31日起施行，境内企业以直接或间接方式赴境外上市，均需履行备案程序。以SPAC合并方式取得境外上市地位的，同样属于备案管理范围。换言之，境内合规环节不因交易结构而减免，企业仍需完成股权架构梳理、境外投资（ODI）及外汇登记等前置工作。</p>
-<p><strong>治理与持续披露要求不变</strong></p>
-<p>合并完成后，公司须满足交易所对独立董事比例、审计委员会与薪酬委员会设置的要求，并按期提交定期报告、及时披露重大事项。内部控制体系、关联交易决策机制、信息披露管理制度都必须真实运行，不是文件上写着就算数。</p>
-<p>因此，SPAC改变的是上市的路径与节奏，而不是上市的实质要求。任何以监管宽松为理由推荐SPAC的说法，都与规则事实不符，企业应当在尽调阶段直接向中介机构求证。</p>
-<h2>五、代价一：Promote与权证构成的综合稀释</h2>
-<p>结论先说：稀释是SPAC最确定、最难谈判掉的代价，评估交易时必须按综合口径计算，只看合并估值会严重低估成本。</p>
-<p>SPAC发起人通常持有合并后公司约20%的创始股份，业内称为Promote。这是对发起人组建SPAC、完成SPAC自身IPO募资、寻找并促成标的交易的回报。对标的公司原股东而言，这意味着在没有对应现金对价流入的情况下，让渡了约五分之一的股权比例。</p>
-<p>除创始股份外，SPAC在其IPO阶段通常向公众投资人配发认股权证（Warrant）。这些权证在合并完成后可按约定价格行权，行权即产生新增股份，形成第二层稀释。此外，若交易同步安排PIPE融资，PIPE投资人通常要求折价认购，构成第三层稀释。三层叠加之后，创始团队实际保留的股权比例，往往显著低于仅按合并估值推算的结果。</p>
-<p><strong>正确的计算方式</strong></p>
-<p>评估SPAC交易的真实成本，应当采用完全稀释后（fully diluted）口径：把创始股份、全部在外权证的潜在行权股份、PIPE新增股份、以及可能存在的对赌或业绩挂钩股份，一并纳入分母，再计算原股东的最终持股比例与对应价值。把这个数字与传统IPO路径下公开发行新股带来的稀释相比较，才是有意义的对比。</p>
-<p>相比之下，传统IPO的稀释主要来自公开发行的新股比例，通常小于SPAC路径的综合稀释。这也是为什么对估值敏感、对创始团队控制权要求高的企业，在条件允许时仍应认真评估传统IPO。本质上，SPAC是用股权换时间与确定性，企业需要判断这笔交换在自身情况下是否划算。</p>
-<h2>六、代价二：赎回风险与合并后的流动性困境</h2>
-<p>结论先说：赎回权使SPAC实际带来的现金高度不确定，而合并后的流动性问题，比稀释更容易被低估。</p>
-<p><strong>赎回风险</strong></p>
-<p>在SPAC合并的股东投票环节，原SPAC股东有权选择赎回，即按约定拿回自己投入信托账户的现金而不参与合并。若赎回比例很高，SPAC最终带给标的公司的现金可能远低于其信托账户的名义规模。对于把这笔资金列入产能扩张、研发投入或并购计划的企业，这是必须提前做压力测试的风险：应当分别按低、中、高三档赎回率测算交割后的现金状况，并据此准备备用融资方案。</p>
-<p><strong>PIPE是缓冲而非保险</strong></p>
-<p>常见的应对方式是同步安排PIPE融资，在合并交割前锁定一批机构投资人以约定价格认购新股，为交易提供确定的资金底盘。但PIPE的可获得性取决于标的公司的基本面质量与增长逻辑的说服力，在市场情绪偏弱时并不容易落实。因此PIPE是缓冲，不是保险，不能作为赎回风险的默认解药写进计划书。</p>
-<p><strong>合并后的流动性困境</strong></p>
-<p>这是当前尤其值得警惕的一点。新规下以市值口径达标的交易，其无限制流通公众股规模可能刚好卡在标准线附近。流通盘偏小会带来一系列连锁问题：买卖价差扩大、单笔交易对价格的冲击放大、机构投资人因流动性不足而不愿建仓、研究覆盖稀少、以及后续增发时的定价能力不足。上市地位取得之后，若长期缺乏交易活跃度，融资功能实际上是打了折扣的。</p>
-<p><strong>持续合规成本</strong></p>
-<p>上市之后的固定成本是刚性的：年度审计、内控评估、律师费用、投资者关系、信息披露系统维护等，这些支出不随市值大小同比缩减。对于合并后现金规模不及预期的公司，持续合规成本会构成实实在在的现金流压力。</p>
-<p>因此，企业在评估SPAC时，必须把视野从交割日延伸到交割后的十二至二十四个月。关键在于，上市是起点而不是终点，把全部精力押在完成交易上，是实务中反复出现的错误。</p>
-<h2>七、企业判断框架：什么情况下SPAC是理性选择</h2>
-<p>结论先说：SPAC适合的是准备度高、时间敏感、且能够承受综合稀释的企业；它不适合用来弥补基础工作的欠缺。</p>
-<p><strong>可以认真考虑SPAC的四类企业</strong></p>
-<p>第一类，财务与治理基础已经就绪、审计报表可直接使用，能够真正兑现3至6个月执行周期优势的企业；第二类，对上市时间点有明确硬性要求，例如受制于既有融资协议安排或业务扩张节奏的企业；第三类，处于估值波动剧烈的行业，更看重估值锁定而非估值上限的企业；第四类，创始团队股权比例充裕，能够承受Promote加权证的综合稀释而不影响控制权稳定的企业。</p>
-<p><strong>应当谨慎的四类企业</strong></p>
-<p>第一类，审计、内控、股权架构尚未整理完毕的企业——SPAC不会让这些工作消失，只会让它们变得更紧迫；第二类，对估值最大化有强烈诉求的企业；第三类，创始团队持股比例本就不高、控制权敏感的企业；第四类，业务模式复杂、缺乏清晰增长叙事、难以吸引PIPE投资人的企业——这类企业面临的赎回风险显著更高。</p>
-<p><strong>谈判中最该争取的三项条款</strong></p>
-<p>其一，创始股份的调整机制，例如与合并后股价表现或业绩挂钩的Promote让渡安排；其二，最低现金条件（Minimum Cash Condition），即交割时账上现金低于某一水平时企业有权终止交易，这是对冲赎回风险最直接的合同工具；其三，锁定期与解禁节奏的安排，避免解禁集中冲击本就不厚的流通盘。</p>
-<p>无论选择哪条路径，有三项工作无法绕开：PCAOB注册会计师事务所出具的审计报告、符合交易所要求的公司治理结构、以及经得起持续披露检验的财务与信息管理体系。华尔街彤鼎俱乐部在企业家交流中反复强调同一件事——路径可以选，基础功课不能省。涉及Pre-IPO项目的部分，仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p>
-<p>因此，面对2026年上半年88.2%这个比例，企业正确的反应不是跟随，而是回到自身条件做逐项核对：准备度、时间敏感度、稀释承受能力、以及合并后维持流动性的能力。本质上，SPAC成为主流通道是规则筛选的结果，它对每一家具体企业是否合适，仍然需要独立判断。如需就企业自身情况做路径评估，可通过 liaoqijie@tdgroup.hk 与彤鼎集团团队联系。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>SPAC（特殊目的收购公司）通道成为2026年上半年中概股赴美的主要选择，是发行门槛结构性抬高之后的被动结果，而非SPAC工具本身的优势提升。2026年上半年中概股赴美共17只新股完成上市，其中15家通过SPAC IPO路径，占比约88.2%，仅2家为传统IPO，合计募资规模约15.56亿美元，单只平均募资不足1亿美元。</p><p>结构性原因在于：2026年5月14日SEC批准的纳斯达克新规，将在华企业IPO的最低公众募资额提高至2500万美元，同时规定以SPAC或业务合并方式上市的，其无限制流通公众股市值不低于2500万美元，并禁止直接上市登陆NGM与NCM。</p><p>这一规则把中小规模发行人挡在传统IPO之外，而市值口径的可达性高于现金募资口径，通道因此向SPAC集中。关键在于，SPAC改变的是达标的计算方式与时间节奏，不豁免审计、披露与治理的任何实质要求。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">先看结构：88.2%这个比例说明的不是偏好，而是筛选</a></li><li><a href="#sec-02">2026年5月14日新规：三条规则如何重塑赴美路径</a></li><li><a href="#sec-03">SPAC通道的四项真实优势：说清楚它到底解决了什么</a></li><li><a href="#sec-04">必须写明的一点：SPAC不豁免监管</a></li><li><a href="#sec-05">代价一：Promote与权证构成的综合稀释</a></li><li><a href="#sec-06">代价二：赎回风险与合并后的流动性困境</a></li><li><a href="#sec-07">企业判断框架：什么情况下SPAC是理性选择</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、先看结构：88.2%这个比例说明的不是偏好，而是筛选</h2><p>结论先说：15比2的分布不是企业主动偏好SPAC的结果，而是传统IPO入口被规则收窄之后剩下的分布。</p><p>2026年上半年，中概股赴美上市共17只新股完成挂牌，其中15家通过SPAC IPO路径，2家通过传统IPO，SPAC占比约88.2%，总募资规模约15.56亿美元。把这两个数字放在一起读，才能看出问题的实质：17只新股对应约15.56亿美元，单只平均募资规模不足1亿美元，说明这一批发行人整体属于中小市值区间，而中小市值发行人恰恰是新规提高门槛后受影响最直接的群体。</p><p>过去几年，中概股赴美的典型形态是小额发行：募资规模集中在千万美元级别，公众持股比例低，流通盘小。这类发行在监管视角下存在明显问题——流通盘过小容易导致上市初期价格剧烈波动，公众投资者难以形成有效定价，后续也缺乏持续的机构关注。监管抬高最低募资门槛，正是针对这一形态。</p><p><strong>为什么筛选会导向SPAC而不是导向不上市</strong></p><p>当传统IPO要求实打实募到2500万美元现金时，中小发行人面临的是承销能力问题：能否在既定窗口内找到足额认购。而SPAC路径下的门槛以无限制流通公众股市值计量，市值由股份数量乘以价格得出，其达成路径比现金募资更多元。</p><p data-ts="1">因此，企业并没有放弃赴美，而是从一条更难走通的门口，转向了另一条在计算口径上更具可行性的门口。</p><p>本质上，88.2%这个比例是一个筛选结果的读数，不是一份偏好调查的结论。把它误读为SPAC工具变得更优，会导致企业在评估自身路径时高估SPAC的确定性、低估其代价。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、2026年5月14日新规：三条规则如何重塑赴美路径</h2><p>结论先说：新规不是提高了一个数字，而是同时封堵、抬高与保留了三条不同的入口，其组合效果才是路径迁移的直接原因。</p><p><strong>第一条：在华企业IPO最低公众募资2500万美元</strong></p><p>2026年5月14日，SEC批准纳斯达克新规，规定在华企业以IPO方式上市的，最低公众募资额不得低于2500万美元。这条规则针对的是现金募集金额本身，是硬性门槛。对于原本计划募资1000万至2000万美元的发行人，这意味着要么把发行规模提高至少一倍，要么放弃传统IPO路径。</p><p data-ts="1">提高发行规模不是简单的数字调整，它同时改变了估值区间、稀释比例与承销难度，对很多中小发行人而言并不现实。</p><p><strong>第二条：SPAC及业务合并方式，无限制流通公众股市值不低于2500万美元</strong></p><p>对以SPAC合并或其他业务合并方式取得上市地位的，新规要求其无限制流通公众股（即不受锁定限制、可自由交易的公众持股部分）市值不低于2500万美元。注意口径差异：这是市值标准，不是现金募集标准。</p><p data-ts="1">市值等于可流通股份数乘以每股价格，其达成不完全依赖于本次交易实际募到多少现金。这一口径差异，是SPAC通道相对可行的技术性原因。</p><p><strong>第三条：禁止直接上市登陆NGM与NCM</strong></p><p>新规禁止以直接上市（Direct Listing）方式登陆纳斯达克全球市场（NGM）与纳斯达克资本市场（NCM）。直接上市原本是不发行新股、仅让既有股份取得交易资格的一条低成本通道，此前被部分中小企业视为绕开发行难度的选项。这条路被封堵后，可选集合进一步缩小为传统IPO与SPAC两项。</p><p>三条规则叠加的结果是清晰的：低成本入口被关闭，高现金门槛入口被抬高，只剩下一条以市值计量、且执行节奏可控的入口。因此，路径迁移不是市场情绪驱动的，而是规则结构直接塑造的。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、SPAC通道的四项真实优势：说清楚它到底解决了什么</h2><p>结论先说：SPAC真正解决的是四个具体问题——发行窗口风险、估值不确定性、交易执行周期、以及门槛计量口径，它不解决企业自身的准备问题。</p><p><strong>其一，规避发行窗口风险</strong></p><p>传统IPO的成败高度依赖定价与发行窗口。市场情绪转冷时，发行人可能被迫下调价格区间、缩减发行规模，甚至推迟发行。SPAC合并的对价与估值在合并协议中提前谈定，一经签署即锁定，不随交割时的市场情绪波动。对处于估值波动剧烈行业、或对时间点有明确要求的企业，这项确定性有实际价值。</p><p><strong>其二，估值由谈判形成而非路演形成</strong></p><p>SPAC路径下，企业面对的是一个明确的交易对手（SPAC发起人及其后续PIPE投资人），估值在谈判桌上确定。这意味着企业可以用相对可控的方式论证自身价值，而不必依赖路演期间机构投资人的短期情绪。代价是放弃了市场热度可能带来的溢价上限——这一点在后文的代价部分展开。</p><p><strong>其三，交易执行周期3至6个月</strong></p><p>由于SPAC本身已是上市主体，不需要重新完整走一遍发行审核与承销流程，De-SPAC交易的执行周期通常为3至6个月。必须强调，这个3至6个月指的是从签署合并意向到完成合并的交易执行周期，不包含标的公司自身的准备时间。</p><p data-ts="1">如果企业的审计报表、内控制度、股权架构尚未就绪，这部分工作一样要做、一样要花时间，只是被前置到合并谈判之前或与之并行。</p><p><strong>其四，门槛计量口径的可达性</strong></p><p>如前所述，SPAC路径下适用的是无限制流通公众股市值不低于2500万美元的标准，而非现金募资2500万美元的标准。在实务中，市值口径的达成路径更多元。这是当前通道向SPAC集中最直接的技术性原因，也是企业最需要冷静看待的一点——计量口径更容易达成，不等于交易本身更容易成功，更不等于上市之后的日子更好过。</p><p>因此，SPAC的优势是具体的、可枚举的，也是有边界的。它优化的是路径与节奏，不改变企业需要具备的实质条件。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、必须写明的一点：SPAC不豁免监管</h2><p>结论先说：SPAC合并在信息披露、审计标准、公司治理与后续持续义务上，与传统IPO没有实质性豁免差别。</p><p>把SPAC理解为绕开监管的通道，是实务中最常见也最危险的误解。De-SPAC交易需要向SEC提交合并相关文件并履行披露义务，标的公司的业务、财务、关联交易、风险因素等信息，都要按照上市公司标准完整披露，并接受监管审阅与问询。</p><p><strong>审计要求不变</strong></p><p>标的公司的财务报表必须由在PCAOB（美国公众公司会计监督委员会）注册的会计师事务所审计。根据《外国公司问责法》（HFCAA）框架，PCAOB对审计底稿的检查权是持续性要求，涉及中国内地及香港经营主体的审计安排必须符合该框架。这一条不因上市方式是SPAC还是传统IPO而改变。</p><p><strong>境内备案要求不变</strong></p><p>中国证监会境外上市备案管理制度自2023年3月31日起施行，境内企业以直接或间接方式赴境外上市，均需履行备案程序。以SPAC合并方式取得境外上市地位的，同样属于备案管理范围。换言之，境内合规环节不因交易结构而减免，企业仍需完成股权架构梳理、境外投资（ODI）及外汇登记等前置工作。</p><p><strong>治理与持续披露要求不变</strong></p><p>合并完成后，公司须满足交易所对独立董事比例、审计委员会与薪酬委员会设置的要求，并按期提交定期报告、及时披露重大事项。内部控制体系、关联交易决策机制、信息披露管理制度都必须真实运行，不是文件上写着就算数。</p><p>因此，SPAC改变的是上市的路径与节奏，而不是上市的实质要求。任何以监管宽松为理由推荐SPAC的说法，都与规则事实不符，企业应当在尽调阶段直接向中介机构求证。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、代价一：Promote与权证构成的综合稀释</h2><p>结论先说：稀释是SPAC最确定、最难谈判掉的代价，评估交易时必须按综合口径计算，只看合并估值会严重低估成本。</p><p>SPAC发起人通常持有合并后公司约20%的创始股份，业内称为Promote。这是对发起人组建SPAC、完成SPAC自身IPO募资、寻找并促成标的交易的回报。对标的公司原股东而言，这意味着在没有对应现金对价流入的情况下，让渡了约五分之一的股权比例。</p><p>除创始股份外，SPAC在其IPO阶段通常向公众投资人配发认股权证（Warrant）。这些权证在合并完成后可按约定价格行权，行权即产生新增股份，形成第二层稀释。此外，若交易同步安排PIPE融资，PIPE投资人通常要求折价认购，构成第三层稀释。三层叠加之后，创始团队实际保留的股权比例，往往显著低于仅按合并估值推算的结果。</p><p><strong>正确的计算方式</strong></p><p>评估SPAC交易的真实成本，应当采用完全稀释后（fully diluted）口径：把创始股份、全部在外权证的潜在行权股份、PIPE新增股份、以及可能存在的对赌或业绩挂钩股份，一并纳入分母，再计算原股东的最终持股比例与对应价值。把这个数字与传统IPO路径下公开发行新股带来的稀释相比较，才是有意义的对比。</p><p>相比之下，传统IPO的稀释主要来自公开发行的新股比例，通常小于SPAC路径的综合稀释。这也是为什么对估值敏感、对创始团队控制权要求高的企业，在条件允许时仍应认真评估传统IPO。本质上，SPAC是用股权换时间与确定性，企业需要判断这笔交换在自身情况下是否划算。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、代价二：赎回风险与合并后的流动性困境</h2><p>结论先说：赎回权使SPAC实际带来的现金高度不确定，而合并后的流动性问题，比稀释更容易被低估。</p><p><strong>赎回风险</strong></p><p>在SPAC合并的股东投票环节，原SPAC股东有权选择赎回，即按约定拿回自己投入信托账户的现金而不参与合并。若赎回比例很高，SPAC最终带给标的公司的现金可能远低于其信托账户的名义规模。</p><p data-ts="1">对于把这笔资金列入产能扩张、研发投入或并购计划的企业，这是必须提前做压力测试的风险：应当分别按低、中、高三档赎回率测算交割后的现金状况，并据此准备备用融资方案。</p><p><strong>PIPE是缓冲而非保险</strong></p><p>常见的应对方式是同步安排PIPE融资，在合并交割前锁定一批机构投资人以约定价格认购新股，为交易提供确定的资金底盘。但PIPE的可获得性取决于标的公司的基本面质量与增长逻辑的说服力，在市场情绪偏弱时并不容易落实。因此PIPE是缓冲，不是保险，不能作为赎回风险的默认解药写进计划书。</p><p><strong>合并后的流动性困境</strong></p><p>这是当前尤其值得警惕的一点。新规下以市值口径达标的交易，其无限制流通公众股规模可能刚好卡在标准线附近。流通盘偏小会带来一系列连锁问题：买卖价差扩大、单笔交易对价格的冲击放大、机构投资人因流动性不足而不愿建仓、研究覆盖稀少、以及后续增发时的定价能力不足。上市地位取得之后，若长期缺乏交易活跃度，融资功能实际上是打了折扣的。</p><p><strong>持续合规成本</strong></p><p>上市之后的固定成本是刚性的：年度审计、内控评估、律师费用、投资者关系、信息披露系统维护等，这些支出不随市值大小同比缩减。对于合并后现金规模不及预期的公司，持续合规成本会构成实实在在的现金流压力。</p><p>因此，企业在评估SPAC时，必须把视野从交割日延伸到交割后的十二至二十四个月。关键在于，上市是起点而不是终点，把全部精力押在完成交易上，是实务中反复出现的错误。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、企业判断框架：什么情况下SPAC是理性选择</h2><p>结论先说：SPAC适合的是准备度高、时间敏感、且能够承受综合稀释的企业；它不适合用来弥补基础工作的欠缺。</p><p><strong>可以认真考虑SPAC的四类企业</strong></p><ol class="ts-pts"><li><b>第一类</b>，财务与治理基础已经就绪、审计报表可直接使用，能够真正兑现3至6个月执行周期优势的企业；</li><li><b>第二类，对上市时间点有明确硬性要求</b>，例如受制于既有融资协议安排或业务扩张节奏的企业；</li><li><b>第三类，处于估值波动剧烈的行业</b>，更看重估值锁定而非估值上限的企业；</li><li><b>第四类，创始团队股权比例充裕</b>，能够承受Promote加权证的综合稀释而不影响控制权稳定的企业。</li></ol><p><strong>应当谨慎的四类企业</strong></p><ol class="ts-pts"><li><b>第一类</b>，审计、内控、股权架构尚未整理完毕的企业——SPAC不会让这些工作消失，只会让它们变得更紧迫；</li><li><b>第二类</b>，对估值最大化有强烈诉求的企业；</li><li><b>第三类</b>，创始团队持股比例本就不高、控制权敏感的企业；</li><li><b>第四类</b>，业务模式复杂、缺乏清晰增长叙事、难以吸引PIPE投资人的企业——这类企业面临的赎回风险显著更高。</li></ol><p><strong>谈判中最该争取的三项条款</strong></p><ol class="ts-pts"><li><b>其一，创始股份的调整机制</b>，例如与合并后股价表现或业绩挂钩的Promote让渡安排；</li><li><b>其二</b>，最低现金条件（Minimum Cash Condition），即交割时账上现金低于某一水平时企业有权终止交易，这是对冲赎回风险最直接的合同工具；</li><li><b>其三，锁定期与解禁节奏的安排</b>，避免解禁集中冲击本就不厚的流通盘。</li></ol><p>无论选择哪条路径，有三项工作无法绕开：PCAOB注册会计师事务所出具的审计报告、符合交易所要求的公司治理结构、以及经得起持续披露检验的财务与信息管理体系。华尔街彤鼎俱乐部在企业家交流中反复强调同一件事——路径可以选，基础功课不能省。</p><p data-ts="1">涉及Pre-IPO项目的部分，仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p><p>因此，面对2026年上半年88.2%这个比例，企业正确的反应不是跟随，而是回到自身条件做逐项核对：准备度、时间敏感度、稀释承受能力、以及合并后维持流动性的能力。本质上，SPAC成为主流通道是规则筛选的结果，它对每一家具体企业是否合适，仍然需要独立判断。</p><p data-ts="1">如需就企业自身情况做路径评估，可通过 liaoqijie@tdgroup.hk 与彤鼎集团团队联系。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-18c-specialist-tech.html" style="color:#6b5426;font-weight:700;">香港18C特专科技上市：门槛与打法</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hkex-return-mechanism-2026.html" style="color:#6b5426;font-weight:700;">港交所退回机制新规：上市申请被退回，全部中介机构名单将公开</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="return-to-a-share.html" style="color:#6b5426;font-weight:700;">中概股回归A股路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="dual-listing.html" style="color:#6b5426;font-weight:700;">双重上市与二次上市详解</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-ipo-surge-2026.html" style="color:#6b5426;font-weight:700;">港股IPO爆发：中资企业为何转向香港</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"中概股回港双重上市","inLanguage":"zh-CN","abstract":"Why U.S.-listed Chinese companies add a Hong Kong listing, and how dual primary listing differs from a secondary listing.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/hk-dual-listing.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"双重上市是指企业同时在两个交易所挂牌，对中概股而言通常指美股加港股。截至2025年，已有超过35家中概股完成在港股的双重上市或第二上市，管理资产占中概股总市值超过70%。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,60 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市路径 LISTING PATH</div><h1>中概股回港双重上市</h1>
 <div class="sub">从美股到港股的完整操作路径</div><div class="en">Why U.S.-listed Chinese companies add a Hong Kong listing, and how dual primary listing differs from a secondary listing.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">双重上市是指企业同时在两个交易所挂牌，对中概股而言通常指美股加港股。截至2025年，已有超过35家中概股完成在港股的双重上市或第二上市，管理资产占中概股总市值超过70%。双重上市的3大核心价值：引入南向资金（内地投资人通过港股通参与）、降低中美监管摩擦的单一风险敞口、为未来私有化或进一步回归A股提供平台。对于市值5亿美元以上、在美股有稳定运营记录的中概股，双重上市已经从可选项变成了几乎必做的战略动作。</div>
-<h2>一、双重上市与第二上市的区别</h2>
-<p>很多人把双重上市和第二上市混在一起，实际上这是两种不同的安排，监管要求和市场效果差异很大。</p>
-<h3>双重主要上市（Dual Primary Listing）</h3>
-<p>企业在港交所和原上市地交易所都以主要上市地位挂牌，须同时满足两地的上市规则。这种安排下，港股投资人享有与美股投资人完全平等的股东权利，纳入港股通的资格也更稳定。</p>
-<p>门槛较高，需要完整满足港交所的上市规定，包括财务门槛、公司治理、信息披露等，且招股书需要重新向港交所申报。整体费用约1500至3000万港币，周期12至18个月。</p>
-<h3>第二上市（Secondary Listing）</h3>
-<p>企业以港交所的第二上市地位挂牌，港交所对其的监管要求相对宽松（豁免部分港交所规则），主要依赖原上市地的监管。</p>
-<p>门槛相对较低，但纳入港股通的资格受限（部分第二上市公司无法纳入港股通），且如果原上市地退市，港交所的第二上市资格也会自动失效。</p>
-<h3>如何选择</h3>
-<p>市值较大、长期规划在港股深度运营的企业首选双重主要上市；市值较小、主要希望获得港股投资人认可度的企业可以选第二上市。彤鼎团队在辅导中优先建议双重主要上市，因为纳入港股通带来的南向资金流入是核心价值所在。</p>
-<h2>二、为什么现在是双重上市的好时机</h2>
-<h3>原因1：南向资金规模持续扩大</h3>
-<p>内地投资人通过沪港通和深港通参与港股市场的南向资金，已经从2018年的每日数十亿港币增长到2025年的每日数百亿港币，占港股日均成交的比例超过40%。纳入港股通意味着直接接触到最活跃的亚洲投资人群体。</p>
-<h3>原因2：中美监管摩擦风险分散</h3>
-<p>HFCAA法案（外国公司问责法）在2022至2023年引发了中概股的集体回港潮。尽管PCAOB已与中国监管机构达成审计协议，但中美关系的不确定性长期存在。双重上市相当于给企业的上市身份加了一道保险——即使美股遇到极端情况，港股平台依然完整。</p>
-<h3>原因3：港交所政策持续优化</h3>
-<p>2018年港交所推出上市制度改革，支持双重股权架构和未盈利生物科技公司上市；2023年进一步优化了双重上市的申请流程；2024年引入的“新上市制度”降低了专科技公司的上市门槛。整体政策环境对双重上市越来越友好。</p>
-<h2>三、双重主要上市的具体流程</h2>
-<h3>阶段1：前期评估与决策 1至2个月</h3>
-<p>评估公司是否满足港交所双重主要上市的基本条件：近两年在纳斯达克连续上市、市值不低于400亿港币（2023年新规放宽前为1000亿港币）、无重大合规问题。同时评估双重上市的战略价值与成本收益。</p>
-<h3>阶段2：聘请中介机构 1个月</h3>
-<p>聘请保荐人（通常是港股主承销商）、香港律师、香港会计师、股份过户登记机构等。保荐人是整个申请流程的核心协调方。</p>
-<h3>阶段3：申请文件准备 4至6个月</h3>
-<p>准备向港交所提交的上市申请文件，包括：招股书（A1表格）、审计财务报表、法律意见书、业务及财务尽调报告等。对于已经有SEC披露记录的中概股，许多文件可以基于现有材料调整，但仍需针对港交所规则重新整理。</p>
-<h3>阶段4：港交所审核 3至5个月</h3>
-<p>港交所对申请文件进行审核，通常会提出2至3轮问询。与SEC问询类似，问询内容覆盖业务合规性、财务真实性、公司治理规范性等。</p>
-<h3>阶段5：路演与定价 1个月</h3>
-<p>申请获批后，企业向香港及亚洲机构投资人进行路演，确定发行价格和规模。对于大型中概股，路演通常可以获得数倍的超额认购。</p>
-<h3>阶段6：挂牌上市</h3>
-<p>完成定价后，股份在港交所正式挂牌交易，企业成为双重主要上市公司。</p>
-<h2>四、双重上市后的关键工作</h2>
-<h3>工作1：纳入港股通资格的确认</h3>
-<p>并非所有双重上市公司都会自动纳入港股通。沪深港通对纳入标准有额外要求，包括成交活跃度、合规记录等。企业需要主动与港交所沟通，确认纳入时间表，因为被纳入港股通往往会引发显著的南向资金流入。</p>
-<h3>工作2：建立港股IR体系</h3>
-<p>双重上市后，企业需要同时维护美股和港股两套投资人关系体系。港股投资人的关注点与美股不同：港股投资人更看重股息、估值安全边际、宏观政策等；美股投资人更看重增长逻辑、可扩展性。两套IR工作需要独立设计。</p>
-<h3>工作3：信息披露的双重合规</h3>
-<p>双重主要上市公司需要同时符合SEC和港交所的信息披露要求。两套规则在披露时点、格式、语言等方面有差异，CFO和法务团队需要建立专门的双重披露流程。</p>
-<h2>五、双重上市的成本测算</h2>
-<p>完成双重主要上市的整体成本约1500至3000万港币，包括：保荐人费用800至1500万港币；香港律师费用300至600万港币；审计费用200至400万港币；港交所申请费及上市费约50至100万港币；路演及印刷等其他费用100至400万港币。</p>
-<p>这一成本相对于双重上市带来的南向资金流入和估值提升通常是合理的。大型中概股在完成双重上市后，南向资金持股比例通常在6个月内达到流通市值的10%至20%，对股价支撑作用明显。</p>
-<h2>六、哪些企业适合现在启动双重上市</h2>
-<p>以下几类企业最适合在近期启动双重上市规划。</p>
-<p>第一类：在美股已挂牌3年以上、市值稳定在5亿美元以上的成熟中概股。这类企业的基本条件都已满足，双重上市是自然的下一步。</p>
-<p>第二类：业务主要在中国内地、希望获得内地投资人认可的企业。南向资金对这类公司的认知度更高，双重上市后的估值修复空间更大。</p>
-<p>第三类：正在规划私有化或后续回归A股的企业。港股双重上市平台是私有化退美股的理想过渡，也是未来回归A股的前置步骤。</p>
-<p>第四类：计划进行亚太区资本运作（并购、融资、战略合作）的企业。港股上市身份在亚洲市场的认知度更高，是开展区域资本运作的重要筹码。</p>
-<h3>结语：双重上市是中概股的必修课</h3>
-<p>对于已经在美股挂牌的中国企业，双重上市不再是加分题，而是必修课。它是风险分散、估值修复、扩大投资人基础的系统性工具。</p>
-<p>越早启动规划，就能越早享受南向资金的红利。如果你的企业正在考虑这一步，建议提前12个月开始评估和规划，给整个流程留出足够的推进空间。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>双重上市是指企业同时在两个交易所挂牌，对中概股而言通常指美股加港股。截至2025年，已有超过35家中概股完成在港股的双重上市或第二上市，管理资产占中概股总市值超过70%。双重上市的3大核心价值：引入南向资金（内地投资人通过港股通参与）、降低中美监管摩擦的单一风险敞口、为未来私有化或进一步回归A股提供平台。</p><p>对于市值5亿美元以上、在美股有稳定运营记录的中概股，双重上市已经从可选项变成了几乎必做的战略动作。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">双重上市与第二上市的区别</a></li><li><a href="#sec-02">为什么现在是双重上市的好时机</a></li><li><a href="#sec-03">双重主要上市的具体流程</a></li><li><a href="#sec-04">双重上市后的关键工作</a></li><li><a href="#sec-05">双重上市的成本测算</a></li><li><a href="#sec-06">哪些企业适合现在启动双重上市</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、双重上市与第二上市的区别</h2><p>很多人把双重上市和第二上市混在一起，实际上这是两种不同的安排，监管要求和市场效果差异很大。</p><p><h3>双重主要上市（Dual Primary Listing）</h3></p><p>企业在港交所和原上市地交易所都以主要上市地位挂牌，须同时满足两地的上市规则。这种安排下，港股投资人享有与美股投资人完全平等的股东权利，纳入港股通的资格也更稳定。</p><p>门槛较高，需要完整满足港交所的上市规定，包括财务门槛、公司治理、信息披露等，且招股书需要重新向港交所申报。整体费用约1500至3000万港币，周期12至18个月。</p><p><h3>第二上市（Secondary Listing）</h3></p><p>企业以港交所的第二上市地位挂牌，港交所对其的监管要求相对宽松（豁免部分港交所规则），主要依赖原上市地的监管。</p><p>门槛相对较低，但纳入港股通的资格受限（部分第二上市公司无法纳入港股通），且如果原上市地退市，港交所的第二上市资格也会自动失效。</p><p><h3>如何选择</h3></p><p>市值较大、长期规划在港股深度运营的企业首选双重主要上市；市值较小、主要希望获得港股投资人认可度的企业可以选第二上市。彤鼎团队在辅导中优先建议双重主要上市，因为纳入港股通带来的南向资金流入是核心价值所在。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、为什么现在是双重上市的好时机</h2><p><h3>原因1：南向资金规模持续扩大</h3></p><p>内地投资人通过沪港通和深港通参与港股市场的南向资金，已经从2018年的每日数十亿港币增长到2025年的每日数百亿港币，占港股日均成交的比例超过40%。纳入港股通意味着直接接触到最活跃的亚洲投资人群体。</p><p><h3>原因2：中美监管摩擦风险分散</h3></p><p>HFCAA法案（外国公司问责法）在2022至2023年引发了中概股的集体回港潮。尽管PCAOB已与中国监管机构达成审计协议，但中美关系的不确定性长期存在。双重上市相当于给企业的上市身份加了一道保险——即使美股遇到极端情况，港股平台依然完整。</p><p><h3>原因3：港交所政策持续优化</h3></p><p>2018年港交所推出上市制度改革，支持双重股权架构和未盈利生物科技公司上市；2023年进一步优化了双重上市的申请流程；2024年引入的“新上市制度”降低了专科技公司的上市门槛。整体政策环境对双重上市越来越友好。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、双重主要上市的具体流程</h2><p><h3>阶段1：前期评估与决策 1至2个月</h3></p><p>评估公司是否满足港交所双重主要上市的基本条件：近两年在纳斯达克连续上市、市值不低于400亿港币（2023年新规放宽前为1000亿港币）、无重大合规问题。同时评估双重上市的战略价值与成本收益。</p><p><h3>阶段2：聘请中介机构 1个月</h3></p><p>聘请保荐人（通常是港股主承销商）、香港律师、香港会计师、股份过户登记机构等。保荐人是整个申请流程的核心协调方。</p><p><h3>阶段3：申请文件准备 4至6个月</h3></p><p>准备向港交所提交的上市申请文件，包括：招股书（A1表格）、审计财务报表、法律意见书、业务及财务尽调报告等。对于已经有SEC披露记录的中概股，许多文件可以基于现有材料调整，但仍需针对港交所规则重新整理。</p><p><h3>阶段4：港交所审核 3至5个月</h3></p><p>港交所对申请文件进行审核，通常会提出2至3轮问询。与SEC问询类似，问询内容覆盖业务合规性、财务真实性、公司治理规范性等。</p><p><h3>阶段5：路演与定价 1个月</h3></p><p>申请获批后，企业向香港及亚洲机构投资人进行路演，确定发行价格和规模。对于大型中概股，路演通常可以获得数倍的超额认购。</p><p><h3>阶段6：挂牌上市</h3></p><p>完成定价后，股份在港交所正式挂牌交易，企业成为双重主要上市公司。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、双重上市后的关键工作</h2><p><h3>工作1：纳入港股通资格的确认</h3></p><p>并非所有双重上市公司都会自动纳入港股通。沪深港通对纳入标准有额外要求，包括成交活跃度、合规记录等。企业需要主动与港交所沟通，确认纳入时间表，因为被纳入港股通往往会引发显著的南向资金流入。</p><p><h3>工作2：建立港股IR体系</h3></p><p>双重上市后，企业需要同时维护美股和港股两套投资人关系体系。港股投资人的关注点与美股不同：港股投资人更看重股息、估值安全边际、宏观政策等；美股投资人更看重增长逻辑、可扩展性。两套IR工作需要独立设计。</p><p><h3>工作3：信息披露的双重合规</h3></p><p>双重主要上市公司需要同时符合SEC和港交所的信息披露要求。两套规则在披露时点、格式、语言等方面有差异，CFO和法务团队需要建立专门的双重披露流程。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、双重上市的成本测算</h2><p>完成双重主要上市的整体成本约1500至3000万港币，包括：保荐人费用800至1500万港币；香港律师费用300至600万港币；审计费用200至400万港币；港交所申请费及上市费约50至100万港币；路演及印刷等其他费用100至400万港币。</p><p>这一成本相对于双重上市带来的南向资金流入和估值提升通常是合理的。大型中概股在完成双重上市后，南向资金持股比例通常在6个月内达到流通市值的10%至20%，对股价支撑作用明显。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、哪些企业适合现在启动双重上市</h2><p>以下几类企业最适合在近期启动双重上市规划。</p><p>第一类：在美股已挂牌3年以上、市值稳定在5亿美元以上的成熟中概股。这类企业的基本条件都已满足，双重上市是自然的下一步。</p><p>第二类：业务主要在中国内地、希望获得内地投资人认可的企业。南向资金对这类公司的认知度更高，双重上市后的估值修复空间更大。</p><p>第三类：正在规划私有化或后续回归A股的企业。港股双重上市平台是私有化退美股的理想过渡，也是未来回归A股的前置步骤。</p><p>第四类：计划进行亚太区资本运作（并购、融资、战略合作）的企业。港股上市身份在亚洲市场的认知度更高，是开展区域资本运作的重要筹码。</p><p><h3>结语：双重上市是中概股的必修课</h3></p><p>对于已经在美股挂牌的中国企业，双重上市不再是加分题，而是必修课。它是风险分散、估值修复、扩大投资人基础的系统性工具。</p><p>越早启动规划，就能越早享受南向资金的红利。如果你的企业正在考虑这一步，建议提前12个月开始评估和规划，给整个流程留出足够的推进空间。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="dual-listing.html" style="color:#6b5426;font-weight:700;">双重上市与二次上市详解</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="us-hk-a-share-choice.html" style="color:#6b5426;font-weight:700;">美股港股A股三选一决策指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="return-to-a-share.html" style="color:#6b5426;font-weight:700;">中概股回归A股路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="a-to-h-listing.html" style="color:#6b5426;font-weight:700;">A股公司赴港上市：A+H路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-china-stocks.html" style="color:#6b5426;font-weight:700;">中概股在美股市场的格局</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

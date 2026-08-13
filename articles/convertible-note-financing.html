@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"可转换票据，签的时候最省事，到期那天最难办","inLanguage":"zh-CN","abstract":"Convertible notes let a company raise money before agreeing on a valuation: the money goes in as debt and converts into equity at the next priced round. This article takes the company's side of the deal. It explains how the discount rate and the valuation cap together determine how much equity founders actually give up on conversion; whether accrued interest rolls into the conversion principal or is paid in cash; what happens at maturity when no qualified financing has occurred, covering extension, automatic conversion and repayment; how most-favoured-nation clauses rewrite earlier notes when later ones are signed; where to set the qualified financing threshold; and why these instruments must be cleared before an IPO filing.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/convertible-note-financing.html"},"datePublished":"2026-08-05","dateModified":"2026-08-05","description":"先拿钱、后定价，是早期与过桥阶段常见的融资安排：企业先拿到一笔带债权外壳的资金，估值留到下一轮再定。本文从企业方视角拆解这类可转换工具：折扣率与估值上限怎么共同决定转股时让出的股权比例，票面利息计入本金还是付现，到期仍无下一轮时展期、强制转股与偿还三条路各自的后果，最惠国条款怎么把每一次让步复制到过去，以及申报前必须完成的处理。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,53 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">融资条款 FINANCING</div><h1>可转换票据，签的时候最省事，到期那天最难办</h1>
 <div class="sub">折扣率与估值上限怎么共同决定转股时让出的股权比例，票面利息计入本金还是付现，到期没有下一轮时的三条出路，以及申报前必须完成的处理</div><div class="en">Convertible notes let a company raise money before agreeing on a valuation: the money goes in as debt and converts into equity at the next priced round. This article takes the company's side of the deal. It explains how the discount rate and the valuation cap together determine how much equity founders actually give up on conversion; whether accrued interest rolls into the conversion principal or is paid in cash; what happens at maturity when no qualified financing has occurred, covering extension, automatic conversion and repayment; how most-favoured-nation clauses rewrite earlier notes when later ones are signed; where to set the qualified financing threshold; and why these instruments must be cleared before an IPO filing.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">可转换票据，也称可转股债权或先拿钱后定价工具，是指企业与出资方约定：资金以债权形式先行到账，本轮暂不确定估值，待发生约定的合格融资时按事先约定的价格公式自动转为股权。核心条款有四项——折扣率（在下一轮每股价格基础上打折计算转股价）、估值上限（转股价所对应的公司估值天花板）、票面利息（按年计算，多数交易中计入转股本金而非现金偿付）与到期日。转股价通常取折扣价与上限价两者中更低的一个，即对出资方更有利的一个。合格融资门槛决定何时自动转股，其定义一般包含本轮到账金额与融资性质两项要求；到期仍未触发的，通常在展期、按约定估值强制转股与要求偿还本息三条路中选择。拟上市路径下，这类工具在申报前通常须完成转股或终止，具体要求以各上市地监管机构与交易所现行正式文本为准。</div>
-<h2>一、钱先到账，价格以后再说</h2>
-<p><strong>结论先行：可转换票据解决的不是钱的问题，是时间的问题——它让融资在双方谈不拢估值、或者来不及走完一轮定价流程的时候，先把钱打进来。一家做工业视觉检测设备的企业在两轮融资之间断了档：新产线已经开模，账上现金只够撑一个季度多一点，而机构出资方对估值的判断和创始人差着一大截。双方最后签了一张可转换票据，一周内钱到账，估值这件事推到下一轮再说。创始人当时的原话是：先把命保住，价格以后再谈。</strong></p>
-<p>一年后下一轮定价完成，票据按约定转股。拿到新的股权表那天，创始人才意识到，这笔当时看起来只是&quot;过桥&quot;的钱，最终对应的持股比例接近他事先估算的两倍。他并没有被骗，条款白纸黑字写在那里，只是签的时候关注的是&quot;多久能到账&quot;，没有把折扣率和估值上限这两个数字放进同一个算式里算一遍。</p>
-<p>可以把它想成先住店后结账：入住那天只押了一笔钱，房费按退房时的规则结算，而规则里写着&quot;两种算法取对店家更贵的那一种&quot;。因此，企业方在评估这类工具时，真正要算的不是这笔钱的利息成本，而是转股那天的股权代价——本质上，它是一笔用未来股权比例偿付的借款，利息只是这笔账里最小的一项。</p>
-<h2>二、折扣率与估值上限：两个数字合起来才是真正的代价</h2>
-<p><strong>结论先行：折扣率和估值上限不是二选一，而是同时生效、转股时取对出资方更有利的那个结果，企业方的真实让渡由两者中更狠的一个决定。一家做医疗耗材的企业签票据时只盯着折扣率，觉得两成折扣不算多；估值上限那一栏填的数字是当时公司估值的一倍多，看上去很宽松。下一轮企业做得很好，定价远高于那个上限，结果转股价被上限压住，实际让出的股权远超过两成折扣所对应的水平。</strong></p>
-<p>折扣率是指转股时按下一轮每股价格打一个折扣计算转股价，市场上常见的区间大致在一成到三成之间，随企业阶段、资金紧迫程度与出资方议价能力浮动（此为市场经验性表述，不构成固定标准）。它的逻辑是补偿早进场的风险：出资方比下一轮的人早承担了一段不确定性，所以用同样的钱应该换到更多股权。估值上限则是指无论下一轮定价多高，转股时都按不超过某个估值水平计算转股价，它的逻辑不是补偿而是分享成长——公司这段时间涨了多少，出资方希望按当初进场时的判断锁定价格，而不是被自己参与创造的增长稀释掉。</p>
-<p>关键在于两者的组合方式。标准写法是转股价取&quot;下一轮每股价格 ×（1 − 折扣率）&quot;与&quot;估值上限 ÷ 转股前完全稀释股本&quot;两个结果中更低的一个——更低的转股价意味着同样的钱换到更多股，对出资方有利。所以企业做得越好、下一轮定价越高，估值上限的约束力就越强，而折扣率反而越来越不重要。</p>
-<p>这里有个反直觉的地方值得企业方记住：估值上限不是保护企业的天花板，而是保护出资方的地板。不少创始人把它理解成&quot;最多按这个估值转&quot;，因而觉得写高一点也无所谓；实际效果却是&quot;最贵按这个估值转&quot;，这个数字写得越低，出资方转股时拿走的股权比例越大。谈判时该争的是把上限抬高、把折扣率压低，而这两件事里，抬高上限的优先级通常更高。</p>
-<h2>三、票面利息不是小事：计入本金还是付现金，到期那天差别很大</h2>
-<p><strong>结论先行：可转换票据的票面利息在多数交易里不以现金支付，而是逐日累计后并入转股本金，这意味着利息最终是用股权还的。一家做企业服务软件的公司签的票据里写着按年计息、利息随本金一并转股，创始人当时没在意——公司账上不用出钱，看起来是好事。两年后转股，累计利息滚进本金，实际转股金额比当初到账的金额高出一截，对应的股权比例也跟着涨。</strong></p>
-<p>两种处理各有代价。计入转股本金的做法对现金流友好，企业在最缺钱的阶段不用按期付息，这也是它成为主流写法的原因；代价是利息要以转股价折算成股权，而转股价往往已经打过折、还受估值上限压制，等于用打折后的价格去偿还利息，实际成本高于票面数字。现金付息的做法对股权友好，利息在期间付掉，转股时只转本金；代价是每期都要真金白银出账，而签这类工具的企业通常正处在现金最紧的时候。</p>
-<p>还有几个容易被忽略的细节。其一是写单利还是复利，期限拉长到两三年时差别开始显现。其二是起算日按到账日还是按签署日，资金分批到位时是否分笔计息。其三是&quot;转股时利息一笔勾销、只转本金&quot;这种写法其实谈得下来，在企业议价能力较强或出资方更看重股权时尤其如此。其四是提前偿还时是否约定了最短计息期。</p>
-<p>打个比方，这就像一张会自己长大的欠条：你不用每月还钱，但欠条上的数字每天都在变大，而最后还钱用的不是现金，是公司的股权。因此，企业方在谈这一条时不该只问&quot;利率写多少&quot;，而要问&quot;到转股那天，这个利率一共会变成多少股&quot;。</p>
-<h2>四、到期日没有下一轮：展期、强制转股、还钱，三条路都不便宜</h2>
-<p><strong>结论先行：可转换票据真正的风险不在转股条款，而在到期日——如果到期时仍未发生约定的合格融资，这笔钱就从&quot;未来的股权&quot;变回&quot;现在的债务&quot;。一家做智能硬件的企业签了期限十八个月的票据，原本预计一年内能完成下一轮；行业融资节奏放缓，到期时下一轮还没有着落。到期日前两个月，出资方发来一封函提醒企业注意到期安排，那两个月是创始人融资以来最难的一段时间。</strong></p>
-<p>到期通常有三条路，每条路都有价格。</p>
-<p>路径一是展期。双方同意把到期日往后推，代价通常是条款重新谈：提高票面利息、加深折扣率、下调估值上限、增加保护性条款或董事观察员席位。展期表面上是&quot;再给一次机会&quot;，实质上是在企业最没有筹码的时候重新定价一次。</p>
-<p>路径二是按约定估值强制转股。较为规范的交易文件会在到期条款里写明：若到期未发生合格融资，票据按事先约定的估值或按上限估值自动转为股权。这条路对企业相对温和，因为它把不确定性提前锁死了——前提是签署时就写进去了。没写的话，到期时要另行协商，而协商的价格由当时的处境决定。</p>
-<p>路径三是要求偿还本息，这是最危险的一条。企业通常没有现金一次性还本付息，一旦触发，可能引发交叉违约条款、被要求提供股权质押或创始人个人担保，严重的会走到清算门槛；而且这件事会被下一轮的潜在出资方看见——一家正被债权人追偿的公司，在尽调里是一个很难解释的红旗。</p>
-<p>因此，签署阶段最该花时间的其实是到期条款，而不是折扣率。企业方要争取的写法有三项：把期限定得比自己对下一轮的时间预期长出一段余量；写明到期未发生合格融资时&quot;自动按约定估值转股&quot;，而不是&quot;由持有人选择偿还或转股&quot;；把选择权归属写清楚——由企业方选还是由持有人选，是完全不同的两份文件。华尔街彤鼎俱乐部在企业主群体中反复讨论的，正是这一类看起来不起眼、真出事时决定生死的尾部条款。</p>
-<h2>五、最惠国条款与一张接一张：后面签的会追溯改写前面签的</h2>
-<p><strong>结论先行：最惠国条款是指若企业此后向他人发行条件更优的同类工具，先前的持有人有权把自己的条款自动替换成更优的那一套，它的效果是把企业未来的每一次让步都复制到过去。一家做工业软件的企业在十个月里前后签了三张票据，头一张条款相对温和，第二张因为市场转冷让了一档，第三张为了赶在年底前到账让得更多；三张都带最惠国条款，于是转股时三张全部按最后那张的折扣率与估值上限执行。</strong></p>
-<p>这个机制的杀伤力在于它是单向的。企业每一次为了拿钱做出的妥协，都会自动向前传导；而企业后来谈到的任何优于从前的条件，不会向前追溯给自己带来任何好处。多签一张，不只是多一份稀释，而是可能把此前所有票据的稀释一起加深。</p>
-<p>叠加还有一个更隐蔽的后果：转股基数的重复计算。多张票据在同一次合格融资时一起转股，如果交易文件没写清楚转股价的计算基数是&quot;转股前的完全稀释股本&quot;还是&quot;包含其他票据转股之后的股本&quot;，各方对同一笔交易会算出不同的股权表。这类争议往往在交割前夜才暴露，而那时所有人都在赶时间。</p>
-<p>可以这样理解：最惠国条款像一份自动更新的合同模板，你以为签的是三份不同的协议，实际上签的是同一份协议的三个副本，而这份协议的内容永远等于你最狼狈那一次谈成的样子。所以企业方要么争取不写这一条，要么把它限制在&quot;仅适用于同一批次、同一期限内发行的工具&quot;，要么约定它只覆盖折扣率而不覆盖估值上限——三种限缩方式里，限定批次与期限最容易谈成。</p>
-<h2>六、合格融资的门槛：写多高，是写给谁看的</h2>
-<p><strong>结论先行：合格融资是指触发票据自动转股的那一轮定价融资，其门槛通常以本轮到账金额并叠加融资性质要求来定义，这条线定得高还是定得低，对企业和出资方的利害是相反的。一家做预制食品的企业把合格融资门槛写成一个不低的金额，下一轮实际完成的规模没到那条线，票据因此没有自动转股，到期时反而变成了一笔要重新谈的债。</strong></p>
-<p>先说门槛定得高的效果。高门槛意味着小规模的融资不触发转股，出资方可以继续以债权身份等待一轮更大、定价更清晰的融资，从而避免在一次小额融资里被按偏低的价格转股。对企业方而言，高门槛的坏处是转股迟迟不发生，票据一直挂在资本结构里，利息持续累计，而且下一轮的潜在出资方会把这笔未转股的债权视为待处理事项，在尽调清单里单列一行。</p>
-<p>再说门槛定得低的效果。门槛低则转股更容易触发，资本结构更早理清，对企业和后续出资方都省事；坏处是可能在一次规模很小、定价并不理想的融资里就被迫转股，而那一轮的价格会通过折扣率直接决定持有人拿走多少股权。</p>
-<p>实践中还有两个定义要写死。其一是&quot;到账金额&quot;的口径：是本轮新增出资的合计金额，还是包含票据转股金额在内的总额——把票据自身转股的金额也计进去，就会出现自我触发的循环。其二是性质要求：是否必须为优先股融资、是否必须由外部机构领投、关联方追加出资与老股转让算不算数。这些定义写得含糊，到时候就是一场关于&quot;这一轮算不算合格融资&quot;的争论，而争论期间公司做不了任何依赖股权结构确定的事。</p>
-<p>关键在于，合格融资门槛不是一个技术性数字，它实际上是在约定&quot;这张票据什么时候结束&quot;。企业方应当结合自己对下一轮规模的现实预期来定这条线，而不是照抄模板里的数字。华尔街彤鼎俱乐部在企业主之间交流较多的，也正是这类模板条款与自身节奏之间的错配。</p>
-<h2>七、申报之前必须清干净，以及谈到什么位置算安全</h2>
-<p><strong>结论先行：拟上市路径下，未转股的可转换票据属于影响股权结构清晰性的待处理事项，通常需要在申报前完成转股或终止，而清理这件事本身需要持有人配合，这就给了对方一次额外的谈判机会。一家计划赴境外上市的消费类企业在申报前还挂着两张未转股的票据，中介机构要求先转股或先还清；其中一位持有人表示可以转股，但要求把估值上限按当年签署时的口径重新确认一遍，来回谈了一个多季度，申报节奏往后推了一档。</strong></p>
-<p>审核关注的核心是股权结构是否清晰、有无权属争议、有无可能导致控制权变动的未了结安排。一张尚未转股的可转换票据同时踩了这三点：它对应的股权数量在转股前不确定，转股价取决于未来事件，而它一旦转股就会改变股本结构。因此实务中的通行做法是在申报前把它转成普通股或优先股、或者由企业偿还后终止，并由各方出具确认文件说明再无争议。具体要求因上市地、上市规则与审核口径而异，以各上市地监管机构与交易所现行正式文本为准，企业方应在启动申报前请中介机构逐项出具意见。</p>
-<p>回到谈判本身。企业方把这类工具谈到什么位置算安全，可以用几条来自查。</p>
-<p>其一，把折扣率与估值上限放进同一个算式，按下一轮的乐观、中性、悲观三档定价各算一遍转股后的股权表，看看最坏那一档自己还剩多少。签之前算不出这张表，就不该签。</p>
-<p>其二，期限比自己对下一轮的时间预期多留一段余量，并把到期未触发时的处理写成&quot;自动按约定估值转股&quot;，而不是把选择权交给持有人。</p>
-<p>其三，票面利息尽量争取转股时勾销，退一步是写单利、不写复利，再退一步是约定利息按不打折的价格折股。</p>
-<p>其四，合格融资门槛按自己的现实预期设定，并把到账金额的口径与融资性质要求写死，避免自我触发和事后争论。</p>
-<p>其五，最惠国条款能不写就不写，写了就限定批次与期限、把适用范围压到单一参数；同一时期发行的多张票据尽量用同一套模板、同一个到期日、同一个转股基数口径，避免转股时冒出多套算法。</p>
-<p>其六，把申报时的自动转股提前写进交易文件，约定自提交上市申请之日起相关债权自动转为普通股、无需另行签署文件，同时约定申请撤回或逾期未完成上市时的恢复安排。这一句话能替企业省掉未来的一整轮谈判。</p>
-<p>以上均为市场经验性表述，可行性受交易结构、出资方类型与适用法域影响，不构成固定标准，涉及法规口径的部分以监管机构现行正式文本为准。本质上，可转换票据不是一种更便宜的钱，而是一种把定价推迟到自己议价能力更弱的时点去完成的钱——它换来的是速度，付出的是对价格的控制权。因此它适合下一轮已经基本确定会来的企业，不适合拿它去赌下一轮会来。</p>
-<p>彤鼎集团（香港）有限公司在这类事情上承担的是统筹与协调角色：与企业方一起把已签署的可转换工具做一次穿透梳理，按不同的下一轮定价情形测算转股后的股权表，在新一轮谈判中协助设计估值上限、到期处理与最惠国条款的限缩写法，并把申报时自动转股的安排提前嵌入交易文件。涉及证券发行、承销、信托受托等持牌业务的，一律由具备相应牌照的合作机构承做。关键在于，这项工作的价值不在于把利息谈低一档，而在于让企业在签字那天就知道，最坏的情况下自己还握着多少。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>可转换票据，也称可转股债权或先拿钱后定价工具，是指企业与出资方约定：资金以债权形式先行到账，本轮暂不确定估值，待发生约定的合格融资时按事先约定的价格公式自动转为股权。核心条款有四项——折扣率（在下一轮每股价格基础上打折计算转股价）、估值上限（转股价所对应的公司估值天花板）、票面利息（按年计算，多数交易中计入转股本金而非现金偿付）与到期日。</p><p>转股价通常取折扣价与上限价两者中更低的一个，即对出资方更有利的一个。合格融资门槛决定何时自动转股，其定义一般包含本轮到账金额与融资性质两项要求；到期仍未触发的，通常在展期、按约定估值强制转股与要求偿还本息三条路中选择。拟上市路径下，这类工具在申报前通常须完成转股或终止，具体要求以各上市地监管机构与交易所现行正式文本为准。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">钱先到账，价格以后再说</a></li><li><a href="#sec-02">折扣率与估值上限：两个数字合起来才是真正的代价</a></li><li><a href="#sec-03">票面利息不是小事：计入本金还是付现金，到期那天差别很大</a></li><li><a href="#sec-04">到期日没有下一轮：展期、强制转股、还钱，三条路都不便宜</a></li><li><a href="#sec-05">最惠国条款与一张接一张：后面签的会追溯改写前面签的</a></li><li><a href="#sec-06">合格融资的门槛：写多高，是写给谁看的</a></li><li><a href="#sec-07">申报之前必须清干净，以及谈到什么位置算安全</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、钱先到账，价格以后再说</h2><div class="ts-lead"><span class="tag">结论先行</span><p>可转换票据解决的不是钱的问题，是时间的问题——它让融资在双方谈不拢估值、或者来不及走完一轮定价流程的时候，先把钱打进来。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家做工业视觉检测设备的企业在两轮融资之间断了档：新产线已经开模，账上现金只够撑一个季度多一点，而机构出资方对估值的判断和创始人差着一大截。双方最后签了一张可转换票据，一周内钱到账，估值这件事推到下一轮再说。创始人当时的原话是：先把命保住，价格以后再谈。</p></div><p>一年后下一轮定价完成，票据按约定转股。拿到新的股权表那天，创始人才意识到，这笔当时看起来只是&quot;过桥&quot;的钱，最终对应的持股比例接近他事先估算的两倍。他并没有被骗，条款白纸黑字写在那里，只是签的时候关注的是&quot;多久能到账&quot;，没有把折扣率和估值上限这两个数字放进同一个算式里算一遍。</p><p>可以把它想成先住店后结账：入住那天只押了一笔钱，房费按退房时的规则结算，而规则里写着&quot;两种算法取对店家更贵的那一种&quot;。因此，企业方在评估这类工具时，真正要算的不是这笔钱的利息成本，而是转股那天的股权代价——本质上，它是一笔用未来股权比例偿付的借款，利息只是这笔账里最小的一项。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、折扣率与估值上限：两个数字合起来才是真正的代价</h2><div class="ts-lead"><span class="tag">结论先行</span><p>折扣率和估值上限不是二选一，而是同时生效、转股时取对出资方更有利的那个结果，企业方的真实让渡由两者中更狠的一个决定。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家做医疗耗材的企业签票据时只盯着折扣率，觉得两成折扣不算多；估值上限那一栏填的数字是当时公司估值的一倍多，看上去很宽松。下一轮企业做得很好，定价远高于那个上限，结果转股价被上限压住，实际让出的股权远超过两成折扣所对应的水平。</p></div><p>折扣率是指转股时按下一轮每股价格打一个折扣计算转股价，市场上常见的区间大致在一成到三成之间，随企业阶段、资金紧迫程度与出资方议价能力浮动（此为市场经验性表述，不构成固定标准）。它的逻辑是补偿早进场的风险：出资方比下一轮的人早承担了一段不确定性，所以用同样的钱应该换到更多股权。</p><p data-ts="1">估值上限则是指无论下一轮定价多高，转股时都按不超过某个估值水平计算转股价，它的逻辑不是补偿而是分享成长——公司这段时间涨了多少，出资方希望按当初进场时的判断锁定价格，而不是被自己参与创造的增长稀释掉。</p><p>关键在于两者的组合方式。标准写法是转股价取&quot;下一轮每股价格 ×（1 − 折扣率）&quot;与&quot;估值上限 ÷ 转股前完全稀释股本&quot;两个结果中更低的一个——更低的转股价意味着同样的钱换到更多股，对出资方有利。</p><p data-ts="1">所以企业做得越好、下一轮定价越高，估值上限的约束力就越强，而折扣率反而越来越不重要。</p><p>这里有个反直觉的地方值得企业方记住：估值上限不是保护企业的天花板，而是保护出资方的地板。不少创始人把它理解成&quot;最多按这个估值转&quot;，因而觉得写高一点也无所谓；实际效果却是&quot;最贵按这个估值转&quot;，这个数字写得越低，出资方转股时拿走的股权比例越大。</p><p data-ts="1">谈判时该争的是把上限抬高、把折扣率压低，而这两件事里，抬高上限的优先级通常更高。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、票面利息不是小事：计入本金还是付现金，到期那天差别很大</h2><div class="ts-lead"><span class="tag">结论先行</span><p>可转换票据的票面利息在多数交易里不以现金支付，而是逐日累计后并入转股本金，这意味着利息最终是用股权还的。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家做企业服务软件的公司签的票据里写着按年计息、利息随本金一并转股，创始人当时没在意——公司账上不用出钱，看起来是好事。两年后转股，累计利息滚进本金，实际转股金额比当初到账的金额高出一截，对应的股权比例也跟着涨。</p></div><p>两种处理各有代价。计入转股本金的做法对现金流友好，企业在最缺钱的阶段不用按期付息，这也是它成为主流写法的原因；代价是利息要以转股价折算成股权，而转股价往往已经打过折、还受估值上限压制，等于用打折后的价格去偿还利息，实际成本高于票面数字。</p><p data-ts="1">现金付息的做法对股权友好，利息在期间付掉，转股时只转本金；代价是每期都要真金白银出账，而签这类工具的企业通常正处在现金最紧的时候。</p><p>还有几个容易被忽略的细节。</p><ol class="ts-pts"><li><b>其一是写单利还是复利</b>，期限拉长到两三年时差别开始显现。</li><li><b>其二是起算日按到账日还是按签署日</b>，资金分批到位时是否分笔计息。</li><li><b>其三</b>是&quot;转股时利息一笔勾销、只转本金&quot;这种写法其实谈得下来，在企业议价能力较强或出资方更看重股权时尤其如此。</li><li><b>其四</b>是提前偿还时是否约定了最短计息期。</li></ol><p>打个比方，这就像一张会自己长大的欠条：你不用每月还钱，但欠条上的数字每天都在变大，而最后还钱用的不是现金，是公司的股权。因此，企业方在谈这一条时不该只问&quot;利率写多少&quot;，而要问&quot;到转股那天，这个利率一共会变成多少股&quot;。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、到期日没有下一轮：展期、强制转股、还钱，三条路都不便宜</h2><div class="ts-lead"><span class="tag">结论先行</span><p>可转换票据真正的风险不在转股条款，而在到期日——如果到期时仍未发生约定的合格融资，这笔钱就从&quot;未来的股权&quot;变回&quot;现在的债务&quot;。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家做智能硬件的企业签了期限十八个月的票据，原本预计一年内能完成下一轮；行业融资节奏放缓，到期时下一轮还没有着落。到期日前两个月，出资方发来一封函提醒企业注意到期安排，那两个月是创始人融资以来最难的一段时间。</p></div><p>到期通常有三条路，每条路都有价格。</p><p>路径一是展期。双方同意把到期日往后推，代价通常是条款重新谈：提高票面利息、加深折扣率、下调估值上限、增加保护性条款或董事观察员席位。展期表面上是&quot;再给一次机会&quot;，实质上是在企业最没有筹码的时候重新定价一次。</p><p>路径二是按约定估值强制转股。较为规范的交易文件会在到期条款里写明：若到期未发生合格融资，票据按事先约定的估值或按上限估值自动转为股权。这条路对企业相对温和，因为它把不确定性提前锁死了——前提是签署时就写进去了。没写的话，到期时要另行协商，而协商的价格由当时的处境决定。</p><p>路径三是要求偿还本息，这是最危险的一条。企业通常没有现金一次性还本付息，一旦触发，可能引发交叉违约条款、被要求提供股权质押或创始人个人担保，严重的会走到清算门槛；而且这件事会被下一轮的潜在出资方看见——一家正被债权人追偿的公司，在尽调里是一个很难解释的红旗。</p><p>因此，签署阶段最该花时间的其实是到期条款，而不是折扣率。企业方要争取的写法有三项：把期限定得比自己对下一轮的时间预期长出一段余量；写明到期未发生合格融资时&quot;自动按约定估值转股&quot;，而不是&quot;由持有人选择偿还或转股&quot;；把选择权归属写清楚——由企业方选还是由持有人选，是完全不同的两份文件。</p><p data-ts="1">华尔街彤鼎俱乐部在企业主群体中反复讨论的，正是这一类看起来不起眼、真出事时决定生死的尾部条款。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、最惠国条款与一张接一张：后面签的会追溯改写前面签的</h2><div class="ts-lead"><span class="tag">结论先行</span><p>最惠国条款是指若企业此后向他人发行条件更优的同类工具，先前的持有人有权把自己的条款自动替换成更优的那一套，它的效果是把企业未来的每一次让步都复制到过去。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家做工业软件的企业在十个月里前后签了三张票据，头一张条款相对温和，第二张因为市场转冷让了一档，第三张为了赶在年底前到账让得更多；三张都带最惠国条款，于是转股时三张全部按最后那张的折扣率与估值上限执行。</p></div><p>这个机制的杀伤力在于它是单向的。企业每一次为了拿钱做出的妥协，都会自动向前传导；而企业后来谈到的任何优于从前的条件，不会向前追溯给自己带来任何好处。多签一张，不只是多一份稀释，而是可能把此前所有票据的稀释一起加深。</p><p>叠加还有一个更隐蔽的后果：转股基数的重复计算。多张票据在同一次合格融资时一起转股，如果交易文件没写清楚转股价的计算基数是&quot;转股前的完全稀释股本&quot;还是&quot;包含其他票据转股之后的股本&quot;，各方对同一笔交易会算出不同的股权表。这类争议往往在交割前夜才暴露，而那时所有人都在赶时间。</p><p>可以这样理解：最惠国条款像一份自动更新的合同模板，你以为签的是三份不同的协议，实际上签的是同一份协议的三个副本，而这份协议的内容永远等于你最狼狈那一次谈成的样子。所以企业方要么争取不写这一条，要么把它限制在&quot;仅适用于同一批次、同一期限内发行的工具&quot;，要么约定它只覆盖折扣率而不覆盖估值上限——三种限缩方式里，限定批次与期限最容易谈成。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、合格融资的门槛：写多高，是写给谁看的</h2><div class="ts-lead"><span class="tag">结论先行</span><p>合格融资是指触发票据自动转股的那一轮定价融资，其门槛通常以本轮到账金额并叠加融资性质要求来定义，这条线定得高还是定得低，对企业和出资方的利害是相反的。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家做预制食品的企业把合格融资门槛写成一个不低的金额，下一轮实际完成的规模没到那条线，票据因此没有自动转股，到期时反而变成了一笔要重新谈的债。</p></div><p>先说门槛定得高的效果。高门槛意味着小规模的融资不触发转股，出资方可以继续以债权身份等待一轮更大、定价更清晰的融资，从而避免在一次小额融资里被按偏低的价格转股。对企业方而言，高门槛的坏处是转股迟迟不发生，票据一直挂在资本结构里，利息持续累计，而且下一轮的潜在出资方会把这笔未转股的债权视为待处理事项，在尽调清单里单列一行。</p><p>再说门槛定得低的效果。门槛低则转股更容易触发，资本结构更早理清，对企业和后续出资方都省事；坏处是可能在一次规模很小、定价并不理想的融资里就被迫转股，而那一轮的价格会通过折扣率直接决定持有人拿走多少股权。</p><p>实践中还有两个定义要写死。其一是&quot;到账金额&quot;的口径：是本轮新增出资的合计金额，还是包含票据转股金额在内的总额——把票据自身转股的金额也计进去，就会出现自我触发的循环。其二是性质要求：是否必须为优先股融资、是否必须由外部机构领投、关联方追加出资与老股转让算不算数。</p><p data-ts="1">这些定义写得含糊，到时候就是一场关于&quot;这一轮算不算合格融资&quot;的争论，而争论期间公司做不了任何依赖股权结构确定的事。</p><p>关键在于，合格融资门槛不是一个技术性数字，它实际上是在约定&quot;这张票据什么时候结束&quot;。企业方应当结合自己对下一轮规模的现实预期来定这条线，而不是照抄模板里的数字。华尔街彤鼎俱乐部在企业主之间交流较多的，也正是这类模板条款与自身节奏之间的错配。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、申报之前必须清干净，以及谈到什么位置算安全</h2><div class="ts-lead"><span class="tag">结论先行</span><p>拟上市路径下，未转股的可转换票据属于影响股权结构清晰性的待处理事项，通常需要在申报前完成转股或终止，而清理这件事本身需要持有人配合，这就给了对方一次额外的谈判机会。</p></div><div class="ts-case"><span class="tag">实操案例 CASE</span><p>一家计划赴境外上市的消费类企业在申报前还挂着两张未转股的票据，中介机构要求先转股或先还清；其中一位持有人表示可以转股，但要求把估值上限按当年签署时的口径重新确认一遍，来回谈了一个多季度，申报节奏往后推了一档。</p></div><p>审核关注的核心是股权结构是否清晰、有无权属争议、有无可能导致控制权变动的未了结安排。一张尚未转股的可转换票据同时踩了这三点：它对应的股权数量在转股前不确定，转股价取决于未来事件，而它一旦转股就会改变股本结构。</p><p data-ts="1">因此实务中的通行做法是在申报前把它转成普通股或优先股、或者由企业偿还后终止，并由各方出具确认文件说明再无争议。具体要求因上市地、上市规则与审核口径而异，以各上市地监管机构与交易所现行正式文本为准，企业方应在启动申报前请中介机构逐项出具意见。</p><p>回到谈判本身。企业方把这类工具谈到什么位置算安全，可以用几条来自查。</p><p>其一，把折扣率与估值上限放进同一个算式，按下一轮的乐观、中性、悲观三档定价各算一遍转股后的股权表，看看最坏那一档自己还剩多少。签之前算不出这张表，就不该签。</p><p>其二，期限比自己对下一轮的时间预期多留一段余量，并把到期未触发时的处理写成&quot;自动按约定估值转股&quot;，而不是把选择权交给持有人。</p><p>其三，票面利息尽量争取转股时勾销，退一步是写单利、不写复利，再退一步是约定利息按不打折的价格折股。</p><p>其四，合格融资门槛按自己的现实预期设定，并把到账金额的口径与融资性质要求写死，避免自我触发和事后争论。</p><p>其五，最惠国条款能不写就不写，写了就限定批次与期限、把适用范围压到单一参数；同一时期发行的多张票据尽量用同一套模板、同一个到期日、同一个转股基数口径，避免转股时冒出多套算法。</p><p>其六，把申报时的自动转股提前写进交易文件，约定自提交上市申请之日起相关债权自动转为普通股、无需另行签署文件，同时约定申请撤回或逾期未完成上市时的恢复安排。这一句话能替企业省掉未来的一整轮谈判。</p><p>以上均为市场经验性表述，可行性受交易结构、出资方类型与适用法域影响，不构成固定标准，涉及法规口径的部分以监管机构现行正式文本为准。本质上，可转换票据不是一种更便宜的钱，而是一种把定价推迟到自己议价能力更弱的时点去完成的钱——它换来的是速度，付出的是对价格的控制权。因此它适合下一轮已经基本确定会来的企业，不适合拿它去赌下一轮会来。</p><p>彤鼎集团（香港）有限公司在这类事情上承担的是统筹与协调角色：与企业方一起把已签署的可转换工具做一次穿透梳理，按不同的下一轮定价情形测算转股后的股权表，在新一轮谈判中协助设计估值上限、到期处理与最惠国条款的限缩写法，并把申报时自动转股的安排提前嵌入交易文件。</p><p data-ts="1">涉及证券发行、承销、信托受托等持牌业务的，一律由具备相应牌照的合作机构承做。关键在于，这项工作的价值不在于把利息谈低一档，而在于让企业在签字那天就知道，最坏的情况下自己还握着多少。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="investor-veto-rights.html" style="color:#6b5426;font-weight:700;">一票否决权，能把一家公司卡到动不了</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="term-sheet-to-closing.html" style="color:#6b5426;font-weight:700;">融资死在交割前，通常经历六个阶段</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="founder-secondary-sale.html" style="color:#6b5426;font-weight:700;">创始人卖老股，卖多少会被拦</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

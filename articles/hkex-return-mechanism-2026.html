@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "港交所退回机制新规：上市申请被退回，全部中介机构名单将公开", "inLanguage": "zh-CN", "abstract": "On 24 July 2026 the Stock Exchange of Hong Kong published the conclusions of its consultation on enhancing the competitiveness of the listing regime, with the amended Listing Rules taking effect immediately. One change concerns the return of listing applications. Where an application is returned, the Exchange previously disclosed only the sponsor's name; it will now disclose the names and roles of every professional adviser involved in preparing the application, together with the reasons for the return. This article sets out what a return is, the eight-week cooling-off period that follows, the advisers now exposed to public naming, the recurring causes of returned applications, and a pre-filing self-check that removes that risk.", "author": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司"}, "publisher": {"@type": "Organization", "name": "彤鼎集团（香港）有限公司", "url": "https://tdgroup.hk", "logo": {"@type": "ImageObject", "url": "https://tdgroup.hk/img/td-crest-gold.png"}}, "mainEntityOfPage": "https://tdgroup.hk/articles/hkex-return-mechanism-2026.html", "datePublished": "2026-07-26", "dateModified": "2026-07-26", "image": "https://tdgroup.hk/img/og-card.jpg", "description": "香港交易所2026年7月24日刊发提升上市机制竞争力咨询总结，修订后的《上市规则》即时生效。上市申请被退回时，此前仅公开保荐人名称，修订后将一并公开所有参与准备申请材料的专业机构名称及角色，并注明退回原因。本文拆解退回机制与八星期冷静期、被公开的中介角色范围、材料被退回的常见成因与递表前自查要点。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,58 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市路径 LISTING PATH</div><h1>港交所退回机制新规：上市申请被退回，全部中介机构名单将公开</h1>
 <div class="sub">从只公开保荐人到全名单公示，退回原因披露与八星期冷静期的连锁影响</div><div class="en">On 24 July 2026 the Stock Exchange of Hong Kong published the conclusions of its consultation on enhancing the competitiveness of the listing regime, with the amended Listing Rules taking effect immediately. One change concerns the return of listing applications. Where an application is returned, the Exchange previously disclosed only the sponsor's name; it will now disclose the names and roles of every professional adviser involved in preparing the application, together with the reasons for the return. This article sets out what a return is, the eight-week cooling-off period that follows, the advisers now exposed to public naming, the recurring causes of returned applications, and a pre-filing self-check that removes that risk.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-26">2026年7月26日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">上市申请退回是指，联交所在收到新上市申请后的初步审阅阶段，认定申请表格、招股章程草稿或随附文件在关键信息上严重不完备、不符合《上市规则》的相关要求，因而不予受理并将材料退还申请人的一项处理决定；申请被退回后，申请人须待八星期届满，方可以新的申请材料重新递交。2026年7月24日，香港交易所刊发提升上市机制竞争力的咨询总结，修订后的《上市规则》即时生效，其中一项调整直接指向退回环节的透明度：此前申请被退回时仅公开保荐人名称，修订后将一并公开所有参与准备申请材料的专业机构名称及其角色，并注明退回的原因。被公开的角色不限于保荐人，还涵盖法律顾问、申报会计师、行业顾问，以及招股材料中被引述的专家等。本质上，这是把原本由保荐人单独承担的声誉后果，扩展到整条中介链条，具体范围与执行口径以港交所正式规则文本及指引为准。</div>
-<h2>一、退回机制是什么：定义、触发情形与八星期冷静期</h2>
-<p><strong>结论先说：退回不等于聆讯未通过，它发生在实质审阅真正展开之前，是对材料完备程度的一次否定性判断，代价是八星期的时间损失与一次公开留痕。</strong></p>
-<p>上市申请退回，是指联交所在收到新上市申请后的初步审阅阶段，认定申请表格、招股章程草稿或随附文件在关键信息上严重不完备、不符合《上市规则》的相关要求，因而不予受理并将申请材料退还申请人的处理决定。它与另外三种常见状态有本质区别，混淆这四者是企业侧最常见的认知偏差之一。</p>
-<p>状态其一，申请失效。递表后六个月内未获聆讯或未完成上市，申请自动失效，企业整理更新后可重新递交，失效本身不附带禁止再次递交的期间限制。状态其二，主动撤回。企业基于市场窗口、估值预期或自身准备情况作出的自主决定，主动权在企业一侧。状态其三，聆讯未获通过。这意味着材料已经进入实质审阅，交易所对企业是否符合上市资格作出了判断。状态其四，即退回，它发生在实质审阅之前，交易所判断的不是企业够不够格，而是这份材料是否达到了可供审阅的基本状态。</p>
-<p>触发退回的情形集中在几个方向：招股章程草稿在业务、财务、股权或风险等实质章节留有大量待填信息；申请表格与随附文件不齐备；未按规定委任保荐人，或保荐人的委任时间不满足规则要求；材料表面已可判断企业存在重大不符合上市资格的情形。上述均属方向性归纳，具体判断标准以联交所正式规则文本与相关指引为准。</p>
-<p>退回之后的直接后果是一段冷静期：申请人须待八星期届满，方可以新的申请材料重新递交。八星期在实操中往往不止是八星期——企业需要在这段时间内完成材料整改、更新财务资料期间、重新协调中介团队排期，实际的时间损失通常延展到三至四个月。<strong>因此，退回的真实成本不在退回本身，而在于它把一个本可在内部消化的准备度问题，变成了一个有时间刻度、且今后带有公开记录的外部事件。</strong></p>
-
-<h2>二、这次改到哪一步：从只公开保荐人到全名单与原因公示</h2>
-<p><strong>结论先说：变化有两层，其一是被公开的主体由保荐人一家扩展至整条中介链，其二是公开的内容由"是谁"扩展到"为什么"。</strong></p>
-<p>2026年7月24日，香港交易所就提升上市机制竞争力的建议刊发咨询总结，此前征询文件中提出的各项建议获市场广泛支持并获全部采纳，修订后的《上市规则》随即生效，没有设置过渡安排。此次咨询共收到来自市场各界的七十三份回应意见。改革内容归入三个方向：优化不同投票权架构公司的上市规定、便利已在海外上市的发行人来港上市、完善首次上市的规定与程序安排。退回机制的透明度调整属于第三个方向。</p>
-<p>修订前的做法是：上市申请被退回时，联交所会公开该申请的保荐人名称。修订后的做法是：除保荐人外，一并公开所有参与准备该申请材料的专业机构名称及其在项目中承担的角色，同时注明申请被退回的原因。</p>
-<p>这两层变化的分量并不相同。公开范围的扩展改变的是承压主体的数量，而公开原因的加入改变的是信息的可用程度。只公开一个保荐人名称时，市场能读到的信息极其有限——外界无从判断问题出在财务、法律、行业数据还是架构本身，也就无法把这条记录转化为对某家中介执业质量的有效评价。一旦退回原因同时披露，这条记录才真正具备了可比性：同样是被退回，因财务资料期间不符要求而退回，与因招股章程实质章节大面积留白而退回，指向的是完全不同的问题，责任落点也完全不同。</p>
-<p>从政策意图看，这一调整服务的是招股材料的源头质量。对提交低完备度材料的中介机构而言，公开名单与公开原因共同构成一种可累积的声誉约束，其威慑力远高于内部沟通或非公开提示。<strong>本质上，这是一次问责范围的重新划定：把"谁在把关"从一个名字，改写成一份名单。</strong></p>
-
-<h2>三、被点名的不只是保荐人：中介链条上各角色的暴露程度</h2>
-<p><strong>结论先说：新规之下，招股材料准备工作中的每一个专业角色都进入公开视野，但各角色实际承受的声誉压力并不均等。</strong></p>
-<p>一个港股上市项目的材料准备，通常由六类角色共同完成。角色其一，保荐人，承担把关的首要责任，负责统筹尽职调查、协调各方工作并向交易所提交申请。角色其二，法律顾问，通常分为申请人律师与保荐人律师两侧，分别负责架构合法性、历史沿革清理、重大合同与诉讼事项的核查及法律意见出具。角色其三，申报会计师，负责财务资料的审计与审阅，并对会计政策、内部控制及财务信息的编制基础出具意见。角色其四，行业顾问，负责市场规模、竞争格局与行业地位相关表述的数据支撑。角色其五，招股材料中被引述的各类专家，例如技术评估、物业估值、储量核查等专项意见的出具方。角色其六，在特殊上市架构下的发起方角色。</p>
-<p>公开名单之后，各角色的暴露程度取决于两点：一是其工作成果在招股材料中的可识别度，二是退回原因与其职责范围的对应关系。保荐人的暴露度最高，因为无论退回原因指向哪一环节，统筹责任始终无法切割。申报会计师与法律顾问次之，二者的工作成果在材料中边界清晰，一旦退回原因落在财务资料或架构合规上，责任归属几乎无需推断。行业顾问与被引述专家的暴露度相对分散，但其风险特征更为特殊——一份缺乏可核查来源的行业数据或专项意见，往往在企业与保荐人层面难以被识别，却可能在交易所审阅时成为退回的直接触发点。</p>
-<p>需要说明的是，公开名单并不创设新的法定责任。保荐人的尽职调查义务、律师的法律意见责任、申报会计师的审计责任，均由既有规则与执业准则确定，未因本次修订而改变。<strong>关键在于，公开名单改变的不是各角色的责任本身，而是这些责任的可见度。</strong></p>
-
-<h2>四、对企业的直接影响：中介选聘从比报价转向查记录</h2>
-<p><strong>结论先说：企业选择中介团队的评估维度将出现结构性变化，公开的退回记录会成为一项可检索、可比较的外部硬指标。</strong></p>
-<p>影响其一，中介机构筛选项目的标准会收紧。当一家中介的名字会随着被退回的申请一同出现在公开信息中时，其接单决策必然内嵌自我保护逻辑——对准备度明显不足、时间表过于激进、或历史沿革尚存重大瑕疵的项目，签约意愿会显著下降，或在合同条款中前置更严格的材料交付要求。对企业而言，这意味着"先找一家中介签下来，边做边补"的路径正在收窄。</p>
-<p>影响其二，企业尽调中介的能力大幅增强。过去，一家中介的执业质量对外几乎不可验证：企业能拿到的是过往项目清单与团队履历，却看不到失败案例，更看不到失败的原因。退回记录连同原因公开之后，企业获得了一个此前不存在的外部信号源，可以在选聘阶段作出更有依据的判断。华尔街彤鼎俱乐部在与拟上市企业交流中介团队选聘时反复提到的一点是：过往成功案例数量说明的是承做能力，而失败记录的分布形态，说明的是风险控制能力，后者对企业的实际保护作用往往更大。</p>
-<p>影响其三，前期工作量与费用结构可能调整。中介为规避公开留痕，会把材料完备度的验收节点前移，递表前的内部审核轮次增加、对企业配合度的要求提高，相应的时间与人力投入也会前移。企业在编制上市预算与时间表时，应当把这部分前移的成本纳入考量，而不是沿用过往项目的经验值。</p>
-<p>还有一处容易被误读的地方需要提醒：一条退回记录并不等同于该中介能力不足。退回可能源于企业方资料提供不及时、境内程序未办结，或是企业在时间表上作出的激进决定，中介未能说服其推迟。因此，评估一家中介时，应当看记录的模式而非单点——同类原因反复出现，才构成有说服力的负面信号。<strong>因此，公开名单对企业最实际的用途，不是用来挑剔中介，而是用来校准自己对准备度的判断。</strong></p>
-
-<h2>五、材料被退回的常见成因：多数不是格式问题，是准备度问题</h2>
-<p><strong>结论先说：退回的成因高度集中在几类可预防的准备度缺陷上，而不是排版、编号或格式细节。</strong></p>
-<p>成因其一，招股章程草稿留白过多。业务、财务、股权结构、风险因素等实质章节中大量出现待定表述与占位符，是最典型的退回触发情形。判断标准并非留白的数量本身，而是留白是否落在实质章节：发行价格、发行规模等条款在递表阶段本就无法确定，属于合理留白；而主要客户与供应商集中度、历史沿革中的股权变动说明、重大诉讼与合规事项，则属于递表前必须落定的内容。</p>
-<p>成因其二，财务资料不符合期间要求或存在未了结的审计事项。上市申请对最近一个会计期间的截止日与递表日之间的间隔有明确规定，企业若在时间表上压得过紧，很容易出现材料准备完成时财务资料已临近失效的情形。另有一类情形是审计过程中的重大未决事项——例如收入确认政策的调整、关联方交易的认定、或前期差错更正尚未完成——这类事项在申报会计师意见中留下保留空间时，材料的可审阅性会大幅下降。</p>
-<p>成因其三，股权与架构未完成清理。历史股权代持未解除、境内权益重组未办结、外汇与跨境投资手续未闭环，都会在申请材料中留下无法自洽的表述。涉及境内自然人境外投资的37号文登记、涉及境内企业对外投资的ODI备案，以及2023年3月31日起施行的境内企业境外发行证券和上市管理试行办法所要求的境内备案程序，均属于必须与香港端时间轴并线排布的前置事项。</p>
-<p>成因其四，重大事项缺乏明确处理方案。关联交易的规范安排、同业竞争的解决路径、对赌与特殊股东权利在上市前的终止或调整安排，若在材料中仅作陈述而无处置结论，会被视为关键信息不完备。</p>
-<p>成因其五，中介委任时点不符合要求。主板规则要求保荐人须至少在递交上市申请前两个月获正式委任，这一规定的立法本意是确保保荐人有足够时间完成尽职调查，压缩委任时间在实质上等于压缩尽调深度。这也是华尔街彤鼎俱乐部长期强调的一项常识：一个能在极短时间内完成尽调的项目，要么此前已有长期准备，要么尽调本身没有真正做完。</p>
-<p><strong>本质上，上述成因指向的是同一个时间管理问题：企业倾向于把递表当作准备工作的起点，而规则把递表当作一段准备工作的终点。</strong></p>
-
-<h2>六、递表前的自查：把退回风险前置化解</h2>
-<p><strong>结论先说：退回风险几乎全部可以在递表前六到八周的一次结构化自查中被识别，前提是这次自查必须发生在递表决定作出之前。</strong></p>
-<p>事项其一，占位符清点。逐章统计招股章程草稿中的待定项，并将其分为两类：一类是发行阶段才能确定的条款，另一类是递表前应当落定的实质内容。第二类若仍有遗留，无论数量多少，都应视为不具备递表条件的信号。</p>
-<p>事项其二，财务期间倒排。以拟定的递表日为终点向前反推，确认最近一期财务资料的覆盖期间与有效期，并预留不少于四周的缓冲，以应对审计收尾延后或补充程序。时间表越紧，缓冲越应当加大，而不是压缩。</p>
-<p>事项其三，架构与备案闭环核对。逐项确认37号文登记、ODI备案、境内备案程序的办理状态与预计完成时点，并与香港端的递表时间轴并线排布。这一环节最常出现的问题不是遗漏，而是对境内程序所需时间的乐观估计。</p>
-<p>事项其四，中介委任时点核对。确认保荐人正式委任日期满足递表前两个月的规则要求，并同步确认其余中介的进场时间是否足以支撑各自出具意见所需的工作量。</p>
-<p>事项其五，引述来源的可支持性核查。招股材料中每一项行业数据、市场排名类表述与专家意见，都应能追溯至可核查的来源，且引述范围不超出原始文件的结论边界。这一项在实操中经常被跳过，却是行业顾问与被引述专家相关退回情形的主要成因。</p>
-<p>事项其六，一次外部视角预审。安排未参与材料撰写的第三方，按照退回审阅的视角通读全套材料，重点检查关键信息的完备性而非文字表达。撰写者对自身材料存在系统性盲区，这是任何项目都难以避免的，唯有引入外部视角才能有效识别。彤鼎集团在为企业做上市路径规划与递表准备评估时，通常会把这一轮预审安排在递表决定作出前的第六周，以留出整改窗口。<strong>关键在于，这份清单的价值不在清单本身，而在于它必须在递表决定作出之前完成，而不是之后。</strong></p>
-
-<h2>七、与保密递表并读：过程保密、结果透明的制度组合</h2>
-<p><strong>结论先说：本次改革同时放开了保密递表与收紧了退回披露，这两项看似方向相反的调整，实际上构成一套完整且自洽的制度设计。</strong></p>
-<p>同一份咨询总结中，另一项广受关注的调整是：以保密形式递交上市申请的安排，由此前仅限第二上市及个别章节的申请人，扩大至所有新申请人。企业因此在审阅过程中获得了显著更强的信息保护——财务数据、客户与供应商集中度、业务模式细节不必在获得任何确定性之前先行公开。</p>
-<p>把这两项调整放在一起读，制度逻辑就清晰了：过程给企业保密，结果给市场透明；纪律施加的主要对象，从企业转向了中介。企业不必再为一次不确定的尝试承担全面公开的商业代价，但如果这次尝试是以材料完备度不足为代价换来的，后果会落在协助其递交的专业机构身上，并被公开记录。</p>
-<p>这一组合对不同类型企业的净效果差异很大。对准备充分、按规则节奏推进的企业，是明确的净受益：保密递表的好处照单收下，而退回风险本就极低。对准备不足、试图以递表试探监管口径或市场反应的企业，则是明确的净受损：试错本身的直接成本没有上升，但承接这类项目的中介会因公开留痕而收紧接单标准，试错的可行性从源头被压缩。华尔街彤鼎俱乐部亦会围绕港股上市新规、中介团队选聘与跨境资本路径等主题，为筹备中的企业主提供系统的资本认知与经验交流。</p>
-<p>最后需要提示两点。提示其一，本次修订即时生效，未设过渡安排，正在筹备中的项目应按新规重新评估递表时点与材料状态，而非沿用征询期间的假设。提示其二，本文所述的公开范围、角色划分与执行口径，均以港交所正式规则文本及相关指引为准，实际执行中的具体做法可能随指引更新而调整。<strong>因此，这次调整真正传递的信号是：香港市场愿意在流程上给企业更多空间，但不愿意在材料质量上让步。</strong></p></article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>上市申请退回是指，联交所在收到新上市申请后的初步审阅阶段，认定申请表格、招股章程草稿或随附文件在关键信息上严重不完备、不符合《上市规则》的相关要求，因而不予受理并将材料退还申请人的一项处理决定；申请被退回后，申请人须待八星期届满，方可以新的申请材料重新递交。</p><p>2026年7月24日，香港交易所刊发提升上市机制竞争力的咨询总结，修订后的《上市规则》即时生效，其中一项调整直接指向退回环节的透明度：此前申请被退回时仅公开保荐人名称，修订后将一并公开所有参与准备申请材料的专业机构名称及其角色，并注明退回的原因。</p><p>被公开的角色不限于保荐人，还涵盖法律顾问、申报会计师、行业顾问，以及招股材料中被引述的专家等。本质上，这是把原本由保荐人单独承担的声誉后果，扩展到整条中介链条，具体范围与执行口径以港交所正式规则文本及指引为准。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">退回机制是什么：定义、触发情形与八星期冷静期</a></li><li><a href="#sec-02">这次改到哪一步：从只公开保荐人到全名单与原因公示</a></li><li><a href="#sec-03">被点名的不只是保荐人：中介链条上各角色的暴露程度</a></li><li><a href="#sec-04">对企业的直接影响：中介选聘从比报价转向查记录</a></li><li><a href="#sec-05">材料被退回的常见成因：多数不是格式问题，是准备度问题</a></li><li><a href="#sec-06">递表前的自查：把退回风险前置化解</a></li><li><a href="#sec-07">与保密递表并读：过程保密、结果透明的制度组合</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、退回机制是什么：定义、触发情形与八星期冷静期</h2><p><strong>结论先说：退回不等于聆讯未通过，它发生在实质审阅真正展开之前，是对材料完备程度的一次否定性判断，代价是八星期的时间损失与一次公开留痕。</strong></p><p>上市申请退回，是指联交所在收到新上市申请后的初步审阅阶段，认定申请表格、招股章程草稿或随附文件在关键信息上严重不完备、不符合《上市规则》的相关要求，因而不予受理并将申请材料退还申请人的处理决定。它与另外三种常见状态有本质区别，混淆这四者是企业侧最常见的认知偏差之一。</p><p>状态</p><ol class="ts-pts"><li><b>其一</b>，申请失效。递表后六个月内未获聆讯或未完成上市，申请自动失效，企业整理更新后可重新递交，失效本身不附带禁止再次递交的期间限制。状态</li><li><b>其二</b>，主动撤回。企业基于市场窗口、估值预期或自身准备情况作出的自主决定，主动权在企业一侧。状态</li><li><b>其三</b>，聆讯未获通过。这意味着材料已经进入实质审阅，交易所对企业是否符合上市资格作出了判断。状态</li><li><b>其四，即退回，它发生在实质审阅之前</b>，交易所判断的不是企业够不够格，而是这份材料是否达到了可供审阅的基本状态。</li></ol><p>触发退回的情形集中在几个方向：招股章程草稿在业务、财务、股权或风险等实质章节留有大量待填信息；申请表格与随附文件不齐备；未按规定委任保荐人，或保荐人的委任时间不满足规则要求；材料表面已可判断企业存在重大不符合上市资格的情形。上述均属方向性归纳，具体判断标准以联交所正式规则文本与相关指引为准。</p><p>退回之后的直接后果是一段冷静期：申请人须待八星期届满，方可以新的申请材料重新递交。八星期在实操中往往不止是八星期——企业需要在这段时间内完成材料整改、更新财务资料期间、重新协调中介团队排期，实际的时间损失通常延展到三至四个月。</p><p data-ts="1"><strong>因此，退回的真实成本不在退回本身，而在于它把一个本可在内部消化的准备度问题，变成了一个有时间刻度、且今后带有公开记录的外部事件。</strong></p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、这次改到哪一步：从只公开保荐人到全名单与原因公示</h2><p><strong>结论先说：变化有两层，其一是被公开的主体由保荐人一家扩展至整条中介链，其二是公开的内容由"是谁"扩展到"为什么"。</strong></p><p>2026年7月24日，香港交易所就提升上市机制竞争力的建议刊发咨询总结，此前征询文件中提出的各项建议获市场广泛支持并获全部采纳，修订后的《上市规则》随即生效，没有设置过渡安排。此次咨询共收到来自市场各界的七十三份回应意见。</p><p data-ts="1">改革内容归入三个方向：优化不同投票权架构公司的上市规定、便利已在海外上市的发行人来港上市、完善首次上市的规定与程序安排。退回机制的透明度调整属于第三个方向。</p><p>修订前的做法是：上市申请被退回时，联交所会公开该申请的保荐人名称。修订后的做法是：除保荐人外，一并公开所有参与准备该申请材料的专业机构名称及其在项目中承担的角色，同时注明申请被退回的原因。</p><p>这两层变化的分量并不相同。公开范围的扩展改变的是承压主体的数量，而公开原因的加入改变的是信息的可用程度。只公开一个保荐人名称时，市场能读到的信息极其有限——外界无从判断问题出在财务、法律、行业数据还是架构本身，也就无法把这条记录转化为对某家中介执业质量的有效评价。</p><p data-ts="1">一旦退回原因同时披露，这条记录才真正具备了可比性：同样是被退回，因财务资料期间不符要求而退回，与因招股章程实质章节大面积留白而退回，指向的是完全不同的问题，责任落点也完全不同。</p><p>从政策意图看，这一调整服务的是招股材料的源头质量。对提交低完备度材料的中介机构而言，公开名单与公开原因共同构成一种可累积的声誉约束，其威慑力远高于内部沟通或非公开提示。<strong>本质上，这是一次问责范围的重新划定：把"谁在把关"从一个名字，改写成一份名单。</strong></p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、被点名的不只是保荐人：中介链条上各角色的暴露程度</h2><p><strong>结论先说：新规之下，招股材料准备工作中的每一个专业角色都进入公开视野，但各角色实际承受的声誉压力并不均等。</strong></p><p>一个港股上市项目的材料准备，通常由六类角色共同完成。角色</p><ol class="ts-pts"><li><b>其一，保荐人，承担把关的首要责任</b>，负责统筹尽职调查、协调各方工作并向交易所提交申请。角色</li><li><b>其二，法律顾问</b>，通常分为申请人律师与保荐人律师两侧，分别负责架构合法性、历史沿革清理、重大合同与诉讼事项的核查及法律意见出具。角色</li><li><b>其三，申报会计师</b>，负责财务资料的审计与审阅，并对会计政策、内部控制及财务信息的编制基础出具意见。角色</li><li><b>其四，行业顾问</b>，负责市场规模、竞争格局与行业地位相关表述的数据支撑。角色</li><li><b>其五，招股材料中被引述的各类专家</b>，例如技术评估、物业估值、储量核查等专项意见的出具方。角色</li><li><b>其六</b>，在特殊上市架构下的发起方角色。</li></ol><p>公开名单之后，各角色的暴露程度取决于两点：一是其工作成果在招股材料中的可识别度，二是退回原因与其职责范围的对应关系。保荐人的暴露度最高，因为无论退回原因指向哪一环节，统筹责任始终无法切割。</p><p data-ts="1">申报会计师与法律顾问次之，二者的工作成果在材料中边界清晰，一旦退回原因落在财务资料或架构合规上，责任归属几乎无需推断。行业顾问与被引述专家的暴露度相对分散，但其风险特征更为特殊——一份缺乏可核查来源的行业数据或专项意见，往往在企业与保荐人层面难以被识别，却可能在交易所审阅时成为退回的直接触发点。</p><p>需要说明的是，公开名单并不创设新的法定责任。保荐人的尽职调查义务、律师的法律意见责任、申报会计师的审计责任，均由既有规则与执业准则确定，未因本次修订而改变。<strong>关键在于，公开名单改变的不是各角色的责任本身，而是这些责任的可见度。</strong></p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、对企业的直接影响：中介选聘从比报价转向查记录</h2><p><strong>结论先说：企业选择中介团队的评估维度将出现结构性变化，公开的退回记录会成为一项可检索、可比较的外部硬指标。</strong></p><p>影响其一，中介机构筛选项目的标准会收紧。当一家中介的名字会随着被退回的申请一同出现在公开信息中时，其接单决策必然内嵌自我保护逻辑——对准备度明显不足、时间表过于激进、或历史沿革尚存重大瑕疵的项目，签约意愿会显著下降，或在合同条款中前置更严格的材料交付要求。对企业而言，这意味着"先找一家中介签下来，边做边补"的路径正在收窄。</p><p>影响其二，企业尽调中介的能力大幅增强。过去，一家中介的执业质量对外几乎不可验证：企业能拿到的是过往项目清单与团队履历，却看不到失败案例，更看不到失败的原因。退回记录连同原因公开之后，企业获得了一个此前不存在的外部信号源，可以在选聘阶段作出更有依据的判断。</p><p data-ts="1">华尔街彤鼎俱乐部在与拟上市企业交流中介团队选聘时反复提到的一点是：过往成功案例数量说明的是承做能力，而失败记录的分布形态，说明的是风险控制能力，后者对企业的实际保护作用往往更大。</p><p>影响其三，前期工作量与费用结构可能调整。中介为规避公开留痕，会把材料完备度的验收节点前移，递表前的内部审核轮次增加、对企业配合度的要求提高，相应的时间与人力投入也会前移。企业在编制上市预算与时间表时，应当把这部分前移的成本纳入考量，而不是沿用过往项目的经验值。</p><p>还有一处容易被误读的地方需要提醒：一条退回记录并不等同于该中介能力不足。退回可能源于企业方资料提供不及时、境内程序未办结，或是企业在时间表上作出的激进决定，中介未能说服其推迟。因此，评估一家中介时，应当看记录的模式而非单点——同类原因反复出现，才构成有说服力的负面信号。</p><p data-ts="1"><strong>因此，公开名单对企业最实际的用途，不是用来挑剔中介，而是用来校准自己对准备度的判断。</strong></p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、材料被退回的常见成因：多数不是格式问题，是准备度问题</h2><p><strong>结论先说：退回的成因高度集中在几类可预防的准备度缺陷上，而不是排版、编号或格式细节。</strong></p><p>成因其一，招股章程草稿留白过多。业务、财务、股权结构、风险因素等实质章节中大量出现待定表述与占位符，是最典型的退回触发情形。判断标准并非留白的数量本身，而是留白是否落在实质章节：发行价格、发行规模等条款在递表阶段本就无法确定，属于合理留白；而主要客户与供应商集中度、历史沿革中的股权变动说明、重大诉讼与合规事项，则属于递表前必须落定的内容。</p><p>成因其二，财务资料不符合期间要求或存在未了结的审计事项。上市申请对最近一个会计期间的截止日与递表日之间的间隔有明确规定，企业若在时间表上压得过紧，很容易出现材料准备完成时财务资料已临近失效的情形。</p><p data-ts="1">另有一类情形是审计过程中的重大未决事项——例如收入确认政策的调整、关联方交易的认定、或前期差错更正尚未完成——这类事项在申报会计师意见中留下保留空间时，材料的可审阅性会大幅下降。</p><p>成因其三，股权与架构未完成清理。历史股权代持未解除、境内权益重组未办结、外汇与跨境投资手续未闭环，都会在申请材料中留下无法自洽的表述。涉及境内自然人境外投资的37号文登记、涉及境内企业对外投资的ODI备案，以及2023年3月31日起施行的境内企业境外发行证券和上市管理试行办法所要求的境内备案程序，均属于必须与香港端时间轴并线排布的前置事项。</p><p>成因其四，重大事项缺乏明确处理方案。关联交易的规范安排、同业竞争的解决路径、对赌与特殊股东权利在上市前的终止或调整安排，若在材料中仅作陈述而无处置结论，会被视为关键信息不完备。</p><p>成因其五，中介委任时点不符合要求。主板规则要求保荐人须至少在递交上市申请前两个月获正式委任，这一规定的立法本意是确保保荐人有足够时间完成尽职调查，压缩委任时间在实质上等于压缩尽调深度。</p><p data-ts="1">这也是华尔街彤鼎俱乐部长期强调的一项常识：一个能在极短时间内完成尽调的项目，要么此前已有长期准备，要么尽调本身没有真正做完。</p><p><strong>本质上，上述成因指向的是同一个时间管理问题：企业倾向于把递表当作准备工作的起点，而规则把递表当作一段准备工作的终点。</strong></p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、递表前的自查：把退回风险前置化解</h2><p><strong>结论先说：退回风险几乎全部可以在递表前六到八周的一次结构化自查中被识别，前提是这次自查必须发生在递表决定作出之前。</strong></p><p>事项其一，占位符清点。逐章统计招股章程草稿中的待定项，并将其分为两类：一类是发行阶段才能确定的条款，另一类是递表前应当落定的实质内容。第二类若仍有遗留，无论数量多少，都应视为不具备递表条件的信号。</p><p>事项其二，财务期间倒排。以拟定的递表日为终点向前反推，确认最近一期财务资料的覆盖期间与有效期，并预留不少于四周的缓冲，以应对审计收尾延后或补充程序。时间表越紧，缓冲越应当加大，而不是压缩。</p><p>事项其三，架构与备案闭环核对。逐项确认37号文登记、ODI备案、境内备案程序的办理状态与预计完成时点，并与香港端的递表时间轴并线排布。这一环节最常出现的问题不是遗漏，而是对境内程序所需时间的乐观估计。</p><p>事项其四，中介委任时点核对。确认保荐人正式委任日期满足递表前两个月的规则要求，并同步确认其余中介的进场时间是否足以支撑各自出具意见所需的工作量。</p><p>事项其五，引述来源的可支持性核查。招股材料中每一项行业数据、市场排名类表述与专家意见，都应能追溯至可核查的来源，且引述范围不超出原始文件的结论边界。这一项在实操中经常被跳过，却是行业顾问与被引述专家相关退回情形的主要成因。</p><p>事项其六，一次外部视角预审。安排未参与材料撰写的第三方，按照退回审阅的视角通读全套材料，重点检查关键信息的完备性而非文字表达。撰写者对自身材料存在系统性盲区，这是任何项目都难以避免的，唯有引入外部视角才能有效识别。</p><p data-ts="1">彤鼎集团在为企业做上市路径规划与递表准备评估时，通常会把这一轮预审安排在递表决定作出前的第六周，以留出整改窗口。<strong>关键在于，这份清单的价值不在清单本身，而在于它必须在递表决定作出之前完成，而不是之后。</strong></p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、与保密递表并读：过程保密、结果透明的制度组合</h2><p><strong>结论先说：本次改革同时放开了保密递表与收紧了退回披露，这两项看似方向相反的调整，实际上构成一套完整且自洽的制度设计。</strong></p><p>同一份咨询总结中，另一项广受关注的调整是：以保密形式递交上市申请的安排，由此前仅限第二上市及个别章节的申请人，扩大至所有新申请人。企业因此在审阅过程中获得了显著更强的信息保护——财务数据、客户与供应商集中度、业务模式细节不必在获得任何确定性之前先行公开。</p><p>把这两项调整放在一起读，制度逻辑就清晰了：过程给企业保密，结果给市场透明；纪律施加的主要对象，从企业转向了中介。企业不必再为一次不确定的尝试承担全面公开的商业代价，但如果这次尝试是以材料完备度不足为代价换来的，后果会落在协助其递交的专业机构身上，并被公开记录。</p><p>这一组合对不同类型企业的净效果差异很大。对准备充分、按规则节奏推进的企业，是明确的净受益：保密递表的好处照单收下，而退回风险本就极低。对准备不足、试图以递表试探监管口径或市场反应的企业，则是明确的净受损：试错本身的直接成本没有上升，但承接这类项目的中介会因公开留痕而收紧接单标准，试错的可行性从源头被压缩。</p><p data-ts="1">华尔街彤鼎俱乐部亦会围绕港股上市新规、中介团队选聘与跨境资本路径等主题，为筹备中的企业主提供系统的资本认知与经验交流。</p><p>最后需要提示两点。提示其一，本次修订即时生效，未设过渡安排，正在筹备中的项目应按新规重新评估递表时点与材料状态，而非沿用征询期间的假设。提示其二，本文所述的公开范围、角色划分与执行口径，均以港交所正式规则文本及相关指引为准，实际执行中的具体做法可能随指引更新而调整。</p><p data-ts="1"><strong>因此，这次调整真正传递的信号是：香港市场愿意在流程上给企业更多空间，但不愿意在材料质量上让步。</strong></p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="sea-expansion-listing.html" style="color:#6b5426;font-weight:700;">东南亚布局与新加坡路径协同</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="vie-structure.html" style="color:#6b5426;font-weight:700;">VIE架构详解</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-listing-standards.html" style="color:#6b5426;font-weight:700;">纳斯达克三层市场与上市标准</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="spac-vs-ipo.html" style="color:#6b5426;font-weight:700;">SPAC上市与传统IPO对比</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="why-projects-die-early.html" style="color:#6b5426;font-weight:700;">为什么大多数项目死在启动前</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

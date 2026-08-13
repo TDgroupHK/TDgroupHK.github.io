@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"新加坡公司实质要求与税务优惠","inLanguage":"zh-CN","abstract":"What genuine operating substance means for a Singapore listing vehicle, and the 17% corporate rate and treaty benefits that follow.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/singapore-substance.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"企业税务最优化的完整操作指南。新加坡公司实质要求与税务优惠完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,61 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">跨境架构 STRUCTURING</div><h1>新加坡公司实质要求与税务优惠</h1>
 <div class="sub">企业税务最优化的完整操作指南</div><div class="en">What genuine operating substance means for a Singapore listing vehicle, and the 17% corporate rate and treaty benefits that follow.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">新加坡企业所得税名义税率17%，但通过初创免税、部分免税、各类产业发展激励政策，实际有效税率通常可以降低到10%以下。对采用新加坡路径赴美上市的中国企业来说，新加坡运营公司的税务规划是整体架构设计的重要组成部分。3个最重要的税务优惠是：新公司初创免税计划（首10万新元利润75%免税）、部分免税计划（首10万新元利润75%、次15万新元50%免税）、全球贸易商计划GTP（符合条件的贸易公司可享受5%至10%的优惠税率）。合理利用这些优惠，中型新加坡运营公司每年可节省税款数十万至数百万人民币。</div>
-<h2>一、新加坡税务体系的基本框架</h2>
-<p>新加坡的税务体系以简单、低税为核心特点，是全球对商业最友好的税务环境之一。</p>
-<h3>企业所得税（Corporate Income Tax）</h3>
-<p>名义税率17%，是亚太地区主要经济体中最低之一（相比中国大陆25%、香港16.5%、美国21%）。更重要的是，新加坡没有资本利得税（Capital Gains Tax）、没有遗产税（Estate Duty）、没有股息预提税（Withholding Tax on Dividends）。这三个没有，让新加坡成为跨境资本流动的极优载体。</p>
-<h3>单一税制（Single-tier Tax System）</h3>
-<p>新加坡采用单一税制——公司层面的利润缴税后，向股东分配股息时，股东无需就该股息再次缴税。这与中国大陆的两层税制（公司层面25%企业所得税加股东层面20%个人所得税）形成鲜明对比，税务效率更高。</p>
-<h3>地域来源原则（Territorial Basis of Taxation）</h3>
-<p>新加坡仅对来源于新加坡境内的收入征税，以及从境外汇入新加坡的收入。境外产生且不汇入新加坡的收入，原则上不在新加坡征税。这为国际化企业提供了极大的税务规划空间。</p>
-<h2>二、主要税务优惠计划</h2>
-<h3>优惠1：新公司初创免税计划（Start-up Tax Exemption Scheme）</h3>
-<p>适用于首次向新加坡税务局（IRAS）报税且满足条件的新成立公司，在前3个评税年度享受：</p>
-<p>前10万新元应税利润中的75%免税，即实际只对25%征税；第10万至第20万新元利润中的50%免税。</p>
-<p>举例：新加坡公司第一年应税利润20万新元，若无任何优惠应缴税17%即3.4万新元。享受初创免税后：前10万新元缴税25%×17%=0.425万新元；后10万新元缴税50%×17%=0.85万新元；合计缴税约1.275万新元，有效税率仅约6.4%。</p>
-<p>适用条件：公司注册于新加坡、股东不超过20人、所有股东均为个人而非法人（有例外条款）、公司不为投资控股公司。</p>
-<h3>优惠2：部分免税计划（Partial Tax Exemption）</h3>
-<p>适用于不符合初创免税条件的一般企业。每个评税年度：前10万新元应税利润75%免税；第10万至第20万新元利润50%免税。第20万新元以上按正常17%税率缴税。</p>
-<p>这是新加坡企业的通用税务底线——即便没有任何特殊资质，也能享受这个基础优惠。</p>
-<h3>优惠3：全球贸易商计划（Global Trader Programme，GTP）</h3>
-<p>由新加坡企业发展局（Enterprise Singapore）管理，对符合条件的贸易公司给予5%或10%的优惠企业所得税税率（远低于标准的17%）。</p>
-<p>适用条件：公司在新加坡从事实质性的大宗商品贸易（石油、天然气、矿产、农产品等）或结构性贸易融资活动；年贸易额通常要求达到一定规模；有真实的本地业务实质（员工、办公室等）。</p>
-<p>对于业务涉及大宗商品贸易或有结构性融资需求的中国企业，GTP是一个极具吸引力的税务优化工具，值得在新加坡公司业务规划阶段就纳入考量。</p>
-<h3>优惠4：区域总部激励计划（Regional Headquarters Award，RHQ）</h3>
-<p>企业在新加坡设立区域总部，承担对亚太区或更广范围的统筹管理职能，可以申请享受10%的优惠税率，适用期通常3年，可续期。</p>
-<p>适用条件：公司在新加坡配置足够数量的决策人员、从事真实的总部职能（如战略规划、财务管理、IT管理等）、有达到一定规模的本地业务投入。</p>
-<h3>优惠5：总部激励计划（International Headquarters Award，IHQ）</h3>
-<p>比RHQ更高级别的总部激励，享受5%的优惠税率。适用于真正以新加坡为全球总部、在新加坡有大规模业务投入和决策职能的跨国企业。门槛相对较高，但对规划全球化运营的企业极具吸引力。</p>
-<h3>优惠6：研发双倍扣除（Enhanced R&amp;D Deduction）</h3>
-<p>新加坡对企业在新加坡境内发生的合格研发费用，允许按照250%进行税务扣除（即1元研发费用可以抵扣2.5元的应税收入）。对有技术研发活动的科技企业，这是一个显著降低税负的工具。</p>
-<h2>三、与中国大陆的双重征税协定</h2>
-<p>新加坡与中国大陆签署了避免双重征税协定（DTA）。根据协定，来源于中国的股息、利息、特许权使用费等，在新加坡的预提税率可以降低，具体税率根据协定条款确定。</p>
-<p>更重要的是，新加坡与全球80多个国家和地区签署了DTA，让以新加坡为运营中心的企业在全球业务布局中享有广泛的税务协定网络。这是香港无法相比的优势（香港DTA数量约40个）。</p>
-<h2>四、常见的税务规划场景</h2>
-<h3>场景1：新加坡路径上市企业的利润归集</h3>
-<p>采用新加坡路径挂牌的企业，新加坡运营公司是主要的收入确认主体。通过合理设计服务协议和转让定价，可以把更多利润在新加坡层面确认，享受新加坡的低税率，而非在中国大陆以25%的企业所得税缴税。</p>
-<p>注意：转让定价必须符合臂长原则（Arm&#x27;s Length Principle），不能随意调整利润归属。新加坡税务局（IRAS）和中国税务机关均对不合理的转让定价有审查权。</p>
-<h3>场景2：利润汇回股东的税务路径</h3>
-<p>新加坡公司向股东（通常是开曼公司）分配股息时，无需缴纳预提税。开曼公司向最终的BVI公司或实控人分配时，同样通常无需缴税。这形成了一条从运营利润到实控人个人的低税或零税路径。</p>
-<p>实控人在最终收到资金时，需要按照所在国的税务规定申报个人所得税。如果实控人是中国税务居民，需要了解中国对境外所得的税务要求。</p>
-<h3>场景3：家族办公室与新加坡税务规划的协同</h3>
-<p>第20篇文章已经详细介绍了新加坡家族办公室的13O和13U税务豁免计划。对于在新加坡设立运营公司（赴美上市用途）同时设立家族办公室（财富管理用途）的企业主，可以把这两套架构协同设计，实现业务收入和投资收益的双重税务最优。</p>
-<h2>五、税务合规的重要提示</h2>
-<h3>提示1：实质重于形式</h3>
-<p>新加坡税务局（IRAS）和国际税务规则（特别是OECD的BEPS框架）都强调实质重于形式。仅仅在新加坡注册一家公司而没有真实的业务实质，无法享受税务优惠，甚至可能被认定为滥用税收协定。</p>
-<h3>提示2：CRS信息交换的影响</h3>
-<p>新加坡已加入CRS（Common Reporting Standard，共同申报准则）框架，会与中国和其他参与国自动交换金融账户信息。在新加坡账户里藏匿收入的时代已经结束，所有安排必须在阳光下操作。</p>
-<h3>提示3：每年合规申报不能缺</h3>
-<p>享受税务优惠不代表可以减少合规申报工作。新加坡公司每年必须：向IRAS申报企业所得税、向ACRA（会计与企业监管局）提交年度财务报表、如有员工须完成相关薪酬和公积金申报。</p>
-<h3>结语：税务规划是上市架构设计的重要组成</h3>
-<p>新加坡的税务优惠体系不是用来避税的，而是新加坡政府吸引真实商业活动落地的政策工具。只要企业在新加坡有真实的业务实质，就可以合法地享受这些优惠。</p>
-<p>彤鼎团队在辅导赴美上市的架构设计时，会将税务规划作为架构设计的核心维度之一，确保新加坡运营公司的设立和运营在享受税务优惠的同时，满足所有合规要求。一个好的税务架构，可以在公司上市后的每一年都为股东创造真实的额外回报。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>新加坡企业所得税名义税率17%，但通过初创免税、部分免税、各类产业发展激励政策，实际有效税率通常可以降低到10%以下。对采用新加坡路径赴美上市的中国企业来说，新加坡运营公司的税务规划是整体架构设计的重要组成部分。3个最重要的税务优惠是：新公司初创免税计划（首10万新元利润75%免税）、部分免税计划（首10万新元利润75%、次15万新元50%免税）、全球贸易商计划GTP（符合条件的贸易公司可享受5%至10%的优惠税率）。合理利用这些优惠，中型新加坡运营公司每年可节省税款数十万至数百万人民币。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">新加坡税务体系的基本框架</a></li><li><a href="#sec-02">主要税务优惠计划</a></li><li><a href="#sec-03">与中国大陆的双重征税协定</a></li><li><a href="#sec-04">常见的税务规划场景</a></li><li><a href="#sec-05">税务合规的重要提示</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、新加坡税务体系的基本框架</h2><p>新加坡的税务体系以简单、低税为核心特点，是全球对商业最友好的税务环境之一。</p><p><h3>企业所得税（Corporate Income Tax）</h3></p><p>名义税率17%，是亚太地区主要经济体中最低之一（相比中国大陆25%、香港16.5%、美国21%）。更重要的是，新加坡没有资本利得税（Capital Gains Tax）、没有遗产税（Estate Duty）、没有股息预提税（Withholding Tax on Dividends）。这三个没有，让新加坡成为跨境资本流动的极优载体。</p><p><h3>单一税制（Single-tier Tax System）</h3></p><p>新加坡采用单一税制——公司层面的利润缴税后，向股东分配股息时，股东无需就该股息再次缴税。这与中国大陆的两层税制（公司层面25%企业所得税加股东层面20%个人所得税）形成鲜明对比，税务效率更高。</p><p><h3>地域来源原则（Territorial Basis of Taxation）</h3></p><p>新加坡仅对来源于新加坡境内的收入征税，以及从境外汇入新加坡的收入。境外产生且不汇入新加坡的收入，原则上不在新加坡征税。这为国际化企业提供了极大的税务规划空间。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、主要税务优惠计划</h2><p><h3>优惠1：新公司初创免税计划（Start-up Tax Exemption Scheme）</h3></p><p>适用于首次向新加坡税务局（IRAS）报税且满足条件的新成立公司，在前3个评税年度享受：</p><p>前10万新元应税利润中的75%免税，即实际只对25%征税；第10万至第20万新元利润中的50%免税。</p><p>举例：新加坡公司第一年应税利润20万新元，若无任何优惠应缴税17%即3.4万新元。享受初创免税后：前10万新元缴税25%×17%=0.425万新元；后10万新元缴税50%×17%=0.85万新元；合计缴税约1.275万新元，有效税率仅约6.4%。</p><p>适用条件：公司注册于新加坡、股东不超过20人、所有股东均为个人而非法人（有例外条款）、公司不为投资控股公司。</p><p><h3>优惠2：部分免税计划（Partial Tax Exemption）</h3></p><p>适用于不符合初创免税条件的一般企业。每个评税年度：前10万新元应税利润75%免税；第10万至第20万新元利润50%免税。第20万新元以上按正常17%税率缴税。</p><p>这是新加坡企业的通用税务底线——即便没有任何特殊资质，也能享受这个基础优惠。</p><p><h3>优惠3：全球贸易商计划（Global Trader Programme，GTP）</h3></p><p>由新加坡企业发展局（Enterprise Singapore）管理，对符合条件的贸易公司给予5%或10%的优惠企业所得税税率（远低于标准的17%）。</p><p>适用条件：公司在新加坡从事实质性的大宗商品贸易（石油、天然气、矿产、农产品等）或结构性贸易融资活动；年贸易额通常要求达到一定规模；有真实的本地业务实质（员工、办公室等）。</p><p>对于业务涉及大宗商品贸易或有结构性融资需求的中国企业，GTP是一个极具吸引力的税务优化工具，值得在新加坡公司业务规划阶段就纳入考量。</p><p><h3>优惠4：区域总部激励计划（Regional Headquarters Award，RHQ）</h3></p><p>企业在新加坡设立区域总部，承担对亚太区或更广范围的统筹管理职能，可以申请享受10%的优惠税率，适用期通常3年，可续期。</p><p>适用条件：公司在新加坡配置足够数量的决策人员、从事真实的总部职能（如战略规划、财务管理、IT管理等）、有达到一定规模的本地业务投入。</p><p><h3>优惠5：总部激励计划（International Headquarters Award，IHQ）</h3></p><p>比RHQ更高级别的总部激励，享受5%的优惠税率。适用于真正以新加坡为全球总部、在新加坡有大规模业务投入和决策职能的跨国企业。门槛相对较高，但对规划全球化运营的企业极具吸引力。</p><p><h3>优惠6：研发双倍扣除（Enhanced R&amp;D Deduction）</h3></p><p>新加坡对企业在新加坡境内发生的合格研发费用，允许按照250%进行税务扣除（即1元研发费用可以抵扣2.5元的应税收入）。对有技术研发活动的科技企业，这是一个显著降低税负的工具。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、与中国大陆的双重征税协定</h2><p>新加坡与中国大陆签署了避免双重征税协定（DTA）。根据协定，来源于中国的股息、利息、特许权使用费等，在新加坡的预提税率可以降低，具体税率根据协定条款确定。</p><p>更重要的是，新加坡与全球80多个国家和地区签署了DTA，让以新加坡为运营中心的企业在全球业务布局中享有广泛的税务协定网络。这是香港无法相比的优势（香港DTA数量约40个）。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、常见的税务规划场景</h2><p><h3>场景1：新加坡路径上市企业的利润归集</h3></p><p>采用新加坡路径挂牌的企业，新加坡运营公司是主要的收入确认主体。通过合理设计服务协议和转让定价，可以把更多利润在新加坡层面确认，享受新加坡的低税率，而非在中国大陆以25%的企业所得税缴税。</p><p>注意：转让定价必须符合臂长原则（Arm&#x27;s Length Principle），不能随意调整利润归属。新加坡税务局（IRAS）和中国税务机关均对不合理的转让定价有审查权。</p><p><h3>场景2：利润汇回股东的税务路径</h3></p><p>新加坡公司向股东（通常是开曼公司）分配股息时，无需缴纳预提税。开曼公司向最终的BVI公司或实控人分配时，同样通常无需缴税。这形成了一条从运营利润到实控人个人的低税或零税路径。</p><p>实控人在最终收到资金时，需要按照所在国的税务规定申报个人所得税。如果实控人是中国税务居民，需要了解中国对境外所得的税务要求。</p><p><h3>场景3：家族办公室与新加坡税务规划的协同</h3></p><p>第20篇文章已经详细介绍了新加坡家族办公室的13O和13U税务豁免计划。对于在新加坡设立运营公司（赴美上市用途）同时设立家族办公室（财富管理用途）的企业主，可以把这两套架构协同设计，实现业务收入和投资收益的双重税务最优。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、税务合规的重要提示</h2><p><h3>提示1：实质重于形式</h3></p><p>新加坡税务局（IRAS）和国际税务规则（特别是OECD的BEPS框架）都强调实质重于形式。仅仅在新加坡注册一家公司而没有真实的业务实质，无法享受税务优惠，甚至可能被认定为滥用税收协定。</p><p><h3>提示2：CRS信息交换的影响</h3></p><p>新加坡已加入CRS（Common Reporting Standard，共同申报准则）框架，会与中国和其他参与国自动交换金融账户信息。在新加坡账户里藏匿收入的时代已经结束，所有安排必须在阳光下操作。</p><p><h3>提示3：每年合规申报不能缺</h3></p><p>享受税务优惠不代表可以减少合规申报工作。新加坡公司每年必须：向IRAS申报企业所得税、向ACRA（会计与企业监管局）提交年度财务报表、如有员工须完成相关薪酬和公积金申报。</p><p><h3>结语：税务规划是上市架构设计的重要组成</h3></p><p>新加坡的税务优惠体系不是用来避税的，而是新加坡政府吸引真实商业活动落地的政策工具。只要企业在新加坡有真实的业务实质，就可以合法地享受这些优惠。</p><p>彤鼎团队在辅导赴美上市的架构设计时，会将税务规划作为架构设计的核心维度之一，确保新加坡运营公司的设立和运营在享受税务优惠的同时，满足所有合规要求。一个好的税务架构，可以在公司上市后的每一年都为股东创造真实的额外回报。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="vie-deep-dive.html" style="color:#6b5426;font-weight:700;">VIE架构深度解读</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pre-ipo-share-price-fairness.html" style="color:#6b5426;font-weight:700;">备案前12个月新增股东：入股价格公允性如何说清楚</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="equity-evolution.html" style="color:#6b5426;font-weight:700;">股权架构演进路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hainan-ftp.html" style="color:#6b5426;font-weight:700;">海南自贸港企业上市与税收优惠</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="bvi-cayman-spv.html" style="color:#6b5426;font-weight:700;">BVI与开曼SPV设立运用</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

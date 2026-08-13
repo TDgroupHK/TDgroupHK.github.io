@@ -36,6 +36,9 @@ import json
 import datetime
 import subprocess
 
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import retypeset  # noqa: E402  排版引擎，新文章与存量文章共用同一套版式
+
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 os.chdir(REPO)
 
@@ -285,8 +288,12 @@ def build_html(meta, secs, date, related):
                 parts.append('<p><strong>%s</strong></p>' % esc(p, allow_links=True))
             else:
                 parts.append('<p>%s</p>' % esc(p, allow_links=True))
+    # 交给排版引擎重排：断长段、结论与案例分卡、枚举转编号要点、生成本文要点导览。
+    # 新文章与存量文章走同一套版式，不能只有老文章好看。
+    new_body, _ = retypeset.build('\n'.join(parts))
     s = re.sub(r'<article[^>]*>.*?</article>',
-               '<article>\n' + '\n'.join(parts) + '\n</article>', s, count=1, flags=re.S)
+               lambda _m: '<article>' + new_body + '</article>', s, count=1, flags=re.S)
+    s = retypeset.inject_css(s)
 
     # 相关阅读
     if related:

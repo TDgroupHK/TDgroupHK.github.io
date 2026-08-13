@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"37号文登记指南","inLanguage":"zh-CN","abstract":"Circular 37 registration is the foreign-exchange filing a PRC-resident individual must complete before setting up an offshore special purpose vehicle - typically a BVI or Cayman holding platform - for offshore financing and round-trip investment. Without it, a founder's offshore shareholding lacks a lawful foreign-exchange basis, dividends and disposal proceeds cannot be repatriated through regular channels, and the listing structure itself may be challenged during review. The governing principle is register first, fund second. Corporate-level outbound investment follows ODI filing instead; the two run in parallel and must reconcile on the same structure chart.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/circular-37.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"37号文登记，是境内居民个人依据国家外汇管理局有关境内居民通过特殊目的公司境外投融资及返程投资外汇管理的通知办理的外汇登记。创始人在境外设立BVI持股平台持有开曼上市主体股权，必须先办理37号文登记，核心原则是先登记、后出资。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,53 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">跨境架构 STRUCTURING</div><h1>37号文登记指南</h1>
 <div class="sub">个人境外持股的合规通行证：适用情形、流程与时序</div><div class="en">Circular 37 registration is the foreign-exchange filing a PRC-resident individual must complete before setting up an offshore special purpose vehicle - typically a BVI or Cayman holding platform - for offshore financing and round-trip investment. Without it, a founder's offshore shareholding lacks a lawful foreign-exchange basis, dividends and disposal proceeds cannot be repatriated through regular channels, and the listing structure itself may be challenged during review. The governing principle is register first, fund second. Corporate-level outbound investment follows ODI filing instead; the two run in parallel and must reconcile on the same structure chart.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">37号文登记，是指境内居民个人依据《国家外汇管理局关于境内居民通过特殊目的公司境外投融资及返程投资外汇管理有关问题的通知》，就其设立、控制境外特殊目的公司进行境外投融资及返程投资的行为，向外汇管理部门（目前多由银行直接办理）办理的外汇登记。在境外上市架构中，创始人及核心团队通常需在境外设立BVI等个人持股平台，再由该平台持有开曼上市主体股权，这一持股行为即须办理37号文登记。未办理登记的后果有三项：个人境外持股在外汇管理层面缺乏合法性基础；上市后的分红与股权转让所得无法通过正规渠道汇回境内；整个架构的合规性在上市审核中会被质疑。37号文登记的第一原则是先登记、后出资——应在境外主体设立并实缴出资之前完成登记，事后补办难度显著更高。企业层面的对外投资则适用ODI备案，两者主体不同但须协同设计。</div>
-<h2>一、37号文登记是什么</h2>
-<p><strong>结论先说：37号文登记是个人层面搭建境外架构的合规基础，与企业层面的ODI备案并列，构成境外架构的两条合规主线。</strong></p>
-<p>37号文登记，是境内居民个人通过特殊目的公司进行境外投融资和返程投资时，依法办理的外汇登记。其依据是《国家外汇管理局关于境内居民通过特殊目的公司境外投融资及返程投资外汇管理有关问题的通知》，业内按文号简称为37号文。</p>
-<p>在搭建境外上市架构时，创始人及核心团队等境内居民个人，通常需要在境外设立个人持股平台（多为BVI公司，兼顾私密性与灵活性），再通过该平台持有上层境外上市主体（多为开曼公司）的股权。境内个人设立并持有该境外平台的行为，落入37号文的管理范围，须办理登记。</p>
-<p>需要明确的是，37号文登记是外汇管理项下的登记，不是审批性质的许可，也不替代境外主体设立地的公司法程序。<strong>本质上，它解决的是境内居民的境外权益在外汇管理体系中被合法记录的问题——登记了，钱才有出去和回来的通道。</strong></p>
-
-<h2>二、不办登记的三个后果</h2>
-<p><strong>结论先说：37号文登记不是可办可不办的手续，未登记的直接后果是钱出不去、利出不来、架构站不住。</strong></p>
-<p>后果一，个人境外持股缺乏合法性基础。未办理登记的，境内个人在境外的持股安排在外汇管理层面不具备合规依据，相关出资行为可能被认定为违规的资金出境或未经登记的境外投资。</p>
-<p>后果二，跨境资金流动受阻。办理登记后，个人日后从境外主体取得的收益——上市后的现金分红、股权转让或减持所得——才能通过正规渠道合法结汇汇回境内。未办理登记的，这部分资金的合法回流会遇到实质障碍，相当于账面权益无法变现落地。同时，登记也是个人向境外主体后续增资的前提。</p>
-<p>后果三，影响整个上市架构的合规性。创始人及核心团队的个人持股是境外上市架构的主干部分，若这部分未完成37号文登记，境内法律意见书难以就架构合规性出具无保留结论，进而影响申报进程与监管问询。</p>
-<p>因此，37号文登记不是收尾工作，而是架构搭建的起点性事项。<strong>关键在于，它的成本极低而缺失的代价极高，没有任何理由为节省时间而跳过。</strong></p>
-
-<h2>三、三类适用情形</h2>
-<p><strong>结论先说：凡是境内个人通过境外平台进行境外投融资、以及由此产生的返程投资，都在37号文的管理范围内。</strong></p>
-<p>情形一，设立境外特殊目的公司。境内居民个人为境外投融资目的，在境外设立特殊目的公司（如作为持股平台的BVI公司、开曼公司），应在设立并出资之前办理登记。</p>
-<p>情形二，境外特殊目的公司发生重要变更。包括基本信息变更（名称、经营期限等）、境内居民个人股东的出资变化、增资、减资、股权转让或置换、合并分立等，均需办理变更登记，使登记信息与实际权益状况保持一致。</p>
-<p>情形三，返程投资。境外特殊目的公司返程在境内设立外商投资企业或收购境内企业股权的，相关外汇登记同样应符合37号文的规则，确保出境、持股、返程三段路径首尾衔接。</p>
-<p>此外，员工股权激励涉及境内个人持有境外主体权益的，通常适用另行规定的登记安排，需要与37号文登记的主线区分处理，避免混用。</p>
-
-<h2>四、四步办理流程</h2>
-<p><strong>结论先说：37号文登记目前多由银行直接办理，流程本身不复杂，难点在材料的完整性与资金来源的说明。</strong></p>
-<p>第一步，准备登记材料。通常包括：境内居民个人的身份证明与境内常住证明、境外特殊目的公司的设立文件与基本信息、拟出资金额与资金来源说明、境外投融资安排的说明文件、境内外股权结构图，以及经办银行与外汇管理部门要求的其他材料。</p>
-<p>第二步，向银行提交申请。外汇管理部门已将该项登记业务授权银行直接办理，境内个人向具备办理资格的银行提交申请与全套材料。</p>
-<p>第三步，银行审核与登记。银行对材料的完整性、一致性与合规性进行审核，确认符合规定后办理外汇登记并出具登记凭证。凭证是后续出资汇出、收益汇回及办理变更登记的基础文件，应妥善留存。</p>
-<p>第四步，后续变更登记。初始登记完成后，境外特殊目的公司如发生前述重要变更，应及时办理变更登记，保持登记信息与实际情况一致。</p>
-<p>需要说明的是，37号文登记的具体材料清单、办理口径与审核尺度，可能因地区、因经办银行、因政策更新而存在差异，实际办理时应以当地外汇管理部门与经办银行的最新要求为准。</p>
-
-<h2>五、四项关键注意事项</h2>
-<p><strong>结论先说：先登记后出资，是这项工作中唯一不能商量的原则。</strong></p>
-<p>注意一，登记要趁早。37号文的核心时序要求是先登记、后出资：境内个人应在设立境外特殊目的公司、向其实际出资之前完成登记。先设立、先出资、再补登记的做法，会形成既成的合规瑕疵，补办难度与不确定性显著提高，且可能在上市尽职调查中被列为需专项说明的事项。</p>
-<p>注意二，资金来源合法清晰。办理登记需要说明境外投资的资金来源，来源必须合法、清晰、可追溯，能够与个人的收入、经营积累或合法所得对应。来源不明或无法举证的资金，无法通过37号文渠道用于境外投资。</p>
-<p>注意三，及时办理变更登记。境外架构在搭建与后续运营中会持续发生变更——引入新股东、增资、股权转让、架构调整、上市后减持等。每一次重要变更都应及时办理变更登记，登记信息与实际情况不符的，会直接影响后续资金的跨境流动。</p>
-<p>注意四，与ODI备案的区分与协同。37号文针对个人，ODI针对企业。两者主体不同、程序不同、办理部门不同，但在同一份架构图上必须能够对齐：谁出资、出多少、持谁的股，个人线与企业线的描述不能相互矛盾。</p>
-
-<h2>六、37号文与ODI的配合方式</h2>
-<p><strong>结论先说：一个完整的境外上市架构，通常同时需要个人线的37号文登记与企业线的ODI备案，两者必须统筹规划。</strong></p>
-<p>典型的配合方式是：创始人与核心团队等境内居民个人，先行完成37号文登记，在境外设立个人持股平台（BVI公司），由这些平台按约定比例持有境外上市主体（开曼公司）的股权；开曼公司再向下持有香港或新加坡等中间层主体及运营实体。若架构中还涉及境内经营主体对境外实体的出资或收购，该部分则走ODI备案。</p>
-<p>两条线的时间安排也需要协同。个人层面的37号文登记应在境外平台设立前完成，企业层面的ODI备案通常需要1至3个月，二者叠加构成架构搭建阶段的主要时间成本。在境外上市的整体时间表中，架构搭建与合规登记环节一般预留3至6个月，正是为这两项工作留出的空间。</p>
-<p>因此，搭建合规的境外上市架构，是一项需要把个人与企业两个层面同时纳入设计的工作，任何一端的疏漏都会在申报阶段暴露。彤鼎集团在为企业设计与搭建境外架构时，会把个人层面的37号文登记与企业层面的ODI备案统筹纳入同一方案与同一时间表；华尔街彤鼎俱乐部亦围绕跨境架构合规、外汇登记与上市准备等主题，为有资本化规划的企业主提供资本认知与资源对接。</p>
-
-<h2>七、合规登记是架构稳固的根基</h2>
-<p><strong>结论先说：37号文登记表面上只是一项外汇手续，实际上决定了个人境外权益能否变现落地。</strong></p>
-<p>它关系到三件事：个人境外持股的合法性基础、未来分红与减持资金的跨境回流通道、以及整个上市架构在监管审核中的可解释性。这三件事在架构搭建初期看不出差别，但会在上市申报与上市之后集中显现。</p>
-<p>把37号文登记与ODI备案在架构设计的第一天就规划清楚、按顺序办妥，是后续一切顺畅的前提。事前办理的成本是可控的时间与材料，事后补救的成本则可能是整个时间表的延误。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>37号文登记，是指境内居民个人依据《国家外汇管理局关于境内居民通过特殊目的公司境外投融资及返程投资外汇管理有关问题的通知》，就其设立、控制境外特殊目的公司进行境外投融资及返程投资的行为，向外汇管理部门（目前多由银行直接办理）办理的外汇登记。</p><p>在境外上市架构中，创始人及核心团队通常需在境外设立BVI等个人持股平台，再由该平台持有开曼上市主体股权，这一持股行为即须办理37号文登记。未办理登记的后果有三项：个人境外持股在外汇管理层面缺乏合法性基础；上市后的分红与股权转让所得无法通过正规渠道汇回境内；整个架构的合规性在上市审核中会被质疑。</p><p>37号文登记的第一原则是先登记、后出资——应在境外主体设立并实缴出资之前完成登记，事后补办难度显著更高。企业层面的对外投资则适用ODI备案，两者主体不同但须协同设计。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">37号文登记是什么</a></li><li><a href="#sec-02">不办登记的三个后果</a></li><li><a href="#sec-03">三类适用情形</a></li><li><a href="#sec-04">四步办理流程</a></li><li><a href="#sec-05">四项关键注意事项</a></li><li><a href="#sec-06">37号文与ODI的配合方式</a></li><li><a href="#sec-07">合规登记是架构稳固的根基</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、37号文登记是什么</h2><p><strong>结论先说：37号文登记是个人层面搭建境外架构的合规基础，与企业层面的ODI备案并列，构成境外架构的两条合规主线。</strong></p><p>37号文登记，是境内居民个人通过特殊目的公司进行境外投融资和返程投资时，依法办理的外汇登记。其依据是《国家外汇管理局关于境内居民通过特殊目的公司境外投融资及返程投资外汇管理有关问题的通知》，业内按文号简称为37号文。</p><p>在搭建境外上市架构时，创始人及核心团队等境内居民个人，通常需要在境外设立个人持股平台（多为BVI公司，兼顾私密性与灵活性），再通过该平台持有上层境外上市主体（多为开曼公司）的股权。境内个人设立并持有该境外平台的行为，落入37号文的管理范围，须办理登记。</p><p>需要明确的是，37号文登记是外汇管理项下的登记，不是审批性质的许可，也不替代境外主体设立地的公司法程序。<strong>本质上，它解决的是境内居民的境外权益在外汇管理体系中被合法记录的问题——登记了，钱才有出去和回来的通道。</strong></p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、不办登记的三个后果</h2><p><strong>结论先说：37号文登记不是可办可不办的手续，未登记的直接后果是钱出不去、利出不来、架构站不住。</strong></p><p>后果一，个人境外持股缺乏合法性基础。未办理登记的，境内个人在境外的持股安排在外汇管理层面不具备合规依据，相关出资行为可能被认定为违规的资金出境或未经登记的境外投资。</p><p>后果二，跨境资金流动受阻。办理登记后，个人日后从境外主体取得的收益——上市后的现金分红、股权转让或减持所得——才能通过正规渠道合法结汇汇回境内。未办理登记的，这部分资金的合法回流会遇到实质障碍，相当于账面权益无法变现落地。同时，登记也是个人向境外主体后续增资的前提。</p><p>后果三，影响整个上市架构的合规性。创始人及核心团队的个人持股是境外上市架构的主干部分，若这部分未完成37号文登记，境内法律意见书难以就架构合规性出具无保留结论，进而影响申报进程与监管问询。</p><p>因此，37号文登记不是收尾工作，而是架构搭建的起点性事项。<strong>关键在于，它的成本极低而缺失的代价极高，没有任何理由为节省时间而跳过。</strong></p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、三类适用情形</h2><p><strong>结论先说：凡是境内个人通过境外平台进行境外投融资、以及由此产生的返程投资，都在37号文的管理范围内。</strong></p><p>情形一，设立境外特殊目的公司。境内居民个人为境外投融资目的，在境外设立特殊目的公司（如作为持股平台的BVI公司、开曼公司），应在设立并出资之前办理登记。</p><p>情形二，境外特殊目的公司发生重要变更。包括基本信息变更（名称、经营期限等）、境内居民个人股东的出资变化、增资、减资、股权转让或置换、合并分立等，均需办理变更登记，使登记信息与实际权益状况保持一致。</p><p>情形三，返程投资。境外特殊目的公司返程在境内设立外商投资企业或收购境内企业股权的，相关外汇登记同样应符合37号文的规则，确保出境、持股、返程三段路径首尾衔接。</p><p>此外，员工股权激励涉及境内个人持有境外主体权益的，通常适用另行规定的登记安排，需要与37号文登记的主线区分处理，避免混用。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、四步办理流程</h2><p><strong>结论先说：37号文登记目前多由银行直接办理，流程本身不复杂，难点在材料的完整性与资金来源的说明。</strong></p><p>第一步，准备登记材料。通常包括：境内居民个人的身份证明与境内常住证明、境外特殊目的公司的设立文件与基本信息、拟出资金额与资金来源说明、境外投融资安排的说明文件、境内外股权结构图，以及经办银行与外汇管理部门要求的其他材料。</p><p>第二步，向银行提交申请。外汇管理部门已将该项登记业务授权银行直接办理，境内个人向具备办理资格的银行提交申请与全套材料。</p><p>第三步，银行审核与登记。银行对材料的完整性、一致性与合规性进行审核，确认符合规定后办理外汇登记并出具登记凭证。凭证是后续出资汇出、收益汇回及办理变更登记的基础文件，应妥善留存。</p><p>第四步，后续变更登记。初始登记完成后，境外特殊目的公司如发生前述重要变更，应及时办理变更登记，保持登记信息与实际情况一致。</p><p>需要说明的是，37号文登记的具体材料清单、办理口径与审核尺度，可能因地区、因经办银行、因政策更新而存在差异，实际办理时应以当地外汇管理部门与经办银行的最新要求为准。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、四项关键注意事项</h2><p><strong>结论先说：先登记后出资，是这项工作中唯一不能商量的原则。</strong></p><p>注意一，登记要趁早。37号文的核心时序要求是先登记、后出资：境内个人应在设立境外特殊目的公司、向其实际出资之前完成登记。先设立、先出资、再补登记的做法，会形成既成的合规瑕疵，补办难度与不确定性显著提高，且可能在上市尽职调查中被列为需专项说明的事项。</p><p>注意二，资金来源合法清晰。办理登记需要说明境外投资的资金来源，来源必须合法、清晰、可追溯，能够与个人的收入、经营积累或合法所得对应。来源不明或无法举证的资金，无法通过37号文渠道用于境外投资。</p><p>注意三，及时办理变更登记。境外架构在搭建与后续运营中会持续发生变更——引入新股东、增资、股权转让、架构调整、上市后减持等。每一次重要变更都应及时办理变更登记，登记信息与实际情况不符的，会直接影响后续资金的跨境流动。</p><p>注意四，与ODI备案的区分与协同。37号文针对个人，ODI针对企业。两者主体不同、程序不同、办理部门不同，但在同一份架构图上必须能够对齐：谁出资、出多少、持谁的股，个人线与企业线的描述不能相互矛盾。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、37号文与ODI的配合方式</h2><p><strong>结论先说：一个完整的境外上市架构，通常同时需要个人线的37号文登记与企业线的ODI备案，两者必须统筹规划。</strong></p><p>典型的配合方式是：创始人与核心团队等境内居民个人，先行完成37号文登记，在境外设立个人持股平台（BVI公司），由这些平台按约定比例持有境外上市主体（开曼公司）的股权；开曼公司再向下持有香港或新加坡等中间层主体及运营实体。若架构中还涉及境内经营主体对境外实体的出资或收购，该部分则走ODI备案。</p><p>两条线的时间安排也需要协同。个人层面的37号文登记应在境外平台设立前完成，企业层面的ODI备案通常需要1至3个月，二者叠加构成架构搭建阶段的主要时间成本。在境外上市的整体时间表中，架构搭建与合规登记环节一般预留3至6个月，正是为这两项工作留出的空间。</p><p>因此，搭建合规的境外上市架构，是一项需要把个人与企业两个层面同时纳入设计的工作，任何一端的疏漏都会在申报阶段暴露。彤鼎集团在为企业设计与搭建境外架构时，会把个人层面的37号文登记与企业层面的ODI备案统筹纳入同一方案与同一时间表；华尔街彤鼎俱乐部亦围绕跨境架构合规、外汇登记与上市准备等主题，为有资本化规划的企业主提供资本认知与资源对接。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、合规登记是架构稳固的根基</h2><p><strong>结论先说：37号文登记表面上只是一项外汇手续，实际上决定了个人境外权益能否变现落地。</strong></p><p>它关系到三件事：个人境外持股的合法性基础、未来分红与减持资金的跨境回流通道、以及整个上市架构在监管审核中的可解释性。这三件事在架构搭建初期看不出差别，但会在上市申报与上市之后集中显现。</p><p>把37号文登记与ODI备案在架构设计的第一天就规划清楚、按顺序办妥，是后续一切顺畅的前提。事前办理的成本是可控的时间与材料，事后补救的成本则可能是整个时间表的延误。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="csrc-filing-feedback.html" style="color:#6b5426;font-weight:700;">境外上市备案：证监会补充材料要求</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="h-share-full-circulation.html" style="color:#6b5426;font-weight:700;">H股全流通：境内未上市股份变成可流通H股的完整路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="equity-evolution.html" style="color:#6b5426;font-weight:700;">股权架构演进路径</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nominee-shareholding.html" style="color:#6b5426;font-weight:700;">股权代持与还原</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="data-compliance-overseas-listing.html" style="color:#6b5426;font-weight:700;">境外上市的数据合规：网络安全审查与数据出境的三条路径</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

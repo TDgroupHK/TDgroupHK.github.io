@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"港股IPO爆发：上半年募资2080亿港元，中资企业为何集体转向香港","inLanguage":"zh-CN","abstract":"Hong Kong IPO proceeds reached HKD 208.015 billion in the first half of 2026, with 85 mainland-related listings versus 40 a year earlier, up 112.5 percent. This article examines the drivers behind the migration and the costs that are less often discussed, including liquidity stratification and the profile of companies for which Hong Kong is not the right venue.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/hk-ipo-surge-2026.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"2026年上半年港股募资总额2080.15亿港元，上市中资企业85家，较上年同期40家增长112.5%。本文分析路径迁移的三大驱动因素，以及港股的真实代价与四类不适合港股的企业。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,71 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市路径 LISTING PATH</div><h1>港股IPO爆发：上半年募资2080亿港元，中资企业为何集体转向香港</h1>
 <div class="sub">同比增长112.5%背后的路径迁移逻辑</div><div class="en">Hong Kong IPO proceeds reached HKD 208.015 billion in the first half of 2026, with 85 mainland-related listings versus 40 a year earlier, up 112.5 percent. This article examines the drivers behind the migration and the costs that are less often discussed, including liquidity stratification and the profile of companies for which Hong Kong is not the right venue.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">中资企业2026年集体转向香港上市，是美股端门槛抬高、境内备案制度提供确定性、港股估值与流动性同步改善三个条件叠加后的路径再平衡，而不是单一因素驱动的短期风潮。数据上，2026年第一季度港股含GEM合计40只新股挂牌，募资总额1100亿港元，创五年新高，同比增长489.3%；2026年上半年募资总额达2080.15亿港元，期内上市的中资企业85家，而2025年同期为40家，同比增长112.5%。同期的中国证监会境外上市备案数据显示，拟赴港上市企业252家，拟赴美54家，拟赴台1家，拟赴新加坡2家，港美之间约4.7比1的比例，说明迁移是有储备的、结构性的。但香港路径同样有代价：发行成本较高、审核周期不短、持续合规义务刚性，且并非所有企业都能获得足够的交易活跃度。关键在于，路径选择应当依据企业自身的行业属性、投资者结构与融资节奏，而不是依据榜单方向。</div>
-<h2>一、先把数字读准：2080.15亿港元与112.5%分别说明什么</h2>
-<p>结论先说：这组数字同时反映了募资规模的恢复与发行人结构的变化，两者含义不同，不能混为一谈。</p>
-<p>先看规模。2026年第一季度，港股含GEM合计40只新股挂牌，募资总额1100亿港元，创五年新高，同比增长489.3%。到上半年，募资总额累计达2080.15亿港元。489.3%这个季度增速之所以惊人，部分原因是上年同期基数偏低，因此单看增速容易失真，必须结合绝对规模一起看——一个季度1100亿港元的绝对量，才是市场承接能力恢复的直接证据。</p>
-<p>再看结构。2026年上半年在港上市的中资企业85家，2025年同期为40家，同比增长112.5%。这个数字反映的不是单笔交易变大，而是发行人数量翻倍。数量增长与规模增长同时出现，说明市场吸纳的不只是少数大型项目，中等规模发行人也重新获得了通道，这与只有头部项目能发出去的市场状态有本质区别。</p>
-<p><strong>储备量：252与54</strong></p>
-<p>更能说明趋势持续性的是备案端数据。中国证监会境外上市备案信息显示，拟赴港上市企业252家，拟赴美上市54家，拟赴台1家，拟赴新加坡2家。港美比例约为4.7比1。备案是上市流程的前置环节，这个比例代表的是未来一至两年的项目储备结构，而不是已经发生的结果。因此，当前的港股活跃度不是一次性释放，而是有存量支撑的。</p>
-<p>因此，读这组数字的正确方式是三层递进：一季度增速说明市场回暖的斜率，上半年的规模与家数说明回暖的广度，备案储备说明回暖的持续性。三层都成立时，才能称为路径迁移而非窗口行情。</p>
-<h2>二、驱动因素一：美股端门槛抬高，中小发行人被动出清</h2>
-<p>结论先说：美股不是关上了门，而是把门抬高到了特定规模之上，被挡在外面的中小发行人必须寻找替代路径。</p>
-<p>2026年5月14日，SEC批准纳斯达克新规，其中三条对中资企业影响直接：在华企业以IPO方式上市的，最低公众募资额不得低于2500万美元；以SPAC或其他业务合并方式上市的，无限制流通公众股市值不低于2500万美元；禁止以直接上市方式登陆纳斯达克全球市场（NGM）与纳斯达克资本市场（NCM）。</p>
-<p>这三条规则的组合效果，是把原本募资规模在千万美元级别的中小发行人挡在传统IPO之外，同时封闭了低成本的直接上市通道。结果在数据上清晰可见：2026年上半年中概股赴美共17只新股完成上市，其中15家通过SPAC路径，占比约88.2%，仅2家为传统IPO，总募资规模约15.56亿美元。传统IPO通道对中小发行人而言，实际上已经收窄。</p>
-<p><strong>被动出清的企业去了哪里</strong></p>
-<p>对一家原计划在美募资1500万至2000万美元的企业而言，选择有三：把发行规模提高至少一倍以达标，转向SPAC路径接受综合稀释，或者更换上市地。第一项受制于自身估值与承销能力，第二项需要承担约20%的Promote稀释、认股权证稀释与股东赎回风险。当这两项都不理想时，更换上市地就成为现实选项，而香港是这些企业在语言、会计准则衔接、投资者认知与地理半径上成本最低的替代地。</p>
-<p>此外，PCAOB审计底稿检查安排与《外国公司问责法》（HFCAA）框架带来的持续不确定性，虽然不构成即时障碍，但会进入企业的长期风险评估。对经营完全位于境内、且不依赖美元资本市场品牌溢价的企业而言，承担这层不确定性的必要性在下降。因此，美股端的变化既有硬性门槛，也有软性预期，两者同向叠加。</p>
-<h2>三、驱动因素二：备案制度提供了可预期的确定性</h2>
-<p>结论先说：企业选择上市地，比的不只是估值高低，更是流程能否被排期。备案制度的价值在于把不确定性转化为可管理的时间表。</p>
-<p>中国证监会境外上市备案管理制度自2023年3月31日起施行，境内企业以直接或间接方式赴境外上市，均需向证监会履行备案程序。制度施行之初，市场对流程时长与通过标准存在观望；随着实践积累，备案要求的材料范围、常见反馈问题类型、以及需要提前解决的合规事项已经形成相对稳定的预期。</p>
-<p><strong>确定性为什么值钱</strong></p>
-<p>对企业而言，上市项目最大的成本之一是时间不确定带来的连锁影响：审计报告有效期、对赌与回购条款的时间节点、员工股权激励的行权安排、以及业务扩张所依赖的资金到位时点。一个流程可预期的市场，允许企业把这些节点倒排成可执行的计划；一个流程不可预期的市场，则迫使企业为每个节点准备冗余方案，成本显著上升。</p>
-<p><strong>备案对港美是同一套要求</strong></p>
-<p>需要明确的是，备案义务不区分目的地。赴港上市与赴美上市同样需要备案，二者在境内合规环节上并无豁免差别。因此备案制度本身不是偏向香港的因素，真正起作用的是在同一套境内要求之下，境外端的规则确定性差异：港交所的上市规则、审核问询逻辑与时间预期相对稳定，而美股端在2026年5月出现了实质性的规则变更。</p>
-<p>从备案储备结构看，拟赴港252家、拟赴美54家、拟赴台1家、拟赴新加坡2家，说明企业在完成境内合规准备之后，绝大多数把境外端的落点选在了香港。本质上，企业选的不是哪里更宽松，而是哪里的规则在未来两年更不容易变。</p>
-<h2>四、驱动因素三：估值修复、流动性改善与投资者结构变化</h2>
-<p>结论先说：香港市场的吸引力回升，核心不是单一估值指标改善，而是承接能力、定价效率与投资者构成三者同时变化。</p>
-<p><strong>承接能力：从能不能发，到能发多大</strong></p>
-<p>一季度含GEM合计40只新股、募资1100亿港元，上半年累计2080.15亿港元，这一规模水平意味着市场已经能够消化连续的大型发行。对企业而言，承接能力直接决定发行规模的上限：市场承接力不足时，企业只能缩减发行比例，既拿不到需要的资金，又因流通盘过小损害上市后的交易质量。</p>
-<p><strong>发行人数量翻倍带来的正反馈</strong></p>
-<p>中资上市企业从上年同期的40家增至85家，数量层面的增长会形成正反馈：同类可比公司增多，分析师覆盖的边际成本下降，估值锚点更清晰，机构建仓的参照体系更完整。对一家新发行人而言，所处板块是否已有可比公司群体，直接影响其定价能力与上市后的关注度。</p>
-<p><strong>投资者结构：南向资金与国际资本的双重构成</strong></p>
-<p>香港市场的特点在于投资者构成的双重性：一端是通过互联互通机制参与的境内资金，对境内业务模式、行业周期与政策环境的理解成本较低；另一端是国际机构资金，带来跨境估值参照与外币融资能力。对主营业务在境内、但有跨境融资或跨境并购需求的企业，这种双重结构在理论上比单一投资者基础更契合其需求。</p>
-<p><strong>会计与信息披露的衔接成本</strong></p>
-<p>香港允许使用《香港财务报告准则》或《国际财务报告准则》，对境内企业而言，与既有会计体系的衔接工作量通常小于转换为美国准则；披露语言可用中文并行，招股文件、年报与投资者沟通材料的制作与维护成本相应较低。这些是不显眼但持续发生的成本项。</p>
-<p>因此，估值与流动性的改善不是一个孤立的市场现象，而是承接能力、可比公司密度与投资者结构共同作用的结果。关键在于，这些因素对不同行业的作用强度并不一致，企业不能用市场整体数据代替自身板块的判断。</p>
-<h2>五、必须写明的代价：香港路径不是低成本选项</h2>
-<p>结论先说：港股的规则确定性与投资者结构有优势，但发行成本、审核强度与持续义务同样是刚性的，任何一项都不因市场火热而减免。</p>
-<p><strong>其一，发行与中介成本</strong></p>
-<p>港股IPO需要保荐人、申报会计师、法律顾问（境内与境外）、行业顾问、以及承销团队等多方中介，费用结构中既有固定的中介费用，也有按募资额比例计收的承销佣金。对募资规模较小的发行人而言，固定成本占募资额的比例会被显著放大，导致净到手资金比例偏低。企业应当在启动前按不同募资规模情形测算总成本占比，而不是只看承销费率。</p>
-<p><strong>其二，审核周期与准备强度</strong></p>
-<p>上市申请前需要完成的工作包括：多个会计年度的审计与财务重述、重组与股权架构梳理、关联交易清理、业务合规意见（涉及资质、环保、劳动、数据等）、以及境内备案与ODI、外汇登记等前置手续。这些工作的时间消耗主要取决于企业自身的历史规范程度，而不是市场热度。市场好并不会让审计变快。</p>
-<p><strong>其三，持续义务的刚性</strong></p>
-<p>上市之后，公司须持续遵守披露规则、关联交易与须予公布交易的审批与公告要求、内幕消息处理机制、董事证券交易的限制与申报，以及独立董事与审计委员会的治理要求。这些义务对应的是常态化的人力与合规支出，且不随公司规模缩减而按比例下降。</p>
-<p><strong>其四，流动性并非人人可得</strong></p>
-<p>这是最容易被市场整体数据掩盖的风险。市场整体募资额创新高，不代表每一只新股都有充足的成交。缺乏可比公司群体、缺乏研究覆盖、自由流通量偏低的发行人，上市后可能长期处于低成交状态，表现为买卖价差扩大、大额交易难以执行、后续增发定价能力弱。上市地位与融资能力不是同一件事，这一点必须在决策阶段就说清楚。</p>
-<p>因此，香港路径是一条规则清晰但成本真实的路径。本质上，它奖励的是准备充分的企业，而不是急于寻找出口的企业。</p>
-<h2>六、哪些企业不适合把香港作为首选</h2>
-<p>结论先说：判断是否适合香港，应看四项——可比公司密度、募资规模、投资者语言、以及后续资本运作计划。</p>
-<p><strong>第一类：预计募资规模过小、且无法形成有效自由流通量的企业</strong></p>
-<p>若发行后的自由流通市值与预期日均成交额都处于极低水平，上市后大概率面临流动性不足。这类企业应当先评估是否需要通过引入基石或战略投资人扩大发行规模，或者推迟上市、先做大业务基础，而不是先取得上市地位再解决问题。</p>
-<p><strong>第二类：所处板块在港缺乏可比公司群体的企业</strong></p>
-<p>定价依赖参照。当某一细分行业在港没有形成公司群体时，机构缺少估值锚点，研究覆盖意愿低，企业需要独自承担投资者教育成本。这类企业需要评估：是否有其他市场已经形成该板块的估值体系。</p>
-<p><strong>第三类：核心投资者基础主要在其他市场的企业</strong></p>
-<p>若企业的产品市场、客户群体与产业链主要位于某一特定海外市场，在该市场上市可能带来品牌协同与产业投资者认知优势。上市地选择应当与业务地图相匹配，而不是与当期最活跃的市场相匹配。</p>
-<p><strong>第四类：短期内有高频再融资或并购换股需求、但治理准备不足的企业</strong></p>
-<p>港股对再融资、须予公布交易与关联交易有明确的审批与披露要求。若企业计划频繁进行股份增发或以股份支付并购对价，但内部决策机制与信息披露体系尚未成熟，上市后的资本运作节奏会受到明显制约。</p>
-<p>此外还有一类需要单独提醒：把上市本身当作目标、而非融资与治理升级手段的企业。这类企业在任何市场都会遇到同样的问题——上市完成之日，就是持续义务开始之时。</p>
-<h2>七、路径选择框架：把252比54读成结构而不是结论</h2>
-<p>结论先说：备案储备的港美比例反映的是群体选择的结果，单个企业的最优解仍需按自身条件推导。</p>
-<p><strong>五个自查问题</strong></p>
-<p>第一，可实现的募资规模是多少？按保守情形测算，是否足以支撑发行后的有效流通量与合理的成本占比。第二，所处板块在目标市场是否已有可比公司群体与研究覆盖。第三，投资者结构与企业的业务地图是否匹配，即谁最能理解你的商业模式。第四，未来二十四个月是否有明确的再融资或并购换股计划，目标市场的规则是否支持这一节奏。第五，境内合规基础是否具备，包括股权架构、ODI与外汇登记、历史沿革与关联交易的规范程度。</p>
-<p><strong>三条路径的定位差异</strong></p>
-<p>赴港上市的定位，是规则确定、投资者结构双重、与境内业务衔接成本较低，适合有一定规模、且业务重心在境内或亚太的企业；赴美传统IPO的定位，是在满足最低公众募资2500万美元门槛的前提下，获取美元资本市场的定价体系与后续融资工具；SPAC路径的定位，是以约20%的Promote稀释、认股权证稀释与赎回不确定性，换取3至6个月的交易执行周期与估值锁定，其适用前提是企业自身准备度已经很高。</p>
-<p>彤鼎集团的核心方法论为新加坡路径纳斯达克上市，即以新加坡作为跨境架构与资金通道的枢纽，在完成境内备案、ODI与外汇登记的前提下，分阶段推进审计规范、治理搭建与境外挂牌。这一方法论并不预设唯一目的地，而是先把可迁移的基础工作做扎实，再根据届时的规则环境选择落点。华尔街彤鼎俱乐部在企业家交流中长期讨论的也是同一个命题——先解决可控项，再判断不可控项。涉及Pre-IPO项目的部分，仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p>
-<p>因此，面对上半年2080.15亿港元的募资总额与112.5%的中资企业家数增长，企业需要做的不是判断风口是否还在，而是核对自身是否具备承接这个窗口的条件。本质上，市场数据决定的是窗口是否开着，企业条件决定的是能否走进去，两者缺一不可。如需就企业自身情况做上市地评估与路径规划，可通过 liaoqijie@tdgroup.hk 与彤鼎集团团队联系。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>中资企业2026年集体转向香港上市，是美股端门槛抬高、境内备案制度提供确定性、港股估值与流动性同步改善三个条件叠加后的路径再平衡，而不是单一因素驱动的短期风潮。数据上，2026年第一季度港股含GEM合计40只新股挂牌，募资总额1100亿港元，创五年新高，同比增长489.3%；2026年上半年募资总额达2080.15亿港元，期内上市的中资企业85家，而2025年同期为40家，同比增长112.5%。</p><p>同期的中国证监会境外上市备案数据显示，拟赴港上市企业252家，拟赴美54家，拟赴台1家，拟赴新加坡2家，港美之间约4.7比1的比例，说明迁移是有储备的、结构性的。但香港路径同样有代价：发行成本较高、审核周期不短、持续合规义务刚性，且并非所有企业都能获得足够的交易活跃度。</p><p>关键在于，路径选择应当依据企业自身的行业属性、投资者结构与融资节奏，而不是依据榜单方向。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">先把数字读准：2080.15亿港元与112.5%分别说明什么</a></li><li><a href="#sec-02">驱动因素一：美股端门槛抬高，中小发行人被动出清</a></li><li><a href="#sec-03">驱动因素二：备案制度提供了可预期的确定性</a></li><li><a href="#sec-04">驱动因素三：估值修复、流动性改善与投资者结构变化</a></li><li><a href="#sec-05">必须写明的代价：香港路径不是低成本选项</a></li><li><a href="#sec-06">哪些企业不适合把香港作为首选</a></li><li><a href="#sec-07">路径选择框架：把252比54读成结构而不是结论</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、先把数字读准：2080.15亿港元与112.5%分别说明什么</h2><p>结论先说：这组数字同时反映了募资规模的恢复与发行人结构的变化，两者含义不同，不能混为一谈。</p><p>先看规模。2026年第一季度，港股含GEM合计40只新股挂牌，募资总额1100亿港元，创五年新高，同比增长489.3%。到上半年，募资总额累计达2080.15亿港元。489.3%这个季度增速之所以惊人，部分原因是上年同期基数偏低，因此单看增速容易失真，必须结合绝对规模一起看——一个季度1100亿港元的绝对量，才是市场承接能力恢复的直接证据。</p><p>再看结构。2026年上半年在港上市的中资企业85家，2025年同期为40家，同比增长112.5%。这个数字反映的不是单笔交易变大，而是发行人数量翻倍。数量增长与规模增长同时出现，说明市场吸纳的不只是少数大型项目，中等规模发行人也重新获得了通道，这与只有头部项目能发出去的市场状态有本质区别。</p><p><strong>储备量：252与54</strong></p><p>更能说明趋势持续性的是备案端数据。中国证监会境外上市备案信息显示，拟赴港上市企业252家，拟赴美上市54家，拟赴台1家，拟赴新加坡2家。港美比例约为4.7比1。备案是上市流程的前置环节，这个比例代表的是未来一至两年的项目储备结构，而不是已经发生的结果。因此，当前的港股活跃度不是一次性释放，而是有存量支撑的。</p><p>因此，读这组数字的正确方式是三层递进：一季度增速说明市场回暖的斜率，上半年的规模与家数说明回暖的广度，备案储备说明回暖的持续性。三层都成立时，才能称为路径迁移而非窗口行情。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、驱动因素一：美股端门槛抬高，中小发行人被动出清</h2><p>结论先说：美股不是关上了门，而是把门抬高到了特定规模之上，被挡在外面的中小发行人必须寻找替代路径。</p><p>2026年5月14日，SEC批准纳斯达克新规，其中三条对中资企业影响直接：在华企业以IPO方式上市的，最低公众募资额不得低于2500万美元；以SPAC或其他业务合并方式上市的，无限制流通公众股市值不低于2500万美元；禁止以直接上市方式登陆纳斯达克全球市场（NGM）与纳斯达克资本市场（NCM）。</p><p>这三条规则的组合效果，是把原本募资规模在千万美元级别的中小发行人挡在传统IPO之外，同时封闭了低成本的直接上市通道。结果在数据上清晰可见：2026年上半年中概股赴美共17只新股完成上市，其中15家通过SPAC路径，占比约88.2%，仅2家为传统IPO，总募资规模约15.56亿美元。传统IPO通道对中小发行人而言，实际上已经收窄。</p><p><strong>被动出清的企业去了哪里</strong></p><p>对一家原计划在美募资1500万至2000万美元的企业而言，选择有三：把发行规模提高至少一倍以达标，转向SPAC路径接受综合稀释，或者更换上市地。第一项受制于自身估值与承销能力，第二项需要承担约20%的Promote稀释、认股权证稀释与股东赎回风险。</p><p data-ts="1">当这两项都不理想时，更换上市地就成为现实选项，而香港是这些企业在语言、会计准则衔接、投资者认知与地理半径上成本最低的替代地。</p><p>此外，PCAOB审计底稿检查安排与《外国公司问责法》（HFCAA）框架带来的持续不确定性，虽然不构成即时障碍，但会进入企业的长期风险评估。对经营完全位于境内、且不依赖美元资本市场品牌溢价的企业而言，承担这层不确定性的必要性在下降。因此，美股端的变化既有硬性门槛，也有软性预期，两者同向叠加。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、驱动因素二：备案制度提供了可预期的确定性</h2><p>结论先说：企业选择上市地，比的不只是估值高低，更是流程能否被排期。备案制度的价值在于把不确定性转化为可管理的时间表。</p><p>中国证监会境外上市备案管理制度自2023年3月31日起施行，境内企业以直接或间接方式赴境外上市，均需向证监会履行备案程序。制度施行之初，市场对流程时长与通过标准存在观望；随着实践积累，备案要求的材料范围、常见反馈问题类型、以及需要提前解决的合规事项已经形成相对稳定的预期。</p><p><strong>确定性为什么值钱</strong></p><p>对企业而言，上市项目最大的成本之一是时间不确定带来的连锁影响：审计报告有效期、对赌与回购条款的时间节点、员工股权激励的行权安排、以及业务扩张所依赖的资金到位时点。一个流程可预期的市场，允许企业把这些节点倒排成可执行的计划；一个流程不可预期的市场，则迫使企业为每个节点准备冗余方案，成本显著上升。</p><p><strong>备案对港美是同一套要求</strong></p><p>需要明确的是，备案义务不区分目的地。赴港上市与赴美上市同样需要备案，二者在境内合规环节上并无豁免差别。因此备案制度本身不是偏向香港的因素，真正起作用的是在同一套境内要求之下，境外端的规则确定性差异：港交所的上市规则、审核问询逻辑与时间预期相对稳定，而美股端在2026年5月出现了实质性的规则变更。</p><p>从备案储备结构看，拟赴港252家、拟赴美54家、拟赴台1家、拟赴新加坡2家，说明企业在完成境内合规准备之后，绝大多数把境外端的落点选在了香港。本质上，企业选的不是哪里更宽松，而是哪里的规则在未来两年更不容易变。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、驱动因素三：估值修复、流动性改善与投资者结构变化</h2><p>结论先说：香港市场的吸引力回升，核心不是单一估值指标改善，而是承接能力、定价效率与投资者构成三者同时变化。</p><p><strong>承接能力：从能不能发，到能发多大</strong></p><p>一季度含GEM合计40只新股、募资1100亿港元，上半年累计2080.15亿港元，这一规模水平意味着市场已经能够消化连续的大型发行。对企业而言，承接能力直接决定发行规模的上限：市场承接力不足时，企业只能缩减发行比例，既拿不到需要的资金，又因流通盘过小损害上市后的交易质量。</p><p><strong>发行人数量翻倍带来的正反馈</strong></p><p>中资上市企业从上年同期的40家增至85家，数量层面的增长会形成正反馈：同类可比公司增多，分析师覆盖的边际成本下降，估值锚点更清晰，机构建仓的参照体系更完整。对一家新发行人而言，所处板块是否已有可比公司群体，直接影响其定价能力与上市后的关注度。</p><p><strong>投资者结构：南向资金与国际资本的双重构成</strong></p><p>香港市场的特点在于投资者构成的双重性：一端是通过互联互通机制参与的境内资金，对境内业务模式、行业周期与政策环境的理解成本较低；另一端是国际机构资金，带来跨境估值参照与外币融资能力。</p><p data-ts="1">对主营业务在境内、但有跨境融资或跨境并购需求的企业，这种双重结构在理论上比单一投资者基础更契合其需求。</p><p><strong>会计与信息披露的衔接成本</strong></p><p>香港允许使用《香港财务报告准则》或《国际财务报告准则》，对境内企业而言，与既有会计体系的衔接工作量通常小于转换为美国准则；披露语言可用中文并行，招股文件、年报与投资者沟通材料的制作与维护成本相应较低。这些是不显眼但持续发生的成本项。</p><p>因此，估值与流动性的改善不是一个孤立的市场现象，而是承接能力、可比公司密度与投资者结构共同作用的结果。关键在于，这些因素对不同行业的作用强度并不一致，企业不能用市场整体数据代替自身板块的判断。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、必须写明的代价：香港路径不是低成本选项</h2><p>结论先说：港股的规则确定性与投资者结构有优势，但发行成本、审核强度与持续义务同样是刚性的，任何一项都不因市场火热而减免。</p><p><strong>其一，发行与中介成本</strong></p><p>港股IPO需要保荐人、申报会计师、法律顾问（境内与境外）、行业顾问、以及承销团队等多方中介，费用结构中既有固定的中介费用，也有按募资额比例计收的承销佣金。对募资规模较小的发行人而言，固定成本占募资额的比例会被显著放大，导致净到手资金比例偏低。企业应当在启动前按不同募资规模情形测算总成本占比，而不是只看承销费率。</p><p><strong>其二，审核周期与准备强度</strong></p><p>上市申请前需要完成的工作包括：多个会计年度的审计与财务重述、重组与股权架构梳理、关联交易清理、业务合规意见（涉及资质、环保、劳动、数据等）、以及境内备案与ODI、外汇登记等前置手续。</p><p data-ts="1">这些工作的时间消耗主要取决于企业自身的历史规范程度，而不是市场热度。市场好并不会让审计变快。</p><p><strong>其三，持续义务的刚性</strong></p><p>上市之后，公司须持续遵守披露规则、关联交易与须予公布交易的审批与公告要求、内幕消息处理机制、董事证券交易的限制与申报，以及独立董事与审计委员会的治理要求。这些义务对应的是常态化的人力与合规支出，且不随公司规模缩减而按比例下降。</p><p><strong>其四，流动性并非人人可得</strong></p><p>这是最容易被市场整体数据掩盖的风险。市场整体募资额创新高，不代表每一只新股都有充足的成交。缺乏可比公司群体、缺乏研究覆盖、自由流通量偏低的发行人，上市后可能长期处于低成交状态，表现为买卖价差扩大、大额交易难以执行、后续增发定价能力弱。上市地位与融资能力不是同一件事，这一点必须在决策阶段就说清楚。</p><p>因此，香港路径是一条规则清晰但成本真实的路径。本质上，它奖励的是准备充分的企业，而不是急于寻找出口的企业。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、哪些企业不适合把香港作为首选</h2><p>结论先说：判断是否适合香港，应看四项——可比公司密度、募资规模、投资者语言、以及后续资本运作计划。</p><p><strong>第一类：预计募资规模过小、且无法形成有效自由流通量的企业</strong></p><p>若发行后的自由流通市值与预期日均成交额都处于极低水平，上市后大概率面临流动性不足。这类企业应当先评估是否需要通过引入基石或战略投资人扩大发行规模，或者推迟上市、先做大业务基础，而不是先取得上市地位再解决问题。</p><p><strong>第二类：所处板块在港缺乏可比公司群体的企业</strong></p><p>定价依赖参照。当某一细分行业在港没有形成公司群体时，机构缺少估值锚点，研究覆盖意愿低，企业需要独自承担投资者教育成本。这类企业需要评估：是否有其他市场已经形成该板块的估值体系。</p><p><strong>第三类：核心投资者基础主要在其他市场的企业</strong></p><p>若企业的产品市场、客户群体与产业链主要位于某一特定海外市场，在该市场上市可能带来品牌协同与产业投资者认知优势。上市地选择应当与业务地图相匹配，而不是与当期最活跃的市场相匹配。</p><p><strong>第四类：短期内有高频再融资或并购换股需求、但治理准备不足的企业</strong></p><p>港股对再融资、须予公布交易与关联交易有明确的审批与披露要求。若企业计划频繁进行股份增发或以股份支付并购对价，但内部决策机制与信息披露体系尚未成熟，上市后的资本运作节奏会受到明显制约。</p><p>此外还有一类需要单独提醒：把上市本身当作目标、而非融资与治理升级手段的企业。这类企业在任何市场都会遇到同样的问题——上市完成之日，就是持续义务开始之时。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、路径选择框架：把252比54读成结构而不是结论</h2><p>结论先说：备案储备的港美比例反映的是群体选择的结果，单个企业的最优解仍需按自身条件推导。</p><p><strong>五个自查问题</strong></p><p>第一，可实现的募资规模是多少？按保守情形测算，是否足以支撑发行后的有效流通量与合理的成本占比。第二，所处板块在目标市场是否已有可比公司群体与研究覆盖。第三，投资者结构与企业的业务地图是否匹配，即谁最能理解你的商业模式。</p><p data-ts="1">第四，未来二十四个月是否有明确的再融资或并购换股计划，目标市场的规则是否支持这一节奏。第五，境内合规基础是否具备，包括股权架构、ODI与外汇登记、历史沿革与关联交易的规范程度。</p><p><strong>三条路径的定位差异</strong></p><p>赴港上市的定位，是规则确定、投资者结构双重、与境内业务衔接成本较低，适合有一定规模、且业务重心在境内或亚太的企业；赴美传统IPO的定位，是在满足最低公众募资2500万美元门槛的前提下，获取美元资本市场的定价体系与后续融资工具；SPAC路径的定位，是以约20%的Promote稀释、认股权证稀释与赎回不确定性，换取3至6个月的交易执行周期与估值锁定，其适用前提是企业自身准备度已经很高。</p><p>彤鼎集团的核心方法论为新加坡路径纳斯达克上市，即以新加坡作为跨境架构与资金通道的枢纽，在完成境内备案、ODI与外汇登记的前提下，分阶段推进审计规范、治理搭建与境外挂牌。这一方法论并不预设唯一目的地，而是先把可迁移的基础工作做扎实，再根据届时的规则环境选择落点。</p><p data-ts="1">华尔街彤鼎俱乐部在企业家交流中长期讨论的也是同一个命题——先解决可控项，再判断不可控项。涉及Pre-IPO项目的部分，仅面向符合条件的合格投资者，充分揭示风险，不构成任何投资建议或收益承诺。</p><p>因此，面对上半年2080.15亿港元的募资总额与112.5%的中资企业家数增长，企业需要做的不是判断风口是否还在，而是核对自身是否具备承接这个窗口的条件。本质上，市场数据决定的是窗口是否开着，企业条件决定的是能否走进去，两者缺一不可。</p><p data-ts="1">如需就企业自身情况做上市地评估与路径规划，可通过 liaoqijie@tdgroup.hk 与彤鼎集团团队联系。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="capital-market-2026-h2.html" style="color:#6b5426;font-weight:700;">2026下半年跨境资本市场五个变量</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="beyond-25m-threshold.html" style="color:#6b5426;font-weight:700;">募资不足2500万美元：四条资本化出路</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-2026-new-rules.html" style="color:#6b5426;font-weight:700;">纳斯达克新规：2500万美元门槛落地</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="us-vs-hk-decision-2026.html" style="color:#6b5426;font-weight:700;">美股还是港股：2026路径决策框架</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="sgx-mainboard.html" style="color:#6b5426;font-weight:700;">新加坡交易所上市：门槛与流程</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

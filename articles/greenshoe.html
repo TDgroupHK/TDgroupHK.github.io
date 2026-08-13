@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"绿鞋机制与超额配售","inLanguage":"zh-CN","abstract":"The greenshoe, or over-allotment option, lets underwriters allocate up to 15% more shares than the base offering and stabilise the price during the first 30 days of trading. Whether it is exercised is a readable market signal.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/greenshoe.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"IPO发行中的稳价工具是怎么运作的。绿鞋机制与超额配售完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,50 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>绿鞋机制与超额配售</h1>
 <div class="sub">IPO发行中的稳价工具是怎么运作的</div><div class="en">The greenshoe, or over-allotment option, lets underwriters allocate up to 15% more shares than the base offering and stabilise the price during the first 30 days of trading. Whether it is exercised is a readable market signal.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">绿鞋机制（Greenshoe，正式名称是超额配售选择权，Over-Allotment Option）是IPO发行中的一项稳价安排：发行人授予主承销商一项权利，允许其在原定发行规模之外，额外配售不超过15%的股票，并在上市后30天内根据股价表现决定如何收尾。绿鞋的运作逻辑是：承销商先超卖15%（形成空头头寸），如果上市后股价跌破发行价，承销商就从二级市场买入股票补回空头，这个买入行为本身就托住了股价；如果股价上涨，承销商则行使超额配售权，让发行人多发15%的新股来交付。一句话总结：股价跌，绿鞋变成护盘的买单；股价涨，绿鞋变成多募15%的资金。这是一个对发行人、投资人、承销商三方都有利的精巧设计。</div>
-<p>IPO发行的稳价工具是怎么运作的</p>
-<h2>结论先行：绿鞋是上市后30天的股价稳定器</h2>
-<h2>一、绿鞋机制的由来</h2>
-<p>绿鞋机制得名于1963年美国绿鞋制造公司（Green Shoe Manufacturing Company）的IPO，该公司在发行中首次使用了这种超额配售安排，此后这一机制被市场广泛采用，绿鞋也成了超额配售选择权的代名词。</p>
-<p>如今，绿鞋机制是全球主要资本市场IPO发行的标准配置。美股、港股的绝大多数IPO都会设置绿鞋，规模上限通常是基础发行规模的15%。</p>
-<h2>二、绿鞋机制的运作原理</h2>
-<p>绿鞋的运作可以拆成三步来理解。</p>
-<h2>第一步：发行时超卖15%</h2>
-<p>假设公司IPO基础发行规模是1000万股。在配售时，承销商实际向投资人卖出1150万股——比基础规模多卖了15%（150万股）。这多卖的150万股，承销商手里其实还没有，相当于承销商建立了150万股的空头头寸。</p>
-<h2>第二步A：股价下跌时，买入护盘</h2>
-<p>如果上市后股价跌破发行价，承销商就在二级市场以低于发行价的价格买入150万股，用来补回超卖的空头。这个买入行为为市场提供了实实在在的买盘，托住了股价。承销商还能赚到发行价与买入价之间的差价，有充分的动力护盘。</p>
-<h2>第二步B：股价上涨时，行使绿鞋</h2>
-<p>如果上市后股价高于发行价，承销商从二级市场买入补仓就会亏钱。此时承销商选择行使超额配售权——要求发行人按发行价额外增发150万股，交付给之前超卖的投资人。结果是：公司实际发行了1150万股，多募集了15%的资金。</p>
-<p>因此，绿鞋机制形成了一个自动的稳定器：股价弱，市场上多了一个大买家；股价强，公司多募了一笔钱。无论哪种情况，发行的稳定性都得到了增强。</p>
-<h2>三、绿鞋对各方的价值</h2>
-<h2>对发行人（公司）的价值</h2>
-<p>上市后最初30天是股价最脆弱的时期，绿鞋提供了这段时间的股价支撑，降低了破发风险，保护了公司的市场形象。如果股价表现好，公司还能多募15%的资金。</p>
-<h2>对投资人的价值</h2>
-<p>绿鞋的护盘功能降低了打新投资人在上市初期的下行风险，增强了参与认购的信心。这种信心反过来又有利于发行的认购和定价。</p>
-<h2>对承销商的价值</h2>
-<p>绿鞋给了承销商稳定发行的工具和护盘的经济动力（低买高补的差价收益），让承销商在定价时可以更从容，也强化了其对发行结果的责任。</p>
-<h2>四、绿鞋的期限与规模</h2>
-<p>规模上限：绿鞋的超额配售规模通常不超过基础发行规模的15%。这是市场的标准做法，也是相关规则允许的上限。</p>
-<p>行使期限：绿鞋通常在上市后30个自然日内有效。承销商在这30天内根据股价表现，决定是从二级市场买入补仓（护盘），还是行使超额配售权（增发）。30天期满，绿鞋自动终止。</p>
-<p>部分行使：绿鞋可以部分行使。比如股价先弱后强，承销商可能已经在低位买回了一部分空头，剩余部分再通过行使绿鞋由公司增发补足。最终公告中会披露绿鞋的实际行使情况。</p>
-<h2>五、怎么从绿鞋行使情况读出信号</h2>
-<p>上市后30天绿鞋期结束时，绿鞋的行使结果本身是一个市场信号。</p>
-<p>绿鞋全额行使（公司额外增发了15%），意味着上市后股价持续高于发行价，承销商没有护盘压力，发行受到市场欢迎，是积极信号。</p>
-<p>绿鞋完全未行使（承销商全部从二级市场买回），意味着股价在30天内多数时间低于发行价，承销商动用了护盘功能，发行后市场表现偏弱。</p>
-<p>因此，关注一只新股的绿鞋行使公告，可以侧面判断其上市初期的真实供需状况。</p>
-<h2>六、企业主需要知道的几个要点</h2>
-<p>要点1：绿鞋是标配，主动争取。IPO谈判中应确认承销协议包含绿鞋安排，这是保护发行稳定的标准工具，没有理由不用。</p>
-<p>要点2：绿鞋不是万能的。绿鞋只能平滑上市初期30天的波动，无法改变基本面决定的长期走势。如果定价严重偏高或基本面有硬伤，绿鞋托不住持续的抛压。</p>
-<p>要点3：绿鞋与定价策略配合。合理的定价（留有适度上涨空间）加上绿鞋护航，是新股平稳开局的标准组合。定价的克制和绿鞋的保护相辅相成。</p>
-<p>要点4：多募的15%要有安排。如果绿鞋全额行使，公司会多拿到15%的募资，资金用途在招股书中应有相应的说明和准备。</p>
-<h2>结语：细节里藏着发行的成败</h2>
-<p>绿鞋机制是IPO发行工程里一个精巧的细节设计，它用市场化的方式，把发行人、投资人、承销商三方的利益绑在了新股稳定这个共同目标上。</p>
-<p>上市是由无数个这样的细节组成的系统工程——定价、配售、绿鞋、锁定期、静默期，每个环节都影响最终结果。彤鼎集团在上市辅导中，帮助企业理解并把握这些关键细节，与承销商有效协作，让企业的上市之路走得更稳。</p>
-<p>彤鼎集团是一家综合性国际资本服务机构，香港母公司为彤鼎集团（香港）有限公司，业务网络覆盖香港、深圳、上海，并延伸至新加坡。集团专注为企业提供全球化的境内外上市及资本市场全流程一站式服务，由曾任职于加拿大券商机构的廖启捷领衔，廖启捷现任彤鼎集团（香港）有限公司董事局主席，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>集团八大核心业务覆盖融资策划、架构设计、上市规划、税务筹划、增发融资、市值管理、跨境资本、家族办公室，提供从商业模式梳理、顶层架构设计、上市辅导，到财务顾问、法律顾问、并购重组的资本运作全链条服务。团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p>
-<p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>绿鞋机制（Greenshoe，正式名称是超额配售选择权，Over-Allotment Option）是IPO发行中的一项稳价安排：发行人授予主承销商一项权利，允许其在原定发行规模之外，额外配售不超过15%的股票，并在上市后30天内根据股价表现决定如何收尾。</p><p>绿鞋的运作逻辑是：承销商先超卖15%（形成空头头寸），如果上市后股价跌破发行价，承销商就从二级市场买入股票补回空头，这个买入行为本身就托住了股价；如果股价上涨，承销商则行使超额配售权，让发行人多发15%的新股来交付。一句话总结：股价跌，绿鞋变成护盘的买单；股价涨，绿鞋变成多募15%的资金。这是一个对发行人、投资人、承销商三方都有利的精巧设计。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-1">结论先行：绿鞋是上市后30天的股价稳定器</a></li><li><a href="#sec-01">绿鞋机制的由来</a></li><li><a href="#sec-02">绿鞋机制的运作原理</a></li><li><a href="#sec-4">第一步：发行时超卖15%</a></li><li><a href="#sec-5">第二步A：股价下跌时，买入护盘</a></li><li><a href="#sec-6">第二步B：股价上涨时，行使绿鞋</a></li><li><a href="#sec-03">绿鞋对各方的价值</a></li><li><a href="#sec-8">对发行人（公司）的价值</a></li><li><a href="#sec-9">对投资人的价值</a></li><li><a href="#sec-10">对承销商的价值</a></li><li><a href="#sec-04">绿鞋的期限与规模</a></li><li><a href="#sec-05">怎么从绿鞋行使情况读出信号</a></li><li><a href="#sec-06">企业主需要知道的几个要点</a></li><li><a href="#sec-14">结语：细节里藏着发行的成败</a></li></ol></div><p>IPO发行的稳价工具是怎么运作的</p><h2 id="sec-1">结论先行：绿鞋是上市后30天的股价稳定器</h2><hr class="ts-hr"><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、绿鞋机制的由来</h2><p>绿鞋机制得名于1963年美国绿鞋制造公司（Green Shoe Manufacturing Company）的IPO，该公司在发行中首次使用了这种超额配售安排，此后这一机制被市场广泛采用，绿鞋也成了超额配售选择权的代名词。</p><p>如今，绿鞋机制是全球主要资本市场IPO发行的标准配置。美股、港股的绝大多数IPO都会设置绿鞋，规模上限通常是基础发行规模的15%。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、绿鞋机制的运作原理</h2><p>绿鞋的运作可以拆成三步来理解。</p><hr class="ts-hr"><h2 id="sec-4">第一步：发行时超卖15%</h2><p>假设公司IPO基础发行规模是1000万股。在配售时，承销商实际向投资人卖出1150万股——比基础规模多卖了15%（150万股）。这多卖的150万股，承销商手里其实还没有，相当于承销商建立了150万股的空头头寸。</p><hr class="ts-hr"><h2 id="sec-5">第二步A：股价下跌时，买入护盘</h2><p>如果上市后股价跌破发行价，承销商就在二级市场以低于发行价的价格买入150万股，用来补回超卖的空头。这个买入行为为市场提供了实实在在的买盘，托住了股价。承销商还能赚到发行价与买入价之间的差价，有充分的动力护盘。</p><hr class="ts-hr"><h2 id="sec-6">第二步B：股价上涨时，行使绿鞋</h2><p>如果上市后股价高于发行价，承销商从二级市场买入补仓就会亏钱。此时承销商选择行使超额配售权——要求发行人按发行价额外增发150万股，交付给之前超卖的投资人。结果是：公司实际发行了1150万股，多募集了15%的资金。</p><p>因此，绿鞋机制形成了一个自动的稳定器：股价弱，市场上多了一个大买家；股价强，公司多募了一笔钱。无论哪种情况，发行的稳定性都得到了增强。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、绿鞋对各方的价值</h2><hr class="ts-hr"><h2 id="sec-8">对发行人（公司）的价值</h2><p>上市后最初30天是股价最脆弱的时期，绿鞋提供了这段时间的股价支撑，降低了破发风险，保护了公司的市场形象。如果股价表现好，公司还能多募15%的资金。</p><hr class="ts-hr"><h2 id="sec-9">对投资人的价值</h2><p>绿鞋的护盘功能降低了打新投资人在上市初期的下行风险，增强了参与认购的信心。这种信心反过来又有利于发行的认购和定价。</p><hr class="ts-hr"><h2 id="sec-10">对承销商的价值</h2><p>绿鞋给了承销商稳定发行的工具和护盘的经济动力（低买高补的差价收益），让承销商在定价时可以更从容，也强化了其对发行结果的责任。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、绿鞋的期限与规模</h2><p>规模上限：绿鞋的超额配售规模通常不超过基础发行规模的15%。这是市场的标准做法，也是相关规则允许的上限。</p><p>行使期限：绿鞋通常在上市后30个自然日内有效。承销商在这30天内根据股价表现，决定是从二级市场买入补仓（护盘），还是行使超额配售权（增发）。30天期满，绿鞋自动终止。</p><p>部分行使：绿鞋可以部分行使。比如股价先弱后强，承销商可能已经在低位买回了一部分空头，剩余部分再通过行使绿鞋由公司增发补足。最终公告中会披露绿鞋的实际行使情况。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、怎么从绿鞋行使情况读出信号</h2><p>上市后30天绿鞋期结束时，绿鞋的行使结果本身是一个市场信号。</p><p>绿鞋全额行使（公司额外增发了15%），意味着上市后股价持续高于发行价，承销商没有护盘压力，发行受到市场欢迎，是积极信号。</p><p>绿鞋完全未行使（承销商全部从二级市场买回），意味着股价在30天内多数时间低于发行价，承销商动用了护盘功能，发行后市场表现偏弱。</p><p>因此，关注一只新股的绿鞋行使公告，可以侧面判断其上市初期的真实供需状况。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、企业主需要知道的几个要点</h2><p>要点1：绿鞋是标配，主动争取。IPO谈判中应确认承销协议包含绿鞋安排，这是保护发行稳定的标准工具，没有理由不用。</p><p>要点2：绿鞋不是万能的。绿鞋只能平滑上市初期30天的波动，无法改变基本面决定的长期走势。如果定价严重偏高或基本面有硬伤，绿鞋托不住持续的抛压。</p><p>要点3：绿鞋与定价策略配合。合理的定价（留有适度上涨空间）加上绿鞋护航，是新股平稳开局的标准组合。定价的克制和绿鞋的保护相辅相成。</p><p>要点4：多募的15%要有安排。如果绿鞋全额行使，公司会多拿到15%的募资，资金用途在招股书中应有相应的说明和准备。</p><hr class="ts-hr"><h2 id="sec-14">结语：细节里藏着发行的成败</h2><p>绿鞋机制是IPO发行工程里一个精巧的细节设计，它用市场化的方式，把发行人、投资人、承销商三方的利益绑在了新股稳定这个共同目标上。</p><p>上市是由无数个这样的细节组成的系统工程——定价、配售、绿鞋、锁定期、静默期，每个环节都影响最终结果。彤鼎集团在上市辅导中，帮助企业理解并把握这些关键细节，与承销商有效协作，让企业的上市之路走得更稳。</p><p>彤鼎集团是一家综合性国际资本服务机构，香港母公司为彤鼎集团（香港）有限公司，业务网络覆盖香港、深圳、上海，并延伸至新加坡。集团专注为企业提供全球化的境内外上市及资本市场全流程一站式服务，由曾任职于加拿大券商机构的廖启捷领衔，廖启捷现任彤鼎集团（香港）有限公司董事局主席，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>集团八大核心业务覆盖融资策划、架构设计、上市规划、税务筹划、增发融资、市值管理、跨境资本、家族办公室，提供从商业模式梳理、顶层架构设计、上市辅导，到财务顾问、法律顾问、并购重组的资本运作全链条服务。</p><p data-ts="1">团队对中、美、港三地资本市场及监管法规有深度的实操经验，已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中。</p><p>如您的企业有境内外上市或资本运作需求，欢迎随时联系我们，或将商业计划书（BP）投递至彤鼎团队。收到资料后，我们会进行初步分析，并为贵公司提供一份定制化的上市路径方案供参考。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="listing-window.html" style="color:#6b5426;font-weight:700;">上市时机与市场窗口</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-ipo-pricing.html" style="color:#6b5426;font-weight:700;">纳斯达克IPO定价机制</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ads-explained.html" style="color:#6b5426;font-weight:700;">ADS美国存托股份详解</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="f1-prospectus.html" style="color:#6b5426;font-weight:700;">F-1招股书撰写要点</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="roadshow-prep.html" style="color:#6b5426;font-weight:700;">路演完整准备指南</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"反收购防御机制","inLanguage":"zh-CN","abstract":"Anti-takeover defences available to a listed issuer, from poison pills to staggered boards, and their governance cost.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/anti-takeover.html","datePublished":"2026-07-19","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"恶意收购（Hostile Takeover）是指未经上市公司董事会和管理层同意，外部收购方直接向股东发出要约或通过代理权争夺取得公司控制权的行动。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,40 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">资本运作 CAPITAL OPS</div><h1>反收购防御机制</h1>
 <div class="sub"></div><div class="en">Anti-takeover defences available to a listed issuer, from poison pills to staggered boards, and their governance cost.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">恶意收购（Hostile Takeover）是指未经上市公司董事会和管理层同意，外部收购方直接向股东发出要约或通过代理权争夺取得公司控制权的行动。对中概股创始人而言，股价长期低迷时公司最容易成为恶意收购目标——PE基金或竞争对手可能在二级市场悄悄积累股份，然后发起要约收购。反收购防御的核心工具包括：毒丸计划（Poison Pill）、交错董事会（Staggered Board）、超级投票权的AB股结构（参考第28篇）、限制收购的章程条款。这些防御措施必须在公司挂牌时就通过章程设计好，挂牌后再补设难度极大。</div>
-<h2>一、为什么中概股容易成为收购目标</h2>
-<p>估值长期折价：如前文分析，中概股相对于同等基本面的美国本土公司通常存在估值折扣。这意味着收购方可以用相对低廉的价格获取高质量的业务和资产。</p>
-<p>股权分散度较高：经过多轮融资和IPO后，部分创始人的持股比例已经降低到30%至40%甚至更低，控制权不如私有公司时稳固。</p>
-<p>股价低迷时的脆弱性：当公司股价大幅下跌（如遭遇做空攻击或行业整体下行），控制权的市场价值大幅降低，收购成本更低，最容易吸引收购方出手。</p>
-<h2>二、毒丸计划（Poison Pill / Rights Plan）</h2>
-<h3>什么是毒丸计划</h3>
-<p>毒丸计划的正式名称是股东权利计划（Shareholder Rights Plan）。其核心机制是：当任何人或实体在没有董事会批准的情况下，收购超过一定比例（通常10%至20%）的公司股票时，计划自动触发，允许除触发方以外的所有其他股东以大幅折扣（通常50%折扣）购买公司新发行的股票。</p>
-<p>触发效果：如果收购方已经积累了15%的股份，毒丸触发后，其他所有股东可以以市价50%的价格购买更多新股，导致收购方的持股比例被大幅稀释，同时收购成本大幅上升。毒丸使恶意收购在财务上变得极不划算，从而起到威慑作用。</p>
-<h3>毒丸计划的有效期与维护</h3>
-<p>毒丸计划通常有效期为10年，可以由董事会延期。计划的维护相对简单（每年更新即可），无需股东批准（在大多数司法管辖区）。</p>
-<p>注意：毒丸计划可以由董事会单方面建立，但机构投资人（特别是大型价值投资基金）有时对毒丸计划持批评态度，认为它阻碍了股东获得收购溢价的机会。建立毒丸计划前应评估主要机构股东的态度。</p>
-<h2>三、交错董事会（Staggered Board）</h2>
-<h3>什么是交错董事会</h3>
-<p>交错董事会（又称分级董事会，Classified Board）将董事会成员分成2至3组，每次年度股东大会只选举其中一组（任期通常为2至3年）。这意味着即使收购方获得了公司多数股权，也无法在一次股东大会上替换整个董事会，至少需要2至3年才能完全控制董事会。</p>
-<p>交错董事会是反收购防御中最有效的工具之一——它让恶意收购从法律上变得极其缓慢和困难，大幅提高了收购的时间成本，使大多数收购方放弃。</p>
-<h3>交错董事会的设计要点</h3>
-<p>通常把9席董事会分成3组，每组3人，每年选举1组（每人任期3年）；第一年选举时，通过抽签或其他方式确定哪组先届满；每次年度股东大会后，只有1/3的董事席位会发生更迭。</p>
-<h2>四、章程中的反收购条款</h2>
-<h3>高比例批准要求（Supermajority Voting）</h3>
-<p>在公司章程中规定，特定重大事项（如修改章程、批准合并、解散公司等）需要获得75%甚至更高比例的股东同意才能通过。由于创始人持股通常超过25%，这实际上给了创始人对这些重大事项的否决权。</p>
-<h3>公平价格条款（Fair Price Provision）</h3>
-<p>要求任何收购要约必须以公平价格（通常是公司过去一段时间内最高股价或经独立评估的内在价值）向所有股东提出。这防止了收购方通过两步收购（先以高价收购控股股份，再以低价强制收购剩余股份）来压低实际收购成本。</p>
-<h3>反“绿票讹诈”条款（Anti-greenmail Provision）</h3>
-<p>禁止公司以高于市价的价格回购特定股东（如恶意收购方）的股票来换取其放弃收购行动。这防止了公司花费大量资金为特定股东提供溢价退出通道。</p>
-<h2>五、白衣骑士策略（White Knight）</h2>
-<p>当公司面临无法抵御的恶意收购威胁时，可以主动寻找一个友好的收购方（白衣骑士）以更高或更公平的价格提出收购要约，从而阻止恶意收购方完成收购。白衣骑士策略不是章程层面的防御，而是在危机时刻的主动战略行动。</p>
-<h2>六、反收购措施与股东利益的平衡</h2>
-<p>过度的反收购防御可能损害股东利益——毒丸计划和交错董事会会阻碍股东获得收购溢价，因此会受到部分机构投资人和ISS等代理投票机构的批评。</p>
-<p>平衡原则：反收购措施应该以保护公司长期价值为目的，而不是以保护管理层职位为目的。如果公司确实被低估，合理的反收购防御给了管理层时间向市场传达真实价值；如果公司被高估或管理不善，反收购防御阻止股东实现应有回报是不合理的。</p>
-<h3>结语：防御体系要在和平时期建好</h3>
-<p>反收购防御的最大错误是被动应对——等到收购方已经积累了大量股份才开始考虑防御措施，往往已经太晚了。正确的做法是在IPO架构设计阶段就把必要的反收购条款写入章程，在平静时期建好防线，让潜在收购方在初步评估阶段就望而却步。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>恶意收购（Hostile Takeover）是指未经上市公司董事会和管理层同意，外部收购方直接向股东发出要约或通过代理权争夺取得公司控制权的行动。对中概股创始人而言，股价长期低迷时公司最容易成为恶意收购目标——PE基金或竞争对手可能在二级市场悄悄积累股份，然后发起要约收购。</p><p>反收购防御的核心工具包括：毒丸计划（Poison Pill）、交错董事会（Staggered Board）、超级投票权的AB股结构（参考第28篇）、限制收购的章程条款。这些防御措施必须在公司挂牌时就通过章程设计好，挂牌后再补设难度极大。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">为什么中概股容易成为收购目标</a></li><li><a href="#sec-02">毒丸计划（Poison Pill / Rights Plan）</a></li><li><a href="#sec-03">交错董事会（Staggered Board）</a></li><li><a href="#sec-04">章程中的反收购条款</a></li><li><a href="#sec-05">白衣骑士策略（White Knight）</a></li><li><a href="#sec-06">反收购措施与股东利益的平衡</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、为什么中概股容易成为收购目标</h2><p>估值长期折价：如前文分析，中概股相对于同等基本面的美国本土公司通常存在估值折扣。这意味着收购方可以用相对低廉的价格获取高质量的业务和资产。</p><p>股权分散度较高：经过多轮融资和IPO后，部分创始人的持股比例已经降低到30%至40%甚至更低，控制权不如私有公司时稳固。</p><p>股价低迷时的脆弱性：当公司股价大幅下跌（如遭遇做空攻击或行业整体下行），控制权的市场价值大幅降低，收购成本更低，最容易吸引收购方出手。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、毒丸计划（Poison Pill / Rights Plan）</h2><p><h3>什么是毒丸计划</h3></p><p>毒丸计划的正式名称是股东权利计划（Shareholder Rights Plan）。其核心机制是：当任何人或实体在没有董事会批准的情况下，收购超过一定比例（通常10%至20%）的公司股票时，计划自动触发，允许除触发方以外的所有其他股东以大幅折扣（通常50%折扣）购买公司新发行的股票。</p><p>触发效果：如果收购方已经积累了15%的股份，毒丸触发后，其他所有股东可以以市价50%的价格购买更多新股，导致收购方的持股比例被大幅稀释，同时收购成本大幅上升。毒丸使恶意收购在财务上变得极不划算，从而起到威慑作用。</p><p><h3>毒丸计划的有效期与维护</h3></p><p>毒丸计划通常有效期为10年，可以由董事会延期。计划的维护相对简单（每年更新即可），无需股东批准（在大多数司法管辖区）。</p><p>注意：毒丸计划可以由董事会单方面建立，但机构投资人（特别是大型价值投资基金）有时对毒丸计划持批评态度，认为它阻碍了股东获得收购溢价的机会。建立毒丸计划前应评估主要机构股东的态度。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、交错董事会（Staggered Board）</h2><p><h3>什么是交错董事会</h3></p><p>交错董事会（又称分级董事会，Classified Board）将董事会成员分成2至3组，每次年度股东大会只选举其中一组（任期通常为2至3年）。这意味着即使收购方获得了公司多数股权，也无法在一次股东大会上替换整个董事会，至少需要2至3年才能完全控制董事会。</p><p>交错董事会是反收购防御中最有效的工具之一——它让恶意收购从法律上变得极其缓慢和困难，大幅提高了收购的时间成本，使大多数收购方放弃。</p><p><h3>交错董事会的设计要点</h3></p><p>通常把9席董事会分成3组，每组3人，每年选举1组（每人任期3年）；第一年选举时，通过抽签或其他方式确定哪组先届满；每次年度股东大会后，只有1/3的董事席位会发生更迭。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、章程中的反收购条款</h2><p><h3>高比例批准要求（Supermajority Voting）</h3></p><p>在公司章程中规定，特定重大事项（如修改章程、批准合并、解散公司等）需要获得75%甚至更高比例的股东同意才能通过。由于创始人持股通常超过25%，这实际上给了创始人对这些重大事项的否决权。</p><p><h3>公平价格条款（Fair Price Provision）</h3></p><p>要求任何收购要约必须以公平价格（通常是公司过去一段时间内最高股价或经独立评估的内在价值）向所有股东提出。这防止了收购方通过两步收购（先以高价收购控股股份，再以低价强制收购剩余股份）来压低实际收购成本。</p><p><h3>反“绿票讹诈”条款（Anti-greenmail Provision）</h3></p><p>禁止公司以高于市价的价格回购特定股东（如恶意收购方）的股票来换取其放弃收购行动。这防止了公司花费大量资金为特定股东提供溢价退出通道。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、白衣骑士策略（White Knight）</h2><p>当公司面临无法抵御的恶意收购威胁时，可以主动寻找一个友好的收购方（白衣骑士）以更高或更公平的价格提出收购要约，从而阻止恶意收购方完成收购。白衣骑士策略不是章程层面的防御，而是在危机时刻的主动战略行动。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、反收购措施与股东利益的平衡</h2><p>过度的反收购防御可能损害股东利益——毒丸计划和交错董事会会阻碍股东获得收购溢价，因此会受到部分机构投资人和ISS等代理投票机构的批评。</p><p>平衡原则：反收购措施应该以保护公司长期价值为目的，而不是以保护管理层职位为目的。如果公司确实被低估，合理的反收购防御给了管理层时间向市场传达真实价值；如果公司被高估或管理不善，反收购防御阻止股东实现应有回报是不合理的。</p><p><h3>结语：防御体系要在和平时期建好</h3></p><p>反收购防御的最大错误是被动应对——等到收购方已经积累了大量股份才开始考虑防御措施，往往已经太晚了。正确的做法是在IPO架构设计阶段就把必要的反收购条款写入章程，在平静时期建好防线，让潜在收购方在初步评估阶段就望而却步。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="stock-merger.html" style="color:#6b5426;font-weight:700;">上市公司换股并购</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ma-valuation-design.html" style="color:#6b5426;font-weight:700;">并购估值与对价设计</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cross-border-ma.html" style="color:#6b5426;font-weight:700;">上市公司跨境并购指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="pe-ma-fund.html" style="color:#6b5426;font-weight:700;">上市公司+PE并购基金</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="spinoff-listing.html" style="color:#6b5426;font-weight:700;">分拆子公司独立上市</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

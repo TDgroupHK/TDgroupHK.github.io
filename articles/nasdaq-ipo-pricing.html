@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"纳斯达克IPO定价机制","inLanguage":"zh-CN","abstract":"How the bookbuilding process sets an IPO price, what the underwriter discount covers, and how the greenshoe stabilises the first 30 days.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/nasdaq-ipo-pricing.html","datePublished":"2026-07-19","dateModified":"2026-08-01","image":"https://tdgroup.hk/img/og-card.jpg","description":"从路演到发行价——价格是如何确定的。纳斯达克IPO定价机制完整解析，彤鼎集团知识文库。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,57 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>纳斯达克IPO定价机制</h1>
 <div class="sub">从路演到发行价——价格是如何确定的</div><div class="en">How the bookbuilding process sets an IPO price, what the underwriter discount covers, and how the greenshoe stabilises the first 30 days.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-08-01">2026年8月1日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article>
-<div class="answer">很多企业主以为IPO的发行价是公司自己决定的，实际上发行价是在路演结束后，由承销商根据机构投资人的认购意向与公司管理层共同谈判确定的。决定发行价的核心变量有5个：认购倍数（需求强度）、投资人质量、行业可比公司估值、公司近期财务表现、整体市场窗口。合理的发行价应该让新股在挂牌首日上涨10%至30%——太高会破发损害声誉，太低会让公司损失融资金额。定价是整个上市过程中最考验专业判断的环节，没有绝对标准，只有在当时的市场条件下最优的选择。</div>
-<h2>一、定价的前置条件：价格区间的设定</h2>
-<p>在路演开始前，承销商会与公司管理层共同设定一个初步价格区间（Preliminary Price Range），通常包含在路演版招股说明书（Red Herring）中公开披露。价格区间的设定基于：行业可比公司的市盈率或市销率、公司自身的财务预测、当前资本市场的整体情绪、承销商对市场需求的初步判断。</p>
-<p>价格区间的宽度通常在2至4美元之间，比如8至10美元，或者15至18美元。路演期间，承销商会根据市场反馈动态调整区间。</p>
-<h2>二、路演期间的需求收集</h2>
-<p>路演的核心目的是收集机构投资人对这只新股的认购意向，这个过程叫做书册建立（Book Building）。</p>
-<h3>认购意向的形式</h3>
-<p>机构投资人在路演会议后，会通过承销商提交认购意向（Indication of Interest），说明愿意以什么价格购买多少股。认购意向不具法律约束力，但在定价阶段具有重要的参考价值。</p>
-<p>认购意向通常分为三类：价格无敏感型（Price Insensitive），表示无论价格多少都愿意购买，这是承销商最喜欢的意向；价格上限型（Price Limit），表示愿意以不超过某价格购买；数量固定型（Fixed Quantity），表示以任何价格购买固定数量。</p>
-<h3>超额认购与需求强度</h3>
-<p>路演结束时，承销商会汇总所有认购意向，计算超额认购倍数（Oversubscription Ratio）。如果公司计划发行100万股，而意向认购总量达到500万股，超额认购倍数就是5倍。</p>
-<p>超额认购倍数是判断市场需求强度最直观的指标。一般而言：5倍以下说明需求一般；5至10倍说明需求良好；10倍以上说明需求强烈。超额认购倍数越高，承销商越有底气建议公司将发行价定在价格区间上限甚至上调区间。</p>
-<h2>三、定价日的谈判过程</h2>
-<p>路演最后一天结束后（通常是美国东部时间下午5点之后），承销商组织定价会议。参与方包括：公司CEO和CFO、主承销商的资本市场部负责人、联席承销商代表。</p>
-<h3>定价考量的5个维度</h3>
-<p>维度1：认购质量。高质量机构投资人（长线基金、主权财富基金等）的认购比对冲基金的认购更有价值。如果主要认购来自长线基金，即使总倍数不算特别高，定价可以相对积极。</p>
-<p>维度2：需求分布。如果在价格区间上限的认购意向明显多于下限，说明市场对高价格的接受度高，可以考虑上调区间或在区间上限定价。</p>
-<p>维度3：可比公司近期表现。如果同行业最近挂牌的公司表现良好，市场情绪正向，定价可以更积极；反之则应保守。</p>
-<p>维度4：大盘环境。定价当天的整体市场走势（特别是纳斯达克综合指数和纳斯达克中国金龙指数）会显著影响定价决策。大盘下跌当天定价，通常会选择偏保守的价格。</p>
-<p>维度5：公司管理层的意愿。管理层对融资规模和公司估值都有诉求。承销商会在市场需求和公司诉求之间寻找平衡点。</p>
-<h3>定价谈判的典型场景</h3>
-<p>场景A：供不应求（超额认购10倍以上）。承销商通常建议将发行价定在价格区间上限，甚至提出上调整个价格区间。如果管理层同意，就按上限或更高价格定价；公司融到更多钱，但首日上涨空间可能缩小。</p>
-<p>场景B：需求良好（超额认购5至10倍）。承销商通常建议在价格区间中上部定价。留出10%至20%的首日上涨空间，既让投资人满意，又让公司融到合理金额。</p>
-<p>场景C：需求一般（超额认购3至5倍）。承销商通常建议在价格区间中间或下限定价，有时甚至下调价格区间。这种情况下，公司融资金额低于预期，但也避免了破发风险。</p>
-<p>场景D：需求不足（超额认购低于3倍）。承销商会与公司讨论是否推迟发行或大幅下调价格。如果市场需求实在太弱，最终可能选择撤回IPO申请，等待更好的市场窗口。</p>
-<h2>四、定价后的配售决策</h2>
-<p>定价确定后，承销商需要决定把新股配售给哪些投资人，这个过程叫做配售（Allocation）。配售不是按比例分配，而是承销商根据投资人质量和关系进行主观分配。</p>
-<h3>配售原则</h3>
-<p>长线基金优先。长线持有者（买入后持有超过3至6个月）是公司上市后最稳定的股东基础，承销商会优先照顾他们的配售。</p>
-<p>价格无敏感型投资人优先。在路演中表示价格不敏感的投资人，通常获得更大的配售比例，作为对其高质量意向的奖励。</p>
-<p>战略性投资人特别照顾。如果公司引入了战略投资人作为基础投资人（Cornerstone Investor），他们通常保证获得一定数量的配售份额。</p>
-<h2>五、中概股定价的特殊挑战</h2>
-<p>中概股在定价时面临一些本土公司不需要面对的特殊挑战。</p>
-<h3>中国溢价折扣</h3>
-<p>由于历史上部分中概股的财务造假事件，机构投资人对中概股整体存在一定的信任折价，愿意给出的估值倍数通常低于同等业绩的美国本土公司。这意味着中概股的定价往往需要更保守，或者需要付出更多路演工作来建立投资人信任。</p>
-<h3>时区差异带来的沟通挑战</h3>
-<p>中概股的路演团队需要在美国东部时间工作，与中国管理层的沟通存在12至13小时的时差。定价当晚的决策往往发生在中国深夜，管理层需要保持高度在线状态应对随时出现的关键决策需求。</p>
-<h3>汇率风险的定价考量</h3>
-<p>中概股的收入主要是人民币，但发行价格是美元。汇率的变动会影响公司以美元计算的财务数据，在定价时需要把汇率风险纳入估值考量。</p>
-<h2>六、发行价定完之后的流程</h2>
-<p>发行价确定后，事情还没完，还有几个关键步骤。</p>
-<p>深夜提交最终招股说明书。定价确定后数小时内，公司向SEC提交包含最终发行价和发行数量的最终招股说明书（Final Prospectus）。这是上市流程中最后一份重要的SEC文件。</p>
-<p>承销商通知配售结果。主承销商向所有获得配售的机构投资人发送配售确认，告知其获得的股份数量和付款安排。</p>
-<p>T+2结算。配售机构投资人需要在挂牌后第二个工作日（T+2）完成资金交割。公司在T+2收到全部IPO融资款，扣除承销商佣金后的净额进入公司账户。</p>
-<h3>结语：定价是科学也是艺术</h3>
-<p>IPO定价没有绝对正确的答案。同样一家公司，在不同的市场窗口、不同的路演质量、不同的可比公司表现下，最终发行价可能相差20%至50%。</p>
-<p>彤鼎团队辅导的多个挂牌项目中，定价阶段的专业判断对最终融资规模和挂牌后市场表现都产生了关键影响。选择合适的承销商、认真准备路演、理解市场信号、在关键时刻做出正确的定价决策——这些都是需要经验积累才能掌握的能力。</p>
-<p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p>
-<p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>很多企业主以为IPO的发行价是公司自己决定的，实际上发行价是在路演结束后，由承销商根据机构投资人的认购意向与公司管理层共同谈判确定的。决定发行价的核心变量有5个：认购倍数（需求强度）、投资人质量、行业可比公司估值、公司近期财务表现、整体市场窗口。</p><p>合理的发行价应该让新股在挂牌首日上涨10%至30%——太高会破发损害声誉，太低会让公司损失融资金额。定价是整个上市过程中最考验专业判断的环节，没有绝对标准，只有在当时的市场条件下最优的选择。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">定价的前置条件：价格区间的设定</a></li><li><a href="#sec-02">路演期间的需求收集</a></li><li><a href="#sec-03">定价日的谈判过程</a></li><li><a href="#sec-04">定价后的配售决策</a></li><li><a href="#sec-05">中概股定价的特殊挑战</a></li><li><a href="#sec-06">发行价定完之后的流程</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、定价的前置条件：价格区间的设定</h2><p>在路演开始前，承销商会与公司管理层共同设定一个初步价格区间（Preliminary Price Range），通常包含在路演版招股说明书（Red Herring）中公开披露。价格区间的设定基于：行业可比公司的市盈率或市销率、公司自身的财务预测、当前资本市场的整体情绪、承销商对市场需求的初步判断。</p><p>价格区间的宽度通常在2至4美元之间，比如8至10美元，或者15至18美元。路演期间，承销商会根据市场反馈动态调整区间。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、路演期间的需求收集</h2><p>路演的核心目的是收集机构投资人对这只新股的认购意向，这个过程叫做书册建立（Book Building）。</p><p><h3>认购意向的形式</h3></p><p>机构投资人在路演会议后，会通过承销商提交认购意向（Indication of Interest），说明愿意以什么价格购买多少股。认购意向不具法律约束力，但在定价阶段具有重要的参考价值。</p><p>认购意向通常分为三类：价格无敏感型（Price Insensitive），表示无论价格多少都愿意购买，这是承销商最喜欢的意向；价格上限型（Price Limit），表示愿意以不超过某价格购买；数量固定型（Fixed Quantity），表示以任何价格购买固定数量。</p><p><h3>超额认购与需求强度</h3></p><p>路演结束时，承销商会汇总所有认购意向，计算超额认购倍数（Oversubscription Ratio）。如果公司计划发行100万股，而意向认购总量达到500万股，超额认购倍数就是5倍。</p><p>超额认购倍数是判断市场需求强度最直观的指标。一般而言：5倍以下说明需求一般；5至10倍说明需求良好；10倍以上说明需求强烈。超额认购倍数越高，承销商越有底气建议公司将发行价定在价格区间上限甚至上调区间。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、定价日的谈判过程</h2><p>路演最后一天结束后（通常是美国东部时间下午5点之后），承销商组织定价会议。参与方包括：公司CEO和CFO、主承销商的资本市场部负责人、联席承销商代表。</p><p><h3>定价考量的5个维度</h3></p><p>维度1：认购质量。高质量机构投资人（长线基金、主权财富基金等）的认购比对冲基金的认购更有价值。如果主要认购来自长线基金，即使总倍数不算特别高，定价可以相对积极。</p><p>维度2：需求分布。如果在价格区间上限的认购意向明显多于下限，说明市场对高价格的接受度高，可以考虑上调区间或在区间上限定价。</p><p>维度3：可比公司近期表现。如果同行业最近挂牌的公司表现良好，市场情绪正向，定价可以更积极；反之则应保守。</p><p>维度4：大盘环境。定价当天的整体市场走势（特别是纳斯达克综合指数和纳斯达克中国金龙指数）会显著影响定价决策。大盘下跌当天定价，通常会选择偏保守的价格。</p><p>维度5：公司管理层的意愿。管理层对融资规模和公司估值都有诉求。承销商会在市场需求和公司诉求之间寻找平衡点。</p><p><h3>定价谈判的典型场景</h3></p><p>场景A：供不应求（超额认购10倍以上）。承销商通常建议将发行价定在价格区间上限，甚至提出上调整个价格区间。如果管理层同意，就按上限或更高价格定价；公司融到更多钱，但首日上涨空间可能缩小。</p><p>场景B：需求良好（超额认购5至10倍）。承销商通常建议在价格区间中上部定价。留出10%至20%的首日上涨空间，既让投资人满意，又让公司融到合理金额。</p><p>场景C：需求一般（超额认购3至5倍）。承销商通常建议在价格区间中间或下限定价，有时甚至下调价格区间。这种情况下，公司融资金额低于预期，但也避免了破发风险。</p><p>场景D：需求不足（超额认购低于3倍）。承销商会与公司讨论是否推迟发行或大幅下调价格。如果市场需求实在太弱，最终可能选择撤回IPO申请，等待更好的市场窗口。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、定价后的配售决策</h2><p>定价确定后，承销商需要决定把新股配售给哪些投资人，这个过程叫做配售（Allocation）。配售不是按比例分配，而是承销商根据投资人质量和关系进行主观分配。</p><p><h3>配售原则</h3></p><p>长线基金优先。长线持有者（买入后持有超过3至6个月）是公司上市后最稳定的股东基础，承销商会优先照顾他们的配售。</p><p>价格无敏感型投资人优先。在路演中表示价格不敏感的投资人，通常获得更大的配售比例，作为对其高质量意向的奖励。</p><p>战略性投资人特别照顾。如果公司引入了战略投资人作为基础投资人（Cornerstone Investor），他们通常保证获得一定数量的配售份额。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、中概股定价的特殊挑战</h2><p>中概股在定价时面临一些本土公司不需要面对的特殊挑战。</p><p><h3>中国溢价折扣</h3></p><p>由于历史上部分中概股的财务造假事件，机构投资人对中概股整体存在一定的信任折价，愿意给出的估值倍数通常低于同等业绩的美国本土公司。这意味着中概股的定价往往需要更保守，或者需要付出更多路演工作来建立投资人信任。</p><p><h3>时区差异带来的沟通挑战</h3></p><p>中概股的路演团队需要在美国东部时间工作，与中国管理层的沟通存在12至13小时的时差。定价当晚的决策往往发生在中国深夜，管理层需要保持高度在线状态应对随时出现的关键决策需求。</p><p><h3>汇率风险的定价考量</h3></p><p>中概股的收入主要是人民币，但发行价格是美元。汇率的变动会影响公司以美元计算的财务数据，在定价时需要把汇率风险纳入估值考量。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、发行价定完之后的流程</h2><p>发行价确定后，事情还没完，还有几个关键步骤。</p><p>深夜提交最终招股说明书。定价确定后数小时内，公司向SEC提交包含最终发行价和发行数量的最终招股说明书（Final Prospectus）。这是上市流程中最后一份重要的SEC文件。</p><p>承销商通知配售结果。主承销商向所有获得配售的机构投资人发送配售确认，告知其获得的股份数量和付款安排。</p><p>T+2结算。配售机构投资人需要在挂牌后第二个工作日（T+2）完成资金交割。公司在T+2收到全部IPO融资款，扣除承销商佣金后的净额进入公司账户。</p><p><h3>结语：定价是科学也是艺术</h3></p><p>IPO定价没有绝对正确的答案。同样一家公司，在不同的市场窗口、不同的路演质量、不同的可比公司表现下，最终发行价可能相差20%至50%。</p><p>彤鼎团队辅导的多个挂牌项目中，定价阶段的专业判断对最终融资规模和挂牌后市场表现都产生了关键影响。选择合适的承销商、认真准备路演、理解市场信号、在关键时刻做出正确的定价决策——这些都是需要经验积累才能掌握的能力。</p><p>彤鼎集团（香港）有限公司于香港注册成立，办公网络覆盖香港、深圳、上海并延伸至新加坡。集团专注境外上市与跨境资本运作，由董事局主席廖启捷领衔。廖启捷曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。</p><p>彤鼎团队过往已完成9家企业的纳斯达克挂牌辅导，覆盖教育、新能源、建材、生物医药、消费等多个行业，目前另有多个项目正在辅导推进中，覆盖先进制造、新能源、大消费、医疗健康、TMT等领域。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="greenshoe.html" style="color:#6b5426;font-weight:700;">绿鞋机制与超额配售</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="roadshow-prep.html" style="color:#6b5426;font-weight:700;">路演完整准备指南</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ads-explained.html" style="color:#6b5426;font-weight:700;">ADS美国存托股份详解</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="f1-prospectus.html" style="color:#6b5426;font-weight:700;">F-1招股书撰写要点</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-ipo-pricing.html" style="color:#6b5426;font-weight:700;">港股IPO定价与簿记建档</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>

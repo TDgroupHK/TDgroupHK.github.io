@@ -180,6 +180,73 @@ article strong{color:#141210;}
 body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+
+/* == typeset v1 : 版式（tools/typeset.py 生成，勿手改） == */
+article{max-width:760px;font-size:17.5px;}
+article p{margin:20px 0;line-height:2.0;text-align:left;}
+article h2{margin:60px 0 10px;font-size:25px;border-left:3px solid var(--gold);padding-left:18px;
+scroll-margin-top:104px;}/* 导航是 fixed 的，不留这一段本文要点跳过去会被压在导航底下 */
+article h2 .no{display:block;font-family:Georgia,serif;font-style:italic;font-size:14px;
+letter-spacing:5px;color:#9a7f45;margin-bottom:9px;font-weight:400;}
+article h2 .no::after{content:"";display:inline-block;width:40px;height:1px;
+background:rgba(154,127,69,.5);vertical-align:middle;margin-left:14px;}
+.ts-toc{border:1px solid rgba(154,127,69,.4);background:#fdfaf2;padding:24px 28px;margin:8px 0 40px;}
+.ts-toc b{display:block;font-size:12.5px;letter-spacing:4px;color:#9a7f45;
+font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.ts-toc ol{list-style:none;padding:0;margin:0;counter-reset:t;}
+.ts-toc li{counter-increment:t;position:relative;padding-left:38px;margin:9px 0;
+font-size:15.5px;line-height:1.7;color:#4a4133;}
+.ts-toc li::before{content:"0" counter(t);position:absolute;left:0;top:1px;
+font-family:Georgia,serif;font-style:italic;color:#c9a962;font-size:15px;}
+.ts-toc a{color:#4a4133;border-bottom:1px solid transparent;}
+.ts-toc a:hover{color:#6b5426;border-bottom-color:#c9a962;}
+.answer{font-weight:400;}
+.answer .tag,.ts-lead .tag,.ts-case .tag{display:block;font-size:12px;letter-spacing:4px;
+color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:14px;}
+.answer p{margin:14px 0;font-weight:600;line-height:1.95;}
+.answer p:first-of-type{margin-top:0;}
+.ts-lead{border-left:4px solid #c9a962;background:#fbf6e8;padding:22px 26px;margin:26px 0;}
+.ts-lead p{margin:0;font-size:18px;font-weight:700;line-height:1.85;color:#2b2312;}
+.ts-case{border:1px solid rgba(154,127,69,.34);background:#fffdf7;padding:22px 26px;margin:26px 0;}
+.ts-case p{margin:12px 0;font-size:16px;line-height:1.95;color:#4a4133;}
+.ts-case p:first-of-type{margin-top:0;}
+.ts-case p:last-child{margin-bottom:0;}
+.ts-pts{list-style:none;padding:0;margin:26px 0;counter-reset:p;}
+.ts-pts li{counter-increment:p;position:relative;padding:18px 22px 18px 62px;margin:10px 0;
+background:#fdfaf2;border:1px solid rgba(154,127,69,.24);line-height:1.9;font-size:16px;color:#39332a;}
+.ts-pts li::before{content:"0" counter(p);position:absolute;left:20px;top:16px;
+font-family:Georgia,serif;font-style:italic;font-size:19px;color:#c9a962;}
+.ts-pts li b{color:#141210;}
+.ts-hr{border:0;height:26px;margin:52px 0;background:no-repeat center/26px 26px
+url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2l10 10-10 10L2 12z' fill='none' stroke='%23c9a962' stroke-width='1.3'/%3E%3Cpath d='M12 7.5l4.5 4.5-4.5 4.5L7.5 12z' fill='%23c9a962'/%3E%3C/svg%3E");
+position:relative;}
+.ts-hr::before,.ts-hr::after{content:"";position:absolute;top:13px;width:calc(50% - 30px);
+height:1px;background:linear-gradient(90deg,transparent,rgba(154,127,69,.45));}
+.ts-hr::before{left:0;}
+.ts-hr::after{right:0;background:linear-gradient(270deg,transparent,rgba(154,127,69,.45));}
+@media(max-width:760px){
+/* 原样式最窄断点在 960px，手机上标题与留白仍按平板尺寸走，偏大偏挤。
+   导航六项在 500px 宽尚不溢出，但更窄的机型会，故补一个换行兜底。 */
+.nav-in{padding:14px 18px;}
+.menu{flex-wrap:wrap;gap:14px 18px;font-size:13px;}
+.logo .mark-img{height:44px;}
+.logo .nm{font-size:15px;letter-spacing:2px;}
+.wrap{padding:0 20px;}
+.art-head{padding:118px 0 42px;}
+.art-head h1{font-size:26px;letter-spacing:0;line-height:1.55;}
+.art-head .sub{font-size:15.5px;line-height:1.75;}
+.art-head .en{font-size:13px;line-height:1.8;}
+.art-foot{padding:0 20px 56px;}
+article{font-size:17px;padding:40px 20px 64px;}
+article p{margin:18px 0;line-height:1.95;}
+article h2{font-size:21px;margin:48px 0 6px;scroll-margin-top:88px;}
+.answer,.ts-lead,.ts-case{padding:18px 18px;}
+.ts-lead p{font-size:16.5px;}
+.ts-pts li{padding:16px 16px 16px 54px;font-size:15.5px;}
+.ts-pts li::before{left:16px;}
+.ts-toc{padding:20px 18px;}
+}
+/* == /typeset v1 == */
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"港股基石投资者机制详解","inLanguage":"zh-CN","abstract":"A cornerstone investor in a Hong Kong IPO signs a subscription agreement before bookbuilding opens, commits to buy a fixed amount at whatever final price is set, receives guaranteed allocation, and accepts a lock-up of at least six months. Every cornerstone must be named in the prospectus with its subscription amount, and no benefit may exist beyond the disclosed terms — guaranteed returns or buy-back side deals are prohibited. Cornerstones give a deal certainty and a credibility signal, at the cost of a smaller free float and a concentrated unlock date. An oversized cornerstone tranche is itself a warning: it crowds out price discovery and signals weak market demand. This article covers the framework, negotiation points and warning signs.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":"https://tdgroup.hk/articles/cornerstone-investors.html","datePublished":"2026-07-20","dateModified":"2026-07-20","image":"https://tdgroup.hk/img/og-card.jpg","description":"基石投资者是指在港股IPO簿记前签署认购协议、按最终发行价认购既定金额并接受至少6个月锁定期的投资者，其身份与认购金额须在招股书中逐名披露，且披露条款之外不得存在任何额外利益安排。本文解析基石机制的制度框架、与锚定投资者的区别、引入基石的谈判要点，以及基石占比过高带来的流动性与解禁风险信号。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
@@ -197,50 +264,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <div class="cat">上市执行 EXECUTION</div><h1>港股基石投资者机制详解</h1>
 <div class="sub">基石的作用、锁定期安排与占比过高的负面信号</div><div class="en">A cornerstone investor in a Hong Kong IPO signs a subscription agreement before bookbuilding opens, commits to buy a fixed amount at whatever final price is set, receives guaranteed allocation, and accepts a lock-up of at least six months. Every cornerstone must be named in the prospectus with its subscription amount, and no benefit may exist beyond the disclosed terms — guaranteed returns or buy-back side deals are prohibited. Cornerstones give a deal certainty and a credibility signal, at the cost of a smaller free float and a concentrated unlock date. An oversized cornerstone tranche is itself a warning: it crowds out price discovery and signals weak market demand. This article covers the framework, negotiation points and warning signs.</div>
 <div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
-<article><div class="answer">基石投资者（Cornerstone Investor）是指在港股IPO启动公开簿记之前与发行人签署认购协议、承诺按最终发行价认购既定金额股份的投资者：其获得保证配售，代价是接受上市后至少6个月的股份锁定期，且身份、认购金额与锁定安排必须在招股书中逐名披露。基石与发行人之间除已披露条款外不得存在任何额外利益安排——保底收益、亏损补偿、关联回购等暗中安排均属违规。基石的作用是为发行提供需求确定性与信用背书；代价是自由流通盘缩小，以及6个月解禁日的集中卖压。实务中基石认购占发行规模三至六成较为常见，占比明显过高本身就是市场化需求不足的信号。关键在于：基石是信用背书工具，不是发行兜底工具。</div>
-<h2>一、基石机制的制度框架</h2>
-<p><strong>结论先行：基石机制用三项强制约束换一项特权——用披露、锁定与条款纯净，换取保证配售。</strong></p>
-<p>基石投资者制度是港股市场发展出的一项发行安排，其运作框架由四个要素构成。第一，签约在先：基石在公开簿记启动之前与发行人及承销商签署认购协议，承诺认购既定金额（通常以美元或港元金额而非股数约定），并接受最终定价——无论发行价落在区间何处，基石按最终价执行，不享有价格谈判或退出权利。</p>
-<p>第二，保证配售：与簿记中的普通订单不同，基石的认购份额不受配售削减影响，这是基石承担锁定义务换来的核心对价。</p>
-<p>第三，强制披露：每一名基石的身份背景、认购金额、锁定承诺都必须在招股书中逐名披露，市场据此评估基石的质量与结构。</p>
-<p>第四，条款纯净：基石与发行人、控股股东、承销商之间，除招股书披露的条款外，不得存在任何直接或间接的额外利益安排。需要作为反面警示明确指出的是：私下承诺保底收益、约定亏损补偿、安排关联方在解禁后回购——这类安排均属违规，一经查实将动摇发行的合规基础。此外，基石须独立于发行人及其关联人，其持股在符合独立性要求的前提下一般计入公众持股量；公众持股比例长期以25%为基准要求，现行具体档位以《上市规则》最新文本为准。本质上，基石机制是一套以透明换确定性的制度设计。</p>
-<h2>二、基石与锚定投资者的区别</h2>
-<p><strong>结论先行：基石写进招股书、锚定只进订单簿——两者的确定性、约束与信号强度完全不同。</strong></p>
-<p>实务中经常与基石混用的概念是锚定投资者（Anchor Investor）。锚定是指在簿记启动初期即下达大额订单、为订单簿定调的机构投资者，但它与基石有三个本质区别。</p>
-<p>第一，确定性不同。基石签署具有约束力的认购协议并获保证配售；锚定只是簿记中的订单，配售比例由承销商在分配时裁量，可能被大幅削减，锚定自身也可以在定价前修改或撤回订单。</p>
-<p>第二，约束不同。基石接受至少6个月锁定，解禁前不得出售；锚定获配股份没有锁定义务，上市首日即可自由交易。</p>
-<p>第三，披露与信号不同。基石逐名写入招股书，其身份即是公开的信用背书，市场认可度高的长线机构以基石身份出现，等于向全市场宣告其尽调结论；锚定不作身份披露，只体现在簿记覆盖倍数与分配结构中，信号强度弱得多。</p>
-<p>因此，两者的功能定位不同：基石解决的是发行成立的确定性与公信力问题，锚定解决的是簿记动能与定价支撑问题。一个结构良好的发行往往两者兼有——基石打底、锚定引领簿记、市场化订单完成价格发现。关键在于，不要用锚定的灵活性去理解基石，也不要用基石的确定性去期待锚定。</p>
-<h2>三、基石的两个作用：确定性与信号</h2>
-<p><strong>结论先行：基石的价值一半在钱，一半在名字——认购金额提供发行底盘，投资者身份提供信用背书。</strong></p>
-<p>第一个作用是确定性。基石认购在簿记启动前锁定，相当于为发行规模垫上一块底盘：无论簿记冷热，这部分需求确定存在。对发行人而言，这直接降低了发行失败或大幅缩量的风险；对承销商而言，簿记的起点不再是零，向市场推介时手中有底。在市场情绪疲弱的窗口，有分量的基石阵容几乎是发行得以成行的前提条件——这也是弱市中基石谈判地位显著上升的原因。</p>
-<p>第二个作用是信号。基石名单是招股书中被机构投资者最先翻阅的章节之一：长线资金、主权背景机构、深耕相关产业的战略投资者以基石身份出现，传递的信息是——有专业买方在定价前完成了尽调并愿意锁定6个月。这一信号会改变其他投资者的行为：跟随型资金据此下单，价格敏感型机构据此调高可接受的估值中枢。</p>
-<p>但信号的价值取决于基石的成色。市场会区分三类基石：独立专业机构的真金白银、与发行人存在业务或地缘关联的支持性资金、以及凑数性质的通道资金。第一类是信号，后两类是噪音，机构投资者的订单行为对此高度敏感。因此，基石策略的第一原则是质量优先于金额——一名公信力强的基石，胜过三名来历模糊的基石。</p>
-<h2>四、锁定期：6个月的含义与解禁效应</h2>
-<p><strong>结论先行：锁定期既是基石制度的信用来源，也是它留给二级市场的一颗定时闹钟。</strong></p>
-<p>港股基石投资者的锁定期为自上市之日起至少6个月，期内不得出售所认购的股份，锁定安排在招股书与认购协议中明确约定。6个月的设计逻辑是双向的：对市场，它保证了基石的背书不是快进快出的套利；对基石，它是换取保证配售必须支付的流动性代价。</p>
-<p>解禁效应由此而来。6个月锁定期届满之日，全部基石持股同日获得流动性，形成一个市场早已写进日历的供给节点。围绕解禁日的典型市场行为有三种：其一，部分资金在解禁前提前减仓或做空对冲，股价在解禁日之前就开始承压；其二，解禁日后基石分批退出，成交量放大、股价技术性走弱；其三，若基石选择继续持有并公开表达长期意愿，解禁日反而成为利好确认点。</p>
-<p>对发行人的启示是把解禁管理当作上市后头等IR事项来安排：在解禁窗口前主动加强业绩沟通，避免将不利消息的披露与解禁日叠加；与核心基石保持沟通，了解其退出意向与节奏；条件允许时，把中报或年度业绩等基本面节点与解禁窗口错开布局。因此，签基石协议的那一天，就应该同步规划6个月后的那一周。</p>
-<h2>五、引入基石的谈判要点</h2>
-<p><strong>结论先行：基石谈判的实质不是谈价格——价格无得谈——而是谈金额、时点、披露与条款纪律。</strong></p>
-<p>第一，时点管理。基石接触启动过早，等于在估值尚未成形时就向市场亮出底牌，基石反馈的价格预期会反向锚定发行估值；启动过晚，则失去用基石阵容带动簿记的窗口。合理的节奏是在上市时间表明确、估值框架初步成形后启动接触，在路演启动前完成签约。</p>
-<p>第二，金额与结构控制。总占比要设上限，为市场化订单留出足够的价格发现空间；单一基石的占比同样要控制，避免形成单点依赖——任何一家基石在签约后出现变故，都不应动摇发行本身。</p>
-<p>第三，披露接受度。基石必须逐名披露，部分投资者因内部政策不愿具名，这类资金只能以锚定身份参与簿记，不能纳入基石安排，谈判初期就应问清。</p>
-<p>第四，条款纪律。谈判中可能遇到对方提出的各类增强条款——收益保底、差价补偿、解禁回购承诺、额外费用安排。此处没有灰色地带：披露之外的任何利益安排均属违规，作为反面警示必须写明——此类安排一经存在即构成对市场的虚假陈述，风险远大于失去一名基石。华尔街彤鼎俱乐部在与企业主交流发行结构时，把这条列为基石谈判的底线纪律：谈得成靠估值与信任，谈不成就换对象，绝不用暗条款成交。</p>
-<h2>六、基石占比过高的负面信号</h2>
-<p><strong>结论先行：基石占比是一个倒U型变量——适度占比是背书，过高占比是自白：市场化需求撑不起这单发行。</strong></p>
-<p>基石占比过高的负面效应有三层。第一层，价格发现失真。基石按最终价认购、不参与价格博弈，基石份额越大，参与定价的市场化订单越少，最终发行价的信息含量越低——极端情况下，定价实质上由发行人与少数基石在场外商定，簿记沦为程序。</p>
-<p>第二层，流动性受损。基石与控股股东双重锁定后，上市初期的实际自由流通盘可能被压缩到很小，日常成交清淡，价差扩大，机构建仓困难，纳入指数与进入互联互通标的的进程也因流通市值与成交门槛而延后。流动性折扣会直接反映在估值上。</p>
-<p>第三层，解禁悬崖。占比越高，6个月后同日解禁的筹码越多，解禁窗口的供给冲击越大，二级市场会提前定价这一预期，形成上市后数月的持续压制。</p>
-<p>更微妙的是解读效应：机构投资者阅读招股书时，会把基石占比本身当作需求诊断指标——基石填得越满，越说明承销商对市场化簿记没有信心。因此，占比明显偏高的基石结构，即便让发行得以成行，也往往以上市后的估值与流动性为代价。实务中基石占比常见于发行规模的三至六成，越过这一区间上沿越远，上述三层效应越显著。</p>
-<h2>七、发行人视角的基石策略</h2>
-<p><strong>结论先行：基石策略的目标不是把发行填满，而是用最小的锁定代价买到足够的确定性与最有力的信号。</strong></p>
-<p>把前文的分析收拢为四条操作原则。第一，够用即可：基石占比以保障发行成立、稳定簿记预期为限，把剩余空间留给市场化价格发现；弱市窗口可适度上调，但要同步接受解禁与流动性代价。</p>
-<p>第二，质量优先：优先争取独立性强、持有期长、市场公信力高的机构；产业背景的战略基石在估值叙事上有额外价值，但需评估其商业协同的真实性与潜在的同业信息敏感问题。</p>
-<p>第三，结构分散：多名基石、单家占比可控、类型互补（长线资金、产业资本、区域机构搭配），既分散单点风险，也让基石名单本身构成一个多维背书组合。</p>
-<p>第四，全周期管理：基石关系不随定价结束——上市后的业绩沟通、解禁前的预期管理、解禁后的持续持有意愿，都取决于发行人与基石之间的长期信任经营。</p>
-<p>彤鼎集团在上市规划与发行执行辅导中，将基石结构设计作为定价策略的前置约束统筹安排；华尔街彤鼎俱乐部亦围绕发行结构、基石谈判与上市后投资者关系等主题，为企业主提供系统的资本认知与资源对接。本质上，基石是发行人向市场借来的信用——借得适度，它放大你的故事；借得过量，它透支你的流动性。</p>
-</article>
+<article><!--typeset:v1--><div class="answer"><span class="tag">核心结论 THE ANSWER</span><p>基石投资者（Cornerstone Investor）是指在港股IPO启动公开簿记之前与发行人签署认购协议、承诺按最终发行价认购既定金额股份的投资者：其获得保证配售，代价是接受上市后至少6个月的股份锁定期，且身份、认购金额与锁定安排必须在招股书中逐名披露。</p><p>基石与发行人之间除已披露条款外不得存在任何额外利益安排——保底收益、亏损补偿、关联回购等暗中安排均属违规。基石的作用是为发行提供需求确定性与信用背书；代价是自由流通盘缩小，以及6个月解禁日的集中卖压。实务中基石认购占发行规模三至六成较为常见，占比明显过高本身就是市场化需求不足的信号。关键在于：基石是信用背书工具，不是发行兜底工具。</p></div><div class="ts-toc"><b>本文要点 IN THIS ARTICLE</b><ol><li><a href="#sec-01">基石机制的制度框架</a></li><li><a href="#sec-02">基石与锚定投资者的区别</a></li><li><a href="#sec-03">基石的两个作用：确定性与信号</a></li><li><a href="#sec-04">锁定期：6个月的含义与解禁效应</a></li><li><a href="#sec-05">引入基石的谈判要点</a></li><li><a href="#sec-06">基石占比过高的负面信号</a></li><li><a href="#sec-07">发行人视角的基石策略</a></li></ol></div><h2 id="sec-01"><span class="no">CHAPTER 01</span>一、基石机制的制度框架</h2><div class="ts-lead"><span class="tag">结论先行</span><p>基石机制用三项强制约束换一项特权——用披露、锁定与条款纯净，换取保证配售。</p></div><p>基石投资者制度是港股市场发展出的一项发行安排，其运作框架由四个要素构成。第一，签约在先：基石在公开簿记启动之前与发行人及承销商签署认购协议，承诺认购既定金额（通常以美元或港元金额而非股数约定），并接受最终定价——无论发行价落在区间何处，基石按最终价执行，不享有价格谈判或退出权利。</p><p>第二，保证配售：与簿记中的普通订单不同，基石的认购份额不受配售削减影响，这是基石承担锁定义务换来的核心对价。</p><p>第三，强制披露：每一名基石的身份背景、认购金额、锁定承诺都必须在招股书中逐名披露，市场据此评估基石的质量与结构。</p><p>第四，条款纯净：基石与发行人、控股股东、承销商之间，除招股书披露的条款外，不得存在任何直接或间接的额外利益安排。需要作为反面警示明确指出的是：私下承诺保底收益、约定亏损补偿、安排关联方在解禁后回购——这类安排均属违规，一经查实将动摇发行的合规基础。</p><p data-ts="1">此外，基石须独立于发行人及其关联人，其持股在符合独立性要求的前提下一般计入公众持股量；公众持股比例长期以25%为基准要求，现行具体档位以《上市规则》最新文本为准。本质上，基石机制是一套以透明换确定性的制度设计。</p><hr class="ts-hr"><h2 id="sec-02"><span class="no">CHAPTER 02</span>二、基石与锚定投资者的区别</h2><div class="ts-lead"><span class="tag">结论先行</span><p>基石写进招股书、锚定只进订单簿——两者的确定性、约束与信号强度完全不同。</p></div><p>实务中经常与基石混用的概念是锚定投资者（Anchor Investor）。锚定是指在簿记启动初期即下达大额订单、为订单簿定调的机构投资者，但它与基石有三个本质区别。</p><p>第一，确定性不同。基石签署具有约束力的认购协议并获保证配售；锚定只是簿记中的订单，配售比例由承销商在分配时裁量，可能被大幅削减，锚定自身也可以在定价前修改或撤回订单。</p><p>第二，约束不同。基石接受至少6个月锁定，解禁前不得出售；锚定获配股份没有锁定义务，上市首日即可自由交易。</p><p>第三，披露与信号不同。基石逐名写入招股书，其身份即是公开的信用背书，市场认可度高的长线机构以基石身份出现，等于向全市场宣告其尽调结论；锚定不作身份披露，只体现在簿记覆盖倍数与分配结构中，信号强度弱得多。</p><p>因此，两者的功能定位不同：基石解决的是发行成立的确定性与公信力问题，锚定解决的是簿记动能与定价支撑问题。一个结构良好的发行往往两者兼有——基石打底、锚定引领簿记、市场化订单完成价格发现。关键在于，不要用锚定的灵活性去理解基石，也不要用基石的确定性去期待锚定。</p><hr class="ts-hr"><h2 id="sec-03"><span class="no">CHAPTER 03</span>三、基石的两个作用：确定性与信号</h2><div class="ts-lead"><span class="tag">结论先行</span><p>基石的价值一半在钱，一半在名字——认购金额提供发行底盘，投资者身份提供信用背书。</p></div><p>第一个作用是确定性。基石认购在簿记启动前锁定，相当于为发行规模垫上一块底盘：无论簿记冷热，这部分需求确定存在。对发行人而言，这直接降低了发行失败或大幅缩量的风险；对承销商而言，簿记的起点不再是零，向市场推介时手中有底。</p><p data-ts="1">在市场情绪疲弱的窗口，有分量的基石阵容几乎是发行得以成行的前提条件——这也是弱市中基石谈判地位显著上升的原因。</p><p>第二个作用是信号。基石名单是招股书中被机构投资者最先翻阅的章节之一：长线资金、主权背景机构、深耕相关产业的战略投资者以基石身份出现，传递的信息是——有专业买方在定价前完成了尽调并愿意锁定6个月。</p><p data-ts="1">这一信号会改变其他投资者的行为：跟随型资金据此下单，价格敏感型机构据此调高可接受的估值中枢。</p><p>但信号的价值取决于基石的成色。市场会区分三类基石：独立专业机构的真金白银、与发行人存在业务或地缘关联的支持性资金、以及凑数性质的通道资金。第一类是信号，后两类是噪音，机构投资者的订单行为对此高度敏感。</p><p data-ts="1">因此，基石策略的第一原则是质量优先于金额——一名公信力强的基石，胜过三名来历模糊的基石。</p><hr class="ts-hr"><h2 id="sec-04"><span class="no">CHAPTER 04</span>四、锁定期：6个月的含义与解禁效应</h2><div class="ts-lead"><span class="tag">结论先行</span><p>锁定期既是基石制度的信用来源，也是它留给二级市场的一颗定时闹钟。</p></div><p>港股基石投资者的锁定期为自上市之日起至少6个月，期内不得出售所认购的股份，锁定安排在招股书与认购协议中明确约定。6个月的设计逻辑是双向的：对市场，它保证了基石的背书不是快进快出的套利；对基石，它是换取保证配售必须支付的流动性代价。</p><p>解禁效应由此而来。6个月锁定期届满之日，全部基石持股同日获得流动性，形成一个市场早已写进日历的供给节点。围绕解禁日的典型市场行为有三种：</p><ol class="ts-pts"><li><b>其一</b>，部分资金在解禁前提前减仓或做空对冲，股价在解禁日之前就开始承压；</li><li><b>其二，解禁日后基石分批退出</b>，成交量放大、股价技术性走弱；</li><li><b>其三</b>，若基石选择继续持有并公开表达长期意愿，解禁日反而成为利好确认点。</li></ol><p>对发行人的启示是把解禁管理当作上市后头等IR事项来安排：在解禁窗口前主动加强业绩沟通，避免将不利消息的披露与解禁日叠加；与核心基石保持沟通，了解其退出意向与节奏；条件允许时，把中报或年度业绩等基本面节点与解禁窗口错开布局。因此，签基石协议的那一天，就应该同步规划6个月后的那一周。</p><hr class="ts-hr"><h2 id="sec-05"><span class="no">CHAPTER 05</span>五、引入基石的谈判要点</h2><div class="ts-lead"><span class="tag">结论先行</span><p>基石谈判的实质不是谈价格——价格无得谈——而是谈金额、时点、披露与条款纪律。</p></div><p>第一，时点管理。基石接触启动过早，等于在估值尚未成形时就向市场亮出底牌，基石反馈的价格预期会反向锚定发行估值；启动过晚，则失去用基石阵容带动簿记的窗口。合理的节奏是在上市时间表明确、估值框架初步成形后启动接触，在路演启动前完成签约。</p><p>第二，金额与结构控制。总占比要设上限，为市场化订单留出足够的价格发现空间；单一基石的占比同样要控制，避免形成单点依赖——任何一家基石在签约后出现变故，都不应动摇发行本身。</p><p>第三，披露接受度。基石必须逐名披露，部分投资者因内部政策不愿具名，这类资金只能以锚定身份参与簿记，不能纳入基石安排，谈判初期就应问清。</p><p>第四，条款纪律。谈判中可能遇到对方提出的各类增强条款——收益保底、差价补偿、解禁回购承诺、额外费用安排。此处没有灰色地带：披露之外的任何利益安排均属违规，作为反面警示必须写明——此类安排一经存在即构成对市场的虚假陈述，风险远大于失去一名基石。</p><p data-ts="1">华尔街彤鼎俱乐部在与企业主交流发行结构时，把这条列为基石谈判的底线纪律：谈得成靠估值与信任，谈不成就换对象，绝不用暗条款成交。</p><hr class="ts-hr"><h2 id="sec-06"><span class="no">CHAPTER 06</span>六、基石占比过高的负面信号</h2><div class="ts-lead"><span class="tag">结论先行</span><p>基石占比是一个倒U型变量——适度占比是背书，过高占比是自白：市场化需求撑不起这单发行。</p></div><p>基石占比过高的负面效应有三层。第一层，价格发现失真。基石按最终价认购、不参与价格博弈，基石份额越大，参与定价的市场化订单越少，最终发行价的信息含量越低——极端情况下，定价实质上由发行人与少数基石在场外商定，簿记沦为程序。</p><p>第二层，流动性受损。基石与控股股东双重锁定后，上市初期的实际自由流通盘可能被压缩到很小，日常成交清淡，价差扩大，机构建仓困难，纳入指数与进入互联互通标的的进程也因流通市值与成交门槛而延后。流动性折扣会直接反映在估值上。</p><p>第三层，解禁悬崖。占比越高，6个月后同日解禁的筹码越多，解禁窗口的供给冲击越大，二级市场会提前定价这一预期，形成上市后数月的持续压制。</p><p>更微妙的是解读效应：机构投资者阅读招股书时，会把基石占比本身当作需求诊断指标——基石填得越满，越说明承销商对市场化簿记没有信心。因此，占比明显偏高的基石结构，即便让发行得以成行，也往往以上市后的估值与流动性为代价。</p><p data-ts="1">实务中基石占比常见于发行规模的三至六成，越过这一区间上沿越远，上述三层效应越显著。</p><hr class="ts-hr"><h2 id="sec-07"><span class="no">CHAPTER 07</span>七、发行人视角的基石策略</h2><div class="ts-lead"><span class="tag">结论先行</span><p>基石策略的目标不是把发行填满，而是用最小的锁定代价买到足够的确定性与最有力的信号。</p></div><p>把前文的分析收拢为四条操作原则。第一，够用即可：基石占比以保障发行成立、稳定簿记预期为限，把剩余空间留给市场化价格发现；弱市窗口可适度上调，但要同步接受解禁与流动性代价。</p><p>第二，质量优先：优先争取独立性强、持有期长、市场公信力高的机构；产业背景的战略基石在估值叙事上有额外价值，但需评估其商业协同的真实性与潜在的同业信息敏感问题。</p><p>第三，结构分散：多名基石、单家占比可控、类型互补（长线资金、产业资本、区域机构搭配），既分散单点风险，也让基石名单本身构成一个多维背书组合。</p><p>第四，全周期管理：基石关系不随定价结束——上市后的业绩沟通、解禁前的预期管理、解禁后的持续持有意愿，都取决于发行人与基石之间的长期信任经营。</p><p>彤鼎集团在上市规划与发行执行辅导中，将基石结构设计作为定价策略的前置约束统筹安排；华尔街彤鼎俱乐部亦围绕发行结构、基石谈判与上市后投资者关系等主题，为企业主提供系统的资本认知与资源对接。</p><p data-ts="1">本质上，基石是发行人向市场借来的信用——借得适度，它放大你的故事；借得过量，它透支你的流动性。</p></article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-ipo-pricing.html" style="color:#6b5426;font-weight:700;">港股IPO定价与簿记建档</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ipo-pricing.html" style="color:#6b5426;font-weight:700;">IPO定价机制</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-placement-lookthrough.html" style="color:#6b5426;font-weight:700;">港股IPO配售穿透核查：交易所在核查什么</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ads-explained.html" style="color:#6b5426;font-weight:700;">ADS美国存托股份详解</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="hk-board-lot-reform-2026.html" style="color:#6b5426;font-weight:700;">港股每手买卖单位改革：八种标准股数与每手价值区间</a></li></ul></div><div class="brandbox">
 <h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
