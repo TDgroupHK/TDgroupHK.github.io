@@ -277,14 +277,17 @@ def build_html(meta, secs, date, related):
     s = re.sub(r'<div class="en">.*?</div>', '<div class="en">%s</div>' % esc(meta['英文摘要']), s, count=1, flags=re.S)
 
     # 正文
-    parts = ['<div class="answer">%s</div>' % esc(meta['结论'], allow_links=True)]
+    parts = ['<div class="answer">%s</div>' % esc(meta['结论'], allow_links=True, allow_bold=True)]
     for t, ps in secs:
         parts.append('<h2>%s</h2>' % esc(t))
         for k, p in enumerate(ps):
             if k == 0 and p.startswith('结论先行'):
+                # ⛔ 这一段不切：article_cards.py 取的就是它去渲染章节插图，
+                # 切开之后卡片上只剩半句。它本来就该 40-60 字，超长是稿子的问题。
                 parts.append('<p><strong>%s</strong></p>' % esc(p, allow_links=True))
             else:
-                parts.append('<p>%s</p>' % esc(p, allow_links=True))
+                for seg in wrap_para(p):
+                    parts.append('<p>%s</p>' % esc(seg, allow_links=True, allow_bold=True))
     s = re.sub(r'<article[^>]*>.*?</article>',
                '<article>\n' + '\n'.join(parts) + '\n</article>', s, count=1, flags=re.S)
 
@@ -310,11 +313,64 @@ _ESCAPED_LINK = re.compile(
     r'&lt;a href=&quot;([a-z0-9-]+\.html)&quot;&gt;([^&<>]{1,60})&lt;/a&gt;')
 
 
-def esc(t, allow_links=False):
+# 稿件里的 markdown 加粗 **这样**。2026-08-14 发现它既不渲染也不清理，
+# 原样漏到官网页面上 —— 站上 7 篇文章正文里能看到字面的星号
+# （term-sheet-seven-clauses / pre-revenue-valuation / nasdaq-ipo-workstreams /
+#  us-market-cap-toolkit / valuation-enhancement-plan / share-reduction-rules-2024 /
+#  market-cap-management-system），读者看到的是 `**这一条要用数字讲。**`。
+# ⚠ 零告警：合规闸不查排版，页面也不报错，只有人打开看才知道。
+# 与 _ESCAPED_LINK 同一个套路：先整体转义防注入，再按白名单还原这一种标记。
+_ESCAPED_BOLD = re.compile(r'\*\*(?!\s)([^*\n]{1,120}?)(?<![\s*])\*\*')
+
+
+def esc(t, allow_links=False, allow_bold=False):
     s = (t or '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
     if allow_links:
         s = _ESCAPED_LINK.sub(lambda m: '<a href="%s">%s</a>' % (m.group(1), m.group(2)), s)
+    if allow_bold:
+        s = _ESCAPED_BOLD.sub(lambda m: '<strong>%s</strong>' % m.group(1), s)
     return s
+
+
+# 句末标点后断句，右引号/右括号跟着上一句走（「……。」不能切在句号后面）。
+# ⛔ 与 C:\TDGroupSEO\build_dist.py 的 _SENT 保持一致，别在这里另立一套判据。
+_SENT = re.compile(r'(?<=[。？！])(?![」』》”）】])')
+
+
+def wrap_para(p, limit=200, target=130, floor=45):
+    r"""段落超过 limit 字就按句切成几段。**一个字都不改，只加断行。**
+
+    2026-08-13 廖总原话：「全都是文字，根本吸引不到人类的客户，一定要多点断行」。
+    当天给**分发层**加了 build_dist.split_para 兜底（实测 526 字的段被切到最长 158），
+    ⛔ 但官网这条路是另一套代码，一段 = 一个 <p>，一个字没改 ——
+    2026-08-14 实测官网 202 篇里 66 篇（33%）有超 200 字的段，最长 556 字，
+    超标篇的段落中位高达 225-256。**分发层修了、官网没修，而且零告警。**
+
+    与分发层的差别是故意的：那边无条件按 110 字切（手机信息流场景），
+    这边**只切超过 200 字的段**（官网是长文阅读场景，且这样对已达标的新稿零影响、幂等）。
+
+    ⚠ 不切开 markdown 加粗：`**这句。** 后面`——加粗内部含句号时若在那里断开，
+    星号会被劈成两半，还原成 <strong> 时配不上对。判据是切点处 `**` 计数必须成对。
+    """
+    if len(p) <= limit:
+        return [p]
+    sents = [x for x in _SENT.split(p) if x.strip()]
+    if len(sents) < 2:
+        return [p]
+    out, cur = [], ''
+    for x in sents:
+        # cur 里 ** 落单时不许断开，继续累加直到成对
+        if cur and len(cur) + len(x) > target and cur.count('**') % 2 == 0:
+            out.append(cur)
+            cur = x
+        else:
+            cur += x
+    if cur:
+        if out and (len(cur) < floor or out[-1].count('**') % 2):
+            out[-1] += cur
+        else:
+            out.append(cur)
+    return out
 
 
 def sub_attr(s, prefix_pat, value):
