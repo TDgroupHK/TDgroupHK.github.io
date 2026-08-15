@@ -278,8 +278,23 @@ def build_html(meta, secs, date, related):
 
     # 正文
     parts = ['<div class="answer">%s</div>' % esc(meta['结论'], allow_links=True, allow_bold=True)]
-    for t, ps in secs:
+    for ci, (t, ps) in enumerate(secs, 1):
         parts.append('<h2>%s</h2>' % esc(t))
+        # ---- 章节论点卡片图（2026-08-15 廖总：「以后的全部文章都要考虑易读性，
+        # 要加插图，否则流量起不来」）----
+        # ⛔ 在此之前**官网 199 篇文章一张图都没有**：08-13 建的卡片图只被分发版用了，
+        # `ensure_cards` 也只负责生成并 push 图，从没有人把它插进官网页面 ——
+        # 图挂在 img/cards/ 上，官网自己不用（CLAUDE.md 第 9 节：有生产方没消费方）。
+        # ⚠ 判据是**图在不在仓库里**，不是「这篇该不该有图」：单独跑 new_article.py
+        # 时图可能还没生成，那就安全退化成纯文字，⛔ 不许因此报错中止 ——
+        # 官网页不上线是 404，没有图只是少个加分项，轻重不同。
+        card = os.path.join(REPO, 'img', 'cards', '%s-%d.jpg' % (meta['slug'], ci))
+        if os.path.exists(card):
+            parts.append(
+                '<figure style="margin:30px 0;">'
+                '<img src="../img/cards/%s-%d.jpg" alt="%s" loading="lazy" '
+                'style="width:100%%;height:auto;display:block;border-radius:3px;">'
+                '</figure>' % (meta['slug'], ci, esc(t)))
         for k, p in enumerate(ps):
             if k == 0 and p.startswith('结论先行'):
                 # ⛔ 这一段不切：article_cards.py 取的就是它去渲染章节插图，
