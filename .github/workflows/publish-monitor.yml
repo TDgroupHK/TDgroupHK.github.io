@@ -1,0 +1,117 @@
+name: 发文流水线监控
+
+# 每天检查一次：今天该发的 2 篇文章发了没有。
+# 缺班就开 issue（GitHub 发邮件通知），补上后自动关闭。
+#
+# 这条原本是 Claude 的云端定时任务，2026-08-11 改为 GitHub Actions——
+# 理由是它不依赖任何 AI 账号。换成 Codex、换账号、换订阅，它照样跑。
+#
+# 判定口径（2026-07-29 起）：每天 2 篇，早班 09:30、午班 15:30（北京时间）。
+# 晚班 20:00 已砍掉，不要按 3 篇判定。
+# 提交信息以「发布：」开头的才算发文，改版/修复/SEO 优化不计入。
+# 微信公众号一天只有 1 条配额，文章可能被守门员顺延——所以「只有 1 篇」
+# 报成需要留意，不直接判定为故障。
+
+on:
+  schedule:
+    - cron: '0 15 * * *'      # UTC 15:00 ＝ 北京时间 23:00
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+
+env:
+  ISSUE_TITLE: "⚠️ 发文流水线缺班"
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 统计今天发了几篇
+        id: check
+        run: |
+          TODAY=$(TZ=Asia/Shanghai date '+%Y-%m-%d')
+          # git log 的 --date=format-local 配合 TZ 得到北京时间
+          LIST=$(TZ=Asia/Shanghai git log --since="$TODAY 00:00" \
+                   --date=format-local:'%H:%M' \
+                   --format='%ad|%s' | grep '|发布：' || true)
+          N=$(printf '%s' "$LIST" | grep -c . || true)
+          N=${N:-0}
+
+          {
+            echo "today=$TODAY"
+            echo "count=$N"
+          } >> "$GITHUB_OUTPUT"
+
+          {
+            echo "list<<EOF"
+            if [ "$N" -gt 0 ]; then
+              printf '%s\n' "$LIST" | sed 's/^/- /; s/|发布：/　发布：/'
+            else
+              echo "（无）"
+            fi
+            echo "EOF"
+          } >> "$GITHUB_OUTPUT"
+
+          echo "近 7 天每日篇数："
+          for i in 6 5 4 3 2 1 0; do
+            D=$(TZ=Asia/Shanghai date -d "-$i day" '+%Y-%m-%d')
+            C=$(TZ=Asia/Shanghai git log --since="$D 00:00" --until="$D 23:59:59" \
+                  --format='%s' | grep -c '^发布：' || true)
+            echo "  $D: ${C:-0}"
+          done
+
+      - name: 缺班就报警
+        if: fromJSON(steps.check.outputs.count) < 2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TODAY: ${{ steps.check.outputs.today }}
+          COUNT: ${{ steps.check.outputs.count }}
+          LIST: ${{ steps.check.outputs.list }}
+        run: |
+          if [ "$COUNT" = "0" ]; then
+            STATE="🔴 **停摆**：今天 0 篇，流水线可能完全没跑（电脑关机？Claude 桌面软件没开？）"
+          else
+            STATE="⚠️ **缺班**：今天只发了 $COUNT 篇（应为 2 篇）。可能是守门员按平台配额顺延，也可能是真失败。"
+          fi
+
+          BODY="$STATE
+
+          **日期**：$TODAY（北京时间）
+
+          **今天已发**：
+          $LIST
+
+          ---
+          发文班次：早班 09:30、午班 15:30（北京时间），每天 2 篇。
+
+          若连续两天缺班，检查：电脑是否开机、发文流水线的计划任务是否还在、
+          本机 AI 工具是否在运行。
+
+          补发之后本 issue 会在下次检查时自动关闭。"
+
+          EXISTING=$(gh issue list --state open --search "in:title ${ISSUE_TITLE}" --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue comment "$EXISTING" --body "$BODY"
+          else
+            gh issue create --title "${ISSUE_TITLE}" --body "$BODY"
+          fi
+
+      - name: 正常就关掉旧警报
+        if: fromJSON(steps.check.outputs.count) >= 2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TODAY: ${{ steps.check.outputs.today }}
+          COUNT: ${{ steps.check.outputs.count }}
+        run: |
+          EXISTING=$(gh issue list --state open --search "in:title ${ISSUE_TITLE}" --json number --jq '.[0].number // empty')
+          if [ -n "$EXISTING" ]; then
+            gh issue close "$EXISTING" --comment "✅ $TODAY 已发 $COUNT 篇，流水线恢复正常。"
+          else
+            echo "✅ $TODAY 已发 $COUNT 篇，正常。"
+          fi

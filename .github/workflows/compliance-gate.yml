@@ -1,0 +1,98 @@
+name: 合规闸
+
+# 每次改动 HTML 都自动跑一遍合规检查，退出码非 0 就把这次推送标红。
+#
+# 为什么要有这个：CLAUDE.md 第四·补规定「写完文章、推送之前必须跑合规闸」，
+# 但在 2026-08-11 之前，这条规则**没有任何东西执行它**——全靠 AI 自觉。
+# 2026-07-27 的审计就是这么发现「操盘/做市值」在站上挂了很久的。
+# 光写规则不管用。把闸放进 CI，谁接手都绕不过去：Claude、Codex、或者别的任何工具。
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '**.html'
+  pull_request:
+    paths:
+      - '**.html'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 找出本次改动的 HTML
+        id: changed
+        run: |
+          if [ "${{ github.event_name }}" = "pull_request" ]; then
+            BASE="${{ github.event.pull_request.base.sha }}"
+            HEAD="${{ github.event.pull_request.head.sha }}"
+          elif [ -n "${{ github.event.before }}" ] && \
+               git cat-file -e "${{ github.event.before }}^{commit}" 2>/dev/null; then
+            BASE="${{ github.event.before }}"
+            HEAD="${{ github.sha }}"
+          else
+            BASE=""
+            HEAD="${{ github.sha }}"
+          fi
+
+          if [ -n "$BASE" ]; then
+            git diff --name-only --diff-filter=ACMR "$BASE" "$HEAD" -- '*.html' > changed.txt || true
+          else
+            # 拿不到基线（首次推送、手动触发）就全量扫
+            git ls-files '*.html' > changed.txt
+          fi
+
+          COUNT=$(wc -l < changed.txt | tr -d ' ')
+          echo "count=$COUNT" >> "$GITHUB_OUTPUT"
+          echo "本次待检查 $COUNT 个 HTML："
+          cat changed.txt
+
+      - name: 跑合规闸
+        if: steps.changed.outputs.count != '0'
+        run: |
+          GATE=""
+          for c in tools/compliance_gate.py 合规闸/compliance_gate.py; do
+            [ -f "$c" ] && GATE="$c" && break
+          done
+
+          if [ -z "$GATE" ]; then
+            echo "::warning title=合规闸缺失::仓库里找不到 compliance_gate.py，本次跳过检查。"
+            echo ""
+            echo "  该脚本目前只存在于老板本机 C:\\TDGroupSEO\\，没有任何备份。"
+            echo "  把它连同 compliance_words.json 提交到 tools/ 之后，本闸即自动生效。"
+            echo "  注意：platform_rules.md 牵涉引流话术，不要放进这个公开仓库，"
+            echo "        它应该留在私有仓库 td-internal。"
+            exit 0
+          fi
+
+          echo "使用合规闸：$GATE"
+          FAILED=0
+          while IFS= read -r f; do
+            [ -z "$f" ] && continue
+            [ -f "$f" ] || continue
+            echo "── 检查 $f"
+            if ! python "$GATE" "$f" --scope site; then
+              echo "::error file=$f::合规闸未通过"
+              FAILED=1
+            fi
+          done < changed.txt
+
+          if [ "$FAILED" -ne 0 ]; then
+            echo ""
+            echo "有文件未通过合规闸。按 CLAUDE.md 第四·补：退出码 1 = 拦下，不许 push。"
+            echo "修掉 block 项，或写入 C:\\TDGroupSEO\\pending_state.md 转人工。"
+            exit 1
+          fi
+          echo "✅ 全部通过。"

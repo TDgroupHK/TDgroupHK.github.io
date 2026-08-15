@@ -1,0 +1,270 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>关联交易清不干净，报告期就得从头再数一遍 | 彤鼎集团知识文库</title>
+<meta name="description" content="上市申报前要清理的关联交易，不只是老板从公司拿钱这一类，更常见的是有真实业务内容的采购、销售、租赁、代垫费用与共用渠道。本文从企业方视角拆解：关联方的认定口径为什么比老板以为的宽，报告期内已经终止的关联交易为什么照样要说，注入、剥离终止、保留并规范三条路各要付什么代价，定价公允性拿什么证明，以及为什么这件事必须在报告期开始之前动手。">
+<link rel="canonical" href="https://tdgroup.hk/articles/related-party-transactions-cleanup.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="彤鼎集团知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关联交易清不干净，报告期就得从头再数一遍 | 彤鼎集团知识文库">
+<meta property="og:description" content="上市申报前要清理的关联交易，不只是老板从公司拿钱这一类，更常见的是有真实业务内容的采购、销售、租赁、代垫费用与共用渠道。本文从企业方视角拆解：关联方的认定口径为什么比老板以为的宽，报告期内已经终止的关联交易为什么照样要说，注入、剥离终止、保留并规范三条路各要付什么代价，定价公允性拿什么证明，以及为什么这件事必须在报告期开始之前动手。">
+<meta property="og:url" content="https://tdgroup.hk/articles/related-party-transactions-cleanup.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="关联交易清不干净，报告期就得从头再数一遍 | 彤鼎集团知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:4px;font-size:17px;}
+.logo .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10.5px;letter-spacing:3px;margin-top:2px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"关联交易清不干净，报告期就得从头再数一遍","inLanguage":"zh-CN","abstract":"Before filing for a listing, an applicant must clean up not only funds taken by its controlling shareholder but also genuine operating transactions with related parties: purchases, sales, leases of premises owned by the founder, expenses advanced on the company's behalf, and shared procurement, sales channels or staff. This article takes the company's side of the problem. It explains why the definition of a related party reaches further than most founders assume, why transactions already terminated during the reporting period still require disclosure, what each of the three disposal routes actually costs, how pricing fairness is evidenced, and why the work must begin before the reporting period starts rather than in the year of filing.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/related-party-transactions-cleanup.html"},"datePublished":"2026-08-05","dateModified":"2026-08-05","description":"上市申报前要清理的关联交易，不只是老板从公司拿钱这一类，更常见的是有真实业务内容的采购、销售、租赁、代垫费用与共用渠道。本文从企业方视角拆解：关联方的认定口径为什么比老板以为的宽，报告期内已经终止的关联交易为什么照样要说，注入、剥离终止、保留并规范三条路各要付什么代价，定价公允性拿什么证明，以及为什么这件事必须在报告期开始之前动手。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="彤鼎集团 TD Group"><span class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></span></a>
+<div class="menu"><a href="/">首页 Home</a><a href="../about.html">关于 About</a><a href="../club.html">俱乐部 Club</a><a href="../library.html">文库 Library</a><a href="../faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">上市执行 EXECUTION</div><h1>关联交易清不干净，报告期就得从头再数一遍</h1>
+<div class="sub">关联方的圈子比老板划的大一圈，三条处置路径各有各的代价，而最贵的那笔叫时间</div><div class="en">Before filing for a listing, an applicant must clean up not only funds taken by its controlling shareholder but also genuine operating transactions with related parties: purchases, sales, leases of premises owned by the founder, expenses advanced on the company's behalf, and shared procurement, sales channels or staff. This article takes the company's side of the problem. It explains why the definition of a related party reaches further than most founders assume, why transactions already terminated during the reporting period still require disclosure, what each of the three disposal routes actually costs, how pricing fairness is evidenced, and why the work must begin before the reporting period starts rather than in the year of filing.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
+<article>
+<div class="answer">业务型关联交易，是指拟上市公司与关联方之间发生的、具有真实业务内容的往来，常见形态包括向关联方采购原材料与服务、向关联方销售产品、租赁关联方或实际控制人个人名下的房产与设备、由关联方代垫费用或代发薪酬、以及与关联方共用采购渠道、销售渠道、生产场地或人员。它与关联方资金占用、同业竞争是三件不同的事：资金占用问的是钱有没有被拿走，同业竞争问的是有没有另一家公司在和上市主体抢同一门生意，业务型关联交易问的是这门生意本身是不是独立做成的。审核关注三点——关联方披露是否完整、交易是否具有商业必要性、定价是否公允。处置路径通常有注入、剥离终止、保留并规范三条，各自代价不同，需要的整改时间也不同。具体的披露门槛、比例标准与决策程序要求，以各上市地监管机构现行正式文本为准。</div>
+<h2>一、&quot;那家公司我去年就注销了&quot;——已经关掉的，照样要说</h2>
+<p><strong>结论先行：报告期内曾经存在过的关联交易，即使关联方本身已经注销、股权已经转出、交易已经停做，仍然属于必须披露的范围。一家做工业配件的企业在启动上市准备时，老板很坦然地说，供应链上那点事早解决了——他太太名下那家贸易公司去年已经注销，现在采购全走市场。中介进场核对台账，发现报告期头两年里，这家企业超过一半的原材料是从那家贸易公司过一手进来的。老板的反应是：都注销了还提它干什么。</strong></p>
+<p>问题恰恰在这里。审核看的不是&quot;今天这家公司干不干净&quot;，而是&quot;报告期这几年它是怎么做成今天这样的&quot;。报告期是一段连续的历史，不是一个截面。注销掉的只是那个主体，不是那段历史里已经发生的采购、已经形成的毛利、已经入账的收入。那家贸易公司在的时候，采购价怎么定、比市场价高还是低、多出来或少掉的那部分利润落在谁的报表上——这些问题不会随主体注销而消失，反而更难回答，因为能提供比对资料的那家公司已经没了。</p>
+<p>可以把它想成搬家：你把堆满旧物的房间清空上锁、钥匙扔掉，房子确实变干净了；但如果要查的是过去三年这个家怎么过日子，要看的是账单和照片，不是今天的房间。因此，&quot;已经处理掉了&quot;在企业主的语言里是完成时，在申报文件里只是一个新的披露起点——你得说清楚它曾经是什么、做了多少、怎么定价、为什么现在不做了，以及不做了之后业务有没有受影响。</p>
+<h2>二、关联方的圈子，比老板自己划的大一圈</h2>
+<p><strong>结论先行：多数企业主对关联方的理解停在&quot;控股股东和董监高&quot;，而实际认定口径要宽得多，且带有一条&quot;实质重于形式&quot;的兜底条款，能把形式上完全无关的主体拉进来。一家做食品加工的企业在自查时列了一份关联方清单，八家，都是老板和几位董事直接持股的公司。中介补进来之后变成二十三家：老板配偶的兄弟控制的包装材料厂、财务负责人母亲名下的运输队、报告期内已经退出的一位早期股东当时控制的两家企业，还有一家股权上和谁都没关系、但生产场地租的是老板的厂房、法定代表人是公司原来的车间主任。</strong></p>
+<p>大致可以分四层。头一层是身份直接相关的：控股股东、实际控制人、董事、监事、高级管理人员及其关系密切的家庭成员，以及这些人直接或间接控制、施加重大影响的企业——这一层老板基本都想得到。第二层是近亲属延伸出去的：配偶、父母、子女、兄弟姐妹及其配偶、配偶的父母与兄弟姐妹，他们控制的企业同样在圈内。很多企业栽在这一层——老板会觉得&quot;那是我小舅子自己的生意，跟我没关系&quot;，但认定看的是亲属关系加控制关系两个条件，不看主观上有没有关系。</p>
+<p>第三层是时间维度：报告期内曾经是关联方、后来不再是的，仍需按当时的关系披露那段期间的交易；退出后的交易还要说明退出是否真实、有没有&quot;退而不出&quot;。第四层是兜底：即使不满足前三层的形式条件，只要实质上能对公司施加影响或存在利益倾斜，照样可以被认定——上面那家法定代表人是原车间主任的公司，就是被这一层收进来的。</p>
+<p>兜底这一层常被误读成&quot;随意扩大&quot;，其实逻辑很直白：形式标准是给守规矩的人用的，兜底条款是给绕规矩的人准备的。因此，企业方自查关联方时正确的问法不是&quot;这家公司和我有股权关系吗&quot;，而是&quot;如果有人要借一家公司把利益输送进来或者转出去，他会挑哪一家&quot;——按后一个问法列出来的清单，通常比按前一个问法列的长两三倍。华尔街彤鼎俱乐部在企业主群体中反复被问到的，也正是这份清单该拉到多远。</p>
+<h2>三、资金占用、同业竞争、业务型关联交易：三件事不能混着谈</h2>
+<p><strong>结论先行：这三件事经常被一起提起，但审核逻辑、处置手段和整改周期完全不同，混着谈会导致企业把力气用错地方。一家做环保设备的企业在中介列出问题清单后，管理层开会决定&quot;把关联的事一次性解决&quot;，做法是把老板控制的三家公司全部注销。结果是：资金占用的那家确实该清，注销有效；有竞争关系的那家注销也说得过去；但第三家是给上市主体做售后安装的服务商，注销之后一百多个安装工人没有承接主体，交付周期从两周拖到六周，客户投诉进了报告期。</strong></p>
+<p>区别其实很清楚。关联方资金占用问的是钱有没有被拿走——控股股东通过借款、代垫、没有商业实质的往来把公司的钱占着用，它的定性是治理红线，处置方式是还钱、关通道、留出干净期间。同业竞争问的是有没有另一家公司在抢同一门生意——老板名下有一家和上市主体做同样产品、面向同样客户的企业，处置方式通常是注销、转让、收购或者证明业务确实不构成竞争。业务型关联交易问的是第三个问题：这门生意本身，是不是这家公司独立做成的。</p>
+<p>它的特殊之处在于，前两者的答案往往是&quot;消灭它&quot;，而业务型关联交易的答案未必是。真实业务是有价值的：向关联方采购的原材料如果确实质量更稳定、供应更及时，硬性切断反而伤害经营。审核并不要求上市主体和所有关联方老死不相往来，它要求的是三件事——交易是必要的、定价是公允的、决策程序上关联方回避了并且持续披露。</p>
+<p>打个比方，资金占用像是有人从你家保险柜里拿钱，同业竞争像是你哥在你店对面开了同样一家店，而业务型关联交易像是你店里的面粉一直从你舅舅的粮店进——面粉本身没问题，问题是别人没法判断这个价格是不是你自己说了算，以及哪天不从舅舅那儿进货，你还做不做得成生意。本质上，前两者查的是有没有被掏空，后者查的是独立不独立。</p>
+<h2>四、三条处置路径，每一条都要付钱</h2>
+<p><strong>结论先行：注入、剥离终止、保留并规范，三条路没有一条是免费的，选哪条取决于业务耦合度和剩余的整改时间，而不是取决于哪条听起来干净。一家做精密零件的企业需要处理和老板胞弟控制的表面处理厂之间的加工业务，量占成本的两成多。管理层最初想剥离，测算之后发现区域内具备同等工艺资质的替代供应商只有一家，且产能排到半年后；最终选了注入，代价是多花了将近一年时间做评估、审计追溯和权属清理。</strong></p>
+<p>路径一是注入，把关联方装进上市主体，关联交易就变成了内部交易。听起来最彻底，代价也最集中：要对被注入主体做资产评估与审计，评估增值可能带来相应税负，收购价款定高了是利益输送、定低了另一方股东未必同意；若构成同一控制下的企业合并，报表还要做追溯调整，等于把审计完的报告期数据重做一遍；此外常附带业绩承诺安排，把未来几年的经营压力写进协议。被注入主体自身的历史瑕疵——出资是否到位、社保公积金有没有欠缴、房产有没有产权证——也会一并带进来，等于把别人的旧账搬进自己家。</p>
+<p>路径二是剥离与终止，把交易停掉，各走各的。它的代价往往被低估，因为真正要证明的不是&quot;我们停了&quot;，而是&quot;停了之后我们还活得好&quot;。审核会追问：终止之后替代供应商是谁、价格变化多少、有没有稳定供货、毛利率的变动是否与终止相符；如果关联方掌握着客户关系或者渠道，还要说明客户是否随之流失。有一家做工业设备的企业，长期由关联的贸易公司统一对外销售，剥离之后才发现终端客户的合同、联系人和回款账户全在贸易公司手上，等于重新拓一遍客户，报告期最后一年的收入曲线因此出现明显缺口，解释成本比整改成本还高。</p>
+<p>路径三是保留并规范。真实必要的交易可以保留，前提是完成三件事：论证必要性——说明为什么必须由关联方提供，替代方案的成本与风险是什么；论证定价公允——见下一节；建立机制——把关联交易的决策权限、审议程序、关联方回避表决和持续披露写进公司章程与内控制度，并且要有实际执行的记录，不能只有制度文本。这条路看着最省事，实际上要求最高，因为前两条是一次性动作，这一条是长期义务。因此，选路径的顺序不该是&quot;哪条最干净&quot;，而应该是&quot;业务上能不能拆、拆了塌不塌，以及我还剩多少时间&quot;。</p>
+<h2>五、定价公允怎么证明——&quot;我们一直按成本价给&quot;为什么反而是问题</h2>
+<p><strong>结论先行：定价公允性不是靠一句&quot;我们定价是公允的&quot;来说明的，它需要可比证据；而企业主最常给出的那句解释——我们内部一直按成本价——恰恰是最难通过的一种。一家做电子元件的企业，多年来从老板控制的另一家公司按成本价采购一种关键基材，老板讲得很坦然：自家兄弟公司，不赚我的钱。中介的追问是：成本价意味着关联方在承担本该由市场承担的那部分毛利，那么报告期内上市主体的利润里，有多大一块是这样来的？如果哪天这家关联方不再按成本价供货，利润还剩多少？</strong></p>
+<p>这就是关键所在。价格偏离市场水平，无论偏高还是偏低，都会引出同一个问题——报告期的利润是不是真实、可持续的经营结果。偏高是利益从上市主体流出，偏低是利益向上市主体输入，后者听起来对公司有利，但它使得报告期的盈利能力无法被独立验证。审核关心的从来不是&quot;老板对公司好不好&quot;，而是&quot;这份报表能不能代表这家公司自己的赚钱能力&quot;。</p>
+<p>能用来证明公允的证据，实务中大致有三类。其一是可比市场价格：同期向非关联第三方采购或销售同类产品的价格，或公开市场报价、行业指数价格。这一类的证明力最为直接，前提是确实存在可比的非关联交易。其二是成本加成：披露成本构成与加成率，并说明该加成率与同类第三方交易一致或处于合理区间；要注意加成率不能是事后倒算出来的，得和历史定价记录对得上。其三是独立第三方评估或询价：由具备资质的评估机构出具意见，或取得多家非关联供应商报价作比对。租赁类交易常用这一类，因为房产租金的市场比对相对容易取得。</p>
+<p>三类之外还有一条隐性要求：定价机制要写在合同里，而不是每次口头商量。一份写着&quot;价格双方另行协商确定&quot;的关联交易合同，无论实际价格多公允，都会被追问，因为它在制度上留了一个可以随时调节利润的口子。因此，与其在申报时费力证明过去每一笔的价格是公允的，不如尽早把定价方法固定下来并持续执行——公允性最有力的证据，是一套长期一致执行的规则，而不是一份临时出具的说明。华尔街彤鼎俱乐部里被反复讨论的一个共识是：定价证据要在交易发生的当时留，事后是补不出来的。</p>
+<h2>六、租老板的房、共用采购、社保挂靠：小事为什么被追着问</h2>
+<p><strong>结论先行：金额小的关联交易同样会被反复问询，因为它们指向的不是金额，而是资产、人员、机构、业务、财务是否真正独立。一家做医疗器械的企业，报告期内的关联交易只有一项：办公楼和厂房租自老板个人名下，一年租金在整体成本里占比很小。老板认为这根本不值一提。问询函连着两轮追问的却是：房产是否设有抵押、租赁期限能否覆盖上市后的经营需要、租金是否与周边同类物业水平相当、如果实际控制人处置该房产，公司的生产经营场所是否会受影响。</strong></p>
+<p>原因在于，生产经营场所的稳定性直接关系到经营连续性。厂房在老板个人名下，意味着这家公司的生产基础建立在一份可被单方终止的合同上；房产若还被抵押给了别处，风险更进一层。这与租金多少无关。</p>
+<p>同类的&quot;小事&quot;还有几种。共用采购渠道——上市主体和关联方一起向供应商下单以争取更低价格，看起来是精打细算，但费用怎么分摊、折扣归谁、供应商的授信额度算谁的，都需要解释；更麻烦的是采购职能实际上没有独立，公司连自己买东西都要依赖别人。共用销售渠道同理，且直接牵动收入的真实性。员工社保挂在关联公司——多为历史原因形成，比如早年主体没有社保开户，人事一直挂在老公司；它同时引出用工主体与劳动关系是否清晰、人员是否独立、社保公积金是否足额缴纳几个问题，后者还可能带来补缴。由关联方代垫费用或代发薪酬——哪怕金额很小、事后都还清了，它证明的是公司的资金收付没有完全独立。</p>
+<p>打个比方，这些小事就像一间新公司的水电煤都还挂在房东名下：单看每一项都不贵，合起来说明的是这间公司还没有真正搬出去自己过日子。审核追问的是后面这句话，不是水电费本身。本质上，独立性是由一堆不起眼的细节共同证明的，而任何一项没拆干净，整个证明链条就少一环。</p>
+<h2>七、时点决定代价：为什么必须在报告期开始之前动手</h2>
+<p><strong>结论先行：关联交易整改的代价与动手时点高度相关——在报告期开始之前完成，报告期是干净的；拖到申报前一年才清，报告期内就会始终带着瑕疵，而这段瑕疵是抹不掉的。一家做新材料的企业在申报前十个月启动整改，用三个月完成了关联方梳理、终止协议签署和制度建设，动作不可谓不快；但它的报告期跨三个完整年度，其中两年多的期间里关联采购占比处于较高水平，申报后被要求逐年说明定价依据、补充非关联可比数据、并解释终止后供应链的稳定性，反馈往返了几轮，实际耗掉的时间远超当初整改本身花的三个月。</strong></p>
+<p>这里的算术很简单却常被忽略：整改动作是一次性的，可能只要几个月；而报告期是一段固定长度的历史，动手越晚，被瑕疵覆盖的比例越高。理想状态是在报告期开始之前就把关联方梳理清楚、把该停的停掉、把要保留的写进制度并开始执行。这样报告期起算之后的每一笔交易都是按新规则做的，申报时提供的不是解释，而是记录。</p>
+<p>整改本身需要的时间也常被低估。梳理关联方要穿透到亲属层面并逐一确认，通常要花上一两个月；选注入路径的，评估、审计与工商变更走完往往需要半年以上；选剥离的，替代供应商导入与客户关系迁移要跟着采购周期和销售周期走，快不了；选保留并规范的，制度建立只是起点，还得积累一段实际执行记录才有说服力——制度写好当天就申报，谁都看得出那是为申报写的。</p>
+<p>另一项容易被漏掉的代价，是关联方一侧的谈判成本。终止一份长期合作、把一家公司作价卖进上市主体、要求亲戚按市场价重签租约，都涉及另一方的利益，而对方往往是家人。越接近申报节点，对方越清楚企业方等不起，谈判的价格就越高——时间压力落在谁身上，谁就付更多。</p>
+<p>因此，对企业主而言，真正的决策不是&quot;选哪条路径&quot;，而是&quot;什么时候开始&quot;。多数关联交易问题在被中介发现的那一刻已经无法完美解决，能做的只是把损失控制在解释成本以内。关键在于，把清理动作提前到报告期起算之前，是少数几种能让这些问题彻底消失、而不是留下来被解释的做法之一。华尔街彤鼎俱乐部长期关注的，正是这一类&quot;早做便宜、晚做昂贵&quot;的准备工作在实务中的时间表。</p>
+<p>彤鼎集团（香港）有限公司在这类事情上承担的是统筹与协调角色：与企业方一起把关联方名单穿透到亲属与实际影响层面、把报告期内已终止的交易一并纳入梳理范围，测算注入、剥离终止与保留规范三条路径各自的时间成本与经营风险，协助搭建定价机制、决策回避与持续披露的制度框架，并把整改时间表向前对齐到报告期起算之前。涉及审计、评估、法律意见等持牌业务的，一律由具备相应资质的合作机构承做；涉及各上市地具体披露门槛与比例标准的，以监管机构现行正式文本为准。本质上，这项工作的价值不在于让企业少披露一笔交易，而在于让报告期开始的那一天，这家公司已经是一家能自己站住的公司。</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nasdaq-ipo-workstreams.html" style="color:#6b5426;font-weight:700;">纳斯达克IPO的29项工作：13个月里，谁在什么时候做什么</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="social-insurance-arrears.html" style="color:#6b5426;font-weight:700;">社保公积金历史欠缴：上市尽调里最不体面的一道坎</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="related-party-funds.html" style="color:#6b5426;font-weight:700;">关联方资金占用：上市前必须清到零的一笔账</a></li></ul></div><div class="brandbox">
+<h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由彤鼎集团团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信：esonleo　·　全网社媒请搜索「彤鼎」或「ESON廖生」</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>

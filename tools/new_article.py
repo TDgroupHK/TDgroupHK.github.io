@@ -50,6 +50,7 @@ RANK_FIRST = re.compile(r'(?:全球|国内|业内|行业|市场|中国)\s*第一
 TICKER = re.compile(r'\((?:NASDAQ|NYSE|SEHK|HKEX)[:：]\s*[A-Z0-9.]{1,6}\)|股票代码')
 
 CAT_LABELS = {
+    '初创与早期融资': '初创融资 EARLY STAGE',
     '上市路径与门槛': '上市路径 LISTING PATH',
     '跨境架构与合规': '架构合规 STRUCTURING',
     '上市执行': '上市执行 EXECUTION',
@@ -203,8 +204,17 @@ def lint(meta, secs):
     if m:
         problems.append('疑似出现股票代码：%s' % m.group(0))
 
-    # Pre-IPO / 投资机会须带合规三件套
-    if re.search(r'Pre-?IPO|投资机会|投资权益|认购', text, re.I):
+    # Pre-IPO / 投资机会须带合规三件套。
+    # 2026-08-01 放宽「认购」：它单独出现时多半是 IPO 发行与交割的标准术语
+    # （股票认购协议、认购资金、基石认购、超额认购、认购倍数…），与向投资人
+    # 推介 Pre-IPO 项目无关。这类误伤会让每一篇讲交割流程的文章都被拦下。
+    # 现在只有当「认购」与推介语境词（机会/权益/份额/额度/名额/优先）同现时才触发。
+    # 参照 compliance_words.json 已有的「正当术语」白名单做法——2026-07-27 校准时
+    # 「配售」全站误报 64 处，处理方式也是这一条：不删规则，只把正当用法排除掉。
+    PITCH = r'Pre-?IPO|投资机会|投资权益'
+    SUBSCRIBE_IN_PITCH = (r'认购[^。；\n]{0,20}(机会|权益|份额|额度|名额|优先)'
+                          r'|(机会|权益|份额|额度|名额|优先)[^。；\n]{0,20}认购')
+    if re.search(PITCH, text, re.I) or re.search(SUBSCRIBE_IN_PITCH, text):
         need = [('合格投资者', r'合格投资者'),
                 ('揭示风险', r'揭示风险|风险揭示|充分.{0,4}风险'),
                 ('不构成投资建议或收益承诺', r'不构成.{0,10}(投资建议|收益承诺)')]
@@ -267,14 +277,17 @@ def build_html(meta, secs, date, related):
     s = re.sub(r'<div class="en">.*?</div>', '<div class="en">%s</div>' % esc(meta['英文摘要']), s, count=1, flags=re.S)
 
     # 正文
-    parts = ['<div class="answer">%s</div>' % esc(meta['结论'], allow_links=True)]
+    parts = ['<div class="answer">%s</div>' % esc(meta['结论'], allow_links=True, allow_bold=True)]
     for t, ps in secs:
         parts.append('<h2>%s</h2>' % esc(t))
         for k, p in enumerate(ps):
             if k == 0 and p.startswith('结论先行'):
+                # ⛔ 这一段不切：article_cards.py 取的就是它去渲染章节插图，
+                # 切开之后卡片上只剩半句。它本来就该 40-60 字，超长是稿子的问题。
                 parts.append('<p><strong>%s</strong></p>' % esc(p, allow_links=True))
             else:
-                parts.append('<p>%s</p>' % esc(p, allow_links=True))
+                for seg in wrap_para(p):
+                    parts.append('<p>%s</p>' % esc(seg, allow_links=True, allow_bold=True))
     s = re.sub(r'<article[^>]*>.*?</article>',
                '<article>\n' + '\n'.join(parts) + '\n</article>', s, count=1, flags=re.S)
 
@@ -300,11 +313,64 @@ _ESCAPED_LINK = re.compile(
     r'&lt;a href=&quot;([a-z0-9-]+\.html)&quot;&gt;([^&<>]{1,60})&lt;/a&gt;')
 
 
-def esc(t, allow_links=False):
+# 稿件里的 markdown 加粗 **这样**。2026-08-14 发现它既不渲染也不清理，
+# 原样漏到官网页面上 —— 站上 7 篇文章正文里能看到字面的星号
+# （term-sheet-seven-clauses / pre-revenue-valuation / nasdaq-ipo-workstreams /
+#  us-market-cap-toolkit / valuation-enhancement-plan / share-reduction-rules-2024 /
+#  market-cap-management-system），读者看到的是 `**这一条要用数字讲。**`。
+# ⚠ 零告警：合规闸不查排版，页面也不报错，只有人打开看才知道。
+# 与 _ESCAPED_LINK 同一个套路：先整体转义防注入，再按白名单还原这一种标记。
+_ESCAPED_BOLD = re.compile(r'\*\*(?!\s)([^*\n]{1,120}?)(?<![\s*])\*\*')
+
+
+def esc(t, allow_links=False, allow_bold=False):
     s = (t or '').replace('&', '&amp;').replace('<', '&lt;').replace('>', '&gt;').replace('"', '&quot;')
     if allow_links:
         s = _ESCAPED_LINK.sub(lambda m: '<a href="%s">%s</a>' % (m.group(1), m.group(2)), s)
+    if allow_bold:
+        s = _ESCAPED_BOLD.sub(lambda m: '<strong>%s</strong>' % m.group(1), s)
     return s
+
+
+# 句末标点后断句，右引号/右括号跟着上一句走（「……。」不能切在句号后面）。
+# ⛔ 与 C:\TDGroupSEO\build_dist.py 的 _SENT 保持一致，别在这里另立一套判据。
+_SENT = re.compile(r'(?<=[。？！])(?![」』》”）】])')
+
+
+def wrap_para(p, limit=200, target=130, floor=45):
+    r"""段落超过 limit 字就按句切成几段。**一个字都不改，只加断行。**
+
+    2026-08-13 廖总原话：「全都是文字，根本吸引不到人类的客户，一定要多点断行」。
+    当天给**分发层**加了 build_dist.split_para 兜底（实测 526 字的段被切到最长 158），
+    ⛔ 但官网这条路是另一套代码，一段 = 一个 <p>，一个字没改 ——
+    2026-08-14 实测官网 202 篇里 66 篇（33%）有超 200 字的段，最长 556 字，
+    超标篇的段落中位高达 225-256。**分发层修了、官网没修，而且零告警。**
+
+    与分发层的差别是故意的：那边无条件按 110 字切（手机信息流场景），
+    这边**只切超过 200 字的段**（官网是长文阅读场景，且这样对已达标的新稿零影响、幂等）。
+
+    ⚠ 不切开 markdown 加粗：`**这句。** 后面`——加粗内部含句号时若在那里断开，
+    星号会被劈成两半，还原成 <strong> 时配不上对。判据是切点处 `**` 计数必须成对。
+    """
+    if len(p) <= limit:
+        return [p]
+    sents = [x for x in _SENT.split(p) if x.strip()]
+    if len(sents) < 2:
+        return [p]
+    out, cur = [], ''
+    for x in sents:
+        # cur 里 ** 落单时不许断开，继续累加直到成对
+        if cur and len(cur) + len(x) > target and cur.count('**') % 2 == 0:
+            out.append(cur)
+            cur = x
+        else:
+            cur += x
+    if cur:
+        if out and (len(cur) < floor or out[-1].count('**') % 2):
+            out[-1] += cur
+        else:
+            out.append(cur)
+    return out
 
 
 def sub_attr(s, prefix_pat, value):

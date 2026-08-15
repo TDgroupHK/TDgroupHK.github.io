@@ -19,12 +19,40 @@
 
 - [首页 Home](https://tdgroup.hk/): 公司定位、上市案例、八大核心业务、新加坡路径方法论
 - [上市预备期陪跑](https://tdgroup.hk/pre-ipo-program.html): 付费上市可行性深度诊断 + 12-24个月四阶段陪跑,按里程碑收费,不承诺结果
+- [初创公司资本服务 Startup Program](https://tdgroup.hk/startup-program.html): 面向初创与早期公司的四档服务——一对一资本咨询 2,800 元、融资条款审阅 6,800 元、股权架构体检 6,800 元、初创资本架构落地 68,000 元起；费用逐级抵扣，最终可抵上市可行性深度诊断；不承诺融资结果，持牌业务由持牌合作机构承做
+- [初创融资准备度自测 Startup Financing Checkup](https://tdgroup.hk/startup-financing-checkup.html): 八道题三分钟，从业务阶段、股权结构、材料完备度、财务规范四个维度判断现在该不该启动融资、缺哪几件材料、预计走多久；浏览器本地完成，不收集数据
+- [创始人股权健康度自测 Founder Equity Checkup](https://tdgroup.hk/founder-equity-checkup.html): 七道题三分钟，从分配方式、成熟机制、代持、期权池、婚姻安排、知识产权归属、出资实缴七个维度查出未来融资与上市申报会被卡住的股权隐患，硬伤/需整改/健康三级排序；浏览器本地完成，不收集数据
 - [关于 About](https://tdgroup.hk/about.html): 公司介绍、创始人廖启捷、已上市案例、角色与合规边界
+- [创始人 廖启捷 Founder](https://tdgroup.hk/founder.html): 彤鼎集团（香港）有限公司董事局主席、华尔街彤鼎俱乐部创始人；曾任职于加拿大券商机构，港沪深三地上市辅导机构创始合伙人，已主导 9 家企业完成纳斯达克挂牌辅导；专业领域与对应的知识文库索引
 - [华尔街彤鼎俱乐部 Club](https://tdgroup.hk/club.html): 企业家资本圈层、会员权益、三大课程、全球节点
 - [知识文库 Library](https://tdgroup.hk/library.html): 赴美上市知识文库全部文章目录
 - [常见问题 FAQ](https://tdgroup.hk/faq.html): 赴美上市/新加坡路径/香港18A与18C/门槛费用周期/VIE/37号文与ODI备案/达不到门槛的出路等16个高频问题标准答案
+- [境外上市术语表 Glossary](https://tdgroup.hk/glossary.html): 境外上市与跨境资本运作 104 个核心术语的定义式解释，每条定义直接取自本站对应文章的结论段（术语表与文章同源，站内不存在两套说法），并链到完整解读；覆盖 VIE 架构、红筹架构、37号文登记、ODI 备案、PCAOB 审计、SEC 问询函、同业竞争、出资瑕疵、关联方资金占用、对赌协议、优先清算权、反稀释条款、家族办公室、家族信托、员工持股平台等；支持实时搜索与分类筛选
+- [上市门槛速查 Listing Standards Check](https://tdgroup.hk/listing-standards-check.html): 输入净利润、股东权益、市值等五个数字，自动匹配纳斯达克资本市场层三套标准、2026年5月新规2500万美元流通市值线、香港主板盈利测试与18A/18C、新交所主板三套测试；含完整门槛对照表
+- [监管问询模式库 Regulatory Inquiry Patterns](https://tdgroup.hk/regulatory-inquiry-library.html): 按问询主题横向整理 SEC 问询函、港交所退回原因、中国证监会备案补充材料要求的十五个高频主题，每条含典型问法、监管关注点、什么回复会被追问、申报前如何准备；可按监管方筛选
+- [赴美上市费用测算 IPO Cost Estimator](https://tdgroup.hk/ipo-cost-estimator.html): 输入计划融资额与审计所选择，测算分项费用与总成本；把沉没成本（无论成败都要付）与成功才付的承销佣金分开算，给出净到手资金与挂牌后年度持续成本
+- [上市时间表倒推 Reverse Timeline Planner](https://tdgroup.hk/ipo-timeline-planner.html): 填目标敲钟月份，按真实纳斯达克项目排期（28 项任务、11 个月）倒推每项工作起止，并计算签约前的前置工程（财务规范化 12–24 个月、股东基础建设 12–18 个月、代持还原至少 12 个月），自动标出已来不及启动的环节
 
 ## 知识文库文章
+
+### 工具与速查 / TOOLS & QUICK REFERENCE
+
+初创融资准备度自测八道题，判断你现在该不该融、缺哪几块材料
+创始人股权健康度自测七道题，查出未来融资与上市会被卡的股权隐患
+境外上市术语表104 个核心术语，定义取自本站文章，可搜索
+上市门槛速查填五个数字，自动匹配纳斯达克/港交所/新交所标准
+赴美上市费用测算分项费用与净到手资金，沉没成本单独算
+上市时间表倒推填目标敲钟月份，倒推 28 项任务起止
+监管问询模式库SEC / 港交所 / 证监会十五个高频问询主题
+常见问题43 个高频问题的标准答案
+
+初创与早期融资EARLY STAGE & STARTUP FINANCING
+
+- [第一次融资要准备什么：从见投资人到钱进账的完整清单与时间表](https://tdgroup.hk/articles/first-financing-checklist.html)
+- [初创公司什么时候搭境外架构：早搭三年与晚搭三年，差的不只是钱](https://tdgroup.hk/articles/startup-offshore-timing.html)
+- [初创公司的财务规范从第一天做什么：三年后审计追溯，哪些账补不回来](https://tdgroup.hk/articles/startup-financial-hygiene.html)
+- [天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的](https://tdgroup.hk/articles/angel-round-valuation.html)
+- [合伙人股权怎么分：初创公司创始团队的股权分配方法与三条不可逆红线](https://tdgroup.hk/articles/cofounder-equity-split.html)
 
 ### 上市路径与门槛 / LISTING PATHS
 
@@ -61,6 +89,7 @@
 
 ### 跨境架构与合规 / STRUCTURING & COMPLIANCE
 
+- [37号文没登记，会在境外上市的哪一步被卡住](https://tdgroup.hk/articles/forex-37-unregistered.html)
 - [H股全流通：境内未上市股份变成可流通H股的完整路径](https://tdgroup.hk/articles/h-share-full-circulation.html)
 - [境外上市的数据合规：网络安全审查与数据出境的三条路径](https://tdgroup.hk/articles/data-compliance-overseas-listing.html)
 - [备案前12个月新增股东：入股价格公允性如何说清楚](https://tdgroup.hk/articles/pre-ipo-share-price-fairness.html)
@@ -81,6 +110,11 @@
 
 ### 上市执行 / EXECUTION
 
+- [独立性：把一家公司拎出来上市，难的不是拎，是证明它能自己活](https://tdgroup.hk/articles/issuer-independence-five.html)
+- [实际控制人认定：股权表上写得清清楚楚，答案却不是老板自己填的](https://tdgroup.hk/articles/actual-controller-determination.html)
+- [关联交易清不干净，报告期就得从头再数一遍](https://tdgroup.hk/articles/related-party-transactions-cleanup.html)
+- [纳斯达克IPO的29项工作：13个月里，谁在什么时候做什么](https://tdgroup.hk/articles/nasdaq-ipo-workstreams.html)
+- [社保公积金历史欠缴：上市尽调里最不体面的一道坎](https://tdgroup.hk/articles/social-insurance-arrears.html)
 - [关联方资金占用：上市前必须清到零的一笔账](https://tdgroup.hk/articles/related-party-funds.html)
 - [商标、专利、域名：上市前无形资产梳理最容易漏的三件事](https://tdgroup.hk/articles/ip-cleanup.html)
 - [出资瑕疵：十几年前的一笔注册资本，为什么能拖住整个上市进程](https://tdgroup.hk/articles/capital-contribution-defects.html)
@@ -114,6 +148,30 @@
 
 ### 融资与条款 / FINANCING & TERMS
 
+- [条款清单上最贵的七行字：签的时候一点都不疼，代价三年后一次性到账](https://tdgroup.hk/articles/term-sheet-seven-clauses.html)
+- [这笔钱该借还是该卖股权：两种钱的代价，发生在不同的时点、由不同的人承担](https://tdgroup.hk/articles/debt-vs-equity-financing.html)
+- [过桥融资：下一轮还没到账，中间这笔短钱按什么条件拿](https://tdgroup.hk/articles/bridge-financing-terms.html)
+- [投资人最后没投：写在邮件里的那句理由，和真正的理由不是一件事](https://tdgroup.hk/articles/why-investors-pass.html)
+- [没有利润也没有收入的公司，估值那个数字是谈出来的，不是算出来的](https://tdgroup.hk/articles/pre-revenue-valuation.html)
+- [现金紧就发股权？那五个点换来的，和你以为的不是一回事](https://tdgroup.hk/articles/equity-instead-of-cash.html)
+- [一致行动协议：把散掉的表决权绑回来的那张纸，什么时候会自己松开](https://tdgroup.hk/articles/concert-party-agreement.html)
+- [条款清单不具约束力？真正管住你的那几条，从签字当天就开始生效](https://tdgroup.hk/articles/term-sheet-binding-clauses.html)
+- [特别股东权利清理：申报前签的那份终止协议，为什么四个月后又被翻了出来](https://tdgroup.hk/articles/special-rights-termination.html)
+- [陈述与保证：签字那天多写的那一句，两年后变成一张要你自己掏的账单](https://tdgroup.hk/articles/reps-warranties-indemnity.html)
+- [股权结构表：你以为自己还剩多少，和尽调底稿上写的从来不是一个数](https://tdgroup.hk/articles/cap-table-fully-diluted.html)
+- [资金用途条款：钱到账了，一笔付款走错方向，后续款项就停了](https://tdgroup.hk/articles/use-of-proceeds-control.html)
+- [优先购买权与共同出售权：老股转让签了协议，钱也未必到账](https://tdgroup.hk/articles/rofr-co-sale.html)
+- [优先增资权：新一轮的钱进不来，卡在老股东那封通知上](https://tdgroup.hk/articles/pre-emptive-rights.html)
+- [创始人股份成熟：已经在你名下的股权，融资那天要重新挣一遍](https://tdgroup.hk/articles/founder-vesting.html)
+- [投资人的信息权，能把一份晚交的月报变成违约](https://tdgroup.hk/articles/investor-information-rights.html)
+- [领售权：公司被卖掉那天，创始人只能签字](https://tdgroup.hk/articles/drag-along-rights.html)
+- [可转换票据，签的时候最省事，到期那天最难办](https://tdgroup.hk/articles/convertible-note-financing.html)
+- [一票否决权，能把一家公司卡到动不了](https://tdgroup.hk/articles/investor-veto-rights.html)
+- [融资死在交割前，通常经历六个阶段](https://tdgroup.hk/articles/term-sheet-to-closing.html)
+- [创始人卖老股，卖多少会被拦](https://tdgroup.hk/articles/founder-secondary-sale.html)
+- [空窗期拖过十八个月，下一轮就谈不动了](https://tdgroup.hk/articles/financing-round-gap.html)
+- [报表很漂亮，尽调三天就撤了](https://tdgroup.hk/articles/dd-onsite-rejection.html)
+- [对赌回购触发之后：别急着找钱，先算账](https://tdgroup.hk/articles/vam-triggered.html)
 - [反稀释条款的三种算法与谈判空间](https://tdgroup.hk/articles/anti-dilution-clauses.html)
 - [优先清算权怎么谈：条款清单里最容易被忽略的一条](https://tdgroup.hk/articles/liquidation-preference.html)
 - [估值倒挂下的融资策略](https://tdgroup.hk/articles/valuation-gap-financing.html)
@@ -133,6 +191,13 @@
 ### 挂牌之后 / POST-LISTING
 
 - [纳斯达克500万美元市值退市新规：无补救期时代怎么应对](https://tdgroup.hk/articles/nasdaq-5m-mvls-delisting-rule.html)
+- [港股回购与库存股份：2024年新机制改了什么，与A股又差在哪](https://tdgroup.hk/articles/hk-buyback-treasury-shares.html)
+- [减持新规下，实控人的退出路径还剩哪些](https://tdgroup.hk/articles/share-reduction-rules-2024.html)
+- [中概股高管减持：Rule 144 与 10b5-1 计划怎么配合](https://tdgroup.hk/articles/rule144-10b5-1.html)
+- [上市公司实控人的股票质押：什么时候是融资工具，什么时候是暴雷前兆](https://tdgroup.hk/articles/share-pledge-risk.html)
+- [主要指数成份股的市值管理制度：四项必载事项与那条最难写的条款](https://tdgroup.hk/articles/market-cap-management-system.html)
+- [长期破净公司的估值提升计划：谁必须做、写什么、怎么披露](https://tdgroup.hk/articles/valuation-enhancement-plan.html)
+- [美股没有「市值管理」这个概念：中概股公司的对应工具箱](https://tdgroup.hk/articles/us-market-cap-toolkit.html)
 - [外国私人发行人身份认定：两步测试与丧失后的合规升级](https://tdgroup.hk/articles/fpi-status-test.html)
 - [上市后的锁定期与解禁减持](https://tdgroup.hk/articles/lockup-expiry.html)
 - [上市公司IR体系搭建](https://tdgroup.hk/articles/ir-fundamentals.html)
@@ -178,6 +243,8 @@
 
 ### 财富与传承 / WEALTH & LEGACY
 
+- [接班人评估：怎么判断二代到底接不接得住](https://tdgroup.hk/articles/successor-readiness-test.html)
+- [无人接班：子女都不愿意接手，企业还剩下哪三条出路](https://tdgroup.hk/articles/no-successor-exit-paths.html)
 - [单一家办还是联合家办：一道关于成本、控制权和边界的选择题](https://tdgroup.hk/articles/sfo-vs-mfo.html)
 - [保险金信托：为什么在信托之外，还要再加一层保单](https://tdgroup.hk/articles/insurance-trust.html)
 - [家族公益基金会：它首先是一件治理工具，其次才是做好事](https://tdgroup.hk/articles/family-foundation.html)
@@ -197,6 +264,7 @@
 
 ### 企业家成长 / FOUNDER GROWTH
 
+- [账上不缺钱的公司，为什么还要上市：不上市这些年，你付的是哪几笔账](https://tdgroup.hk/articles/listing-opportunity-cost.html)
 - [要不要请职业经理人：上市前的治理与授权取舍](https://tdgroup.hk/articles/professional-manager-choice.html)
 - [第一次见投资人该怎么讲企业](https://tdgroup.hk/articles/investor-pitch-language.html)
 - [从老板到上市公司董事长：角色转变的六个断点](https://tdgroup.hk/articles/founder-role-shift.html)

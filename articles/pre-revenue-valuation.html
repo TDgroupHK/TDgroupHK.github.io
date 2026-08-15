@@ -1,0 +1,294 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>没有利润也没有收入的公司，估值那个数字是谈出来的，不是算出来的 | 彤鼎集团知识文库</title>
+<meta name="description" content="一家还没有利润、甚至还没有像样收入的公司，估值那个数字并不是从公司身上算出来的。本文从企业方视角拆解早期估值的真实生成过程：为什么投资人不看那份三年预测模型、他心里真正的锚点有哪几个、&quot;投多少钱换多少比例&quot;是怎么倒算出估值的、投前与投后为什么会差出一层稀释、期权池放在投前还是投后决定这层稀释由谁承担、名义估值如何被清算优先与回购条款吃回去，以及上一轮定得过高的价格会在下一轮以什么方式反噬。">
+<link rel="canonical" href="https://tdgroup.hk/articles/pre-revenue-valuation.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="彤鼎集团知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="没有利润也没有收入的公司，估值那个数字是谈出来的，不是算出来的 | 彤鼎集团知识文库">
+<meta property="og:description" content="一家还没有利润、甚至还没有像样收入的公司，估值那个数字并不是从公司身上算出来的。本文从企业方视角拆解早期估值的真实生成过程：为什么投资人不看那份三年预测模型、他心里真正的锚点有哪几个、&quot;投多少钱换多少比例&quot;是怎么倒算出估值的、投前与投后为什么会差出一层稀释、期权池放在投前还是投后决定这层稀释由谁承担、名义估值如何被清算优先与回购条款吃回去，以及上一轮定得过高的价格会在下一轮以什么方式反噬。">
+<meta property="og:url" content="https://tdgroup.hk/articles/pre-revenue-valuation.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="没有利润也没有收入的公司，估值那个数字是谈出来的，不是算出来的 | 彤鼎集团知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:4px;font-size:17px;}
+.logo .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10.5px;letter-spacing:3px;margin-top:2px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"没有利润也没有收入的公司，估值那个数字是谈出来的，不是算出来的","inLanguage":"zh-CN","abstract":"For a company with no profit and little or no revenue, the valuation in a term sheet is not the output of a model. It is negotiated. This article takes the company's side and explains what actually anchors an early-stage price: recent comparable private transactions the investor has seen and the founder has not, where the sector currently sits in the funding cycle, whether a credible next round exists to take the position higher, and the fund's own requirement for ownership at entry. It then works through the mechanics founders most often lose money on: pre-money versus post-money, whether the option pool sits inside the pre-money number, how liquidation preference and redemption rights turn a headline valuation into a very different economic price, and how an inflated round is repaid in the round that follows.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/pre-revenue-valuation.html"},"datePublished":"2026-08-12","dateModified":"2026-08-12","description":"一家还没有利润、甚至还没有像样收入的公司，估值那个数字并不是从公司身上算出来的。本文从企业方视角拆解早期估值的真实生成过程：为什么投资人不看那份三年预测模型、他心里真正的锚点有哪几个、\"投多少钱换多少比例\"是怎么倒算出估值的、投前与投后为什么会差出一层稀释、期权池放在投前还是投后决定这层稀释由谁承担、名义估值如何被清算优先与回购条款吃回去，以及上一轮定得过高的价格会在下一轮以什么方式反噬。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="彤鼎集团 TD Group"><span class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></span></a>
+<div class="menu"><a href="/">首页 Home</a><a href="../about.html">关于 About</a><a href="../club.html">俱乐部 Club</a><a href="../library.html">文库 Library</a><a href="../faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">融资估值 FINANCING</div><h1>没有利润也没有收入的公司，估值那个数字是谈出来的，不是算出来的</h1>
+<div class="sub">创始人以为的锚是投入、技术和天花板故事，投资人心里的锚是可比成交、赛道当下的位置、下一轮谁来接、以及他自己那只基金必须拿到的比例；投前和投后差的是一层稀释，期权池放在哪一边差的是这层稀释由谁掏，而估值定高了的那笔账，要等到下一轮才开始还</div><div class="en">For a company with no profit and little or no revenue, the valuation in a term sheet is not the output of a model. It is negotiated. This article takes the company's side and explains what actually anchors an early-stage price: recent comparable private transactions the investor has seen and the founder has not, where the sector currently sits in the funding cycle, whether a credible next round exists to take the position higher, and the fund's own requirement for ownership at entry. It then works through the mechanics founders most often lose money on: pre-money versus post-money, whether the option pool sits inside the pre-money number, how liquidation preference and redemption rights turn a headline valuation into a very different economic price, and how an inflated round is repaid in the round that follows.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
+<article>
+<div class="answer">早期估值是指在一家公司尚未产生利润、甚至尚未形成稳定收入的阶段，投资人与企业方就本轮出资所对应的公司价格达成的合意结果；它在形式上表现为一个金额，在实质上是&quot;本轮投多少钱、换走多少比例&quot;这一分配安排的另一种表达方式。由于缺乏可供双方共同验证的盈利或收入基数，估值在这一阶段不具备计算意义上的确定解，其取值主要由四类锚点决定：近期同类项目的一级市场成交价格、所处赛道当期的资金流向与退出通道状况、下一轮能否由新的出资方以更高价格承接、以及投资方基金自身对单笔出资规模与入股比例的内部要求。同一个估值数字还存在两种口径（投前与投后，两者相差本轮出资额）与一处常被忽略的位置选择（期权池计入投前还是投后，决定这部分稀释由原股东单独承担还是由新老股东共同承担）。名义估值并不等于企业方的实际所得，清算优先权、参与权、反稀释、回购权与分期出资安排均会改变同一价格下的真实分配结果。具体倍数、比例与区间随市场周期与交易结构变动，以实际交易文件与各方尽职调查结论为准。</div>
+<h2>一、那份做了三个月的预测模型，投资人一页都没翻</h2>
+<p><strong>结论先行：一家还没有利润、也没有像样收入的公司，它的估值不是从这家公司身上算出来的，是从&quot;这一轮怎么分配&quot;和&quot;外面最近有没有类似的成交价&quot;里谈出来的。</strong></p>
+<p>一家做手术导航设备的企业，成立四年多，产品在几家医院做临床验证，账上的收入只有零星几笔样机款。为了这一轮融资，创始人带着财务负责人做了将近三个月的模型：往后推三年的装机台数、单台售价、耗材复购、毛利结构，一路推到净利润，再折现回来，得出一个数字。会上他讲了二十来分钟，逻辑严密，每一个假设后面都挂着依据。</p>
+<p>对方的合伙人听完，只问了三件事：同类的导航类产品最近半年有没有成交、成交价大致在什么位置、你这一轮打算让出多少。那份模型文件，从那天起到打款，没有任何人再提起过。</p>
+<p>创始人当场的判断是&quot;这帮人不专业&quot;。半年后他自己复盘出另一个解释，这个解释更让他难受：那份模型里的每一个输入——装机台数、售价、复购率、渗透节奏——全部来自他本人，投资人没有任何独立渠道去验证其中任何一项。一个所有输入都由卖方提供的模型，算出来的输出对买方不构成信息。他们不看，不是因为看不懂，是因为那份文件在他们的决策里不产生作用。</p>
+<p>这就是&quot;没有利润、没有收入&quot;这件事在定价上的真实含义：它拿掉的不是几个财务数字，是<strong>双方共同承认的计价基准</strong>。有利润的时候，买卖双方哪怕为倍数吵得再凶，至少对&quot;乘数乘在什么东西上面&quot;没有分歧；没有利润也没有收入的时候，连乘在什么上面都没有共识。定价于是从一道计算题变成一场谈判——而绝大多数创始人是带着计算题的准备去参加谈判的。</p>
+<h2>二、创始人以为的锚：投入、技术、天花板，以及别人家的价格</h2>
+<p><strong>结论先行：创始人手里那几样东西不是没有价值，而是它们决定的是&quot;这个项目值不值得看&quot;，不决定&quot;这一轮给多少钱&quot;——把门槛条件当定价依据，是早期谈判里最贵的一个误解。</strong></p>
+<p>其一是投入。一家做工业机器人减速器的企业，创始人在头一次正式谈判里摊开了一张表：六年研发、几轮试制、模具与产线的实际支出、团队放弃的薪水。他的推论很自然——光是砸进去的钱就有这么多，估值总不能低于它。对方的回答他记了很久：你投进去的是已经发生的成本，我买的是还没发生的那部分；如果沉没成本能定价，那么每一家失败的公司都应该值它烧掉的钱。这句话听着冷，但它就是一级市场的定价原理：价格分配的是未来的收益，不是过去的付出。</p>
+<p>其二是技术本身。专利数量、论文、团队的履历、实验室数据，这些东西在投资人的流程里出现在&quot;能不能投&quot;那一格，不是&quot;给多少钱&quot;那一格。它们是准入条件：技术不过关，价格无从谈起；技术过关了，价格由别的东西决定。把两件事混在一起，谈判就会变成一场各说各话——创始人反复证明技术很硬，对方反复点头承认技术很硬，然后给出一个和技术没什么关系的数字。</p>
+<p>其三是天花板故事，行话里那个不太好听的说法叫市梦率。市场规模有多大、如果拿下百分之几会怎样、对标的海外公司做到了什么体量。这类叙述有它的作用——它决定这家公司够不够格进入某一类基金的射程，因为规模不够大的市场，无论怎么成功都撑不起对方需要的退出量级。但它决定的仍然是&quot;看不看&quot;，不是&quot;多少钱&quot;。天花板故事讲得再好，也换不来这一轮多出来的那部分估值，因为下一个接盘的人同样会重新听一遍这个故事，并且用他自己当时的市场环境去打折。</p>
+<p>其四是别人家的价格。同一个孵化器出来的同学融了多少、行业新闻里报出来的某笔交易多少，是创始人最容易抓住也最不可靠的锚。公开报道里的数字往往是投后口径、往往含未行权的期权池、往往不披露清算优先与回购的写法，有时候干脆是一个经过修饰的对外口径。拿一个不知道口径的数字去锚自己的价格，等于在拿别人的换算规则算自己的账。</p>
+<p>其五是战略投资人给过的价。一家做农业植保无人机服务的企业，早期拿过一家产业方的投资，价格给得相当漂亮。创始人把这个价格当成了后续融资的地板，结果连续接触的几家财务投资人都不接受，其中一家说得很直白：产业方买的是渠道协同和供应链绑定，他愿意为协同多付的那部分，在我这里没有对应的收益，我不能替他的战略买单。产业方的溢价来源与财务投资人的收益来源本来就不是同一件事，把前者当作后者的基准，谈判从开局就错了位。</p>
+<p>因此，创始人在准备融资时该做的不是把这五样东西堆得更厚，而是先分清楚：哪些是拿来通过门槛的，哪些是拿来定价格的。前者要做扎实，后者要另找依据——依据在下一节。</p>
+<h2>三、投资人心里真正的锚：他不是在给公司定价，是在给这一轮定价</h2>
+<p><strong>结论先行：早期估值在很多交易里根本不是&quot;算出来&quot;的，而是&quot;倒算出来&quot;的——投资人先确定这一轮要出多少钱、要拿到多少比例，两者一除就是投后估值，之后所有的讨论都是围绕这个结果找说法。</strong></p>
+<p>锚之一是可比成交，而且是一级市场的可比成交，不是二级市场的价格。投资人手里有一个创始人拿不到的东西：他这一年看过几十个同类阶段、同类赛道的项目，知道其中哪些完成了、按什么价格完成的、条款怎么写的。创始人手里只有自己这一个样本。这是早期谈判里最大的一处信息不对称，它比任何谈判技巧都更能决定结果——你在跟一个知道市场价的人讨价还价，而你不知道市场价。</p>
+<p>锚之二是这条赛道当期所处的位置。同一家公司、同一份材料、同一个团队，在资金正在往这个方向走的时候和资金正在往别处走的时候，拿到的价格不是一回事。这不是投资人善变，而是他的定价里包含了一个变量：如果这条赛道后面没有持续的资金进来，他这一笔就没有人接。赛道的冷热直接改写他对下一轮的判断，而下一轮的判断就是下一条锚。</p>
+<p>锚之三是下一轮谁来接、按什么价格接。这一条是早期估值真正的核心，也是创始人最少去想的一条。投资人在这个阶段买的不是利润，甚至不是收入，他买的是&quot;下一个人愿意用更高的价格把这个位置接走&quot;的可能性。所以他心里跑的是一条价格路径：这一轮给你这个数，你拿这笔钱能做出什么，做出来之后按下一类投资人的标准值多少，那个数字比现在这个数高出多少、需要多久。如果这条路径接不上——比如按现在的价格进去，你必须在下一轮之前做到某个明显不现实的状态才能撑住更高的价格——他要么压价，要么直接不投。这也解释了一个让很多创始人困惑的现象：对方在会上把公司夸了一遍，最后却给了一个很低的价，或者干脆不出手。认可的是公司，接不上的是价格路径。</p>
+<p>锚之四是他自己那只基金的内部约束。这部分创始人几乎看不见，但它每一条都在压着最终的数字：单个项目在这只基金里能占多大的出资规模、进场时需要拿到多少比例才能在后面几轮的稀释之后仍然剩下有意义的持股、基金存续期还剩多长因而这笔投资需要在多少年内看到退出、内部投决会对同类项目已经形成的价格惯例。这些约束和你的公司没有关系，但它们决定了对方能给你的价格区间的上下沿。</p>
+<p>于是就有了那个倒算。谈判桌上真正发生的顺序常常是这样的：他先定&quot;这一轮我出这么多钱&quot;，再定&quot;我需要拿到这个比例&quot;，两者一除，投后估值就出来了。之后双方在会议室里讨论的那些理由——技术壁垒、团队背景、市场空间——大多是在给这个已经确定的结果找注脚。理解这个顺序，谈判方式会立刻不同：你如果只在&quot;估值&quot;这个数字上硬顶，是在跟一个被基金规则约束的结果较劲；你如果去动&quot;这一轮投多少钱&quot;，反而可能把整个式子挪开——同样的比例，融资额降下来，估值也就跟着降；同样的估值，融资额提上去，你让出的比例就变多。金额和比例是两个可调的把手，而创始人往往只盯着中间那个乘积。</p>
+<p>关键在于，看懂这个顺序不是为了愤世嫉俗，而是为了把谈判精力放对地方。企业主最常问的一个问题是&quot;我这样的公司到底值多少&quot;，而更有用的问题是另外两个：我这一轮到底需要多少钱，以及按这个价格进来的人，他心里那条下一轮的路径是什么样的——这两个问题的答案能直接改变结果，前一个不能。后面这两个问题也是华尔街彤鼎俱乐部内部交流中出现频率较高的一类议题。</p>
+<h2>四、投前还是投后：同一个数字，两种含义；期权池放在哪一边，决定这层稀释由谁掏</h2>
+<p><strong>结论先行：早期融资里最贵的两行小字，一行是这个估值是投前还是投后，另一行是期权池计入哪一边——它们都不改变桌面上那个漂亮的数字，但它们直接决定签完字之后你还剩多少。</strong></p>
+<p>先把口径讲死。投后估值等于投前估值加上本轮实际出资额。假设双方谈定的那个数字是 V，本轮出资额是 I。若 V 指的是投前，投资人的持股比例是 I ÷（V + I）；若 V 指的是投后，比例是 I ÷ V。两个算式的分母不同，结果自然不同，而差出来的那一部分，全部落在创始人与原股东身上。这不是文字游戏，它是同一句&quot;我给你这个估值&quot;在两种口径下的两个结果。</p>
+<p>一家做水处理膜材料的企业在这里栽过。条款清单阶段双方对那个数字都点了头，握手言欢，创始人回去按投前口径算了一遍自己让出的比例，觉得可以接受。等到正式协议出来，他才发现对方从头到尾说的都是投后，而且期权池要在本轮之前扩到一个约定的规模。两处叠加，他实际让出的比例明显超出他自己算过的那个数。他后来的复盘只有一句：那次谈判我把全部精力花在了估值这个数字上，真正决定我还剩多少的，是这个数字旁边的两行小字。</p>
+<p>再说期权池的位置，这一处比投前投后更隐蔽，因为它连&quot;数字变了&quot;都不表现出来。期权池是为将来招人预留的、尚未授予的股权。它放在投前，意味着这部分股权在投资人进场之前就已经从原股东的持股里划出来了，稀释由创始人及原股东单独承担；它放在投后，意味着新老股东按各自比例共同承担这部分稀释。投资人几乎总是要求前者，而且往往同时要求把池子扩到&quot;足够支撑到下一轮&quot;的规模——理由听起来无可辩驳：这些人是你要招的，招进来是为你的业务服务的。但账不是这么算的：这些人招进来，业务做起来，价值是所有股东共享的，成本却由一方独担。</p>
+<p>企业方在这一处能做的有几件事。其一，不要接受一个凭惯例给出的池子规模，把它换成一份具体的招聘计划：未来一到两年打算招哪几个岗位、每个岗位大致给多少股权、加总是多少，用这份清单去谈规模，比在百分比上讨价还价有效得多，因为对方很难反驳一份具体的用人计划。其二，争取把池子的一部分放到投后，或者退一步，约定超出本轮所需的那部分在下一轮设立时由届时的全体股东共同承担。其三，把池子和融资额挂钩而不是和估值挂钩：扩池的目的是招人，招多少人取决于这笔钱能支撑的团队规模。</p>
+<p>还有一处口径要在条款清单阶段就写死：估值和比例是按完全稀释后的股本计算，还是按当时的实际股本计算。可转换债、已发出但尚未行权的期权、承诺给顾问的股权，是否全部计入分母，会直接改变每一方的比例。股权结构表怎么搭是另一个话题，这里只强调一点：所有关于比例的讨论，双方必须先确认用的是同一个分母，否则谈的从来就不是一件事。</p>
+<p>因此，条款清单阶段真正要逐字确认的不是那个估值数字，而是三句话：这个数字是投前还是投后、期权池计入哪一边、比例按哪个分母算。这三句话确认清楚之后，那个数字才有意义。</p>
+<h2>五、名义估值是给外面看的，条款才是真正的价格</h2>
+<p><strong>结论先行：同一个估值数字，配上不同的条款，企业方的实际所得可以差出一个量级——所以投资人愿意在数字上让步、在条款上找补，是这个行业里最常见的一笔交换，而创始人常常以为自己赢了。</strong></p>
+<p>一家做宠物功能食品的企业同时拿到过两份条款清单。一份价格明显更高，但清算优先权写得很重、带参与权、还挂着一个触发条件宽松的回购安排；另一份价格低一截，条款干净得多。创始人选了高的那一份，理由和很多人一样：数字好看，对团队好交代，对上一轮的老股东也好交代。三年后公司被一家同行整体收购，成交价放在行业里不算差，但按清算优先与参与条款分完之后，创始人和早期团队分到的那部分远低于他们按持股比例形成的直觉。他事后的说法是：我拿高估值换来的东西，在公司一路往上走的情况下确实值那么多，可我签的是一份在其他所有情况下都对我不利的文件，而其他所有情况加起来的概率，比我当时以为的大得多。</p>
+<p>具体到条款，有几处直接改写&quot;名义估值&quot;与&quot;实际价格&quot;之间的换算关系。</p>
+<p>清算优先权决定退出时谁先拿钱、拿多少。优先返还的口径是投资本金，还是本金再加上一个约定的倍数；返还之后，投资人还能不能再按持股比例参与剩余部分的分配（参与型与非参与型的区别）。这两处写法决定了在一个不那么理想的退出里，创始人是分到一部分，还是几乎什么都分不到。估值给得越高、优先权写得越重，这两者在企业方账上是可以互相抵消的。</p>
+<p>回购权决定这笔投资在什么情况下会变成一笔必须偿还的负债。触发条件写得越宽（比如把&quot;未在约定时间内完成上市或被并购&quot;直接列为触发事由）、回购价的计息口径越高，这一轮的性质就越接近借款而不是股权投资。一个很高的估值配一个宽松触发的回购权，实际风险敞口未必比一个较低的估值配干净条款更好。</p>
+<p>反稀释安排决定下一轮跌破本轮价格时会发生什么。它的几种计算方式在另一处专门讲过，这里只需要建立一个联系：估值定得越高，下一轮跌破它的概率就越大，而反稀释条款正是为这个情形准备的——高估值和反稀释是一对，接受前者的时候必须同时读懂后者。</p>
+<p>分期出资与里程碑决定这笔钱到底什么时候在你账上。估值谈到位了，但钱分几笔给，每一笔挂着一个业务条件，效果等于把价格风险转换成了时间风险：条件没达成，后续的钱不来，而公司的开支已经按全额资金规划过了。这一处要争的不是分不分期，而是里程碑必须客观、可核查、且在公司自己能控制的范围内，不能写成需要第三方配合才能达成的事项。</p>
+<p>保护性条款与董事会安排则决定在这个价格之下，公司的很多决定还是不是你能自己做。它们不改变分钱的算式，但改变了&quot;你能不能走到分钱那一天&quot;的路径。</p>
+<p>关键在于，谈判桌上真正该问的从来不是&quot;你能给我多少估值&quot;，而是&quot;在这个价格上，你的优先权怎么写、参不参与剩余分配、回购在什么条件下触发、钱怎么给&quot;。有一个自查办法很直接：把手上几份条款清单的估值数字全部盖住，只留条款，再请几位有经验的创始人排一下优劣，如果排出来的顺序和按估值排的顺序对不上，那就说明数字和价格本来就是两回事。条款结构的横向对照，也是华尔街彤鼎俱乐部内部交流里常被拿出来讨论的一类话题。</p>
+<h2>六、估值定高了，账要到下一轮才开始还</h2>
+<p><strong>结论先行：估值不是一次性的成绩，它是一条你必须接着往上走的路径；这一轮的价格，本质上是你对下一轮做出的一个承诺。</strong></p>
+<p>一家做跨境仓储自动化的企业走过这条路。头一轮之后正好赶上赛道的热度，第二轮拿到一个非常漂亮的价格，公司对外发了消息，创始人拿这个数字去招人、去谈客户、去和同行说话，那一年过得很顺。一年半以后，行业的投资节奏明显放慢，而公司的落地进度没跟上那个价格所隐含的预期。第三轮谈了七个月，接触过的机构里没有人愿意在上一轮的价格之上出手，最后是几位老股东内部按一个明显更低的价格续了一笔过桥资金。反稀释调整被触发，前一轮投资人的持股被补足，补出来的这部分稀释落在创始团队和期权池上；两位早期核心员工发现自己的期权行权价高于新一轮的价格，手里的东西暂时没有意义，先后离职。创始人复盘时那句话值得抄下来：上一轮那个数字，我拿它去招人、去谈客户、去到处说，一年半以后它变成了我要还的债。</p>
+<p>高估值的反噬有几条固定的路径，它们通常同时发生。</p>
+<p>一是把下一轮的门槛抬到了自己头上。新投资人不关心你上一轮多少钱，他只关心这一轮值多少；但你和你的老股东会被上一轮那个数字锚住，心理上很难接受一个更低的价格，于是谈判一拖再拖。等到现金见底再回头接受市场价，谈判地位比一开始差得多——而现金的消耗速度是确定的，市场的回暖不是。</p>
+<p>二是反稀释的连锁反应。价格跌破上一轮时，反稀释条款给老投资人做出补偿，补偿的来源是创始团队和期权池的持股，不是天上掉下来的。也就是说，上一轮多要的那部分估值，在下一轮以持股比例的形式还了回去，而且往往还得更多。</p>
+<p>三是期权失效带来的人的问题。行权价高于当前价格的期权，在员工眼里就是一张暂时没有用的纸。这时候公司要么重新定价（需要走公司治理程序，且会引发老投资人和已离职员工的意见），要么额外增发（进一步稀释），要么接受核心人员流失。三条路没有一条便宜。</p>
+<p>四是老股转让被卡住。早期股东、甚至创始人本人想部分变现的时候，会发现按上一轮价格没有人接，而按能成交的价格转让，等于用一笔实际成交价公开否定了公司账面上的估值，会牵动后续融资的定价基准。</p>
+<p>五是上市申报阶段的历史定价一致性。申报材料里需要说明历次增资与股权转让的定价依据，前后价格出现明显不连续、尤其是明显下跌的，中介机构一定会要求逐轮解释：定价依据是什么、有没有其他利益安排、有没有代持或者抽屉协议。一次仓促定高又匆忙调低的融资，会在几年之后变成一堆需要花时间去解释和补正的材料。各上市地对历史沿革与定价公允性的核查口径并不一致，具体以各上市地监管机构与交易所现行正式文本、以及中介机构的核查意见为准。</p>
+<p>所以，&quot;这一轮能拿到的最高价格&quot;和&quot;这一轮应该接受的价格&quot;是两个不同的问题。判断标准也不复杂：按这个价格进来的钱，能不能支撑公司做到一个新的状态，而那个状态在下一类投资人的标准里，值一个明显高于这一轮的价格。答得上来，这个价格就是可以守住的；答不上来，多要的那部分只是提前借走了下一轮的谈判空间。</p>
+<h2>七、既然是谈出来的，企业方真正能谈的是这几件事</h2>
+<p><strong>结论先行：认清估值是谈出来的，不是为了放弃争取，恰恰相反——正因为它是谈出来的，企业方能施加影响的地方比&quot;把模型做得更精细&quot;多得多，只是那些地方大多不在数字上。</strong></p>
+<p>其一，先把&quot;这一轮要多少钱&quot;想清楚，再倒推价格。融资额不是越多越好：它决定你让出多少，也决定下一轮你必须做到什么。可用的做法是从里程碑倒推——这笔钱要买到哪几个确定的进展、这些进展需要多久、按当前的开支节奏需要多少现金、再留出一段谈判和交割的缓冲。金额定下来之后，用自己能接受的稀释范围反推价格区间，这个区间才是你真正的谈判底盘。</p>
+<p>其二，把可比成交的信息差补回来一些。对方看过几十个同类项目，你只有一个，这个差距没法完全抹平，但可以缩小：同时推进多家而不是一家一家排队谈、把拿到的条款清单横向摆开对比、去问已经完成过同类轮次的创始人（问的重点不是他的估值数字，而是条款结构和当时的谈判过程）、必要时让熟悉这一类交易的中介参与进来。多一份对照，你在桌上就多知道一点自己站在哪。</p>
+<p>其三，把谈判的对象从&quot;数字&quot;扩展到&quot;结构&quot;。数字顶不动的时候，结构上有大量可交换的东西：分期与里程碑的设置、清算优先权的写法、期权池放在哪一边、董事会席位与保护性条款的范围、信息权的颗粒度、创始人股权的成熟安排。用一个自己确实不那么在意的结构项，去换一个自己非常在意的，比在数字上硬顶有效得多，也更容易让交易继续走下去。</p>
+<p>其四，把三处口径在条款清单阶段就写死，不要留到正式协议：这个估值是投前还是投后、期权池计入哪一边、比例按完全稀释后的哪个分母计算。这三句话不写清楚，条款清单上那个数字就不是一个确定的承诺。</p>
+<p>其五，宁可要一个自己能守住的价格。这一条与上一节是同一件事的两面：能守住的意思是，按这个价格拿到的钱，足以把公司推到一个在下一类投资人眼里明显更值钱的状态。守不住的高价格，代价不是面子，是下一轮的谈判空间、团队的期权、以及几年后申报材料里要解释的那几页。</p>
+<p>其六，把这一轮当成对下一轮的准备来做。谈判过程中对方问过哪些问题、卡在哪几处、要求补充过什么材料，都是下一轮会被再问一遍的东西。把这些整理下来，比拿到一个高几个点的估值更有长期价值。</p>
+<p>彤鼎集团（香港）有限公司在这类事情上承担的是统筹与协调角色：与企业方一起把融资额、里程碑、可接受的稀释范围和拟争取的价格区间对齐，梳理条款清单里投前投后口径、期权池位置、完全稀释分母、清算优先权与回购安排等直接改变实际分配结果的条款，核对历次融资的定价依据与股权结构在未来申报口径下是否经得起追溯，并协助设计后续轮次的价格路径与时间安排。涉及审计、法律意见、资产评估、证券发行与承销等持牌业务的，一律由具备相应资质的合作机构承做。以上均为市场经验性表述，可行性受行业、交易结构、投资人类型与适用法域影响，不构成固定标准，具体以实际交易文件与各方尽职调查结论为准。</p>
+<p>本质上，&quot;我的公司到底值多少钱&quot;这个问题在没有利润也没有收入的阶段是没有标准答案的，它只有一个协商结果。所以真正该问自己的是另外四个问题：我这一轮需要多少钱、这笔钱能把公司推到什么状态、那个状态在下一类出资人眼里值不值一个更高的价格、以及在这个价格之下我签的那一整套条款，在公司走得不那么顺的情况下会把我放在什么位置。四个问题答清楚了，桌上那个数字反而是最容易谈的一项；四个问题没答清楚，数字谈得再高，也不过是把账挪到下一轮去还。</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="equity-instead-of-cash.html" style="color:#6b5426;font-weight:700;">现金紧就发股权？那五个点换来的，和你以为的不是一回事</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="concert-party-agreement.html" style="color:#6b5426;font-weight:700;">一致行动协议：把散掉的表决权绑回来的那张纸，什么时候会自己松开</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="term-sheet-binding-clauses.html" style="color:#6b5426;font-weight:700;">条款清单不具约束力？真正管住你的那几条，从签字当天就开始生效</a></li></ul></div><div class="brandbox">
+<h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由彤鼎集团团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信：esonleo　·　全网社媒请搜索「彤鼎」或「ESON廖生」</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
