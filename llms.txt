@@ -110,6 +110,7 @@
 
 ### 上市执行 / EXECUTION
 
+- [老板十一年前给朋友签的那张担保，在这一轮融资的尽调里被翻了出来](https://tdgroup.hk/articles/external-guarantee-cleanup.html)
 - [独立性：把一家公司拎出来上市，难的不是拎，是证明它能自己活](https://tdgroup.hk/articles/issuer-independence-five.html)
 - [实际控制人认定：股权表上写得清清楚楚，答案却不是老板自己填的](https://tdgroup.hk/articles/actual-controller-determination.html)
 - [关联交易清不干净，报告期就得从头再数一遍](https://tdgroup.hk/articles/related-party-transactions-cleanup.html)
