@@ -93,6 +93,41 @@ def set_modified(s, new):
     return s, n[0]
 
 
+
+def sync_sitemap_lastmod(rel_path, new_date):
+    '''把 sitemap.xml 里这一页的 <lastmod> 同步成 new_date。
+
+    这一步不是可有可无的收尾。push_indexnow.py 不带参数时，
+    判「哪些页面要通知 Bing」用的是 sitemap 的 lastmod，不是 schema 的 dateModified。
+    2026-08-22 查出来：sitemap 的 lastmod 只在 new_article.py 建页时写过一次，
+    此后没有任何脚本再动过它（99 个页面停在 2026-07-19）——
+    于是每周内容时效复核订正过的文章，dateModified 改了、页面也改了，
+    却从来没有被 IndexNow 提交过，搜索引擎不知道内容变了。
+    两个脚本各自都正常返回，中间这一环断了却零告警。
+    '''
+    sm_path = 'sitemap.xml'
+    if not os.path.exists(sm_path):
+        return False
+    sm = io.open(sm_path, encoding='utf-8').read()
+    loc = 'https://tdgroup.hk/' + rel_path.replace(os.sep, '/')
+    i = sm.find('<loc>' + loc + '</loc>')
+    if i < 0:
+        return False
+    end = sm.find('</url>', i)
+    if end < 0:
+        return False
+    block = sm[i:end]
+    m = re.search('<lastmod>[0-9-]+</lastmod>', block)
+    if not m:
+        return False
+    want = '<lastmod>' + new_date + '</lastmod>'
+    if m.group(0) == want:
+        return False
+    nb = block[:m.start()] + want + block[m.end():]
+    io.open(sm_path, 'w', encoding='utf-8').write(sm[:i] + nb + sm[end:])
+    return True
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('paths', nargs='*')
@@ -189,11 +224,13 @@ def main():
             rc = 1
             continue
         io.open(p, 'w', encoding='utf-8').write(s2)
+        synced = sync_sitemap_lastmod(p, today)
         led.setdefault(slug, {}).update(
             {'body_hash': h, 'last_reviewed': today, 'last_substantive': today,
              'title': title_of(s)})
-        say('[已更新] %s —— 正文有实质改动，dateModified %s → %s（改了 %d 段 schema）'
-            % (slug, mod, today, k))
+        say('[已更新] %s —— 正文有实质改动，dateModified %s → %s（改了 %d 段 schema）%s'
+            % (slug, mod, today, k,
+               '，sitemap lastmod 已同步' if synced else '，sitemap 里没找到这一页或已是今天'))
 
     save(led)
     return rc
