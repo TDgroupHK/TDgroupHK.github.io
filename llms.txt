@@ -242,6 +242,7 @@
 
 ### 资本运作 / CAPITAL OPERATIONS
 
+- [中间那一层公司：融资那天它决定钱打给谁，在此之后它决定的事只会更多](https://tdgroup.hk/articles/holding-company-layer.html)
 - [跨境换股并购的审批路径与税务考量](https://tdgroup.hk/articles/cross-border-share-swap.html)
 - [借壳上市的壳资源识别与尽调要点](https://tdgroup.hk/articles/shell-company-diligence.html)
 - [Earn-out对赌支付结构设计](https://tdgroup.hk/articles/earnout-design.html)
