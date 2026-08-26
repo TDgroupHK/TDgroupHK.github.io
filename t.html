@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="zh-Hans">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow,noarchive">
+<title>转到待办</title>
+<!--
+  固定入口 —— 手机待办页的书签存这一页，不要存 trycloudflare 那个网址。
+
+  为什么要有这一页（2026-08-26 建）：
+  手机待办页走的是 cloudflare 临时隧道，`cloudflared` 一重启网址就换一个，
+  手机上存的书签当场变死链，⛔ 而且零告警 —— 页面服务还活着、日志一片正常，
+  只有他打不开，多半还以为是网卡了。
+  这一页在官网上，地址永远是 https://tdgroup.hk/t.html ；真正会变的那个网址
+  放在同目录的 t.json 里，由 商务\待办\推网址到官网.py 在隧道换址时改掉并推上来。
+
+  ⛔ 口令永远不许写进这个仓库（它是公开的）。口令只存在他手机浏览器的
+  localStorage 里，第一次手输一次。没口令的人拿到 t.json 里那个网址也只会吃 401。
+-->
+<style>
+  :root{--bg:#0f1115;--fg:#e8e6e3;--dim:#9aa0a6;--gold:#c8a35a}
+  *{box-sizing:border-box}
+  body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;
+       background:var(--bg);color:var(--fg);
+       font:16px/1.7 -apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;
+       padding:24px}
+  .box{width:100%;max-width:420px;text-align:center}
+  h1{font-size:19px;font-weight:600;margin:0 0 6px}
+  p{color:var(--dim);font-size:14px;margin:8px 0}
+  input{width:100%;padding:13px 14px;margin-top:14px;border-radius:10px;
+        border:1px solid #2c3038;background:#171a20;color:var(--fg);font-size:16px}
+  button{width:100%;padding:13px;margin-top:10px;border:0;border-radius:10px;
+         background:var(--gold);color:#1a1a1a;font-size:16px;font-weight:600}
+  a{color:var(--gold);word-break:break-all;font-size:13px}
+  .hide{display:none}
+</style>
+</head>
+<body>
+<div class="box">
+  <div id="wait"><h1>正在转到待办…</h1><p id="tip">在找当前的地址</p></div>
+
+  <div id="ask" class="hide">
+    <h1>第一次打开，输一次口令</h1>
+    <p>输过就记住了，以后直接开这一页</p>
+    <input id="k" type="text" autocomplete="off" autocapitalize="off"
+           autocorrect="off" spellcheck="false" placeholder="口令">
+    <button id="go">进去</button>
+  </div>
+
+  <div id="fail" class="hide">
+    <h1>暂时进不去</h1>
+    <p id="why"></p>
+    <p><a id="raw" href="#"></a></p>
+  </div>
+</div>
+<script>
+(function () {
+  var KEY = 'td_todo_k';
+  var $ = function (id) { return document.getElementById(id); };
+  var show = function (id) {
+    ['wait', 'ask', 'fail'].forEach(function (x) {
+      $(x).className = (x === id) ? '' : 'hide';
+    });
+  };
+  var die = function (msg, url) {
+    $('why').textContent = msg;
+    if (url) { $('raw').href = url; $('raw').textContent = url; }
+    show('fail');
+  };
+
+  // 口令来源：网址里的 ?k= 优先（换手机时可以带过去），其次这台手机存过的
+  var q = new URLSearchParams(location.search).get('k');
+  if (q) { try { localStorage.setItem(KEY, q); } catch (e) {} }
+  var k = q;
+  if (!k) { try { k = localStorage.getItem(KEY); } catch (e) {} }
+
+  // t.json 会被改写，⛔ 一定要绕开缓存，否则隧道换址后这里还拿着旧的
+  fetch('t.json?_=' + Date.now(), { cache: 'no-store' })
+    .then(function (r) {
+      if (!r.ok) throw new Error('t.json ' + r.status);
+      return r.json();
+    })
+    .then(function (d) {
+      var base = (d && d.url ? String(d.url) : '').replace(/\/+$/, '');
+      if (!base) throw new Error('t.json 里没有网址');
+      var jump = function (tok) { location.replace(base + '/?k=' + encodeURIComponent(tok)); };
+      if (k) { jump(k); return; }
+      show('ask');
+      var send = function () {
+        var v = $('k').value.trim();
+        if (!v) return;
+        try { localStorage.setItem(KEY, v); } catch (e) {}
+        jump(v);
+      };
+      $('go').onclick = send;
+      $('k').addEventListener('keydown', function (e) { if (e.key === 'Enter') send(); });
+    })
+    .catch(function (e) {
+      die('拿不到当前地址（' + e.message + '）。多半是家里那台电脑没开机，或者隧道刚好在重开，过几分钟再试。');
+    });
+})();
+</script>
+</body>
+</html>
