@@ -89,6 +89,7 @@
 
 ### 跨境架构与合规 / STRUCTURING & COMPLIANCE
 
+- [同股不同权：它不是一份能签的文件，而是长在注册地和上市地里的一套安排](https://tdgroup.hk/articles/dual-class-share-structure.html)
 - [37号文没登记，会在境外上市的哪一步被卡住](https://tdgroup.hk/articles/forex-37-unregistered.html)
 - [H股全流通：境内未上市股份变成可流通H股的完整路径](https://tdgroup.hk/articles/h-share-full-circulation.html)
 - [境外上市的数据合规：网络安全审查与数据出境的三条路径](https://tdgroup.hk/articles/data-compliance-overseas-listing.html)
