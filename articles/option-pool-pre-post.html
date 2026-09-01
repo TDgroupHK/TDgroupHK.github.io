@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>期权池摆在投前还是投后：一行位置的差别，创始人少拿的是实打实的三个点 | 彤鼎集团知识文库</title>
+<meta name="description" content="期权池计入投前估值还是投后估值，决定了这笔预留给员工激励的股权由谁承担稀释。计入投前，池子从老股东身上单独切出来；计入投后，创始人与新进投资人按比例共担。同一份报价、同一个池子，两种写法能让创始人最后的持股相差三个百分点。更要紧的是&quot;有效投前估值&quot;：把池子的稀释折回估值口径，你谈下来的那个数并不是你实际拿到的估值。本文从创始人视角拆开这一行字：两种写法的算例、它在条款清单上长什么样、有效投前估值怎么算、池子规模怎么从招聘计划倒推、留大了要付什么代价、三部分期权在完全稀释口径里怎么摆、谈判上真正能动的四个地方，以及上桌之前该做完的准备。">
+<link rel="canonical" href="https://tdgroup.hk/articles/option-pool-pre-post.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="彤鼎集团知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="期权池摆在投前还是投后：一行位置的差别，创始人少拿的是实打实的三个点 | 彤鼎集团知识文库">
+<meta property="og:description" content="期权池计入投前估值还是投后估值，决定了这笔预留给员工激励的股权由谁承担稀释。计入投前，池子从老股东身上单独切出来；计入投后，创始人与新进投资人按比例共担。同一份报价、同一个池子，两种写法能让创始人最后的持股相差三个百分点。更要紧的是&quot;有效投前估值&quot;：把池子的稀释折回估值口径，你谈下来的那个数并不是你实际拿到的估值。本文从创始人视角拆开这一行字：两种写法的算例、它在条款清单上长什么样、有效投前估值怎么算、池子规模怎么从招聘计划倒推、留大了要付什么代价、三部分期权在完全稀释口径里怎么摆、谈判上真正能动的四个地方，以及上桌之前该做完的准备。">
+<meta property="og:url" content="https://tdgroup.hk/articles/option-pool-pre-post.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="期权池摆在投前还是投后：一行位置的差别，创始人少拿的是实打实的三个点 | 彤鼎集团知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:4px;font-size:17px;}
+.logo .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10.5px;letter-spacing:3px;margin-top:2px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"期权池摆在投前还是投后：一行位置的差别，创始人少拿的是实打实的三个点","inLanguage":"zh-CN","abstract":"Whether the employee option pool sits inside the pre-money or the post-money valuation decides who bears its dilution. Placed in the pre-money, the pool is carved entirely out of the existing shareholders, mainly the founder. Placed in the post-money, the founder and the incoming investor absorb it in proportion. The same headline valuation, the same cheque and the same pool size can leave the founder three percentage points apart depending on which line the term sheet uses, yet this term is rarely negotiated on its own. This article works through the founder's side of the question: the arithmetic behind both treatments, how the clause actually appears in a term sheet, how to convert a pool-in-pre offer into an effective pre-money figure so competing offers become comparable, how to size the pool from a hiring plan rather than a convention, what an oversized pool costs when it goes unused, how granted, exercised and unallocated options each enter the fully diluted denominator, the four things that are genuinely negotiable, and what to prepare before sitting down.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/option-pool-pre-post.html"},"datePublished":"2026-09-01","dateModified":"2026-09-01","description":"期权池计入投前估值还是投后估值，决定了这笔预留给员工激励的股权由谁承担稀释。计入投前，池子从老股东身上单独切出来；计入投后，创始人与新进投资人按比例共担。同一份报价、同一个池子，两种写法能让创始人最后的持股相差三个百分点。更要紧的是\"有效投前估值\"：把池子的稀释折回估值口径，你谈下来的那个数并不是你实际拿到的估值。本文从创始人视角拆开这一行字：两种写法的算例、它在条款清单上长什么样、有效投前估值怎么算、池子规模怎么从招聘计划倒推、留大了要付什么代价、三部分期权在完全稀释口径里怎么摆、谈判上真正能动的四个地方，以及上桌之前该做完的准备。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="彤鼎集团 TD Group"><span class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></span></a>
+<div class="menu"><a href="/">首页 Home</a><a href="../about.html">关于 About</a><a href="../club.html">俱乐部 Club</a><a href="../library.html">文库 Library</a><a href="../faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">融资条款 FINANCING</div><h1>期权池摆在投前还是投后：一行位置的差别，创始人少拿的是实打实的三个点</h1>
+<div class="sub">同样的投前估值、同样的投资额、同样大小的池子，只因为条款清单上写了&quot;计入投前&quot;四个字，创始人融完这一轮少拿三个百分点——而这一行几乎从来没有被单独拿到谈判桌上谈过</div><div class="en">Whether the employee option pool sits inside the pre-money or the post-money valuation decides who bears its dilution. Placed in the pre-money, the pool is carved entirely out of the existing shareholders, mainly the founder. Placed in the post-money, the founder and the incoming investor absorb it in proportion. The same headline valuation, the same cheque and the same pool size can leave the founder three percentage points apart depending on which line the term sheet uses, yet this term is rarely negotiated on its own. This article works through the founder's side of the question: the arithmetic behind both treatments, how the clause actually appears in a term sheet, how to convert a pool-in-pre offer into an effective pre-money figure so competing offers become comparable, how to size the pool from a hiring plan rather than a convention, what an oversized pool costs when it goes unused, how granted, exercised and unallocated options each enter the fully diluted denominator, the four things that are genuinely negotiable, and what to prepare before sitting down.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
+<article>
+<div class="answer">期权池计入投前估值还是投后估值，是指这笔预留给未来员工激励的股权，在计算投资人持股比例时算不算进投前那个分母。计入投前，池子从老股东手里单独切出来；计入投后，创始人与新进投资人按比例共同承担。以投前估值八千万元、本轮投入两千万元、池子占投后股本一成半的情形推算：计入投前，创始人剩六成半、投资人拿满两成；计入投后，创始人剩六成八、投资人一成七——同一笔生意，创始人差三个百分点。把这笔稀释折回估值口径就得到&quot;有效投前估值&quot;：八千万元减去一成半的一亿元，实际只有六千五百万元，也就是说名义上谈成的那个数并不是真正拿到的定价。市场上的默认模板偏向计入投前，创始人不主动提，这一行就按模板走。各轮次与各市场的惯常做法不同，池子的常见规模也随行业与阶段变化，以实际谈判与当时有效的规则为准。---有家做工业软件的公司，创始人手上摆着两份条款清单。一份写着投前估值八千万元，另一份七千万元。他几乎没犹豫，回复了报价高的那家。签完协议做股权表时，财务顾问算了一遍给他看：按那份八千万元的条款，融完这一轮他还剩六成半；当初若选了七千万元那家，反而能剩六成六。差别不在估值那一行，在下面一句不起眼的话——期权池计入投前估值。他后来跟人说，那份条款清单他从头到尾读过三遍，这句话每一遍都读过去了。它没有加粗，没有单列成条，就夹在股份结构那一段里，读起来像是一句交代背景的说明。</div>
+<h2>其一、同一份报价，池子换一行位置，创始人少拿三个点</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/option-pool-pre-post-1.jpg" alt="其一、同一份报价，池子换一行位置，创始人少拿三个点" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：同样的投前估值、同样的投资额、同样大小的池子，池子摆在投前还是投后，创始人融完这一轮拿到的比例能差三个百分点。</strong></p>
+<p>把数字摆出来。假设投前估值八千万元，这一轮进来两千万元，投后就是一亿元，投资人占两成。双方还谈好留一个占投后股本一成半的期权池。到这里为止，两种写法看到的东西一模一样，纸面上那几个数完全相同。</p>
+<p>池子摆在投前，意思是它在投资人进来之前就从老股东手里切出来。融完这一轮，股权表上是投资人两成、池子一成半、老股东六成半。创始人原本持有公司全部股份，这一轮结束只剩六成半，那一成半整个由他一个人出。</p>
+<p>池子摆在投后，是另一套顺序。先按八千万元投前完成这一轮，老股东八成、投资人两成；再设那个一成半的池子，两边一起按比例摊薄。算下来老股东六成八、投资人一成七，池子一成半，三部分加起来正好是整张表。</p>
+<p>两种写法，创始人一个是六成半、一个是六成八，差三个百分点。按这一轮的价格算，三个百分点就是三百万元。而在纸面上，这件事的全部体现只是&quot;计入投前&quot;四个字，既不占篇幅，也不显眼。</p>
+<p>投资人那边是对称的：摆投前他拿满两成，摆投后他只剩一成七。所以这不是谁厚道谁不厚道的问题，是这一成半到底记在谁账上的分账问题——而默认写法把它整个记在了创始人账上。</p>
+<h2>其二、为什么它默认写在投前：这一行在条款清单里长什么样</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/option-pool-pre-post-2.jpg" alt="其二、为什么它默认写在投前：这一行在条款清单里长什么样" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：市场上的默认写法就是计入投前，投资人不必额外争取，因为条款清单的模板里本来就这么写；创始人不主动提，这一行就这么定了。</strong></p>
+<p>它在条款清单上通常不是独立的一条。多数时候它藏在&quot;股份结构&quot;或&quot;本轮交割后股权比例&quot;那一段的括号里，写成一句&quot;投资人取得的股权比例按交割后完全稀释股本计算，其中包含占比不低于百分之十五的员工激励预留&quot;。</p>
+<p>也有更简短的写法，只在估值后面加一个括号——&quot;投前估值八千万元（含扩大后的期权池）&quot;。括号里那几个字，就是全部的信息量。创始人读到这里往往只确认了八千万元这个数，括号被当成一句技术性说明滑了过去。</p>
+<p>投资人这么写有他的道理，而且站得住：池子是为公司将来招人准备的，招来的人替现有业务干活，好处由所有股东分享；但新钱进来之前公司值多少，理应把这笔已经答应要出去的成本先算在里面。</p>
+<p>站不站得住是一回事，能不能谈是另一回事。这件事的特点是它几乎从不被单独拿上桌——估值谈了三个回合，董事会席位谈了两个回合，池子这一行从头到尾没人提起。没人提起，它就按模板走。</p>
+<p>前面那家工业软件公司的创始人后来把两份条款清单并排摊开，逐句圈不一样的地方。圈到这一句才发现，两份文件里池子的规模写的是同一个数，位置写的却不是同一个地方。</p>
+<p>各轮次与各市场对这一行的惯常做法并不相同，同一家机构在不同阶段用的模板也会调整，具体以实际谈判与当时有效的规则为准。这里要说的只有一点：默认写法不等于不能谈的写法，它只是没有人开口而已。</p>
+<h2>其三、有效投前估值：你谈下来的那个数，不是你实际拿到的估值</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/option-pool-pre-post-3.jpg" alt="其三、有效投前估值：你谈下来的那个数，不是你实际拿到的估值" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：把池子的稀释折回估值口径，才看得出这一轮真实的定价——名义投前八千万元、池子一成半计入投前，有效投前估值只有六千五百万元。</strong></p>
+<p>算法只有一步：拿名义投前估值，减去池子占投后股本的比例乘以投后估值。八千万元减去一成半的一亿元，等于六千五百万元。老股东融完这一轮在投后那张表上占六成半，六成半的一亿元正好是六千五百万元，两边对得上。</p>
+<p>更能说明问题的是等价换算。投前八千万元、池子摆投前，跟投前六千五百万元、池子摆投后，这两份条款对双方的结果一模一样——创始人都剩六成半，投资人都拿两成。前一份看着比后一份高一千五百万元，其实是同一笔生意换了个说法。</p>
+<p>所以那家工业软件公司的两份条款清单可以这样比：报八千万元但池子摆投前的那家，有效投前是六千五百万元；报七千万元但池子摆投后的那家，那七千万元就是七千万元。报价低的那份，才是出价高的那份。</p>
+<p>要说清楚的是，有效投前估值不是行业术语，也不会印在任何条款清单上。它只是一把尺子，把两份写法不同的报价换算到同一个口径上比。谈判时你不必说出这个词，但手上必须有这个数。</p>
+<p>有家做企业内训平台的公司，创始人在两家机构之间选了报价高的那家，理由是&quot;差着整整一千万&quot;。半年后他自己把两份条款重新算了一遍，发现按最后落到手上的比例算，那一千万在池子这一行上早就还回去了。</p>
+<h2>其四、池子该留多大：从招聘计划倒推，不是从惯例抄一个比例</h2>
+<p><strong>结论先行：池子的规模不该是拍出来的一个比例，而该是未来一到两年招聘计划的加总——要招哪几个岗位、每个岗位给多少，加起来就是答案。</strong></p>
+<p>多数创始人给不出这个数，只能接受对方给的数。投资人问&quot;池子留多少&quot;，创始人答&quot;你们一般留多少&quot;——这句一出口，这一行就不用谈了。对方给的比例通常不会小，因为池子留大了对他没坏处，稀释的又不是他。</p>
+<p>倒推的做法并不复杂。列出未来十二到二十四个月要招的关键岗位，按岗位不按人头，每个岗位给一个大致的股权比例，加总，再留点余量。这份清单本身就是谈判材料——它把&quot;你觉得多少合适&quot;变成了&quot;我算出来需要多少&quot;。</p>
+<p>有家做无人机电力巡检的公司，创始人真的这么算过一遍。他要在两年内补齐一位技术负责人、一位销售负责人、一位财务负责人，再加两名核心算法工程师和十来个业务骨干。按他和顾问定下的额度加总，大约六个点，留余量报到八个点。</p>
+<p>他拿着这张表去谈时，对方原本要一成半。他没说&quot;一成半太大了&quot;，只把表推过去，反问对方觉得哪个岗位的额度给低了。这一轮最后定在一成，比默认写法省下五个百分点——放回前面那组数字里，就是五百万元。</p>
+<p>要提醒的是，各行业、各阶段的岗位额度差别很大，同一个技术负责人的位置，早期和后期要的比例可能差一个数量级。池子的常见规模在不同市场、不同轮次也各有做法，一律以你自己的招聘计划和当时的实际谈判为准。</p>
+<h2>其五、留大了的代价：那部分是白稀释，而且下一轮还会再来一次</h2>
+<p><strong>结论先行：池子里没发出去的部分不会自动还给你——它占着老股东的位置，一直占到下一轮，而下一轮往往还要在它之上再补一次。</strong></p>
+<p>摆在投前的池子有个特点：切出来的那一刻，稀释就已经完成了，不管后来发没发出去。发出去了，至少换来了人；没发出去，那部分就是纯粹的减法。它躺在股权表上，谁也不属于，可你的比例已经因为它降下来了。</p>
+<p>有家做连锁烘焙的公司，头一轮融资接受了一成半的池子，摆在投前。两年后启动下一轮，回头一看只发出去五个点，剩下十个点原封不动躺着。按头一轮的价格算，这十个点当初值一千万元，从创始人那一边划走。</p>
+<p>更让他意外的是下一轮的处理。新投资人看的不是池子有多大，而是&quot;未分配的还剩多少、够不够用到再下一轮&quot;。剩十个点够用，这一轮就不要求补池——听着是好消息，可那十个点当初就是白切的，只是不必再切一次。</p>
+<p>反过来的情形同样常见：池子留得刚好，两年内发完，下一轮投资人要求把未分配的补回到某个水平，而这次补池又写在投前。于是同一件事再发生一遍——池子的规模不是一次性决定，它决定的是你要经历几次这样的切割。</p>
+<p>有家做二手工程机械线上交易的公司，两轮下来被要求补过两次池，两次都写在投前。创始人后来算总账，两次补池吃掉的比例比任何一轮投资人拿走的都多，而这两次他都以为自己只是在配合一件行政手续。</p>
+<h2>其六、已授予、已行权、未分配：三部分在完全稀释口径里都要算进分母</h2>
+<p><strong>结论先行：期权池在股权表上不是一格，是三格——已经行权变成股份的、已经授予还没行权的、还没分配出去的，完全稀释口径下三部分都进分母。</strong></p>
+<p>已经行权的那部分最没有争议。员工已经付钱把股份买下来，名字在股东名册上，本来就是股东。它跟池子只剩历史渊源。要留意的只有一点：它已经不占&quot;未分配&quot;的位置，算池子还剩多少时别重复算进去。</p>
+<p>已经授予还没行权的那部分，公司已经把承诺发出去了。它现在还不是股份，但只要归属条件满足、员工愿意行权，就一定会变成股份。所以完全稀释口径把它当作已经存在，尽调底稿上从来这么算。</p>
+<p>争议最多的是还没分配出去的那部分。公司还没答应给任何人，凭什么算进分母？答案很实际：投资人那两成是按含它的分母算出来的，他为这个分母付过钱，就不会同意事后缩小分母。这一格正是投前投后之争落在纸上的地方。</p>
+<p>有家做体外诊断试剂的公司，创始人和投资人各做了一份股权表，交割前对账才发现差了将近四个百分点。投资人那份把未分配的部分放进分母，创始人那份没有。两人都不觉得自己算错，因为谁也没问过对方分母里装了什么。</p>
+<p>所以真正要写清楚的是一句话：投资人取得的比例按哪一个口径的股本计算。这句不写死，两边各算各的，交割前对账一定对不上。至于那张表整体怎么做、还要装哪些东西，另有专文，这里只谈池子占的这三格。</p>
+<h2>其七、谈判上真正能动的四个地方</h2>
+<p><strong>结论先行：这一行不是只有接受和不接受两种选择——位置、规模、没用完怎么办、下一轮谁来补，四件事都可以谈，而且后两件通常更容易谈成。</strong></p>
+<p>能动的头一个地方是位置。直接要求整个池子摆到投后，投资人多半不接受，因为那等于他也掏了一部分。折中做法是把池子拆成两段，一段计入投前、一段放到投后，创始人最后的比例落在六成半和六成八中间。</p>
+<p>能动的另一个地方是规模，也就是前面那张招聘计划表。这一条的成功率反而最高，因为它不要求对方让利，只要求对方承认&quot;用不到那么多&quot;。谈规模是在讲事实，谈位置是在争分账，前者容易得多。</p>
+<p>再一个地方是没用完的部分怎么处理。可以约定：到下一轮交割时，池子里未分配的部分予以注销，或者按老股东在本轮之前的持股比例回拨给他们。这一条写进去，等于把&quot;留大了&quot;的风险从创始人身上挪走一部分。</p>
+<p>还有一个地方是扩池义务和下一轮的关系。可以约定本轮之后到下一轮之前不再被要求扩池；下一轮如需扩池，由届时全体股东按比例共同承担，不是再一次单独由老股东出。这一条谈的是往后，阻力比谈本轮小。</p>
+<p>前面那家做企业内训平台的公司后来又融了一轮，这次把回拨写进了协议。到下一轮交割，池子里剩的四个点按约定注销并回拨，老股东这一边拿回三个多点，大部分落在创始人身上。这一条当初谈了不到半小时。</p>
+<h2>其八、上桌之前该做完的事</h2>
+<p><strong>结论先行：空口说&quot;池子太大了&quot;在谈判里没有用；能改变结果的是三样东西——一张招聘计划表、一份两种写法的对照算例、一个自己算过的有效投前估值。</strong></p>
+<p>招聘计划表要在启动融资之前做好，不是等对方问起再临时凑。它不需要精确，需要的是有依据：岗位是真要招的，额度是跟顾问或有经验的人对过的。有依据的数字经得起追问，凑出来的问两句就散了。</p>
+<p>对照算例是把同一份条款按两种写法各算一遍，把创始人最后的比例并排放出来。它的价值不在说服对方，而在让你自己签字那一刻知道让掉多少——三个百分点写在纸上很小，换成钱之后不小。</p>
+<p>有效投前估值那个数是用来横向比价的。手上有两份以上条款清单时，别去比投前那一行，把两份都折算成&quot;融完这一轮我在表上还剩多少&quot;，再看谁的报价高。这一步做完，开头那家工业软件公司就不会选错。</p>
+<p>还有一件事，时点比内容更要紧。池子这一行一旦写进条款清单并签了字，后面基本改不动——它牵着投资人的持股比例，动它就是动他的价。要谈就在定稿之前谈，交割阶段再提，对方只会请你翻回去看签过的那一页。</p>
+<p>在华尔街彤鼎俱乐部的一次交流里，有位企业主说过一句话：他前后融过三轮，每一轮都在争估值那个数，回头看真正把他持股比例拿走最多的，是估值下面那句从来没争过的话。</p>
+<p>说到底，这一行字的分量跟它在纸面上的长度完全不成比例。它不影响你这一轮拿到多少钱，只影响钱到账之后你还剩多少公司——而真正把估值改掉的，常常正是估值下面那句谁也没多看一眼的说明。</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="mfn-clause.html" style="color:#6b5426;font-weight:700;">最惠国待遇条款：这一轮签的时候没人还价，它是给下一轮埋的一道交割障碍</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="investor-funding-default.html" style="color:#6b5426;font-weight:700;">协议签了、先决条件也清完了，投资人就是不打款：手里那份签了字的文件还能做什么</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="buyback-limitation-period.html" style="color:#6b5426;font-weight:700;">回购条款一直在协议里，回购权却可能早就过期了：那个起算点比双方以为的都早</a></li></ul></div><div class="brandbox">
+<h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由彤鼎集团团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信：esonleo　·　全网社媒请搜索「彤鼎」或「ESON廖生」</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
