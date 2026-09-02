@@ -1,0 +1,290 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>把自己的公司装进自己的另一家公司：钱一分没动，税单先到了 | 彤鼎集团知识文库</title>
+<meta name="description" content="重组装主体那一步的税，是上市与融资准备里最容易被漏算的一笔。本文从企业方视角把它拆开：为什么钱没进口袋也要计税、作价写一元为什么不算数、递延处理为什么不等于免税、够不够得上递延要同时满足哪几类条件、计税基础延续带来的后果是什么、个人股东与公司股东为什么处境完全不同、同一次划转早两年做和临交割做差在哪里，以及为什么先算税再画架构图，方案往往会改掉一半。">
+<link rel="canonical" href="https://tdgroup.hk/articles/restructuring-tax-treatment.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="彤鼎集团知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="把自己的公司装进自己的另一家公司：钱一分没动，税单先到了 | 彤鼎集团知识文库">
+<meta property="og:description" content="重组装主体那一步的税，是上市与融资准备里最容易被漏算的一笔。本文从企业方视角把它拆开：为什么钱没进口袋也要计税、作价写一元为什么不算数、递延处理为什么不等于免税、够不够得上递延要同时满足哪几类条件、计税基础延续带来的后果是什么、个人股东与公司股东为什么处境完全不同、同一次划转早两年做和临交割做差在哪里，以及为什么先算税再画架构图，方案往往会改掉一半。">
+<meta property="og:url" content="https://tdgroup.hk/articles/restructuring-tax-treatment.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="把自己的公司装进自己的另一家公司：钱一分没动，税单先到了 | 彤鼎集团知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:4px;font-size:17px;}
+.logo .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10.5px;letter-spacing:3px;margin-top:2px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"把自己的公司装进自己的另一家公司：钱一分没动，税单先到了","inLanguage":"zh-CN","abstract":"Before a listing or a financing round, founders are usually told to consolidate several separate companies into one group entity. Because no cash changes hands, the step is treated internally as paperwork. Tax rules see it differently: a transfer of equity between two entities under the same owner is, by default, a disposal, priced at fair value rather than at whatever figure the contract states. Deferral is available where a set of conditions is met, but deferral postpones the liability rather than removing it, and it carries the cost of a continued tax base. This article works through the mechanics from the company's side, and argues that the tax calculation belongs before the structure chart, not after it.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/restructuring-tax-treatment.html"},"datePublished":"2026-09-02","dateModified":"2026-09-02","description":"重组装主体那一步的税，是上市与融资准备里最容易被漏算的一笔。本文从企业方视角把它拆开：为什么钱没进口袋也要计税、作价写一元为什么不算数、递延处理为什么不等于免税、够不够得上递延要同时满足哪几类条件、计税基础延续带来的后果是什么、个人股东与公司股东为什么处境完全不同、同一次划转早两年做和临交割做差在哪里，以及为什么先算税再画架构图，方案往往会改掉一半。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="彤鼎集团 TD Group"><span class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></span></a>
+<div class="menu"><a href="/">首页 Home</a><a href="../about.html">关于 About</a><a href="../club.html">俱乐部 Club</a><a href="../library.html">文库 Library</a><a href="../faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">资本运作 CAPITAL OPS</div><h1>把自己的公司装进自己的另一家公司：钱一分没动，税单先到了</h1>
+<div class="sub">上市或融资之前把名下几家公司理顺、装进同一个主体，这一步在老板眼里是走流程——股权从左手换到右手，钱一分没出去也没进来；而在税务上，它默认是一次实实在在的转让，按公允价值计税，且这笔税往往正好落在公司账上最紧、老板手里最没现金的那几个月</div><div class="en">Before a listing or a financing round, founders are usually told to consolidate several separate companies into one group entity. Because no cash changes hands, the step is treated internally as paperwork. Tax rules see it differently: a transfer of equity between two entities under the same owner is, by default, a disposal, priced at fair value rather than at whatever figure the contract states. Deferral is available where a set of conditions is met, but deferral postpones the liability rather than removing it, and it carries the cost of a continued tax base. This article works through the mechanics from the company's side, and argues that the tax calculation belongs before the structure chart, not after it.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
+<article>
+<div class="answer">重组的税务处理，是指企业在上市或融资之前把名下多家公司理顺、装进同一个主体的过程中，每一次股权变动所触发的所得税处理。对企业方而言有三层容易被低估的地方：其一，把股权从自己的一家公司挪到自己的另一家公司，钱一分没有进口袋，税上默认仍然按发生了一次转让处理，且不按合同写的作价、按公允价值计税，作价明显偏低又说不出正当理由的，主管税务机关可以自行核定；其二，满足一组条件的重组可以适用递延处理，但递延不是免除，是把这笔税推到将来某一次真实处置上，而这组条件里有好几项管的是重组之后的一段时间，事后被打破一样要追回；其三，递延真正的代价在计税基础——换回来的那块股权按原来那个旧成本记账，将来处置时的应税所得会比很多人以为的大一截。具体条件与期限，以当时有效的税收法规和主管税务机关的口径为准。---有家做工业清洗剂的公司，名下摆着四家公司，股东都是同一个老板：一家生产、一家做销售、一家管设备租赁，还有一家早年注册的贸易公司。融资谈到尽调那一步，中介只提了一件事——先理成一个主体，报表才合得起来。理法很直白：把销售公司的股权，从老板本人名下划到生产公司名下。一家变成另一家的子公司，账合并得上，主营也讲得清。老板签字的时候没觉得这算一笔交易，钱一分没动，左手换到右手而已。三个月后，税务专管员打来电话，问的是那次股权转让的作价依据。销售公司账上躺着四年攒下的利润，净资产早就不是当初注册的那个数。按当时的口径重新算，那次&quot;没花钱&quot;的划转对应的税，是一个七位数。</div>
+<h2>其一、税上看的是&quot;这一次转让发生了&quot;，不是&quot;你收没收到钱&quot;</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/restructuring-tax-treatment-1.jpg" alt="其一、税上看的是&quot;这一次转让发生了&quot;，不是&quot;你收没收到钱&quot;" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：股权从一个主体挪到另一个主体，税务上默认按一次转让处理，计税盯的是这次转让本身，跟转让方有没有真的收到现金没有关系。</strong></p>
+<p>老板的直觉通常是这样的：两家公司都是我的，钱没出去也没进来，等于把东西从左边口袋放到右边口袋。这个直觉在生意上说得通，在税上不成立——税务处理的对象是&quot;这块股权的权属变了没有&quot;，而不是&quot;你的总资产变了没有&quot;。</p>
+<p>打个比方，像把自家一套房子过户到自己名下的公司。房子还是你在住，卖房的钱一分没收，但过户这个动作本身就是一次交易，该走的手续、该算的账一样不少。股权只是没有房本那么显眼，签几份文件、改一次登记就完成了，看上去不像发生过什么。</p>
+<p>所以真正的分界不在钱有没有动，在权属有没有变。名下几家公司互相之间怎么摆，摆的过程里只要有一次股权易主，就有一次可能产生纳税义务的转让行为。而&quot;理成一个主体&quot;往往不是一次划转，是连着好几次。</p>
+<p>开头那家做清洗剂的公司后来数了一下，从四家平行理到一家控股三家，实际发生的股权变动有五次。他签字的时候只当是走流程，其中三次落在了同一个纳税年度里。至于每一次具体怎么认定、按哪一年的规则算，以当时有效的税收法规和主管税务机关的口径为准。</p>
+<h2>其二、作价写一元不算数：这笔税按公允价值算</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/restructuring-tax-treatment-2.jpg" alt="其二、作价写一元不算数：这笔税按公允价值算" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：税上认的不是转让合同写了多少钱，而是这次转让对应的公允价值；作价明显偏低又给不出正当理由的，主管税务机关可以自行核定一个数。</strong></p>
+<p>很多人的头一个念头是把作价写低。一块钱转让，或者按当初的出资额平价划过去，合同上白纸黑字没有溢价，看上去就没有所得，也就没有税。</p>
+<p>这条路早就被堵住了。转让价明显偏低、又说不出正当理由的，主管税务机关有权按公司的净资产、按可比交易或者其他合理办法核定一个数，再按这个数计税。所谓&quot;正当理由&quot;是有边界的，不是在合同上写一句&quot;内部整合&quot;就能过。</p>
+<p>净资产这个口径最容易被低估。公司每一年留存下来的利润、每一次没有分掉的盈余，都躺在净资产里；名下要是还有土地、房产、知识产权这类东西，通常还要看评估之后的值，不是账面上那个数。一家做了七八年、一直没怎么分红的公司，净资产是注册资本的十几倍很常见。</p>
+<p>有家做检测仪器代理的公司在这里吃过一次亏。老板把自己持有的那块股权按出资额原价划给了控股公司，合同上一分钱溢价没有。半年后被要求补充说明作价依据，最后按核定的口径重算，多出来的那笔税加上滞纳金，比那家公司当年一整年的净利还高。</p>
+<h2>其三、递延不是免掉，是把这笔税挂起来等将来</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/restructuring-tax-treatment-3.jpg" alt="其三、递延不是免掉，是把这笔税挂起来等将来" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：满足一组条件的重组可以适用递延处理，但递延的意思是这笔税暂时不用交，不是这笔税没有了——它还在，只是换了一个时点。</strong></p>
+<p>听到&quot;符合条件可以不交&quot;的时候，多数老板脑子里落下的是&quot;不用交了&quot;。这是整件事里最贵的一个误会。规则给的是一个时间上的安排：这一次动作先不确认所得，等到将来真的把这块股权处置出去，再一并算。</p>
+<p>打个比方，像信用卡的分期免息。这个月不用还，但那笔钱没有消失，它只是被挪到了以后的账单上。区别在于，重组的递延没有一个写死的还款日——它等的是&quot;下一次真实处置&quot;，那一次可能是三年后转给产业方，也可能是挂牌之后的一次减持。</p>
+<p>这个区别在什么时候会疼？在你以为这件事已经结束、开始按&quot;没有税&quot;的假设去规划后面动作的时候。比如打算两年后把这块股权卖给产业方，或者按计划减持一部分——挂起来的那笔税会在那一刻一起结账，而那时的现金安排里往往没有给它留位置。</p>
+<p>所以对企业方来说，递延该被记成一笔&quot;已经产生但还没付的负债&quot;，不是一次省下来的开支。它换来的是这一步不用当场掏现金，这在重组阶段确实非常要紧——但账不能少记这一笔。</p>
+<h2>其四、够不够得上递延，看的是一组条件不是一个条件</h2>
+<p><strong>结论先行：递延处理不是打声招呼就有的，它要同时满足一组条件；其中任何一项在事后被打破，已经享受的递延都可能被追回来。</strong></p>
+<p>这组条件大致分成几类，按类去看比逐条去背有用得多。头一类是商业目的——这次重组究竟为了什么，理由要经得起追问，而&quot;为了少交税&quot;本身不算理由。</p>
+<p>接着是权益连续和经营连续这两条。前者要求原来的股东在重组之后仍然持有相应的权益，别在重组完成之后紧接着把股权转手；后者要求被重组的那块业务在此后一段时期内保持原来的实质性经营，别理完架构就把业务停了或者换掉。</p>
+<p>再往下是对价形式和后续持有期。对价里用股权支付的部分要达到一定比例，也就是说这次交易主要是&quot;换股&quot;而不是&quot;卖掉&quot;；重组之后的一定期限内，取得的那块股权不能随便再动。具体的比例与期限会调整，一律以当时有效的税收法规和主管税务机关的口径为准。</p>
+<p>最容易被忽略的是&quot;事后&quot;两个字。上面这些条件里有好几项管的不是签字那一天，而是签完之后的那段时间。企业方常犯的错是：重组时按递延办完了手续，第二年为了引战投把股权又动了一次，或者干脆把那条业务线关掉——条件破了，税可能要补回来，还要搭上时间。</p>
+<h2>其五、递延真正的代价：计税基础不跟着走</h2>
+<p><strong>结论先行：递延的对价是计税基础延续——换回来的那块股权按原来那个旧成本记账，将来真处置时的应税所得会比你以为的大一截。</strong></p>
+<p>这一条是整篇里最该记住的，也是最少被讲清楚的。适用递延处理的时候，你换回来的那块股权，它的计税基础不是按这次交易的公允价值确定，而是延续原来那块股权的老成本。</p>
+<p>举一段假设的算法就明白了。老板当年出资五百万拿到一块股权，重组那天它的公允价值是一亿。若按一般处理，当场就要算税，但换回来的新股权成本记成一亿，将来卖两亿时只对那一亿的增值算。若按递延处理，当场不算，可换回来的新股权成本仍然是五百万，将来卖两亿，要对一亿九千五百万算。</p>
+<p>两条路加起来的总数不一定差很多，差的是节奏和确定性：一条是现在付一笔小的、将来再付一笔小的；另一条是现在不付、将来一次性付一笔大的，而&quot;将来&quot;那个时点的规则、公司估值、手上有没有现金，全是未知数。</p>
+<p>这也是为什么&quot;越早动越划算&quot;这句话在税上是成立的——不是因为早动能免掉什么，是因为早动的时候公允价值和原始成本之间那个差还很小，无论走哪一条路，那个差额都小到可以直接吃掉。</p>
+<p>顺带把一件事说清楚：这篇讲的是这一步会带来什么后果、顺序该怎么排，不是税该怎么少交。一笔重组究竟适用哪种处理、够不够得上，取决于主体性质、交易结构和当年有效的规则，必须拿自己的情况逐案去问持牌的税务师。</p>
+<h2>其六、同样一次划转，个人股东和公司股东不是一回事</h2>
+<p><strong>结论先行：递延这条通道主要是给企业股东铺的，自然人股东那一侧缺少同样普遍的安排，同一次重组落到两类股东身上，处境差得很远。</strong></p>
+<p>民营企业里个人直接持股非常常见——老板拿身份证挂在经营公司的股东名册上，中间什么都没有。这种摆法在只做一件事的时候完全够用，到了要理主体那一步，它往往是最贵的一种。</p>
+<p>原因在于两类股东走的不是同一套规则。企业之间的重组有比较成体系的递延安排，自然人这一侧的通道要窄得多，个案结论以主管税务机关的口径为准。于是同一个方案，落在公司股东身上可能是&quot;先挂着&quot;，落在个人股东身上可能是&quot;当期就得拿现金交&quot;。</p>
+<p>而这笔现金往往正好是老板最拿不出来的。重组通常发生在融资进来之前，公司的钱要留着做业务，老板个人的钱多半也压在公司里。开头那家清洗剂公司的那个七位数，最后是靠一笔股东借款接上去的，而那笔借款在后面的尽调里又被单独问了一轮。</p>
+<p>有家做建筑防水材料的公司走的是另一条路：老板在还没有外部股东、公司也还不值钱的时候，先在自己和经营公司之间搭了一层控股公司，此后所有的股权动作都发生在那一层上。要不要加这一层是另一个题目、另有专文讲过；这里只说税上的差别——同样的动作，发生在个人名下和发生在公司名下，是两笔账。</p>
+<h2>其七、时点：估值起来之前动，和交割前三个月动，是两个价钱</h2>
+<p><strong>结论先行：重组的税负跟着估值走，而估值只会单向往上；同一次划转，早两年做和临交割做，差的往往不是一点半点。</strong></p>
+<p>把前面几节串起来就能看出这条线：税按公允价值算，公允价值跟着净资产和估值走，而一家在往上走的公司，这个数每年都在变大。所以重组这件事的成本，是随时间单向上升的。</p>
+<p>更麻烦的是它还会跟融资节奏撞车。多数老板是被中介提醒之后才开始理主体的，而那个提醒通常发生在尽调阶段——也就是估值刚刚被一轮谈判抬到最高点的那几周。在那个时点动手，等于按最贵的那个数结账。</p>
+<p>还有一层是时间本身。走递延要备案、要出评估、要准备说明材料；走一般处理要凑出现金交税。哪一条都不是签个字就能完成的，赶在交割前三个月才启动，很容易变成交割日期被迫往后推。</p>
+<p>有家做农机配件的公司踩的是另一个坑：为了赶申报，他们把重组和引战投放在同一个季度做完。结果重组后不到一年股权又动了一次，前面按递延办的那部分被要求重新认定，补的税加上中介费，比早一年单独把重组做完贵了一倍多。</p>
+<p>所以顺序上更稳妥的做法是：架构先理干净、放一段时间，再去谈融资。这个&quot;放一段时间&quot;不是拖延，它本身就是前面那组条件里&quot;重组之后一定期限内不动&quot;的要求。</p>
+<h2>其八、先算税再画架构图：动手之前该拉的那张清单</h2>
+<p><strong>结论先行：架构图是最后一步不是头一步；画之前先把每一次股权变动对应的税算一遍，方案往往会因此改掉一半。</strong></p>
+<p>常见的做法是反过来的：中介先给出一张理想的架构图，各方看着都合理，然后交给财税去&quot;落实&quot;。等发现某一次划转当期就要掏一大笔现金的时候，图已经画好、时间表也排上了，改起来的代价远比重画一张大。</p>
+<p>更稳妥的顺序是先把这几样摆到桌面上。头一件是清点每一个主体现在归谁——个人直接持有的、公司持有的、代持还没还原的、员工在里面的，分别是哪几块，各自持有了多久。</p>
+<p>接着是把目标架构和现状之间的差算成&quot;几次股权变动&quot;，逐次问三句：这一次的转出方是自然人还是企业？公允价值大概多少、跟原始成本差多少？够不够得上递延，够的话事后那几条守不守得住？</p>
+<p>再往下是把每一次的现金需求列出来。当期就要交的那几笔，钱从哪里来、什么时候到位、会不会占用本来要投进业务的资金——这一项没算清楚，前面所有的方案设计都还只是纸上的。</p>
+<p>最后是把顺序排好：哪几次先做、哪几次要间隔一段时间、哪几次必须赶在外部股东进来之前完成。同一组动作换个顺序，总的税负和交割风险可以差很多，而这一步几乎不用花钱，只花时间。</p>
+<p>开头那家做工业清洗剂的公司，第二年重新理了一遍剩下那两家，先算后画，五次划转压成了三次，其中两次赶在了外部股东进来之前。分界其实很朴素：先算账再画图，和先画图再补税，动作看着一模一样，付出去的钱不是一个量级。华尔街彤鼎俱乐部的一次闭门交流上，有位刚把主体理完的企业主提到，他那张架构图前后几乎没改，改的全是每一步落在哪个月。</p>
+<p>以上为一般性的规则梳理，不构成法律或税务意见。任何一次重组的税务处理、适用条件与申报程序，应由具备相应资质的税务师与律师按个案出具意见，并以当时有效的税收法规和主管税务机关的口径为准。</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="corporate-seal-control.html" style="color:#6b5426;font-weight:700;">公章在谁的抽屉里：融资之后真正决定控制权的，往往不是股权表，而是那几枚章</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="holding-company-layer.html" style="color:#6b5426;font-weight:700;">中间那一层公司：融资那天它决定钱打给谁，在此之后它决定的事只会更多</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cross-border-share-swap.html" style="color:#6b5426;font-weight:700;">跨境换股并购的审批路径与税务考量</a></li></ul></div><div class="brandbox">
+<h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由彤鼎集团团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信：esonleo　·　全网社媒请搜索「彤鼎」或「ESON廖生」</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
