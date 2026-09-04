@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>股权激励签下去那天，账上凭空多出一笔成本，而钱一分没花 | 彤鼎集团知识文库</title>
+<meta name="description" content="股权激励签下去，公司一分现金没出，利润表上却会多出一笔成本。本文从企业方视角把这笔成本拆开：它为什么存在、金额按哪一天的价值算、为什么行权价定得越低成本反而越大、按什么节奏分摊、一次授完与分批授予在报表上差在哪、离职失效与加速归属各自怎么冲回，以及为什么把授予日排在递交申请要用的那个财年之外，同样的动作对报表的影响完全不同。">
+<link rel="canonical" href="https://tdgroup.hk/articles/share-based-payment-expense.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="彤鼎集团知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="股权激励签下去那天，账上凭空多出一笔成本，而钱一分没花 | 彤鼎集团知识文库">
+<meta property="og:description" content="股权激励签下去，公司一分现金没出，利润表上却会多出一笔成本。本文从企业方视角把这笔成本拆开：它为什么存在、金额按哪一天的价值算、为什么行权价定得越低成本反而越大、按什么节奏分摊、一次授完与分批授予在报表上差在哪、离职失效与加速归属各自怎么冲回，以及为什么把授予日排在递交申请要用的那个财年之外，同样的动作对报表的影响完全不同。">
+<meta property="og:url" content="https://tdgroup.hk/articles/share-based-payment-expense.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="股权激励签下去那天，账上凭空多出一笔成本，而钱一分没花 | 彤鼎集团知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:4px;font-size:17px;}
+.logo .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10.5px;letter-spacing:3px;margin-top:2px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"股权激励签下去那天，账上凭空多出一笔成本，而钱一分没花","inLanguage":"zh-CN","abstract":"An equity incentive plan costs the company no cash, yet it creates a real expense on the income statement. Shares or options handed to employees in exchange for service are measured at the grant-date fair value of the award and charged to profit over the vesting period. Counterintuitively, the lower the exercise price, the larger that charge becomes. A sizeable grant made inside the financial year that will support a listing application can therefore push a company below a net income threshold it was comfortably meeting. This article works through the mechanics from the company's side, and argues that the arithmetic belongs before the signature, not after it.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/share-based-payment-expense.html"},"datePublished":"2026-09-04","dateModified":"2026-09-04","description":"股权激励签下去，公司一分现金没出，利润表上却会多出一笔成本。本文从企业方视角把这笔成本拆开：它为什么存在、金额按哪一天的价值算、为什么行权价定得越低成本反而越大、按什么节奏分摊、一次授完与分批授予在报表上差在哪、离职失效与加速归属各自怎么冲回，以及为什么把授予日排在递交申请要用的那个财年之外，同样的动作对报表的影响完全不同。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="彤鼎集团 TD Group"><span class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></span></a>
+<div class="menu"><a href="/">首页 Home</a><a href="../about.html">关于 About</a><a href="../club.html">俱乐部 Club</a><a href="../library.html">文库 Library</a><a href="../faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">上市执行 EXECUTION</div><h1>股权激励签下去那天，账上凭空多出一笔成本，而钱一分没花</h1>
+<div class="sub">股权激励在老板眼里是「给股份、不给钱」，在利润表上却是一笔实实在在的成本——它按授予那天的价值锁定、按归属年限分摊，行权价压得越低这笔成本反而越大；而净利润恰好是纳斯达克那道门槛要看的东西</div><div class="en">An equity incentive plan costs the company no cash, yet it creates a real expense on the income statement. Shares or options handed to employees in exchange for service are measured at the grant-date fair value of the award and charged to profit over the vesting period. Counterintuitively, the lower the exercise price, the larger that charge becomes. A sizeable grant made inside the financial year that will support a listing application can therefore push a company below a net income threshold it was comfortably meeting. This article works through the mechanics from the company's side, and argues that the arithmetic belongs before the signature, not after it.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
+<article>
+<div class="answer">股份支付费用，是指企业把股份、期权这类权益工具给到员工或其他提供服务的一方时，按会计准则要在利润表上确认的那笔成本。对企业方而言有三层容易被低估的地方：其一，公司一分现金没有支出，这笔成本照样存在，因为会计上认的是「用股份换到了服务」这件事本身；其二，金额锁在授予日，按授予当天那份权益的公允价值计量，之后估值涨跌都不回头改，而行权价定得越低、员工要掏的钱越少，公司要确认的成本反而越大；其三，它按归属安排分摊进那几年的利润，所以临递交申请前突然做一次大额激励，成本会集中砸进最需要好看的那个财年——而纳斯达克资本市场的净利润标准是 75 万美元，同一套标准下的无限制流通公众股市值要求自 2026 年 1 月 17 日起统一提高到 1500 万美元。具体计量与摊销口径，以现行会计准则、交易所正式规则文本和申报会计师的判断为准。---有家做汽车模具的公司，年净利润三千多万，老板打算两年后递交上市申请。融资顾问只提醒了他一件事：核心团队得先绑住，不然尽调那一轮问起来不好答。他想通了，把百分之八的股份分给五个人——技术总监、两个厂长、销售负责人、财务负责人，签的是期权，行权价按注册资本平价定，一块钱一股。签字那天他心里算的是一笔不花钱的账：股份是自己的，从口袋里掏出去的现金是零，员工反正也要三年才能拿全。第二年做审计，会计师递过来的报表上多了一行他从没见过的科目：股份支付费用，两千一百万。净利润从三千多万掉到一千多万。他打电话过来的头一句话是，我给的是股份，我又没掏钱，这个成本是从哪儿冒出来的。</div>
+<h2>其一、这笔成本从哪儿冒出来：你付出去的不是现金，是股份</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/share-based-payment-expense-1.jpg" alt="其一、这笔成本从哪儿冒出来：你付出去的不是现金，是股份" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：会计上认的不是你掏了多少钱，而是你换到了什么——员工用劳动换股份，跟公司用现金买服务是同一件事，付出去的那部分股份要折成成本进利润表。</strong></p>
+<p>老板的直觉是：现金流量表上一分钱没动，那就没有成本。这个直觉对了一半。现金流量表确实没动，股份支付费用是一笔不涉及现金的成本；但利润表看的从来不是现金进出，是这一期到底消耗掉了什么。</p>
+<p>打个比方，像用自家仓库里的货去抵工人的工钱。你没从银行账户里转钱出去，但那批货是有价值的，发出去了就不在你手上了。成本不是钱少了，是东西少了。股份也是东西，只是它没有仓库里的货那么看得见。</p>
+<p>那么少掉的是什么？是现有股东手上的比例。员工拿到的那部分股份不是从公司账上凭空印出来的，是从股东那里稀释出来的。会计准则不管这个稀释落在谁头上，它只记一件事：公司这一期得到了服务，为此付出了权益。</p>
+<p>所以这笔成本的存在，跟公司账上有没有钱、员工有没有真的去行权都没有关系。开头那家做模具的公司后来问过一句：那五个人一股都没行权，成本能不能先不记？答案是不能——记的是授予这个动作，不是行权那个动作。</p>
+<h2>其二、金额按哪一天算：锁在授予日，之后涨跌都不回头改</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/share-based-payment-expense-2.jpg" alt="其二、金额按哪一天算：锁在授予日，之后涨跌都不回头改" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：这笔成本的金额在授予那一天就定下来了，按当天那份权益的公允价值计量；之后公司估值翻几倍还是掉一半，都不回头改这个数。</strong></p>
+<p>这一条是整件事里最有用的一条，因为它意味着时点直接决定金额。同样给百分之八，公司值一个亿的时候给，和公司值五个亿的时候给，锁进报表的成本能差出好几倍。</p>
+<p>有家做食品添加剂的公司，天使轮之后就把激励做完了，当时整体作价八千万。三年后新一轮估值到六个亿，那批人的账面身价涨了七倍多，而报表上要摊的成本还是按当年八千万那个口径算的，一分没变。</p>
+<p>反过来的例子更常见。有的老板一直拖，想等业务再稳一点、估值再高一点，给出去才显得值钱。结果是员工拿到的东西确实更值钱了，公司要背的成本也同步涨了——而这笔成本要摊的那几年，恰好是他最需要利润好看的几年。</p>
+<p>要提醒一句：授予日的公允价值不是老板自己拍一个数，它要有依据。非上市公司通常靠估值方法去算，申报的时候会计师会回头看这个数怎么来的、跟同期融资价格差多少。明显偏低又说不出理由的，会被要求重算。</p>
+<p>还有一种情形更麻烦：同一年里既做了激励、又谈了一轮融资，两个价格摆在一起对不上。融资价格是市场刚给出来的、看得见的一个数，激励那边要是用了一个远低于它的口径，中间的差额通常会被认成成本补进来，而不是被认成给员工的优待。所以这两件事排在同一年的时候，先算激励再谈价格，跟先谈价格再算激励，结果不一样。</p>
+<h2>其三、行权价定得越低，这笔成本反而越大</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/share-based-payment-expense-3.jpg" alt="其三、行权价定得越低，这笔成本反而越大" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：行权价是员工将来要掏的钱，公司少收的那一部分正是这笔成本的来源；行权价压到接近零，员工掏得最少，公司要确认的成本反而最大。</strong></p>
+<p>这一条几乎每个老板都想反了。直觉是我对员工好一点、行权价定低一点，反正也是自己的股份，以为便宜给出去等于成本低。实际正好相反。</p>
+<p>打个比方，像商场发的抵扣券。一张券写着满一万减两千，商场认两千的成本；写着满一万减九千，成本就是九千。券面上减得越多，顾客掏得越少，商场让出去的就越多。行权价就是员工要「满多少」里的那个数。</p>
+<p>有家做特种涂料的公司踩过这个坑，也爬出来过。头一版方案行权价定的是一块钱一股，测算出来的成本把当年利润压得只剩个零头。后来把行权价改到接近当时的每股净资产，员工要掏的钱多了，但激励的空间还在——往后涨的部分照样归他们——而报表上要摊的成本降了一半多。</p>
+<p>所以行权价这一行不是对员工好不好的问题，是这份激励的成本由谁承担多少的问题。员工承担的那部分叫行权价，公司承担的那部分叫股份支付费用，两者加起来才是这份股份在授予日的价值，一分不会少。</p>
+<h2>其四、按什么节奏分摊：这笔成本跟着人还在不在走</h2>
+<p><strong>结论先行：成本不在签字那年一次记完，而是按归属安排摊到员工要待的那几年——哪一年待了多久，就摊多少进那一年的利润。</strong></p>
+<p>会计上的道理很朴素：公司买的是服务，服务是分年提供的，成本就跟着服务的年份走。三年归属的方案，成本大体分三年摊；四年归属的，摊四年。</p>
+<p>那么从哪一天开始摊？从员工开始为这份激励提供服务的那一天，通常就是授予日。这里有个容易踩的地方：有些老板先口头许诺了比例，人也照着新条件干了大半年，正式文件才补签。那大半年的服务已经发生，补签的时候会被要求把这段一起算进来，于是补签当期一下多出一块。</p>
+<p>所以真正决定哪一年难看的不是签字的日子，是归属条款怎么写。有些方案写着签完当场归属一部分，那一部分对应的服务被视为已经提供完了，成本当期就要全额确认，剩下的才往后摊。</p>
+<p>这里有一个常被忽略的细节：带业绩条件的方案，摊销要跟着「预计能不能达成」走。原来判断达不成、后来判断能达成，前面几期少摊的要在后面补上，于是某一期会突然冒出一大笔。这种波动在申报时一定会被问到。</p>
+<p>开头那家模具公司的两千一百万就是这么来的：其中三个人的归属比例是签完当场先给两成，剩下的分三年，而那两成的成本在签字当年一次性确认完。他以为的分三年慢慢摊，实际上有很大一块砸在了头一年。</p>
+<h2>其五、临递交申请前做一次大额激励，会把当年利润打穿</h2>
+<p><strong>结论先行：递交申请要用的那个财年，利润表是被逐行看的；在这个财年里突然做一次大额激励，成本集中砸进来，本来够门槛的利润可能当场变成不够。</strong></p>
+<p>这里要把门槛说清楚，因为很多人只记住了一个数。纳斯达克资本市场的净利润标准要求的是 75 万美元，这个数决定的是你有没有资格递交申请。</p>
+<p>另有一个数是所有人都要过的：无限制流通公众股市值，自 2026 年 1 月 17 日起，纳斯达克资本市场三套初始上市标准统一提高到 1500 万美元，这一项此前的要求要低不少。它决定的不是资格，是这次发行要卖多大规模。</p>
+<p>两个数是两件事，别混在一起说。真正会被股份支付费用威胁到的是前面那个 75 万——它是净利润，而股份支付费用恰恰是从净利润里扣掉的。至于两条标准的完整表述与适用情形，以交易所正式规则文本为准。</p>
+<p>有家做精密齿轮的公司差点栽在这里。报表上净利润折成美元一百二十多万，看着离门槛还有一倍多的余量。递表前半年，老板给新招来的两个高管做了一笔激励，测算出来摊进当年的成本是六十多万美元。净利润当场掉到六十万上下，卡在门槛下面。方案最后改成往后推一个财年再授予，那半年白等了。</p>
+<h2>其六、一次授完和分批授予，在报表上是两条方向相反的曲线</h2>
+<p><strong>结论先行：同样的股份总量，一次授完是一根前高后低的曲线，分成几批授出去是一条一直抬着头的线，两者对哪一年难看的影响正好相反。</strong></p>
+<p>一次授完的意思是：签一次，成本总额定死，往后按归属年限摊完就没有了。摊到最后那一年，这笔成本从报表上消失，之后的年份干干净净。</p>
+<p>分批授予是每年授一批。每一批各有自己的授予日、各有自己的公允价值、各有自己的摊销年限，几批叠在一起，靠后的年份摊得反而更多。而且估值一路往上的公司，后面授的那几批单价更高，叠加起来更明显。</p>
+<p>有家做轴承的公司做过一次对比测算：同样给出去百分之六，一次授完的方案在头三年压利润，第四年起报表就恢复了；分四批授出去的方案头一年很轻，到第三、第四年反倒比前一个方案更重，而那正是他们计划递表的年份。</p>
+<p>哪一种更合适没有通用答案，判据是你要用哪一年的报表去递。要用近的那一年，就别把成本堆在近处；要用远的那一年，前面重一点反而是好事。这两条曲线一定要先算出来再签，不是签完再看。</p>
+<h2>其七、人走了、股份回购注销了、归属被提前：这三件事的账正好相反</h2>
+<p><strong>结论先行：员工没待到归属就离职，已经摊过的那部分成本可以随着失效冲回；而回购注销与加速归属恰恰相反，会把还没摊完的成本一次性压进当期。</strong></p>
+<p>离职失效这件事最直白。员工干了一年就走，三年归属的部分只归了三分之一，剩下的没归属就作废——公司没得到那两年的服务，前面按预计摊进去的成本要相应冲回，那一期的利润会因此好看一点。</p>
+<p>回购注销是另一回事。公司花钱把已经归属的股份买回来注销掉，这是一笔真金白银的支出，而它不会把当初确认过的成本抹掉。已经摊掉的照旧算过，回购价高于那部分权益价值的差额，通常还要继续走成本或者权益。</p>
+<p>加速归属最容易被漏算，而它偏偏挂在最要紧的那个时点上。很多方案写着公司完成上市或者被并购时，未归属部分自动全部归属。这句话被触发的那一刻，剩下没摊完的成本要在当期一次性确认完。</p>
+<p>也就是说，一份写了加速条款的激励方案，会在交割或者挂牌那个月给报表加一笔集中的成本。这一笔常常没有进任何人的模型，因为大家在那一刻关心的是交割条件和资金安排。签这一条的时候要顺手问一句：加速那天，还剩多少没摊完。</p>
+<h2>其八、时点怎么排：放在哪一年，比放多少更要紧</h2>
+<p><strong>结论先行：激励要不要做从来不是问题，问题是它落在哪一年——把授予日排在要用来递交申请的那个财年之外，同样的动作对报表的影响完全不一样。</strong></p>
+<p>顺序应该是这样的：先定用哪一年的报表去递，倒推出那个财年的窗口，再把授予日排到窗口之外。要么往前挪到估值还低、离递表还远的年份，要么往后推到递交之后。中间那一段是最贵的一段。</p>
+<p>往前挪通常更划算，因为授予日的公允价值锁在那一天：早两年做，同样的比例锁进去的成本低得多，摊销也早两年开始、早两年结束。代价是那时团队还没定型，容易给错人——所以回购与成熟条款要写紧，这跟成本高低是两回事。</p>
+<p>往后推的代价是团队要多等一段。这一段能不能等得住，取决于你有没有把话说清楚。华尔街彤鼎俱乐部一次闭门交流上，有位做了十几年零部件的企业主提到过他的做法：把方案、比例和时间表都摊开给核心团队看，只把签字日期往后放一个季度，人一个都没走。</p>
+<p>签之前该算清的就四件事：这份激励在授予日的公允价值是多少、行权价定在哪一档、按什么归属节奏摊、摊出来的曲线跟你要递的那个财年撞不撞。四件事都是算术，算完再谈比例，不要反过来。</p>
+<p>最后说一句边界：这篇讲的是这笔成本怎么产生、时点该怎么排，不是账该怎么做得好看。股份支付费用是准则要求确认的东西，能动的是授予时点、行权价和归属节奏，不是这笔成本本身。具体计量方式与摊销口径，以现行会计准则和申报会计师的判断为准。</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="external-guarantee-cleanup.html" style="color:#6b5426;font-weight:700;">老板十一年前给朋友签的那张担保，在这一轮融资的尽调里被翻了出来</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="issuer-independence-five.html" style="color:#6b5426;font-weight:700;">独立性：把一家公司拎出来上市，难的不是拎，是证明它能自己活</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="actual-controller-determination.html" style="color:#6b5426;font-weight:700;">实际控制人认定：股权表上写得清清楚楚，答案却不是老板自己填的</a></li></ul></div><div class="brandbox">
+<h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由彤鼎集团团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信：esonleo　·　全网社媒请搜索「彤鼎」或「ESON廖生」</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>

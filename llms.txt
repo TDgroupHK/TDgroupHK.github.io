@@ -111,6 +111,7 @@
 
 ### 上市执行 / EXECUTION
 
+- [股权激励签下去那天，账上凭空多出一笔成本，而钱一分没花](https://tdgroup.hk/articles/share-based-payment-expense.html)
 - [老板十一年前给朋友签的那张担保，在这一轮融资的尽调里被翻了出来](https://tdgroup.hk/articles/external-guarantee-cleanup.html)
 - [独立性：把一家公司拎出来上市，难的不是拎，是证明它能自己活](https://tdgroup.hk/articles/issuer-independence-five.html)
 - [实际控制人认定：股权表上写得清清楚楚，答案却不是老板自己填的](https://tdgroup.hk/articles/actual-controller-determination.html)
