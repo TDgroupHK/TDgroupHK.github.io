@@ -1,0 +1,292 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>AI 落地自测（3分钟） | 彤鼎集团</title>
+<meta name="description" content="十道题、三分钟，从时间去向、一线场景、客户消息、内容生产、规矩沉淀、数据与经验积累六个维度，判断你公司哪三个岗位先上 AI，以及你更适合先把 AI 装进岗位、还是先把生意做成能单独核算的 AI 业务。测试在浏览器本地完成，不收集任何数据。">
+<link rel="canonical" href="https://tdgroup.hk/ai-readiness-checkup.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<meta property="og:site_name" content="彤鼎集团 TD Group">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AI 落地自测（3分钟） | 彤鼎集团">
+<meta property="og:description" content="十道题，判断你公司哪三个岗位先上 AI，以及更适合先做岗位落地还是先谈产品端重构。">
+<meta property="og:url" content="https://tdgroup.hk/ai-readiness-checkup.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:860px;margin:0 auto;padding:0 24px;}
+::selection{background:var(--gold);color:#0a0908;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.92);border-bottom:1px solid var(--line);backdrop-filter:blur(14px);}
+.nav-in{max-width:860px;margin:0 auto;padding:16px 24px;display:flex;align-items:center;justify-content:space-between;}
+.logo{color:#fff;font-weight:700;letter-spacing:4px;font-size:16px;}
+.logo small{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10px;letter-spacing:2px;margin-left:10px;}
+.menu{display:flex;gap:22px;font-size:13.5px;color:#c6bda6;}
+.menu a:hover{color:var(--gold-hi);}
+header{padding:130px 0 40px;background:radial-gradient(ellipse at 15% 20%,rgba(201,169,98,.12) 0,transparent 45%),var(--night);}
+.eyebrow{display:flex;align-items:center;gap:14px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:5px;font-size:12.5px;margin-bottom:22px;}
+.eyebrow::before{content:"";width:44px;height:1px;background:var(--gold);}
+h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:38px;line-height:1.4;color:#fff;font-weight:900;letter-spacing:1px;}
+h1 em{color:var(--gold-hi);font-style:normal;}
+.sub{margin-top:16px;color:#a89b7d;font-size:15px;max-width:680px;}
+.quiz{padding:30px 0 90px;}
+.q{border:1px solid var(--line);background:var(--ink);padding:26px 28px;margin-bottom:18px;}
+.q h3{color:#fff;font-size:17px;margin-bottom:16px;letter-spacing:.5px;}
+.q h3 i{font-style:italic;font-family:Georgia,serif;color:var(--gold);margin-right:10px;font-size:15px;}
+.opts{display:flex;flex-wrap:wrap;gap:10px;}
+.opts label{border:1px solid var(--line);padding:10px 18px;font-size:14px;cursor:pointer;transition:all .25s;color:#c9bfa4;user-select:none;}
+.opts label:hover{border-color:var(--gold);color:var(--gold-hi);}
+.opts input{display:none;}
+.opts label:has(input:checked){background:var(--gold);border-color:var(--gold);color:#0d0b07;font-weight:700;}
+.note{color:var(--mute);font-size:12.5px;margin-top:10px;}
+.btn{display:inline-block;padding:16px 46px;font-size:15px;letter-spacing:3px;font-weight:700;background:var(--gold);color:#0d0b07;border:0;cursor:pointer;transition:all .3s;font-family:inherit;}
+.btn:hover{background:var(--gold-hi);transform:translateY(-2px);}
+#result{display:none;margin-top:34px;}
+.verdict{border:1px solid var(--gold);background:linear-gradient(160deg,rgba(201,169,98,.12),rgba(201,169,98,.03));padding:32px 30px;}
+.verdict .grade{font-family:Georgia,serif;font-style:italic;color:var(--gold-hi);font-size:40px;line-height:1;}
+.verdict h2{color:#fff;font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;margin:14px 0 6px;}
+.verdict p{font-size:15px;}
+.roles{margin-top:22px;border-top:1px solid var(--line);padding-top:20px;}
+.roles b{color:#e8cf96;display:block;font-size:16px;margin-bottom:12px;}
+.roles ol{margin-left:20px;}
+.roles li{font-size:15px;padding:7px 0;color:#c4b791;}
+.roles li span{color:var(--mute);font-size:13.5px;}
+.points{margin-top:20px;border-top:1px solid var(--line);padding-top:8px;}
+.points li{list-style:none;padding:12px 0 12px 26px;position:relative;border-bottom:1px dashed rgba(201,169,98,.15);font-size:14.5px;}
+.points li::before{content:"—";position:absolute;left:0;color:var(--gold);}
+.cta{margin-top:26px;border:1px solid var(--line);background:var(--ink);padding:28px 30px;}
+.cta b{color:#fff;font-size:17px;display:block;margin-bottom:10px;}
+.cta p{font-size:14.5px;}
+.cta .ways{margin-top:14px;display:flex;gap:14px;flex-wrap:wrap;}
+.cta .ways span{border:1px solid var(--gold);color:var(--gold-hi);padding:9px 18px;font-size:14px;letter-spacing:1px;}
+.copybtn{margin-top:18px;background:transparent;border:1px solid var(--gold);color:var(--gold);padding:10px 24px;font-size:13.5px;letter-spacing:2px;cursor:pointer;transition:all .25s;font-family:inherit;}
+.copybtn:hover{background:rgba(201,169,98,.12);}
+.legal{margin-top:26px;color:var(--mute);font-size:12px;line-height:1.9;border-top:1px solid var(--line);padding-top:18px;}
+footer{border-top:1px solid var(--line);padding:34px 0;color:var(--mute);font-size:12.5px;}
+@media(max-width:640px){h1{font-size:28px;}header{padding-top:110px;}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="js/assistant.js"></script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"AI 落地自测","url":"https://tdgroup.hk/ai-readiness-checkup.html","applicationCategory":"BusinessApplication","operatingSystem":"Web","inLanguage":"zh-CN","isAccessibleForFree":true,"offers":{"@type":"Offer","price":"0","priceCurrency":"CNY"},"description":"十道题自测：从时间去向、一线场景、客户消息、内容生产、规矩沉淀、数据与经验积累六个维度，判断中小企业哪三个岗位先上 AI，以及更适合先做岗位落地还是先把生意重构成能单独核算的 AI 业务。","featureList":["优先岗位排序","岗位落地与产品端重构的路线判断","规矩沉淀程度对照","数据与经验资产盘点提示"],"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk"}}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://tdgroup.hk/"},{"@type":"ListItem","position":2,"name":"AI 落地与 AI 产业化","item":"https://tdgroup.hk/ai-transformation.html"},{"@type":"ListItem","position":3,"name":"AI 落地自测","item":"https://tdgroup.hk/ai-readiness-checkup.html"}]}</script></head><body>
+<nav><div class="nav-in">
+<a class="logo" href="/">彤鼎集团<small>TD GROUP</small></a>
+<div class="menu"><a href="/">首页 Home</a><a href="ai-transformation.html">AI 落地</a><a href="startup-program.html">初创服务</a><a href="library.html">文库 Library</a><a href="faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+</div></nav>
+
+<header><div class="wrap">
+<div class="eyebrow">AI READINESS CHECKUP</div>
+<h1>AI 落地<em>自测</em></h1>
+<p class="sub">十道题、约三分钟。看清楚两件事：你公司哪三个岗位最该先上 AI，以及你现在更适合先把 AI 装进岗位，还是先把生意做成一块能单独算收入的 AI 业务。测试在浏览器本地完成，不收集任何数据。</p>
+</div></header>
+
+<div class="quiz"><div class="wrap">
+<div class="q"><h3><i>01</i>公司里每天最花时间的，是哪一类事？</h3><div class="opts" data-q="time">
+<label><input type="radio" name="time" value="reply"><span>回客户消息、跟进销售线索</span></label>
+<label><input type="radio" name="time" value="content"><span>做内容：短视频、公众号、朋友圈</span></label>
+<label><input type="radio" name="time" value="check"><span>核资料、查客户与供应商、整理表格</span></label>
+</div><div class="note">哪一类最费人，哪一个岗位就最该先上——这一题的权重最高。</div></div>
+
+<div class="q"><h3><i>02</i>有没有一线在直接跟客户打交道？</h3><div class="opts" data-q="front">
+<label><input type="radio" name="front" value="many"><span>有：门店、加盟商、销售或客服，人数不少</span></label>
+<label><input type="radio" name="front" value="few"><span>有，但就一两个人，主要还是老板自己上</span></label>
+<label><input type="radio" name="front" value="none"><span>基本没有，靠转介绍或固定几个大客户</span></label>
+</div><div class="note">有一线，意味着每天在产生真实的对话与数据，这是 AI 能接得上手的前提。</div></div>
+
+<div class="q"><h3><i>03</i>客户发来的消息，现在是谁在回？</h3><div class="opts" data-q="msg">
+<label><input type="radio" name="msg" value="owner"><span>老板自己回</span></label>
+<label><input type="radio" name="msg" value="staff"><span>员工回，各说各的，没有统一口径</span></label>
+<label><input type="radio" name="msg" value="team"><span>有专人、有统一话术</span></label>
+</div></div>
+
+<div class="q"><h3><i>04</i>公司的内容现在谁在做？</h3><div class="opts" data-q="content">
+<label><input type="radio" name="content" value="none"><span>基本没做</span></label>
+<label><input type="radio" name="content" value="part"><span>员工兼着做，做做停停</span></label>
+<label><input type="radio" name="content" value="pro"><span>有专人或外包，稳定在做</span></label>
+</div></div>
+
+<div class="q"><h3><i>05</i>公司的规矩、话术、做事标准，有没有写下来？</h3><div class="opts" data-q="sop">
+<label><input type="radio" name="sop" value="head"><span>都在几个人脑子里，没写</span></label>
+<label><input type="radio" name="sop" value="part"><span>写过一些，散在各处，没人维护</span></label>
+<label><input type="radio" name="sop" value="doc"><span>有成文的手册，新人照着能上手</span></label>
+</div><div class="note">写不下来的规矩，AI 学不会，新人也学不会——这两件事其实是同一件。</div></div>
+
+<div class="q"><h3><i>06</i>公司有没有攒下多年的经营数据？</h3><div class="opts" data-q="data">
+<label><input type="radio" name="data" value="rich"><span>有，攒了很多年，同行拿不到</span></label>
+<label><input type="radio" name="data" value="some"><span>有一些，但零散、没整理</span></label>
+<label><input type="radio" name="data" value="little"><span>成立时间还短，数据不多</span></label>
+</div><div class="note">工艺参数、交易记录、客户档案、门店与供应链数据都算。</div></div>
+
+<div class="q"><h3><i>07</i>你和团队的经验，同行会不会愿意花钱买？</h3><div class="opts" data-q="know">
+<label><input type="radio" name="know" value="yes"><span>会，已经有人来问过，或者已经在教同行</span></label>
+<label><input type="radio" name="know" value="maybe"><span>说不好，没试过</span></label>
+<label><input type="radio" name="know" value="no"><span>属于通用做法，谈不上独有</span></label>
+</div></div>
+
+<div class="q"><h3><i>08</i>老板本人每天花在重复性事务上的时间？</h3><div class="opts" data-q="owner">
+<label><input type="radio" name="owner" value="half"><span>半天以上</span></label>
+<label><input type="radio" name="owner" value="some"><span>一两个小时</span></label>
+<label><input type="radio" name="owner" value="little"><span>很少，主要在谈业务和拍板</span></label>
+</div></div>
+
+<div class="q"><h3><i>09</i>现在用过哪些 AI 工具？</h3><div class="opts" data-q="tool">
+<label><input type="radio" name="tool" value="none"><span>基本没用过</span></label>
+<label><input type="radio" name="tool" value="chat"><span>用过聊天类的，偶尔问几句</span></label>
+<label><input type="radio" name="tool" value="flow"><span>已经接进某个流程在天天用</span></label>
+</div></div>
+
+<div class="q"><h3><i>10</i>要花这笔钱，你最担心的是哪一件？</h3><div class="opts" data-q="fear">
+<label><input type="radio" name="fear" value="cost"><span>花了钱，最后没人用</span></label>
+<label><input type="radio" name="fear" value="data"><span>客户数据外泄，或被拿去训练模型</span></label>
+<label><input type="radio" name="fear" value="who"><span>跑起来之后没人管，坏了不知道</span></label>
+</div></div>
+
+<button class="btn" id="go" onclick="calc()">生成自测结果</button>
+
+<div id="result">
+<div class="verdict"><span class="grade" id="grade"></span>
+<h2 id="path"></h2><p id="summary"></p>
+<div class="roles"><b>建议先上的三个岗位（按顺序）</b><ol id="roles"></ol></div>
+<ul class="points" id="points"></ul></div>
+<div class="cta"><b>下一步：拿这份结果，换一页纸初评</b>
+<p>把自测结果发给我们，彤鼎会按你的行业与现状回一页纸的初评：先从哪个岗位下手、大致要花多少、多久见到东西，以及你这门生意值不值得往产品端重构。不推销、不承诺任何数字结果，只给判断依据。</p>
+<div class="ways"><span>邮箱 liaoqijie@tdgroup.hk</span><span>微信 esonleo（备注：AI 自测）</span></div>
+<button class="btn" onclick="mailResult()" id="mailb" style="margin-top:18px;">一键发送给顾问，换一页纸初评</button>
+<button class="copybtn" onclick="copyResult()" id="cpb">或复制结果，自行微信发送</button>
+<p style="margin-top:16px;font-size:14px;">想直接看服务与价格：<a href="ai-transformation.html" style="color:var(--gold);font-weight:700;">AI 落地与 AI 产业化——路线图、单岗位落地、月度维护、全公司 AI 化，明码标价 →</a></p></div>
+<div class="legal">彤鼎集团（香港）有限公司为企业管理咨询机构，境内服务由彤鼎企业管理科技（深圳）有限公司承接。本页测试仅基于一般行业实践做初步对照，结果不构成任何法律、税务或投资建议，也不构成任何降本、增收、融资结果或收益承诺；涉及投资机会的服务仅面向符合条件的合格投资者，并将充分揭示风险。跑在客户数据上的模型一律使用国内已备案模型，相关约定写入合同数据处理附件。</div>
+</div>
+</div></div>
+
+<footer><div class="wrap">© 彤鼎集团（香港）有限公司 TD Group (Hong Kong) Limited · 香港 · 深圳 · 上海 · 新加坡 · <a href="/" style="color:var(--gold)">tdgroup.hk</a></div></footer>
+
+<script>
+var lastText="",lastGrade="",lastPath="",lastRoles=[],lastPts=[],started=false;
+function pick(n){var el=document.querySelector('input[name="'+n+'"]:checked');return el?el.value:null;}
+// 埋点：完成率与线索转化率是判断这页值不值得继续投流量的唯一依据。
+// GA4 与百度统计都是全站已装的，这里只做事件上报，不引入任何新依赖。
+function track(name,params){
+  try{if(typeof gtag==='function')gtag('event',name,params||{});}catch(e){}
+  try{if(window._hmt)_hmt.push(['_trackEvent','AI自测',name,(params&&params.grade)||'']);}catch(e){}
+}
+// 第一次选项被点中就算「开始」——只报一次，用于算完成率的分母。
+document.addEventListener('change',function(e){
+  if(started||!e.target||e.target.type!=='radio')return;
+  started=true;track('ai_checkup_start',{});
+});
+function calc(){
+  var time=pick('time'),front=pick('front'),msg=pick('msg'),content=pick('content'),sop=pick('sop'),
+      data=pick('data'),know=pick('know'),owner=pick('owner'),tool=pick('tool'),fear=pick('fear');
+  if(!time||!front||!msg||!content||!sop||!data||!know||!owner||!tool||!fear){alert('还有题目没选完');return;}
+  var pts=[];
+
+  // 四个岗位各自打分：越费人、越没沉淀的岗位排越前。
+  var s={};
+  s['客户跟进'] = (time==='reply'?3:0) + (front==='many'?3:front==='few'?2:0) + (msg==='owner'?3:msg==='staff'?2:1);
+  s['内容'] = (time==='content'?3:0) + (content==='part'?3:content==='none'?2:1);
+  s['客户核查'] = (time==='check'?3:0) + (front==='many'?2:front==='few'?1:0) + (data==='some'?1:0);
+  s['公司知识库'] = (sop==='head'?3:sop==='part'?2:0) + (owner==='half'?2:owner==='some'?1:0) + (msg==='staff'?1:0);
+
+  var desc={
+    '客户跟进':'AI 读聊天、判断今天该回谁、写好该说的那几句，你或你的员工点一下发出去',
+    '内容':'选题采集、成稿、合规复核、多平台定时发布，每天固定产出',
+    '客户核查':'客户、供应商、加盟商的工商与风险信息自动核一遍，准入前先看一眼',
+    '公司知识库':'把散在各人脑子里的规矩、话术、判断标准收成一份 AI 每次开工先读的手册'
+  };
+  var order=Object.keys(s).sort(function(a,b){return s[b]-s[a];});
+  var top3=order.slice(0,3);
+  var total=s[order[0]]+s[order[1]]+s[order[2]];
+
+  // 乙那一半：有没有独有数据、有没有同行肯付费的经验、有没有高频场景。
+  var b=(data==='rich'?3:data==='some'?1:0)+(know==='yes'?3:know==='maybe'?1:0)+(front==='many'?1:0);
+
+  var grade=total>=11?'A':(total>=8?'B':(total>=5?'C':'D'));
+  var path='',summary='';
+  if(grade==='A'){path='现在就该上，而且有明确的下手位置';summary='你公司有正在产生数据的一线，也有明显吃人力的重复工作，属于岗位级 AI 最容易见到东西的形状。建议先做一个岗位、做到能自己跑，再加第二个——同时铺三个岗位是这条路上最常见的翻车方式。';}
+  else if(grade==='B'){path='可以上，先挑一个最费人的岗位';summary='有落地的基础，但还没到三个岗位一起做的程度。先把排在第一位的那个岗位做到能自己跑，跑顺两个月，再决定要不要往下加。';}
+  else if(grade==='C'){path='先解决沉淀问题，再谈上系统';summary='目前更值得先做的是把规矩、话术、判断标准写下来。写不下来的东西 AI 学不会，新人也学不会——这一步做完，后面装哪个岗位都快得多，成本也低得多。';}
+  else{path='现阶段更适合先用起来，不急着做落地项目';summary='公司现在的重复性事务还不多，一线也还没铺开。这个阶段花钱做岗位落地，多半用不满。建议先把手边的 AI 工具用进一两件具体的事，等业务量起来再谈。';}
+
+  var roleTxt=[];
+  for(var i=0;i<top3.length;i++){roleTxt.push((i+1)+'. '+top3[i]+'岗位——'+desc[top3[i]]);}
+
+  if(time==='reply')pts.push('时间去向：最费人的是回客户消息与跟进线索，这一类事的形状最适合交给 AI 起草、由人点发。');
+  if(time==='content')pts.push('时间去向：最费人的是做内容。内容是四个岗位里流程最固定的一个，通常也是见到东西最快的一个。');
+  if(time==='check')pts.push('时间去向：最费人的是核资料与查客户。这类事有明确的对错标准，交给 AI 之后人只做复核那一步。');
+
+  if(front==='many')pts.push('一线：有成规模的一线在跟客户，每天都在产生真实对话与数据。这是 AI 能接得上手的前提，也是后面能不能做成产品的底子。');
+  if(front==='few')pts.push('一线：一线还很薄，主要靠老板自己。建议先从减轻老板本人重复劳动的那个岗位入手，而不是先铺给员工用的系统。');
+  if(front==='none')pts.push('一线：基本没有一线在跟客户。这种结构下客户跟进岗位的价值有限，重心应放在内容与公司知识库。');
+
+  if(msg==='owner')pts.push('客户消息：现在由老板本人回。这是最典型的瓶颈——公司能接多少客户，取决于老板一天能回多少条。');
+  if(msg==='staff')pts.push('客户消息：员工各说各的，没有统一口径。上 AI 之前先把话术定下来，否则等于把不一致的做法自动化了。');
+  if(msg==='team')pts.push('客户消息：已有专人与统一话术，接 AI 的难度会明显低于多数公司。');
+
+  if(content==='none')pts.push('内容：目前基本没做。从零开始反而简单——没有旧习惯要改，直接按能跑的流程搭。');
+  if(content==='part')pts.push('内容：员工兼着做、做做停停。这正是内容岗位最该被接管的状态：不是做不好，是没人能天天做。');
+  if(content==='pro')pts.push('内容：已有稳定产出。这一档的价值主要在扩量与多平台分发，不在替换现有的人。');
+
+  if(sop==='head')pts.push('沉淀：规矩都在人脑子里。这一项建议排在前面处理——它不只是给 AI 看的，走一个骨干、带走的东西是一样的。');
+  if(sop==='part')pts.push('沉淀：写过一些但没人维护。把它收成一份有人维护的手册，是知识库岗位的第一步。');
+  if(sop==='doc')pts.push('沉淀：已有成文手册，这是明显的加分项——AI 能读的东西越多，需要人反复纠正的次数越少。');
+
+  if(owner==='half')pts.push('老板时间：每天半天以上花在重复事务上。这一项通常在做完第一个岗位后变化最直接。');
+
+  if(tool==='none')pts.push('现状：还没怎么用过 AI 工具。建议从 2,800 元的路线图起步——当场用你自己的数据搭一个能跑的样例，先看见再决定花不花后面的钱。');
+  if(tool==='chat')pts.push('现状：用过聊天类工具但没进流程。多数公司停在这一档，差的不是会不会用，是没有把步骤定死、把复核那一步留给人。');
+  if(tool==='flow')pts.push('现状：已经有流程在用 AI。你需要的多半不是从头搭，而是把它接进更多岗位，并且找人按月盯着它。');
+
+  if(b>=4){
+    pts.push('产品端：你手里有独有数据或同行肯付费的经验，属于可以往「把生意做成 AI 业务」那一半走的形状。前提还有两条——已经有营收，以及你愿意把这块业务单独做主体或单独核算。不单列的收入投资人不认，审计也认不了。');
+    pts.push('建议路线：两半都谈。岗位落地那一半先跑起来，它产生的数据和原型正好是产品端重构的材料；产品端那一半用 9,500 元的 AI 产业化路线图先判走不走得通，不必一开始就投入。');
+  }else if(b>=2){
+    pts.push('产品端：有一点底子，但还看不出能不能单独做成一块业务。建议先做岗位落地那一半，把数据攒起来、把流程跑顺，半年后再回头判一次。');
+  }else{
+    pts.push('产品端：目前没有独有数据、也没有同行肯付费的经验，暂时不建议往「做成 AI 业务用来融资」那条路上走。硬贴一个 AI 标签，投资人问到产品、数据和客户合同的第一轮就会被问穿。先把岗位落地做扎实。');
+  }
+
+  if(fear==='cost')pts.push('你最担心花了钱没人用——这正是路线图那一档放在最前面的理由：先当场搭一个能跑的样例给你看，看见了再决定要不要往下做，而且这笔钱后面全额抵扣。');
+  if(fear==='data')pts.push('你最担心数据安全——跑在你客户名单与聊天上的模型一律用国内已备案模型，模型来源与备案号写进合同的数据处理附件；不拿你的数据去训练任何公开模型，也不做数据出境安排。');
+  if(fear==='who')pts.push('你最担心跑起来没人管——月度维护那一档就是为这件事设的：出问题我们先知道，每月一次调整，一份月报。不接维护的落地，多数会在半年内停掉。');
+
+  document.getElementById('grade').textContent=grade+' 级';
+  document.getElementById('path').textContent=path;
+  document.getElementById('summary').textContent=summary;
+  var ol=document.getElementById('roles');ol.innerHTML='';
+  for(var k=0;k<top3.length;k++){var li2=document.createElement('li');li2.innerHTML='<b style="color:#fff;">'+top3[k]+'岗位</b><br><span>'+desc[top3[k]]+'</span>';ol.appendChild(li2);}
+  var ul=document.getElementById('points');ul.innerHTML='';
+  for(var j=0;j<pts.length;j++){var li=document.createElement('li');li.textContent=pts[j];ul.appendChild(li);}
+  lastText='【AI 落地自测结果】\n评级：'+grade+'\n判断：'+path+'\n'+summary+'\n建议先上的三个岗位：\n'+roleTxt.join('\n')+'\n'+pts.map(function(p){return '· '+p;}).join('\n')+'\n（来自 tdgroup.hk/ai-readiness-checkup.html）';
+  lastGrade=grade;lastPath=path;lastRoles=roleTxt;lastPts=pts;
+  document.getElementById('result').style.display='block';
+  document.getElementById('result').scrollIntoView({behavior:'smooth'});
+  track('ai_checkup_complete',{grade:grade,path:path,top_role:top3[0]});
+}
+function copyResult(){
+  navigator.clipboard.writeText(lastText).then(function(){
+    document.getElementById('cpb').textContent='已复制，微信/邮件里直接粘贴';
+    track('ai_checkup_copy',{});
+  });
+}
+// 一键把结果装进邮件正文：把「复制了但没发」这一步的流失堵掉。
+// 正文只带评级、判断与三个岗位，不带长段落 summary——部分 Outlook 桌面版 mailto 上限 2083 字符，
+// 超了会被静默截断，宁可短一点也要保证发得出去。
+function mailResult(){
+  var subject='AI 落地自测结果 '+lastGrade+' 级 · '+lastPath+' · 申请一页纸初评';
+  var brief='【AI 落地自测】\n评级：'+lastGrade+'\n判断：'+lastPath+'\n'
+          +(lastRoles.length?'建议先上的三个岗位：\n'+lastRoles.join('\n')+'\n':'')
+          +'（来自 tdgroup.hk/ai-readiness-checkup.html）';
+  var body=brief+'\n\n————\n请补充以下信息，便于顾问出具初评：\n公司/行业：\n员工规模：\n现在最费人的是哪件事：\n最想先上哪个岗位：\n联系人与称呼：\n方便的联系方式：\n';
+  location.href='mailto:liaoqijie@tdgroup.hk?subject='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+  document.getElementById('mailb').textContent='已打开邮件，补完信息发送即可';
+  track('ai_checkup_email',{grade:lastGrade});
+}
+</script>
+</body></html>
