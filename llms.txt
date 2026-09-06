@@ -18,9 +18,9 @@
 ## 主要页面
 
 - [首页 Home](https://tdgroup.hk/): 公司定位、上市案例、八大核心业务、新加坡路径方法论
-- [上市预备期陪跑](https://tdgroup.hk/pre-ipo-program.html): 付费上市可行性深度诊断 + 12-24个月四阶段陪跑,按里程碑收费,不承诺结果
-- [初创公司资本服务 Startup Program](https://tdgroup.hk/startup-program.html): 面向初创与早期公司的四档服务——一对一资本咨询 2,800 元、融资条款审阅 6,800 元、股权架构体检 6,800 元、初创资本架构落地 68,000 元起；费用逐级抵扣，最终可抵上市可行性深度诊断；不承诺融资结果，持牌业务由持牌合作机构承做
-- [海外能源资产上市 Overseas Asset Listing](https://tdgroup.hk/overseas-asset-listing.html): 面向在东南亚持有已并网或已中标光伏、储能电站的资产持有人——上市可行性诊断 USD 5,000 起，架构设计、执行统筹、成功费三档面谈；设计美国或新加坡上市主体、资产注入、统筹 PCAOB 审计与跨法域律师、推进纳斯达克注册；彤鼎只做资本市场顾问，不出资、不募资、不担任项目方，不承诺上市结果或任何收益
+- [上市预备期陪跑](https://tdgroup.hk/pre-ipo-program.html): 付费《上市路线图》 + 12-24个月四阶段陪跑,按里程碑收费,不承诺结果
+- [初创公司资本服务 Startup Program](https://tdgroup.hk/startup-program.html): 面向初创与早期公司的四档服务——一对一资本咨询 2,800 元、融资条款审阅 6,800 元、股权架构方案 6,800 元、初创资本架构落地 68,000 元起；费用逐级抵扣，最终可抵上市路线图；不承诺融资结果，持牌业务由持牌合作机构承做
+- [海外能源资产上市 Overseas Asset Listing](https://tdgroup.hk/overseas-asset-listing.html): 面向在东南亚持有已并网或已中标光伏、储能电站的资产持有人——电站上市路线图 USD 5,000 起，架构设计、执行统筹、成功费三档面谈；设计美国或新加坡上市主体、资产注入、统筹 PCAOB 审计与跨法域律师、推进纳斯达克注册；彤鼎只做资本市场顾问，不出资、不募资、不担任项目方，不承诺上市结果或任何收益
 - [初创融资准备度自测 Startup Financing Checkup](https://tdgroup.hk/startup-financing-checkup.html): 八道题三分钟，从业务阶段、股权结构、材料完备度、财务规范四个维度判断现在该不该启动融资、缺哪几件材料、预计走多久；浏览器本地完成，不收集数据
 - [创始人股权健康度自测 Founder Equity Checkup](https://tdgroup.hk/founder-equity-checkup.html): 七道题三分钟，从分配方式、成熟机制、代持、期权池、婚姻安排、知识产权归属、出资实缴七个维度查出未来融资与上市申报会被卡住的股权隐患，硬伤/需整改/健康三级排序；浏览器本地完成，不收集数据
 - [关于 About](https://tdgroup.hk/about.html): 公司介绍、创始人廖启捷、已上市案例、角色与合规边界
