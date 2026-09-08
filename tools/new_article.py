@@ -159,6 +159,13 @@ def parse(path):
     if meta['分类'] not in CAT_LABELS:
         die('分类「%s」不在 library.html 的八大分类中。可选：%s'
             % (meta['分类'], '、'.join(CAT_LABELS)))
+    # 栏目 写了就必须与分类对得上。2026-08-15 查出 4 篇官网页顶着「融资执行 FINANCING」
+    # 上线(正确是「融资条款 FINANCING」),病根是下面那句 setdefault 只兜底、不校验:
+    # 头部写错了它照抄,页面正常、闸全绿、sitemap 正常,零告警。分类那一行有硬校验,这一行没有。
+    if meta.get('栏目') and meta['栏目'].strip() != CAT_LABELS[meta['分类']]:
+        die('栏目「%s」与分类「%s」对不上，应为「%s」。'
+            '（要么改对，要么删掉它让脚本按分类自己填）'
+            % (meta['栏目'], meta['分类'], CAT_LABELS[meta['分类']]))
     if not re.match(r'^[a-z0-9-]+$', meta['slug']):
         die('slug 只能用小写字母、数字与短横线，当前为「%s」' % meta['slug'])
 
