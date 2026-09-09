@@ -271,11 +271,12 @@ table.std td a{color:#8a6f36;text-decoration:none;border-bottom:1px solid rgba(1
 <div class="tbw"><table class="std">
 <thead><tr><th>标准</th><th>核心指标</th><th>公众持股市值</th></tr></thead>
 <tbody>
-<tr><td class="k">净利润标准</td><td>最近一个财年（或近三年中的两年）持续经营净利润 <b>≥ 75 万美元</b></td><td>≥ 500 万美元</td></tr>
+<tr><td class="k">净利润标准</td><td>最近一个财年（或近三年中的两年）持续经营净利润 <b>≥ 75 万美元</b></td><td>≥ 1500 万美元</td></tr>
 <tr><td class="k">股东权益标准</td><td>股东权益 <b>≥ 500 万美元</b></td><td>≥ 1500 万美元</td></tr>
 <tr><td class="k">市值标准</td><td>上市证券市值 <b>≥ 5000 万美元</b></td><td>≥ 1500 万美元</td></tr>
 </tbody></table></div>
 <p class="tbln">共同条件：每股价格 ≥ 4 美元 · 公众股东 ≥ 300 名 · 做市商 ≥ 3 家。<a href="articles/nasdaq-listing-standards.html">纳斯达克三层市场与上市标准 →</a></p>
+<p class="tbln">公众持股市值这一列三套统一为 1500 万美元，自 2026 年 1 月 17 日生效（净利润标准此前为 500 万美元，网络上仍可见旧数）。换句话说，75 万美元净利润决定的是有没有资格递申请，1500 万美元决定的是这次发行要卖多大规模，两个数要一起看。</p>
 
 <div class="alertbox">
   <b>2026 年 5 月 14 日起的新规，可能比上面三套标准更卡人</b>
@@ -419,7 +420,7 @@ document.addEventListener('DOMContentLoaded',function(){
   var RULES=[
     {id:'ncm',name:'纳斯达克 · 资本市场层',en:'NASDAQ CAPITAL MARKET',ccy:'usd',
      opts:[
-      {n:'净利润标准',c:[['net',75,'净利润'],['flt',500,'公众持股市值']]},
+      {n:'净利润标准',c:[['net',75,'净利润'],['flt',1500,'公众持股市值']]},
       {n:'股东权益标准',c:[['eq',500,'股东权益'],['flt',1500,'公众持股市值']]},
       {n:'市值标准',c:[['mcap',5000,'上市证券市值'],['flt',1500,'公众持股市值']]}],
      gate:['flt',2500,'公众流通市值（2026-5-14 新规）'],
