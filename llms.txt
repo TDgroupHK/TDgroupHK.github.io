@@ -248,7 +248,6 @@ AI 落地自测十道题，看清你公司哪三个岗位先上 AI
 - [上市第一年十个坑](https://tdgroup.hk/articles/first-year-listed.html)
 - [做空攻击防御](https://tdgroup.hk/articles/short-attack-defense.html)
 - [市值管理的合规边界](https://tdgroup.hk/articles/market-cap-compliance.html)
-- [市值管理全攻略](https://tdgroup.hk/articles/market-cap-playbook.html)
 - [纳斯达克退市风险](https://tdgroup.hk/articles/nasdaq-delisting-risk.html)
 - [集体诉讼与D&O保险](https://tdgroup.hk/articles/class-action-do.html)
 - [上市公司股票回购](https://tdgroup.hk/articles/buyback.html)
