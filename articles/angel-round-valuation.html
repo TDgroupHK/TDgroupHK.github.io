@@ -1,24 +1,24 @@
 <!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的 | 彤鼎集团知识文库</title>
+<title>天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的 | TD GROUP 彤鼎知识文库</title>
 <meta name="description" content="早期公司没有利润与稳定现金流，天使轮估值究竟按什么定？本文拆解三种实务定价锚（可比交易、投资人目标持股比例倒推、里程碑折现），讲清投前与投后估值的换算差异、期权池放在投前还是投后对创始人稀释的具体影响，说明估值定太高如何在下一轮触发完全棘轮或加权平均反稀释条款，并给出天使轮 10%-20%、A 轮 15%-25% 的常见出让区间与连续三轮融资后创始人团队持股的推演算例。">
 <link rel="canonical" href="https://tdgroup.hk/articles/angel-round-valuation.html">
 <meta name="theme-color" content="#0a0908">
 <link rel="icon" href="/favicon.ico" sizes="any">
 <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="alternate" type="application/rss+xml" title="彤鼎集团知识文库" href="https://tdgroup.hk/feed.xml">
-<meta property="og:site_name" content="彤鼎集团 TD Group">
+<link rel="alternate" type="application/rss+xml" title="TD GROUP 彤鼎知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="TD GROUP 彤鼎">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的 | 彤鼎集团知识文库">
+<meta property="og:title" content="天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的 | TD GROUP 彤鼎知识文库">
 <meta property="og:description" content="早期公司没有利润与稳定现金流，天使轮估值究竟按什么定？本文拆解三种实务定价锚（可比交易、投资人目标持股比例倒推、里程碑折现），讲清投前与投后估值的换算差异、期权池放在投前还是投后对创始人稀释的具体影响，说明估值定太高如何在下一轮触发完全棘轮或加权平均反稀释条款，并给出天使轮 10%-20%、A 轮 15%-25% 的常见出让区间与连续三轮融资后创始人团队持股的推演算例。">
 <meta property="og:url" content="https://tdgroup.hk/articles/angel-round-valuation.html">
 <meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的 | 彤鼎集团知识文库">
+<meta name="twitter:title" content="天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的 | TD GROUP 彤鼎知识文库">
 <meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
 <style>
 :root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
@@ -42,8 +42,8 @@ nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
 .nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
 .logo{display:flex;align-items:center;gap:14px;}
 .logo .mark-img{height:58px;width:auto;display:block;}
-.logo .nm{color:#fff;font-weight:700;letter-spacing:4px;font-size:17px;}
-.logo .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;font-weight:400;font-size:10.5px;letter-spacing:3px;margin-top:2px;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:3px;font-size:17px;font-family:Georgia,"Times New Roman",serif;}
+.logo .nm small{display:block;color:var(--gold);font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:400;font-size:11px;letter-spacing:9px;margin-top:3px;}
 .menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
 .menu a{position:relative;padding:4px 0;}
 .menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
@@ -181,7 +181,7 @@ body.paper nav{background:rgba(10,9,8,.96);}
 
 @media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
 </style>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的","inLanguage":"zh-CN","abstract":"Early-stage companies have neither profits nor stable cash flows, so an angel-round valuation is negotiated rather than calculated. This article sets out the three pricing anchors used in practice, the pre-money versus post-money distinction and the option pool shuffle, how an inflated price triggers anti-dilution provisions in a later down round, and how much equity a founder can give away in the first round while keeping control after two or three rounds. All figures are illustrative ranges from primary-market practice and do not constitute investment advice.","author":{"@type":"Organization","name":"彤鼎集团（香港）有限公司"},"publisher":{"@type":"Organization","name":"彤鼎集团（香港）有限公司","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/angel-round-valuation.html"},"datePublished":"2026-08-08","dateModified":"2026-08-08","image":"https://tdgroup.hk/img/og-card.jpg","description":"早期公司没有利润与稳定现金流，天使轮估值究竟按什么定？本文拆解三种实务定价锚（可比交易、投资人目标持股比例倒推、里程碑折现），讲清投前与投后估值的换算差异、期权池放在投前还是投后对创始人稀释的具体影响，说明估值定太高如何在下一轮触发完全棘轮或加权平均反稀释条款，并给出天使轮 10%-20%、A 轮 15%-25% 的常见出让区间与连续三轮融资后创始人团队持股的推演算例。"}</script><!-- Google tag (gtag.js) -->
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的","inLanguage":"zh-CN","abstract":"Early-stage companies have neither profits nor stable cash flows, so an angel-round valuation is negotiated rather than calculated. This article sets out the three pricing anchors used in practice, the pre-money versus post-money distinction and the option pool shuffle, how an inflated price triggers anti-dilution provisions in a later down round, and how much equity a founder can give away in the first round while keeping control after two or three rounds. All figures are illustrative ranges from primary-market practice and do not constitute investment advice.","author":{"@type":"Organization","name":"TD GROUP 彤鼎"},"publisher":{"@type":"Organization","name":"TD GROUP 彤鼎","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/angel-round-valuation.html"},"datePublished":"2026-08-08","dateModified":"2026-08-08","image":"https://tdgroup.hk/img/og-card.jpg","description":"早期公司没有利润与稳定现金流，天使轮估值究竟按什么定？本文拆解三种实务定价锚（可比交易、投资人目标持股比例倒推、里程碑折现），讲清投前与投后估值的换算差异、期权池放在投前还是投后对创始人稀释的具体影响，说明估值定太高如何在下一轮触发完全棘轮或加权平均反稀释条款，并给出天使轮 10%-20%、A 轮 15%-25% 的常见出让区间与连续三轮融资后创始人团队持股的推演算例。"}</script><!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
 <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
 <!-- Baidu Tongji -->
@@ -189,14 +189,14 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <script defer src="../js/assistant.js"></script>
 </head>
 <body class="paper"><nav><div class="nav-in">
-<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="彤鼎集团 TD Group"><span class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></span></a>
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="TD GROUP 彤鼎"><span class="nm">TD GROUP<small>彤鼎</small></span></a>
 <div class="menu"><a href="/">首页 Home</a><a href="../about.html">关于 About</a><a href="../club.html">俱乐部 Club</a><a href="../library.html">文库 Library</a><a href="../faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
 </div></nav>
 <div class="progress"></div>
 <div class="art-head"><div class="wrap">
 <div class="cat">初创融资 EARLY STAGE</div><h1>天使轮估值怎么谈：早期公司没有利润，估值是怎么定出来的</h1>
 <div class="sub">定价锚、投前投后换算、期权池归属与反稀释触发——写给初创创始人的早期估值实务</div><div class="en">Early-stage companies have neither profits nor stable cash flows, so an angel-round valuation is negotiated rather than calculated. This article sets out the three pricing anchors used in practice, the pre-money versus post-money distinction and the option pool shuffle, how an inflated price triggers anti-dilution provisions in a later down round, and how much equity a founder can give away in the first round while keeping control after two or three rounds. All figures are illustrative ranges from primary-market practice and do not constitute investment advice.</div>
-<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">彤鼎集团团队</a></div></div></div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">TD GROUP 彤鼎团队</a></div></div></div>
 <article>
 <div class="answer">天使轮估值是指公司在尚无稳定利润与现金流的阶段，由创始人与投资人就本轮交易协商达成的成交价格，而非对企业内在价值的会计计量。早期定价不走市盈率或现金流折现的路径，实务中主要依赖三个锚：同赛道同轮次的可比交易价格、投资人目标持股比例倒推、下一轮里程碑折现。其中倒推法使用最普遍——机构天使通常要求本轮取得 15%-20% 的股权，融资额除以该比例即得投后估值；例如融资 1000 万元、让出 20%，则投后估值 5000 万元、投前 4000 万元。创始人真正要盯住的不是估值数字本身，而是三件事：投前与投后的口径差、期权池计入投前还是投后、下一轮价格上不去时反稀释条款如何反噬。本质上，首轮估值定的不是身价，而是此后两到三轮的稀释路径与控制权余量。</div>
 <h2>一、早期估值不是算出来的：三种真正在用的定价锚</h2>
@@ -234,10 +234,10 @@ body.paper nav{background:rgba(10,9,8,.96);}
 <p>早期融资的复杂性不在估值本身，而在估值、期权池、反稀释、清算优先权、董事会席位彼此咬合——单看一条都能接受，合在一起就可能在两轮后改变公司的归属。彤鼎集团（香港）有限公司为企业管理咨询机构，在提供架构设计与融资策划服务时，通常建议创始人把整套条款放在同一张纸上做联动测算，而非逐条谈判；涉及证券发行、承销等持牌业务，由持牌合作机构承做。本质上，首轮估值谈的是往后三年的股权结构，把它当成一次报价来谈，代价往往在两轮之后才显现。</p>
 </article>
 <div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="cofounder-equity-split.html" style="color:#6b5426;font-weight:700;">合伙人股权怎么分：初创公司创始团队的股权分配方法与三条不可逆红线</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="first-financing-checklist.html" style="color:#6b5426;font-weight:700;">第一次融资要准备什么：从见投资人到钱进账的完整清单与时间表</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="startup-offshore-timing.html" style="color:#6b5426;font-weight:700;">初创公司什么时候搭境外架构：早搭三年与晚搭三年，差的不只是钱</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="startup-financial-hygiene.html" style="color:#6b5426;font-weight:700;">初创公司的财务规范从第一天做什么：三年后审计追溯，哪些账补不回来</a></li></ul></div><div class="brandbox">
-<h3>关于彤鼎集团与华尔街彤鼎俱乐部</h3>
+<h3>关于 TD GROUP 彤鼎与华尔街彤鼎俱乐部</h3>
 <p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
 <p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
-<div class="disc">本文由彤鼎集团团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+<div class="disc">本文由 TD GROUP 彤鼎团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
 </div></div>
 <footer><div class="wrap"><div class="f-grid">
 <div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>

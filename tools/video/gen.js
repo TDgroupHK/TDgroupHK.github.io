@@ -101,8 +101,8 @@ body::before{content:"";position:absolute;inset:0;background-image:
 .eyebrow::before{content:"";width:74px;height:2px;background:var(--gold);}
 .eyebrow .en{letter-spacing:5px;color:var(--mute);font-size:26px;}
 .brandbar{margin-top:auto;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:44px;}
-.brandbar .nm{color:#d4c5a0;letter-spacing:10px;font-size:31px;font-weight:700;}
-.brandbar .nm small{display:block;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:5px;font-size:21px;margin-top:10px;font-weight:400;}
+.brandbar .nm{color:#d4c5a0;letter-spacing:7px;font-size:31px;font-weight:700;font-family:Georgia,"Times New Roman",serif;}
+.brandbar .nm small{display:block;color:var(--gold);letter-spacing:16px;font-size:22px;margin-top:10px;font-weight:400;}
 .brandbar img{height:104px;opacity:.96;}
 h1{font-family:"Noto Serif SC",serif;font-weight:900;color:#fff;font-size:96px;line-height:1.36;letter-spacing:4px;white-space:pre-line;}
 h1 em{color:var(--gold-hi);font-style:normal;}
@@ -130,14 +130,14 @@ function sceneHtml(v, s) {
     inner = `<div class="stage">
       <div class="eyebrow">${s.eyebrow}<span class="en">EARLY STAGE Nº${v.ep}</span></div>
       <div style="flex:1;display:flex;flex-direction:column;justify-content:center;margin-top:-60px;"><h1>${s.h}</h1><div class="sub">${s.sub}</div></div>
-      <div class="brandbar"><div class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></div><img src="../../assets/td-crest-gold.png"></div>
+      <div class="brandbar"><div class="nm">TD GROUP<small>彤鼎</small></div><img src="../../assets/td-crest-gold.png"></div>
     </div>`;
   } else if (s.type === 'point') {
     inner = `<div class="ep">${v.ep}</div><div class="stage">
       <div class="eyebrow">${v.title}<span class="en">EARLY STAGE</span></div>
       <div style="flex:1;display:flex;flex-direction:column;justify-content:center;margin-top:-40px;"><div class="bigno">${s.no}</div><h2>${s.h}</h2>
       <div class="lines">${s.lines.map(l => `<div class="ln">${l}</div>`).join('')}</div></div>
-      <div class="brandbar"><div class="nm">彤鼎集團<small>TD GROUP · HONG KONG</small></div><img src="../../assets/td-crest-gold.png"></div>
+      <div class="brandbar"><div class="nm">TD GROUP<small>彤鼎</small></div><img src="../../assets/td-crest-gold.png"></div>
     </div>`;
   } else {
     inner = `<div class="tailwrap">

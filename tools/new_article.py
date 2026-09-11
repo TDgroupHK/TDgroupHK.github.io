@@ -238,7 +238,7 @@ def build_html(meta, secs, date, related):
     tpl = io.open(TEMPLATE, encoding='utf-8').read()
     slug = meta['slug']
     url = '%s/articles/%s.html' % (SITE, slug)
-    title_full = '%s | 彤鼎集团知识文库' % meta['标题']
+    title_full = '%s | TD GROUP 彤鼎知识文库' % meta['标题']
 
     s = tpl
     s = re.sub(r'<title>.*?</title>', '<title>%s</title>' % esc(title_full), s, count=1, flags=re.S)

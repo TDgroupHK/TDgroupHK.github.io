@@ -38,7 +38,7 @@ DATE_TPL = ('<div class="pubmeta" style="margin-top:18px;padding-top:14px;'
             'color:#8f8468;letter-spacing:.4px;">'
             '发布于 <time datetime="%s">%s</time>%s'
             '　·　作者 <a href="../founder.html" rel="author" '
-            'style="color:var(--gold-dim);">彤鼎集团团队</a>'
+            'style="color:var(--gold-dim);">TD GROUP 彤鼎团队</a>'
             '</div>')
 
 
