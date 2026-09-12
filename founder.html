@@ -44,9 +44,10 @@ nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
 background:linear-gradient(180deg,rgba(8,7,6,.80) 0%,rgba(8,7,6,.34) 44%,rgba(8,7,6,.66) 100%),url('img/hero-skyline.jpg') center/cover no-repeat;}
 .eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:6px;font-size:13px;margin-bottom:34px;}
 .eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
-.hero h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-size:58px;line-height:1.3;color:#fff;font-weight:600;letter-spacing:8px;}
+.hero h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-size:62px;line-height:1.25;color:#fff;font-weight:600;letter-spacing:10px;}
 .hero h1 span{display:block;}
 .hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:22px;max-width:720px;color:#8f8468;font-family:Georgia,serif;font-style:italic;font-size:14px;letter-spacing:1px;line-height:1.8;}
 .hero .lede{margin-top:30px;color:#d6c9a8;font-size:16px;letter-spacing:1.5px;line-height:1.95;max-width:600px;font-weight:300;}
 .hero .loc{margin-top:26px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:5px;font-size:13.5px;}
 .hero-cta{margin-top:42px;display:flex;gap:18px;flex-wrap:wrap;}
@@ -63,13 +64,13 @@ background:linear-gradient(180deg,rgba(8,7,6,.80) 0%,rgba(8,7,6,.34) 44%,rgba(8,
 .fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
 
 /* ---------- sections ---------- */
-section{padding:100px 0;position:relative;}
+section{padding:120px 0;position:relative;}
 .sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
-.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:60px;flex-wrap:wrap;}
 .sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
-h2.sec{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-size:31px;color:#fff;letter-spacing:3px;font-weight:600;}
-.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
-.sec-intro{color:#b3a88b;max-width:760px;font-size:15.5px;margin:-30px 0 44px;line-height:1.95;}
+h2.sec{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-size:36px;color:#fff;letter-spacing:4px;font-weight:600;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:8px;}
+.sec-intro{color:#b3a88b;max-width:780px;font-size:17px;margin:-32px 0 48px;line-height:1.95;}
 
 /* ---------- track record ---------- */
 .marquee{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;margin-bottom:22px;}
@@ -107,14 +108,15 @@ h2.sec{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;fon
 
 /* services */
 .grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
-.biz{background:var(--night);padding:36px 28px;position:relative;transition:background .35s;}
+.grid8.g3{grid-template-columns:repeat(3,1fr);}
+.biz{background:var(--night);padding:38px 32px;position:relative;transition:background .35s;}
 .biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
 .biz:hover{background:#181510;}
 .biz:hover::before{width:100%;}
 .biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
-.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz b{color:#fff;font-size:20px;display:block;margin-bottom:14px;letter-spacing:1px;}
 .biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
-.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+.biz p{color:#a99d80;font-size:14px;line-height:1.85;}
 
 /* methodology timeline */
 .tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
@@ -154,22 +156,22 @@ footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;c
 .f-mail a:hover{border-bottom-color:var(--gold);}
 .f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
 
-@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr 1fr;}.tl{grid-template-columns:1fr 1fr;}.marquee{grid-template-columns:1fr 1fr;}.tombs{grid-template-columns:1fr 1fr;}.hero h1{font-size:36px;letter-spacing:4px;}.menu{gap:16px;font-size:13px;}.sec-no{font-size:44px;}}
-@media(max-width:640px){.grid8,.alist,.tl,.marquee,.tombs{grid-template-columns:1fr;}.hero h1{font-size:30px;letter-spacing:2px;}.wrap{padding:0 20px;}section{padding:66px 0;}.sec-head{margin-bottom:36px;gap:14px;}.refin{flex-direction:column;align-items:flex-start;gap:16px;}.btn{padding:14px 26px;font-size:13.5px;}.logo .mark-img{height:46px;}}
+@media(max-width:960px){.grid8,.grid8.g3{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr 1fr;}.tl{grid-template-columns:1fr 1fr;}.marquee{grid-template-columns:1fr 1fr;}.tombs{grid-template-columns:1fr 1fr;}.hero h1{font-size:42px;letter-spacing:6px;}h2.sec{font-size:29px;letter-spacing:3px;}section{padding:88px 0;}.menu{gap:16px;font-size:13px;}.sec-no{font-size:44px;}}
+@media(max-width:640px){.grid8,.grid8.g3,.alist,.tl,.marquee,.tombs{grid-template-columns:1fr;}.hero h1{font-size:34px;letter-spacing:2px;}h2.sec{font-size:25px;letter-spacing:2px;}.wrap{padding:0 20px;}section{padding:72px 0;}.sec-head{margin-bottom:38px;gap:14px;}.sec-intro{font-size:15.5px;margin:-20px 0 34px;}.biz{padding:28px 24px;}.refin{flex-direction:column;align-items:flex-start;gap:16px;}.btn{padding:14px 26px;font-size:13.5px;}.logo .mark-img{height:46px;}}
 
 /* ---------- 创始人页 ---------- */
-.tbw{overflow-x:auto;border:1px solid rgba(26,23,18,.14);}
-table.std{border-collapse:collapse;width:100%;min-width:560px;font-size:14px;background:#fff;}
-table.std th{background:#f3efe6;color:#6b6151;font-size:11.5px;letter-spacing:1px;font-weight:600;
-  text-align:left;padding:11px 14px;white-space:nowrap;}
-table.std td{padding:12px 14px;border-top:1px solid rgba(26,23,18,.1);color:#3a352b;
+.tbw{overflow-x:auto;border:1px solid var(--line);background:rgba(18,16,13,.5);}
+table.std{border-collapse:collapse;width:100%;min-width:560px;font-size:14.5px;}
+table.std th{background:rgba(201,169,98,.07);color:var(--gold);font-size:11.5px;letter-spacing:2px;font-weight:600;
+  text-align:left;padding:16px 26px;white-space:nowrap;font-family:Georgia,serif;font-style:italic;}
+table.std td{padding:20px 26px;border-top:1px solid rgba(201,169,98,.14);color:#a99d80;
   line-height:2;vertical-align:top;}
-table.std td.k{font-weight:600;color:#1a1712;white-space:nowrap;}
-table.std td a{color:#8a6f36;text-decoration:none;border-bottom:1px solid rgba(138,111,54,.3);}
-table.std td a:hover{border-bottom-color:#8a6f36;}
+table.std td.k{font-weight:700;color:#fff;white-space:nowrap;font-size:15.5px;letter-spacing:1px;}
+table.std td a{color:#c4b791;text-decoration:none;border-bottom:1px solid rgba(201,169,98,.28);}
+table.std td a:hover{color:var(--gold-hi);border-bottom-color:var(--gold);}
 .chan{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:rgba(201,169,98,.18);
   border:1px solid rgba(201,169,98,.18);margin-top:8px;}
-.ch{display:block;background:#141210;padding:22px 20px;text-decoration:none;transition:background .3s;}
+.ch{display:block;background:#141210;padding:30px 28px;text-decoration:none;transition:background .3s;}
 .ch:hover{background:#1a1714;}
 .ch b{display:block;color:#c9a962;font-size:15px;font-weight:600;margin-bottom:5px;}
 .ch span{color:#7d745c;font-size:12.5px;line-height:1.6;}
@@ -182,26 +184,46 @@ table.std td a:hover{border-bottom-color:#8a6f36;}
 <!-- Baidu Tongji -->
 <script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
 <script defer src="js/assistant.js"></script>
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://tdgroup.hk/founder.html#person","name":"廖启捷","alternateName":["Liao Qijie","ESON廖生","彤鼎ESON廖生"],"url":"https://tdgroup.hk/founder.html","jobTitle":"董事局主席 Chairman of the Board","description":"廖启捷，彤鼎集团（香港）有限公司董事局主席，华尔街彤鼎俱乐部创始人。曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。已主导9家企业完成纳斯达克挂牌辅导，项目覆盖教育、新能源、建材、生物医药、消费等行业。","worksFor":{"@type":"Organization","name":"TD GROUP 彤鼎","alternateName":"TD Group (Hong Kong) Limited","url":"https://tdgroup.hk"},"founderOf":{"@type":"Organization","name":"华尔街彤鼎俱乐部","url":"https://tdgroup.hk/club.html"},"knowsAbout":["中国企业境外上市","赴美上市","纳斯达克上市","新加坡路径纳斯达克上市","香港上市","香港18A生物科技上市","香港18C特专科技上市","SPAC上市","VIE架构","红筹架构","BVI与开曼架构","37号文外汇登记","ODI境外投资备案","中国证监会境外上市备案","PCAOB审计","F-1招股书","SEC问询应对","承销商选择","IPO定价","Pre-IPO融资","企业估值","对赌协议","创始人控制权保护","并购重组与资产注入","做空防御","退市风险","家族办公室","家族传承与接班","股权激励","员工持股平台","跨境资本运作","上市路径规划"],"knowsLanguage":["zh-CN","en"],"email":"liaoqijie@tdgroup.hk","sameAs":["https://www.zhihu.com/people/tdgroup","https://weibo.com/tdgroup","https://author.baidu.com/home?app_id=1739587051846443","https://www.toutiao.com/c/user/token/MS4wLjABAAAAXwMGwMtHLJ4qNcJLdKQ2qnxEYPxiv67FwYQv4zZivMdi-oCL7LeYbdVfMcmpewWd/"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@id":"https://tdgroup.hk/founder.html#person"},"url":"https://tdgroup.hk/founder.html","inLanguage":"zh-CN","name":"廖启捷 — 彤鼎集团董事局主席 · 华尔街彤鼎俱乐部创始人 | TD GROUP 彤鼎","description":"廖启捷，彤鼎集团（香港）有限公司董事局主席，华尔街彤鼎俱乐部创始人。曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。已主导 9 家企业完成纳斯达克挂牌辅导，项目覆盖教育、新能源、建材、生物医药、消费等行业。专业领域涵盖上市路径规划、跨境架构设计、境内外合规、上市执行、融资条款与挂牌后治理。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://tdgroup.hk/"},{"@type":"ListItem","position":2,"name":"创始人 廖启捷","item":"https://tdgroup.hk/founder.html"}]}</script></head>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","@id":"https://tdgroup.hk/founder.html#person","name":"廖启捷","alternateName":["Liao Qijie","ESON廖生","彤鼎ESON廖生"],"url":"https://tdgroup.hk/founder.html","jobTitle":"董事局主席 Chairman of the Board","description":"廖启捷，彤鼎集团（香港）有限公司董事局主席，华尔街彤鼎俱乐部创始人。曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。已主导9家企业完成纳斯达克挂牌辅导，项目覆盖教育、新能源、建材、生物医药、消费等行业。","worksFor":{"@type":"Organization","name":"TD GROUP 彤鼎","alternateName":"TD Group (Hong Kong) Limited","url":"https://tdgroup.hk"},"founderOf":{"@type":"Organization","name":"华尔街彤鼎俱乐部","url":"https://tdgroup.hk/club.html"},"knowsAbout":["中国企业境外上市","赴美上市","纳斯达克上市","新加坡路径纳斯达克上市","香港上市","香港18A生物科技上市","香港18C特专科技上市","SPAC上市","VIE架构","红筹架构","BVI与开曼架构","37号文外汇登记","ODI境外投资备案","中国证监会境外上市备案","PCAOB审计","F-1招股书","SEC问询应对","承销商选择","IPO定价","Pre-IPO融资","企业估值","对赌协议","创始人控制权保护","并购重组与资产注入","做空防御","退市风险","家族办公室","家族传承与接班","股权激励","员工持股平台","跨境资本运作","上市路径规划"],"knowsLanguage":["zh-CN","en"],"email":"liaoqijie@tdgroup.hk","sameAs":["https://www.zhihu.com/people/tdgroup","https://weibo.com/tdgroup","https://author.baidu.com/home?app_id=1739587051846443","https://www.toutiao.com/c/user/token/MS4wLjABAAAAXwMGwMtHLJ4qNcJLdKQ2qnxEYPxiv67FwYQv4zZivMdi-oCL7LeYbdVfMcmpewWd/"]}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@id":"https://tdgroup.hk/founder.html#person"},"url":"https://tdgroup.hk/founder.html","inLanguage":"zh-CN","name":"廖启捷 — 彤鼎集团董事局主席 · 华尔街彤鼎俱乐部创始人 | TD GROUP 彤鼎","description":"廖启捷，彤鼎集团（香港）有限公司董事局主席，华尔街彤鼎俱乐部创始人。曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。已主导 9 家企业完成纳斯达克挂牌辅导，项目覆盖教育、新能源、建材、生物医药、消费等行业。专业领域涵盖上市路径规划、跨境架构设计、境内外合规、上市执行、融资条款与挂牌后治理。"}</script><script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://tdgroup.hk/"},{"@type":"ListItem","position":2,"name":"创始人 廖启捷","item":"https://tdgroup.hk/founder.html"}]}</script><style id="td-nav">
+.nav-in{flex-wrap:nowrap;gap:24px}
+.menu{gap:26px;align-items:center}
+.menu a{white-space:nowrap}
+.logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+.logo .mark-img{height:58px;width:auto;display:block}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:3px;font-size:17px;font-family:Georgia,"Times New Roman",serif;line-height:1.1;white-space:nowrap}
+.logo .nm small{display:block;color:#c9a962;font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:400;font-size:11px;letter-spacing:9px;margin-top:3px}
+.mdd{position:relative}
+.mdd>a::before{content:"";position:absolute;left:0;right:0;bottom:-16px;height:16px}
+.mdd>a span.ar{font-size:10px;opacity:.7;margin-left:4px}
+.mdd-p{position:absolute;top:100%;left:-22px;padding-top:12px;display:none;z-index:200}
+.mdd-p>div{background:rgba(10,9,8,.97);border:1px solid rgba(201,169,98,.28);padding:10px 0;min-width:216px;box-shadow:0 18px 40px rgba(0,0,0,.45)}
+.mdd:hover .mdd-p,.mdd:focus-within .mdd-p{display:block}
+.mdd-p a{display:block;padding:11px 24px;font-size:14px;letter-spacing:1px;color:#c6bda6}
+.mdd-p a:hover{color:#e8cf96;background:rgba(201,169,98,.08)}
+.mdd-p a::after{display:none}
+@media(max-width:960px){.nav-in{flex-wrap:wrap;gap:12px 16px}.menu{flex-wrap:wrap;gap:6px 18px;font-size:13px}.mdd-p{display:none!important}.mdd>a::before{display:none}}
+@media(max-width:640px){.logo .mark-img{height:46px}.logo .nm{font-size:15px}.logo .nm small{letter-spacing:6px}.menu{gap:4px 14px;font-size:12.5px}}
+</style>
+</head>
 <body><nav><div class="nav-in">
 <a class="logo" href="/"><img class="mark-img" src="img/td-crest-gold.png" alt="TD GROUP 彤鼎"><span class="nm">TD GROUP<small>彤鼎</small></span></a>
-<div class="menu"><a href="/">首页 Home</a><a href="about.html">关于 About</a><a href="club.html">俱乐部 Club</a><a href="legacy.html">传承 Legacy</a><a href="library.html">文库 Library</a><a href="faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
+<div class="menu"><a href="/">首页 Home</a><a href="about.html">关于 About</a><div class="mdd"><a href="/#services">服务 Services<span class="ar">▾</span></a><div class="mdd-p"><div><a href="pre-ipo-program.html">上市预备期</a><a href="startup-program.html">初创融资服务</a><a href="ai-transformation.html">AI 落地与转型</a><a href="asset-platform.html">资产型上市平台</a><a href="overseas-asset-listing.html">海外资产上市</a><a href="hk-ipo-checkup.html">上市可行性自测</a><a href="listing-standards-check.html">上市门槛速查</a></div></div></div><a href="club.html">俱乐部 Club</a><a href="legacy.html">传承 Legacy</a><a href="library.html">文库 Library</a><a href="faq.html">问答 FAQ</a><a href="mailto:liaoqijie@tdgroup.hk">联系 Contact</a></div>
 </div></nav>
 <div class="hero" style="min-height:62vh;"><div class="hero-frame"></div><div class="wrap">
 <div class="eyebrow">创始人 FOUNDER</div>
 <h1>廖启捷</h1>
-<div class="en">Liao Qijie — Chairman of the Board, TD Group (Hong Kong) Limited; Founder, Wall Street TD Club. Nine Nasdaq listing engagements led, across education, new energy, building materials, biopharma and consumer sectors.</div>
-<p style="color:#b3a88b;margin-top:22px;max-width:780px;font-size:16.5px;">彤鼎集团（香港）有限公司董事局主席 · 华尔街彤鼎俱乐部创始人</p>
+<p style="color:#d6c9a8;margin-top:26px;max-width:780px;font-size:18px;letter-spacing:1.5px;">彤鼎集团（香港）有限公司董事局主席 · 华尔街彤鼎俱乐部创始人</p>
+<div class="en">Liao Qijie · Chairman of the Board, TD Group (Hong Kong) Limited · Founder, Wall Street TD Club</div>
 </div></div>
 
 <section class="sec-ink"><div class="wrap">
 <div class="sec-head rv"><div class="sec-no">01</div><div><h2 class="sec">履历</h2><div class="sec-en">BACKGROUND</div></div></div>
 <p class="sec-intro">曾任职于加拿大券商机构，拥有多年北美资本市场交易与投资银行实务经验，并担任港、沪、深三地上市辅导机构的创始合伙人。已主导 9 家企业完成纳斯达克挂牌辅导，项目覆盖教育、新能源、建材、生物医药、消费等行业。</p>
 
-<div class="grid8" style="grid-template-columns:repeat(3,1fr);">
-<div class="biz rv"><i>01</i><b>九次上市实操</b><span>NINE ENGAGEMENTS</span><p>主导或深度参与九个完整境外及 A 股上市案例，全流程走通——从架构搭建、财务规范、审计申报，到问询答复、定价发行与挂牌。</p></div>
-<div class="biz rv"><i>02</i><b>跨境资本实战</b><span>CROSS-BORDER CAPITAL</span><p>新加坡架构登陆纳斯达克、香港资本运作两条主路径。核心方法论为<a href="articles/singapore-path.html">新加坡路径纳斯达克上市</a>：以具有真实经营实质的新加坡主体作为上市载体，不适用中概股备案。</p></div>
-<div class="biz rv"><i>03</i><b>北美市场背景</b><span>NORTH AMERICA</span><p>加拿大券商机构任职经历，一线交易与投行实务经验。这段经历决定了看项目的角度——先看能不能过审、再看能不能卖得出去。</p></div>
+<div class="grid8 g3">
+<div class="biz rv"><i>01</i><b>九次上市实操</b><p>主导或深度参与九个完整境外及 A 股上市案例，从架构搭建到定价挂牌。</p></div>
+<div class="biz rv"><i>02</i><b>跨境资本实战</b><p>两条主路径：<a href="articles/singapore-path.html" style="color:var(--gold-dim);">新加坡路径纳斯达克上市</a>、香港资本运作。</p></div>
+<div class="biz rv"><i>03</i><b>北美市场背景</b><p>加拿大券商机构任职经历，一线交易与投行实务经验。</p></div>
 </div>
 
 <div class="compliance" style="margin-top:40px;">
@@ -210,9 +232,7 @@ table.std td a:hover{border-bottom-color:#8a6f36;}
 </div></section>
 
 <section><div class="wrap">
-<div class="sec-head rv"><div class="sec-no">02</div><div><h2 class="sec" style="color:#1a1712">专业领域</h2><div class="sec-en">AREAS OF PRACTICE</div></div></div>
-<p class="sec-intro" style="color:#5c5343">以下每一项都对应本站知识文库中的完整解读。这不是能力清单，是可以逐条对照验证的内容索引。</p>
-
+<div class="sec-head rv"><div class="sec-no">02</div><div><h2 class="sec">专业领域</h2><div class="sec-en">AREAS OF PRACTICE</div></div></div>
 <div class="tbw"><table class="std">
 <thead><tr><th>领域</th><th>具体涵盖</th></tr></thead>
 <tbody>
@@ -228,8 +248,6 @@ table.std td a:hover{border-bottom-color:#8a6f36;}
 
 <section class="sec-ink"><div class="wrap">
 <div class="sec-head rv"><div class="sec-no">03</div><div><h2 class="sec">公开表达</h2><div class="sec-en">WHERE TO FIND</div></div></div>
-<p class="sec-intro">除本站知识文库外，在以下平台持续输出境外上市与跨境资本运作的实务内容。</p>
-
 <div class="chan">
 <a class="ch" href="https://www.zhihu.com/people/tdgroup" rel="me noopener" target="_blank"><b>知乎</b><span>彤鼎ESON廖生</span></a>
 <a class="ch" href="https://weibo.com/tdgroup" rel="me noopener" target="_blank"><b>新浪微博</b><span>资助中小企上市-廖生ESON</span></a>
@@ -239,8 +257,6 @@ table.std td a:hover{border-bottom-color:#8a6f36;}
 
 <div class="hero-cta" style="margin-top:40px;">
 <a class="btn btn-solid" href="mailto:liaoqijie@tdgroup.hk?subject=%E5%92%A8%E8%AF%A2">邮件联系 CONTACT</a>
-<a class="btn btn-ghost" href="about.html">关于彤鼎集团 →</a>
-<a class="btn btn-ghost" href="club.html">华尔街彤鼎俱乐部 →</a>
 <a class="btn btn-ghost" href="library.html">知识文库 →</a>
 </div>
 
