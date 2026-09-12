@@ -88,6 +88,7 @@ python C:\TDGroupSEO\compliance_gate.py articles\<slug>.html --scope site
 - **退出码 1 = 拦下，不许 push**。修掉 block 项，或写入 `C:\TDGroupSEO\pending_state.md` 转人工。
 - `--scope site` 已豁免官网自有站允许的导流/联系方式/俱乐部招募；**荐股、收益承诺、市场操纵、绝对化用语官网同样禁**。
 - 词表在 `C:\TDGroupSEO\compliance_words.json`，与 `platform_rules.md` 第八节同步维护。
+- **「市值管理」讲概念放行（2026-09-12 廖总拍板）**：闸的 `concept_allow` 会把「合规边界 / 概念 / 是指 / 术语 / 制度 / 监管 / 证监会 / 禁止 / 处罚」这类语境降成 warn，所以 `library.html` / `glossary.html` 里讲概念的文章标题与术语释义不再拦；「彤鼎提供市值管理服务」这种第一方表述照拦。⛔ 别为了过闸把讲概念的句子改成第一方口吻。
 - 加这个闸的原因：本文件第三节第 5 条早就禁了"坐庄、拉盘"，但**没有任何东西执行它**，
   导致"操盘/做市值/撬动市值增量"在站上长期存在，2026-07-27 审计才发现。**光写规则不管用。**
 
