@@ -11,6 +11,133 @@
 <meta property="og:title" content="电商核定征收路线图 · 平台按季报送之后，电商的账怎么合规、还能不能核定 | TD GROUP 彤鼎">
 <meta property="og:description" content="先判断能不能核、在哪核，再由合作园区服务机构承做申请，最后把历史账衔接上。路线图 9,500 元起，不承诺核定结果，一切以主管税务机关认定为准。">
 <meta property="og:url" content="https://tdgroup.hk/ecommerce-tax-roadmap.html">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:3px;font-size:17px;font-family:Georgia,"Times New Roman",serif;}
+.logo .nm small{display:block;color:var(--gold);font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:400;font-size:11px;letter-spacing:9px;margin-top:3px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+.hero{min-height:74vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:linear-gradient(180deg,rgba(8,7,6,.82) 0%,rgba(8,7,6,.40) 44%,rgba(8,7,6,.70) 100%),url('img/hero-skyline.jpg') center/cover no-repeat;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:6px;font-size:13px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-size:52px;line-height:1.32;color:#fff;font-weight:600;letter-spacing:6px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:24px;color:#a99d80;font-family:Georgia,serif;font-style:italic;font-size:14.5px;line-height:1.85;max-width:720px;letter-spacing:.5px;}
+.hero-cta{margin-top:42px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+
+section{padding:118px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:60px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-size:35px;color:#fff;letter-spacing:3px;font-weight:600;line-height:1.4;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:8px;}
+.sec-intro{color:#b3a88b;max-width:860px;font-size:16px;margin:-32px 0 48px;line-height:1.95;}
+
+.half{display:inline-block;border:1px solid var(--gold);color:var(--gold-hi);font-size:12.5px;letter-spacing:3px;padding:5px 16px;margin-bottom:18px;font-family:Georgia,serif;font-style:italic;}
+
+.grid8{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--night);padding:38px 34px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* 服务与价目 */
+.prices{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;}
+.pr{border:1px solid var(--line);background:rgba(18,16,13,.55);padding:36px 34px;display:flex;flex-direction:column;transition:border-color .35s,transform .35s,background .35s;}
+.pr:hover{border-color:var(--gold);transform:translateY(-4px);background:#16110a;}
+.pr .lvl{font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:12px;letter-spacing:3px;margin-bottom:14px;}
+.pr h3{color:#fff;font-size:21px;letter-spacing:1px;font-weight:700;}
+.pr .fee{margin:16px 0 4px;font-family:Georgia,serif;color:var(--gold-hi);font-size:34px;line-height:1.1;letter-spacing:.5px;}
+.pr .fee small{font-family:"PingFang SC",sans-serif;font-size:13.5px;color:var(--mute);letter-spacing:.5px;margin-left:8px;}
+.pr .lead{color:#b3a88b;font-size:14.5px;margin-top:12px;line-height:1.9;}
+.pr ul{list-style:none;margin-top:18px;padding-top:16px;border-top:1px solid rgba(201,169,98,.16);flex:1;}
+.pr li{position:relative;padding-left:18px;margin:9px 0;color:#a99d80;font-size:13.5px;line-height:1.8;}
+.pr li::before{content:"";position:absolute;left:0;top:.75em;width:6px;height:6px;background:var(--gold);transform:rotate(45deg);}
+.pr .who{margin-top:18px;border-top:1px solid rgba(201,169,98,.16);padding-top:14px;color:var(--mute);font-size:12.5px;line-height:1.8;}
+.pr .who b{color:var(--gold-hi);font-weight:700;}
+.pr.free .fee{color:#fff;}
+
+.ladder{margin-top:26px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:28px 32px;}
+.ladder b{color:#e8cf96;display:block;font-size:17px;margin-bottom:12px;letter-spacing:.5px;}
+.ladder p{color:#b3a88b;font-size:14.5px;line-height:2;}
+.ladder a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.ladder a:hover{border-bottom-color:var(--gold);}
+
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--ink);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+.fitgrid{display:grid;grid-template-columns:1fr 1fr;gap:34px;max-width:980px;}
+.fitgrid ul{list-style:none;margin-top:14px;}
+.fitgrid li{padding-left:18px;position:relative;margin:10px 0;font-size:15px;}
+.fitgrid li::before{content:"";position:absolute;left:0;top:.7em;width:6px;height:6px;background:var(--gold);transform:rotate(45deg);}
+
+.note{border:1px solid var(--line);background:rgba(201,169,98,.05);padding:26px 30px;color:#c4b791;font-size:15px;line-height:2;max-width:900px;margin-top:40px;}
+.note b{color:#e8cf96;}
+
+.rules{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:1000px;}
+.rule{border:1px solid var(--line);background:rgba(18,16,13,.55);padding:34px 32px;}
+.rule b{color:#e8cf96;display:block;font-size:17px;margin-bottom:10px;letter-spacing:.5px;}
+.rule p{color:#a99d80;font-size:14.5px;line-height:1.95;}
+
+.selfrun{border:1px solid var(--line);background:rgba(201,169,98,.05);padding:34px 36px;max-width:960px;}
+.selfrun ul{list-style:none;margin-top:8px;}
+.selfrun li{position:relative;padding-left:20px;margin:12px 0;color:#b3a88b;font-size:15px;line-height:1.95;}
+.selfrun li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--gold);transform:rotate(45deg);}
+
+.faq{max-width:900px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:840px;}
+
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-crest{height:94px;width:auto;display:block;margin:0 auto 36px;opacity:.95;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.tl{grid-template-columns:1fr 1fr;}.prices{grid-template-columns:1fr;}.rules{grid-template-columns:1fr;}.hero h1{font-size:36px;letter-spacing:3px;}h2.sec{font-size:29px;letter-spacing:2px;}section{padding:88px 0;}.menu{gap:16px;font-size:13px;}.sec-no{font-size:44px;}}
+@media(max-width:640px){.grid8,.tl,.fitgrid{grid-template-columns:1fr;}.hero h1{font-size:29px;letter-spacing:1px;}h2.sec{font-size:25px;letter-spacing:1px;}.wrap{padding:0 20px;}section{padding:72px 0;}.sec-head{margin-bottom:38px;gap:14px;}.btn{padding:14px 26px;font-size:13.5px;}.logo .mark-img{height:46px;}.pr,.rule{padding:30px 24px;}.biz{padding:32px 24px;}}
+</style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"电商核定征收路线图","alternateName":"E-commerce Assessed Taxation Roadmap","provider":{"@type":"Organization","name":"TD GROUP 彤鼎","url":"https://tdgroup.hk"},"serviceType":"电商经营者税务合规与核定征收申请咨询","areaServed":["Mainland China","Hong Kong"],"description":"面向网店、直播带货与跨境电商经营者：先判断主体与规模能不能适用核定征收、该向哪个主管税务机关申请；申请由合作的园区服务机构承做，彤鼎负责判断、方案与历史账衔接。境内服务由彤鼎企业管理科技（深圳）有限公司承接。彤鼎为企业管理咨询机构，不承诺核定结果，不提供任何税负数字承诺，一切以主管税务机关认定为准。","url":"https://tdgroup.hk/ecommerce-tax-roadmap.html","offers":[{"@type":"Offer","name":"电商核定征收路线图","price":"9500","priceCurrency":"CNY","description":"起价，两周书面交付：能不能核、在哪核、用什么主体、历史账怎么衔接、缺什么"},{"@type":"Offer","name":"核定征收申请代办","description":"按主体数面谈，由合作园区服务机构承做","priceCurrency":"CNY"}]}</script>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [{"@type": "Question", "name": "核定征收是不是一种税收优惠？", "acceptedAnswer": {"@type": "Answer", "text": "不是。它是《税收征管法》第三十五条规定的一种征收方式，适用于账簿不健全、成本资料残缺难以查账等情形，由税务机关核定应纳税额。它是税务机关的权力，不是纳税人的选择，条件一变就会被改成查账征收。"}}, {"@type": "Question", "name": "你们能保证核下来吗？", "acceptedAnswer": {"@type": "Answer", "text": "不能。能不能核、按什么核，由主管税务机关认定，各地口径不一。路线图做的是把主体、规模、账的状况和当地口径对上，给出能不能申请、去哪申请、缺什么的书面判断；判断结论是「不适合核定」时，钱同样花对了地方。"}}, {"@type": "Question", "name": "申请这一步是你们办还是我们自己办？", "acceptedAnswer": {"@type": "Answer", "text": "我们帮你办。核定征收的申请与备案由彤鼎合作的园区服务机构承做，彤鼎负责前面的判断、材料的把关，以及核定之后历史账的衔接。收费按主体数面谈，路线图那笔钱全额抵进来。"}}, {"@type": "Question", "name": "平台已经按季把收入报给税务机关了，现在做还来得及吗？", "acceptedAnswer": {"@type": "Answer", "text": "平台报送的是收入数据，报送之后店主自己申报的数与平台报的数会被放在一起比。来得及的是把差异先理清楚、把该补的补上、把主体和征收方式安排对；来不及的是继续用私户收款或拆分主体去躲报送，那条路的代价是追缴税款、滞纳金和罚款。"}}, {"@type": "Question", "name": "已经被改成查账征收了，还能找你们吗？", "acceptedAnswer": {"@type": "Answer", "text": "可以。这种情况路线图的落点变成建账与历史账衔接：平台后台流水、支付账户、物流、采购四样怎么对上，退货和补贴怎么处理，核定期间的收入怎么说清楚，准备融资或上市的公司还要把这段历史接到报告期的报表上。"}}]}</script>
 <!-- Google tag (gtag.js) -->
