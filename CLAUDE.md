@@ -4,7 +4,10 @@
 
 ## 一、项目结构
 
-- `index.html` 首页 / `about.html` 关于 / `club.html` 俱乐部 / `legacy.html` 传承俱乐部 / `library.html` 文库目录 / `hk-ipo-checkup.html` 港股上市可行性自测
+- `index.html` 首页 / `about.html` 关于 / `club.html` 俱乐部 / `legacy.html` 传承俱乐部 / `library.html` 文库目录 / `hk-ipo-checkup.html` 港股上市可行性自测 / `financing-program.html` 融资路线图（融资线入口页，2026-09-13 建）
+- ⭐ **「服务」下拉菜单只放两组（2026-09-13 廖总「全部按照你说的去改」）**：**融资与上市**（融资路线图 / 初创融资服务 / 上市预备期 / 海外资产上市→`asset-platform.html`）+ **工具**（上市可行性自测 / 上市门槛速查）。首页「服务入口」同样两行。
+  ⛔ AI 转型线、电商税务合规**不进顶层导航、不进首页**——页面照旧保留，靠文库、sitemap、llms.txt 与站内互链被找到。理由：品牌是境外上市与跨境资本，导航里混进 2,800 元 AI 落地和核定征收会显得什么都接。`overseas-asset-listing.html` 不单独进导航，由 `asset-platform.html` 顶部按钮进入（同一件事导航里只出现一次）。
+  ⚠ 导航写死在 279 个页面里（主页面相对路径、`articles/` 用 `/` 开头），改导航用脚本整块替换 `<div class="mdd-p">…</div></div>`，别逐页手改；分组标题是 `<span class="mdd-h">`，样式在 `css/nav.css`。
 - `articles/` 文章全文页（每篇一个 html 文件，英文短横线小写命名，如 `hk-18c-listing.html`）
 - `img/` 图片资源 / `sitemap.xml` 站点地图 / `robots.txt`
 - 所有页面为纯静态 HTML，禁止引入构建工具、框架或外部依赖。
@@ -292,7 +295,7 @@ D:\彤鼎工作台\
    - ⛔ 不写客户公司名（保密义务，第三节第 2 条原样适用）。
    - 不卖软件、不卖课、不训练模型、不做生产线视觉质检、不做 ERP 替换——**诚实的边界也要写在页面上**，它本身就是转化点。
 5. **维护要求**：
-   - 新增 AI 线落地页/工具页时，须同步 `sitemap.xml` 与 `llms.txt`「主要页面」段（该段人工维护，`gen_llms.py` 不管），并在 `index.html` 顶部导航加入口。
+   - 新增 AI 线落地页/工具页时，须同步 `sitemap.xml` 与 `llms.txt`「主要页面」段（该段人工维护，`gen_llms.py` 不管）。⛔ 2026-09-13 起**不再加进顶层导航与首页**（见第一节「服务」下拉菜单那条）。
    - 自测页埋点事件名 **`ai_checkup_start` / `ai_checkup_complete` / `ai_checkup_email`**（另有 `ai_checkup_copy`），已接 GA4 与百度统计，改版时保留。**完成率与线索转化率是判断这页去留的唯一依据**，口径与初创线两个自测页一致。
    - 产品页的 FAQPage JSON-LD **是手工维护的**：`tools/rebuild_faq_schema.py` 只管 `faq.html`，管不到产品页。⛔ 改了 `ai-transformation.html` 的可见 `<details>` 问答，必须同一次改动里手工把 head 里那段 FAQPage 逐条对齐——schema 与可见内容不符属违规，而且问题标题仍能对上、肉眼看不出来（第六节那条坑的 AI 线版本）。
    - 六个价格（0 / 2,800 / 28,000 / 3,000 / 68,000 / 9,500）在页面上出现两次：可见文案与 Service schema 的 offers。**改价两处都要改**，改完跑 `python C:\TDGroupSEO\compliance_gate.py ai-transformation.html --scope site`。
@@ -309,6 +312,7 @@ D:\彤鼎工作台\
 **与 `overseas-asset-listing.html` 的分工（⛔ 不要合并成一页）**：
 那一页讲**一座电站怎么装、怎么上**（四个阶段、路线图 → 架构 → 执行 → 成功费）；
 这一页讲**平台怎么摆**（多节点、五个产品、七个执行阶段）。单资产上市是平台的第一个产品，两页互相链接。
+⭐ 2026-09-13 起导航只放 `asset-platform.html`（标签「海外资产上市」），`overseas-asset-listing.html` 从它顶部「单座电站怎么上市」进入——两页照旧分开，但⛔ 别再把两页同时挂进导航或首页，同一件事出现两次就是「一个页面做了两遍」。
 
 1. **节点表（页面第 02 节，加节点照这个格式加卡）**：每个节点 = 当地资产方 + 独立买电方 + 彤鼎的结构与上市。
    三样缺一样就不是节点。现有六个：香港总部、新加坡上市主体、纽约交易所、马来西亚柔佛、越南、阿根廷圣胡安。
@@ -353,5 +357,5 @@ D:\彤鼎工作台\
 5. **维护要求**：
    - 页面 FAQPage JSON-LD **手工维护**：改了可见 `<details>` 问答，必须同一次改动里把 head 里那段逐条对齐。
    - 一个价格（9,500）在页面上出现两次（可见文案与 Service schema 的 offers），改价两处都要改；改完跑 `python C:\TDGroupSEO\compliance_gate.py ecommerce-tax-roadmap.html --scope site`。
-   - 首页税务筹划卡、首页/文库导航「电商核定征收」、`sitemap.xml`、`llms.txt`「主要页面」段已加入口；新增电商线页面时照旧同步。
+   - `sitemap.xml`、`llms.txt`「主要页面」段与文库正文里有入口；新增电商线页面时照旧同步。⛔ 2026-09-13 晚起**首页税务筹划卡与顶层导航都已撤下这个入口**（廖总批准导航收成「融资与上市 + 工具」两组），别加回去。
    - ⚠ 2026-09-13 上线时踩过一次：从 `ai-transformation.html` 复制骨架只抄了外链 CSS，漏了各页**内嵌的 `<style>` 块**，导航和版面裸奔。⛔ 新建页面必须连内嵌样式块一起带（第六节「全站设计层」那两份外链 CSS 只做覆盖，不是全部样式）。
