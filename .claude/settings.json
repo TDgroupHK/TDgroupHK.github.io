@@ -1,6 +1,30 @@
 {
   "$schema": "https://json.schemastore.org/claude-code-settings.json",
   "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python tools/session_brief.py --hook-start",
+            "timeout": 20,
+            "statusMessage": "读取上次会话进度"
+          }
+        ]
+      }
+    ],
+    "UserPromptSubmit": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python tools/session_brief.py --hook-prompt",
+            "timeout": 20,
+            "statusMessage": "路由规则并留痕"
+          }
+        ]
+      }
+    ],
     "SessionEnd": [
       {
         "hooks": [

@@ -6,20 +6,31 @@
 而在仓库文件里——真正会丢的是「上一次会话做到哪、下一步该干嘛」。
 本脚本把这一段补上，顺带告诉新会话：这次的活该读哪几份规则、别读哪些。
 
+⭐ 2026-09-15 起**全自动**：`.claude/settings.json` 的两个钩子替廖总跑掉了这些，
+   他不必记任何命令——
+   - `SessionStart` → `--hook-start`：开场自动把「上次做到哪 + 站点状态 + 索引」喂给新会话。
+   - `UserPromptSubmit` → `--hook-prompt`：每次他发话，回复之前自动判断该读哪几份规则，
+     并把他拍板的话自动记进会话日志。
+   手动几个模式仍然保留，供人工排查用。
+
 用法：
     python tools/session_brief.py "给电商线加一篇文章"
     python tools/session_brief.py                 # 不带任务，只出状态快照
     python tools/session_brief.py --copy "…"      # 输出精简版，直接粘给新会话
+    python tools/session_brief.py --hook-start    # 钩子用：会话开场注入
+    python tools/session_brief.py --hook-prompt   # 钩子用：每轮发话前注入
 """
 from __future__ import annotations
 
 import argparse
+import json
 import pathlib
 import re
 import subprocess
 import sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent
+sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 # 任务关键词 -> 该读的规则文件。命中几条读几条，没命中就只读常驻铁律。
 ROUTES = [
@@ -41,6 +52,17 @@ ALWAYS = [
     ("CLAUDE.md 第六节", "修改边界：品牌文案/合规声明/黑金配色未经要求不动"),
     ("CLAUDE.md 第九节", "分工原则：能自动做的自己做完，别把活推给用户"),
 ]
+
+# 廖总拍板时的说法。命中就把他的原话自动记进会话日志——
+# 这类句子是最值钱也最容易丢的东西（它往往不产生任何提交）。
+# ⚠ 宁可多记几条也别漏：日志多一条是噪音，少一条是永久丢失。
+DECISION_PAT = re.compile(
+    r"拍板|定了|就这么办|全部按照|以后都|从今天起|从现在起|不要再|别再|改成|换成|"
+    r"我决定|听我的|就用|取消|撤下|加回|不用了|废弃|方向是|口径是",
+)
+# 这些是提问或闲聊，不是拍板。命中则不记。
+NOT_DECISION_PAT = re.compile(r"^\s*(为什么|怎么|如何|能不能|可以吗|是不是|什么是|有没有)")
+DECISION_MAX = 300  # 太长的段落不整段塞进日志
 
 
 def sh(*cmd: str) -> str:
@@ -72,11 +94,118 @@ def route(task: str) -> list[tuple[str, str]]:
     return hits
 
 
+def last_log_entry() -> str:
+    """会话日志的最后一条——新会话靠它知道「上次做到哪」。"""
+    log = ROOT / ".claude" / "session-log.md"
+    if not log.exists():
+        return ""
+    lines = log.read_text(encoding="utf-8").split("\n")
+    heads = [i for i, l in enumerate(lines) if l.startswith("## ")]
+    if not heads:
+        return ""
+    entry = "\n".join(lines[heads[-1]:]).strip()
+    return entry[:900]
+
+
+def emit(context: str, event: str) -> None:
+    """把内容注入模型上下文。空内容就什么都不发，别白烧 token。"""
+    if not context.strip():
+        return
+    print(json.dumps({
+        "hookSpecificOutput": {
+            "hookEventName": event,
+            "additionalContext": context.strip(),
+        }
+    }, ensure_ascii=False))
+
+
+def read_hook_input() -> dict:
+    if sys.stdin.isatty():
+        return {}
+    try:
+        return json.load(sys.stdin) or {}
+    except Exception:
+        return {}
+
+
+def hook_start() -> int:
+    """SessionStart：把上次的进度和站点状态直接喂给新会话。
+
+    这一段是「新开会话不丢记忆」的落点——记忆本来就在文件里，
+    问题只是新会话不知道去翻。现在不用它翻了，开场就在手上。
+    """
+    read_hook_input()
+    parts = ["【本仓库会话开场自动注入，来自 tools/session_brief.py】"]
+
+    last = last_log_entry()
+    if last:
+        parts.append(f"\n上一次会话留下的记录（`.claude/session-log.md` 末条）：\n{last}")
+
+    parts.append("\n当前状态：" + "；".join(snapshot()[:1]))
+    parts.append(
+        "\n本次要注意：\n"
+        "- 分线细则在 `.claude/rules/`，用到哪条读哪条，⛔ 别一次全读（见 CLAUDE.md 第零节索引表）。\n"
+        "- 搜索 `articles/`（260 篇 / 10 MB）派 `article-finder` 子代理，主会话⛔ 不直读文章文件。\n"
+        "- 改页面用 Edit 精确替换，⛔ 不要整页 Read 再整页 Write。\n"
+        "- 会话结束与压缩前会自动记工作日志，不必手动跑。"
+    )
+    emit("\n".join(parts), "SessionStart")
+    return 0
+
+
+def hook_prompt() -> int:
+    """UserPromptSubmit：廖总每次发话、我回复之前自动做两件事。
+
+    一、判断这活该读哪几份规则，直接告诉模型（省得它自己摸索或全读）。
+    二、他要是在拍板，把原话自动记进会话日志——这类话往往不产生任何提交，
+        是最容易永久丢失的一类信息。
+    """
+    data = read_hook_input()
+    prompt = str(data.get("prompt") or data.get("user_prompt") or "").strip()
+    if not prompt:
+        return 0
+
+    out = []
+
+    hits = route(prompt)
+    if hits:
+        lines = [f"- `{p}`（{why}）" for p, why in hits]
+        out.append("【自动路由】本次改动涉及这些分线规则，动手前先读：\n" + "\n".join(lines))
+
+    # 自动捕捉拍板
+    if (DECISION_PAT.search(prompt) and not NOT_DECISION_PAT.match(prompt)):
+        text = " ".join(prompt.split())[:DECISION_MAX]
+        try:
+            import datetime
+            import session_log
+            session_log.append(
+                f"\n## {datetime.datetime.now():%Y-%m-%d %H:%M} · "
+                f"{sh('git', 'rev-parse', '--abbrev-ref', 'HEAD') or '?'}\n"
+                f"\n**廖总原话**：{text}\n"
+            )
+            out.append(
+                "【已自动留痕】这句话像是拍板，已原话记进 `.claude/session-log.md`。"
+                "若理解有偏差，用 `session_log.py --decision \"…\"` 补一条准确的。"
+            )
+        except Exception:
+            pass  # 留痕失败绝不打断廖总的对话
+
+    emit("\n\n".join(out), "UserPromptSubmit")
+    return 0
+
+
 def main() -> int:
     ap = argparse.ArgumentParser()
     ap.add_argument("task", nargs="?", default="", help="一句话说清本次要干什么")
     ap.add_argument("--copy", action="store_true", help="只输出可粘贴的开场白")
+    ap.add_argument("--hook-start", action="store_true", help="钩子用：会话开场注入")
+    ap.add_argument("--hook-prompt", action="store_true", help="钩子用：每轮发话前注入")
     args = ap.parse_args()
+
+    if args.hook_start:
+        return hook_start()
+    if args.hook_prompt:
+        return hook_prompt()
 
     hits = route(args.task) if args.task else []
 
@@ -126,4 +255,9 @@ def main() -> int:
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except Exception as e:
+        # 钩子绝不能拖垮会话：出错就安静退出，什么都不注入。
+        print(f"session_brief 跳过：{e}", file=sys.stderr)
+        sys.exit(0)

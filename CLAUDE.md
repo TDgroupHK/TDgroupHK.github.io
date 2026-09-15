@@ -23,17 +23,22 @@
 
 1. **别怕开新会话**。上下文断了不丢记忆——记忆在仓库文件里，不在聊天记录里。
    同一会话拖得越长，每一轮重发的历史越多，成本是新会话的数倍。
-2. **开场先跑** `python tools/session_brief.py "本次要干什么"`，它会告诉你该读哪几份规则、
-   当前站点状态、以及上一次会话留下的在办事项。把它的输出当开场白。
-3. **搜索一律派给子代理**（`Agent` 工具，`Explore` 类型）。`articles/` 有 260 篇、10 MB，
+2. ⭐ **廖总不必记任何命令**（2026-09-15 他拍板「我记不住这些，你帮我做」）。
+   `.claude/settings.json` 里四个钩子全自动跑掉，**⛔ 不许再要求他手动执行**：
+   | 钩子 | 时机 | 自动做什么 |
+   |---|---|---|
+   | `SessionStart` | 开新会话 | 把**上次会话做到哪**＋站点状态注入上下文——这就是"不丢记忆" |
+   | `UserPromptSubmit` | 他每次发话、我回复之前 | 判断该读哪几份分线规则；他在**拍板就把原话自动记进日志** |
+   | `SessionEnd` | 会话结束 | 把分支、提交、改动文件记进 `.claude/session-log.md` |
+   | `PreCompact` | 压缩之前 | 同上（压缩正是信息最容易丢的时刻） |
+   ⚠ 自动留痕只认关键词，**会漏也会误记**。我判断出他定了什么而钩子没抓准时，自己补一条：
+   `python tools/session_log.py --decision "…"`。这是我的活，不是他的。
+3. **搜索一律派给子代理**（`article-finder`）。`articles/` 有 260 篇、10 MB，
    主会话直读两三篇就比整份 CLAUDE.md 还贵。子代理烧它自己的上下文、只回结论。
-4. **收尾必做**：`python tools/backup.py` 归档会话 + `python tools/handover.py --log "…"` 写工作日志。
-   ⚠ 这两步才是"记忆不丢"的真正保险，见第九节。云端容器一回收，没归档的会话永久消失。
-   ⭐ 本仓库另有一道**自动**的（`.claude/settings.json` 的 SessionEnd / PreCompact 钩子）：
-   会话结束或压缩前自动把分支、提交、改动文件记进 `.claude/session-log.md`。但它只记**事实**，
-   **决策要自己补**：`python tools/session_log.py --decision "廖总定：…"`。
-   ⛔ 别指望"每 5 轮自动总结"省 token——重写历史会让 prompt cache 失效，历史还小的时候必亏；
-   上下文真的快满时用 Claude Code 自带的 `/compact`，不用另造一套。
+4. ⛔ **别指望"每 N 轮自动总结"省 token**——重写历史会让 prompt cache 失效，
+   历史还小的时候必亏；上下文真的快满时用自带的 `/compact`，不用另造一套。
+5. `.claude/session-log.md` **要跟着代码一起提交推送**，否则云端容器一回收就没了。
+   本机另有 `backup.py` / `handover.py` 归档进私有仓库 `td-internal`（见第九节），云端够不着。
 
 ## 一、项目结构
 
