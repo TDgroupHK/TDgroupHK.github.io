@@ -29,6 +29,11 @@
    主会话直读两三篇就比整份 CLAUDE.md 还贵。子代理烧它自己的上下文、只回结论。
 4. **收尾必做**：`python tools/backup.py` 归档会话 + `python tools/handover.py --log "…"` 写工作日志。
    ⚠ 这两步才是"记忆不丢"的真正保险，见第九节。云端容器一回收，没归档的会话永久消失。
+   ⭐ 本仓库另有一道**自动**的（`.claude/settings.json` 的 SessionEnd / PreCompact 钩子）：
+   会话结束或压缩前自动把分支、提交、改动文件记进 `.claude/session-log.md`。但它只记**事实**，
+   **决策要自己补**：`python tools/session_log.py --decision "廖总定：…"`。
+   ⛔ 别指望"每 5 轮自动总结"省 token——重写历史会让 prompt cache 失效，历史还小的时候必亏；
+   上下文真的快满时用 Claude Code 自带的 `/compact`，不用另造一套。
 
 ## 一、项目结构
 

@@ -1,2 +1,5 @@
 __pycache__/
 *.pyc
+
+# 会话状态标记（每台机器各自的进度，不入库）
+.claude/.session-state.json
