@@ -29,14 +29,25 @@ import re
 import subprocess
 import sys
 
+# ⚠ Windows 下钩子的 stdin/stdout 默认是 GBK：写 ⛔ 直接抛错、什么都注入不了，
+# 读廖总发的中文也会乱码。Claude Code 两头都按 UTF-8，这里统一过来。
+for _s in (sys.stdin, sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 
 
 def _work_root() -> pathlib.Path:
     """当前会话实际在哪个仓库里干活——理由见 session_log.work_root()。"""
     try:
+        # ⚠ 必须显式 utf-8：Windows 默认按 GBK 解码，「彤鼎工作台」这种中文路径
+        # 会解码失败，静默退回官网仓库——别的仓库的日志就全记错地方了。
         r = subprocess.run(["git", "rev-parse", "--show-toplevel"],
-                           capture_output=True, text=True, timeout=15)
+                           capture_output=True, text=True, timeout=15,
+                           encoding="utf-8", errors="replace")
         if r.returncode == 0 and r.stdout.strip():
             return pathlib.Path(r.stdout.strip()).resolve()
     except Exception:
@@ -85,7 +96,8 @@ DECISION_MAX = 300  # 太长的段落不整段塞进日志
 def sh(*cmd: str) -> str:
     try:
         return subprocess.run(cmd, cwd=ROOT, capture_output=True,
-                              text=True, check=True).stdout.strip()
+                              text=True, check=True, encoding="utf-8",
+                              errors="replace").stdout.strip()
     except Exception:
         return ""
 

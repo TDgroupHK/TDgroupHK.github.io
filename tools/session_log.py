@@ -26,6 +26,14 @@ import pathlib
 import subprocess
 import sys
 
+# ⚠ Windows 下钩子的 stdin/stdout 默认是 GBK，中文与 ⛔ 会乱码或抛错。统一成 UTF-8。
+for _s in (sys.stdin, sys.stdout, sys.stderr):
+    try:
+        _s.reconfigure(encoding="utf-8", errors="replace")
+    except Exception:
+        pass
+
+
 def work_root() -> pathlib.Path:
     """当前会话实际在哪个仓库里干活。
 
@@ -35,8 +43,11 @@ def work_root() -> pathlib.Path:
     所以以 cwd 的 git 顶层为准，取不到才退回本脚本所在的仓库。
     """
     try:
+        # ⚠ 必须显式 utf-8：Windows 默认按 GBK 解码，「彤鼎工作台」这种中文路径
+        # 会解码失败，静默退回官网仓库——别的仓库的日志就全记错地方了。
         r = subprocess.run(["git", "rev-parse", "--show-toplevel"],
-                           capture_output=True, text=True, timeout=15)
+                           capture_output=True, text=True, timeout=15,
+                           encoding="utf-8", errors="replace")
         if r.returncode == 0 and r.stdout.strip():
             return pathlib.Path(r.stdout.strip()).resolve()
     except Exception:
@@ -62,7 +73,8 @@ HEADER = """# 会话工作日志
 
 def sh(*cmd: str, default: str = "") -> str:
     try:
-        r = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, timeout=15)
+        r = subprocess.run(cmd, cwd=ROOT, capture_output=True, text=True, timeout=15,
+                           encoding="utf-8", errors="replace")
         return r.stdout.strip() if r.returncode == 0 else default
     except Exception:
         return default
