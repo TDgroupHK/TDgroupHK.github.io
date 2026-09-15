@@ -54,6 +54,13 @@
     <button id="go">进去</button>
   </div>
 
+  <div id="wx" class="hide">
+    <h1>微信里打不开待办，点右上角「···」</h1>
+    <p>再点「在浏览器打开」，之后就一直在浏览器里用</p>
+    <p style="font-size:40px;line-height:1;margin:18px 0 0;color:var(--gold)">↗</p>
+    <p><a id="wxtry" href="#">不行的话，点这里在微信里硬试一次</a></p>
+  </div>
+
   <div id="fail" class="hide">
     <h1>暂时进不去</h1>
     <p id="why"></p>
@@ -65,7 +72,7 @@
   var KEY = 'td_todo_k';
   var $ = function (id) { return document.getElementById(id); };
   var show = function (id) {
-    ['wait', 'ask', 'fail'].forEach(function (x) {
+    ['wait', 'ask', 'wx', 'fail'].forEach(function (x) {
       $(x).className = (x === id) ? '' : 'hide';
     });
   };
@@ -91,6 +98,24 @@
       var base = (d && d.url ? String(d.url) : '').replace(/\/+$/, '');
       if (!base) throw new Error('t.json 里没有网址');
       var jump = function (tok) { location.replace(base + '/?k=' + encodeURIComponent(tok)); };
+      // 2026-09-15：微信内置浏览器会拦 trycloudflare 那个域名（推到微信的链接点开就打不开）。
+      // 在微信里就不往隧道跳，引导他「在浏览器打开」；这台手机微信里记过口令的，
+      // 把口令放进当前网址，浏览器打开时带过去，省得再输一次。
+      if (/MicroMessenger/i.test(navigator.userAgent)) {
+        if (k) { try { history.replaceState(null, '', 't.html?k=' + encodeURIComponent(k)); } catch (e) {} }
+        $('wxtry').onclick = function (e) {
+          e.preventDefault();
+          if (k) { jump(k); } else { show('ask'); }
+        };
+        show('wx');
+        $('go').onclick = function () {
+          var v = $('k').value.trim();
+          if (!v) return;
+          try { localStorage.setItem(KEY, v); } catch (e) {}
+          jump(v);
+        };
+        return;
+      }
       if (k) { jump(k); return; }
       show('ask');
       var send = function () {
