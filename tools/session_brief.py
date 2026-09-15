@@ -29,8 +29,25 @@ import re
 import subprocess
 import sys
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
+
+
+def _work_root() -> pathlib.Path:
+    """当前会话实际在哪个仓库里干活——理由见 session_log.work_root()。"""
+    try:
+        r = subprocess.run(["git", "rev-parse", "--show-toplevel"],
+                           capture_output=True, text=True, timeout=15)
+        if r.returncode == 0 and r.stdout.strip():
+            return pathlib.Path(r.stdout.strip()).resolve()
+    except Exception:
+        pass
+    return pathlib.Path(__file__).resolve().parent.parent
+
+
+ROOT = _work_root()
+# 分线规则只存在于官网仓库。钩子全局安装后在别的仓库里跑时，这里是 False，
+# 路由整段跳过——⛔ 别去指引模型读一份那个仓库里根本没有的文件。
+HAS_RULES = (ROOT / ".claude" / "rules").is_dir()
 
 # 任务关键词 -> 该读的规则文件。命中几条读几条，没命中就只读常驻铁律。
 ROUTES = [
@@ -87,6 +104,8 @@ def snapshot() -> list[str]:
 
 
 def route(task: str) -> list[tuple[str, str]]:
+    if not HAS_RULES:
+        return []
     hits = []
     for pat, path, why in ROUTES:
         if re.search(pat, task, re.I):
@@ -141,14 +160,16 @@ def hook_start() -> int:
     if last:
         parts.append(f"\n上一次会话留下的记录（`.claude/session-log.md` 末条）：\n{last}")
 
-    parts.append("\n当前状态：" + "；".join(snapshot()[:1]))
-    parts.append(
-        "\n本次要注意：\n"
-        "- 分线细则在 `.claude/rules/`，用到哪条读哪条，⛔ 别一次全读（见 CLAUDE.md 第零节索引表）。\n"
-        "- 搜索 `articles/`（260 篇 / 10 MB）派 `article-finder` 子代理，主会话⛔ 不直读文章文件。\n"
-        "- 改页面用 Edit 精确替换，⛔ 不要整页 Read 再整页 Write。\n"
-        "- 会话结束与压缩前会自动记工作日志，不必手动跑。"
-    )
+    parts.append(f"\n当前仓库 `{ROOT.name}`：" + "；".join(snapshot()[:1]))
+    notes = ["- 会话结束与压缩前会自动记工作日志，⛔ 不必要求廖总手动跑。"]
+    if HAS_RULES:
+        # 这三条只在官网仓库成立，别的仓库没有 rules/ 也没有 articles/。
+        notes[:0] = [
+            "- 分线细则在 `.claude/rules/`，用到哪条读哪条，⛔ 别一次全读（见 CLAUDE.md 第零节索引表）。",
+            "- 搜索 `articles/`（260 篇 / 10 MB）派 `article-finder` 子代理，主会话⛔ 不直读文章文件。",
+            "- 改页面用 Edit 精确替换，⛔ 不要整页 Read 再整页 Write。",
+        ]
+    parts.append("\n本次要注意：\n" + "\n".join(notes))
     emit("\n".join(parts), "SessionStart")
     return 0
 
@@ -175,6 +196,11 @@ def hook_prompt() -> int:
     # 自动捕捉拍板
     if (DECISION_PAT.search(prompt) and not NOT_DECISION_PAT.match(prompt)):
         text = " ".join(prompt.split())[:DECISION_MAX]
+        # ⚠ 去重：钩子可能同时装在仓库 `.claude/settings.json` 与全局
+        # `~/.claude/settings.json` 两处，同一句话会触发两次。日志里出现两条
+        # 一模一样的「廖总原话」，看的人会以为他说了两遍。
+        if text and text in last_log_entry():
+            return 0
         try:
             import datetime
             import session_log

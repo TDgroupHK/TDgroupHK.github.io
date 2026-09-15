@@ -27,3 +27,11 @@
 
 **决策**：廖总问：每5轮自动总结能否省token。答：不省反而更贵（重写历史使 prompt cache 失效）。改为 SessionEnd/PreCompact 钩子自动落盘事实，压缩沿用自带 /compact
 
+
+## 2026-09-15 10:37 · claude/reduce-memory-loss-tokens-bpxp23
+
+提交 1 个：
+- `e6ddfc3 全自动：开场注入上次进度、发话前路由规则并自动留痕`
+
+改动 3 个文件：`.claude/settings.json`、`CLAUDE.md`、`tools/session_brief.py`
+

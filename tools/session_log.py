@@ -26,7 +26,25 @@ import pathlib
 import subprocess
 import sys
 
-ROOT = pathlib.Path(__file__).resolve().parent.parent
+def work_root() -> pathlib.Path:
+    """当前会话实际在哪个仓库里干活。
+
+    ⚠ 不能写死成本脚本所在的官网仓库：钩子装进 `~/.claude/settings.json` 后
+    是全局的，廖总在 `TDgroup`、`td-internal` 里开会话时也会跑到这里。
+    那时该记的是**那个**仓库的分支与提交，不是官网仓库的。
+    所以以 cwd 的 git 顶层为准，取不到才退回本脚本所在的仓库。
+    """
+    try:
+        r = subprocess.run(["git", "rev-parse", "--show-toplevel"],
+                           capture_output=True, text=True, timeout=15)
+        if r.returncode == 0 and r.stdout.strip():
+            return pathlib.Path(r.stdout.strip()).resolve()
+    except Exception:
+        pass
+    return pathlib.Path(__file__).resolve().parent.parent
+
+
+ROOT = work_root()
 LOG = ROOT / ".claude" / "session-log.md"
 STATE = ROOT / ".claude" / ".session-state.json"
 
