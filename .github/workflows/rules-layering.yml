@@ -1,0 +1,43 @@
+name: 规则分层闸
+
+# CLAUDE.md 在 2026-09-15 拆成「常驻铁律 + .claude/rules/ 分线细则」，
+# 把每次会话的常驻 token 从约 13,000 降到约 6,200。
+#
+# 这个闸看两件事：
+#   1. 拆分后一个字都没丢——每一节要么还在 CLAUDE.md，要么完整躺在某份 rules 里；
+#   2. CLAUDE.md 没有重新胖回去——新规则该进 .claude/rules/，不是往常驻文件堆。
+#
+# 为什么要 CI：跟合规闸同一个理由。规则光写在文档里没有任何东西执行它，
+# 就会慢慢烂掉——CLAUDE.md 从建立到 2026-09-15 涨到 51 KB，就是这么来的。
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'CLAUDE.md'
+      - '.claude/rules/**'
+      - 'tools/check_rules.py'
+  pull_request:
+    paths:
+      - 'CLAUDE.md'
+      - '.claude/rules/**'
+      - 'tools/check_rules.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # check_rules.py 要 git show 基线版本
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 核对分层完整性与常驻体积
+        run: python tools/check_rules.py
