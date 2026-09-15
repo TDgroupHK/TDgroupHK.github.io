@@ -5,6 +5,23 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <meta name="robots" content="noindex,nofollow,noarchive">
 <title>转到待办</title>
+<script>
+// 2026-09-15：口令 / 一次码可能跟在网址后面（#k= / #c= / ?k=）。
+// 放在统计代码之前：先存进这台手机，再把口令从地址栏抹掉，免得被统计代码记走。
+(function () {
+  try {
+    var h = new URLSearchParams(location.hash.slice(1));
+    var k = h.get('k') || new URLSearchParams(location.search).get('k');
+    if (h.has('reset')) localStorage.removeItem('td_todo_k');
+    if (k) localStorage.setItem('td_todo_k', k);
+    var c = h.get('c');
+    if (c) sessionStorage.setItem('td_todo_c', c);
+    if (k || location.search || h.has('reset')) {
+      history.replaceState(null, '', location.pathname + (c ? '#c=' + encodeURIComponent(c) : ''));
+    }
+  } catch (e) {}
+})();
+</script>
 <!--
   固定入口 —— 手机待办页的书签存这一页，不要存 trycloudflare 那个网址。
 
@@ -82,11 +99,11 @@
     show('fail');
   };
 
-  // 口令来源：网址里的 ?k= 优先（换手机时可以带过去），其次这台手机存过的
-  var q = new URLSearchParams(location.search).get('k');
-  if (q) { try { localStorage.setItem(KEY, q); } catch (e) {} }
-  var k = q;
-  if (!k) { try { k = localStorage.getItem(KEY); } catch (e) {} }
+  // 口令：head 里那段已经把网址上带的存进来了，这里只读这台手机存过的；
+  // 一次码（推到微信的登录链接）优先 —— 存着的口令可能是错的
+  var k = null, c = null;
+  try { k = localStorage.getItem(KEY); } catch (e) {}
+  try { c = sessionStorage.getItem('td_todo_c'); } catch (e) {}
 
   // t.json 会被改写，⛔ 一定要绕开缓存，否则隧道换址后这里还拿着旧的
   fetch('t.json?_=' + Date.now(), { cache: 'no-store' })
@@ -101,11 +118,17 @@
       // 2026-09-15：微信内置浏览器会拦 trycloudflare 那个域名（推到微信的链接点开就打不开）。
       // 在微信里就不往隧道跳，引导他「在浏览器打开」；这台手机微信里记过口令的，
       // 把口令放进当前网址，浏览器打开时带过去，省得再输一次。
+      var login = function (code) {
+        try { sessionStorage.removeItem('td_todo_c'); } catch (e) {}
+        location.replace(base + '/go?c=' + encodeURIComponent(code));
+      };
       if (/MicroMessenger/i.test(navigator.userAgent)) {
-        if (k) { try { history.replaceState(null, '', 't.html?k=' + encodeURIComponent(k)); } catch (e) {} }
+        // 「在浏览器打开」带走的是当前网址，所以把一次码或口令放进 # 里（# 后面的不会发给服务器）
+        var carry = c ? 'c=' + encodeURIComponent(c) : (k ? 'k=' + encodeURIComponent(k) : '');
+        if (carry) { try { history.replaceState(null, '', 't.html#' + carry); } catch (e) {} }
         $('wxtry').onclick = function (e) {
           e.preventDefault();
-          if (k) { jump(k); } else { show('ask'); }
+          if (c) { login(c); } else if (k) { jump(k); } else { show('ask'); }
         };
         show('wx');
         $('go').onclick = function () {
@@ -116,6 +139,7 @@
         };
         return;
       }
+      if (c) { login(c); return; }
       if (k) { jump(k); return; }
       show('ask');
       var send = function () {
