@@ -476,7 +476,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
     $('t-out').innerHTML=h;
     $('t-out').hidden=false;
-    try{if(window.gtag)window.gtag('event','timeline_plan',{event_category:'tool'});}catch(e){}
+    try{if(window.gtag)window.gtag('event','timeline_plan',{event_category:'tool',event_label:'到敲钟='+totalNeed+'个月 前置工程='+pre.length+'项'+(latePre?' 已超期='+latePre:'')});}catch(e){}
     try{if(window._hmt)window._hmt.push(['_trackEvent','tool','timeline_plan']);}catch(e){}
     $('t-out').scrollIntoView({behavior:'smooth',block:'start'});
   }

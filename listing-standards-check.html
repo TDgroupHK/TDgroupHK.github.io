@@ -549,7 +549,7 @@ document.addEventListener('DOMContentLoaded',function(){
     });
     box.innerHTML=h;
     box.hidden=false;
-    try{if(window.gtag)window.gtag('event','standards_check',{event_category:'tool'});}catch(e){}
+    try{if(window.gtag)window.gtag('event','standards_check',{event_category:'tool',event_label:data.map(function(d){var s=d.sum;return d.R.name+'='+(s.indexOf('卡住')>=0?'硬闸门没过':(s.indexOf('可走的通道')>=0?'有通道':(s.indexOf('数据不足')>=0?'缺数':'未达')));}).join(' ').slice(0,95)});}catch(e){}
     try{if(window._hmt)window._hmt.push(['_trackEvent','tool','standards_check']);}catch(e){}
     box.scrollIntoView({behavior:'smooth',block:'start'});
   }

@@ -447,7 +447,7 @@ document.addEventListener('DOMContentLoaded',function(){
 
     $('c-out').innerHTML=h;
     $('c-out').hidden=false;
-    try{if(window.gtag)window.gtag('event','cost_estimate',{event_category:'tool'});}catch(e){}
+    try{if(window.gtag)window.gtag('event','cost_estimate',{event_category:'tool',event_label:'规模='+(raise<3000?'3000万以下':(raise<10000?'3000万-1亿':'1亿以上'))+' 沉没成本过半='+(sunkHi>raise*0.5?'是':'否')});}catch(e){}
     try{if(window._hmt)window._hmt.push(['_trackEvent','tool','cost_estimate']);}catch(e){}
     $('c-out').scrollIntoView({behavior:'smooth',block:'start'});
   }
