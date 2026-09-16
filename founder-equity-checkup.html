@@ -239,6 +239,12 @@ function calc(){
 // 埋点：完成率与线索转化率是判断这页值不值得继续投流量的唯一依据。
 // GA4 与百度统计都是全站已装的，这里只做事件上报，不引入任何新依赖。
 function track(name,params){
+  params=params||{};
+  /* 结果拼进 event_label（2026-09-16 加）：grade / path / hard 这些参数名从来没在 GA4
+     注册成自定义维度，报表里一律是 (not set) —— 于是「有人做完自测」知道，「他是什么水平」
+     不知道。event_label 07-26 就注册好了，复用它零配置、当天可读。
+     ⛔ 只传评级和档位这类推导结果，绝不传访客自己填的营收 / 融资额原始数字。 */
+  if(!params.event_label){var _kv=[],_k;for(_k in params){if(_k!=='event_category'&&_k!=='event_label')_kv.push(_k+'='+params[_k]);}if(_kv.length)params.event_label=_kv.join(' ');}
   try{if(typeof gtag==='function')gtag('event',name,params||{});}catch(e){}
   try{if(window._hmt)_hmt.push(['_trackEvent','股权自测',name,(params&&params.grade)||'']);}catch(e){}
 }

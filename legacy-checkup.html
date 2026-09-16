@@ -254,7 +254,7 @@ function calc(){
 
   document.getElementById('result').style.display='block';
   document.getElementById('result').scrollIntoView({behavior:'smooth'});
-  if(typeof gtag==='function'){gtag('event','legacy_checkup_done',{grade:grade,total:total});}
+  if(typeof gtag==='function'){gtag('event','legacy_checkup_done',{grade:grade,total:total,event_label:'grade='+grade+' total='+total});}
 }
 
 function copyResult(){
