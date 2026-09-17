@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>私户收款的电商店主，补税那天的数是怎么算出来的 | TD GROUP 彤鼎知识文库</title>
+<meta name="description" content="2026年7月国家税务总局曝光了7起网红网店偷税案件，共同点是私户收款、少报或不报，追缴税款加滞纳金加罚款，合计约为少缴税款的两倍上下。本文用这几起匿名化案例讲清补税那天的数是怎么算出来的：稽查怎么用平台后台、支付账户和银行流水把私户收款还原成收入，往前能追多少年，增值税和所得税怎么分开算，滞纳金按日万分之五怎么滚，罚款倍数怎么定，注销主体为什么不是终点，最后给一份流水口径、申报口径、主体口径的自查清单。">
+<link rel="canonical" href="https://tdgroup.hk/articles/ecommerce-back-tax-how-calculated.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="TD GROUP 彤鼎知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="TD GROUP 彤鼎">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="私户收款的电商店主，补税那天的数是怎么算出来的 | TD GROUP 彤鼎知识文库">
+<meta property="og:description" content="2026年7月国家税务总局曝光了7起网红网店偷税案件，共同点是私户收款、少报或不报，追缴税款加滞纳金加罚款，合计约为少缴税款的两倍上下。本文用这几起匿名化案例讲清补税那天的数是怎么算出来的：稽查怎么用平台后台、支付账户和银行流水把私户收款还原成收入，往前能追多少年，增值税和所得税怎么分开算，滞纳金按日万分之五怎么滚，罚款倍数怎么定，注销主体为什么不是终点，最后给一份流水口径、申报口径、主体口径的自查清单。">
+<meta property="og:url" content="https://tdgroup.hk/articles/ecommerce-back-tax-how-calculated.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="私户收款的电商店主，补税那天的数是怎么算出来的 | TD GROUP 彤鼎知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:3px;font-size:17px;font-family:Georgia,"Times New Roman",serif;}
+.logo .nm small{display:block;color:var(--gold);font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:400;font-size:11px;letter-spacing:9px;margin-top:3px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"私户收款的电商店主，补税那天的数是怎么算出来的","inLanguage":"zh-CN","abstract":"In July 2026 China's State Taxation Administration publicized seven tax evasion cases involving livestream hosts and online shops. The common pattern was routing sales through personal bank accounts and under-reporting or not filing at all; in every case the back taxes, late-payment surcharges and penalties added up to roughly twice the tax originally evaded. This article walks through how that figure is built: how auditors reconstruct revenue from platform records, payment accounts and bank statements, how far back they can go, how VAT and income tax are computed separately, how the daily surcharge of 0.05 percent accumulates, how penalty multiples are set, why deregistering the entity does not end liability, and a three-part self-check on cash flows, filings and entities.","author":{"@type":"Organization","name":"TD GROUP 彤鼎"},"publisher":{"@type":"Organization","name":"TD GROUP 彤鼎","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/ecommerce-back-tax-how-calculated.html"},"datePublished":"2026-09-17","dateModified":"2026-09-17","description":"2026年7月国家税务总局曝光了7起网红网店偷税案件，共同点是私户收款、少报或不报，追缴税款加滞纳金加罚款，合计约为少缴税款的两倍上下。本文用这几起匿名化案例讲清补税那天的数是怎么算出来的：稽查怎么用平台后台、支付账户和银行流水把私户收款还原成收入，往前能追多少年，增值税和所得税怎么分开算，滞纳金按日万分之五怎么滚，罚款倍数怎么定，注销主体为什么不是终点，最后给一份流水口径、申报口径、主体口径的自查清单。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+<link rel="stylesheet" href="../css/nav.css">
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="TD GROUP 彤鼎"><span class="nm">TD GROUP<small>彤鼎</small></span></a>
+<input type="checkbox" id="navtg" class="navtg" aria-hidden="true"><label for="navtg" class="navbtn" aria-label="菜单"><span></span><span></span><span></span></label>
+<div class="menu"><a href="/">首页</a><a href="/about.html">关于</a><div class="mdd"><a href="/#services">服务<span class="ar">▾</span></a><div class="mdd-p"><div><span class="mdd-h">融资与上市</span><a href="/financing-program.html">融资路线图</a><a href="/startup-program.html">初创融资服务</a><a href="/pre-ipo-program.html">上市预备期</a><a href="/asset-platform.html">海外资产上市</a><span class="mdd-h">工具</span><a href="/hk-ipo-checkup.html">上市可行性自测</a><a href="/listing-standards-check.html">上市门槛速查</a></div></div></div><a href="/club.html">俱乐部</a><a href="/legacy.html">传承</a><a href="/library.html">文库</a><a href="/faq.html">问答</a><a href="mailto:liaoqijie@tdgroup.hk">联系</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">架构合规 STRUCTURING</div><h1>私户收款的电商店主，补税那天的数是怎么算出来的</h1>
+<div class="sub">追缴通知上的合计数不是拍脑袋来的：稽查先把私户流水还原成收入，再分税种把税款算出来，滞纳金从欠税那天起按日万分之五往上滚，罚款按偷税倍数定，三笔加起来常常是少缴税款的两倍上下</div><div class="en">In July 2026 China's State Taxation Administration publicized seven tax evasion cases involving livestream hosts and online shops. The common pattern was routing sales through personal bank accounts and under-reporting or not filing at all; in every case the back taxes, late-payment surcharges and penalties added up to roughly twice the tax originally evaded. This article walks through how that figure is built: how auditors reconstruct revenue from platform records, payment accounts and bank statements, how far back they can go, how VAT and income tax are computed separately, how the daily surcharge of 0.05 percent accumulates, how penalty multiples are set, why deregistering the entity does not end liability, and a three-part self-check on cash flows, filings and entities.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">TD GROUP 彤鼎团队</a></div></div></div>
+<article>
+<div class="answer">电商补税是指税务机关查实网店或主播通过私户收款、少报或不报收入后，把被隐匿的收入还原、分税种补算税款，再加收滞纳金并处以罚款的过程。滞纳金按《税收征管法》从滞纳之日起按日加收万分之五，罚款对偷税行为处不缴或少缴税款百分之五十以上五倍以下。2026年7月国家税务总局曝光的7起网红网店案件里，追缴税款、滞纳金与罚款的合计约为少缴税款的两倍上下。私户收款不改变收入的性质，注销主体也不消灭已经发生的纳税义务。具体以主管税务机关口径与法规原文为准。---</div>
+<h2>其一、追缴通知上的三个数，各是怎么来的</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/ecommerce-back-tax-how-calculated-1.jpg" alt="其一、追缴通知上的三个数，各是怎么来的" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：补税那天店主拿到的不是一个数，是税款、滞纳金、罚款三个数，后两个都从头一个数派生出来，加总才是追缴合计。</strong></p>
+<p>杭州一名网络主播，直播带货的货款和坑位费有相当一部分打进了个人账户，申报时又把一部分经营收入换了个名目。税务机关查实后认定少缴税款三百一十三点四五万元，追缴税款、滞纳金加罚款，合计六百三十一点九六万元，处理时间是2025年12月。</p>
+<p>六百三十一万比三百一十三万多出来的那三百多万，不是税务机关随手加上去的。它由两块组成：一块是滞纳金，从税款本该缴的那天起按日计算；另一块是罚款，按少缴税款的倍数定。三块加在一起，才是追缴通知上的合计数。</p>
+<p>打个比方，税款是本来就该还的本金，滞纳金是本金拖着不还的利息，罚款是违约金。本金定了，利息看拖了多久，违约金看情节轻重。店主往往只盯着本金那一个数，可后两个数才是把合计推到两倍的东西。</p>
+<p>这七起案件是国家税务总局2026年7月10日集中曝光的，全部是网红或网店，共同点是私户收款、转换收入性质、少报或者不报。把合计数除以少缴税款，七起都落在一点七倍到二点二倍之间。</p>
+<p>所以本文只回答一件事：这个合计数是怎么算出来的。至于平台从2025年起按季度向税务机关报送经营者收入这件事，它是店主被盯上的起点，不在本文展开，专题另有一篇讲它。</p>
+<h2>其二、稽查怎么把私户流水还原成收入</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/ecommerce-back-tax-how-calculated-2.jpg" alt="其二、稽查怎么把私户流水还原成收入" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：稽查还原收入不靠店主的账本，靠平台后台订单、支付账户结算记录和个人银行流水三样对在一起，缺账也算得出来。</strong></p>
+<p>聊城一家做网店的商贸经营部，货款长期打进老板和家人的个人银行卡，压根没办理过纳税申报。税务机关查实少缴税款五百四十四点七二万元，追缴合计九百七十一点二九万元，处理时间是2025年7月。</p>
+<p>这家店没有账，可稽查照样算得出收入。头一样是平台后台：每一笔订单、退款、平台扣的服务费，平台自己都留着记录，税务机关调得到。接着是支付账户：平台结算的钱先进支付账户，再提现到银行卡，每一笔提现都有对应关系。</p>
+<p>再一样是银行流水。私户收款的钱最终都要落到某张卡上，把老板本人、配偶、员工名下那几张卡的流水拉出来，跟平台结算和支付账户的提现一比，进了多少、出了多少、哪些是货款、哪些是个人消费，基本都能对上。</p>
+<p>三样之外还有旁证。快递面单上有发货量，仓库有进出库记录，供货商那边有对账单，这些数跟平台订单量一比，多发了多少货、多收了多少钱，量级立刻显出来。店主说货是送朋友的、钱是借来的，要拿得出对应的凭据才站得住。</p>
+<p>用大白话说，私户收款就是把店里的钱装进自己口袋，可口袋上有拉链，拉链的记录在平台和银行手里。稽查做的事，就是把那几条记录拼成一张完整的收入表。店主自己申报的数，只是拿来跟这张表对照的。</p>
+<h2>其三、转换收入性质是什么意思，往前能追多少年</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/ecommerce-back-tax-how-calculated-3.jpg" alt="其三、转换收入性质是什么意思，往前能追多少年" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：转换收入性质是把本该按经营所得申报的钱换成税负更轻的名目去报，一旦定性为偷税，追征不受一般年限限制。</strong></p>
+<p>沈阳和兰州各有一名主播，一个把直播佣金换了名目申报，一个直接把部分收入隐匿不报，分别少缴税款一百六十七点四六万元和九十七点七四万元，同样在这次曝光的七起里。</p>
+<p>「转换收入性质」听起来专业，说白了是这样：主播帮品牌带货拿的佣金和坑位费，本来属于经营所得或者劳务报酬，有人把它包装成个人之间的借款、赠与，或者用另一个主体的名义收下来，报税时按更轻的口径走。稽查还原流水时，钱的来路和用途一对，名目就站不住了。</p>
+<p>往前追多少年，是店主最关心的问题。《税收征管法》对一般性的少缴税款规定了追征年限，但对偷税、抗税、骗税明确不受这个年限限制。这意味着，只要被定性为偷税，从私户收款开始的那一年起，账都可能被翻出来。</p>
+<p>偷税和算错账是两回事。申报时把数字填错了，或者对政策理解有偏差，税务机关补税的同时，一般按追征年限处理；而私户收款、不设账、做假申报，这些动作本身就说明是有意少报，落进的是偷税那一档。定性不同，追多少年、罚多少倍，都跟着不同。</p>
+<p>上面这几起案件的处理时间集中在2025年下半年到2026年初，而查的收入往往横跨好几个年度。具体追到哪一年，以主管税务机关的认定为准。关键在于，时间不会替店主把旧账抹掉。</p>
+<h2>其四、税款是怎么算的：增值税和所得税分开算</h2>
+<p><strong>结论先行：还原出来的收入要分两道算税，先按销售额算增值税，再按扣掉成本后的所得算所得税，没有成本凭证的店补得更多。</strong></p>
+<p>遂宁一家通讯经营部，手机和配件通过网店销售，货款进私户，申报时做了虚假申报，查实少缴税款二百八十一点七一万元，追缴合计四百六十九点二二万元，处理时间是2025年10月。</p>
+<p>头一道是增值税。增值税看的是销售额，跟赚没赚钱无关。现行规则下，小规模纳税人季度销售额三十万元以内免增值税，适用百分之三征收率的部分目前减按百分之一征收；年销售额超过五百万元就要登记为一般纳税人，按一般计税方法算。私户收款被还原后，这些线一条条重新划。</p>
+<p>假设有家做服装的网店，按个体户小规模纳税人申报，每个季度报的销售额都在三十万元以内，年年免税。稽查把私户流水还原之后，一年实际卖了七百万元，早就过了五百万元那条线。那么从超过的那个时点起，它本该登记为一般纳税人，增值税要按一般计税方法重算，前面免掉的那部分也要补。</p>
+<p>第二道是所得税。个体工商户和个人独资企业交的是个人所得税里的经营所得，公司交企业所得税。计税依据是收入减去成本费用，可私户收款的店往往拿不出进货发票和费用凭证，成本扣不了多少，所得就显得特别高。</p>
+<p>于是出现一个反直觉的结果：查账那天，成本凭证越少的店，补的税越多。当年觉得开发票麻烦、能省就省，到了补税那天，省下来的每一张发票都变成了扣不掉的成本。具体税率与优惠的适用，以主管税务机关口径为准。</p>
+<h2>其五、滞纳金按日万分之五，三年滚出一半</h2>
+<p><strong>结论先行：滞纳金从税款本该缴纳的次日起按日加收万分之五，一年累计约为税款的百分之十八，拖三年就超过税款的一半。</strong></p>
+<p>滞纳金不是罚款，它是对国家税款被占用的补偿，性质更像利息，但计算方式比多数贷款都狠：按日万分之五，不分节假日，从滞纳之日起一直算到实际缴清那天。</p>
+<p>把这个数放大看。万分之五乘以三百六十五天，一年就是百分之十八点二五。假设有家网店2023年少缴了一百万元税款，2026年才被查出来并缴清，拖了整三年，滞纳金大约是五十五万元，超过税款的一半。</p>
+<p>这就是为什么前面那几起案件里，追缴合计常常远超税款本身。查的年度越早，滞纳金滚得越长；而私户收款的店通常不是一年两年，而是从开店那天起就这么干，最早那几年的税款，滞纳金可能已经跟本金差不多。</p>
+<p>对店主来说，滞纳金有一个特点值得记住：它不因为你不知道而停止计算。稽查通知是哪天到的不重要，税款本该缴的那天才是起点。因此拖延不是策略，是让数字每天往上走。</p>
+<h2>其六、罚款倍数怎么定，为什么合计是两倍上下</h2>
+<p><strong>结论先行：偷税的罚款是不缴或少缴税款的百分之五十以上五倍以下，实际倍数看情节，加上税款和滞纳金，合计常落在两倍上下。</strong></p>
+<p>宁波一名网络主播，私户收款加虚假申报，少缴税款一百零八点五五万元，追缴合计一百八十五点三七万元，处理时间是2026年3月。合计数除以少缴税款，大约一点七倍，是七起里偏低的一档。</p>
+<p>《税收征管法》对偷税的处罚是追缴税款、滞纳金，并处不缴或少缴税款百分之五十以上五倍以下的罚款。这个区间很宽，落在哪一档，看的是情节：是不是主动配合、有没有在检查期间补缴、有没有伪造凭证、是不是屡查屡犯。</p>
+<p>把三块拼起来算一遍：税款一倍打底，滞纳金按年限滚，通常是税款的两三成到一半，罚款多数落在一倍以内。加总下来，一点七倍到二点二倍，正是这七起案件的实际区间。合计约为少缴税款的两倍上下，不是巧合，是算式本身决定的。</p>
+<p>接着上一章那家假设的网店往下算。少缴税款一百万元，拖了三年，滞纳金五十五万元左右；罚款如果按百分之五十定，是五十万元，按一倍定，是一百万元。合计落在两百零五万元到两百五十五万元之间，也就是少缴税款的两倍到两倍半。这个假设的账，跟七起真实案件的区间对得上。</p>
+<p>倍数怎么压低，规则也写得清楚：检查开始前主动补缴、检查期间如实说明情况并配合的，处罚从轻。反过来，销毁凭证、拒不提供流水、继续做假账的，倍数往上走。具体倍数由主管税务机关根据案情认定。</p>
+<h2>其七、注销公司为什么不是终点</h2>
+<p><strong>结论先行：注销主体不消灭已经发生的纳税义务，个体户和个独的税款由经营者本人承担，公司注销前要清税，清税不实可以追到股东。</strong></p>
+<p>北京一家教育科技公司，课程款走私户，申报时做了虚假申报，查实少缴税款一百零四点八八万元，追缴合计一百八十七点零二万元，处理时间是2025年11月。有店主看到这类案子的头一个念头是：把公司注销了是不是就没事了。</p>
+<p>答案是不行，而且分主体看。个体工商户和个人独资企业没有独立的法人财产，经营期间的税款本来就是经营者个人的债务，注销登记只是把营业执照交回去，债务跟着人走。</p>
+<p>公司注销前必须向税务机关办理清税，把该缴的税缴清、该报的报完。清税时隐瞒了私户收款的收入，注销后被查出来，税务机关可以要求股东和清算义务人承担责任。至于换一个主体接着开店，平台报送的收入信息按身份归集，新主体和旧账户一对就连上了。</p>
+<p>假设有位店主把原来的个体户注销，用配偶的名字重新办了一张执照，仓库还是那个仓库，收款卡还是那几张卡，主播还是自己。平台报送的信息里，身份、账户、店铺三样一对，新店和旧店就是同一个人的生意。至于一个店该不该拆成几个主体，专题另有一篇讲，不在本文展开。</p>
+<p>用一句话概括：纳税义务是在收到钱的那一刻发生的，后面不管怎么换执照、换名字、换账户，都是同一笔账。因此，历史那段该怎么衔接，得在被查之前主动处理，而不是指望注销把它带走。</p>
+<h2>其八、三份口径自查：流水、申报、主体</h2>
+<p><strong>结论先行：私户收款的店主被查之前能做的，是把流水口径、申报口径、主体口径三样对齐，让平台报的数、自己报的数和收款主体是同一件事。</strong></p>
+<p>头一份是流水口径。把平台后台的结算总额、支付账户的提现总额、所有收款银行卡的进账总额三个数拉出来，按年度对。三个数对不上的地方，就是稽查会先问的地方。</p>
+<p>第二份是申报口径。把每年实际申报的销售额和所得，跟流水口径算出来的数放在一起。差额是多少，差在哪个年度，是收入没报还是名目换了，自己先算清楚。差额乘以对应的税负，再加上按日万分之五滚到今天的滞纳金，就是一个大致的底数。</p>
+<p>第三份是主体口径。收款的是谁，申报的是谁，营业执照上是谁，三者是不是同一个。个体户定期定额的，实际经营规模有没有早就超过定额和核定适用的前提；用个人名义收公司货款的，性质到底算什么。这一份对不齐，前两份算得再准也落不了地。</p>
+<p>三份口径对齐之后，才谈得上往后怎么走。核定征收是《税收征管法》认可的一种征收方式，前提是主体和规模符合主管税务机关的认定条件，它解决的是今后的账怎么算，不是把过去私户收款那段一笔勾销。先把历史账补齐，再去申请核定，顺序反了，申请本身就过不了。</p>
+<p>彤鼎的税务筹划服务里有一条电商税务合规路线图（含核定征收申请）：先判断这家店的主体和规模能不能核、在哪个主管税务机关能核，申请这一步我们帮你办，最后把核定之前那段历史账衔接上。我们跟华尔街俱乐部有合作，私董会上这类历史账怎么衔接的案子，听得多一些。</p>
+<p>最后留一个问题。开头那位杭州主播，如果在2025年10月平台头一次报送收入之前就把三份口径对齐、主动补缴，罚款倍数大概率会往下走；如果等稽查上门再补，合计数就是六百三十一万那个量级。换成是你，会在平台报送之前主动去补，还是等税务机关先来找？</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="assessed-taxation-explained-ecommerce.html" style="color:#6b5426;font-weight:700;">核定征收不是优惠，是税务机关替你算账：一家食品网店从定额到建账的一年</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ecommerce-platform-tax-reporting.html" style="color:#6b5426;font-weight:700;">平台每个季度把你的收入报给税务机关了，这件事到底改变了什么</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="dual-class-share-structure.html" style="color:#6b5426;font-weight:700;">同股不同权：它不是一份能签的文件，而是长在注册地和上市地里的一套安排</a></li></ul></div><div class="brandbox">
+<h3>关于 TD GROUP 彤鼎与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由 TD GROUP 彤鼎团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信 esonleo</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
