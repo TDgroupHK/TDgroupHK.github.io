@@ -167,3 +167,14 @@ footer{background:#070604;border-top:1px solid var(--hair);padding:96px 0 56px;f
 .legal{color:#625b49;}
 .q h3 i{font-family:var(--serif);color:var(--gold);letter-spacing:2px;}
 
+/* ---------- 复制微信号按钮（2026-09-18，配 js/contact.js） ----------
+   <button class="btn btn-ghost"> 用的是既有按钮类，这里只把 button 元素的
+   系统默认底色与字体抹掉，⛔ 不设 border，免得盖掉 .btn-ghost 的金色细边。
+   ⛔ 选择器必须带 [data-wx-copy]：写成 button.btn 会连自测页那几个
+   <button class="btn"> 的金色实底一起抹掉（底色没了、深色字压深色底 = 按钮看不见，
+   而且合规闸、控制台、截图都不报错，2026-09-18 本地预览逐个量样式才发现）。 */
+button[data-wx-copy]{font-family:inherit;background:transparent;cursor:pointer;-webkit-appearance:none;appearance:none;}
+button[data-wx-copy]:hover{background:rgba(201,169,98,.1);}
+.wx-plain{display:none;margin-left:12px;color:var(--gold-hi);letter-spacing:2px;
+  -webkit-user-select:all;user-select:all;}
+
