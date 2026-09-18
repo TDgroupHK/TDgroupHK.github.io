@@ -1,0 +1,295 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>从核定转查账：电商企业账没建起来，先做这五步 | TD GROUP 彤鼎知识文库</title>
+<meta name="description" content="核定征收改成查账征收，对很多电商企业不是换一种算法那么简单：收入端平台已经按季向税务机关报送，成本端却是个人账户付款、没有发票、库存对不上。本文用一家假设的跨境电商公司被要求查账后的九十天，讲清建账要从哪四路流水开始、核定期间的历史怎么衔接而不必重算、退货和刷单在账上各怎么处理、成本凭证怎么补、财务人员和代账公司各管什么，以及多久能把账做到税务机关看得懂。落点是一份按顺序排好的五步清单。">
+<link rel="canonical" href="https://tdgroup.hk/articles/ecommerce-from-assessed-to-audited-books.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="TD GROUP 彤鼎知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="TD GROUP 彤鼎">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="从核定转查账：电商企业账没建起来，先做这五步 | TD GROUP 彤鼎知识文库">
+<meta property="og:description" content="核定征收改成查账征收，对很多电商企业不是换一种算法那么简单：收入端平台已经按季向税务机关报送，成本端却是个人账户付款、没有发票、库存对不上。本文用一家假设的跨境电商公司被要求查账后的九十天，讲清建账要从哪四路流水开始、核定期间的历史怎么衔接而不必重算、退货和刷单在账上各怎么处理、成本凭证怎么补、财务人员和代账公司各管什么，以及多久能把账做到税务机关看得懂。落点是一份按顺序排好的五步清单。">
+<meta property="og:url" content="https://tdgroup.hk/articles/ecommerce-from-assessed-to-audited-books.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="从核定转查账：电商企业账没建起来，先做这五步 | TD GROUP 彤鼎知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:3px;font-size:17px;font-family:Georgia,"Times New Roman",serif;}
+.logo .nm small{display:block;color:var(--gold);font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:400;font-size:11px;letter-spacing:9px;margin-top:3px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"从核定转查账：电商企业账没建起来，先做这五步","inLanguage":"zh-CN","abstract":"When a Chinese tax authority moves an e-commerce business from assessed taxation to audited, books-based taxation, the danger is not the notice itself. Platforms now report each seller's revenue to the tax authority every quarter, so the income side is already visible; the cost side consists of supplier payments from personal accounts, platform fees without invoices and inventory nobody has counted. It follows a hypothetical cross-border e-commerce company through its first ninety days under audited taxation: gathering four streams of records, setting opening balances without recomputing the assessed period, separating returns from fake orders, rebuilding cost vouchers, dividing work between in-house staff and a bookkeeping firm, and how long the books take to become readable to a tax officer.","author":{"@type":"Organization","name":"TD GROUP 彤鼎"},"publisher":{"@type":"Organization","name":"TD GROUP 彤鼎","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/ecommerce-from-assessed-to-audited-books.html"},"datePublished":"2026-09-18","dateModified":"2026-09-18","description":"核定征收改成查账征收，对很多电商企业不是换一种算法那么简单：收入端平台已经按季向税务机关报送，成本端却是个人账户付款、没有发票、库存对不上。本文用一家假设的跨境电商公司被要求查账后的九十天，讲清建账要从哪四路流水开始、核定期间的历史怎么衔接而不必重算、退货和刷单在账上各怎么处理、成本凭证怎么补、财务人员和代账公司各管什么，以及多久能把账做到税务机关看得懂。落点是一份按顺序排好的五步清单。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+<link rel="stylesheet" href="../css/nav.css">
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="TD GROUP 彤鼎"><span class="nm">TD GROUP<small>彤鼎</small></span></a>
+<input type="checkbox" id="navtg" class="navtg" aria-hidden="true"><label for="navtg" class="navbtn" aria-label="菜单"><span></span><span></span><span></span></label>
+<div class="menu"><a href="/">首页</a><a href="/about.html">关于</a><div class="mdd"><a href="/#services">服务<span class="ar">▾</span></a><div class="mdd-p"><div><span class="mdd-h">融资与上市</span><a href="/financing-program.html">融资路线图</a><a href="/startup-program.html">初创融资服务</a><a href="/pre-ipo-program.html">上市预备期</a><a href="/asset-platform.html">海外资产上市</a><span class="mdd-h">工具</span><a href="/hk-ipo-checkup.html">上市可行性自测</a><a href="/listing-standards-check.html">上市门槛速查</a></div></div></div><a href="/club.html">俱乐部</a><a href="/legacy.html">传承</a><a href="/library.html">文库</a><a href="/faq.html">问答</a><a href="mailto:liaoqijie@tdgroup.hk">联系</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">初创融资 EARLY STAGE</div><h1>从核定转查账：电商企业账没建起来，先做这五步</h1>
+<div class="sub">税务机关把一家电商企业从核定征收改成查账征收的那一刻，收入平台已经按季报上去了，成本却一张凭证都拿不出来，这九十天里先做什么、后做什么，决定的是接下来几年按多大的数交税</div><div class="en">When a Chinese tax authority moves an e-commerce business from assessed taxation to audited, books-based taxation, the danger is not the notice itself. Platforms now report each seller's revenue to the tax authority every quarter, so the income side is already visible; the cost side consists of supplier payments from personal accounts, platform fees without invoices and inventory nobody has counted. It follows a hypothetical cross-border e-commerce company through its first ninety days under audited taxation: gathering four streams of records, setting opening balances without recomputing the assessed period, separating returns from fake orders, rebuilding cost vouchers, dividing work between in-house staff and a bookkeeping firm, and how long the books take to become readable to a tax officer.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">TD GROUP 彤鼎团队</a></div></div></div>
+<article>
+<div class="answer">从核定转查账是指税务机关不再按核定的定额或应税所得率替企业算税，而是要求企业自己设置账簿，凭真实的收入凭证和成本费用凭证计算应纳税额并申报。《税收征管法》第三十五条列出的核定情形，出发点是账查不了；账能查了，就回到查账。对电商企业来说，转换的难点不在收入，平台已经按季向税务机关报送经营者收入；难点在成本：采购没有发票、平台费用没有凭证、库存没人盘点，查账之下这些成本扣不下来，税就按大得多的基数算。建账的顺序是先收齐平台、支付、物流、采购四路流水，再定期初数衔接核定期间，然后把退货与刷单分开处理、补成本凭证，最后把公司自己人和代账公司的分工定下来。具体以主管税务机关口径与法规原文为准。---</div>
+<h2>其一、通知来的那天，账上什么都没有</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/ecommerce-from-assessed-to-audited-books-1.jpg" alt="其一、通知来的那天，账上什么都没有" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：假设一家跨境家纺电商公司被通知改成查账征收，收入平台早已报给税务机关，成本却没有一张凭证，这九十天决定往后几年交多少税。</strong></p>
+<p>假设有家做跨境家纺的电商公司，在几个海外平台上卖床品，去年营收两千多万元。公司成立头两年没有设置账簿，主管税务机关按《税收征管法》第三十五条，核定了一个应税所得率替它算税。老板一直以为，这就是做电商的常态。</p>
+<p>今年夏天，主管税务机关发来通知：公司规模已经超出核定的适用条件，从下个季度起改为查账征收，限期建账并按账申报。查账征收，说白了就是税务机关不再替你估，你自己拿账本证明赚了多少、花了多少，税按账上的数算。</p>
+<p>老板把财务叫来问账在哪。答案是：平台后台有流水，收款工具里有余额，采购是老板用个人账户付给工厂的，发票没要过，仓库里有多少货没人盘过。这就是转换那一刻的真实处境：收入端平台已经按季向税务机关报送，成本端却是空的。</p>
+<p>从通知那天起算，这家公司有九十天，要走到头一次按查账方式报税。本文就顺着这九十天讲：先做什么，后做什么，哪些事做错了几年都补不回来。核定征收本身是什么、什么条件下税务机关会核，本专题另有一篇讲透，这里不展开。</p>
+<h2>其二、为什么被改成查账的那一刻最危险</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/ecommerce-from-assessed-to-audited-books-2.jpg" alt="其二、为什么被改成查账的那一刻最危险" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：查账之下应纳税额按收入减成本算，电商企业的收入平台已经报了，成本没有凭证就扣不下来，税就按接近全部收入的基数算。</strong></p>
+<p>查账征收的算法只有一句话：应纳税所得额等于收入减去可以扣除的成本费用。收入这一端，自 2025 年 10 月起，平台企业已经按季度向主管税务机关报送平台内经营者的收入信息，税务机关手里有数。报送机制本身本专题另有一篇细讲，不在本文展开。</p>
+<p>危险出在成本那一端。税法允许扣的成本费用，要有合法凭证撑着：采购要有发票，平台服务费要有平台开的票，物流要有运费票。凭证没有，账上写了也扣不下来。收入是实的，成本是虚的，两者一减，应纳税所得额就被顶到接近收入本身。</p>
+<p>再假设一家做手机配件的网店，年销售额几百万元，货全从批发市场档口拿，老板用个人微信付款，从没要过发票。改成查账的头一个季度，代账公司按平台流水记了收入，成本一栏几乎空白，算出来的所得税比它核定时代交的高出好几倍。</p>
+<p>老板的头一反应是补开发票。档口愿意补的只有一小部分，而且补开的日期都在改成查账之后，改之前那几年的采购已经没法证明。这就是那一刻最危险的地方：不是税率变了，是过去几年没留凭证的习惯，在这一天全部变成了按收入交税的成本。</p>
+<p>库存是第三个坑。查账要求账上的存货跟仓库里的货对得上，而核定时代没人盘点。期初库存是多少、按什么单价入账，直接决定今后卖出去的货有多少成本能结转。这些数一开始定错，后面每一个季度都跟着错。</p>
+<h2>其三、头一步：把四路流水收齐，先别急着记账</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/ecommerce-from-assessed-to-audited-books-3.jpg" alt="其三、头一步：把四路流水收齐，先别急着记账" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：电商企业建账从收齐四路流水开始：平台后台的订单结算、收款账户的进出、物流的发货运费、采购的付款到货，缺一路账就对不上。</strong></p>
+<p>回到那家跨境家纺公司。头十五天，它没有先找代账公司，而是先做了一件基础的事：把过去一整年的流水全部导出来。流水，说白了就是每一笔钱和每一件货进出的记录。电商企业的流水散在下面四个地方。</p>
+<p>头一路是平台后台：每个店铺的订单明细、退款明细、平台结算单和平台扣的各项费用。第二路是收款账户：跨境收款工具、对公账户，以及过去用来收款付款的个人账户，一个都不能漏，因为平台报送的收入会跟这些账户去比。</p>
+<p>第三路是物流：发货记录、运费账单、海外仓的仓储费用。第四路是采购：付给工厂的每一笔钱、对应的到货单、有没有要到发票。这四路数据凑齐，才能回答查账要问的三个问题：卖了多少、花了多少、还剩多少货。</p>
+<p>这家公司导完流水，发现两个平台的结算币种不一样，收款工具把不同店铺的钱混在一个余额里，个人账户里还有一部分收入。这些问题在核定时代无所谓，现在每一条都要归到具体店铺、具体月份。这半个月，就是在把混在一起的东西拆开。</p>
+<p>这一步先于记账，是因为流水收不齐就记账，代账公司只能按拿到手的部分记，而漏掉的那部分会在平台报送的数据里被税务机关看见。收入被看见、成本没记上，正是上一章讲的那种按收入交税的局面。</p>
+<h2>其四、第二步：核定期间的历史不用重算，但要说得清</h2>
+<p><strong>结论先行：核定期间已按核定方式纳税的收入不需要重新计算，需要做的是定出期初数：库存、应收、应付和固定资产各是多少，并附上依据。</strong></p>
+<p>老板最担心的一件事，是改成查账以后，税务机关会不会把过去几年按核定交的税全部推倒重算。一般来说不会：核定征收是税务机关依法作出的征收决定，那段期间的税已经按那种方式算过。转换是从新的起点往后查账，不是把过去几年重新翻一遍。</p>
+<p>但「不用重算」不等于「不用管」。查账的账簿要有期初数，也就是转换那一天，公司手里有多少货、别人欠公司多少钱、公司欠别人多少钱、有哪些设备和固定资产。这几个数没有，往后的账就没有起点，成本结转从头就错。</p>
+<p>那家跨境家纺公司在第二个月做的就是这件事：仓库和海外仓各盘一次点，按最近一批采购价给存货定价；把平台里还没结算的货款列成应收；把欠工厂的货款列成应付。这些数做成一份期初清单，附上盘点记录和采购单，将来税务机关问起有据可查。</p>
+<p>有一种情况例外，那就是核定期间有收入根本没申报过。国家税务总局 2026 年 7 月曝光的一批网店偷税案里，有一家网店经营部，私户收款、没有办理纳税申报，少缴税款 544.72 万元，追缴税款加滞纳金加罚款合计 971.29 万元，约为少缴税款的两倍上下。</p>
+<p>这类情况不属于衔接问题，属于补税问题。私户收款的收入，在核定的定额或应税所得率里从来没有体现过，税务机关查实的是隐匿收入，按偷税追缴税款、滞纳金并处罚款。补税那天的数怎么算出来的，本专题另有一篇专讲，这里只说一句：转换之前自己先把这段历史理清楚，比被查出来便宜得多。</p>
+<h2>其五、第三步：退货和刷单，账上要分开处理</h2>
+<p><strong>结论先行：退货凭平台退款记录冲减收入，是正常处理；刷单的流水不是真实销售，但拿不出证据就会被当成收入计税，这条路的代价就在这里。</strong></p>
+<p>再假设一家做女装直播的公司，退货率高，同时前两年为了冲排名做过刷单。改成查账以后，这两件事在账上要走完全不同的路。退货是正常经营的一部分：顾客退款，平台有退款记录，账上按记录冲减当期收入，退回的货重新入库。</p>
+<p>关键在于，冲减收入的依据必须是平台的退款明细，而不是老板口头说的一个退货率。平台向税务机关报送的收入信息里，退款有据可查，企业账上的冲减数要能跟平台的数对上。对不上的那部分，税务机关会按收入看。</p>
+<p>刷单就麻烦得多。刷单，说白了就是自己或找人下假订单，把销量做高，钱转一圈回来。这些订单在平台的数据里跟真实订单长得一样，平台报送的收入里包含了它们。企业要主张这部分不是真实收入，就得拿出证据：资金怎么转出去的、怎么转回来的、货有没有真发。</p>
+<p>证据拿不出来，这些假订单就会被当成真实收入计税，等于花钱买了个更高的税基。证据拿得出来，等于向税务机关自证做过虚假交易，平台规则和相关法规对这件事另有处理。这就是刷单这条路的代价：它在核定时代看不见，在查账那天变成一道无论怎么答都要付出成本的题。</p>
+<p>那家女装公司的处理方式是：从改成查账那天起彻底停掉刷单，历史上那部分按能找到的资金往返记录逐笔列清，列不清的按收入认下来。往后的账干净了，历史的账用钱买了个了断。具体以主管税务机关口径为准。</p>
+<h2>其六、第四步：把成本凭证一张张补回来</h2>
+<p><strong>结论先行：成本凭证要从采购、平台费用、物流、汇兑四类去补，补不到的历史成本只能认下来，能补的从改成查账那天起一张都别再漏。</strong></p>
+<p>成本凭证的补法，分「往后」和「往前」两个方向。往后简单：从改成查账那天起，采购一律走对公账户付款、一律要发票，平台服务费在平台后台按月下载发票，物流运费按月要票。习惯改过来，往后的成本就扣得下来。</p>
+<p>往前难。跨境家纺公司过去一年付给工厂的钱，能补开发票的只有几家长期合作的工厂，其余的只有转账记录和到货单。转账记录和到货单可以证明钱付了、货到了，但能不能作为税前扣除的凭证，各地掌握不同，要跟主管税务机关确认。</p>
+<p>平台费用有一个电商企业常忽略的点。境内平台的服务费、推广费，平台后台一般可以开具发票；境外平台扣的费用，没有境内发票，靠的是平台结算单、合同和付款记录。这一类凭证怎么算合规，以主管税务机关口径为准，事先问清，比事后被剔除强。</p>
+<p>跨境电商还有一层：收入是外币，成本是人民币，汇率什么时候折算、按哪个汇率折算，决定收入的人民币金额。这一块和跨境电商出口的增值税处理另有专门口径，本文不展开，只提醒一句：折算规则要在建账之初就定下来，中途改，前后的收入就对不上。</p>
+<p>补凭证这一步做完，跨境家纺公司的账上，成本从一片空白变成了一部分有发票、一部分有转账和到货单、一部分什么都没有。什么都没有的那部分，老板决定认下来，按不能扣除处理。这是一个用钱换清楚的决定，代价是一次性的，拖着不决的代价是每个季度的。</p>
+<h2>其七、第五步：谁来做账，多久能做到税务机关看得懂</h2>
+<p><strong>结论先行：代账公司管的是拿到凭证之后记账报税，收流水、盘库存、要发票这三件事只能公司自己人做，分工不清账就永远做不完。</strong></p>
+<p>很多电商老板以为，改成查账无非是多请一家代账公司。再假设一家做户外用品的公司，把所有事都交给代账公司，自己什么都不管。三个月后代账公司交出来的账，收入只有对公账户那一部分，成本几乎是零，库存一栏是空的，因为它拿到的只有这一路流水。</p>
+<p>代账公司的活，是把凭证变成账、把账变成申报表。凭证从哪来，它管不了。四路流水的导出、仓库的盘点、跟工厂要发票、把个人账户里的收入归到店铺，这些事要的是对公司业务的了解，只能公司自己人做。哪怕是一个人兼着做，也要有人把这一头抓住。</p>
+<p>跨境家纺公司的分工是这样定的：公司里一位运营兼做数据员，每月固定日期把平台、收款、物流、采购四路数据导出交给代账公司；仓库每月末盘一次点；老板自己签每一笔对公付款。代账公司负责记账、算税、报税，遇到拿不准的凭证问题去问主管税务机关。</p>
+<p>多久能做到「税务机关看得懂」？标准不高：账上的收入跟平台报送的收入对得上，成本有凭证或者有清楚的说明，库存跟盘点记录对得上，申报表上的数能从账上追出来。跨境家纺公司在第九十天交出头一份按查账申报的季度申报表，做到了这四条。</p>
+<p>前面三十天是最乱的，第二个月开始每月能结出账，第三个月申报表跟账对得上。我们跟华尔街俱乐部有合作，类似从核定转过来的电商企业见过一些，九十天能走到这一步的，都是头一个月就把流水收齐的；还在想着怎么把核定保住的，半年过去账还是没起来。</p>
+<h2>其八、五步清单，和一个要老板自己回答的问题</h2>
+<p><strong>结论先行：从核定转查账，五步的顺序是收流水、定期初、分退货与刷单、补凭证、定分工，顺序错了每一步都要返工，账一年都建不起来。</strong></p>
+<p>把这九十天收成一份清单。头一步收齐四路流水：平台、收款账户、物流、采购，个人账户不能漏。第二步定期初数：盘点存货、列出应收应付和固定资产，做成一份有依据的期初清单。第三步把退货和刷单分开：退货凭平台退款记录冲减收入，刷单能证明的按资金往返列清，不能证明的按收入认下。</p>
+<p>第四步补成本凭证：往后一律对公付款、一律要票，往前能补的补，补不到的认下来，凭证口径先问主管税务机关。第五步定分工：公司自己人管数据、盘点和要票，代账公司管记账和申报，每月固定日期交接。五步走完，账就到了税务机关看得懂的程度。</p>
+<p>顺序不能倒。先请代账公司再收流水，账会缺一大块；先补凭证再定期初，库存单价没有起点；先记账再处理刷单，账上会混进一批说不清的收入。每一步都是下一步的地基，很多企业改成查账一年了账还是乱的，不是不努力，是顺序错了。</p>
+<p>账建起来，还有另一重用处。将来这家公司要融资、被收购或者上市，投资人和券商会翻它核定征收那段历史，翻的正是这份期初清单和这九十天的记录。那是尽调的事，本专题另有一篇专讲，不在本文展开。</p>
+<p>彤鼎的税务筹划服务里有一条电商税务合规路线图（含核定征收申请）：先判断这家店的主体和规模能不能核、在哪个主管税务机关能核，申请这一步我们帮你办，最后把核定之前那段历史账衔接上；对已经被改成查账的企业，路线图的落点就是本文这五步。</p>
+<p>最后留一个问题给开头那位跨境家纺老板，也留给正在读的你。改成查账的通知到了，补不到凭证的那部分历史成本，你是一次性认下来、把往后的账做干净，还是先只补往后、历史那段留到被问起再说？本质上，这是在决定代价是现在付，还是连着滞纳金往后付。</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ecommerce-entity-and-tax-method.html" style="color:#6b5426;font-weight:700;">个体户、个独还是公司：电商选哪种主体，核定征收的门就开在哪</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="sole-proprietorship-to-company.html" style="color:#6b5426;font-weight:700;">做了十年的个体户，什么时候该换成公司</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="retained-earnings-capitalization-tax.html" style="color:#6b5426;font-weight:700;">融资前想把注册资本做大一点：账上的钱一分没动，那笔税先到</a></li></ul></div><div class="brandbox">
+<h3>关于 TD GROUP 彤鼎与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由 TD GROUP 彤鼎团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信 esonleo</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
