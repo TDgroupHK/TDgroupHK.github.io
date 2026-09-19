@@ -462,8 +462,8 @@
   "title": "商标、专利、域名：上市前无形资产梳理最容易漏的三件事"
  },
  "ipo-cost": {
-  "body_hash": "f15fb310aa155809",
-  "last_reviewed": null,
+  "body_hash": "3b0c9a87e0b91514",
+  "last_reviewed": "2026-09-19",
   "last_substantive": null,
   "title": "赴美上市到底要花多少钱"
  },
@@ -696,8 +696,8 @@
   "title": "上市公司季报合规指南"
  },
  "refinancing-tools": {
-  "body_hash": "9450cd25e14fba81",
-  "last_reviewed": "2026-08-01",
+  "body_hash": "c5179d100aa4464f",
+  "last_reviewed": "2026-09-19",
   "last_substantive": "2026-08-01",
   "title": "再融资工具ATM与增发"
  },
@@ -724,6 +724,12 @@
   "last_reviewed": "2026-08-01",
   "last_substantive": "2026-08-01",
   "title": "路演完整准备指南"
+ },
+ "rule144-10b5-1": {
+  "body_hash": "f707d508ae16d6c8",
+  "last_reviewed": "2026-09-19",
+  "last_substantive": null,
+  "title": "中概股高管减持：Rule144与10b5-1计划怎么配合"
  },
  "rwa-tokenization": {
   "body_hash": "5cbfdd3eea6249ff",
@@ -774,9 +780,9 @@
   "title": "做空攻击防御"
  },
  "singapore-family-office": {
-  "body_hash": "91ed8f0f00881cae",
-  "last_reviewed": "2026-08-01",
-  "last_substantive": "2026-08-01",
+  "body_hash": "8182190e22b42a1d",
+  "last_reviewed": "2026-09-19",
+  "last_substantive": "2026-09-19",
   "title": "新加坡家族办公室"
  },
  "singapore-path": {
@@ -786,9 +792,9 @@
   "title": "新加坡路径赴美上市完整详解"
  },
  "singapore-substance": {
-  "body_hash": "bfbd98722162571f",
-  "last_reviewed": "2026-08-22",
-  "last_substantive": "2026-08-22",
+  "body_hash": "6234b98e0f776372",
+  "last_reviewed": "2026-09-19",
+  "last_substantive": "2026-09-19",
   "title": "新加坡公司实质要求与税务优惠"
  },
  "singapore-vs-hongkong": {
@@ -804,8 +810,8 @@
   "title": "社保公积金历史欠缴：上市尽调里最不体面的一道坎"
  },
  "spac-mainstream-2026": {
-  "body_hash": "e77dc0181f8b0baa",
-  "last_reviewed": "2026-08-22",
+  "body_hash": "18462e1ce206c371",
+  "last_reviewed": "2026-09-19",
   "last_substantive": null,
   "title": "新规之下，SPAC为什么成了中概股赴美的主流通道"
  },
