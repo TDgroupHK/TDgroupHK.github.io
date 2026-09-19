@@ -240,7 +240,6 @@ AI 落地自测十道题，定位先上 AI 的三个岗位
 - [Pre-IPO融资谈判要点](https://tdgroup.hk/articles/pre-ipo-financing.html)
 - [企业估值三种方法](https://tdgroup.hk/articles/valuation-methods.html)
 - [对赌协议五条保命线](https://tdgroup.hk/articles/vam-five-lines.html)
-- [识别假投资人与收购骗局](https://tdgroup.hk/articles/fake-investors.html)
 - [创始人控制权保护](https://tdgroup.hk/articles/founder-control.html)
 - [融资对赌条款风险](https://tdgroup.hk/articles/vam-clause-risk.html)
 - [期权池设计完整指南](https://tdgroup.hk/articles/option-pool.html)
