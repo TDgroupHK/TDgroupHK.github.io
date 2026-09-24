@@ -16,7 +16,10 @@
     if (k) localStorage.setItem('td_todo_k', k);
     var c = h.get('c');
     if (c) sessionStorage.setItem('td_todo_c', c);
-    if (k || location.search || h.has('reset')) {
+    // 2026-09-24：加密卡片页的钥匙（电脑屏幕上扫码带进来，只存这台手机）
+    var key = h.get('key');
+    if (key) localStorage.setItem('td_todo_key', key);
+    if (k || key || location.search || h.has('reset')) {
       history.replaceState(null, '', location.pathname + (c ? '#c=' + encodeURIComponent(c) : ''));
     }
   } catch (e) {}
@@ -99,12 +102,56 @@
     show('fail');
   };
 
+  // ⭐ 2026-09-24 起先走加密页：卡片加密后放在 tdgroup.hk/tdm/d.json，这里取回来解密显示，
+  //   全程不跳 trycloudflare（微信会拦它、换浏览器要重输口令、隧道一重启就换址 —— 那三样就是「老失效」）。
+  //   没钥匙 / 手机不支持解密 / 取不到，才回落下面的老隧道路子。
+  var b64 = function (s) { var b = atob(s), u = new Uint8Array(b.length);
+    for (var i = 0; i < b.length; i++) u[i] = b.charCodeAt(i); return u; };
+  var ukey = function (s) { s = s.replace(/-/g, '+').replace(/_/g, '/');
+    while (s.length % 4) s += '='; return b64(s); };
+  var sealed = function () {
+    var kk = null;
+    try { kk = localStorage.getItem('td_todo_key'); } catch (e) {}
+    if (!kk || !(window.crypto && crypto.subtle)) return Promise.reject(new Error('nokey'));
+    $('tip').textContent = '正在解开待办';
+    var meta;
+    return fetch('/tdm/d.json?_=' + Date.now(), { cache: 'no-store' })
+      .then(function (r) { if (!r.ok) throw new Error('d.json ' + r.status); return r.json(); })
+      .then(function (d) {
+        meta = d;
+        return crypto.subtle.importKey('raw', ukey(kk), 'AES-GCM', false, ['decrypt'])
+          .then(function (ck) { return crypto.subtle.decrypt({ name: 'AES-GCM', iv: b64(d.iv) }, ck, b64(d.ct)); });
+      })
+      .then(function (buf) {
+        var html = new TextDecoder('utf-8').decode(buf);
+        // 手机上点过「发完了」但当时没连上电脑的，补发一次；补发成功的从手机里删掉
+        var m = html.match(/var TUN=("[^"]*"),TK=("[^"]*")/);
+        var pend = [];
+        try { pend = JSON.parse(localStorage.getItem('td_pending') || '[]'); } catch (e) {}
+        if (m && pend.length) {
+          var tun = JSON.parse(m[1]), tk = JSON.parse(m[2]);
+          if (tun) pend.forEach(function (x) {
+            fetch(tun + '/mark?k=' + encodeURIComponent(tk), { method: 'POST', body: JSON.stringify({ id: x.id, st: x.st }) })
+              .then(function (r) { return r.json(); })
+              .then(function (j) { if (j.ok || /没找到/.test(j.err || '')) {
+                var q = JSON.parse(localStorage.getItem('td_pending') || '[]').filter(function (y) { return y.id !== x.id; });
+                localStorage.setItem('td_pending', JSON.stringify(q)); } }).catch(function () {});
+          });
+        }
+        var tail = '<div class="tip">更新于 ' + String(meta.ts || '') + '</div>' +
+          '<script>try{JSON.parse(localStorage.getItem("td_pending")||"[]").forEach(function(x){' +
+          'var c=document.getElementById("c_"+x.id);if(c)c.classList.add("gone");});}catch(e){}<\/script></body>';
+        document.open(); document.write(html.replace('</body>', tail)); document.close();
+      });
+  };
+
   // 口令：head 里那段已经把网址上带的存进来了，这里只读这台手机存过的；
   // 一次码（推到微信的登录链接）优先 —— 存着的口令可能是错的
   var k = null, c = null;
   try { k = localStorage.getItem(KEY); } catch (e) {}
   try { c = sessionStorage.getItem('td_todo_c'); } catch (e) {}
 
+  var legacy = function () {
   // t.json 会被改写，⛔ 一定要绕开缓存，否则隧道换址后这里还拿着旧的
   fetch('t.json?_=' + Date.now(), { cache: 'no-store' })
     .then(function (r) {
@@ -154,6 +201,11 @@
     .catch(function (e) {
       die('拿不到当前地址（' + e.message + '）。多半是家里那台电脑没开机，或者隧道刚好在重开，过几分钟再试。');
     });
+  };
+  sealed().catch(function (e) {
+    if (e && e.message !== 'nokey') { try { console.warn(e); } catch (x) {} }
+    legacy();
+  });
 })();
 </script>
 </body>
