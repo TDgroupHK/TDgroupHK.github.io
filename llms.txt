@@ -171,6 +171,10 @@ AI 落地自测十道题，定位先上 AI 的三个岗位
 
 ### 融资与条款 / FINANCING & TERMS
 
+- [从开口融资到钱到账，一家公司卡了七次：融资通常卡在哪几段](https://tdgroup.hk/articles/fundraising-stall-points.html)
+- [拿专利去银行押一笔钱：押出去之后，哪几件事你就说了不算](https://tdgroup.hk/articles/ip-pledge-financing.html)
+- [报表营收六个亿，尽调改成净额法只剩两亿：利润一分没少，估值为什么砍掉一半](https://tdgroup.hk/articles/gross-vs-net-revenue-diligence.html)
+- [美元基金点头投了，钱三个月还没到账：外资直接增资境内公司，交割卡在哪几步](https://tdgroup.hk/articles/foreign-fund-onshore-capital-increase.html)
 - [把厂里的设备卖给租赁公司再租回来：这笔钱贵在哪、险在哪](https://tdgroup.hk/articles/sale-leaseback-equipment-financing.html)
 - [账上挂着四千万应收，不动股权也能换成现金：代价写在追索权那三个字里](https://tdgroup.hk/articles/receivables-factoring-financing.html)
 - [投资人看完你的全部数据，最后说不投——那份保密协议管得住什么](https://tdgroup.hk/articles/nda-in-fundraising-diligence.html)
@@ -300,6 +304,8 @@ AI 落地自测十道题，定位先上 AI 的三个岗位
 
 ### 资本运作 / CAPITAL OPERATIONS
 
+- [上市公司把亏损子公司卖给大股东：过户了，担保和欠款还没走](https://tdgroup.hk/articles/listed-company-asset-divestiture.html)
+- [并购方案批了，配套融资只到了四成：剩下的现金对价谁来付](https://tdgroup.hk/articles/ma-matching-financing.html)
 - [上市公司买了七成之后：留在标的里的那三成原股东，能卡住你什么](https://tdgroup.hk/articles/minority-shareholder-after-acquisition.html)
 - [预案报上去第九天，问询函问的是一张采购表：把一块业务分出去单独上市，要过哪几关](https://tdgroup.hk/articles/subsidiary-spin-off-listing.html)
 - [持股平台签成有限合伙的那一天，老板顺手把自己的全部家当押了进去](https://tdgroup.hk/articles/lp-platform-gp-liability.html)

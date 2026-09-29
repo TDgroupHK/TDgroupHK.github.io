@@ -1,0 +1,288 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>上市公司把亏损子公司卖给大股东：过户了，担保和欠款还没走 | TD GROUP 彤鼎知识文库</title>
+<meta name="description" content="上市公司出售亏损子公司，尤其是卖给控股股东，卡点常常不在价格，而在出表之后留下的尾巴。本文用一家假设的主板公司讲清：出售怎样判断是否构成重大资产重组、丧失控股权为什么按子公司全额指标算、十二个月内分次出售怎么累计；关联交易的审议；原有担保变成关联担保怎么办；往来款为什么要在交易实施完成前收回；以及出售收益为什么救不了扣非净利润。">
+<link rel="canonical" href="https://tdgroup.hk/articles/listed-company-asset-divestiture.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="TD GROUP 彤鼎知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="TD GROUP 彤鼎">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="上市公司把亏损子公司卖给大股东：过户了，担保和欠款还没走 | TD GROUP 彤鼎知识文库">
+<meta property="og:description" content="上市公司出售亏损子公司，尤其是卖给控股股东，卡点常常不在价格，而在出表之后留下的尾巴。本文用一家假设的主板公司讲清：出售怎样判断是否构成重大资产重组、丧失控股权为什么按子公司全额指标算、十二个月内分次出售怎么累计；关联交易的审议；原有担保变成关联担保怎么办；往来款为什么要在交易实施完成前收回；以及出售收益为什么救不了扣非净利润。">
+<meta property="og:url" content="https://tdgroup.hk/articles/listed-company-asset-divestiture.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="上市公司把亏损子公司卖给大股东：过户了，担保和欠款还没走 | TD GROUP 彤鼎知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:3px;font-size:17px;font-family:Georgia,"Times New Roman",serif;}
+.logo .nm small{display:block;color:var(--gold);font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:400;font-size:11px;letter-spacing:9px;margin-top:3px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"上市公司把亏损子公司卖给大股东：过户了，担保和欠款还没走","inLanguage":"zh-CN","abstract":"When a China-listed company sells a loss-making subsidiary, especially to its controlling shareholder, the hard part is rarely the price. The moment the subsidiary leaves the consolidated group, guarantees the listed company gave for its bank loans become guarantees for a related party, and intercompany loans can become funds occupied by a related party. Using a hypothetical main-board company, this article explains how to test whether the sale is a major asset restructuring, why losing control means using the subsidiary's full financials, how sales within twelve months are aggregated, the approvals for related-party disposals, how to deal with legacy guarantees and intercompany balances before completion, and why a disposal gain does not fix net profit after non-recurring items.","author":{"@type":"Organization","name":"TD GROUP 彤鼎"},"publisher":{"@type":"Organization","name":"TD GROUP 彤鼎","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/listed-company-asset-divestiture.html"},"datePublished":"2026-09-29","dateModified":"2026-09-29","description":"上市公司出售亏损子公司，尤其是卖给控股股东，卡点常常不在价格，而在出表之后留下的尾巴。本文用一家假设的主板公司讲清：出售怎样判断是否构成重大资产重组、丧失控股权为什么按子公司全额指标算、十二个月内分次出售怎么累计；关联交易的审议；原有担保变成关联担保怎么办；往来款为什么要在交易实施完成前收回；以及出售收益为什么救不了扣非净利润。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+<link rel="stylesheet" href="../css/nav.css">
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="TD GROUP 彤鼎"><span class="nm">TD GROUP<small>彤鼎</small></span></a>
+<input type="checkbox" id="navtg" class="navtg" aria-hidden="true"><label for="navtg" class="navbtn" aria-label="菜单"><span></span><span></span><span></span></label>
+<div class="menu"><a href="/">首页</a><a href="/about.html">关于</a><div class="mdd"><a href="/#services">服务<span class="ar">▾</span></a><div class="mdd-p"><div><span class="mdd-h">融资与上市</span><a href="/financing-program.html">融资路线图</a><a href="/startup-program.html">初创融资服务</a><a href="/pre-ipo-program.html">上市预备期</a><a href="/asset-platform.html">海外资产上市</a><span class="mdd-h">工具</span><a href="/hk-ipo-checkup.html">上市可行性自测</a><a href="/listing-standards-check.html">上市门槛速查</a></div></div></div><a href="/club.html">俱乐部</a><a href="/legacy.html">传承</a><a href="/library.html">文库</a><a href="/faq.html">问答</a><a href="mailto:liaoqijie@tdgroup.hk">联系</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">资本运作 CAPITAL OPS</div><h1>上市公司把亏损子公司卖给大股东：过户了，担保和欠款还没走</h1>
+<div class="sub">出售一家子公司，难的往往不是找买家和定价格，而是它出表那一刻，上市公司原来给它的担保变成了关联担保，借给它的钱变成了关联方占用，而这两件事都要在交割之前处理完</div><div class="en">When a China-listed company sells a loss-making subsidiary, especially to its controlling shareholder, the hard part is rarely the price. The moment the subsidiary leaves the consolidated group, guarantees the listed company gave for its bank loans become guarantees for a related party, and intercompany loans can become funds occupied by a related party. Using a hypothetical main-board company, this article explains how to test whether the sale is a major asset restructuring, why losing control means using the subsidiary's full financials, how sales within twelve months are aggregated, the approvals for related-party disposals, how to deal with legacy guarantees and intercompany balances before completion, and why a disposal gain does not fix net profit after non-recurring items.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">TD GROUP 彤鼎团队</a></div></div></div>
+<article>
+<div class="answer">上市公司出售资产是指上市公司及其控股子公司将股权或者其他资产转让给他人的交易。出售股权导致丧失被投资企业控股权的，按该企业的资产总额、营业收入和净资产额全额计算交易规模，资产总额占比达到百分之五十等标准的构成重大资产重组，十二个月内对同一或者相关资产连续出售的累计计算；只收现金、不发行股份的出售不需要交易所审核和证监会注册，但须履行审议与披露程序。卖给控股股东等关联方时，原有担保变成关联担保，须同时履行审议程序，未通过的应提前终止担保；可能形成关联方非经营性资金占用的，须在交易实施完成前解决。出售收益属于非经常性损益，不改善扣非净利润。具体以证监会与交易所正式规则文本为准。---</div>
+<h2>其一、董事会批了，公告也发了，交易却停了四个月</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/listed-company-asset-divestiture-1.jpg" alt="其一、董事会批了，公告也发了，交易却停了四个月" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：出售子公司最容易卡住的地方不在价格，而在它出表那一刻，上市公司原来给它的担保和借给它的钱，性质一起变了。</strong></p>
+<p>假设有家在沪市主板上市的家电零部件公司，三年前跨行做了一家光伏组件子公司，由上市公司全资持有。子公司连着三年亏损，拖累合并报表。控股股东表示愿意接手：由他控制的一家公司，按评估值买下子公司全部股权。</p>
+<p>董事会审议通过，公告发出去，市场的解读大多是甩掉包袱。一周后，交易所的问询函到了，问题不多，但每一条都点在要害上。</p>
+<p>子公司的银行借款里，有三亿元是上市公司提供的连带责任保证，期限还有两年。另外，这几年上市公司陆续借给子公司一亿二千万元的经营周转款，账上挂着其他应收款。股权一过户，子公司就成了控股股东控制的企业。</p>
+<p>问询函问的正是这两笔：交易完成后，这三亿担保是不是变成了对关联方的担保，履行了什么程序；这一亿二千万是不是会形成关联方对上市公司的资金占用，打算怎么解决、什么时候解决。公司答不上来，交易就此停了四个月。</p>
+<h2>其二、先算清楚：这笔出售对上市公司算多大</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/listed-company-asset-divestiture-2.jpg" alt="其二、先算清楚：这笔出售对上市公司算多大" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：出售股权导致上市公司丧失控股权的，要按子公司的资产总额、营业收入和净资产全额去比，而不是按成交价去比，十二个月内分次卖的还要累计。</strong></p>
+<p>很多人以为，子公司作价只有几千万，对一家营收几十亿的上市公司不算大事。规则的算法不是这样。《上市公司重大资产重组管理办法》第十四条规定，出售股权导致上市公司丧失被投资企业控股权的，资产总额、营业收入和资产净额分别以被投资企业的对应数据为准。</p>
+<p>也就是说，要拿子公司的全部资产总额，去比上市公司最近一个会计年度经审计的合并资产总额。重组办法第十二条的标准是：资产总额占比达到百分之五十；或者营业收入占比达到百分之五十且超过五千万元；或者资产净额占比达到百分之五十且超过五千万元，满足其一就构成重大资产重组。</p>
+<p>这家光伏子公司资产总额不小，账面净资产却因为连年亏损被吃掉了大半。所以常见的情况是，按净资产算不到线，按资产总额算却可能摸到线。算的时候三个指标要分别算，不能只挑对自己有利的那一个。</p>
+<p>第十四条还规定，上市公司在十二个月内连续对同一或者相关资产进行购买、出售的，以累计数分别计算。假设公司原本打算先卖百分之四十九、半年后再卖剩下的百分之五十一，这两笔要合在一起看，拆成两次并不能绕开重组的认定。</p>
+<h2>其三、构不构成重组，程序差在哪</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/listed-company-asset-divestiture-3.jpg" alt="其三、构不构成重组，程序差在哪" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：只收现金、不发行股份的出售，即使构成重大资产重组，也不需要交易所审核和证监会注册，但要出具重组报告书、聘请中介机构并经股东会特别决议。</strong></p>
+<p>构成重大资产重组的，要按重组办法的要求编制重组报告书，聘请独立财务顾问、律师、会计师和评估机构，提交股东会审议，并经出席会议的股东所持表决权的三分之二以上通过。卖给关联方的，关联股东回避表决。</p>
+<p>因为这笔交易只收现金、不涉及上市公司发行股份，也不构成重组上市，按全面注册制之后的规则，不需要报交易所审核，也不需要证监会注册。这是它比发行股份购买资产简单的地方，但文件准备和问询回复的工作量并不小。</p>
+<p>没有构成重大资产重组，也不等于董事会批了就行。以《上海证券交易所股票上市规则（2026年4月修订）》为例，第6.1.5条规定，交易将导致上市公司合并报表范围发生变更的，要以该股权对应的标的公司的相关财务指标作为计算基础。</p>
+<p>按第6.1.3条，资产总额占上市公司最近一期经审计总资产百分之五十以上等情形，要提交股东会审议。第6.1.15条还规定，购买或者出售资产，不论标的是否相关，资产总额或者成交金额在连续十二个月内累计超过公司最近一期经审计总资产百分之三十的，要提交股东会审议，并经出席会议的股东所持表决权的三分之二以上通过。</p>
+<p>本质上，规则关心的是这件事对上市公司有多大影响，而不是这份合同写了多少钱。一家子公司对外只卖几千万，出表带走的可能是几十亿的资产和收入。</p>
+<h2>其四、买家是大股东，关联交易那一关怎么过</h2>
+<p><strong>结论先行：卖给控股股东控制的企业，是一笔关联交易，达到标准的要披露审计或评估报告、提交股东会，关联董事和关联股东回避，价格公允要经得起中小股东的追问。</strong></p>
+<p>按上交所上市规则第6.3.7条，上市公司与关联人发生的交易金额在三千万元以上，且占最近一期经审计净资产的百分之五以上的，要披露审计报告或者评估报告，并提交股东会审议。董事会审议时关联董事回避，股东会审议时关联股东回避。</p>
+<p>回避意味着，这笔交易最终由中小股东说了算。大股东自己持股再多，这一票也投不上。所以定价的依据要能拿到台面上讲清楚：评估方法是什么、为什么选这个方法、评估值比账面值高还是低、差在哪里。</p>
+<p>这家公司最初的评估报告用的是资产基础法，评估值略高于账面净资产。中小股东在说明会上追问的是另一件事：子公司名下有一块工业用地，账面按十几年前的取得成本记，周边的土地价格早就翻了几倍，评估里这块地是怎么算的。</p>
+<p>公司后来请评估机构补充说明了土地的评估过程，价格也做了调整。事后看，这一步本该在董事会之前就做完。关联方买上市公司的资产，价格偏低会被质疑掏空上市公司，偏高也会被质疑在做利润，两头都要有依据。</p>
+<h2>其五、那三亿担保：出表之后变成了关联担保</h2>
+<p><strong>结论先行：交易导致被担保方成为上市公司关联人的，要在实施交易的同时就存续的关联担保履行审议和披露，审议没通过的，交易各方要采取提前终止担保等措施。</strong></p>
+<p>子公司还是上市公司全资子公司的时候，这三亿担保是对控股子公司的担保，审议程序早就走过了。股权一过户，被担保方变成了控股股东控制的企业，同一份保证合同，性质就变成了为关联方提供担保。</p>
+<p>上交所上市规则第6.3.11条对此写得很直接：公司因交易或者关联交易导致被担保方成为公司的关联人，在实施该交易的同时，应当就存续的关联担保履行相应审议程序和信息披露义务；董事会或者股东会未审议通过的，交易各方应当采取提前终止担保等有效措施。</p>
+<p>审议的门槛也不低。为关联人提供担保，要经全体非关联董事过半数、并经出席董事会的非关联董事三分之二以上同意，再提交股东会。证监会《上市公司监管指引第8号》第九条、第十一条还规定，对股东、实际控制人及其关联方的担保须经股东会审批，相关股东回避，并且控股股东、实际控制人及其关联方应当提供反担保。</p>
+<p>实际操作中，更干净的办法通常是让担保退出来：跟银行谈，由控股股东或者他指定的主体替换成新的担保人，或者子公司在交割前把这部分借款还掉、重新以新股东的信用去借。这家公司最后选的是替换担保人，光是跟三家银行分别谈，就用了两个多月。</p>
+<h2>其六、那一亿二千万：交割之前必须收回来</h2>
+<p><strong>结论先行：出售资产可能导致交易完成后控股股东及其关联人对上市公司形成非经营性资金占用的，要在公告中写明解决方案，并在交易实施完成前解决。</strong></p>
+<p>子公司欠上市公司的一亿二千万，原来是集团内部的往来款，合并报表里一抵销就看不见。子公司一出表，这笔钱就成了控股股东控制的企业欠上市公司的钱，而且不是因为买卖商品或者服务形成的。</p>
+<p>证监会《上市公司监管指引第8号》第五条列举了上市公司不得向控股股东、实际控制人及其他关联方提供资金的几种方式，其中就包括有偿或者无偿地拆借资金给他们使用。出表之后还挂在账上的这笔钱，正好落进这一条。</p>
+<p>上交所《上市公司自律监管指引第5号——交易与关联交易》第二十四条规定，上市公司因购买或者出售资产可能导致交易完成后控股股东、实际控制人及其他关联人形成非经营性资金占用的，应当在公告中明确合理的解决方案，并在相关交易实施完成前解决。关键在于「实施完成前」这几个字，不是交割之后慢慢还。</p>
+<p>占用一旦形成，后果写在上市规则第9.8.1条里：被控股股东及其关联人非经营性占用资金，余额达到最近一期经审计净资产的百分之五以上或者超过一千万元，一个月内没有清偿或整改的，股票被实施其他风险警示。这家公司最后的方案，是在股权转让协议里约定：买方先代子公司把一亿二千万往来款还给上市公司，还清之后才办股权过户，交易价款和还款分开走、分开披露。</p>
+<h2>其七、卖掉子公司的收益，救不了扣非净利润</h2>
+<p><strong>结论先行：出售子公司产生的投资收益属于非经常性损益，主板退市风险警示看的是利润总额、净利润和扣非净利润三者孰低，指望卖资产做出利润，规则上是走不通的。</strong></p>
+<p>有的公司出售资产，心里还有另一本账：今年主营亏了，卖掉子公司确认一笔投资收益，报表就能转正。这笔账在规则面前算不通。按证监会关于非经常性损益的解释性公告，非流动性资产处置损益属于非经常性损益。</p>
+<p>上交所上市规则第9.3.2条规定，最近一个会计年度经审计的利润总额、净利润或者扣除非经常性损益后的净利润孰低者为负值，且营业收入低于三亿元的，对股票实施退市风险警示。出售收益能改变净利润，却改变不了扣非净利润，孰低的那个数还是负的。</p>
+<p>买家是大股东时还有一层。证监会《监管规则适用指引——会计类第1号》对权益性交易的口径是：股东、实际控制人对上市公司单方面的利益输送，比如捐赠、债务豁免，经济实质是资本投入，形成的利得计入所有者权益。关联方明显高于公允价值买走资产，溢价部分也可能被按这个思路审视，进不了当期损益。</p>
+<p>因此，出售亏损子公司真正的价值，是以后不再每年亏这一块、不再为它的借款担保、管理层能把精力放回主业，而不是出售当年报表上那一笔收益。把这个目的写清楚，中小股东和交易所的问询反而好回答。</p>
+<h2>其八、出售之前，把这几张表先拉出来</h2>
+<p><strong>结论先行：出售子公司之前，先拉出担保、往来款、交易指标和员工与业务四张清单，每一项在交割前怎么了结写进协议，交易才不会停在问询函上。</strong></p>
+<p>头一张是担保清单：上市公司及其他子公司为这家子公司提供的所有担保，金额、期限、债权银行，交割后怎么处理，替换、解除还是审议后保留并要求反担保。第二张是往来款清单：子公司欠上市公司多少、上市公司欠子公司多少，哪些是经营性的、哪些不是，交割前怎么清。</p>
+<p>第三张是交易指标测算：按子公司全额的资产总额、营业收入、净资产去算，把过去十二个月里对同一或者相关资产的交易加进去，判断是否构成重大资产重组、要不要上股东会、要不要三分之二通过。第四张是员工、合同和业务：子公司的员工跟谁走，共用的客户和供应商怎么分，卖给大股东之后会不会跟上市公司做同样的业务。</p>
+<p>第四张里最容易被漏掉的是业务重叠。控股股东买下子公司之后，如果子公司的业务跟上市公司剩下的业务有重叠，就会带出同业竞争的问题，怎么承诺、什么时候解决，也要在方案里写明。</p>
+<p>回到开头那家公司。要是重来一次，你会先去跟银行谈担保替换，再开董事会；还是先把交易公告出去，用公告去推银行？两种顺序各有代价，你会怎么选？</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ma-matching-financing.html" style="color:#6b5426;font-weight:700;">并购方案批了，配套融资只到了四成：剩下的现金对价谁来付</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="minority-shareholder-after-acquisition.html" style="color:#6b5426;font-weight:700;">上市公司买了七成之后：留在标的里的那三成原股东，能卡住你什么</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="subsidiary-spin-off-listing.html" style="color:#6b5426;font-weight:700;">预案报上去第九天，问询函问的是一张采购表：把一块业务分出去单独上市，要过哪几关</a></li></ul></div><div class="brandbox">
+<h3>关于 TD GROUP 彤鼎与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由 TD GROUP 彤鼎团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信 esonleo</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
