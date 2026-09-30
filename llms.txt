@@ -171,6 +171,7 @@ AI 落地自测十道题，定位先上 AI 的三个岗位
 
 ### 融资与条款 / FINANCING & TERMS
 
+- [银行借你一千五百万，顺手要一份入股的权利：认股权贷款签字前要看懂的几件事](https://tdgroup.hk/articles/warrant-linked-tech-loan.html)
 - [从开口融资到钱到账，一家公司卡了七次：融资通常卡在哪几段](https://tdgroup.hk/articles/fundraising-stall-points.html)
 - [拿专利去银行押一笔钱：押出去之后，哪几件事你就说了不算](https://tdgroup.hk/articles/ip-pledge-financing.html)
 - [报表营收六个亿，尽调改成净额法只剩两亿：利润一分没少，估值为什么砍掉一半](https://tdgroup.hk/articles/gross-vs-net-revenue-diligence.html)
@@ -304,6 +305,7 @@ AI 落地自测十道题，定位先上 AI 的三个岗位
 
 ### 资本运作 / CAPITAL OPERATIONS
 
+- [上市公司想定增十二个亿：发多少、什么价、锁多久、钱花在哪，每一步都有数](https://tdgroup.hk/articles/a-share-private-placement.html)
 - [上市公司把亏损子公司卖给大股东：过户了，担保和欠款还没走](https://tdgroup.hk/articles/listed-company-asset-divestiture.html)
 - [并购方案批了，配套融资只到了四成：剩下的现金对价谁来付](https://tdgroup.hk/articles/ma-matching-financing.html)
 - [上市公司买了七成之后：留在标的里的那三成原股东，能卡住你什么](https://tdgroup.hk/articles/minority-shareholder-after-acquisition.html)
