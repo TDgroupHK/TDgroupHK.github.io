@@ -1,0 +1,298 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>估值谈了四个月没谈拢，钱先到账了：可转换借款的三个数，和转股那天才发现的事 | TD GROUP 彤鼎知识文库</title>
+<meta name="description" content="估值谈不拢、账上的钱又撑不到下一轮，越来越多的成长期公司会先签一份可转换借款：投资方先把钱打进来，等下一轮定价时再按约定的折扣和上限转成股权。本文用一家假设的工业软件公司为例，讲清这条路上真正决定代价的地方：折扣率与估值上限怎么一起作用、利息写多少才算数、税前扣除有什么限制、转股那天要走哪些公司法程序、其他股东的优先认缴权怎么处理、到期没转成时&quot;公司还钱&quot;和&quot;创始人回购&quot;在法律上的差别，以及这条路跟直接做一轮股权融资相比，什么时候更划算、什么时候不该碰。">
+<link rel="canonical" href="https://tdgroup.hk/articles/convertible-loan-financing.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="TD GROUP 彤鼎知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="TD GROUP 彤鼎">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="估值谈了四个月没谈拢，钱先到账了：可转换借款的三个数，和转股那天才发现的事 | TD GROUP 彤鼎知识文库">
+<meta property="og:description" content="估值谈不拢、账上的钱又撑不到下一轮，越来越多的成长期公司会先签一份可转换借款：投资方先把钱打进来，等下一轮定价时再按约定的折扣和上限转成股权。本文用一家假设的工业软件公司为例，讲清这条路上真正决定代价的地方：折扣率与估值上限怎么一起作用、利息写多少才算数、税前扣除有什么限制、转股那天要走哪些公司法程序、其他股东的优先认缴权怎么处理、到期没转成时&quot;公司还钱&quot;和&quot;创始人回购&quot;在法律上的差别，以及这条路跟直接做一轮股权融资相比，什么时候更划算、什么时候不该碰。">
+<meta property="og:url" content="https://tdgroup.hk/articles/convertible-loan-financing.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="估值谈了四个月没谈拢，钱先到账了：可转换借款的三个数，和转股那天才发现的事 | TD GROUP 彤鼎知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:3px;font-size:17px;font-family:Georgia,"Times New Roman",serif;}
+.logo .nm small{display:block;color:var(--gold);font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:400;font-size:11px;letter-spacing:9px;margin-top:3px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"估值谈了四个月没谈拢，钱先到账了：可转换借款的三个数，和转股那天才发现的事","inLanguage":"zh-CN","abstract":"When the parties cannot agree on valuation but the company needs cash now, a convertible loan lets the investor fund first and price later. Using a hypothetical industrial software company, this article explains what actually determines the cost of that money: how the discount and the valuation cap interact, what interest rate is enforceable under PRC rules on private lending, the thin-capitalisation limit on deducting interest, the corporate procedures required on conversion including the shareholders resolution and the pre-emptive right on new capital, the difference between a repayment obligation on the company and a repurchase obligation on the founders when conversion never happens, and when this route beats a straight equity round.","author":{"@type":"Organization","name":"TD GROUP 彤鼎"},"publisher":{"@type":"Organization","name":"TD GROUP 彤鼎","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/convertible-loan-financing.html"},"datePublished":"2026-10-01","dateModified":"2026-10-01","description":"估值谈不拢、账上的钱又撑不到下一轮，越来越多的成长期公司会先签一份可转换借款：投资方先把钱打进来，等下一轮定价时再按约定的折扣和上限转成股权。本文用一家假设的工业软件公司为例，讲清这条路上真正决定代价的地方：折扣率与估值上限怎么一起作用、利息写多少才算数、税前扣除有什么限制、转股那天要走哪些公司法程序、其他股东的优先认缴权怎么处理、到期没转成时\"公司还钱\"和\"创始人回购\"在法律上的差别，以及这条路跟直接做一轮股权融资相比，什么时候更划算、什么时候不该碰。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+<link rel="stylesheet" href="../css/nav.css">
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="TD GROUP 彤鼎"><span class="nm">TD GROUP<small>彤鼎</small></span></a>
+<input type="checkbox" id="navtg" class="navtg" aria-hidden="true"><label for="navtg" class="navbtn" aria-label="菜单"><span></span><span></span><span></span></label>
+<div class="menu"><a href="/">首页</a><a href="/about.html">关于</a><div class="mdd"><a href="/#services">服务<span class="ar">▾</span></a><div class="mdd-p"><div><span class="mdd-h">融资与上市</span><a href="/financing-program.html">融资路线图</a><a href="/startup-program.html">初创融资服务</a><a href="/pre-ipo-program.html">上市预备期</a><a href="/asset-platform.html">海外资产上市</a><span class="mdd-h">工具</span><a href="/hk-ipo-checkup.html">上市可行性自测</a><a href="/listing-standards-check.html">上市门槛速查</a></div></div></div><a href="/club.html">俱乐部</a><a href="/legacy.html">传承</a><a href="/library.html">文库</a><a href="/faq.html">问答</a><a href="mailto:liaoqijie@tdgroup.hk">联系</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">融资条款 FINANCING</div><h1>估值谈了四个月没谈拢，钱先到账了：可转换借款的三个数，和转股那天才发现的事</h1>
+<div class="sub">先拿钱、后定价，这是可转换借款最吸引人的地方；但折扣、估值上限和期限这三个数一旦写定，公司在下一轮里让出多少股权就已经定了，而到期没转成的那条退路，走起来跟协议上写的不是一回事</div><div class="en">When the parties cannot agree on valuation but the company needs cash now, a convertible loan lets the investor fund first and price later. Using a hypothetical industrial software company, this article explains what actually determines the cost of that money: how the discount and the valuation cap interact, what interest rate is enforceable under PRC rules on private lending, the thin-capitalisation limit on deducting interest, the corporate procedures required on conversion including the shareholders resolution and the pre-emptive right on new capital, the difference between a repayment obligation on the company and a repurchase obligation on the founders when conversion never happens, and when this route beats a straight equity round.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">TD GROUP 彤鼎团队</a></div></div></div>
+<article>
+<div class="answer">可转换借款，是指投资方先以借款形式把资金交付公司，约定在下一轮股权融资完成、约定期限届满或者其他触发事件发生时，按事先确定的折扣率与估值上限把本金及约定利息转为公司股权的融资安排。它的核心是把定价这一步推迟：钱当期到账，价格等下一轮的市场报价出来再定。按2023年修订的《公司法》第六十六条，股东会作出增加注册资本的决议应当经代表三分之二以上表决权的股东通过；按第二百二十七条，有限责任公司增加注册资本时，股东在同等条件下有权优先按照实缴的出资比例认缴出资，全体股东另有约定的除外。按《全国法院民商事审判工作会议纪要》，投资方请求目标公司回购股权的，目标公司未完成减资程序的，人民法院应当驳回其诉讼请求。具体规则以正式文本为准。---</div>
+<h2>其一、估值谈了四个月，最后没有谈估值</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/convertible-loan-financing-1.jpg" alt="其一、估值谈了四个月，最后没有谈估值" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：可转换借款解决的不是价格分歧，是时间分歧——它把定价推到下一轮，让钱当期到账，把估值留给下一轮的市场报价去定。</strong></p>
+<p>假设有家做工业软件的公司，上一年收入三千万元，毛利不错但现金流紧。它跟一家产业背景的机构谈了四个月：公司要两亿元估值，机构给一亿两千万元，中间差着八千万，谁也不肯动。</p>
+<p>谈到第四个月，公司账上的钱只够再撑五个月。双方换了一种写法：机构先打两千万元进来，算借款；等公司完成下一轮股权融资时，这两千万按下一轮价格打八折转成股权；如果下一轮的投前估值超过两亿四千万元，就按两亿四千万元这个上限价转。</p>
+<p>另外还约定，十八个月内如果没有下一轮，机构可以选择按一亿五千万元的投前估值转股，也可以要求公司还本付息。</p>
+<p>钱在签约后第九天到账。公司没有为估值让步，机构也没有为估值让步，两边都把这件事推到了半年后。听上去是双赢，但真正的价格已经写在那三个数里了——只是当天没有人把它乘出来。</p>
+<h2>其二、它是一笔借款，外加一个可以变成股权的权利</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/convertible-loan-financing-2.jpg" alt="其二、它是一笔借款，外加一个可以变成股权的权利" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：可转换借款在到期或者触发之前是债，转股之后才是股，公司的义务在这两种状态下完全不同。</strong></p>
+<p>在转股之前，这笔钱在公司账上是一笔负债，投资方是债权人。债权人不参加股东会、不分红，但可以要求按期付息、到期还本，并且在公司清算时排在所有股东之前。</p>
+<p>转股之后，这笔钱变成注册资本加资本公积，投资方成为股东。股东有表决权和分红权，但拿不回本金，只能靠转让股权或者公司分配退出。</p>
+<p>这个身份切换是这类协议的全部戏剧性所在。对公司来说，它意味着在下一轮之前多背了一笔有期限的债；对投资方来说，它意味着在下一轮之前拿不到股东的任何权利，只能靠协议里的信息条款了解公司在干什么。</p>
+<p>所以协议要写清一件事：在转股之前，投资方享有什么。实务里通常会给三样——定期的财务报表与经营数据、重大事项（对外担保、大额借款、核心资产处置、创始人股权变动）的知情或者同意权、以及下一轮融资启动时的通知义务。</p>
+<p>还有一个身份问题容易被忽略：公司间的借贷在司法实践中早已认可，但如果出借方是自然人、又频繁向多家公司放款，放款行为本身的定性会被追问。所以这类协议的出借主体，通常应当是机构而不是个人。</p>
+<h2>其三、折扣、上限、期限：三个数决定让出多少股权</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/convertible-loan-financing-3.jpg" alt="其三、折扣、上限、期限：三个数决定让出多少股权" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：折扣率与估值上限是两道并行的算法，实际转股价取两者算出来的较低价，公司真正让出的股权由较低的那一个决定。</strong></p>
+<p>接着上面那家公司往下算。半年后新一轮来了，投前估值三亿元，新投资方按这个价格进来。</p>
+<p>按折扣算：三亿元打八折，等于两亿四千万元的投前估值。按上限算：上限本来就是两亿四千万元。两条路算出来一样，机构的两千万元按两亿四千万元的投前估值转股，占转股后的比例约百分之七点七。</p>
+<p>把数字换一下更容易看清楚。如果下一轮的投前估值是四亿元，折扣算出来是三亿两千万元，上限算出来是两亿四千万元，取低的那个，仍然是两亿四千万元。下一轮估值再高，这两千万元也只按两亿四千万元这条线换股份——上限保护的是投资方，代价是公司。</p>
+<p>反过来，如果下一轮估值只有一亿六千万元，折扣算出来是一亿两千八百万元，比上限低，就按一亿两千八百万元转。这时候机构拿到的比例约百分之十三点五，比原本谈崩的那个报价还便宜。</p>
+<p>这里有一个很多创始人算漏的地方：折扣与上限保护的是同一方。公司在估值涨上去的时候被上限压住，在估值跌下来的时候被折扣压住，两头都不占便宜。所以谈判的重点不是&quot;有没有上限&quot;，而是&quot;上限定在哪、折扣是几折&quot;。</p>
+<p>期限是第三个数。十八个月是常见写法，它既是投资方的保护，也是公司的压力：到期还没有下一轮，那两千万元就从一笔准股权变回一笔要还的债。所以期限该不该定这么短，取决于公司对下一轮时点的真实判断，而不是谈判时谁更强硬。</p>
+<h2>其四、利息那一栏：写多少算数，能不能抵税</h2>
+<p><strong>结论先行：可转换借款的利息条款要过两道关，一道是司法上的利率上限，一道是税务上的税前扣除限制。</strong></p>
+<p>利率上限这一关。按《最高人民法院关于审理民间借贷案件适用法律若干问题的规定》，借贷双方约定的利率超过合同成立时一年期贷款市场报价利率四倍的部分，人民法院不予支持。可转换借款的票面利率通常远低于这条线，真正要注意的是把违约金、罚息、服务费加总之后会不会一起顶上去。</p>
+<p>税务这一关是两层。头一层是凭证：公司支付利息要在企业所得税前扣除，需要取得合规的发票；出借方是机构的，利息收入要按规定开票并缴纳增值税与附加。协议里如果只写&quot;利息随本金一并转股&quot;，到时候这笔利息在税上怎么处理，双方会有分歧。</p>
+<p>第二层是关联方债资比。按现行企业所得税规则，企业从其关联方接受的债权性投资与权益性投资的比例超过规定标准（非金融企业为二比一）而发生的利息支出，超过部分不得在计算应纳税所得额时扣除，除非能证明相关交易符合独立交易原则。如果这家机构本来就是公司的股东或者关联方，这一条会直接咬到。</p>
+<p>实务里的两种写法差别不小。一种是&quot;本金加累计利息一并转股&quot;，公司不掏现金，但转股时的基数变大，稀释更多；另一种是&quot;利息在转股时以现金结清，只有本金转股&quot;，公司要掏一笔钱，但股权少让一点。</p>
+<p>还有一种写法是把利率写成零或者象征性的极低数。它在商业上是可以的，但要提前想清楚两件事：出借方的内部合规能不能接受无息放款，以及税务上会不会被按独立交易原则调整。关键在于，利息这一栏决定的不只是钱，它还决定这笔安排在报表和税表上长什么样。</p>
+<h2>其五、转股那天要办的事，比协议上写的多</h2>
+<p><strong>结论先行：转股不是一次账务调整，它是一次增资——要开股东会、要处理其他股东的优先认缴权、要改章程、要办工商变更。</strong></p>
+<p>按《公司法》第六十六条，股东会作出修改公司章程、增加或者减少注册资本的决议，应当经代表三分之二以上表决权的股东通过。所以转股这件事要拿到一个合格的股东会决议，不是创始人和投资方两家签个补充协议就完成。</p>
+<p>优先认缴权是更容易卡住的一条。按《公司法》第二百二十七条，有限责任公司增加注册资本时，股东在同等条件下有权优先按照实缴的出资比例认缴出资，但是全体股东约定不按照出资比例优先认缴出资的除外。也就是说，如果老股东不放弃这项权利，转股就可能被摊薄或者被要求同比例跟进。</p>
+<p>处理办法是在签可转换借款协议的同时，一并拿到全体现有股东的放弃函或者章程层面的约定。这件事放在签约当天做，几乎没有成本；放到转股那天做，就会变成一轮新的谈判，而那时候公司已经花掉了那笔钱。</p>
+<p>金额怎么拆也要提前定。两千万元转成股权，并不是全部计入注册资本：按转股价对应的每一元注册资本溢价部分计入资本公积。注册资本增加多少，直接影响工商登记数字、影响其他股东的持股比例计算，也影响后续减资时的程序。</p>
+<p>还有一类情形要单独处理：出借方是境外主体。境外资金以借款形式进入境内，涉及外债登记与结汇；后续转股涉及外商投资信息报告与外汇变更登记。这条路能走，但时间表和境内主体完全不同，要在签约前就把路径问清楚，不要等到转股那天才发现钱转不过来。</p>
+<p>假设那家工业软件公司的老股东里有一位早期天使，持股百分之八，签约时没人找他签放弃函。半年后转股，他提出要按比例跟投但拿不出钱，转而要求公司给他补偿。这一轮扯皮用掉了五周，而它的成本在签约当天是一张纸。</p>
+<h2>其六、没转成的那条退路，走起来不一样</h2>
+<p><strong>结论先行：到期没有下一轮时，&quot;公司还钱&quot;和&quot;创始人回购&quot;是两条法律性质完全不同的路，后者往往更容易执行。</strong></p>
+<p>先看还钱这条。可转换借款到期，投资方要求公司还本付息，这是一笔普通的债权请求，法律上没有障碍——障碍在现金。一家没能完成下一轮融资的公司，通常也拿不出两千万元。这时候协议里的展期条款、分期还款条款、以及是否附有担保，才是真正起作用的东西。</p>
+<p>再看回购这条。如果协议写的是&quot;到期未转股的，由公司按本金加固定回报回购投资方的股权&quot;，性质就变了。按《全国法院民商事审判工作会议纪要》关于对赌协议的处理，投资方请求目标公司实际履行回购义务的，人民法院要依据禁止股东抽逃出资与股份回购的强制性规定进行审查；经审查目标公司未完成减资程序的，应当驳回其诉讼请求。</p>
+<p>这就形成了一个现实中的死结：回购是减资的原因，减资又是回购的前提，而减资要经股东会决议、编制资产负债表与财产清单、通知已知债权人并公告。公司自己不配合，这条路基本走不动。</p>
+<p>所以成熟的写法，是把回购义务放在创始人或者控股股东个人身上，而不是放在公司身上。与股东对赌的效力在司法实践中是认可的，执行标的是个人财产，不受公司资本维持规则的限制。对公司有利，对创始人不利——这正是创始人在签字前最该算清楚的一笔账。</p>
+<p>还有一个中间选项：到期后由投资方单方选择，要么按约定的兜底估值转股，要么要求还款。选择权在谁手里，是这一段里最贵的一句话。选择权在投资方，公司永远处在被动；约定成&quot;双方协商不成则自动按兜底估值转股&quot;，公司就把最坏情形锁定成了稀释而不是掏钱。</p>
+<h2>其七、跟另外两条路比，什么时候该用它</h2>
+<p><strong>结论先行：可转换借款适合&quot;钱很急、价难定、下一轮时点看得见&quot;这三件事同时成立的时候，缺一件就该换路。</strong></p>
+<p>跟直接做一轮股权融资比，它的好处是快和不定价。一轮正式股权融资从条款清单到交割通常要三到六个月，要做尽调、要谈一整套股东协议、要办工商；可转换借款的文本短得多，常常几周就能到账。代价是价格没有锁定，公司把定价权交给了下一轮的市场。</p>
+<p>跟银行融资比，它不要抵押、不看报表上的那几个比率，对轻资产的软件和技术公司更现实。代价是它最终要用股权来付：银行的钱还完就结束了，这笔钱还完的方式通常是让出股份。</p>
+<p>跟老股转让比，可转换借款的钱进的是公司账户，用于经营；老股转让的钱进的是股东口袋，公司一分钱不多。两者解决的根本不是同一个问题，不该放在一起比价格。</p>
+<p>什么时候不该用它。下一轮的时点看不见的时候不该用——到期没转成，那笔债会在最艰难的时刻到期。公司经营性现金流覆盖不了本金的时候要慎用，因为它在最坏情形下是一笔必须还的钱。已经签过两三份条件各异的可转换借款时更要停下来，多份折扣与上限叠在一起，下一轮的股权表会算不清楚，新投资方看到这种结构常常直接掉头。</p>
+<p>本质上，这笔钱买的是时间。时间用得好，下一轮的估值把折扣和上限都跑赢了，公司让出去的比当初谈崩的那个报价还少；时间用不好，它就变成一笔到期的债加一次被动的稀释。</p>
+<h2>其八、签字前要逐行看清的几句话</h2>
+<p><strong>结论先行：可转换借款的协议通常只有几页，但决定这笔钱真实成本的就那七八句话，签字之前要逐句看完、逐句算一遍。</strong></p>
+<p>转股触发事件怎么定义。&quot;下一轮股权融资&quot;要不要设最低规模门槛——不设的话，一笔三百万元的小额增资也可能触发转股，而那时候的估值未必是公司想要的。</p>
+<p>上限与折扣的组合。上限定在哪个数、折扣是几折、两者同时适用还是取低，以及上限对应的是投前估值还是投后估值。投前投后一字之差，算出来的持股比例差得不小。</p>
+<p>控制权变更时怎么办。公司在转股之前被整体并购的，投资方通常会要求二选一：按本金的约定倍数拿现金，或者按上限价转股后参与交易。这一条不写，交易发生时会卡住交割。</p>
+<p>期限到期后的选择权在谁手里，以及是否允许展期、展期的条件是什么。选择权在投资方，公司在最坏的时点上没有主动权；写成到期自动按兜底估值转股，公司锁定的就是稀释而不是掏现金。这一句的分量比它的长度大得多。</p>
+<p>清算优先怎么排。转股之后这部分股权是普通股，还是与下一轮享有同等的优先分配权，直接决定公司清算或者被整体出售时各方拿钱的先后顺序，也影响下一轮投资方愿不愿意接受这个结构。</p>
+<p>担保与个人责任。有没有创始人个人连带、有没有股权质押、有没有实际控制人的差额补足承诺。这一条决定最坏情形落在公司身上还是落在个人身上。</p>
+<p>回到开头那家公司。如果重来一次，是接受机构一亿两千万元的报价、现在就把这一轮做完、条款一次谈清楚；还是签这份可转换借款、把定价推到半年后、赌下一轮能跑到三亿？站在创始人和站在出钱那一方的位置上，这两条路算出来的不是同一笔账，你会怎么选？</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="warrant-linked-tech-loan.html" style="color:#6b5426;font-weight:700;">银行借你一千五百万，顺手要一份入股的权利：认股权贷款签字前要看懂的几件事</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="fundraising-stall-points.html" style="color:#6b5426;font-weight:700;">从开口融资到钱到账，一家公司卡了七次：融资通常卡在哪几段</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ip-pledge-financing.html" style="color:#6b5426;font-weight:700;">拿专利去银行押一笔钱：押出去之后，哪几件事你就说了不算</a></li></ul></div><div class="brandbox">
+<h3>关于 TD GROUP 彤鼎与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由 TD GROUP 彤鼎团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信 esonleo</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
