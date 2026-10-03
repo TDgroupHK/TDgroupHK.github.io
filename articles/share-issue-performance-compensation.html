@@ -1,0 +1,299 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>承诺的利润差了三千六百万，补偿要补一亿两千八：发行股份买来的公司，股份是怎么退回去的 | TD GROUP 彤鼎知识文库</title>
+<meta name="description" content="上市公司发行股份购买资产，只要估值用了收益现值法这类基于未来收益预期的方法，交易对方就要就实际盈利不足预测的情形签补偿协议。本文用一家假设的上市公司买一家精密结构件公司的例子，把补偿这件事从头算到尾：哪些交易必须补、哪些可以自己谈，当期补偿金额与补偿股份数量的两道公式，为什么利润差三千六百万会补出一亿两千八，先股份后现金的顺序，股份退回上市公司走的是什么程序，补偿期满那一道减值测试怎么算、什么时候会再咬一口，补偿总额的上界在哪里，以及补偿方手里股份已经不够时上市公司还能往哪里追。">
+<link rel="canonical" href="https://tdgroup.hk/articles/share-issue-performance-compensation.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="TD GROUP 彤鼎知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="TD GROUP 彤鼎">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="承诺的利润差了三千六百万，补偿要补一亿两千八：发行股份买来的公司，股份是怎么退回去的 | TD GROUP 彤鼎知识文库">
+<meta property="og:description" content="上市公司发行股份购买资产，只要估值用了收益现值法这类基于未来收益预期的方法，交易对方就要就实际盈利不足预测的情形签补偿协议。本文用一家假设的上市公司买一家精密结构件公司的例子，把补偿这件事从头算到尾：哪些交易必须补、哪些可以自己谈，当期补偿金额与补偿股份数量的两道公式，为什么利润差三千六百万会补出一亿两千八，先股份后现金的顺序，股份退回上市公司走的是什么程序，补偿期满那一道减值测试怎么算、什么时候会再咬一口，补偿总额的上界在哪里，以及补偿方手里股份已经不够时上市公司还能往哪里追。">
+<meta property="og:url" content="https://tdgroup.hk/articles/share-issue-performance-compensation.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="承诺的利润差了三千六百万，补偿要补一亿两千八：发行股份买来的公司，股份是怎么退回去的 | TD GROUP 彤鼎知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:3px;font-size:17px;font-family:Georgia,"Times New Roman",serif;}
+.logo .nm small{display:block;color:var(--gold);font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:400;font-size:11px;letter-spacing:9px;margin-top:3px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"承诺的利润差了三千六百万，补偿要补一亿两千八：发行股份买来的公司，股份是怎么退回去的","inLanguage":"zh-CN","abstract":"When a China-listed company issues new shares to buy an asset and the valuation rests on a discounted-cash-flow style method, the seller must sign a profit compensation agreement. Using a hypothetical acquisition of a precision components maker for RMB 800 million, this article works through the mechanics: which deals must carry compensation and which are left to negotiation after the 2025 amendment, the two formulas that convert a profit shortfall into a compensation amount and then into a number of shares, why a shortfall of RMB 36 million can produce compensation of RMB 128 million, why shares come before cash, how the shares are actually returned and cancelled, the impairment test at the end of the commitment period, where the ceiling on total compensation sits, and what the listed company can still pursue when the compensating party has run out of shares.","author":{"@type":"Organization","name":"TD GROUP 彤鼎"},"publisher":{"@type":"Organization","name":"TD GROUP 彤鼎","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/share-issue-performance-compensation.html"},"datePublished":"2026-10-03","dateModified":"2026-10-03","description":"上市公司发行股份购买资产，只要估值用了收益现值法这类基于未来收益预期的方法，交易对方就要就实际盈利不足预测的情形签补偿协议。本文用一家假设的上市公司买一家精密结构件公司的例子，把补偿这件事从头算到尾：哪些交易必须补、哪些可以自己谈，当期补偿金额与补偿股份数量的两道公式，为什么利润差三千六百万会补出一亿两千八，先股份后现金的顺序，股份退回上市公司走的是什么程序，补偿期满那一道减值测试怎么算、什么时候会再咬一口，补偿总额的上界在哪里，以及补偿方手里股份已经不够时上市公司还能往哪里追。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+<link rel="stylesheet" href="../css/nav.css">
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="TD GROUP 彤鼎"><span class="nm">TD GROUP<small>彤鼎</small></span></a>
+<input type="checkbox" id="navtg" class="navtg" aria-hidden="true"><label for="navtg" class="navbtn" aria-label="菜单"><span></span><span></span><span></span></label>
+<div class="menu"><a href="/">首页</a><a href="/about.html">关于</a><div class="mdd"><a href="/#services">服务<span class="ar">▾</span></a><div class="mdd-p"><div><span class="mdd-h">融资与上市</span><a href="/financing-program.html">融资路线图</a><a href="/startup-program.html">初创融资服务</a><a href="/pre-ipo-program.html">上市预备期</a><a href="/asset-platform.html">海外资产上市</a><span class="mdd-h">工具</span><a href="/hk-ipo-checkup.html">上市可行性自测</a><a href="/listing-standards-check.html">上市门槛速查</a></div></div></div><a href="/club.html">俱乐部</a><a href="/legacy.html">传承</a><a href="/library.html">文库</a><a href="/faq.html">问答</a><a href="mailto:liaoqijie@tdgroup.hk">联系</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">资本运作 CAPITAL OPS</div><h1>承诺的利润差了三千六百万，补偿要补一亿两千八：发行股份买来的公司，股份是怎么退回去的</h1>
+<div class="sub">上市公司用股份买资产，评估用的是收益法，那就得签补偿协议；真到承诺没做到那一年，补多少不是按利润缺口算的，而是按一道以交易作价为基数的除法算的，利润差一块钱，补偿常常要补好几块</div><div class="en">When a China-listed company issues new shares to buy an asset and the valuation rests on a discounted-cash-flow style method, the seller must sign a profit compensation agreement. Using a hypothetical acquisition of a precision components maker for RMB 800 million, this article works through the mechanics: which deals must carry compensation and which are left to negotiation after the 2025 amendment, the two formulas that convert a profit shortfall into a compensation amount and then into a number of shares, why a shortfall of RMB 36 million can produce compensation of RMB 128 million, why shares come before cash, how the shares are actually returned and cancelled, the impairment test at the end of the commitment period, where the ceiling on total compensation sits, and what the listed company can still pursue when the compensating party has run out of shares.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">TD GROUP 彤鼎团队</a></div></div></div>
+<article>
+<div class="answer">业绩补偿，是指上市公司发行股份购买资产时，采取收益现值法、假设开发法等基于未来收益预期的方法对标的资产估值的，交易对方就标的资产实际盈利数不足利润预测数的情形，按事先签订的协议向上市公司补偿股份或者现金的安排。按《上市公司重大资产重组管理办法》第三十五条，上市公司应当在资产交付或者过户后三年内的年度报告中单独披露实际盈利数与利润预测数的差异，并由会计师事务所出具专项审核意见。按《监管规则适用指引——上市类第1号》，当期补偿金额等于累积承诺净利润数减累积实现净利润数，除以补偿期限内各年预测净利润数总和，再乘以标的资产交易作价，最后减去累积已补偿金额；补偿先以股份补，不足部分以现金补；补偿期限不得少于重组实施完毕后的三年。具体规则以证监会与交易所正式文本为准。---</div>
+<h2>其一、年报还没披露，补偿公式先算了一遍</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/share-issue-performance-compensation-1.jpg" alt="其一、年报还没披露，补偿公式先算了一遍" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：业绩补偿算的不是利润缺口本身，而是缺口在三年预测总额里占多大比例，再把这个比例乘到整笔交易的作价上。</strong></p>
+<p>假设有家在深市主板上市的工业自动化公司，两年前发行股份加现金买下一家做精密结构件的公司的全部股权，交易作价八亿元，其中六亿元用股份支付、两亿元付现金。发行价格十元一股，交易对方拿到六千万股。</p>
+<p>标的公司的估值用的是收益法。三名原股东签了补偿协议，承诺三年的扣非净利润分别是六千万元、七千五百万元、九千万元，三年合计两亿两千五百万元。</p>
+<p>头一年做到六千一百万元，刚过线。次年大客户的机型换代推迟，标的公司只做到三千八百万元。累积承诺一亿三千五百万元，累积实现九千九百万元，中间差了三千六百万元。</p>
+<p>财务总监拿计算器算的那一遍，结果是一亿两千八百万元。利润差了三千六百万，补偿要补一亿两千八，将近四倍。这不是算错了，是公式本来就长这样。下面一节一节拆开。</p>
+<h2>其二、哪些交易必须签补偿协议，哪些可以自己谈</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/share-issue-performance-compensation-2.jpg" alt="其二、哪些交易必须签补偿协议，哪些可以自己谈" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：用收益现值法这类基于未来收益预期的方法定价的，必须签补偿协议；从控股股东、实控人及其关联人之外买资产且不改变控制权的，可以自主协商。</strong></p>
+<p>《上市公司重大资产重组管理办法》第三十五条写得很直白：采取收益现值法、假设开发法等基于未来收益预期的方法对拟购买资产评估或者估值并作为定价参考依据的，上市公司应当在完成资产交付或者过户后三年内的年度报告中单独披露相关资产的实际盈利数与利润预测数的差异情况，并由会计师事务所出具专项审核意见。</p>
+<p>同一条接着规定，交易对方应当与上市公司就实际盈利数不足利润预测数的情况签订明确可行的补偿协议，或者根据利润预测数约定分期支付安排，并就分期支付安排无法覆盖的部分签订补偿协议。</p>
+<p>2025年5月修订后的这一条留了一个口子：上市公司向控股股东、实际控制人或者其控制的关联人之外的特定对象购买资产，且未导致控制权发生变更的，不适用上述规定，双方可以按市场化原则自主协商是否采取业绩补偿、分期支付和每股收益填补措施。</p>
+<p>这个口子在谈判桌上的分量很大。不少卖方老板并不知道这一层，以为补偿是监管强制要求，一上来就把三年承诺答应下来。真实情况是：只有交易对方属于控股股东、实际控制人或者其控制的关联人，或者这笔交易会让控制权易手，补偿才是绕不开的。</p>
+<p>还有一层容易漏掉。《监管规则适用指引——上市类第1号》写明，在交易定价采用资产基础法估值结果的情况下，如果资产基础法里对某一项或者几项资产用了基于未来收益预期的方法，上述主体也应当就这一部分进行业绩补偿。所以整体用了资产基础法，并不等于自动免掉补偿。</p>
+<h2>其三、那道公式：三千六百万的缺口，补出一亿两千八</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/share-issue-performance-compensation-3.jpg" alt="其三、那道公式：三千六百万的缺口，补出一亿两千八" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：当期补偿金额等于累积承诺净利润数减累积实现净利润数，除以补偿期各年预测净利润数总和，乘以标的资产交易作价，再减去累积已补偿金额。</strong></p>
+<p>把上面那家公司的数代进去：累积承诺一亿三千五百万元，累积实现九千九百万元，差额三千六百万元；补偿期三年的预测净利润总和是两亿两千五百万元；交易作价八亿元；此前没补过。</p>
+<p>三千六百万除以两亿两千五百万，等于百分之十六。百分之十六乘以八亿元，就是一亿两千八百万元。这就是当期补偿金额。</p>
+<p>补偿股份数量再除一次：当期应当补偿的股份数量，等于当期补偿金额除以本次股份的发行价格。一亿两千八百万元除以十元，是一千二百八十万股。交易对方手里有六千万股，这一次够补。</p>
+<p>为什么缺口三千六百万会放大成一亿两千八？因为分母是三年的预测总和，而乘数是整笔交易的作价。作价八亿是按三年、以及三年之后的持续盈利能力估出来的，少赚的那一年在整个估值里的权重，本来就比它在当年利润表里的权重大得多。</p>
+<p>几个细节要记住。前述净利润数均应当以标的资产扣除非经常性损益后的利润数确定，所以靠一笔政府补助或者处置资产把当年利润顶上去，在补偿计算里不算数。逐年补偿的情况下，某一年算出来的补偿股份数量小于零时按零取值，也就是说已经补偿的股份不冲回——某一年超额完成，不能把上一年补出去的股份要回来。</p>
+<p>第三年如果只做到五千万元，累积承诺两亿两千五百万元、累积实现一亿四千九百万元，差额七千六百万元。七千六百万除以两亿两千五百万，约百分之三十三点八，乘八亿约两亿七千万元，减掉已补的一亿两千八百万元，当期还要补一亿四千二百万元，折合一千四百二十万股。两年累计补出去两千七百万股，接近交易对方所持股份的一半。</p>
+<h2>其四、先用股份补，股份不够才补现金</h2>
+<p><strong>结论先行：业绩补偿应当先以股份补偿，不足部分以现金补偿；交易对方是控股股东、实际控制人或者其控制的关联人的，应当以其取得的股份和现金进行补偿。</strong></p>
+<p>《监管规则适用指引——上市类第1号》对补偿方式的表述很明确：交易对方为上市公司控股股东、实际控制人或者其控制的关联人，无论标的资产是否为其所有或者控制，也无论其参与这次交易是否基于过桥等暂时性安排，都应当以其取得的股份和现金进行业绩补偿。</p>
+<p>顺序也是写死的：先股份，不足的部分再现金。这个顺序对上市公司有利。股份补偿退回来之后注销，总股本变小，剩下股东手里的每一股对应的权益变大；现金补偿则是一笔要去收的债，收得回收不回是另一回事。</p>
+<p>构成重组上市的，规则更紧：应当以标的资产的价格进行业绩补偿计算，并且股份补偿不低于这次交易发行股份数量的百分之九十。也就是说借壳这一类交易里，基本没有用现金替代股份的空间。</p>
+<p>股份具体怎么退回去？市场上最常见的做法，是上市公司以总价一元的对价把补偿股份回购过来，然后注销。这个一元不是估值，是为了让回购这个民事行为有对价、能够成立，实质上是无偿收回。</p>
+<p>要注意的是，回购注销会减少注册资本，走的是减资的程序：董事会和股东会作出决议，编制资产负债表及财产清单，通知已知债权人并公告，债权人可以要求清偿债务或者提供担保，然后再办工商变更与证券登记。这条路的时间通常以季度计，协议里把它当成一个动作写，执行时会发现它是一串动作。</p>
+<p>假设那三名原股东里有一位在交易后进了上市公司董事会。补偿协议里如果只写了&quot;按公式补偿股份&quot;，没写清由谁先补、按什么比例分摊、是连带还是按份，到真要补的时候，三个人之间先要吵一轮。这一轮吵在协议签字那天本来可以避免。</p>
+<h2>其五、三年做完还有一道减值测试</h2>
+<p><strong>结论先行：补偿期限届满时上市公司应当对标的资产做减值测试，减值额占交易作价的比例超过已补偿股份占其所取得股份的比例时，交易对方还要另行补偿股份。</strong></p>
+<p>指引给的判断式是：如果期末减值额除以拟购买资产交易作价，大于补偿期限内已补偿股份总数除以交易对方以资产换取的股份总数，交易对方需另行补偿的股份数量，等于期末减值额除以每股发行价格，再减去补偿期限内已补偿股份总数。</p>
+<p>减值额怎么算也有定义：减值额为标的资产交易作价减去期末标的资产的评估值，并扣除补偿期限内标的资产股东增资、减资、接受赠与以及利润分配的影响。这一句是防止有人在补偿期里往标的公司塞钱把评估值顶高。</p>
+<p>接着上面那家公司往下算。三年做完，累计补了两千七百万股，交易对方取得的股份是六千万股，比例约百分之四十五。期末评估值如果是三亿五千万元，减值额就是八亿减三亿五，四亿五千万元，占交易作价的比例是百分之五十六点二五。</p>
+<p>百分之五十六点二五大于百分之四十五，触发另行补偿。四亿五千万元除以十元等于四千五百万股，减去已补的两千七百万股，还要再补一千八百万股。交易对方手里还剩三千三百万股，这一次还补得出来。</p>
+<p>如果这笔交易定价用的是市场法而不是收益法，规则换了一套：每年补偿的股份数量按期末减值额除以每股发行价格、再减去补偿期内已补偿股份总数计算，也就是直接盯减值，不走利润差那道公式。</p>
+<p>还有一条按资产类型开的例外：标的资产是房地产、矿业公司或者房地产、矿业类资产的，上市公司董事会可以在补偿期限届满时一次确定补偿股份数量，不必逐年计算。</p>
+<h2>其六、补偿最多补到哪里为止</h2>
+<p><strong>结论先行：两道公式的乘数都是标的资产的交易作价，所以补偿总额的上界就是这笔交易的作价本身，超出部分没有计算依据。</strong></p>
+<p>利润差得再多，那道除法的结果最多是一，乘上交易作价就到顶了。减值测试那条同理，减值额最大也就是作价全额。这意味着一笔八亿元的交易，补偿封顶就是八亿元，把交易对方拿到的股份和现金全部还回来，也只是把这笔交易抹平，不会倒赔。</p>
+<p>上市公司一侧要接受的现实是：补偿是对价的回退，不是损失赔偿。标的公司这三年占用的管理精力、商誉减值冲击的当期利润、审计与中介的重复投入，补偿协议不覆盖。想覆盖，要在协议里另写违约责任条款。</p>
+<p>补偿期限也有下限：业绩补偿期限不得少于重组实施完毕后的三年。实务里常见把承诺期写成三年，正好压在下限上；标的资产是研发周期长的类型时，买方通常会争取四年或者五年。</p>
+<p>与补偿成对的是业绩奖励，规则给了两个上界：对标的资产交易对方、管理层或者核心技术人员设置业绩奖励安排的，应当基于标的资产实际盈利数大于预测数的超额部分，奖励总额不应超过超额业绩部分的百分之一百，并且不超过交易作价的百分之二十。</p>
+<p>奖励还有一条禁止性规定：交易对方为上市公司控股股东、实际控制人或者其控制的关联人的，不得对上述对象作出奖励安排。本质上，奖励是给继续经营标的公司的人的激励，不是给卖方的补价。</p>
+<h2>其七、补偿方手里股份不够了，上市公司还能往哪里追</h2>
+<p><strong>结论先行：股份被锁定、被质押或者已经不足以补偿时，差额转为现金债务，追得回追不回取决于协议里有没有事先安排担保。</strong></p>
+<p>先看锁定期。按《上市公司重大资产重组管理办法》第四十七条，特定对象以资产换取的上市公司股份，自股份发行结束之日起十二个月内不得转让；属于三种情形之一的，三十六个月内不得转让：该对象是上市公司控股股东、实际控制人或者其控制的关联人；该对象通过这次重组取得上市公司的实际控制权；该对象取得股份时，对其用于换取股份的资产持续拥有权益的时间不足十二个月。</p>
+<p>锁定期对补偿是一层保护：股份还在账户里，回购注销就执行得下去。但锁定不等于不能质押。交易对方把股份质押给金融机构换一笔钱，是相当常见的动作，等到要补偿的时候，那部分股份上已经压着别人的权利。</p>
+<p>这时候上市公司面对的就不再是一个过户动作，而是一场三方协调：质权人要不要解除质押、解押的钱谁出、能不能先补未质押的部分。协议里如果没有&quot;补偿期内不得质押补偿股份&quot;这一句，这场协调没有抓手。</p>
+<p>股份真的不够了，剩下的按现金补。现金补偿是一笔普通债权，上市公司要追，得看交易对方还有没有可执行的财产。所以有经验的买方会在协议里加三样东西：补偿义务人之间的连带责任、补偿义务人以其名下其他资产提供担保、以及一笔与补偿金额挂钩的违约金。</p>
+<p>还有一件事不能省：上市公司不主动追偿是要被问的。实际盈利数与利润预测数的差异要在年报里单独披露并有专项审核意见，补偿有没有执行、执行到哪一步，是交易所年报问询里的常客。放着补偿不追，董事会要解释为什么这不构成对上市公司利益的损害。</p>
+<p>假设上面那家公司的三名原股东中，有一位在补偿触发前已经把股份减持了一部分、又把剩下的质押了。上市公司最后拿到的，是另外两人的股份加上这一位的一纸还款计划。这个结果在补偿协议签字那天就已经决定了，跟标的公司后来做到多少利润无关。</p>
+<h2>其八、签字那天该定死的几件事</h2>
+<p><strong>结论先行：补偿条款的价值不在触发之后怎么算，而在签字那天有没有把口径、顺序、限制和担保四件事写清楚。</strong></p>
+<p>口径。承诺的净利润是不是扣非后的数，标的公司与上市公司之间的关联交易按什么价格结算，承诺期内的股权激励费用、并购整合费用、研发资本化政策变不变，这几项都会直接改变实际盈利数。口径不写死，三年后是审计师在替双方作判断。</p>
+<p>顺序。先股份后现金是规则给的顺序，但协议还要写清多名补偿义务人之间谁先补、按什么比例、是连带还是按份，以及某一位补不出来时其他人要不要顶上。</p>
+<p>限制。补偿期内补偿股份不得质押、不得设定其他权利负担，减持要经上市公司同意，这几句话的成本是零，缺了它们的代价是整套补偿机制落空。</p>
+<p>担保。现金补偿部分要有抓手：补偿义务人以其持有的其他公司股权、不动产提供担保，或者由第三方出具担保函。没有担保的现金补偿条款，在对方资产有限时只是一张纸。</p>
+<p>减值测试的方法也要提前约定。期末评估用什么方法、由谁指定评估机构、与交易时的评估方法是否保持一致，这些不定，减值额本身就会变成争议的起点。关键在于，补偿条款是在交易谈判时最容易被当作&quot;细节&quot;让步的部分，而它恰恰是这笔交易里少有的一条能往回走的路。</p>
+<p>回到开头那家公司。如果重来一次，买方是坚持把三年承诺和补偿股份的质押限制一起写进协议、哪怕因此把估值让掉半个亿；还是接受卖方&quot;少承诺、少补偿、价格也少要一点&quot;的方案，把风险提前折进价格里？站在上市公司董事会和站在卖方老板的位置上，这两条路算出来的账不一样，你会选哪一条？</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="a-share-private-placement.html" style="color:#6b5426;font-weight:700;">上市公司想定增十二个亿：发多少、什么价、锁多久、钱花在哪，每一步都有数</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="listed-company-asset-divestiture.html" style="color:#6b5426;font-weight:700;">上市公司把亏损子公司卖给大股东：过户了，担保和欠款还没走</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ma-matching-financing.html" style="color:#6b5426;font-weight:700;">并购方案批了，配套融资只到了四成：剩下的现金对价谁来付</a></li></ul></div><div class="brandbox">
+<h3>关于 TD GROUP 彤鼎与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由 TD GROUP 彤鼎团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信 esonleo</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
