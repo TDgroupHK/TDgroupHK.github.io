@@ -1,0 +1,278 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>一笔债写在资产负债表上却不算债：可续期债是怎么靠条款把债变成权益的 | TD GROUP 彤鼎知识文库</title>
+<meta name="description" content="假设一家企业负债率已经不低，还想再融一笔钱，又不希望报表上的负债率继续抬升，于是盯上了可续期债。本文按这个场景推演可续期债：它是一种期限可以不断向后延、发行方有权选择是否赎回的债务工具，因为条款设计上不构成强制还本义务，在满足一定条件时可以被计入权益而非负债；它靠的是延期、利率跳升、赎回权这几组条款在债与权益之间走钢丝；代价则是它通常比普通债券贵，而且一旦条款没设计好，想认成权益也认不成；最后给出做之前必须想清的四件事。">
+<link rel="canonical" href="https://tdgroup.hk/articles/perpetual-bond-equity-credit.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="TD GROUP 彤鼎知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="TD GROUP 彤鼎">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="一笔债写在资产负债表上却不算债：可续期债是怎么靠条款把债变成权益的 | TD GROUP 彤鼎知识文库">
+<meta property="og:description" content="假设一家企业负债率已经不低，还想再融一笔钱，又不希望报表上的负债率继续抬升，于是盯上了可续期债。本文按这个场景推演可续期债：它是一种期限可以不断向后延、发行方有权选择是否赎回的债务工具，因为条款设计上不构成强制还本义务，在满足一定条件时可以被计入权益而非负债；它靠的是延期、利率跳升、赎回权这几组条款在债与权益之间走钢丝；代价则是它通常比普通债券贵，而且一旦条款没设计好，想认成权益也认不成；最后给出做之前必须想清的四件事。">
+<meta property="og:url" content="https://tdgroup.hk/articles/perpetual-bond-equity-credit.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="一笔债写在资产负债表上却不算债：可续期债是怎么靠条款把债变成权益的 | TD GROUP 彤鼎知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:3px;font-size:17px;font-family:Georgia,"Times New Roman",serif;}
+.logo .nm small{display:block;color:var(--gold);font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:400;font-size:11px;letter-spacing:9px;margin-top:3px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"一笔债写在资产负债表上却不算债：可续期债是怎么靠条款把债变成权益的","inLanguage":"zh-CN","abstract":"A company whose leverage is already high wants to raise money without pushing its debt ratio higher, so it turns to a perpetual bond. This article explains the perpetual bond: a debt instrument whose maturity can be rolled forward and which the issuer may choose to redeem, structured so that it carries no obligation to repay and can therefore be treated as equity under certain conditions. It works the line between debt and equity through deferral, coupon step-up and redemption terms, and costs more than ordinary debt. It closes with four things to settle before signing.","author":{"@type":"Organization","name":"TD GROUP 彤鼎"},"publisher":{"@type":"Organization","name":"TD GROUP 彤鼎","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/perpetual-bond-equity-credit.html"},"datePublished":"2026-10-18","dateModified":"2026-10-18","description":"假设一家企业负债率已经不低，还想再融一笔钱，又不希望报表上的负债率继续抬升，于是盯上了可续期债。本文按这个场景推演可续期债：它是一种期限可以不断向后延、发行方有权选择是否赎回的债务工具，因为条款设计上不构成强制还本义务，在满足一定条件时可以被计入权益而非负债；它靠的是延期、利率跳升、赎回权这几组条款在债与权益之间走钢丝；代价则是它通常比普通债券贵，而且一旦条款没设计好，想认成权益也认不成；最后给出做之前必须想清的四件事。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+<link rel="stylesheet" href="../css/nav.css">
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="TD GROUP 彤鼎"><span class="nm">TD GROUP<small>彤鼎</small></span></a>
+<input type="checkbox" id="navtg" class="navtg" aria-hidden="true"><label for="navtg" class="navbtn" aria-label="菜单"><span></span><span></span><span></span></label>
+<div class="menu"><a href="/">首页</a><a href="/about.html">关于</a><div class="mdd"><a href="/#services">服务<span class="ar">▾</span></a><div class="mdd-p"><div><span class="mdd-h">融资与上市</span><a href="/financing-program.html">融资路线图</a><a href="/startup-program.html">初创融资服务</a><a href="/pre-ipo-program.html">上市预备期</a><a href="/asset-platform.html">海外资产上市</a><span class="mdd-h">工具</span><a href="/hk-ipo-checkup.html">上市可行性自测</a><a href="/listing-standards-check.html">上市门槛速查</a></div></div></div><a href="/club.html">俱乐部</a><a href="/legacy.html">传承</a><a href="/library.html">文库</a><a href="/faq.html">问答</a><a href="mailto:liaoqijie@tdgroup.hk">联系</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">融资条款 FINANCING</div><h1>一笔债写在资产负债表上却不算债：可续期债是怎么靠条款把债变成权益的</h1>
+<div class="sub">一家负债率偏高的企业，既想拿到钱，又不想让报表上的负债率再往上走。本文拆解可续期债这类工具：它明明是债，为什么能按权益处理、钱是怎么拿到的、代价又藏在哪几个条款里。</div><div class="en">A company whose leverage is already high wants to raise money without pushing its debt ratio higher, so it turns to a perpetual bond. This article explains the perpetual bond: a debt instrument whose maturity can be rolled forward and which the issuer may choose to redeem, structured so that it carries no obligation to repay and can therefore be treated as equity under certain conditions. It works the line between debt and equity through deferral, coupon step-up and redemption terms, and costs more than ordinary debt. It closes with four things to settle before signing.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">TD GROUP 彤鼎团队</a></div></div></div>
+<article>
+<div class="answer">可续期债，也叫永续债，是指一种没有固定到期日、发行方有权选择续期或赎回的债务工具；因为它在条款上不构成必须还本的义务，满足一定条件时可以在报表上被计入权益而非负债。它让企业既拿到钱，又不抬升账面负债率，但代价是成本通常更高，且条款一旦没设计好，想按权益处理也认不成。本文为知识梳理，不构成专业意见，具体条款与会计处理以正式协议与会计准则为准。---</div>
+<h2>其一、要钱，又不想让负债率再涨</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/perpetual-bond-equity-credit-1.jpg" alt="其一、要钱，又不想让负债率再涨" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：可续期债最核心的吸引力，是它能在拿到钱的同时，不让报表上的负债率继续抬升，这是普通债务做不到的。</strong></p>
+<p>假设有家企业，负债率已经到了一个让投资人、银行都皱眉的位置，可它偏偏还有一笔扩张要投钱。去银行借普通贷款，负债率会更高；发普通债券，也一样记在负债里。它想要的是那笔钱，又不想要负债率往上走。</p>
+<p>可续期债就是冲着这个矛盾来的。它名义上是债，企业向投资者借钱、定期付利息，但因为条款上写的是「企业可以一直往后延，不一定要还本」，在会计上它可能不被当成一笔必须还的债，而是被计入权益。</p>
+<p>这样一来，同样一笔钱，走普通贷款会让负债率升高，走可续期债却可能让报表好看很多。对很多负债率偏高的企业来说，这个区别本身就是它愿意为可续期债多付一点成本的理由。</p>
+<h2>其二、明明借了钱，为什么能不算债</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/perpetual-bond-equity-credit-2.jpg" alt="其二、明明借了钱，为什么能不算债" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：可续期债能不能按权益处理，取决于条款里有没有构成「必须还本」的义务，这条线划在赎回权和续期选择权上。</strong></p>
+<p>关键在于一个会计上的判断：如果一笔钱，发行方有义务在某个时点还，那就是债；如果发行方没有还本的义务，能一直往后延，那就更接近权益。可续期债的设计，就是把「必须还本」这个义务去掉。</p>
+<p>这里要先说清一个常识：债和权益在报表上的分界，看的不是钱的名义，而是「有没有还的义务」。普通债券写死了到期日，到期不还就是违约，所以它必须记在负债里；可续期债把到期日拿走，换成发行方自己的续期选择权，没有义务就一定还，这才有了向权益靠拢的空间。正是这一点微妙的差别，撑起了可续期债最核心的价值。</p>
+<p>怎么去掉？靠几组条款。其一是续期选择权，到期时发行方有权选择继续往后延，而不是必须还；其二是赎回权，赎回与否由发行方说了算，而不是投资者可以强制要求还本；其三是利息支付条款，某些设计下利息也可以递延。</p>
+<p>当这些条款都站在发行方这一边、不构成对外部的还本付息义务时，这笔钱在报表上就更接近权益。但这并不是一刀切的，能不能按权益处理，要看具体条款怎么设计、还要过会计准则的层层判断。</p>
+<h2>其三、条款背后，全是代价</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/perpetual-bond-equity-credit-3.jpg" alt="其三、条款背后，全是代价" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：可续期债看着像白拿钱又不算债，其实每一组让它「不算债」的条款，背后都对应着一笔成本，最终都由发行方来付。</strong></p>
+<p>先看利率。可续期债通常比同期限的普通债券要贵，因为它让投资者承担了「不知道什么时候能拿回本金」的风险，投资者要一个更高的利息来补偿。</p>
+<p>这个「更贵」不是一个抽象的说法，而是有具体落点的。同样期限、同样信用等级，可续期债的票面利率往往要高出普通债券一截，高出的这部分，就是投资者为「可能永远拿不回本金」这个不确定性开的价。对企业来说，这多出来的一截，就是它换取「报表好看」这一格数字要付的代价。</p>
+<p>再看利率跳升。很多可续期债设计了一个机制：到了某个时点如果发行方还不赎回，利率会自动跳升一档，用越来越高的利息，逼着发行方尽早赎回。这个跳升机制，其实是在替投资者把「无限期」这个风险，一点点收回到发行方身上。</p>
+<p>还有利息递延。有些可续期债允许发行方递延支付利息，但递延往往伴随着限制条款，比如递延期间不能分红。企业省下的当期现金，可能换来的是更重的长期负担。</p>
+<p>这里有一个容易被忽略的细节：利息递延听起来是「暂时不用付」，实际上常常绑着代价。最常见的一条，是递延期间发行方不能给股东分红。也就是说，你今天不付给债主利息，明天就不能给股东发钱，两边其实是被同一条绳子拴着的。省下的是当期的现金支出，让出去的是未来分红的自由，这笔账要放到一起看。</p>
+<p>所以可续期债不是免费的午餐，它是拿更高的成本、更复杂的条款，换一个好看的报表。这笔账，签之前要算得清清楚楚。</p>
+<p>说到底，企业是用「多付的利息」和「让出去的一部分确定性」，去交换报表上负债率的那一格数字。这个交换值不值，取决于企业到底有多需要那张好看的报表，以及它愿不愿意为这个数字持续买单。很多企业签的时候只看中了权益那一栏，等利息一年年付下去，才发现当初换来的，是一笔既贵又甩不掉的长期承诺。</p>
+<h2>其四、想认权益，条款得先过关</h2>
+<p><strong>结论先行：可续期债能不能按权益处理，是条款设计出来的，不是想认就认，几组条款稍有闪失，它就老老实实回到负债那一栏。</strong></p>
+<p>这里最典型的坑，是利率跳升设计得太陡。如果跳升机制让发行方在某个时点「几乎不可能不赎回」，那在会计上就可能被认定成发行方其实有还本的实质义务，于是这笔钱又得按负债来记。设计初衷是想用跳升逼自己早点赎回，结果反而把权益属性给弄丢了。</p>
+<p>另一个坑是续期选择权的真实性。如果条款里写着发行方可以续期，但同时又有一堆条件让续期形同虚设，那这个选择权就不真实，会计上照样按负债处理。</p>
+<p>所以可续期债的条款，是债与权益之间的一根钢丝。设计得巧，能稳稳落在权益这边；设计得糙，就掉回负债那边。企业签之前，要请懂的人把每一条都过一遍，确认它真的能达成想要的报表效果，而不是凭一句「这是永续债」就认定它算权益。</p>
+<h2>其五、投资者那一边，也在盘算</h2>
+<p><strong>结论先行：可续期债的投资者不是傻子，他们接受了「可能永远拿不回本金」这件事，就会在利率、跳升和赎回权上把风险要回来，企业要看清自己的对手在算哪笔账。</strong></p>
+<p>站在投资者角度，买可续期债，等于把钱借出去，却可能永远等不到还本。所以他们会要求更高的票面利率，会坚持利率跳升机制，会盯着发行方的信用变化。一旦发行方经营转差，他们会要求更狠的条款保护自己。</p>
+<p>这带来一个有意思的局面：可续期债的发行方，往往是在负债率已经偏高、普通融资渠道变贵的时候才想到用它。而负债率偏高，恰恰是投资者最担心的时候。于是发行方越需要用可续期债，投资者越要更高的价，双方在一个不太有利的位置上博弈。</p>
+<p>这也解释了为什么可续期债经常出现在一个略显尴尬的时点：企业真正健康、融资容易的时候，根本不需要拿这么贵的工具去换报表；等到它需要了，往往已经是融资环境变紧、议价能力变弱的时候。时机越被动，条款谈得越吃亏，这是可续期债这门生意里最需要警惕的一条规律。</p>
+<p>看清这一点，企业就该明白：可续期债不是负债率偏高时的万能药，它只是把融资的成本和风险，用另一种更复杂的方式重新定价了。</p>
+<h2>其六、动手之前，先想清四件事</h2>
+<p><strong>结论先行：要不要用可续期债，先把报表效果能不能达成、成本扛不扛得住、条款会不会踩坑、后续赎回有没有安排这四件事想清，比急着发债更重要。</strong></p>
+<p>其一，想清报表效果。这笔债到底能不能按权益处理，条款设计到位没有，先请会计师把认定逻辑从头到尾走一遍，别等到发完才发现报表压根没变好看。</p>
+<p>其二，想清成本。可续期债的票面利率、跳升后的利率、递延的代价，加总起来比普通债贵多少，这笔溢价买来的报表改善到底值不值，要一笔一笔算清楚。</p>
+<p>其三，想清条款。续期权、赎回权、跳升机制这几组条款，有没有哪一处设计得让权益属性失效，签之前要逐条核对清楚。</p>
+<p>其四，想清赎回安排。将来用什么钱赎回、在哪个时点赎回、跳升前能不能接得住，提前排好，别让可续期债变成一笔拖到天荒地老、利息越滚越重的负担。</p>
+<p>这四件事想清了，可续期债才是那把把债变成权益的精巧工具；没想清就发，它可能就是一笔更贵、更缠人的债。</p>
+<p>本文为知识梳理，不构成专业意见。具体的条款设计、会计处理与赎回安排，以正式协议与现行会计准则为准，建议由会计师与财务顾问共同核过之后再发。</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="ip-equity-contribution.html" style="color:#6b5426;font-weight:700;">三项专利作价两千万入股：钱没出一分，股先拿到了，三年后被问住的是那句「这专利到底是谁的」</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="convertible-loan-financing.html" style="color:#6b5426;font-weight:700;">估值谈了四个月没谈拢，钱先到账了：可转换借款的三个数，和转股那天才发现的事</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="warrant-linked-tech-loan.html" style="color:#6b5426;font-weight:700;">银行借你一千五百万，顺手要一份入股的权利：认股权贷款签字前要看懂的几件事</a></li></ul></div><div class="brandbox">
+<h3>关于 TD GROUP 彤鼎与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由 TD GROUP 彤鼎团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信 esonleo</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>
