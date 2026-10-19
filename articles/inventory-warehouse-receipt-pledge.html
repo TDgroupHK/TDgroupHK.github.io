@@ -1,0 +1,275 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>仓库里的货也能变成钱：存货与仓单质押融资是怎么做起来的 | TD GROUP 彤鼎知识文库</title>
+<meta name="description" content="假设一家做钢材贸易的企业，旺季要大量备货，资金都压在了仓库里的存货上，账面上有货值、手里却没有钱周转。本文按这家公司完整推演：存货与仓单质押是把库存商品作为担保去融资，核心在于货物的权属、估值与第三方监管；动态质押和静态质押差在哪、为什么价格一跌就可能触发补货或抽贷；第三方监管（仓库、物流、监管方）这一步为什么是整个安排能不能成立的命门；最后给出做之前要先核清的四件事。">
+<link rel="canonical" href="https://tdgroup.hk/articles/inventory-warehouse-receipt-pledge.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="TD GROUP 彤鼎知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="TD GROUP 彤鼎">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="仓库里的货也能变成钱：存货与仓单质押融资是怎么做起来的 | TD GROUP 彤鼎知识文库">
+<meta property="og:description" content="假设一家做钢材贸易的企业，旺季要大量备货，资金都压在了仓库里的存货上，账面上有货值、手里却没有钱周转。本文按这家公司完整推演：存货与仓单质押是把库存商品作为担保去融资，核心在于货物的权属、估值与第三方监管；动态质押和静态质押差在哪、为什么价格一跌就可能触发补货或抽贷；第三方监管（仓库、物流、监管方）这一步为什么是整个安排能不能成立的命门；最后给出做之前要先核清的四件事。">
+<meta property="og:url" content="https://tdgroup.hk/articles/inventory-warehouse-receipt-pledge.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="仓库里的货也能变成钱：存货与仓单质押融资是怎么做起来的 | TD GROUP 彤鼎知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:3px;font-size:17px;font-family:Georgia,"Times New Roman",serif;}
+.logo .nm small{display:block;color:var(--gold);font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:400;font-size:11px;letter-spacing:9px;margin-top:3px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"仓库里的货也能变成钱：存货与仓单质押融资是怎么做起来的","inLanguage":"zh-CN","abstract":"A hypothetical steel trader ties up its working capital in inventory during the peak stocking season, leaving the balance sheet full of goods but the bank account empty. This article works through inventory and warehouse-receipt pledge financing: how goods are pledged, how the receipt is issued, why third-party custody and supervision decide whether the arrangement holds, how dynamic and static pledge differ, and why a price drop can trigger a margin call or a forced unwinding. It closes with four checks before signing.","author":{"@type":"Organization","name":"TD GROUP 彤鼎"},"publisher":{"@type":"Organization","name":"TD GROUP 彤鼎","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/inventory-warehouse-receipt-pledge.html"},"datePublished":"2026-10-20","dateModified":"2026-10-20","description":"假设一家做钢材贸易的企业，旺季要大量备货，资金都压在了仓库里的存货上，账面上有货值、手里却没有钱周转。本文按这家公司完整推演：存货与仓单质押是把库存商品作为担保去融资，核心在于货物的权属、估值与第三方监管；动态质押和静态质押差在哪、为什么价格一跌就可能触发补货或抽贷；第三方监管（仓库、物流、监管方）这一步为什么是整个安排能不能成立的命门；最后给出做之前要先核清的四件事。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+<link rel="stylesheet" href="../css/nav.css">
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="TD GROUP 彤鼎"><span class="nm">TD GROUP<small>彤鼎</small></span></a>
+<input type="checkbox" id="navtg" class="navtg" aria-hidden="true"><label for="navtg" class="navbtn" aria-label="菜单"><span></span><span></span><span></span></label>
+<div class="menu"><a href="/">首页</a><a href="/about.html">关于</a><div class="mdd"><a href="/#services">服务<span class="ar">▾</span></a><div class="mdd-p"><div><span class="mdd-h">融资与上市</span><a href="/financing-program.html">融资路线图</a><a href="/startup-program.html">初创融资服务</a><a href="/pre-ipo-program.html">上市预备期</a><a href="/asset-platform.html">海外资产上市</a><span class="mdd-h">工具</span><a href="/hk-ipo-checkup.html">上市可行性自测</a><a href="/listing-standards-check.html">上市门槛速查</a></div></div></div><a href="/club.html">俱乐部</a><a href="/legacy.html">传承</a><a href="/library.html">文库</a><a href="/faq.html">问答</a><a href="mailto:liaoqijie@tdgroup.hk">联系</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">融资条款 FINANCING</div><h1>仓库里的货也能变成钱：存货与仓单质押融资是怎么做起来的</h1>
+<div class="sub">一家做钢材贸易的企业，货都堆在仓库里，账面上有货值、手里却没有流动资金。本文拆解存货与仓单质押这条把库存变成现金的融资通道：货怎么押、仓单怎么开、第三方监管这一步为什么是命门，以及做之前要先把哪几件事想清楚，避免货价一跌就被抽贷。</div><div class="en">A hypothetical steel trader ties up its working capital in inventory during the peak stocking season, leaving the balance sheet full of goods but the bank account empty. This article works through inventory and warehouse-receipt pledge financing: how goods are pledged, how the receipt is issued, why third-party custody and supervision decide whether the arrangement holds, how dynamic and static pledge differ, and why a price drop can trigger a margin call or a forced unwinding. It closes with four checks before signing.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">TD GROUP 彤鼎团队</a></div></div></div>
+<article>
+<div class="answer">存货与仓单质押融资是指企业把库存商品（或由第三方仓库开具的仓单）作为担保，向资金方取得融资的安排，适合存货价值稳定、易保管、易变现的企业，尤其是有大量库存占用资金的贸易与制造企业。它的核心风险在于货值会波动、权属要清晰、以及第三方监管是否真正到位，货价一旦大幅下跌，就可能触发补充担保或提前收贷。本文为知识梳理，不构成专业意见，具体质押率、监管安排与追偿机制以双方正式协议为准。---</div>
+<h2>其一、货都在仓库里，钱却周转不开</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/inventory-warehouse-receipt-pledge-1.jpg" alt="其一、货都在仓库里，钱却周转不开" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：贸易和制造企业缺钱的一种常见形态，是库存太重，货都压在仓库里，账面上有资产、手上却没有现金。</strong></p>
+<p>假设有家做钢材贸易的企业，旺季前要大量备货，一下把几千万的资金都变成了仓库里的钢材。客户下单、回款有个周期，中间的这段时间，它的资金几乎全被存货占住了。</p>
+<p>它去银行借过，银行说它抵押物不足。它也想过压货，但旺季不备货就没生意，不备货的损失比备货的资金压力更大，这条路走不通。资金链最紧的那几个月，它只能靠赊销和东挪西借硬扛，扛得过去是旺季，扛不过去就是一场库存爆雷。</p>
+<p>这就是很多靠库存周转吃饭的企业的共同处境：货是它最大的资产，也是它最大的资金黑洞，传统的融资通道不认这些堆在仓库里的货。</p>
+<h2>其二、把仓库里的货，变成融资的担保</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/inventory-warehouse-receipt-pledge-2.jpg" alt="其二、把仓库里的货，变成融资的担保" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：存货与仓单质押融资的本质，是把企业仓库里的库存商品作为担保物，换取资金方的一笔融资，用货来背书。</strong></p>
+<p>打个比方，你手里有一批货，暂时用不上，但值钱。你可以把这批货交给一个第三方看管，由这个第三方出一张单子，证明货在、货是你的、货值多少，然后拿这张单子去借钱。存货质押借的是货本身的价值，仓单质押借的是那张代表货物的单子。</p>
+<p>操作上有两种常见的形态。一种是静态质押，货放在指定的仓库里不动，融资期内不流动，简单清楚；另一种是动态质押，货可以进进出出，只要质押物的总量不低于约定的底线就行，更适合每天都要进出货的贸易企业。</p>
+<p>不管是哪一种，核心都是三件事：货的权属要清楚、货值要算得准、货要有人看住。这三件事做不好，融资就是空中楼阁。</p>
+<p>仓单那一层也值得说清楚。仓单是由仓库出具的、代表一批货物的凭证，谁持有仓单，谁就有权向仓库提货。传统上是纸质的，现在越来越多地变成电子仓单，登记、流转、质押都在系统里完成。电子仓单的好处是流转快、不易造假，但它能不能被资金方认可，取决于那个登记和开单的平台是不是规范、有没有公信力。同样的货，一张来自正规平台、可查可验的仓单，和一张来路不明、谁都能开的白条，能借到的钱是天壤之别。</p>
+<h2>其三、第三方监管，才是整件事的命门</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/inventory-warehouse-receipt-pledge-3.jpg" alt="其三、第三方监管，才是整件事的命门" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：存货质押融资能不能做成，关键不在企业，在于第三方监管到不到位，货看不看得住，是整件事的命门。</strong></p>
+<p>货是流动的、会变质的、会贬值的，所以必须有一个独立的第三方来管住它：仓库负责保管，监管方负责确认货在不在、数量对不对、是不是真的属于借款企业。资金方信的不是企业的一句话，而是这个第三方出具的、可以追责的确认。</p>
+<p>这里最容易出问题。有些安排里，监管方就是企业自己的关联方，或者仓库和企业串通，货已经被提走了，监管报告还写着货在。这种虚假监管一旦暴露，融资立刻崩盘，资金方、监管方、企业三方一起出事，谁也脱不了干系。</p>
+<p>所以企业做之前，要弄清楚监管方是谁、是不是真的独立、有没有真实的控货能力，能不能在货被异常提取时及时发现并拦截。一个真正独立的、有信誉的第三方监管，比一个更低的利率更值钱，因为它守住的是一整个融资安排能不能成立的底线。</p>
+<h2>其四、货价一跌，麻烦就来了</h2>
+<p><strong>结论先行：存货质押融资最大的风险是货值波动，货价一旦大幅下跌，就可能触发补充担保、提高质押率甚至提前收贷。</strong></p>
+<p>资金方放款时，会按货值的一定比例给钱，这个比例叫质押率。比如货值一千万，质押率七成，就放七百万，剩下的三成是给价格波动留的安全垫。货价越稳定，质押率可以越高；货价波动越大，质押率就压得越低，这是资金方给自己留的缓冲，也是给企业敲的一记警钟。</p>
+<p>麻烦就出在价格下跌的时候。假设那批钢材押进去时一千万，行情走弱跌到八百万，安全垫就被吃掉了。这时候资金方会要求企业补货、补保证金，或者干脆提前收回一部分贷款。企业本来就是因为缺钱才押货，这时候又拿不出钱来补，就容易陷入被抽贷、被迫低价卖货、越卖越亏的恶性循环。这个循环一旦转起来，往往不是企业自己能停下来的，因为它卖货回笼的钱又要拿去还贷，还完贷手里的货更少、担保更薄，资金方反而更急着抽。</p>
+<p>所以做存货质押，货价稳不稳，比货值高不高更要紧。价格大起大落的品种，看着货值很高，实际能做出来的融资很有限，风险还大。</p>
+<p>补货和保证金这两件事，也值得企业提前算清。很多存货质押协议里都写着，货值跌到某个线以下，企业要么往仓库里补货，要么往监管账户里补保证金，把质押率拉回约定的水平。这个补的动作是有期限的，往往是几个工作日之内。企业如果连补货的余量都没有，就等于是把自己的命脉交到了行情手里。所以做之前，一定要留出补货或者补保证金的余力，别把每一分货都押进去。</p>
+<h2>其五、货的质量和权属，比想象中更难缠</h2>
+<p><strong>结论先行：存货质押融资里，货值之外还有两件事常常被忽略，一是货的权属清不清楚，二是货本身容不容易保管和变现。</strong></p>
+<p>权属是头一个坑。货在仓库里，它到底是你的，还是你已经卖给下游、只是暂时放在这里的，或者是不是已经被押给了别人，这些都要查得明明白白。货的权属有争议，或者一货多押，资金方拿到的担保就是空的。</p>
+<p>保管和变现是第二个坑。有些货会变质、会过期、会过时，比如生鲜、时尚、电子元器件，押进去没几个月就贬值甚至报废了；有些货虽然值钱，但根本卖不掉，真到要处置的时候找不到买家。资金方要的是那种随时能变现的货，而不是一堆账面好看的死货。</p>
+<p>所以真正适合做质押的存货，是那些标准化、易保管、有活跃市场的品种，比如大宗商品、标准化的工业原料。太特殊的、太容易过时的货，即便货值很高，也不是好的担保物。</p>
+<p>一货多押是另一个要特别警惕的坑。因为货放在仓库里，企业理论上可以拿同一批货，向不同资金方各做一次质押，只要监管信息不打通，就没人发现。等到出了事，两个资金方都来主张同一批货，才发现担保是重复的。所以企业自己做的时候要守规矩，选监管方的时候也要看它的登记信息是不是和别家打通，能不能查得到这批货有没有已经被押过。干净的登记，是保护资金方，最终也是在保护企业自己的信用。</p>
+<h2>其六、做之前先核清四件事</h2>
+<p><strong>结论先行：要不要做存货与仓单质押融资，先把货值稳不稳、权属清不清、监管真不真、处置顺不顺这四件事核清，再签协议。</strong></p>
+<p>其一，货值稳不稳。把这个品种过去几年的价格波动拉出来看，波动太大的，做出来的融资额度有限，还容易被抽贷。</p>
+<p>其二，权属清不清。把要押进去的货，权属、有没有重复质押、是不是已经预售，逐项核查清楚，别让担保物变成空头。</p>
+<p>其三，监管真不真。看监管方是不是独立、有没有真实的控货能力，能不能定期、准确地出确认报告。这一步是整个安排能不能成立的命门。</p>
+<p>其四，处置顺不顺。真到了要处置的时候，这批货能不能卖得掉、卖得回几成，提前想清楚最坏的情况，别只看到放款时的那笔钱。</p>
+<p>这四件事想清楚，存货质押才是一条把库存变成现金的通道；没想清楚就签，它可能只是在你最缺钱的时候，把一批会贬值的货变成了一个随时可能被抽贷的窟窿。</p>
+<p>本文为知识梳理，不构成专业意见。存货与仓单质押融资涉及货值评估、权属核查、第三方监管与处置安排等多道专业环节，具体质押率、监管机制、补货条款与追偿安排以双方正式协议及监管机构口径为准。</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="qualification-license-diligence.html" style="color:#6b5426;font-weight:700;">公司八成收入靠那张证，而证不在公司名下：尽调是怎么把它翻出来的</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="option-exercise-tax.html" style="color:#6b5426;font-weight:700;">干满五年的期权终于能行权了，财务先让他拿出一笔现金交税</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nominee-shareholding-unwind.html" style="color:#6b5426;font-weight:700;">八年前那百分之三十挂在表弟名下，融资尽调时被一句话问穿了</a></li></ul></div><div class="brandbox">
+<h3>关于 TD GROUP 彤鼎与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由 TD GROUP 彤鼎团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信 esonleo</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>

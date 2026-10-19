@@ -55,7 +55,6 @@ AI 落地自测十道题，定位先上 AI 的三个岗位
 
 初创与早期融资EARLY STAGE & STARTUP FINANCING
 
-- [找亲戚、员工、老客户凑钱入股：这四条线过了哪一条，就不叫融资了](https://tdgroup.hk/articles/raising-money-from-friends-employees.html)
 - [从核定转查账：电商企业账没建起来，先做这五步](https://tdgroup.hk/articles/ecommerce-from-assessed-to-audited-books.html)
 - [个体户、个独还是公司：电商选哪种主体，核定征收的门就开在哪](https://tdgroup.hk/articles/ecommerce-entity-and-tax-method.html)
 - [做了十年的个体户，什么时候该换成公司](https://tdgroup.hk/articles/sole-proprietorship-to-company.html)
@@ -103,7 +102,6 @@ AI 落地自测十道题，定位先上 AI 的三个岗位
 
 ### 跨境架构与合规 / STRUCTURING & COMPLIANCE
 
-- [赚的钱都在孙公司账上：老板要拿到自己手上，得一层一层往上分](https://tdgroup.hk/articles/dividend-upstream-holding-layers.html)
 - [私户收款的电商店主，补税那天的数是怎么算出来的](https://tdgroup.hk/articles/ecommerce-back-tax-how-calculated.html)
 - [核定征收不是优惠，是税务机关替你算账：一家食品网店从定额到建账的一年](https://tdgroup.hk/articles/assessed-taxation-explained-ecommerce.html)
 - [平台每个季度把你的收入报给税务机关了，这件事到底改变了什么](https://tdgroup.hk/articles/ecommerce-platform-tax-reporting.html)
@@ -171,21 +169,22 @@ AI 落地自测十道题，定位先上 AI 的三个岗位
 
 ### 融资与条款 / FINANCING & TERMS
 
-- [一笔债写在资产负债表上却不算债：可续期债是怎么靠条款把债变成权益的](https://tdgroup.hk/articles/perpetual-bond-equity-credit.html)
-- [三项专利作价两千万入股：钱没出一分，股先拿到了，三年后被问住的是那句「这专利到底是谁的」](https://tdgroup.hk/articles/ip-equity-contribution.html)
-- [估值谈了四个月没谈拢，钱先到账了：可转换借款的三个数，和转股那天才发现的事](https://tdgroup.hk/articles/convertible-loan-financing.html)
-- [银行借你一千五百万，顺手要一份入股的权利：认股权贷款签字前要看懂的几件事](https://tdgroup.hk/articles/warrant-linked-tech-loan.html)
-- [从开口融资到钱到账，一家公司卡了七次：融资通常卡在哪几段](https://tdgroup.hk/articles/fundraising-stall-points.html)
-- [拿专利去银行押一笔钱：押出去之后，哪几件事你就说了不算](https://tdgroup.hk/articles/ip-pledge-financing.html)
-- [报表营收六个亿，尽调改成净额法只剩两亿：利润一分没少，估值为什么砍掉一半](https://tdgroup.hk/articles/gross-vs-net-revenue-diligence.html)
-- [美元基金点头投了，钱三个月还没到账：外资直接增资境内公司，交割卡在哪几步](https://tdgroup.hk/articles/foreign-fund-onshore-capital-increase.html)
-- [把厂里的设备卖给租赁公司再租回来：这笔钱贵在哪、险在哪](https://tdgroup.hk/articles/sale-leaseback-equipment-financing.html)
-- [账上挂着四千万应收，不动股权也能换成现金：代价写在追索权那三个字里](https://tdgroup.hk/articles/receivables-factoring-financing.html)
-- [投资人看完你的全部数据，最后说不投——那份保密协议管得住什么](https://tdgroup.hk/articles/nda-in-fundraising-diligence.html)
-- [尽调做完那天，投资人回来重新谈价：同一轮融资里，签过的估值为什么还会变](https://tdgroup.hk/articles/retrade-after-diligence.html)
-- [尽调第五周，投资人递过来一张纸：上面是你本人的公开记录，不是公司的](https://tdgroup.hk/articles/founder-credit-record-diligence.html)
-- [罚过的那几张单子，几年后会在融资桌上被重新念一遍](https://tdgroup.hk/articles/environmental-safety-penalties-diligence.html)
-- [意向书签完第十一天，客户的法务发来一封邮件：引资那天，你几年前签的合同会自己醒过来](https://tdgroup.hk/articles/change-of-control-clauses.html)
+- [尽职调查到底在查什么：投资人进场前，会把你的公司从里到外翻一遍](https://tdgroup.hk/articles/due-diligence-what-is-checked.html)
+- [把公司股权押给银行换钱：这笔钱拿得痛快，风险的扳机却握在股价手里](https://tdgroup.hk/articles/share-pledge-financing-risk.html)
+- [用别人的钱买下另一家公司：杠杆收购这笔账，是怎么算又是怎么爆的](https://tdgroup.hk/articles/leveraged-buyout-financing.html)
+- [民营企业直接发债要过哪几道关：门槛、成本与用途约束](https://tdgroup.hk/articles/corporate-bond-issuance.html)
+- [银行承兑汇票贴现：半年后到期的银票，怎么变成今天的现金](https://tdgroup.hk/articles/bank-acceptance-bill-discount.html)
+- [自己借不到、找担保公司帮忙：融资里的增信到底增的是什么、这笔钱该不该花](https://tdgroup.hk/articles/credit-enhancement-guarantor-role.html)
+- [一项技术作价入股那十个点：评估怎么算、税怎么递延、权属那道关在哪](https://tdgroup.hk/articles/tech-contribution-equity.html)
+- [银行够不着、股权太贵的那一层钱：夹层融资进来时带的是什么条件](https://tdgroup.hk/articles/mezzanine-financing.html)
+- [四千万到账那天，账上只多了四百万：增资款怎么入账、印花税怎么算、这笔钱什么时候能动](https://tdgroup.hk/articles/capital-injection-bookkeeping-tax.html)
+- [贷款到期前三个月，银行说今年先还了再说：企业怎么把续贷做成一件能管的事](https://tdgroup.hk/articles/bank-credit-renewal-withdrawal.html)
+- [境内母公司给境外子公司做担保：一笔跨境融资，为什么会卡在外汇和合同上](https://tdgroup.hk/articles/cross-border-guarantee-financing.html)
+- [大客户点头就能换钱的账：反向保理是怎么让供应商提前拿到货款的](https://tdgroup.hk/articles/reverse-factoring-supply-chain-financing.html)
+- [几家企业互相担保凑贷款：联保互保链为什么看着像解药、实际是连环雷](https://tdgroup.hk/articles/mutual-guarantee-chain-risk.html)
+- [手里有专利却借不到钱：知识产权证券化是怎么把未来的许可费变成今天的现金的](https://tdgroup.hk/articles/ip-securitization-financing.html)
+- [货发到海外却怕收不到钱：出口信用保险怎么既保回款又能拿保单去融资](https://tdgroup.hk/articles/export-credit-insurance-financing.html)
+- [仓库里的货也能变成钱：存货与仓单质押融资是怎么做起来的](https://tdgroup.hk/articles/inventory-warehouse-receipt-pledge.html)
 - [公司八成收入靠那张证，而证不在公司名下：尽调是怎么把它翻出来的](https://tdgroup.hk/articles/qualification-license-diligence.html)
 - [干满五年的期权终于能行权了，财务先让他拿出一笔现金交税](https://tdgroup.hk/articles/option-exercise-tax.html)
 - [八年前那百分之三十挂在表弟名下，融资尽调时被一句话问穿了](https://tdgroup.hk/articles/nominee-shareholding-unwind.html)
@@ -257,6 +256,7 @@ AI 落地自测十道题，定位先上 AI 的三个岗位
 - [Pre-IPO融资谈判要点](https://tdgroup.hk/articles/pre-ipo-financing.html)
 - [企业估值三种方法](https://tdgroup.hk/articles/valuation-methods.html)
 - [对赌协议五条保命线](https://tdgroup.hk/articles/vam-five-lines.html)
+- [识别假投资人与收购骗局](https://tdgroup.hk/articles/fake-investors.html)
 - [创始人控制权保护](https://tdgroup.hk/articles/founder-control.html)
 - [融资对赌条款风险](https://tdgroup.hk/articles/vam-clause-risk.html)
 - [期权池设计完整指南](https://tdgroup.hk/articles/option-pool.html)
@@ -268,8 +268,6 @@ AI 落地自测十道题，定位先上 AI 的三个岗位
 
 ### 挂牌之后 / POST-LISTING
 
-- [业绩承诺期满那一年：三年刚好达标的标的，为什么第四年利润当场掉下来](https://tdgroup.hk/articles/performance-undertaking-expiry.html)
-- [他一股没卖，公司却不再是他的了：上市公司破产重整里，控制权是怎么换手的](https://tdgroup.hk/articles/bankruptcy-reorganization-listed.html)
 - [上市之后开的头一次股东大会，董秘发现票根本不够：那些票在谁手里](https://tdgroup.hk/articles/shareholder-meeting-vote-listed.html)
 - [把一家上市公司的控制权交出去：买卖双方各要过的那几关](https://tdgroup.hk/articles/control-transfer-listed.html)
 - [纳斯达克500万美元市值退市新规：无补救期时代怎么应对](https://tdgroup.hk/articles/nasdaq-5m-mvls-delisting-rule.html)
@@ -308,15 +306,6 @@ AI 落地自测十道题，定位先上 AI 的三个岗位
 
 ### 资本运作 / CAPITAL OPERATIONS
 
-- [两家公司合成一家：吸收合并怎么走，不同意的股东为什么能拿现金走人](https://tdgroup.hk/articles/absorption-merger-cash-option.html)
-- [管理层要把公司买下来：钱从哪来，价怎么定，哪几道表决必须回避](https://tdgroup.hk/articles/management-buyout.html)
-- [七亿买一块股权，为什么算成了重大资产重组：那道除法和之后的半年](https://tdgroup.hk/articles/major-asset-restructuring.html)
-- [持股买到三成那一天：要约义务从哪条线开始，哪几条路可以不走要约](https://tdgroup.hk/articles/tender-offer-trigger.html)
-- [承诺的利润差了三千六百万，补偿要补一亿两千八：发行股份买来的公司，股份是怎么退回去的](https://tdgroup.hk/articles/share-issue-performance-compensation.html)
-- [上市公司想定增十二个亿：发多少、什么价、锁多久、钱花在哪，每一步都有数](https://tdgroup.hk/articles/a-share-private-placement.html)
-- [上市公司把亏损子公司卖给大股东：过户了，担保和欠款还没走](https://tdgroup.hk/articles/listed-company-asset-divestiture.html)
-- [并购方案批了，配套融资只到了四成：剩下的现金对价谁来付](https://tdgroup.hk/articles/ma-matching-financing.html)
-- [上市公司买了七成之后：留在标的里的那三成原股东，能卡住你什么](https://tdgroup.hk/articles/minority-shareholder-after-acquisition.html)
 - [预案报上去第九天，问询函问的是一张采购表：把一块业务分出去单独上市，要过哪几关](https://tdgroup.hk/articles/subsidiary-spin-off-listing.html)
 - [持股平台签成有限合伙的那一天，老板顺手把自己的全部家当押了进去](https://tdgroup.hk/articles/lp-platform-gp-liability.html)
 - [一家上市公司来谈收购：它先看的不是你，是你的账、你的证和你的合同](https://tdgroup.hk/articles/sell-to-listed-company.html)
