@@ -178,3 +178,14 @@ button[data-wx-copy]:hover{background:rgba(201,169,98,.1);}
 .wx-plain{display:none;margin-left:12px;color:var(--gold-hi);letter-spacing:2px;
   -webkit-user-select:all;user-select:all;}
 
+
+/* ---------- 服务入口卡（2026-10-28 新增：跨境供应链金融线） ----------
+   只服务首页「八大核心业务」下方的入口位，一个类搞定，不逐页堆样式。 */
+.svc-card{display:flex;align-items:center;justify-content:space-between;gap:34px;flex-wrap:wrap;
+  border:1px solid var(--line);background:rgba(201,169,98,.03);padding:34px 36px;margin-bottom:34px;}
+.svc-card .tag{font-family:var(--serif);font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:14px;}
+.svc-card h3{font-size:22px;font-weight:500;color:var(--white);letter-spacing:1px;}
+.svc-card p{font-size:14px;color:var(--mute);margin-top:12px;max-width:760px;line-height:1.9;}
+.svc-card a.more{display:inline-block;padding:14px 30px;border:1px solid var(--gold);color:var(--gold);font-size:13.5px;letter-spacing:2px;white-space:nowrap;}
+.svc-card a.more:hover{background:rgba(201,169,98,.1);}
+@media(max-width:640px){.svc-card{padding:26px 24px;gap:20px;}}

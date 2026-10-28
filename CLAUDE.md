@@ -14,7 +14,6 @@
 | AI 转型线（ai-transformation、ai-readiness-checkup） | `.claude/rules/line-ai.md` | 3.2 KB |
 | 海外资产线（asset-platform、overseas-asset-listing） | `.claude/rules/line-asset.md` | 2.0 KB |
 | 电商税务线（ecommerce-tax-roadmap） | `.claude/rules/line-ecommerce.md` | 1.8 KB |
-| 跨境供应链金融线（supply-chain-finance，2026-10-28 建） | `.claude/rules/line-supply-chain.md` | 2.3 KB |
 
 ⛔ **常驻铁律（本文件第二、三、六、八、九节）任何时候都生效**，不因为没读分线文件而豁免。
 ⛔ 新增业务线时，细则写进 `.claude/rules/` 并在上表加一行；**不要再往本文件里堆**——
@@ -50,8 +49,8 @@
 
 ## 一、项目结构
 
-- `index.html` 首页 / `about.html` 关于 / `club.html` 俱乐部 / `legacy.html` 传承俱乐部 / `library.html` 文库目录 / `hk-ipo-checkup.html` 港股上市可行性自测 / `financing-program.html` 融资路线图（融资线入口页，2026-09-13 建）/ `supply-chain-finance.html` 跨境供应链金融（2026-10-28 建）
-- ⭐ **「服务」下拉菜单只放两组（2026-09-13 廖总「全部按照你说的去改」）**：**融资与上市**（融资路线图 / 供应链金融 / 初创融资服务 / 上市预备期 / 海外资产上市→`asset-platform.html`）+ **工具**（上市可行性自测 / 上市门槛速查）。首页「服务入口」同样两行。
+- `index.html` 首页 / `about.html` 关于 / `club.html` 俱乐部 / `legacy.html` 传承俱乐部 / `library.html` 文库目录 / `hk-ipo-checkup.html` 港股上市可行性自测 / `financing-program.html` 融资路线图（融资线入口页，2026-09-13 建）
+- ⭐ **「服务」下拉菜单只放两组（2026-09-13 廖总「全部按照你说的去改」）**：**融资与上市**（融资路线图 / 初创融资服务 / 上市预备期 / 海外资产上市→`asset-platform.html`）+ **工具**（上市可行性自测 / 上市门槛速查）。首页「服务入口」同样两行。
   ⛔ AI 转型线、电商税务合规**不进顶层导航、不进首页**——页面照旧保留，靠文库、sitemap、llms.txt 与站内互链被找到。理由：品牌是境外上市与跨境资本，导航里混进 2,800 元 AI 落地和核定征收会显得什么都接。`overseas-asset-listing.html` 不单独进导航，由 `asset-platform.html` 顶部按钮进入（同一件事导航里只出现一次）。
   ⚠ 导航写死在 279 个页面里（主页面相对路径、`articles/` 用 `/` 开头），改导航用脚本整块替换 `<div class="mdd-p">…</div></div>`，别逐页手改；分组标题是 `<span class="mdd-h">`，样式在 `css/nav.css`。
 - `articles/` 文章全文页（每篇一个 html 文件，英文短横线小写命名，如 `hk-18c-listing.html`）
@@ -235,7 +234,3 @@ D:\彤鼎工作台\
 ## 十二、电商税务合规线（2026-09-13 建立，长期方针）
 
 ⮕ 已移至 **`.claude/rules/line-ecommerce.md`**（逐字保留）。
-
-## 十三、跨境供应链金融线（2026-10-28 建立，长期方针）
-
-⮕ 已移至 **`.claude/rules/line-supply-chain.md`**（2026-10-28 廖总「内容大纲重点业务要增加一块，就是供应链金融，类似信用证这一类的融资」；四类形态全做、入口 9,500 元起、资金方统一写「合作持牌金融机构」、不放贷不承诺批贷不碰虚构贸易背景）。
