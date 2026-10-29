@@ -1,0 +1,286 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>合同上写着 6%，年底一算是 11%：融资的真实成本是怎么一层层加上去的 | TD GROUP 彤鼎知识文库</title>
+<meta name="description" content="假设一家做零部件的制造企业，年初拿到一千万元、期限一年的流动资金贷款，合同上年利率 6%。年末财务盘点，把这一年为这笔钱付出的现金加总，除以实际能使用的资金，得出的比率接近 11%。本文围绕这个落差，拆开名义利率、综合成本与内部收益率三个口径的区别，说明砍头息、保证金、担保费、承诺费与贴现如何各自吃掉一段资金，解释为什么按月等额还本会让同一名义利率下的实际成本抬到近两倍，并给出一套可自己执行的算法。">
+<link rel="canonical" href="https://tdgroup.hk/articles/true-cost-of-financing.html">
+<meta name="theme-color" content="#0a0908">
+<link rel="icon" href="/favicon.ico" sizes="any">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="alternate" type="application/rss+xml" title="TD GROUP 彤鼎知识文库" href="https://tdgroup.hk/feed.xml">
+<meta property="og:site_name" content="TD GROUP 彤鼎">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:type" content="article">
+<meta property="og:title" content="合同上写着 6%，年底一算是 11%：融资的真实成本是怎么一层层加上去的 | TD GROUP 彤鼎知识文库">
+<meta property="og:description" content="假设一家做零部件的制造企业，年初拿到一千万元、期限一年的流动资金贷款，合同上年利率 6%。年末财务盘点，把这一年为这笔钱付出的现金加总，除以实际能使用的资金，得出的比率接近 11%。本文围绕这个落差，拆开名义利率、综合成本与内部收益率三个口径的区别，说明砍头息、保证金、担保费、承诺费与贴现如何各自吃掉一段资金，解释为什么按月等额还本会让同一名义利率下的实际成本抬到近两倍，并给出一套可自己执行的算法。">
+<meta property="og:url" content="https://tdgroup.hk/articles/true-cost-of-financing.html">
+<meta property="og:image" content="https://tdgroup.hk/img/og-card.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="合同上写着 6%，年底一算是 11%：融资的真实成本是怎么一层层加上去的 | TD GROUP 彤鼎知识文库">
+<meta name="twitter:image" content="https://tdgroup.hk/img/og-card.jpg">
+<style>
+:root{--gold:#c9a962;--gold-hi:#e8cf96;--gold-dim:#9a7f45;--night:#0a0908;--ink:#12100d;--line:rgba(201,169,98,.28);--body:#d9d0bb;--mute:#8f real;}
+:root{--mute:#8f8468;}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;background:var(--night);color:var(--body);line-height:1.9;-webkit-font-smoothing:antialiased;}
+a{color:inherit;text-decoration:none;}
+.serif{font-family:Georgia,"Times New Roman",serif;}
+.songti{font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.wrap{max-width:1120px;margin:0 auto;padding:0 32px;}
+::selection{background:var(--gold);color:#0a0908;}
+
+/* ---------- reveal on scroll ---------- */
+.rv{opacity:0;transform:translateY(26px);transition:opacity .8s ease,transform .8s ease;}
+.rv.on{opacity:1;transform:none;}
+
+/* ---------- nav ---------- */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(10,9,8,.6);border-bottom:1px solid transparent;backdrop-filter:blur(14px);transition:background .3s,border-color .3s;}
+nav.scrolled{background:rgba(10,9,8,.95);border-bottom-color:var(--line);}
+.nav-in{max-width:1120px;margin:0 auto;padding:20px 32px;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;}
+.logo{display:flex;align-items:center;gap:14px;}
+.logo .mark-img{height:58px;width:auto;display:block;}
+.logo .nm{color:#fff;font-weight:700;letter-spacing:3px;font-size:17px;font-family:Georgia,"Times New Roman",serif;}
+.logo .nm small{display:block;color:var(--gold);font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:400;font-size:11px;letter-spacing:9px;margin-top:3px;}
+.menu{display:flex;gap:30px;font-size:14.5px;color:#c6bda6;letter-spacing:1px;}
+.menu a{position:relative;padding:4px 0;}
+.menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--gold);transition:width .3s;}
+.menu a:hover{color:var(--gold-hi);}
+.menu a:hover::after{width:100%;}
+
+/* ---------- hero ---------- */
+.hero{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;padding:150px 0 90px;
+background:radial-gradient(ellipse at 12% 18%,rgba(201,169,98,.12) 0,transparent 42%),radial-gradient(ellipse at 88% 82%,rgba(201,169,98,.08) 0,transparent 48%),var(--night);}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(to right,rgba(201,169,98,.035) 1px,transparent 1px),linear-gradient(to bottom,rgba(201,169,98,.035) 1px,transparent 1px);background-size:140px 140px;pointer-events:none;}
+.hero-frame{position:absolute;inset:26px;border:1px solid rgba(201,169,98,.16);pointer-events:none;}
+.eyebrow{display:flex;align-items:center;gap:16px;color:var(--gold);font-family:Georgia,serif;font-style:italic;letter-spacing:7px;font-size:13.5px;margin-bottom:34px;}
+.eyebrow::before{content:"";width:52px;height:1px;background:var(--gold);}
+.hero h1{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:52px;line-height:1.42;color:#fff;font-weight:900;max-width:930px;letter-spacing:1px;}
+.hero h1 em{color:var(--gold-hi);font-style:normal;}
+.hero .en{margin-top:26px;color:#a89b7d;font-size:16.5px;line-height:1.85;max-width:800px;font-family:Georgia,serif;}
+.hero-cta{margin-top:44px;display:flex;gap:18px;flex-wrap:wrap;}
+.btn{display:inline-block;padding:16px 42px;font-size:15px;letter-spacing:3px;font-weight:700;transition:all .3s;}
+.btn-solid{background:var(--gold);color:#0d0b07;}
+.btn-solid:hover{background:var(--gold-hi);transform:translateY(-2px);}
+.btn-ghost{border:1px solid var(--gold);color:var(--gold);}
+.btn-ghost:hover{background:rgba(201,169,98,.1);transform:translateY(-2px);}
+.facts{display:flex;margin-top:72px;border:1px solid var(--line);flex-wrap:wrap;background:rgba(18,16,13,.5);}
+.fact{flex:1;min-width:210px;padding:30px 32px;border-right:1px solid var(--line);position:relative;}
+.fact:last-child{border-right:0;}
+.fact b{display:block;color:var(--gold-hi);font-size:34px;font-family:Georgia,serif;margin-bottom:8px;font-weight:400;}
+.fact span{font-size:14px;color:#cfc4a8;}
+.fact small{display:block;color:var(--mute);font-size:11.5px;font-family:Georgia,serif;font-style:italic;margin-top:4px;letter-spacing:.5px;}
+
+/* ---------- sections ---------- */
+section{padding:100px 0;position:relative;}
+.sec-ink{background:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+.sec-head{display:flex;align-items:baseline;gap:26px;margin-bottom:56px;flex-wrap:wrap;}
+.sec-no{font-family:Georgia,serif;font-style:italic;color:rgba(201,169,98,.42);font-size:64px;line-height:1;}
+h2.sec{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:34px;color:#fff;letter-spacing:2px;}
+.sec-en{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:13px;letter-spacing:4px;margin-top:6px;}
+
+/* services */
+.grid8{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.biz{background:var(--ink);padding:36px 28px;position:relative;transition:background .35s;}
+.biz::before{content:"";position:absolute;top:0;left:0;width:0;height:2px;background:var(--gold);transition:width .4s;}
+.biz:hover{background:#181510;}
+.biz:hover::before{width:100%;}
+.biz i{display:block;font-style:normal;color:rgba(201,169,98,.5);font-family:Georgia,serif;font-size:13px;letter-spacing:2px;margin-bottom:16px;}
+.biz b{color:#fff;font-size:19px;display:block;margin-bottom:6px;letter-spacing:1px;}
+.biz span{color:var(--mute);font-size:12px;font-family:Georgia,serif;font-style:italic;letter-spacing:.5px;}
+.biz p{color:#a99d80;font-size:13.5px;margin-top:14px;line-height:1.8;}
+
+/* methodology timeline */
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;counter-reset:step;}
+.tl-item{border-top:1px solid var(--line);padding-top:28px;position:relative;}
+.tl-item::before{counter-increment:step;content:"0" counter(step);position:absolute;top:-17px;left:0;background:var(--night);padding-right:16px;font-family:Georgia,serif;font-style:italic;color:var(--gold);font-size:24px;}
+.sec-ink .tl-item::before{background:var(--ink);}
+.tl-item b{color:#fff;font-size:18px;display:block;margin-bottom:4px;}
+.tl-item i{display:block;font-style:italic;font-family:Georgia,serif;color:var(--mute);font-size:12px;margin-bottom:12px;letter-spacing:.5px;}
+.tl-item p{color:#a99d80;font-size:14px;line-height:1.8;}
+.tl-item .dur{display:inline-block;margin-top:14px;color:var(--gold);font-size:12.5px;border:1px solid var(--line);padding:4px 12px;letter-spacing:1px;}
+
+/* article cards */
+.alist{display:grid;grid-template-columns:repeat(3,1fr);gap:26px;}
+.acard{border:1px solid var(--line);background:rgba(255,255,255,.012);transition:transform .35s,border-color .35s,box-shadow .35s;overflow:hidden;display:flex;flex-direction:column;}
+.acard:hover{border-color:var(--gold);transform:translateY(-6px);box-shadow:0 18px 44px rgba(0,0,0,.5);}
+.acard .thumb{width:100%;height:170px;object-fit:cover;object-position:center 22%;display:block;filter:saturate(.92);transition:filter .35s;}
+.acard:hover .thumb{filter:saturate(1.05);}
+.acbody{padding:24px 26px 28px;flex:1;display:flex;flex-direction:column;}
+.acard .cat{color:var(--gold);font-size:11.5px;letter-spacing:3px;margin-bottom:12px;font-family:Georgia,serif;font-style:italic;}
+.acard h3{color:#fff;font-size:19px;font-weight:700;line-height:1.55;letter-spacing:.5px;}
+.acard p{color:var(--mute);font-size:13.5px;margin-top:10px;flex:1;}
+.acard .more{color:var(--gold);font-size:13px;margin-top:18px;letter-spacing:1px;}
+
+/* faq */
+.faq{max-width:860px;}
+.faq details{border-bottom:1px solid var(--line);}
+.faq summary{cursor:pointer;list-style:none;padding:26px 44px 26px 0;color:#fff;font-size:18px;font-weight:700;position:relative;letter-spacing:.5px;}
+.faq summary::-webkit-details-marker{display:none;}
+.faq summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:26px;font-weight:300;transition:transform .3s;}
+.faq details[open] summary::after{transform:translateY(-50%) rotate(45deg);}
+.faq .ans{padding:0 0 28px;color:#b3a88b;font-size:15.5px;line-height:1.95;max-width:800px;}
+
+/* club */
+.club-vals{display:grid;grid-template-columns:1fr 1fr;gap:30px;}
+.cv{border-left:2px solid var(--gold);padding:8px 0 8px 26px;}
+.cv b{color:#fff;font-size:19px;display:block;margin-bottom:8px;letter-spacing:.5px;}
+.cv p{color:#a99d80;font-size:14.5px;}
+.note{margin-top:44px;border:1px solid var(--line);background:rgba(201,169,98,.05);padding:24px 30px;color:#c4b791;font-size:14px;line-height:1.95;}
+.gallery{display:flex;gap:18px;flex-wrap:wrap;margin-top:40px;}
+.gallery img{width:152px;height:203px;object-fit:cover;border:1px solid var(--line);transition:transform .35s,border-color .35s;}
+.gallery img:hover{transform:translateY(-6px);border-color:var(--gold);}
+
+/* library */
+.searchbar{margin-bottom:50px;max-width:520px;position:relative;}
+.searchbar input{width:100%;background:rgba(255,255,255,.03);border:1px solid var(--line);color:#fff;font-size:15.5px;padding:16px 22px;letter-spacing:1px;outline:none;transition:border-color .3s;}
+.searchbar input:focus{border-color:var(--gold);}
+.searchbar input::placeholder{color:var(--mute);}
+.lib-cat{margin-bottom:52px;}
+.lib-cat h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:24px;color:#fff;letter-spacing:1px;}
+.lib-cat .cen{color:var(--gold);font-family:Georgia,serif;font-style:italic;font-size:12px;letter-spacing:3px;margin:6px 0 20px;}
+.lib-cat ul{list-style:none;display:grid;grid-template-columns:1fr 1fr;gap:11px 34px;font-size:15px;}
+.lib-cat li{padding-left:18px;position:relative;color:#a99d80;}
+.lib-cat li::before{content:"";position:absolute;left:0;top:.72em;width:6px;height:6px;background:var(--line);transform:rotate(45deg);}
+.lib-cat li.has a{color:var(--gold);}
+.lib-cat li.has::before{background:var(--gold);}
+.lib-cat li.has a:hover{color:var(--gold-hi);}
+
+/* footer */
+footer{background:#070604;border-top:1px solid var(--line);padding:64px 0 48px;color:var(--mute);font-size:14px;}
+.f-grid{display:flex;justify-content:space-between;gap:34px;flex-wrap:wrap;align-items:flex-start;}
+.f-brand{color:#d4c5a0;letter-spacing:5px;font-size:16px;}
+.f-brand small{display:block;font-family:Georgia,serif;font-style:italic;color:var(--gold);letter-spacing:3px;font-size:11.5px;margin-top:10px;}
+.f-mail a{color:var(--gold);border-bottom:1px solid transparent;transition:border-color .3s;}
+.f-mail a:hover{border-bottom-color:var(--gold);}
+.f-legal{margin-top:38px;padding-top:24px;border-top:1px solid rgba(201,169,98,.12);font-size:11.5px;color:#6b6350;line-height:2;}
+
+/* article paper pages */
+body.paper{background:#f6f2e9;color:#26221a;}
+.art-head{background:var(--night);padding:150px 0 66px;position:relative;overflow:hidden;}
+.art-head::before{content:"";position:absolute;inset:0;background:radial-gradient(ellipse at 80% 20%,rgba(201,169,98,.1) 0,transparent 50%);}
+.art-head .cat{color:var(--gold);letter-spacing:4px;font-size:12.5px;margin-bottom:20px;font-family:Georgia,serif;font-style:italic;}
+.art-head h1{font-family:"PingFang SC","Noto Sans SC","Microsoft YaHei",sans-serif;font-weight:600;letter-spacing:3px;font-size:36px;color:#fff;line-height:1.5;max-width:880px;letter-spacing:1px;}
+.art-head .sub{color:#b3a88b;margin-top:14px;font-size:17px;}
+.art-head .en{color:#877c60;font-family:Georgia,serif;font-style:italic;font-size:14px;margin-top:22px;max-width:820px;line-height:1.85;}
+.progress{position:fixed;top:0;left:0;height:2.5px;background:var(--gold);width:0;z-index:200;}
+article{max-width:840px;margin:0 auto;padding:60px 32px 84px;font-size:17px;}
+article h2{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:26px;margin:50px 0 18px;color:#141210;padding-left:16px;border-left:4px solid var(--gold);letter-spacing:.5px;}
+article h3{font-family:"Songti SC","Noto Serif SC","SimSun",serif;font-size:19.5px;margin:32px 0 10px;color:#241f18;letter-spacing:.3px;font-weight:700;}
+article p{margin:15px 0;text-align:justify;color:#39332a;}
+article strong{color:#141210;}
+.answer{border:2px solid var(--gold-dim);background:#fbf6e8;padding:26px 30px;margin:34px 0;font-weight:700;line-height:1.95;color:#2b2312;box-shadow:0 8px 26px rgba(154,127,69,.12);}
+.art-foot{max-width:840px;margin:0 auto;padding:0 32px 76px;}
+.brandbox{border-top:2px solid var(--gold);padding-top:32px;font-size:15px;color:#4a4438;}
+.brandbox h3{font-size:19px;color:#141210;margin-bottom:14px;font-family:"Songti SC","Noto Serif SC","SimSun",serif;}
+.brandbox p{margin:11px 0;text-align:justify;}
+.disc{color:#8a8168;font-size:12px;margin-top:20px;line-height:1.9;}
+body.paper nav{background:rgba(10,9,8,.96);}
+
+@media(max-width:960px){.grid8{grid-template-columns:1fr 1fr;}.alist{grid-template-columns:1fr;}.tl{grid-template-columns:1fr 1fr;}.club-vals{grid-template-columns:1fr;}.hero h1{font-size:34px;}.menu{gap:16px;font-size:13px;}.lib-cat ul{grid-template-columns:1fr;}.sec-no{font-size:44px;}}
+</style>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"合同上写着 6%，年底一算是 11%：融资的真实成本是怎么一层层加上去的","inLanguage":"zh-CN","abstract":"A manufacturer draws a one-year working capital loan at a stated annual rate of 6 percent. At year end the treasury team adds up every cash outflow tied to that money, divides it by the cash the business could actually use, and arrives at a figure close to 11 percent. This piece explains the gap: fees deducted at drawdown, cash collateral parked in a restricted account, and a repayment schedule that shortens the period the principal is available. It sets out how nominal rate, all-in cost and internal rate of return differ, walks through the fee items that never appear in the interest clause, shows why monthly amortisation lifts the effective cost at the same headline rate, and gives a four-step way any finance team can run the calculation itself.","author":{"@type":"Organization","name":"TD GROUP 彤鼎"},"publisher":{"@type":"Organization","name":"TD GROUP 彤鼎","url":"https://tdgroup.hk","logo":{"@type":"ImageObject","url":"https://tdgroup.hk/img/td-crest-gold.png"}},"mainEntityOfPage":{"@type":"WebPage","@id":"https://tdgroup.hk/articles/true-cost-of-financing.html"},"datePublished":"2026-10-29","dateModified":"2026-10-29","description":"假设一家做零部件的制造企业，年初拿到一千万元、期限一年的流动资金贷款，合同上年利率 6%。年末财务盘点，把这一年为这笔钱付出的现金加总，除以实际能使用的资金，得出的比率接近 11%。本文围绕这个落差，拆开名义利率、综合成本与内部收益率三个口径的区别，说明砍头息、保证金、担保费、承诺费与贴现如何各自吃掉一段资金，解释为什么按月等额还本会让同一名义利率下的实际成本抬到近两倍，并给出一套可自己执行的算法。"}</script><!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-QYZJ4ZZT57"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-QYZJ4ZZT57');</script>
+<!-- Baidu Tongji -->
+<script>var _hmt=_hmt||[];(function(){var hm=document.createElement("script");hm.src="https://hm.baidu.com/hm.js?e3a889dea1f5f91507c6f71b57b6902a";var s=document.getElementsByTagName("script")[0];s.parentNode.insertBefore(hm,s);})();</script>
+<script defer src="../js/assistant.js"></script>
+<link rel="stylesheet" href="../css/nav.css">
+</head>
+<body class="paper"><nav><div class="nav-in">
+<a class="logo" href="/"><img class="mark-img" src="../img/td-crest-gold.png" alt="TD GROUP 彤鼎"><span class="nm">TD GROUP<small>彤鼎</small></span></a>
+<input type="checkbox" id="navtg" class="navtg" aria-hidden="true"><label for="navtg" class="navbtn" aria-label="菜单"><span></span><span></span><span></span></label>
+<div class="menu"><a href="/">首页</a><a href="/about.html">关于</a><div class="mdd"><a href="/#services">服务<span class="ar">▾</span></a><div class="mdd-p"><div><span class="mdd-h">融资与上市</span><a href="/financing-program.html">融资路线图</a><a href="/startup-program.html">初创融资服务</a><a href="/pre-ipo-program.html">上市预备期</a><a href="/asset-platform.html">海外资产上市</a><span class="mdd-h">工具</span><a href="/hk-ipo-checkup.html">上市可行性自测</a><a href="/listing-standards-check.html">上市门槛速查</a></div></div></div><a href="/club.html">俱乐部</a><a href="/legacy.html">传承</a><a href="/library.html">文库</a><a href="/faq.html">问答</a><a href="mailto:liaoqijie@tdgroup.hk">联系</a></div>
+</div></nav>
+<div class="progress"></div>
+<div class="art-head"><div class="wrap">
+<div class="cat">融资条款 FINANCING</div><h1>合同上写着 6%，年底一算是 11%：融资的真实成本是怎么一层层加上去的</h1>
+<div class="sub">一笔名义利率 6% 的一年期贷款，年末把付出的钱加总、除以真正能支配的钱，算出来的数常常接近 11%。本文拆七件事：名义利率与折年成本与内部收益率差在哪、放款时先扣的那一刀、账上动不了的保证金、利息之外的费用清单、还本方式怎么把实际成本抬高、自己动手算一遍的四步、以及谈融资时该把哪几条摆到桌面上。</div><div class="en">A manufacturer draws a one-year working capital loan at a stated annual rate of 6 percent. At year end the treasury team adds up every cash outflow tied to that money, divides it by the cash the business could actually use, and arrives at a figure close to 11 percent. This piece explains the gap: fees deducted at drawdown, cash collateral parked in a restricted account, and a repayment schedule that shortens the period the principal is available. It sets out how nominal rate, all-in cost and internal rate of return differ, walks through the fee items that never appear in the interest clause, shows why monthly amortisation lifts the effective cost at the same headline rate, and gives a four-step way any finance team can run the calculation itself.</div>
+<div class="pubmeta" style="margin-top:18px;padding-top:14px;border-top:1px solid rgba(201,169,98,.18);font-size:12.5px;color:#8f8468;letter-spacing:.4px;">发布于 <time datetime="2026-07-19">2026年7月19日</time>　·　更新于 <time datetime="2026-07-20">2026年7月20日</time>　·　作者 <a href="../founder.html" rel="author" style="color:var(--gold-dim);">TD GROUP 彤鼎团队</a></div></div></div>
+<article>
+<div class="answer">综合融资成本，是指企业为一笔资金付出的全部现金代价，除以它真正能支配的资金、按实际占用时间折算后得到的年度比率。它由三部分叠加而成：合同上写明的利息、以各种名目收取却不计入利息的费用、以及保证金与还本节奏造成的资金占用折损。在一笔本金一千万元、名义年利率 6%、期限一年、按月等额还本、放款时另收 2% 一次性费用并留存 20% 保证金的假设安排中，企业全年可自由使用的资金明显小于本金，把各笔流出按发生时间折算后的年度成本通常落在 11% 上下。区分名义利率与综合成本，是判断一笔融资贵不贵的起点。本文为知识梳理，不构成专业意见，具体条款与费率须向贷款行与专业机构核过再签。---</div>
+<h2>其一、年底那笔账，和合同上写的不是一个数</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/true-cost-of-financing-1.jpg" alt="其一、年底那笔账，和合同上写的不是一个数" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：名义利率只描述利息与本金的比，它回答不了一个更实在的问题：企业为这笔钱到底付出了多少。</strong></p>
+<p>假设一家做零部件的制造企业，年初拿到一笔一千万元、期限一年的流动资金贷款，合同上白纸黑字写着年利率 6%。财务在年末盘点，把这一年为这笔钱付出的现金加总，除以真正能支配的钱，算出来的数接近 11%。</p>
+<p>两个数都真实。差在三笔钱没有进利率：放款当天先扣掉的一笔费用、账上被要求留存且动不了的保证金、以及每个月都在还本造成的占用折损。这三样在合同里都不叫利息，所以名义利率里看不到它们。</p>
+<p>这种落差不是个案，也不是谁在故意隐瞒。融资的成本本来就是分层叠加的，名义利率只是其中最薄的一层。读懂下面几层，才知道一笔钱贵在哪、该从哪里往下谈。</p>
+<h2>其二、三个口径：名义利率、综合成本与内部收益率</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/true-cost-of-financing-2.jpg" alt="其二、三个口径：名义利率、综合成本与内部收益率" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：名义利率按本金全额计息，综合成本把各项费用摊进来，内部收益率再按实际占用时间修正一次。</strong></p>
+<p>名义利率的算法最直接：利息除以本金，再按期限折成一年。它假设本金在整个期限内都在企业手里、且除了利息没有别的支出。这个假设在现实里几乎不成立，但它便于比较，所以成了报价的通用语言。</p>
+<p>综合成本把利息之外的现金流出全部纳入分子：担保费、评估费、登记与公证费、财务顾问费、贴现息，一次性的与按期的都算。它比名义利率贴近真实，但仍是静态的，没有考虑钱在什么时候流出去。</p>
+<p>内部收益率补的正是时间这一维。它把每一笔流入和流出按发生日期排成一条时间轴，求一个让净现值归零的折现率。同样一笔利息，年初付和年末付的代价不同，只有内部收益率能把这个差别算出来。市面上常见的电子表格都带这个函数。</p>
+<p>这三个数没有谁对谁错，回答的是三个不同的问题。报价用名义利率，比价用综合成本，判断贵不贵用内部收益率。混着用，就会得出「这家银行 6%、那家 6.5%，当然选这家」这类结论。</p>
+<h2>其三、被扣掉的那一刀：砍头息与留存</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/true-cost-of-financing-3.jpg" alt="其三、被扣掉的那一刀：砍头息与留存" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：凡是放款时先扣的费用与要求留存的资金，都会让企业实际能支配的钱小于合同本金。</strong></p>
+<p>《中华人民共和国民法典》第六百七十条写明，借款的利息不得预先在本金中扣除；利息预先在本金中扣除的，应当按照实际借款数额返还借款并计算利息。这条规矩针对的就是俗称的砍头息：合同写一千万元，到账只有九百八十万，利息却仍按一千万元计。</p>
+<p>这类做法在持牌机构的正规贷款里已不常见，但它换了几种形态继续存在。最常见的是把一部分利息包装成「财务顾问费」「融资服务费」「安排费」，在放款当日或次日一次性收取，不进利息科目。</p>
+<p>还有一种是留存，也叫配存。银行要求借款人在账户里保留一定比例的资金作为条件，这笔钱名义上还在企业账上，但被约定不能自由支取。它不体现为任何费用，却实实在在减少了一千万元里能拿去备料、发工资的那一部分。</p>
+<p>判断这一层的办法只有一条：不看合同写多少，看放款当天企业能自由调度的净额是多少。分子按合同本金算、分母按净到手算，是最容易出错的一处。</p>
+<h2>其四、利息之外的清单：担保、评估、承诺与贴现</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/true-cost-of-financing-4.jpg" alt="其四、利息之外的清单：担保、评估、承诺与贴现" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：一笔融资的费用条目往往比利息长，担保费、评估费、承诺费、贴现息各自成项，且多数不随利率下调而下降。</strong></p>
+<p>假设那家企业缺少足值抵押物，需要引入担保公司。担保公司按担保金额的一定比例收担保费，通常按年收取，这笔钱以「费率」的形态出现，与银行的利率分属两家机构，很少被放进同一张比价表里。</p>
+<p>抵押物要评估，评估费由企业承担；抵押要登记，登记费也是；合同要公证，公证费照旧。这些单项金额不大，加起来常常抵得上零点几个百分点的利率，而它们不会因为 LPR 下调而跟着降。</p>
+<p>承诺费是另一类容易被忽略的支出。它针对的是已批未提的额度：银行把资金准备好等着企业来取，就要占用自身的额度与资本，于是对未提款部分按年收取一笔费用。额度批了却用不上的企业，等于在为闲置的可能性付费。</p>
+<p>票据与信用证项下的贴现息同理。一笔九十天账期的应收款拿去贴现，付出的是贴现息而不是利息，走的是另一个科目。很多企业的财务只在贷款台账里看成本，把所有票据类支出归到「经营费用」里，全年融资成本因此被系统性低估。</p>
+<h2>其五、还本方式：同样 6%，等额还本的实际成本接近两倍</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/true-cost-of-financing-5.jpg" alt="其五、还本方式：同样 6%，等额还本的实际成本接近两倍" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：到期一次还本与按月等额还本，在同一名义利率之下，实际成本可以相差接近一倍，差别只在本金能被占用的时间。</strong></p>
+<p>仍以一千万元、6%、一年为例。若约定到期一次还本、按季付息，企业全年都可以使用这一千万元，年底一次归还；付出的利息是六十万元，实际成本与名义利率基本一致。</p>
+<p>若改成按月等额还本付息，情况就变了。每个月都在归还本金，年初可用一千万元，年中只剩约五百万元，年末趋近于零。全年的利息支出会降到三十多万元，看上去便宜了一半。</p>
+<p>但企业真正能使用的资金量也只剩一半左右。利息三十三万元、平均占用五百四十万元，折算下来实际成本落在 11% 上下。这就是开头那个落差的来源：利息确实少了，可用的钱少得更多。</p>
+<p>等额还本不是坏安排，它匹配的是现金流稳定、按月有回款的企业。若企业的回款集中在季末或年末，按月还本就会在最缺钱的那几个月里抽走现金，那时被迫去补一笔短期资金，成本再叠一层。</p>
+<h2>其六、自己算一遍：不用等银行给</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/true-cost-of-financing-6.jpg" alt="其六、自己算一遍：不用等银行给" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：把全部现金流出按发生日期列成一条时间轴，用内部收益率折一次，这是财务部门自己就能完成的算法。</strong></p>
+<p>头一步，确定实际到手的净额。合同本金减去放款时扣掉的各项费用，再减去被约定不能动用的留存部分，剩下的才是企业真正能支配的起点数字。这一栏填错，后面全错。</p>
+<p>再一步，把每一笔流出列出来并标上日期。包括按期支付的利息、每一期归还的本金、一次性收取的费用、按年支付的担保费、到期释放但期间被占用的保证金。每一笔都要带日期，不能用年度总额代替。</p>
+<p>再一步，把保证金的释放当成期末的一笔流入。它在放款时被占用、在到期时被释放，中间这段时间企业为它付出了代价，这部分代价必须体现在时间轴里，否则又会低估。</p>
+<p>末一步，用电子表格的 XIRR 一类函数，把起点那一笔记为正、其余各笔记为负，求年度化的内部收益率。得出的那个数，才是这笔融资的真实价格。同一套方法用来比两家银行的方案，结论往往与比名义利率时相反。</p>
+<h2>其七、谈的时候，把哪几条摆到桌面上</h2>
+<figure style="margin:30px 0;"><img src="../img/cards/true-cost-of-financing-7.jpg" alt="其七、谈的时候，把哪几条摆到桌面上" loading="lazy" style="width:100%;height:auto;display:block;border-radius:3px;"></figure>
+<p><strong>结论先行：成本谈判的重点不是压低名义利率，而是改还本节奏、压降留存比例、砍掉不对应实质服务的费用。</strong></p>
+<p>利率在多数时候由市场与政策利率决定，谈判空间有限；而还本方式、保证金比例、费用清单这三项，是银行内部可以逐条报批的，空间反而更大。</p>
+<p>还本节奏优先匹配回款曲线。回款集中在下半年的企业，应当争取按季或按半年还本，而不是默认接受按月等额。多付的那一点利息，换来的往往是少一次断流。</p>
+<p>担保费与顾问费可以要求对应到具体服务。监管长期要求金融机构规范收费、不得在利息之外收取无实质服务的费用，这条口径可以直接作为谈的前提。谈不下来，也要让它出现在比价表里，而不是散落在别的科目中。</p>
+<p>华尔街彤鼎俱乐部在与企业方交流时反复遇到同一个现象：把全年融资成本算清楚的企业，往往在下一轮谈判里能多拿到一档条件，因为它们知道自己贵在哪。算清楚这件事本身，就是谈判筹码。</p>
+<p>---</p>
+<p>本文为知识梳理，不构成专业意见或收益承诺。文中所涉制度与条款以现行有效的法律法规与监管规定为准，具体安排须向贷款行及专业机构核实。</p>
+</article>
+<div class="art-foot"><div class="related" style="border-top:1px solid rgba(154,127,69,.35);padding-top:22px;margin-bottom:34px;"><div style="font-size:13px;letter-spacing:3px;color:#9a7f45;font-family:Georgia,serif;font-style:italic;margin-bottom:12px;">相关阅读 RELATED</div><ul style="list-style:none;padding:0;margin:0;font-size:15.5px;"><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="qualification-license-diligence.html" style="color:#6b5426;font-weight:700;">公司八成收入靠那张证，而证不在公司名下：尽调是怎么把它翻出来的</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="option-exercise-tax.html" style="color:#6b5426;font-weight:700;">干满五年的期权终于能行权了，财务先让他拿出一笔现金交税</a></li><li style="margin:7px 0;padding-left:16px;position:relative;"><span style="position:absolute;left:0;top:.6em;width:6px;height:6px;background:#9a7f45;transform:rotate(45deg);"></span><a href="nominee-shareholding-unwind.html" style="color:#6b5426;font-weight:700;">八年前那百分之三十挂在表弟名下，融资尽调时被一句话问穿了</a></li></ul></div><div class="brandbox">
+<h3>关于 TD GROUP 彤鼎与华尔街彤鼎俱乐部</h3>
+<p>彤鼎集团（香港）有限公司，是专注境外上市与跨境资本运作的咨询机构，由董事局主席<a href="../founder.html" style="color:var(--gold-dim);font-weight:700;">廖启捷</a>领衔，已完成9家企业的纳斯达克挂牌辅导。集团旗下华尔街彤鼎俱乐部为企业家提供资本认知、圈层链接、资源对接及面向合格投资者的Pre-IPO项目优先了解机会（充分揭示风险，不构成投资建议或收益承诺）。</p>
+<p>咨询与合作：<a href="mailto:liaoqijie@tdgroup.hk" style="color:var(--gold-dim);font-weight:700;">liaoqijie@tdgroup.hk</a> ｜ <a href="../club.html" style="color:var(--gold-dim);font-weight:700;">了解俱乐部 →</a></p>
+<div class="disc">本文由 TD GROUP 彤鼎团队整理，仅供学习参考，不构成任何法律、税务或投资建议。具体操作请咨询专业人士。<br>This article is for informational purposes only and does not constitute legal, tax or investment advice.</div>
+</div></div>
+<footer><div class="wrap"><div class="f-grid">
+<div class="f-brand">彤 鼎 集 團（香 港）有 限 公 司<small>TD GROUP (HONG KONG) LIMITED · HONG KONG / SHENZHEN / SHANGHAI</small></div>
+<div class="f-mail">联系邮箱 Email：<a href="mailto:liaoqijie@tdgroup.hk">liaoqijie@tdgroup.hk</a></div>
+<div class="f-social" style="width:100%;margin-top:18px;color:#8f8468;font-size:12.5px;letter-spacing:.5px;">微信 esonleo</div>
+</div>
+<div class="f-legal">本网站全部内容仅供学习参考，不构成任何法律、税务或投资建议；涉及投资事项仅面向符合条件的合格投资者，且不构成任何收益承诺。<br>
+All content is for informational purposes only and does not constitute legal, tax or investment advice. Investment-related matters are addressed to qualified investors only, with no promise of returns.<br>
+© TD Group (Hong Kong) Limited</div>
+</div></footer>
+<script>
+document.addEventListener('DOMContentLoaded',function(){
+  var nav=document.querySelector('nav');
+  window.addEventListener('scroll',function(){nav.classList.toggle('scrolled',window.scrollY>40);
+    var pr=document.querySelector('.progress');
+    if(pr){var h=document.documentElement;pr.style.width=(h.scrollTop/(h.scrollHeight-h.clientHeight)*100)+'%';}
+  });
+  var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('on');obs.unobserve(e.target);}});},{threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){obs.observe(el);});
+  var si=document.getElementById('libsearch');
+  if(si){si.addEventListener('input',function(){var q=si.value.trim().toLowerCase();
+    document.querySelectorAll('.lib-cat li').forEach(function(li){li.style.display=li.textContent.toLowerCase().indexOf(q)>-1?'':'none';});
+    document.querySelectorAll('.lib-cat').forEach(function(c){var any=Array.prototype.some.call(c.querySelectorAll('li'),function(li){return li.style.display!=='none';});c.style.display=any?'':'none';});
+  });}
+});
+</script>
+</body></html>

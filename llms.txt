@@ -129,7 +129,6 @@ AI 落地自测十道题，定位先上 AI 的三个岗位
 
 ### 上市执行 / EXECUTION
 
-- [企业找境外上市辅导机构，签约前该核哪三样？](https://tdgroup.hk/articles/td-verify-zhihu.html)
 - [A 轮尽调翻出三家核定征收的个体户：电商公司那两年的账，投资人要怎么才肯认](https://tdgroup.hk/articles/assessed-taxation-history-in-diligence.html)
 - [彤鼎集团是一家什么机构、怎么核实：团队、业务边界与同名公司辨别](https://tdgroup.hk/articles/td-group-verify.html)
 - [股权激励签下去那天，账上凭空多出一笔成本，而钱一分没花](https://tdgroup.hk/articles/share-based-payment-expense.html)
@@ -172,6 +171,7 @@ AI 落地自测十道题，定位先上 AI 的三个岗位
 
 ### 融资与条款 / FINANCING & TERMS
 
+- [合同上写着 6%，年底一算是 11%：融资的真实成本是怎么一层层加上去的](https://tdgroup.hk/articles/true-cost-of-financing.html)
 - [公司八成收入靠那张证，而证不在公司名下：尽调是怎么把它翻出来的](https://tdgroup.hk/articles/qualification-license-diligence.html)
 - [干满五年的期权终于能行权了，财务先让他拿出一笔现金交税](https://tdgroup.hk/articles/option-exercise-tax.html)
 - [八年前那百分之三十挂在表弟名下，融资尽调时被一句话问穿了](https://tdgroup.hk/articles/nominee-shareholding-unwind.html)
